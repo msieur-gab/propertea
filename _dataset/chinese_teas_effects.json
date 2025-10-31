@@ -1,0 +1,839 @@
+[
+  {
+    "name": "Dragon Well",
+    "originalName": "龙井 (Lóngjǐng)",
+    "type": "green",
+    "origin": "Hangzhou, Zhejiang, China",
+    "caffeineLevel": 3.0,
+    "lTheanineLevel": 4.0,
+    "flavorProfile": [
+      "chestnut",
+      "grassy",
+      "sweet",
+      "fresh"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "hand-flattened",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 400,
+      "humidity": 70,
+      "latitude": 30.2,
+      "longitude": 120.1,
+      "temperature": 20.5,
+      "solarRadiation": 210
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Biluochun",
+    "originalName": "碧螺春 (Bìluóchūn)",
+    "type": "green",
+    "origin": "Dongting, Jiangsu, China",
+    "caffeineLevel": 3.2,
+    "lTheanineLevel": 4.2,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "fresh",
+      "sweet"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 300,
+      "humidity": 75,
+      "latitude": 31.1,
+      "longitude": 120.3,
+      "temperature": 19.5,
+      "solarRadiation": 205
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "elevating"
+    }
+  },
+  {
+    "name": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huángshān Máofēng)",
+    "type": "green",
+    "origin": "Huangshan, Anhui, China",
+    "caffeineLevel": 3.1,
+    "lTheanineLevel": 4.3,
+    "flavorProfile": [
+      "floral",
+      "fresh",
+      "sweet",
+      "umami"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 900,
+      "humidity": 80,
+      "latitude": 30.1,
+      "longitude": 118.1,
+      "temperature": 17.5,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tàipíng Hóukuí)",
+    "type": "green",
+    "origin": "Huangshan, Anhui, China",
+    "caffeineLevel": 3.0,
+    "lTheanineLevel": 4.0,
+    "flavorProfile": [
+      "orchid",
+      "fresh",
+      "sweet",
+      "chestnut"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "flattened",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 78,
+      "latitude": 30.2,
+      "longitude": 118.3,
+      "temperature": 18.0,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "elevating"
+    }
+  },
+  {
+    "name": "Liu'an Guapian",
+    "originalName": "六安瓜片 (Liù'ān Guāpiàn)",
+    "type": "green",
+    "origin": "Lu'an, Anhui, China",
+    "caffeineLevel": 3.3,
+    "lTheanineLevel": 3.9,
+    "flavorProfile": [
+      "savory",
+      "sweet",
+      "fresh",
+      "nutty"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 76,
+      "latitude": 31.7,
+      "longitude": 116.5,
+      "temperature": 19.0,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Iron Goddess of Mercy",
+    "originalName": "铁观音 (Tiě Guānyīn)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3.8,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "floral",
+      "creamy",
+      "orchid",
+      "sweet"
+    ],
+    "processingMethods": [
+      "lightly oxidized",
+      "rolled",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 900,
+      "humidity": 80,
+      "latitude": 25.0,
+      "longitude": 118.0,
+      "temperature": 19.0,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Big Red Robe",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4.0,
+    "lTheanineLevel": 3.8,
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "caramel",
+      "orchid"
+    ],
+    "processingMethods": [
+      "medium-heavy roast",
+      "rock-oolong",
+      "oxidized"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 85,
+      "latitude": 27.6,
+      "longitude": 118.0,
+      "temperature": 18.0,
+      "solarRadiation": 160
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Shui Xian",
+    "originalName": "水仙 (Shuǐ Xiān)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 3.9,
+    "lTheanineLevel": 3.7,
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "honey",
+      "rock sugar"
+    ],
+    "processingMethods": [
+      "medium roast",
+      "rock-oolong",
+      "oxidized"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 82,
+      "latitude": 27.6,
+      "longitude": 118.0,
+      "temperature": 18.5,
+      "solarRadiation": 165
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    }
+  },
+  {
+    "name": "Rougui",
+    "originalName": "肉桂 (Ròuguì)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4.0,
+    "lTheanineLevel": 3.7,
+    "flavorProfile": [
+      "cinnamon",
+      "spice",
+      "roasted",
+      "mineral"
+    ],
+    "processingMethods": [
+      "medium-heavy roast",
+      "rock-oolong",
+      "oxidized"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 82,
+      "latitude": 27.6,
+      "longitude": 118.0,
+      "temperature": 18.5,
+      "solarRadiation": 165
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fènghuáng Dāncōng)",
+    "type": "oolong",
+    "origin": "Phoenix Mountains, Guangdong, China",
+    "caffeineLevel": 4.1,
+    "lTheanineLevel": 4.2,
+    "flavorProfile": [
+      "floral",
+      "nectar",
+      "fruity",
+      "honey"
+    ],
+    "processingMethods": [
+      "medium oxidation",
+      "strip-style",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 1100,
+      "humidity": 75,
+      "latitude": 23.7,
+      "longitude": 116.9,
+      "temperature": 17.5,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4.8,
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "melon",
+      "fresh hay"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 78,
+      "latitude": 26.9,
+      "longitude": 119.6,
+      "temperature": 17.5,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "restorative"
+    }
+  },
+  {
+    "name": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔdān)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 2.8,
+    "lTheanineLevel": 4.4,
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "hay"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 76,
+      "latitude": 26.9,
+      "longitude": 119.6,
+      "temperature": 18.0,
+      "solarRadiation": 178
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Shou Mei",
+    "originalName": "寿眉 (Shòuméi)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 2.6,
+    "lTheanineLevel": 4.0,
+    "flavorProfile": [
+      "honey",
+      "dried fruit",
+      "hay",
+      "woody"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 74,
+      "latitude": 26.9,
+      "longitude": 119.6,
+      "temperature": 19.0,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "comforting"
+    }
+  },
+  {
+    "name": "Moonlight White",
+    "originalName": "月光白 (Yuèguāng Bái)",
+    "type": "white",
+    "origin": "Yunnan, China",
+    "caffeineLevel": 3.0,
+    "lTheanineLevel": 4.3,
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "stone fruit",
+      "sweet"
+    ],
+    "processingMethods": [
+      "withered",
+      "shade-dried",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1600,
+      "humidity": 70,
+      "latitude": 24.0,
+      "longitude": 101.0,
+      "temperature": 17.0,
+      "solarRadiation": 170
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "elevating"
+    }
+  },
+  {
+    "name": "Raw Pu’er (Yiwu)",
+    "originalName": "生普洱 (易武, Shēng Pǔ’ěr)",
+    "type": "puerh-sheng",
+    "origin": "Yiwu, Xishuangbanna, Yunnan, China",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 4.0,
+    "flavorProfile": [
+      "floral",
+      "mineral",
+      "honey",
+      "astringent"
+    ],
+    "processingMethods": [
+      "sun-dried",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 1500,
+      "humidity": 75,
+      "latitude": 22.0,
+      "longitude": 101.5,
+      "temperature": 20.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "elevating"
+    }
+  },
+  {
+    "name": "Raw Pu’er (Jingmai)",
+    "originalName": "生普洱 (景迈, Shēng Pǔ’ěr)",
+    "type": "puerh-sheng",
+    "origin": "Jingmai, Lancang, Yunnan, China",
+    "caffeineLevel": 4.1,
+    "lTheanineLevel": 4.1,
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "citrus",
+      "mineral"
+    ],
+    "processingMethods": [
+      "sun-dried",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 1600,
+      "humidity": 72,
+      "latitude": 22.3,
+      "longitude": 99.4,
+      "temperature": 19.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "harmonizing"
+    }
+  },
+  {
+    "name": "Aged Ripe Pu’er",
+    "originalName": "熟普洱 (Shú Pǔ’ěr)",
+    "type": "puerh-shou",
+    "origin": "Menghai, Yunnan, China",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "earthy",
+      "woody",
+      "sweet",
+      "leather",
+      "compost"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 1300,
+      "humidity": 75,
+      "latitude": 21.98,
+      "longitude": 100.45,
+      "temperature": 21.2,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    }
+  },
+  {
+    "name": "Ripe Pu’er (Bulang)",
+    "originalName": "熟普洱 (布朗, Shú Pǔ’ěr)",
+    "type": "puerh-shou",
+    "origin": "Bulang Shan, Yunnan, China",
+    "caffeineLevel": 4.4,
+    "lTheanineLevel": 4.2,
+    "flavorProfile": [
+      "earthy",
+      "cocoa",
+      "woody",
+      "sweet"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 1400,
+      "humidity": 73,
+      "latitude": 21.8,
+      "longitude": 100.4,
+      "temperature": 21.5,
+      "solarRadiation": 192
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "restorative"
+    }
+  },
+  {
+    "name": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūnshān Yínzhēn)",
+    "type": "yellow",
+    "origin": "Dongting Lake, Hunan, China",
+    "caffeineLevel": 3.2,
+    "lTheanineLevel": 4.2,
+    "flavorProfile": [
+      "mellow",
+      "honey",
+      "floral",
+      "sweet"
+    ],
+    "processingMethods": [
+      "light fermentation",
+      "sealed yellowing",
+      "sun-dried"
+    ],
+    "geography": {
+      "altitude": 300,
+      "humidity": 85,
+      "latitude": 29.3,
+      "longitude": 113.0,
+      "temperature": 21.0,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "restorative"
+    }
+  },
+  {
+    "name": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méngdǐng Huángyá)",
+    "type": "yellow",
+    "origin": "Mengding Mountain, Sichuan, China",
+    "caffeineLevel": 3.0,
+    "lTheanineLevel": 4.0,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "floral",
+      "buttery"
+    ],
+    "processingMethods": [
+      "yellowing",
+      "pan-fired",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 80,
+      "latitude": 30.2,
+      "longitude": 103.0,
+      "temperature": 16.5,
+      "solarRadiation": 170
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huòshān Huángyá)",
+    "type": "yellow",
+    "origin": "Huoshan, Anhui, China",
+    "caffeineLevel": 3.1,
+    "lTheanineLevel": 4.1,
+    "flavorProfile": [
+      "sweet",
+      "beany",
+      "mellow",
+      "floral"
+    ],
+    "processingMethods": [
+      "yellowing",
+      "pan-fired",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 31.4,
+      "longitude": 116.3,
+      "temperature": 18.0,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "restorative"
+    }
+  },
+  {
+    "name": "Keemun Black",
+    "originalName": "祁门红茶 (Qímén Hóngchá)",
+    "type": "red",
+    "origin": "Qimen, Anhui, China",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 3.8,
+    "flavorProfile": [
+      "fruity",
+      "malty",
+      "floral",
+      "chocolate"
+    ],
+    "processingMethods": [
+      "withered",
+      "fully oxidized",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 80,
+      "latitude": 29.8,
+      "longitude": 117.7,
+      "temperature": 20.0,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Yunnan Dianhong",
+    "originalName": "滇红 (Diānhóng)",
+    "type": "red",
+    "origin": "Lincang, Yunnan, China",
+    "caffeineLevel": 4.4,
+    "lTheanineLevel": 3.7,
+    "flavorProfile": [
+      "malt",
+      "cocoa",
+      "honey",
+      "spice"
+    ],
+    "processingMethods": [
+      "withered",
+      "fully oxidized",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 1400,
+      "humidity": 70,
+      "latitude": 23.9,
+      "longitude": 100.1,
+      "temperature": 18.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    }
+  },
+  {
+    "name": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "red",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4.3,
+    "lTheanineLevel": 3.9,
+    "flavorProfile": [
+      "honey",
+      "sweet potato",
+      "fruity",
+      "caramel"
+    ],
+    "processingMethods": [
+      "withered",
+      "fully oxidized",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 78,
+      "latitude": 27.7,
+      "longitude": 117.6,
+      "temperature": 18.5,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "elevating"
+    }
+  },
+  {
+    "name": "Bailin Gongfu",
+    "originalName": "白琳工夫 (Báilín Gōngfū)",
+    "type": "red",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 4.1,
+    "lTheanineLevel": 3.6,
+    "flavorProfile": [
+      "caramel",
+      "honey",
+      "fruity",
+      "malt"
+    ],
+    "processingMethods": [
+      "withered",
+      "fully oxidized",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 75,
+      "latitude": 26.9,
+      "longitude": 119.6,
+      "temperature": 19.0,
+      "solarRadiation": 182
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    }
+  },
+  {
+    "name": "Tan Yang Gongfu",
+    "originalName": "坦洋工夫 (Tǎn Yáng Gōngfū)",
+    "type": "red",
+    "origin": "Shouning, Fujian, China",
+    "caffeineLevel": 4.0,
+    "lTheanineLevel": 3.7,
+    "flavorProfile": [
+      "cocoa",
+      "red fruit",
+      "malt",
+      "honey"
+    ],
+    "processingMethods": [
+      "withered",
+      "fully oxidized",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 77,
+      "latitude": 27.4,
+      "longitude": 119.5,
+      "temperature": 19.0,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "focusing"
+    }
+  },
+  {
+    "name": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèngshān Xiǎozhǒng)",
+    "type": "red",
+    "origin": "Tongmu, Fujian, China",
+    "caffeineLevel": 4.0,
+    "lTheanineLevel": 3.6,
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "resinous"
+    ],
+    "processingMethods": [
+      "smoked",
+      "fully oxidized",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 78,
+      "latitude": 27.7,
+      "longitude": 117.6,
+      "temperature": 18.5,
+      "solarRadiation": 170
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "energizing"
+    }
+  }
+]

@@ -58,6 +58,11 @@ export class AnalysisDisplay {
             html += this._renderGeography(analysis.geography);
         }
 
+        // Expected Effects Analysis
+        if (analysis.effects) {
+            html += this._renderEffects(analysis.effects);
+        }
+
         // Recommendations Section
         html += `<div class="recommendations-section">`;
 
@@ -366,6 +371,76 @@ export class AnalysisDisplay {
                     <p>Water Temp: ${brewing.western.waterTemp}</p>
                     <p>Steep Time: ${brewing.western.steepTime}</p>
                     <p>Infusions: ${brewing.western.infusions}</p>
+                </div>
+            `;
+        }
+
+        html += `</div>`;
+        return html;
+    }
+
+    _renderEffects(effects) {
+        let html = `<div class="analysis-section effects-section">`;
+        html += `<h3>Expected Effects</h3>`;
+
+        if (effects.description) {
+            html += `<p class="description">${effects.description}</p>`;
+        }
+
+        if (effects.expectedEffects) {
+            const expectedEffects = effects.expectedEffects;
+            html += `
+                <div class="effects-display">
+                    <div class="effect-item dominant-effect">
+                        <label>Dominant Effect</label>
+                        <span class="effect-name">${this._capitalize(expectedEffects.dominant)}</span>
+                    </div>
+                    <div class="effect-item supporting-effect">
+                        <label>Supporting Effect</label>
+                        <span class="effect-name">${this._capitalize(expectedEffects.supporting)}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        if (effects.reasoning) {
+            const reasoning = effects.reasoning;
+            html += `
+                <div class="effects-reasoning">
+                    <h5>Effect Reasoning</h5>
+                    <p><strong>Dominant:</strong> ${reasoning.dominant}</p>
+                    <p><strong>Supporting:</strong> ${reasoning.supporting}</p>
+                </div>
+            `;
+        }
+
+        if (effects.allScores) {
+            html += `
+                <div class="effects-scores">
+                    <h5>All Effect Scores</h5>
+                    <div class="scores-list">
+            `;
+
+            // Sort scores in descending order
+            const sorted = Object.entries(effects.allScores)
+                .sort(([, a], [, b]) => b - a);
+
+            sorted.forEach(([effect, score]) => {
+                const percentage = (score / 30 * 100).toFixed(0); // Normalize to 0-30 scale
+                const barWidth = Math.min(percentage, 100);
+                html += `
+                    <div class="score-item">
+                        <span class="score-label">${this._capitalize(effect)}</span>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: ${barWidth}%"></div>
+                        </div>
+                        <span class="score-value">${score.toFixed(1)}</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
                 </div>
             `;
         }

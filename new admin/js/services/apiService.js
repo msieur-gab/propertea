@@ -41,7 +41,7 @@ export class APIService {
             name: formObj.teaName || '',
             originalName: formObj.originalName || '',
             type: formObj.teaType || 'unknown',
-            subType: formObj.subType || '',
+            subType: formObj.teaSubtype || '',
             origin: geoData.location || '',
 
             // Compounds

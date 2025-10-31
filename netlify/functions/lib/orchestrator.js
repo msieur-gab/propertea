@@ -11,6 +11,7 @@ import { FlavorService } from '../../../backend/src/services/FlavorService.js';
 import { TeaTypeService } from '../../../backend/src/services/TeaTypeService.js';
 import { ProcessingService } from '../../../backend/src/services/ProcessingService.js';
 import { GeographyService } from '../../../backend/src/services/GeographyService.js';
+import { EffectService } from '../../../backend/src/services/EffectService.js';
 import { RecommendationService } from '../../../backend/src/services/RecommendationService.js';
 import { TeaCalculationOrchestrator } from '../../../backend/src/models/TeaCalculationOrchestrator.js';
 
@@ -33,6 +34,7 @@ export function getOrchestrator() {
     flavorService: new FlavorService(),
     processingService: new ProcessingService(),
     geographyService: new GeographyService(),
+    effectService: new EffectService(),
     recommendationService: new RecommendationService()
   };
 

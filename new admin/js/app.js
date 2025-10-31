@@ -7,6 +7,7 @@ import { RecordListUI } from './modules/recordListUI.js';
 import { GeoUI } from './modules/geoUI.js';
 import { SidebarUI } from './modules/sidebarUI.js';
 import { AnalysisDisplay } from './modules/analysisDisplay.js';
+import { TeaTypeSelector } from './modules/teaTypeSelector.js';
 
 class TeaApp {
     constructor() {
@@ -17,6 +18,9 @@ class TeaApp {
         this.geoUI = new GeoUI('geographySection'); // Finds the geo section inside the form
         this.recordListUI = new RecordListUI('recordsList', 'recordModalOverlay'); // Finds the list in main content
         this.analysisDisplay = new AnalysisDisplay('mainContent'); // Display analysis in main content
+
+        // Initialize tea type selector for proper type/subtype handling
+        this.teaTypeSelector = new TeaTypeSelector('teaType', 'teaSubtype');
 
         this._bindEvents();
         this._loadInitialData();

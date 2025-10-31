@@ -36,6 +36,7 @@ export class TeaCalculationOrchestrator {
       'flavorService',
       'processingService',
       'geographyService',
+      'effectService',
       'recommendationService'
     ];
 
@@ -122,6 +123,7 @@ export class TeaCalculationOrchestrator {
         flavor: coreAnalysis.data.flavor,
         processing: coreAnalysis.data.processing,
         geography: coreAnalysis.data.geography,
+        effects: coreAnalysis.data.effects,
 
         // Recommendations (derived from core analyses)
         timing: timing.recommendations || {},
@@ -172,6 +174,20 @@ export class TeaCalculationOrchestrator {
         this.services.geographyService.analyze(teaModel)
       ]);
 
+      // Build intermediate analysis for effect calculation
+      const intermediateAnalysis = {
+        teaType,
+        compounds,
+        flavor,
+        processing,
+        geography,
+        _sourceTea: teaModel
+      };
+
+      // Calculate effects based on core analyses
+      // Note: EffectService needs the intermediate analysis to work properly
+      const effects = await this.services.effectService.analyze(teaModel, intermediateAnalysis);
+
       return {
         success: true,
         data: {
@@ -180,6 +196,7 @@ export class TeaCalculationOrchestrator {
           flavor,
           processing,
           geography,
+          effects,
           _sourceTea: teaModel
         }
       };

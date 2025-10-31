@@ -58,6 +58,11 @@ export function validateCoreAnalysis(analysis) {
     }
   }
 
+  // Effects are optional but validated if present
+  if (analysis.effects && typeof analysis.effects !== 'object') {
+    return { valid: false, error: 'Effects field must be an object if provided' };
+  }
+
   return { valid: true };
 }
 

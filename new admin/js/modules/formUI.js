@@ -190,6 +190,11 @@ export class FormUI {
         this._renderProcessingMethods();
         this._renderFlavorProfiles();
         this._renderSuggestions(''); // Clear suggestions
+        // Reset subtype selector if it exists
+        const subtypeGroup = this.form.querySelector('#subtypeGroup');
+        if (subtypeGroup) {
+            subtypeGroup.style.display = 'none';
+        }
         // Manually clear any other custom state if needed
     }
 

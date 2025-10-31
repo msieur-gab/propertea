@@ -17,7 +17,7 @@ export const recordHandler = {
         const name = formData.get('teaName')?.trim() || '';
         const originalName = formData.get('originalName')?.trim() || '';
         const type = formData.get('teaType')?.trim() || '';
-        const subType = '';
+        const subType = formData.get('teaSubtype')?.trim() || '';
 
         const caffeineLevelStr = formData.get('caffeineLevel')?.trim();
         const lTheanineLevelStr = formData.get('lTheanineLevel')?.trim();

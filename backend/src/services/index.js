@@ -12,6 +12,7 @@ export { FlavorService, flavorService } from './FlavorService.js';
 export { TeaTypeService, teaTypeService } from './TeaTypeService.js';
 export { ProcessingService, processingService } from './ProcessingService.js';
 export { GeographyService, geographyService } from './GeographyService.js';
+export { EffectService, effectService } from './EffectService.js';
 
 // Recommendation service (consolidates all matchers)
 export { RecommendationService, recommendationService } from './RecommendationService.js';
@@ -29,13 +30,14 @@ export class ServiceFactory {
       teaType: new TeaTypeService(),
       processing: new ProcessingService(),
       geography: new GeographyService(),
+      effect: new EffectService(),
       recommendation: new RecommendationService()
     };
   }
 
   /**
    * Get individual service instance
-   * @param {string} serviceName - Service name (compound, flavor, teaType, processing, geography, recommendation)
+   * @param {string} serviceName - Service name (compound, flavor, teaType, processing, geography, effect, recommendation)
    * @returns {Object} Service instance
    */
   static getService(serviceName) {
@@ -45,6 +47,7 @@ export class ServiceFactory {
       teaType: new TeaTypeService(),
       processing: new ProcessingService(),
       geography: new GeographyService(),
+      effect: new EffectService(),
       recommendation: new RecommendationService()
     };
 
@@ -68,5 +71,6 @@ export const services = {
   teaType: new TeaTypeService(),
   processing: new ProcessingService(),
   geography: new GeographyService(),
+  effect: new EffectService(),
   recommendation: new RecommendationService()
 };
