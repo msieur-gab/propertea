@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Tea Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #006400;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #008080;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #4682B4;
+            margin-top: 20px;
+        }
+        .tea-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Tea type specific colors */
+        .green-tea { border-left: 5px solid #008000; }
+        .white-tea { border-left: 5px solid #f5f5f5; }
+        .oolong-tea { border-left: 5px solid #D2691E; }
+        .black-tea { border-left: 5px solid #800000; }
+        .yellow-tea { border-left: 5px solid #FFD700; }
+        .dark-tea { border-left: 5px solid #8B4513; }
+        
+        .instructions {
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1890ff;
+        }
+        
+        /* Button styles */
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        #loading {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 20px;
+        }
+        
+        #error-message {
+            color: #d9534f;
+            background-color: #f9f2f4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            display: none;
+        }
+        
+        #debug-info {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .show-debug-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asian Tea Processing Methods and Flavor Analysis</h1>
+    
+    <div class="instructions">
+        <h3>About This Analysis</h3>
+        <p>This page analyzes the frequency of processing methods and flavors across different types of Asian teas. The data comes from a collection of premium teas including green, white, oolong, black, yellow, and dark varieties.</p>
+        <p>For each tea type, you'll see the most common processing methods and flavor profiles, along with how frequently they appear in the dataset (both as a count and percentage).</p>
+    </div>
+    
+    <button class="show-debug-button" id="toggleDebug">Show Debug Information</button>
+    <div id="debug-info" style="display: none;"></div>
+    
+    <div id="loading">Loading tea analysis data...</div>
+    <div id="error-message"></div>
+    <div id="content" style="display: none;"></div>
+    
+    <!-- Define fallback data if files fail to load -->
+    <!-- <script>
+        // Simple fallback data for debugging
+        if (typeof asianGreenTeas === 'undefined') {
+            console.log('Creating fallback green tea data');
+            window.asianGreenTeas = [
+                {
+                    teaName: "Fallback Green Tea",
+                    processingMethods: ["fallback-method-1", "fallback-method-2"],
+                    flavors: ["fallback-flavor-1", "fallback-flavor-2"]
+                }
+            ];
+        }
+    </script> -->
+    
+    <!-- Include tea data files with error handlers -->
+    <script>
+        // Function to log script loading status
+        function logScriptStatus(scriptName, status) {
+            console.log(`Script ${scriptName}: ${status}`);
+            const debugInfo = document.getElementById('debug-info');
+            if (debugInfo) {
+                debugInfo.textContent += `Script ${scriptName}: ${status}\n`;
+            }
+        }
+        
+        // Function to load a script with error handling
+        function loadScript(src, callback) {
+            const script = document.createElement('script');
+            // Make sure we use the absolute path to the file
+            script.src = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + src;
+            
+            script.onload = function() {
+                logScriptStatus(src, 'Loaded successfully');
+                if (callback) callback(null, src);
+            };
+            
+            script.onerror = function() {
+                const error = new Error(`Failed to load script: ${src}`);
+                logScriptStatus(src, 'Failed to load');
+                if (callback) callback(error, src);
+            };
+            
+            document.head.appendChild(script);
+            logScriptStatus(src, 'Loading started');
+        }
+        
+        // Load tea data files sequentially to ensure proper order
+        const teaFiles = [
+            'green_teas_asia.js',
+            'white_teas_asia.js', 
+            'oolong_teas_asia.js',
+            'black_teas_asia.js',
+            'yellow_teas_asia.js',
+            'dark_teas_asia.js'
+        ];
+        
+        let loadedFiles = 0;
+        let failedFiles = 0;
+        
+        // Sequential loading function
+        function loadTeaFilesSequentially(index) {
+            if (index >= teaFiles.length) {
+                console.log(`All files processed. Loaded: ${loadedFiles}, Failed: ${failedFiles}`);
+                initializeAnalysis();
+                return;
+            }
+            
+            const file = teaFiles[index];
+            loadScript(file, (error, src) => {
+                if (error) {
+                    failedFiles++;
+                    console.error(`Error loading ${src}:`, error);
+                } else {
+                    loadedFiles++;
+                }
+                
+                // Move to the next file regardless of success/failure
+                loadTeaFilesSequentially(index + 1);
+            });
+        }
+        
+        // Start the sequential loading process
+        loadTeaFilesSequentially(0);
+    </script>
+    
+    <!-- Analysis functions -->
+    <script>
+        /**
+         * Tea Frequency Analysis
+         * Analyzes the frequency of processing methods and flavors across different tea types
+         */
+        
+        // Function to count frequencies of attributes in an array of tea objects
+        function countFrequencies(teas, attribute) {
+            console.log(`Counting frequencies for ${attribute} in ${teas ? teas.length : 0} teas`);
+            const frequencyMap = {};
+            
+            if (!teas || !Array.isArray(teas)) {
+                console.error(`Invalid teas array for ${attribute} counting`);
+                return frequencyMap;
+            }
+            
+            teas.forEach(tea => {
+                const attributes = tea[attribute];
+                if (Array.isArray(attributes)) {
+                    attributes.forEach(item => {
+                        frequencyMap[item] = (frequencyMap[item] || 0) + 1;
+                    });
+                }
+            });
+            
+            return frequencyMap;
+        }
+        
+        // Function to sort frequency map by count (descending)
+        function sortFrequencyMap(frequencyMap) {
+            return Object.entries(frequencyMap)
+                .sort((a, b) => b[1] - a[1])
+                .reduce((obj, [key, value]) => {
+                    obj[key] = value;
+                    return obj;
+                }, {});
+        }
+        
+        // Function to calculate and format percentages
+        function calculatePercentages(frequencyMap, totalTeas) {
+            const percentageMap = {};
+            
+            for (const [key, count] of Object.entries(frequencyMap)) {
+                percentageMap[key] = {
+                    count: count,
+                    percentage: ((count / totalTeas) * 100).toFixed(1) + '%'
+                };
+            }
+            
+            return percentageMap;
+        }
+        
+        // Analyze each tea type
+        function analyzeTea(teas, teaType) {
+            console.log(`Analyzing ${teaType} - ${teas ? teas.length : 'undefined'} teas found`);
+            
+            if (!teas || !Array.isArray(teas) || teas.length === 0) {
+                console.error(`Cannot analyze ${teaType}: Invalid or empty tea array`);
+                return {
+                    teaType: teaType,
+                    totalTeas: 0,
+                    processingMethods: {},
+                    flavors: {}
+                };
+            }
+            
+            const processingFrequencies = countFrequencies(teas, 'processingMethods');
+            const flavorFrequencies = countFrequencies(teas, 'flavors');
+            
+            const sortedProcessingFrequencies = sortFrequencyMap(processingFrequencies);
+            const sortedFlavorFrequencies = sortFrequencyMap(flavorFrequencies);
+            
+            const processingPercentages = calculatePercentages(sortedProcessingFrequencies, teas.length);
+            const flavorPercentages = calculatePercentages(sortedFlavorFrequencies, teas.length);
+            
+            return {
+                teaType: teaType,
+                totalTeas: teas.length,
+                processingMethods: processingPercentages,
+                flavors: flavorPercentages
+            };
+        }
+        
+        // Check if a tea dataset is available and log its status
+        function checkTeaDataset(variableName, label) {
+            const isAvailable = typeof window[variableName] !== 'undefined';
+            const count = isAvailable ? window[variableName].length : 0;
+            const status = isAvailable ? `Available (${count} items)` : 'Not available';
+            
+            console.log(`${label}: ${status}`);
+            const debugInfo = document.getElementById('debug-info');
+            if (debugInfo) {
+                debugInfo.textContent += `${label}: ${status}\n`;
+                if (isAvailable) {
+                    debugInfo.textContent += `  Sample item: ${JSON.stringify(window[variableName][0], null, 2).substring(0, 100)}...\n`;
+                }
+            }
+            
+            return { isAvailable, count };
+        }
+        
+        // Function to run analysis once all tea data is loaded
+        function runAnalysis() {
+            console.log('Running analysis...');
+            
+            // Check all tea datasets
+            const datasets = [
+                { name: 'asianGreenTeas', label: 'Green Teas' },
+                { name: 'asianWhiteTeas', label: 'White Teas' },
+                { name: 'asianOolongTeas', label: 'Oolong Teas' },
+                { name: 'asianBlackTeas', label: 'Black Teas' },
+                { name: 'asianYellowTeas', label: 'Yellow Teas' },
+                { name: 'asianDarkTeas', label: 'Dark Teas' }
+            ];
+            
+            const debugInfo = document.getElementById('debug-info');
+            debugInfo.textContent += '--- Tea Dataset Check ---\n';
+            
+            // Create a teaAnalysis object with available datasets
+            const teaAnalysis = {};
+            
+            datasets.forEach(dataset => {
+                const { isAvailable, count } = checkTeaDataset(dataset.name, dataset.label);
+                
+                if (isAvailable && count > 0) {
+                    try {
+                        teaAnalysis[dataset.name.replace('asian', '').toLowerCase()] = 
+                            analyzeTea(window[dataset.name], dataset.label);
+                    } catch (e) {
+                        console.error(`Error analyzing ${dataset.label}:`, e);
+                        debugInfo.textContent += `Error analyzing ${dataset.label}: ${e.message}\n`;
+                    }
+                }
+            });
+            
+            console.log('Analysis complete with results:', teaAnalysis);
+            return teaAnalysis;
+        }
+        
+        // Create a HTML output function for better visualization
+        function generateHtmlReport(teaAnalysis) {
+            console.log('Generating HTML report...');
+            let html = '';
+            
+            if (Object.keys(teaAnalysis).length === 0) {
+                return '<div class="tea-section"><h2>No tea data available for analysis</h2><p>Please check that the tea data files are properly loaded.</p></div>';
+            }
+            
+            for (const [teaKey, analysis] of Object.entries(teaAnalysis)) {
+                html += `
+            <div class="tea-section">
+                <h2>${analysis.teaType} Analysis (${analysis.totalTeas} teas)</h2>
+                
+                <div class="grid-container">
+                    <div>
+                        <h3>Top Processing Methods</h3>
+                        <table>
+                            <tr>
+                                <th>Processing Method</th>
+                                <th>Count</th>
+                                <th>Percentage</th>
+                            </tr>
+                `;
+        
+                Object.entries(analysis.processingMethods).slice(0, 10).forEach(([method, stats]) => {
+                    html += `
+                            <tr>
+                                <td>${method}</td>
+                                <td>${stats.count}</td>
+                                <td>${stats.percentage}</td>
+                            </tr>
+                    `;
+                });
+        
+                html += `
+                        </table>
+                    </div>
+                    
+                    <div>
+                        <h3>Top Flavors</h3>
+                        <table>
+                            <tr>
+                                <th>Flavor</th>
+                                <th>Count</th>
+                                <th>Percentage</th>
+                            </tr>
+                `;
+        
+                Object.entries(analysis.flavors).slice(0, 10).forEach(([flavor, stats]) => {
+                    html += `
+                            <tr>
+                                <td>${flavor}</td>
+                                <td>${stats.count}</td>
+                                <td>${stats.percentage}</td>
+                            </tr>
+                    `;
+                });
+        
+                html += `
+                        </table>
+                    </div>
+                </div>
+            </div>
+                `;
+            }
+        
+            return html;
+        }
+        
+        // Main function to initialize the analysis
+        function initializeAnalysis() {
+            console.log('Initializing tea analysis...');
+            const debugInfo = document.getElementById('debug-info');
+            debugInfo.textContent = '--- Tea Analysis Initialization ---\n';
+            
+            // Check if all required tea data is loaded
+            const requiredDatasets = [
+                { name: 'asianGreenTeas', label: 'Green Teas' },
+                { name: 'asianWhiteTeas', label: 'White Teas' },
+                { name: 'asianOolongTeas', label: 'Oolong Teas' },
+                { name: 'asianBlackTeas', label: 'Black Teas' },
+                { name: 'asianYellowTeas', label: 'Yellow Teas' },
+                { name: 'asianDarkTeas', label: 'Dark Teas' }
+            ];
+            
+            let missingDatasets = [];
+            requiredDatasets.forEach(dataset => {
+                if (typeof window[dataset.name] === 'undefined') {
+                    missingDatasets.push(dataset.label);
+                    console.warn(`Missing dataset: ${dataset.name}`);
+                } else {
+                    console.log(`Dataset found: ${dataset.name} with ${window[dataset.name].length} items`);
+                }
+            });
+            
+            if (missingDatasets.length > 0) {
+                const errorMessage = `Error: Missing tea datasets: ${missingDatasets.join(', ')}`;
+                console.error(errorMessage);
+                
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.textContent = errorMessage;
+                errorDiv.style.display = 'block';
+                document.getElementById('loading').style.display = 'none';
+                
+                // Still attempt analysis with available data
+                console.log('Proceeding with partial analysis using available datasets...');
+                debugInfo.textContent += 'Proceeding with partial analysis using available datasets...\n';
+            }
+            
+            try {
+                // Run the analysis with whatever data is available
+                const teaAnalysis = runAnalysis();
+                
+                // Generate the HTML report
+                const htmlContent = generateHtmlReport(teaAnalysis);
+                
+                // Hide loading, show content
+                document.getElementById('loading').style.display = 'none';
+                
+                // Insert the content
+                const contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = htmlContent;
+                contentDiv.style.display = 'block';
+                
+                // Add tea-specific colors to sections
+                const teaTypes = ['green', 'white', 'oolong', 'black', 'yellow', 'dark'];
+                const teaSections = document.querySelectorAll('.tea-section');
+                
+                teaSections.forEach((section, index) => {
+                    if (index < teaTypes.length) {
+                        section.classList.add(`${teaTypes[index]}-tea`);
+                    }
+                });
+                
+                console.log('Analysis and display complete!');
+                debugInfo.textContent += 'Analysis and display complete!\n';
+            } catch (e) {
+                const errorMessage = 'Error analyzing tea data: ' + e.message;
+                console.error(errorMessage, e);
+                
+                document.getElementById('loading').style.display = 'none';
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.textContent = errorMessage;
+                errorDiv.style.display = 'block';
+                
+                debugInfo.textContent += `ERROR: ${e.message}\n${e.stack}\n`;
+            }
+        }
+    </script>
+    
+    <script>
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded');
+            
+            // Set up debug toggle button
+            document.getElementById('toggleDebug').addEventListener('click', function() {
+                const debugInfo = document.getElementById('debug-info');
+                if (debugInfo.style.display === 'none') {
+                    debugInfo.style.display = 'block';
+                    this.textContent = 'Hide Debug Information';
+                } else {
+                    debugInfo.style.display = 'none';
+                    this.textContent = 'Show Debug Information';
+                }
+            });
+            
+            // Note: The actual analysis initialization is now handled by the script loading logic
+        });
+    </script>
+</body>
+</html> 

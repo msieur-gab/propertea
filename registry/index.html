@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea Descriptor Registry Demo</title>
+  <!-- Add Mermaid.js -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      margin-bottom: 2rem;
+    }
+    
+    h1 {
+      color: #2c6049;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .panel {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .panel h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 10px;
+      color: #3a7d65;
+    }
+    
+    button {
+      background-color: #3a7d65;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    
+    button:hover {
+      background-color: #2c6049;
+    }
+    
+    pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 4px;
+      overflow: auto;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.4;
+      max-height: 400px;
+    }
+    
+    .output {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 15px;
+      min-height: 100px;
+      margin-top: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    table th, table td {
+      border: 1px solid #e0e0e0;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    
+    table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+    
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(58, 125, 101, 0.3);
+      border-radius: 50%;
+      border-top-color: #3a7d65;
+      animation: spin 1s linear infinite;
+      margin-right: 10px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .error {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .success {
+      color: #27ae60;
+      font-weight: 500;
+    }
+    
+    .warning {
+      color: #f39c12;
+      font-weight: 500;
+    }
+    
+    .diagram-container {
+      margin-top: 20px;
+      overflow: auto;
+      max-height: 500px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      margin: 2% auto;
+      padding: 30px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 1200px;
+      max-height: 90vh;
+      overflow: auto;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    .close-modal:hover {
+      color: #000;
+    }
+    
+    .mermaid {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .mermaid svg {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    #mermaidDiagram {
+      overflow: auto;
+      padding: 20px;
+    }
+    
+    .error {
+      color: #e74c3c;
+      padding: 15px;
+      border-radius: 4px;
+      background-color: #fdf3f2;
+      border: 1px solid #f9d6d3;
+      margin: 10px 0;
+    }
+    
+    .view-diagram-btn {
+      background-color: #3a7d65;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    
+    .view-diagram-btn:hover {
+      background-color: #2c6049;
+    }
+    
+    .taxonomy-report {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .taxonomy-category {
+      margin-bottom: 20px;
+    }
+    
+    .taxonomy-category h3 {
+      color: #3a7d65;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .taxonomy-subcategory {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .taxonomy-subcategory h4 {
+      color: #2c6049;
+      margin: 8px 0;
+    }
+    
+    .flavor-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-left: 20px;
+    }
+    
+    .flavor-tag {
+      background-color: #e8f5f0;
+      color: #2c6049;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tea Descriptor Registry Demo</h1>
+    <p>This demo showcases the capabilities of the Tea Descriptor Registry system.</p>
+  </header>
+  
+  <div class="container">
+    <div class="panel">
+      <h2>Basic Registry Functions</h2>
+      <button id="run-demo">Run Full Demo</button>
+      <div id="output" class="output">
+        Click "Run Full Demo" to see all registry functions in action.
+      </div>
+    </div>
+    
+    <div class="panel">
+      <h2>Term Normalization</h2>
+      <button id="test-energy">Test Energy Terms</button>
+      <button id="test-intensity">Test Intensity Levels</button>
+      <button id="test-season">Test Season Names</button>
+      <div id="normalization-output" class="output">
+        Select a term type to test normalization.
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="panel">
+      <h2>Mismatch Detection</h2>
+      <button id="find-mismatches">Find Terminology Mismatches</button>
+      <div id="mismatches-output" class="output">
+        Click "Find Terminology Mismatches" to detect inconsistencies.
+      </div>
+      <div id="mismatches-table"></div>
+    </div>
+    
+    <div class="panel">
+      <h2>Terminology Documentation</h2>
+      <button id="generate-docs">Generate Documentation</button>
+      <select id="docs-category" style="padding: 8px; margin-left: 10px;">
+        <option value="energyTerms">Energy Terms</option>
+        <option value="intensityLevels">Intensity Levels</option>
+        <option value="processingMethods">Processing Methods</option>
+        <option value="flavorCategories">Flavor Categories</option>
+        <option value="seasonalTerms">Seasonal Terms</option>
+        <option value="compoundProfiles">Compound Profiles</option>
+      </select>
+      <div id="docs-output" class="output">
+        Click "Generate Documentation" to see documentation for selected category.
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel">
+    <h2>Flavor Taxonomy Report</h2>
+    <button id="generate-report">Generate Taxonomy Report</button>
+    <div id="report-output" class="output">
+      Click "Generate Taxonomy Report" to analyze the flavor taxonomy.
+    </div>
+  </div>
+  
+  <!-- Add Modal HTML -->
+  <div id="diagramModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Flavor Taxonomy Diagram</h2>
+      <div id="mermaidDiagram" class="mermaid"></div>
+    </div>
+  </div>
+  
+  <script type="module">
+    // Import the registry demo module
+    import { 
+      runRegistryDemo,
+      normalizeEnergyTerm,
+      getEnergyValue,
+      normalizeIntensityLevel,
+      getIntensityValue,
+      normalizeSeasonName,
+      getSeasonValue,
+      getDescriptorDocumentation,
+      detectTerminologyMismatches,
+      generateFlavorTaxonomyDiagram
+    } from './registryDemo.js';
+    
+    // Run Demo Button
+    document.getElementById('run-demo').addEventListener('click', async () => {
+      const output = document.getElementById('output');
+      output.innerHTML = '<span class="loading"></span> Running demo...';
+      
+      try {
+        // Capture console.log
+        const originalLog = console.log;
+        let logs = [];
+        
+        console.log = function() {
+          logs.push(Array.from(arguments).join(' '));
+          originalLog.apply(console, arguments);
+        };
+        
+        await runRegistryDemo();
+        
+        // Restore console.log
+        console.log = originalLog;
+        
+        // Display logs
+        output.innerHTML = `<pre>${logs.join('\n')}</pre>`;
+      } catch (error) {
+        output.innerHTML = `<div class="error">Error running demo: ${error.message}</div>`;
+        console.error(error);
+      }
+    });
+    
+    // Test Energy Terms Button
+    document.getElementById('test-energy').addEventListener('click', () => {
+      const output = document.getElementById('normalization-output');
+      const energyTerms = ['cooling', 'COOLING', 'cool', 'cold', 'warming', 'warm', 'hot', 'lukewarm', 'neutral'];
+      
+      let html = '<h3>Energy Term Normalization</h3>';
+      html += '<table><tr><th>Input Term</th><th>Normalized</th><th>Value</th></tr>';
+      
+      energyTerms.forEach(term => {
+        const normalized = normalizeEnergyTerm(term);
+        const value = getEnergyValue(term);
+        html += `<tr><td>${term}</td><td>${normalized}</td><td>${value}</td></tr>`;
+      });
+      
+      html += '</table>';
+      output.innerHTML = html;
+    });
+    
+    // Test Intensity Levels Button
+    document.getElementById('test-intensity').addEventListener('click', () => {
+      const output = document.getElementById('normalization-output');
+      const intensityLevels = ['none', 'very low', 'low', 'moderate', 'medium', 'MEDIUM', 'high', 'very high', 'intense', 'subtle'];
+      
+      let html = '<h3>Intensity Level Normalization</h3>';
+      html += '<table><tr><th>Input Level</th><th>Normalized</th><th>Value</th></tr>';
+      
+      intensityLevels.forEach(level => {
+        const normalized = normalizeIntensityLevel(level);
+        const value = getIntensityValue(level);
+        html += `<tr><td>${level}</td><td>${normalized}</td><td>${value}</td></tr>`;
+      });
+      
+      html += '</table>';
+      output.innerHTML = html;
+    });
+    
+    // Test Season Names Button
+    document.getElementById('test-season').addEventListener('click', () => {
+      const output = document.getElementById('normalization-output');
+      const seasons = ['spring', 'early spring', 'late summer', 'fall', 'autumn', 'WINTER', 'EARLY WINTER', 'mid-winter'];
+      
+      let html = '<h3>Season Name Normalization</h3>';
+      html += '<table><tr><th>Input Season</th><th>Normalized</th><th>Value</th></tr>';
+      
+      seasons.forEach(season => {
+        const normalized = normalizeSeasonName(season);
+        const value = getSeasonValue(season);
+        html += `<tr><td>${season}</td><td>${normalized}</td><td>${value}</td></tr>`;
+      });
+      
+      html += '</table>';
+      output.innerHTML = html;
+    });
+    
+    // Find Mismatches Button
+    document.getElementById('find-mismatches').addEventListener('click', async () => {
+      const output = document.getElementById('mismatches-output');
+      const tableContainer = document.getElementById('mismatches-table');
+      
+      output.innerHTML = '<span class="loading"></span> Finding terminology mismatches...';
+      tableContainer.innerHTML = '';
+      
+      try {
+        const results = await detectTerminologyMismatches();
+        
+        if (results.count === 0) {
+          output.innerHTML = '<div class="success">No terminology mismatches found!</div>';
+        } else {
+          output.innerHTML = `<div class="warning">${results.summary}</div>`;
+          
+          // Create table
+          let html = '<table><tr><th>Type</th><th>Source</th><th>Term</th><th>Issue</th></tr>';
+          
+          results.mismatches.forEach(mismatch => {
+            html += `<tr><td>${mismatch.type || ''}</td><td>${mismatch.source || ''}</td><td>${mismatch.term || ''}</td><td>${mismatch.issue || ''}</td></tr>`;
+          });
+          
+          html += '</table>';
+          tableContainer.innerHTML = html;
+        }
+      } catch (error) {
+        output.innerHTML = `<div class="error">Error finding mismatches: ${error.message}</div>`;
+        console.error(error);
+      }
+    });
+    
+    // Generate Documentation Button
+    document.getElementById('generate-docs').addEventListener('click', () => {
+      const output = document.getElementById('docs-output');
+      const category = document.getElementById('docs-category').value;
+      
+      output.innerHTML = '<span class="loading"></span> Generating documentation...';
+      
+      try {
+        const docs = getDescriptorDocumentation();
+        const categoryData = docs[category] || [];
+        
+        if (categoryData.length === 0) {
+          output.innerHTML = `<div class="warning">No documentation found for ${category}</div>`;
+          return;
+        }
+        
+        // Create table based on category structure
+        let html = `<h3>${category} (${categoryData.length} entries)</h3>`;
+        html += '<table>';
+        
+        // Create headers based on first item's keys
+        const firstItem = categoryData[0];
+        html += '<tr>';
+        Object.keys(firstItem).forEach(key => {
+          html += `<th>${key}</th>`;
+        });
+        html += '</tr>';
+        
+        // Add rows
+        categoryData.forEach(item => {
+          html += '<tr>';
+          Object.values(item).forEach(value => {
+            // Format arrays as comma-separated list
+            const displayValue = Array.isArray(value) ? value.join(', ') : value;
+            html += `<td>${displayValue}</td>`;
+          });
+          html += '</tr>';
+        });
+        
+        html += '</table>';
+        output.innerHTML = html;
+      } catch (error) {
+        output.innerHTML = `<div class="error">Error generating documentation: ${error.message}</div>`;
+        console.error(error);
+      }
+    });
+    
+    // Initialize Mermaid with better styling
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'forest',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis',
+        nodeSpacing: 50,
+        rankSpacing: 50
+      },
+      themeVariables: {
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        fontSize: '16px',
+        primaryColor: '#3a7d65',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#2c6049',
+        lineColor: '#3a7d65',
+        secondaryColor: '#006100',
+        tertiaryColor: '#fff'
+      }
+    });
+    
+    // Generate Taxonomy Report Button
+    document.getElementById('generate-report').addEventListener('click', async () => {
+      const output = document.getElementById('report-output');
+      
+      output.innerHTML = '<span class="loading"></span> Generating flavor taxonomy report...';
+      
+      try {
+        const diagram = generateFlavorTaxonomyDiagram();
+        output.innerHTML = `<pre>${diagram}</pre>`;
+      } catch (error) {
+        output.innerHTML = `<div class="error">Error generating report: ${error.message}</div>`;
+        console.error(error);
+      }
+    });
+    
+    // Close modal when clicking the X
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      document.getElementById('diagramModal').style.display = 'none';
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('diagramModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

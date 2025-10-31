@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Full Tea Analysis Report</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.5; padding: 20px; }
+        #status { margin: 15px 0; font-style: italic; color: #555; }
+        #output {
+            width: 95%;
+            height: 60vh;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre;
+            overflow: auto;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .output-controls { margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Generate Tea Analysis Reports</h1>
+    <p>Generate a full JSON report for all teas, or select a single tea and generate a detailed Markdown trace of its calculation steps.</p>
+
+    <button id="generateBtn">Generate Full JSON Report</button>
+    <button id="generateTraceBtn" disabled>Generate Detailed Trace (Select Tea First)</button>
+
+    <div id="status">Select a tea for detailed trace or generate full report.</div>
+
+    <select id="teaSelectorForTrace" style="margin-top:10px;">
+        <option value="">-- Select Tea for Trace --</option>
+        </select>
+
+    <div class="output-controls" style="display: none; margin-top: 15px;">
+        <button id="copyBtn" disabled>Copy JSON</button>
+        <button id="downloadBtn" disabled>Download JSON Report</button>
+    </div>
+
+    <textarea id="output" readonly placeholder="Full JSON report output will appear here..."></textarea>
+
+    <div id="md-output" style="display: none;"></div>
+
+    <script type="module" src="./js/generate-report-browser.js"></script>
+    <script type="module" src="./js/generate-trace-report.js"></script>
+</body>
+</html>
