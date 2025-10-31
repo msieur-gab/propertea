@@ -2,12 +2,12 @@
  * RecommendationService.js
  *
  * Consolidated recommendation service for all derived analyses
- * Consolidates 5 matchers into a single service:
+ * Uses actual matchers from /js/derivation/:
  * - TimeMatcher → getTimingRecommendations()
  * - SeasonMatcher → getSeasonalRecommendations()
  * - FoodMatcher → getFoodRecommendations()
  * - ActivityMatcher → getActivityRecommendations()
- * - BrewingMatcher → getBrewingRecommendations()
+ * - brewingMatcher → getBrewingRecommendations()
  *
  * CRITICAL: This service receives PRE-CALCULATED core analysis from
  * TeaCalculationOrchestrator, eliminating redundant recalculations.
@@ -16,328 +16,252 @@
  * Output: Timing, seasonal, food, activity, and brewing recommendations
  */
 
+import TimeMatcher from './matchers/TimeMatcher.js';
+import { ActivityMatcher } from './matchers/ActivityMatcher.js';
+import SeasonMatcher from './matchers/SeasonMatcher.js';
+import { FoodMatcher } from './matchers/FoodMatcher.js';
+import { brewingMatcher } from './matchers/brewingMatcher.js';
+
 export class RecommendationService {
   constructor(config = {}) {
     this.config = config;
+
+    // Initialize matchers
+    this.timeMatcher = new TimeMatcher(config.timeMatcher);
+    this.activityMatcher = new ActivityMatcher(config.activityMatcher);
+    this.seasonMatcher = new SeasonMatcher(config.seasonMatcher);
+    this.foodMatcher = new FoodMatcher(config.foodMatcher);
+    this.brewingMatcher = brewingMatcher;
   }
 
   /**
-   * Get timing/time-of-day recommendations
+   * Get timing/time-of-day recommendations using TimeMatcher
    *
-   * Based on: compounds (caffeine/theanine ratio)
+   * Based on: compounds (caffeine/theanine ratio) + tea type + processing
    *
    * @param {TeaModel} teaModel - Tea model
    * @param {Object} coreAnalysis - Pre-calculated core analysis
-   * @returns {Object} Timing recommendations
+   * @returns {Object} Timing recommendations with hourly scores
    */
   getTimingRecommendations(teaModel, coreAnalysis) {
-    const compounds = coreAnalysis?.compounds;
+    try {
+      const compoundAnalysis = coreAnalysis?.compounds;
+      const teaTypeAnalysis = coreAnalysis?.teaType;
+      const processingAnalysis = coreAnalysis?.processing;
 
-    if (!compounds) {
+      if (!compoundAnalysis || !teaTypeAnalysis) {
+        return {
+          success: false,
+          error: 'Insufficient data for timing analysis'
+        };
+      }
+
+      // Call TimeMatcher with analysis results
+      const result = this.timeMatcher.matchTime(
+        compoundAnalysis,
+        teaTypeAnalysis,
+        processingAnalysis
+      );
+
       return {
+        success: true,
         recommendations: {
-          bestTimes: [],
-          worstTimes: [],
-          explanation: 'Insufficient compound data for timing analysis'
+          hourlyScores: result.hourlyScores,
+          recommendedTimes: result.recommendedTimes,
+          idealRanges: result.idealRanges,
+          trace: result.trace
         }
       };
+    } catch (error) {
+      console.error('Error in getTimingRecommendations:', error);
+      return {
+        success: false,
+        error: error.message
+      };
     }
-
-    const { caffeineLevel, lTheanineLevel } = compounds.levels || {};
-    const ratio = compounds.levels?.lTheanineToCaffeineRatio || 0;
-
-    // Determine best times based on caffeine/theanine profile
-    let bestTimes = [];
-    let worstTimes = [];
-    let explanation = '';
-
-    if (caffeineLevel <= 1) {
-      bestTimes = ['Evening', 'Night', 'Before bed'];
-      worstTimes = ['Morning'];
-      explanation = 'Low caffeine makes this ideal for evening relaxation';
-    } else if (caffeineLevel >= 7) {
-      bestTimes = ['Morning', 'Work hours'];
-      worstTimes = ['Evening', 'Night'];
-      explanation = 'High caffeine content makes this best for morning energy';
-    } else if (ratio >= 1.5) {
-      bestTimes = ['Afternoon', 'Evening', 'Anytime'];
-      worstTimes = [];
-      explanation = 'High L-theanine smooths caffeine for calm focus throughout the day';
-    } else {
-      bestTimes = ['Morning', 'Afternoon', 'Work'];
-      worstTimes = ['Night'];
-      explanation = 'Balanced profile works well during active hours';
-    }
-
-    return {
-      recommendations: {
-        bestTimes,
-        worstTimes,
-        explanation
-      }
-    };
   }
 
   /**
-   * Get seasonal recommendations
+   * Get seasonal recommendations using SeasonMatcher
    *
-   * Based on: geography (climate), processing (roast), flavor
+   * Based on: geography (climate) + processing (roast) + tea type + flavor
    *
    * @param {TeaModel} teaModel - Tea model
    * @param {Object} coreAnalysis - Pre-calculated core analysis
-   * @returns {Object} Seasonal recommendations
+   * @returns {Object} Seasonal recommendations with scored seasons
    */
   getSeasonalRecommendations(teaModel, coreAnalysis) {
-    const geography = coreAnalysis?.geography;
-    const processing = coreAnalysis?.processing;
+    try {
+      const geographyAnalysis = coreAnalysis?.geography;
+      const processingAnalysis = coreAnalysis?.processing;
+      const teaTypeAnalysis = coreAnalysis?.teaType;
+      const flavorAnalysis = coreAnalysis?.flavor;
 
-    if (!geography && !processing) {
+      if (!geographyAnalysis && !processingAnalysis) {
+        return {
+          success: false,
+          error: 'Insufficient data for seasonal analysis'
+        };
+      }
+
+      // Call SeasonMatcher with analysis results
+      const result = this.seasonMatcher.matchSeason(
+        geographyAnalysis,
+        processingAnalysis,
+        teaTypeAnalysis,
+        flavorAnalysis
+      );
+
       return {
-        recommendations: {
-          bestSeasons: [],
-          explanation: 'Insufficient data for seasonal analysis'
-        }
+        success: true,
+        recommendations: result
+      };
+    } catch (error) {
+      console.error('Error in getSeasonalRecommendations:', error);
+      return {
+        success: false,
+        error: error.message
       };
     }
-
-    let bestSeasons = [];
-    let explanation = '';
-
-    // Determine based on climate tendency
-    if (geography?.characteristics?.temperatureTendency === 'Cooling') {
-      bestSeasons = ['Spring', 'Summer'];
-      explanation = 'Cooling teas are refreshing during warm seasons';
-    } else if (geography?.characteristics?.temperatureTendency === 'Warming') {
-      bestSeasons = ['Autumn', 'Winter'];
-      explanation = 'Warming teas are comforting during cold seasons';
-    } else {
-      bestSeasons = ['Anytime'];
-      explanation = 'This tea is enjoyable year-round';
-    }
-
-    // Check processing for roast influence
-    if (processing?.roastLevel === 'Heavy' || processing?.roastLevel === 'Charcoal') {
-      bestSeasons = ['Autumn', 'Winter'];
-      explanation = `Heavy roast profile makes this ideal for ${bestSeasons.join('/')}`;
-    }
-
-    return {
-      recommendations: {
-        bestSeasons,
-        explanation
-      }
-    };
   }
 
   /**
-   * Get food pairing recommendations
+   * Get food pairing recommendations using FoodMatcher
    *
-   * Based on: flavor profile, processing, tea type
+   * Based on: flavor profile + processing + tea type
    *
    * @param {TeaModel} teaModel - Tea model
    * @param {Object} coreAnalysis - Pre-calculated core analysis
-   * @returns {Object} Food pairing recommendations
+   * @returns {Object} Food pairing recommendations with scored pairings
    */
   getFoodRecommendations(teaModel, coreAnalysis) {
-    const flavor = coreAnalysis?.flavor;
-    const teaType = coreAnalysis?.teaType;
+    try {
+      const flavorAnalysis = coreAnalysis?.flavor;
+      const processingAnalysis = coreAnalysis?.processing;
+      const teaTypeAnalysis = coreAnalysis?.teaType;
 
-    if (!flavor || !flavor.profile || flavor.profile.identified.length === 0) {
+      if (!flavorAnalysis) {
+        return {
+          success: false,
+          error: 'Insufficient flavor data for food pairing'
+        };
+      }
+
+      // Call FoodMatcher with analysis results
+      const result = this.foodMatcher.matchFood(
+        flavorAnalysis,
+        processingAnalysis,
+        teaTypeAnalysis
+      );
+
       return {
-        recommendations: {
-          foods: [],
-          occasions: [],
-          explanation: 'Insufficient flavor data for food pairing'
-        }
+        success: true,
+        recommendations: result
+      };
+    } catch (error) {
+      console.error('Error in getFoodRecommendations:', error);
+      return {
+        success: false,
+        error: error.message
       };
     }
-
-    // Basic food pairing logic based on flavor categories
-    const categories = flavor.profile.categories || [];
-    const foods = [];
-    const occasions = [];
-
-    const categoryToFoods = {
-      Floral: ['Light Desserts', 'Pastries', 'Spring Salads'],
-      Fruity: ['Fruit Dishes', 'Desserts', 'Cheese'],
-      Roasted: ['Grilled Meats', 'Roasted Vegetables', 'Dark Chocolate'],
-      Sweet: ['Desserts', 'Pastries', 'Breakfast Foods'],
-      Umami: ['Savory Dishes', 'Seafood', 'Sushi'],
-      Earthy: ['Mushrooms', 'Root Vegetables', 'Stews'],
-      Spicy: ['Spiced Foods', 'Curries', 'Grilled Meats']
-    };
-
-    categories.forEach(category => {
-      const categoryFoods = categoryToFoods[category] || [];
-      foods.push(...categoryFoods);
-    });
-
-    // Determine occasions based on tea type
-    if (teaType?.identified?.type === 'green') {
-      occasions.push('Breakfast', 'Light lunch', 'Afternoon tea');
-    } else if (teaType?.identified?.type === 'black') {
-      occasions.push('Breakfast', 'Afternoon tea', 'Dinner');
-    } else if (teaType?.identified?.type === 'oolong') {
-      occasions.push('Afternoon', 'Evening', 'Social');
-    } else {
-      occasions.push('Anytime');
-    }
-
-    // Remove duplicates
-    const uniqueFoods = [...new Set(foods)];
-
-    return {
-      recommendations: {
-        foods: uniqueFoods.slice(0, 8),
-        occasions: [...new Set(occasions)],
-        explanation: `Pairs well with ${uniqueFoods.slice(0, 3).join(', ')}`
-      }
-    };
   }
 
   /**
-   * Get activity recommendations
+   * Get activity recommendations using ActivityMatcher
    *
-   * Based on: compounds, tea type, flavor
+   * Based on: compounds (caffeine/theanine) + tea type + flavor
    *
    * @param {TeaModel} teaModel - Tea model
    * @param {Object} coreAnalysis - Pre-calculated core analysis
-   * @returns {Object} Activity recommendations
+   * @returns {Object} Activity recommendations with scored activities and clusters
    */
   getActivityRecommendations(teaModel, coreAnalysis) {
-    const compounds = coreAnalysis?.compounds;
-    const teaType = coreAnalysis?.teaType;
+    try {
+      const compoundAnalysis = coreAnalysis?.compounds;
+      const teaTypeAnalysis = coreAnalysis?.teaType;
+      const flavorAnalysis = coreAnalysis?.flavor;
 
-    if (!compounds) {
+      if (!compoundAnalysis) {
+        return {
+          success: false,
+          error: 'Insufficient data for activity recommendations'
+        };
+      }
+
+      // Call ActivityMatcher with analysis results
+      const result = this.activityMatcher.matchActivity(
+        compoundAnalysis,
+        teaTypeAnalysis,
+        flavorAnalysis
+      );
+
       return {
-        recommendations: {
-          activities: [],
-          explanation: 'Insufficient data for activity recommendations'
-        }
+        success: true,
+        recommendations: result
+      };
+    } catch (error) {
+      console.error('Error in getActivityRecommendations:', error);
+      return {
+        success: false,
+        error: error.message
       };
     }
-
-    const { caffeineLevel, lTheanineLevel } = compounds.levels || {};
-    const ratio = compounds.levels?.lTheanineToCaffeineRatio || 0;
-    const activities = [];
-
-    // Determine activities based on caffeine/theanine
-    if (lTheanineLevel >= 7 && caffeineLevel <= 3) {
-      activities.push('Meditation', 'Relaxation', 'Reading', 'Contemplation');
-    } else if (caffeineLevel >= 7 && lTheanineLevel <= 3) {
-      activities.push('Work', 'Exercise', 'Energy tasks', 'Problem-solving');
-    } else if (ratio > 1.2) {
-      activities.push('Focused work', 'Creative tasks', 'Study', 'Calm activities');
-    } else if (ratio < 0.8) {
-      activities.push('Physical activity', 'Energetic tasks', 'Social');
-    } else {
-      activities.push('Balanced activities', 'Social', 'Work', 'Relaxation');
-    }
-
-    return {
-      recommendations: {
-        activities: [...new Set(activities)],
-        explanation: `Ideal for ${activities.slice(0, 2).join(' or ')}`
-      }
-    };
   }
 
   /**
-   * Get brewing recommendations
+   * Get brewing recommendations using brewingMatcher
    *
    * Based on: tea type, processing
    *
    * @param {TeaModel} teaModel - Tea model
    * @param {Object} coreAnalysis - Pre-calculated core analysis
-   * @returns {Object} Brewing recommendations
+   * @returns {Object} Brewing recommendations with gongfu/western parameters
    */
   getBrewingRecommendations(teaModel, coreAnalysis) {
-    const teaType = coreAnalysis?.teaType;
-    const processing = coreAnalysis?.processing;
+    try {
+      const processingAnalysis = coreAnalysis?.processing;
 
-    // Default brewing parameters by tea type
-    const brewingGuides = {
-      green: {
-        waterTemp: '70-80°C',
-        steepTime: '2-3 minutes',
-        ratio: '1:50 (leaf to water)',
-        gongfu: {
-          waterTemp: '75°C',
-          steepTime: '10-30 seconds per infusion',
-          infusions: '5-8 infusions'
-        },
-        western: {
-          waterTemp: '75°C',
-          steepTime: '2-3 minutes',
-          infusions: '1-2 infusions'
-        }
-      },
-      black: {
-        waterTemp: '90-100°C',
-        steepTime: '3-5 minutes',
-        ratio: '1:50',
-        gongfu: {
-          waterTemp: '95°C',
-          steepTime: '15-45 seconds per infusion',
-          infusions: '6-8 infusions'
-        },
-        western: {
-          waterTemp: '95°C',
-          steepTime: '3-5 minutes',
-          infusions: '1-2 infusions'
-        }
-      },
-      oolong: {
-        waterTemp: '85-95°C',
-        steepTime: '2-5 minutes',
-        ratio: '1:40 (more leaf)',
-        gongfu: {
-          waterTemp: '90°C',
-          steepTime: '20-45 seconds per infusion',
-          infusions: '6-10 infusions'
-        },
-        western: {
-          waterTemp: '90°C',
-          steepTime: '3-5 minutes',
-          infusions: '1-2 infusions'
-        }
-      },
-      white: {
-        waterTemp: '65-75°C',
-        steepTime: '3-5 minutes',
-        ratio: '1:50',
-        gongfu: {
-          waterTemp: '70°C',
-          steepTime: '15-30 seconds per infusion',
-          infusions: '4-6 infusions'
-        },
-        western: {
-          waterTemp: '70°C',
-          steepTime: '3-5 minutes',
-          infusions: '1-2 infusions'
-        }
+      if (!teaModel) {
+        return {
+          success: false,
+          error: 'Tea model is required for brewing recommendations'
+        };
       }
-    };
 
-    const type = teaType?.identified?.type || 'green';
-    const guide = brewingGuides[type] || brewingGuides.green;
+      // Call brewingMatcher for gongfu style
+      const gongfuResult = this.brewingMatcher.getBrewingInfo(
+        teaModel,
+        'gongfu',
+        processingAnalysis
+      );
 
-    return {
-      recommendations: {
-        general: {
-          waterTemperature: guide.waterTemp,
-          steepTime: guide.steepTime,
-          leafToWaterRatio: guide.ratio
-        },
-        gongfu: guide.gongfu,
-        western: guide.western,
-        explanation: `Recommended brewing for ${type} tea`
-      }
-    };
+      // Call brewingMatcher for western style
+      const westernResult = this.brewingMatcher.getBrewingInfo(
+        teaModel,
+        'western',
+        processingAnalysis
+      );
+
+      return {
+        success: true,
+        recommendations: {
+          gongfu: gongfuResult,
+          western: westernResult
+        }
+      };
+    } catch (error) {
+      console.error('Error in getBrewingRecommendations:', error);
+      return {
+        success: false,
+        error: error.message
+      };
+    }
   }
 
   /**
-   * Serialize all recommendations
+   * Serialize all recommendations into a unified response
+   * Each matcher returns results with its own structure
    */
   serialize(
     timing,
@@ -347,11 +271,11 @@ export class RecommendationService {
     brewing
   ) {
     return {
-      timing: timing?.recommendations || {},
-      seasonal: seasonal?.recommendations || {},
-      food: food?.recommendations || {},
-      activities: activities?.recommendations || {},
-      brewing: brewing?.recommendations || {}
+      timing: timing?.success ? timing.recommendations : {},
+      seasonal: seasonal?.success ? seasonal.recommendations : {},
+      food: food?.success ? food.recommendations : {},
+      activities: activities?.success ? activities.recommendations : {},
+      brewing: brewing?.success ? brewing.recommendations : {}
     };
   }
 }
