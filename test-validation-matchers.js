@@ -20,7 +20,7 @@ import {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const datasetPath = path.join(__dirname, '_dataset', 'chinese_teas_validation_comprehensive.json');
+const datasetPath = path.join(__dirname, 'tea_validation_data.json');
 const dataset = JSON.parse(fs.readFileSync(datasetPath, 'utf8'));
 
 // Initialize orchestrator
@@ -57,15 +57,17 @@ console.log(`Loading ${dataset.length} teas from dataset...\n`);
 async function validateTea(tea, index) {
   return new Promise((resolve) => {
     try {
+      // Map new validation dataset structure to teaModel
+      const teaType = tea.type.toLowerCase();
       const teaModel = {
         name: tea.name,
-        type: tea.type,
+        type: teaType,
         subType: tea.subType || null,
-        caffeineLevel: tea.caffeineLevel,
-        lTheanineLevel: tea.lTheanineLevel,
-        flavorProfile: tea.flavorProfile || [],
-        processingMethods: tea.processingMethods || [],
-        geography: tea.geography || {}
+        caffeineLevel: tea.characteristics?.caffeine_level || 'Medium',
+        lTheanineLevel: 'Medium',
+        flavorProfile: tea.characteristics?.flavor_profile ? [tea.characteristics.flavor_profile] : [],
+        processingMethods: [],
+        geography: {}
       };
 
       orchestrator.calculateTea(teaModel).then(result => {
@@ -77,7 +79,14 @@ async function validateTea(tea, index) {
 
         results.processed++;
         const analysis = result.data;
-        const expectedContext = tea.recommendedContext;
+
+        // Map validation dataset to expected context format for validators
+        const expectedContext = {
+          timeOfDay: tea.best_time_of_day || [],
+          drinkingSeason: tea.best_season || [],
+          recommendedActivity: tea.activities || [],
+          foodPairing: tea.food_pairings || []
+        };
 
         // Validate recommendations using MatcherValidators
         const validationResults = RecommendationValidator.validateAll(
