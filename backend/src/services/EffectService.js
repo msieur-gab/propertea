@@ -1,23 +1,22 @@
 /**
- * EffectService.js
+ * EffectService.js - ADDITIVE TERTIARY METHOD
  *
  * Calculates expected tea effects (dominant and supporting)
  * Based on: tea type, compounds (caffeine/L-theanine), flavor profile, processing, and geographic/climate factors
  *
- * Input: TeaModel + Core analysis (compounds, flavor, processing, teaType, geography)
- * Output: Expected effects with dominant/supporting effect names and detailed reasoning with sources
+ * Input: TeaModel + Core analysis
+ * Output: Expected effects with dominant/supporting effect names
  *
- * Five-Factor Algorithm:
- * 1. Tea Type (2.5x weight) - Inherent effect profile of tea variety
- * 2. Compounds (2.0-2.8x weight) - Caffeine/L-theanine profile and their effects
- * 3. Flavor (2.0x weight) - Flavor notes and their associated effects (from reference descriptors)
- * 4. Processing (1.5x weight) - Processing methods (from reference descriptors)
- * 5. Geography (2.0x weight) - Altitude, temperature, humidity, solar radiation (from reference descriptors)
+ * TERTIARY/ADDITIVE ALGORITHM (proven in TimeMatcher):
+ * 1. Initialize baseline scores from tea type (dominant=25, secondary=15, tertiary=10)
+ * 2. Add adjustments from compounds (ratio-based)
+ * 3. Add adjustments from flavors
+ * 4. Add adjustments from processing/roast
+ * 5. Add adjustments from geography (minimal)
+ * 6. Normalize 0-100 and select top 2 effects
  *
- * Uses ReferenceDescriptorService and NormalizationDescriptorService to:
- * - Map dataset inputs to authoritative reference descriptors
- * - Track contributors for detailed reasoning
- * - Return descriptions from reference files
+ * Why this works: Sequential additive adjustments allow secondary factors to modulate
+ * the base tea type signal without overwhelming it through multiplication.
  */
 
 import { TeaTypeNormalizer } from '../utils/TeaTypeNormalizer.js';
@@ -217,10 +216,16 @@ export class EffectService {
   }
 
   /**
-   * Build effect scores by combining all influences, tracking contributors
+   * Build effect scores using TRUE ADDITIVE TERTIARY METHOD
    *
-   * This method uses ReferenceDescriptorService and NormalizationDescriptorService
-   * to ensure all effects come from authoritative reference descriptors.
+   * Algorithm:
+   * 1. Initialize all effects to 0
+   * 2. Add tea type baseline (dominant: +25, secondary: +15, tertiary: +10)
+   * 3. Add compound adjustments based on caffeine/theanine ratio
+   * 4. Add flavor category adjustments
+   * 5. Add processing/roast adjustments
+   * 6. Add geography/climate adjustments (subtle, +1 to +3 only)
+   * 7. Normalize to 0-100 range
    *
    * @private
    * @returns {Object} { scores: {...}, contributors: {...} }
@@ -231,239 +236,160 @@ export class EffectService {
       teaType: null,
       compounds: null,
       flavors: [],
-      processing: [],
+      processing: null,
       geography: {}
     };
 
-    // Initialize all effects to 0
+    // STEP 1: Initialize all effects to 0
     Object.keys(CORE_EFFECTS).forEach(effect => {
       scores[effect] = 0;
     });
 
-    // STEP 1: Normalize and apply tea type base effects (weight: 2.5x)
-    const teaTypeWeight = 2.5;
+    // STEP 2: BASELINE from Tea Type (dominant: +25, secondary: +15, tertiary: +10)
     const rawTeaType = teaModel?.type || 'unknown';
     const normalized = TeaTypeNormalizer.normalize(rawTeaType);
     const canonicalTeaType = normalized.canonical || 'unknown';
 
-    let baseEffects = {};
+    let typeInfo = { dominant: null, secondary: null, tertiary: null };
     if (canonicalTeaType === 'puerh') {
       const pueringEffectsObj = TEA_TYPE_EFFECTS.puerh || {};
       const explicitSubType = (teaModel?.subType || '').toLowerCase().trim();
       const pueringSubtype = explicitSubType || normalized.subtype || 'sheng';
-      baseEffects = pueringEffectsObj[pueringSubtype] || pueringEffectsObj.sheng || {};
+      typeInfo = pueringEffectsObj[pueringSubtype] || pueringEffectsObj.sheng || {};
+      contributors.teaType = { name: canonicalTeaType, subType: pueringSubtype };
     } else {
-      baseEffects = TEA_TYPE_EFFECTS[canonicalTeaType] || {};
+      typeInfo = TEA_TYPE_EFFECTS[canonicalTeaType] || {};
+      contributors.teaType = { name: canonicalTeaType, subType: null };
     }
 
-    contributors.teaType = {
-      name: canonicalTeaType,
-      subType: canonicalTeaType === 'puerh' ? (teaModel?.subType || 'sheng') : null,
-      effects: baseEffects,
-      description: ReferenceDescriptorService.getTeaTypeDescription(canonicalTeaType)
-    };
+    // Apply tea type baseline adjustments (additive, not multiplied)
+    if (typeInfo.dominant) scores[typeInfo.dominant] = (scores[typeInfo.dominant] || 0) + 25;
+    if (typeInfo.secondary) scores[typeInfo.secondary] = (scores[typeInfo.secondary] || 0) + 15;
+    if (typeInfo.tertiary) scores[typeInfo.tertiary] = (scores[typeInfo.tertiary] || 0) + 10;
 
-    Object.entries(baseEffects).forEach(([effect, score]) => {
-      scores[effect] = (scores[effect] || 0) + score * teaTypeWeight;
+    // STEP 3: Compound ratio adjustments
+    const caffeineLevel = teaModel?.caffeineLevel || 0;
+    const lTheanineLevel = teaModel?.lTheanineLevel || 0;
+    const ratio = caffeineLevel > 0 ? lTheanineLevel / caffeineLevel : 0;
+
+    let compoundAdjustments = {};
+    if (ratio >= 1.5) {
+      compoundAdjustments = { calming: 12, harmonizing: 6, restorative: 4, energizing: -8 };
+    } else if (ratio >= 0.8) {
+      compoundAdjustments = { harmonizing: 6, focusing: 3, elevating: 2 };
+    } else {
+      compoundAdjustments = { energizing: 12, focusing: 6, calming: -6 };
+    }
+
+    Object.entries(compoundAdjustments).forEach(([effect, adjustment]) => {
+      scores[effect] = (scores[effect] || 0) + adjustment;
     });
-
-    // GREEN TEA DIFFERENTIATION: Apply caffeine-level-based branching
-    // Matcha/high caffeine greens (≥4.5) → focusing should dominate
-    // Sencha/medium caffeine (3.5-4.5) → energizing base effect wins
-    // Low caffeine greens (<3.5) → calming/focusing balance
-    if (canonicalTeaType === 'green') {
-      const caffeineLevel = teaModel?.caffeineLevel || 0;
-      if (caffeineLevel >= 4.5) {
-        // High caffeine green (Matcha, strong greens) → strongly boost focusing
-        scores.focusing = (scores.focusing || 0) + 8;
-        scores.energizing = (scores.energizing || 0) - 5;
-        scores.elevating = (scores.elevating || 0) - 3;
-      } else if (caffeineLevel >= 3.8) {
-        // Medium caffeine (Sencha-like) → moderate boost to energizing
-        scores.energizing = (scores.energizing || 0) + 4;
-        scores.focusing = (scores.focusing || 0) - 1;
-      } else if (caffeineLevel > 0) {
-        // Low caffeine (<3.8) → reduce energizing, let calming/harmonizing win
-        scores.energizing = (scores.energizing || 0) - 3;
-        scores.calming = (scores.calming || 0) + 2;
-        scores.harmonizing = (scores.harmonizing || 0) + 1;
-      }
-    }
-
-    // RED TEA DIFFERENTIATION: Handle smoked reds (Lapsang Souchong)
-    // Most other reds stay energizing by default
-    if (canonicalTeaType === 'red') {
-      const processingData = (Array.isArray(teaModel?.processingMethods) ? teaModel.processingMethods : null)
-        || teaModel?.processingMethods?.methods || [];
-      const processingStr = processingData.join(' ').toLowerCase();
-
-      // Smoked reds (Lapsang Souchong) → comforting/grounding instead of energizing
-      if (processingStr.includes('smoked')) {
-        scores.comforting = (scores.comforting || 0) + 6;
-        scores.grounding = (scores.grounding || 0) + 4;
-        scores.energizing = (scores.energizing || 0) - 5;
-        scores.focusing = (scores.focusing || 0) - 2;
-      }
-    }
-
-    // PUERH DIFFERENTIATION: Sheng (young/raw) vs Shou (aged/ripe)
-    if (canonicalTeaType === 'puerh') {
-      const pueringSubtype = (teaModel?.subType || '').toLowerCase().trim();
-
-      // Sheng (young) expects energizing/focusing
-      if (pueringSubtype === 'sheng' || !pueringSubtype) {
-        scores.energizing = (scores.energizing || 0) + 10;
-        scores.focusing = (scores.focusing || 0) - 5;
-        scores.comforting = (scores.comforting || 0) - 5;
-        scores.grounding = (scores.grounding || 0) - 2;
-      }
-      // Shou (aged/ripe) expects grounding/comforting (already in base effects)
-      else if (pueringSubtype === 'shou') {
-        scores.grounding = (scores.grounding || 0) + 3;
-        scores.comforting = (scores.comforting || 0) + 2;
-        scores.energizing = (scores.energizing || 0) - 2;
-      }
-    }
-
-    // STEP 2: Normalize and apply compound-based modifiers (weight: 2.0-2.8x)
-    const normalizedCompounds = NormalizationDescriptorService.normalizeCompounds(
-      teaModel?.caffeineLevel,
-      teaModel?.lTheanineLevel
-    );
-
-    const compoundWeight = (normalizedCompounds.relaxationLevel === 'Very High' || normalizedCompounds.relaxationLevel === 'High' ||
-      normalizedCompounds.stimulationLevel === 'Very High' || normalizedCompounds.stimulationLevel === 'High') ? 2.8 : 2.0;
 
     contributors.compounds = {
-      profile: normalizedCompounds.profile,
-      stimulationLevel: normalizedCompounds.stimulationLevel,
-      relaxationLevel: normalizedCompounds.relaxationLevel,
-      caffeineLevel: normalizedCompounds.caffeineLevel,
-      lTheanineLevel: normalizedCompounds.lTheanineLevel,
-      effects: normalizedCompounds.effects,
-      description: normalizedCompounds.description
+      caffeineLevel,
+      lTheanineLevel,
+      ratio: ratio.toFixed(2),
+      adjustments: compoundAdjustments
     };
 
-    Object.entries(normalizedCompounds.effects).forEach(([effect, modifier]) => {
-      scores[effect] = (scores[effect] || 0) + modifier * compoundWeight;
-    });
-
-    // STEP 3: Normalize and apply flavor-based effects (weight: 2.0x)
-    // Use actual flavor profile from teaModel instead of pre-categorized coreAnalysis
-    // Handle multiple possible field names for flavor data
-    const flavorWeight = 2.0;
+    // STEP 4: Flavor adjustments
     const flavorData = teaModel?.flavorProfile || teaModel?.flavor?.primary || teaModel?.flavor || [];
     const normalizedFlavors = NormalizationDescriptorService.normalizeFlavorProfile(flavorData);
 
-    contributors.flavors = normalizedFlavors.map(f => ({
-      originalName: f.originalName,
-      referenceKey: f.referenceKey,
-      category: f.category,
-      effects: f.effects,
-      description: f.description
-    }));
+    const flavorAdjustmentMap = {
+      Floral: { elevating: 6, harmonizing: 3, comforting: 1 },
+      Fruity: { elevating: 5, energizing: 2, harmonizing: 1 },
+      Vegetal: { focusing: 5, grounding: 2, energizing: 1 },
+      'Nutty/Toasty': { comforting: 6, grounding: 3, restorative: 1 },
+      Spicy: { energizing: 6, focusing: 3 },
+      Sweet: { elevating: 5, comforting: 4, restorative: 1, calming: 1 },
+      'Earthy/Mineral': { grounding: 8, harmonizing: 2, restorative: 2 },
+      Woody: { grounding: 6, comforting: 3 },
+      Roasted: { grounding: 6, comforting: 4, warming: 2 },
+      'Umami/Marine': { focusing: 5, grounding: 3, energizing: 1 },
+      'Aged/Earthy': { grounding: 8, restorative: 4 }
+    };
 
     normalizedFlavors.forEach(flavor => {
-      Object.entries(flavor.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * flavorWeight;
+      const category = flavor.category || flavor.referenceKey;
+      const adjustments = flavorAdjustmentMap[category] || {};
+      Object.entries(adjustments).forEach(([effect, value]) => {
+        scores[effect] = (scores[effect] || 0) + value;
       });
+      contributors.flavors.push({ originalName: flavor.originalName, category });
     });
 
-    // STEP 4: Normalize and apply processing method effects (weight: 1.5x)
-    // Use actual processing methods from teaModel
-    // Handle multiple possible field names for processing data
-    const processingWeight = 1.5;
+    // STEP 5: Processing/Roast adjustments
     const processingData = (Array.isArray(teaModel?.processingMethods) ? teaModel.processingMethods : null)
       || teaModel?.processingMethods?.methods
       || teaModel?.processing?.methods
       || [];
-    const normalizedProcessing = NormalizationDescriptorService.normalizeProcessingMethods(processingData);
 
-    contributors.processing = normalizedProcessing.map(p => ({
-      originalName: p.originalName,
-      referenceKey: p.referenceKey,
-      category: p.category,
-      effects: p.effects,
-      description: p.description
-    }));
+    const roastLevel = this._determineRoastLevel(processingData);
+    const roastAdjustments = {
+      Charcoal: { grounding: 10, comforting: 6, restorative: 1 },
+      Heavy: { grounding: 8, comforting: 5, restorative: 1 },
+      Medium: { comforting: 4, harmonizing: 1, grounding: 1 },
+      Light: { elevating: 5, energizing: 2, focusing: 1 },
+      Minimal: { elevating: 5, focusing: 3, energizing: 1 },
+      None: {}
+    }[roastLevel] || {};
 
-    normalizedProcessing.forEach(method => {
-      Object.entries(method.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * processingWeight;
-      });
+    Object.entries(roastAdjustments).forEach(([effect, adjustment]) => {
+      scores[effect] = (scores[effect] || 0) + adjustment;
     });
 
-    // STEP 5: Normalize and apply geographic/climate factors (weight: 2.0x)
-    const geographicWeight = 2.0;
-    const normalizedGeo = NormalizationDescriptorService.normalizeGeography(
-      teaModel?.geography || {}
-    );
+    contributors.processing = { roastLevel, adjustments: roastAdjustments };
 
-    // Apply altitude effects
-    if (normalizedGeo.altitude) {
-      contributors.geography.altitude = {
-        value: normalizedGeo.altitude.value,
-        level: normalizedGeo.altitude.level,
-        description: normalizedGeo.altitude.description,
-        effects: normalizedGeo.altitude.effects
-      };
+    // STEP 6: Geography adjustments (very subtle: +1 to +3 only)
+    const geoData = teaModel?.geography || {};
+    const altitude = geoData.altitude || 0;
+    const temperature = geoData.temperature || 0;
+    const humidity = geoData.humidity || 0;
 
-      Object.entries(normalizedGeo.altitude.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
-      });
+    if (altitude > 1200) {
+      scores.calming = (scores.calming || 0) + 2;
+      scores.restorative = (scores.restorative || 0) + 1;
     }
 
-    // Apply temperature effects
-    if (normalizedGeo.temperature) {
-      contributors.geography.temperature = {
-        value: normalizedGeo.temperature.value,
-        level: normalizedGeo.temperature.level,
-        description: normalizedGeo.temperature.description,
-        effects: normalizedGeo.temperature.effects
-      };
-
-      Object.entries(normalizedGeo.temperature.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
-      });
+    if (temperature < 16) {
+      scores.calming = (scores.calming || 0) + 1;
     }
 
-    // Apply humidity effects
-    if (normalizedGeo.humidity) {
-      contributors.geography.humidity = {
-        value: normalizedGeo.humidity.value,
-        level: normalizedGeo.humidity.level,
-        description: normalizedGeo.humidity.description,
-        effects: normalizedGeo.humidity.effects
-      };
-
-      Object.entries(normalizedGeo.humidity.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
-      });
+    if (humidity > 70) {
+      scores.harmonizing = (scores.harmonizing || 0) + 1;
     }
 
-    // Apply solar radiation effects
-    if (normalizedGeo.solarRadiation) {
-      contributors.geography.solarRadiation = {
-        value: normalizedGeo.solarRadiation.value,
-        level: normalizedGeo.solarRadiation.level,
-        description: normalizedGeo.solarRadiation.description,
-        effects: normalizedGeo.solarRadiation.effects
-      };
+    contributors.geography = { altitude, temperature, humidity };
 
-      Object.entries(normalizedGeo.solarRadiation.effects || {}).forEach(([effect, modifier]) => {
-        scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
-      });
-    }
+    // STEP 7: Normalize scores to 0-100 range
+    const allValues = Object.values(scores);
+    const minScore = Math.min(...allValues);
+    const maxScore = Math.max(...allValues);
+    const range = Math.max(maxScore - minScore, 1);
 
-    // Ensure all scores are at least 0
     Object.keys(scores).forEach(effect => {
-      scores[effect] = Math.max(0, scores[effect]);
+      const normalized = ((scores[effect] - minScore) / range) * 100;
+      scores[effect] = Math.max(0, Math.min(100, normalized));
     });
 
-    return {
-      scores,
-      contributors
-    };
+    return { scores, contributors };
+  }
+
+  /**
+   * Determine roast level from processing methods
+   * @private
+   */
+  _determineRoastLevel(methods) {
+    if (!Array.isArray(methods) || methods.length === 0) return 'None';
+    const methodStr = methods.join(' ').toLowerCase();
+    if (methodStr.includes('charcoal')) return 'Charcoal';
+    if (methodStr.includes('heavy')) return 'Heavy';
+    if (methodStr.includes('medium')) return 'Medium';
+    if (methodStr.includes('light')) return 'Light';
+    if (methodStr.includes('minimal')) return 'Minimal';
+    if (methodStr.includes('roast')) return 'Medium';
+    return 'None';
   }
 
   /**
@@ -532,111 +458,19 @@ export class EffectService {
   }
 
   /**
-   * Generate detailed reasoning from contributors
-   * Uses authoritative descriptions from reference descriptor files
+   * Generate reasoning from contributors (simplified for additive algorithm)
    *
    * @private
    */
   _generateDetailedReasoning(dominant, supporting, effectScores, contributors, teaModel) {
-    const detailedReasons = [];
-
-    // Tea type contribution
-    if (contributors.teaType) {
-      const typeReason = `Tea Type: ${contributors.teaType.name}${contributors.teaType.subType ? ` (${contributors.teaType.subType})` : ''} contributes ${Object.keys(contributors.teaType.effects).join(', ')} effects.`;
-      detailedReasons.push(typeReason);
-      if (contributors.teaType.description) {
-        detailedReasons.push(`  • ${contributors.teaType.description}`);
-      }
-    }
-
-    // Compound contribution
-    if (contributors.compounds) {
-      const compoundReason = `Compounds: ${contributors.compounds.profile} (Caffeine: ${contributors.compounds.caffeineLevel}/10, L-Theanine: ${contributors.compounds.lTheanineLevel}/10)`;
-      detailedReasons.push(compoundReason);
-      if (contributors.compounds.description) {
-        detailedReasons.push(`  • ${contributors.compounds.description}`);
-      }
-    }
-
-    // Flavor contribution
-    if (contributors.flavors.length > 0) {
-      const flavorNames = contributors.flavors.map(f => f.originalName).join(', ');
-      detailedReasons.push(`Flavors: ${flavorNames}`);
-      contributors.flavors.forEach(flavor => {
-        const effectsList = Object.keys(flavor.effects).join(', ');
-        detailedReasons.push(`  • ${flavor.originalName} (mapped to ${flavor.referenceKey}): contributes ${effectsList}`);
-        if (flavor.description) {
-          detailedReasons.push(`    ${flavor.description}`);
-        }
-      });
-    }
-
-    // Processing contribution
-    if (contributors.processing.length > 0) {
-      const processingNames = contributors.processing.map(p => p.originalName).join(', ');
-      detailedReasons.push(`Processing Methods: ${processingNames}`);
-      contributors.processing.forEach(method => {
-        const effectsList = Object.keys(method.effects).join(', ');
-        detailedReasons.push(`  • ${method.originalName} (${method.referenceKey}): contributes ${effectsList}`);
-        if (method.description) {
-          detailedReasons.push(`    ${method.description}`);
-        }
-      });
-    }
-
-    // Geography contribution
-    if (Object.keys(contributors.geography).length > 0) {
-      detailedReasons.push('Geography & Climate:');
-      if (contributors.geography.altitude) {
-        const altData = contributors.geography.altitude;
-        detailedReasons.push(`  • Altitude (${altData.value}m, ${altData.level} elevation): ${Object.keys(altData.effects).join(', ')}`);
-        if (altData.description) {
-          detailedReasons.push(`    ${altData.description}`);
-        }
-      }
-      if (contributors.geography.temperature) {
-        const tempData = contributors.geography.temperature;
-        detailedReasons.push(`  • Temperature (${tempData.value}°C, ${tempData.level}): ${Object.keys(tempData.effects).join(', ')}`);
-        if (tempData.description) {
-          detailedReasons.push(`    ${tempData.description}`);
-        }
-      }
-      if (contributors.geography.humidity) {
-        const humData = contributors.geography.humidity;
-        detailedReasons.push(`  • Humidity (${humData.value}%, ${humData.level}): ${Object.keys(humData.effects).join(', ')}`);
-        if (humData.description) {
-          detailedReasons.push(`    ${humData.description}`);
-        }
-      }
-      if (contributors.geography.solarRadiation) {
-        const solData = contributors.geography.solarRadiation;
-        detailedReasons.push(`  • Solar Radiation (${solData.value} W/m², ${solData.level}): ${Object.keys(solData.effects).join(', ')}`);
-        if (solData.description) {
-          detailedReasons.push(`    ${solData.description}`);
-        }
-      }
-    }
-
-    // Create summary sentences for dominant and supporting
-    const dominantScore = effectScores[dominant] || 0;
-    const supportingScore = effectScores[supporting] || 0;
-
-    let dominantSummary = `${dominant} is the dominant effect (score: ${dominantScore.toFixed(1)})`;
-    let supportingSummary = `${supporting} is the supporting effect (score: ${supportingScore.toFixed(1)})`;
-
-    // Add contribution source to summary
-    if (contributors.teaType?.effects[dominant]) {
-      dominantSummary += ` driven primarily by the ${contributors.teaType.name} tea type`;
-    }
-    if (contributors.compounds?.effects[dominant]) {
-      dominantSummary += ` reinforced by ${contributors.compounds.profile} compound profile`;
-    }
-
+    // Return simple reasoning structure
     return {
-      dominant: dominantSummary,
-      supporting: supportingSummary,
-      contributors: contributors,
-      detailed: detailedReasons.join('\n')
+      dominant: `${dominant} (score: ${(effectScores[dominant] || 0).toFixed(0)}/100)`,
+      supporting: `${supporting} (score: ${(effectScores[supporting] || 0).toFixed(0)}/100)`,
+      contributors: {
+        teaType: contributors.teaType?.name,
+        compounds: contributors.compounds?.profile
+      }
     };
   }
 
