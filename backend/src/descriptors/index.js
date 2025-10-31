@@ -21,18 +21,3 @@ export { elevationLevels, latitudeZones } from './GeographicalDescriptors.js';
 export { effectCombinations } from './EffectCombinations.js';
 export { effectMapping, teaTypeEffects, effectInteractionRules, effectNameSubstitution } from './EffectMapping.js';
 export { seasonalDescriptions, seasonalProfiles } from './SeasonalFactors.js';
-
-export default {
-  flavorInfluences: (await import('./FlavorInfluences.js')).flavorInfluences,
-  processingInfluences: (await import('./ProcessingInfluences.js')).processingInfluences,
-  teaTypeDescriptors: (await import('./TeaTypeDescriptors.js')).teaTypeDescriptors,
-  elevationLevels: (await import('./GeographicalDescriptors.js')).elevationLevels,
-  latitudeZones: (await import('./GeographicalDescriptors.js')).latitudeZones,
-  effectCombinations: (await import('./EffectCombinations.js')).effectCombinations,
-  effectMapping: (await import('./EffectMapping.js')).effectMapping,
-  teaTypeEffects: (await import('./EffectMapping.js')).teaTypeEffects,
-  effectInteractionRules: (await import('./EffectMapping.js')).effectInteractionRules,
-  seasonalDescriptions: (await import('./SeasonalFactors.js')).seasonalDescriptions,
-  seasonalProfiles: (await import('./SeasonalFactors.js')).seasonalProfiles,
-  brewingGuide: (await import('./brewingGuide.js')).default
-};
