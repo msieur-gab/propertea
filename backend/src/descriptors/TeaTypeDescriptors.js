@@ -1,79 +1,247 @@
 // TeaTypeDescriptors.js
-// Defines descriptors and explanations for tea types across different seasons
+// Defines baseline characteristics and tendencies for tea types.
 
 export const teaTypeDescriptors = {
-    // Seasonal tea type characteristics
-    seasonalCharacteristics: {
-        green: {
-            spring: "Green tea reaches its full potential in spring with fresh, vibrant flavors and high amino acid content. The sweet, vegetal notes perfectly match the season's awakening energy.",
-            summer: "Green tea offers cooling properties in summer that help regulate body temperature. Its light character and refreshing quality make it ideal for warm weather.",
-            fall: "Green tea becomes less aligned with the cooler fall weather, though vegetal sweetness can still complement early autumn. Lacks the warming quality ideal for this season.",
-            winter: "Green tea is generally too light for winter's cold demands, lacking the warming properties needed. Better suited for warmer seasons."
+    // Structure: { typeName: { base: {...}, subTypes: { subTypeName: {...} } } }
+  
+    green: {
+      base: {
+        description: "Green teas preserve the fresh character of the tea leaf through minimal oxidation. Processing typically involves quick heating (steaming or pan-firing) to prevent oxidation, producing vibrant, often vegetal or marine flavors.",
+        typicalCaffeine: "Medium",      // e.g., 3-5 range
+        typicalTheanine: "Medium-High", // e.g., 4-7 range
+        dominantFlavorCategories: ["Vegetal", "Marine", "Nutty", "Grassy", "Sweet"],
+        seasonalTendency: "cooling",
+        baseTimeOfDay: ["Morning", "Afternoon"],
+        baseActivityHints: ["Focus", "Gentle Energy", "Refreshment"],
+        commonProcessing: ["Steamed", "Pan-fired", "Rolled", "Dried"]
+      },
+      subTypes: {
+          // Example Subtype - Add more as needed
+          matcha: {
+               description: "Matcha is a stone-ground green tea powder made from shade-grown leaves, consumed whole.",
+               typicalCaffeine: "High", // Higher due to consuming whole leaf
+               typicalTheanine: "Very High", // Higher due to shading
+               dominantFlavorCategories: ["Umami", "Sweet", "Vegetal", "Creamy"],
+               seasonalTendency: "cooling", // Still green tea base
+               baseTimeOfDay: ["Morning", "Ritual"],
+               baseActivityHints: ["Focus", "Energy (Smooth)", "Ceremony"],
+               commonProcessing: ["Shade-grown", "Steamed", "Stone-ground"]
+          },
+          gyokuro: {
+               description: "Gyokuro is a premium shade-grown Japanese green tea known for its intense umami and sweetness.",
+               typicalCaffeine: "Medium-High",
+               typicalTheanine: "Very High", // Significant shading effect
+               dominantFlavorCategories: ["Umami", "Marine", "Sweet", "Vegetal"],
+               seasonalTendency: "cooling",
+               baseTimeOfDay: ["Afternoon", "Special Occasion"],
+               baseActivityHints: ["Focus", "Calm & Clear", "Contemplative"],
+               commonProcessing: ["Shade-grown", "Steamed", "Rolled"]
+          }
+      }
+    },
+  
+    black: {
+      base: {
+        description: "Black teas undergo full oxidation, transforming the leaf's chemistry to develop robust, often malty, fruity, or spicy flavors and typically higher caffeine levels.",
+        typicalCaffeine: "High",          // e.g., 5-7 range
+        typicalTheanine: "Low-Medium",    // e.g., 2-4 range
+        dominantFlavorCategories: ["Malty", "Fruity", "Spicy", "Sweet", "Woody", "Roasted"],
+        seasonalTendency: "warming",
+        baseTimeOfDay: ["Morning", "Afternoon"],
+        baseActivityHints: ["Energy", "Routine", "Focus", "Social"],
+        commonProcessing: ["Withered", "Rolled", "Oxidized", "Fired/Dried"]
+      },
+      subTypes: {
+          assam: {
+              typicalCaffeine: "Very High",
+              dominantFlavorCategories: ["Malty", "Bold", "Honey"],
+              baseActivityHints: ["Strong Energy", "Morning Boost"]
+          },
+          darjeeling: { // Note: Varies hugely by flush
+               typicalCaffeine: "Medium-High",
+               typicalTheanine: "Medium",
+               dominantFlavorCategories: ["Floral", "Fruity (Muscatel)", "Mineral"],
+               seasonalTendency: "neutral-warming", // Depends on flush
+               baseActivityHints: ["Focus", "Uplifting", "Social"]
+          }
+      }
+    },
+  
+    oolong: {
+      base: {
+        description: "Oolong teas represent a diverse category with partial oxidation ranging from light (closer to green) to heavy (closer to black). This results in a wide spectrum of flavors and characteristics.",
+        typicalCaffeine: "Medium-High",   // Highly variable: 4-6 range typical
+        typicalTheanine: "Medium",        // Highly variable: 3-6 range typical
+        dominantFlavorCategories: ["Floral", "Fruity", "Roasted", "Woody", "Mineral", "Creamy", "Honey"], // Very diverse
+        seasonalTendency: "variable", // Depends heavily on oxidation/roast
+        baseTimeOfDay: ["Afternoon", "Evening", "Social"],
+        baseActivityHints: ["Social", "Contemplative", "Focus", "Relaxation"], // Very diverse
+        commonProcessing: ["Withered", "Bruised/Rolled", "Partially Oxidized", "Fired/Roasted"]
+      },
+      subTypes: {
+          'tie guan yin (light)': {
+              description: "Lightly oxidized Tie Guan Yin, known for vibrant floral (orchid) notes.",
+              typicalCaffeine: "Medium",
+              typicalTheanine: "Medium-High",
+              dominantFlavorCategories: ["Floral", "Creamy", "Sweet"],
+              seasonalTendency: "cooling",
+              baseTimeOfDay: ["Afternoon", "Spring"],
+              baseActivityHints: ["Social", "Uplifting", "Relaxation"]
+          },
+          'da hong pao (heavy roast)': {
+              description: "Da Hong Pao, a heavily roasted rock oolong with mineral and caramel notes.",
+              typicalCaffeine: "Medium-High",
+              typicalTheanine: "Medium",
+              dominantFlavorCategories: ["Roasted", "Mineral", "Woody", "Caramel"],
+              seasonalTendency: "warming",
+              baseTimeOfDay: ["Afternoon", "Evening", "Fall/Winter"],
+              baseActivityHints: ["Contemplative", "Warming", "Focus"]
+          }
+      }
+    },
+  
+    white: {
+      base: {
+        description: "White teas undergo minimal processing (typically just withering and drying) with very little oxidation, preserving delicate flavors and high levels of antioxidants.",
+        typicalCaffeine: "Low",           // e.g., 1-3 range
+        typicalTheanine: "High",          // e.g., 5-7 range
+        dominantFlavorCategories: ["Delicate", "Subtle Sweet", "Floral", "Fruity", "Hay"],
+        seasonalTendency: "cooling",
+        baseTimeOfDay: ["Afternoon", "Evening", "Anytime"],
+        baseActivityHints: ["Relaxation", "Gentle Focus", "Unwinding", "Subtle"],
+        commonProcessing: ["Withered", "Dried"]
+      },
+      subTypes: {
+          'silver needle': {
+              description: "Made only from unopened buds, offering the most delicate flavor.",
+              typicalCaffeine: "Very Low", // Often lower than other whites
+              typicalTheanine: "Very High",
+              dominantFlavorCategories: ["Delicate", "Sweet", "Hay", "Floral"],
+              baseActivityHints: ["Deep Relaxation", "Subtle", "Meditation"]
+          }
+      }
+    },
+  
+    puerh: { // Combined base for Sheng and Shou, subtypes differentiate
+      base: {
+          description: "Puerh tea from Yunnan, China, undergoes post-fermentation (natural for Sheng, accelerated for Shou), developing complex earthy, woody, and often sweet characteristics over time.",
+          typicalCaffeine: "Medium-High", // Can vary wildly with age/type
+          typicalTheanine: "Medium",      // Can vary
+          dominantFlavorCategories: ["Earthy", "Woody", "Camphor", "Sweet", "Aged", "Mineral"],
+          seasonalTendency: "warming", // Especially Shou and aged Sheng
+          baseTimeOfDay: ["Afternoon", "Evening", "After Meals"],
+          baseActivityHints: ["Digestive", "Contemplative", "Grounding (Physical)", "Warming"],
+          commonProcessing: ["Withered", "Pan-fired (Sheng)", "Sun-dried", "Fermented (Shou)", "Compressed", "Aged"]
+      },
+      subTypes: {
+          sheng: {
+              description: "Sheng (Raw) Puerh ages naturally over years, starting vibrant and potentially astringent, mellowing over time.",
+              typicalCaffeine: "High", // Often higher when young
+              seasonalTendency: "neutral-cooling (young) -> warming (aged)",
+              baseActivityHints: ["Energy (young)", "Focus (young)", "Contemplative (aged)", "Digestive"]
+          },
+          shou: {
+              description: "Shou (Ripe) Puerh undergoes accelerated fermentation, resulting in a dark, smooth, earthy profile achievable much faster.",
+              typicalCaffeine: "Medium-High",
+              seasonalTendency: "warming",
+              baseActivityHints: ["Digestive", "Warming", "Grounding (Physical)", "Relaxation (Subtle)"]
+          }
+      }
+    },
+  
+    yellow: {
+      base: {
+        description: "Yellow tea is a rare type processed similarly to green tea but with an added 'smothering' step (men huan) which induces gentle oxidation, resulting in unique smoothness and sweetness.",
+        typicalCaffeine: "Medium-Low",    // e.g., 2-4 range
+        typicalTheanine: "Medium-High",   // e.g., 4-6 range
+        dominantFlavorCategories: ["Sweet", "Smooth", "Nutty", "Vegetal (Mellowed)"],
+        seasonalTendency: "neutral",
+        baseTimeOfDay: ["Afternoon", "Anytime"],
+        baseActivityHints: ["Gentle Focus", "Relaxation", "Social", "Smooth"],
+        commonProcessing: ["Pan-fired (light)", "Smothering (Men Huan)", "Dried"]
+      }
+    },
+
+    red: {
+      base: {
+        description: "Red teas (Hong Cha) are fully oxidized Chinese teas, offering robust character and malty sweetness. Despite the name, they are equivalent to what Western countries call 'black tea', a naming difference based on leaf color before oxidation.",
+        typicalCaffeine: "High",
+        typicalTheanine: "Low-Medium",
+        dominantFlavorCategories: ["Malty", "Fruity", "Sweet", "Spicy", "Honey"],
+        seasonalTendency: "warming",
+        baseTimeOfDay: ["Morning", "Afternoon"],
+        baseActivityHints: ["Energy", "Focus", "Social", "Warming"],
+        commonProcessing: ["Withered", "Rolled", "Oxidized", "Dried"]
+      },
+      subTypes: {
+        "keemun": {
+          description: "Keemun (Qimen) black tea from Anhui Province, known for elegant wine and plum notes.",
+          typicalCaffeine: "High",
+          dominantFlavorCategories: ["Fruity", "Winey", "Smooth"],
+          baseActivityHints: ["Focus", "Afternoon Social", "Contemplative"]
         },
-        white: {
-            spring: "White tea's delicate, fresh character perfectly embodies spring's renewal. The minimal processing preserves spring's natural energy and subtle complexity.",
-            summer: "White tea offers excellent cooling properties for summer heat. Its light body and gentle sweetness provide refreshment without heaviness.",
-            fall: "White tea lacks the warming depth ideal for fall, though its subtle sweetness can still be pleasant. Not the most aligned with the season's energy.",
-            winter: "White tea is typically too delicate for winter's need for warming, substantial teas. Its light body doesn't provide the comfort needed in cold weather."
-        },
-        yellow: {
-            spring: "Yellow tea's gentle character and slight oxidation make it excellent for spring. Its sweet, mellow profile harmonizes with the season's awakening energy.",
-            summer: "Yellow tea offers good balance in summer, being substantive yet still light enough for warm weather. Provides good refreshment with slight warmth.",
-            fall: "Yellow tea transitions reasonably to early fall but lacks the full warming character ideal for the season. Middle-ground option as weather cools.",
-            winter: "Yellow tea is generally too light for winter's demands, though more substantial than green tea. Better suited for transitional seasons."
-        },
-        oolong: {
-            spring: "Light oolongs capture spring's vibrant energy with floral notes and bright character. Their balance of oxidation offers complexity while maintaining freshness.",
-            summer: "Medium oolongs provide good balance in summer, offering substance without heaviness. Their complex character remains refreshing in warm weather.",
-            fall: "Darker, roasted oolongs truly shine in fall, with warming notes of nuts, toast, and caramel that perfectly match the season's transitional energy.",
-            winter: "Heavily roasted oolongs offer excellent warming properties for winter with deep, complex flavors that provide comfort and satisfaction in cold weather."
-        },
-        black: {
-            spring: "Black tea can be somewhat heavy for spring's light energy, though first flush black teas offer seasonal brightness that can work well in this season.",
-            summer: "Black tea can be warming for summer's heat, though lighter black teas served chilled can provide refreshing strength that stands up to ice.",
-            fall: "Black tea truly belongs in fall, with malty, sweet, full-bodied characteristics that perfectly complement the season's cooling temperatures and changing energy.",
-            winter: "Black tea offers ideal warming properties for winter with robust flavor, body, and heating energy that provides comfort during the coldest months."
-        },
-        dark: {
-            spring: "Dark tea's heavy, earthy character contrasts with spring's light energy. Generally too substantial for the season's fresh, renewing qualities.",
-            summer: "Dark tea's fermented character offers some cooling digestive benefits in summer, making it more suitable than expected for warm weather.",
-            fall: "Dark tea's complex, earthy depth aligns beautifully with fall's introspective energy. The fermented richness creates perfect seasonal harmony.",
-            winter: "Dark tea reaches its full potential in winter, with deep warming properties and substantial body that offers perfect balance to cold, dark days."
-        },
-        puerh: {
-            spring: "Puerh tea, especially aged types, generally contrasts with spring's fresh character. Some younger sheng puerh can offer more seasonal alignment.",
-            summer: "Puerh tea, particularly aged types, offers surprising cooling digestive properties that can be beneficial during summer's heat.",
-            fall: "Puerh tea's earthy, complex character harmonizes with fall's transitional energy. Its depth and body provide satisfaction as temperatures cool.",
-            winter: "Puerh tea, especially shou puerh, provides ideal warming energy for winter with deep, earthy richness that creates perfect seasonal harmony."
+        "lapsang souchong": {
+          description: "Lapsang Souchong, a heavily smoke-dried red tea with distinctive piney, camphor notes.",
+          typicalCaffeine: "Medium-High",
+          dominantFlavorCategories: ["Smoky", "Piney", "Woody", "Spicy"],
+          seasonalTendency: "warming-intense",
+          baseActivityHints: ["Strong Energy", "Warming", "Adventurous"]
         }
+      }
     },
 
-    // Additional information about tea types
-    generalDescriptions: {
-        green: "Green tea preserves the fresh character of the tea leaf through minimal oxidation. Processing typically involves quick heating to prevent oxidation, producing vibrant, vegetal flavors with cooling energy.",
-        white: "White tea undergoes minimal processing with no oxidation, preserving delicate flavors and natural sweetness. Typically withered and dried, producing subtle complexity and gentle energy.",
-        yellow: "Yellow tea follows a unique process similar to green tea but with an added yellowing step that reduces grassiness and adds mellowness. Creates a smooth character with balanced energy.",
-        oolong: "Oolong tea spans a spectrum of partial oxidation (10-80%), creating remarkable diversity from light and floral to dark and roasted. Processing includes withering, bruising, partial oxidation, and often roasting.",
-        black: "Black tea undergoes full oxidation, transforming the leaf's chemistry to develop rich, sweet flavors. Processing includes withering, rolling, oxidation, and firing, producing warming energy.",
-        dark: "Dark tea undergoes unique post-fermentation with microorganisms that transform its chemistry. This aging process creates earthy, complex flavors with unique health benefits and balanced energy.",
-        puerh: "Puerh tea from Yunnan can be sheng (raw) which ages naturally, or shou (ripe) which undergoes accelerated fermentation. Both develop complex, earthy characters that continue to evolve with time."
+    dark: {
+      base: {
+        description: "Dark tea (Hei Cha) undergoes post-fermentation with microorganisms, creating earthy, complex flavors with unique health benefits. Different from Puerh, with distinct regional characteristics.",
+        typicalCaffeine: "Medium",
+        typicalTheanine: "Low-Medium",
+        dominantFlavorCategories: ["Earthy", "Aged", "Smooth", "Sweet", "Mineral"],
+        seasonalTendency: "warming",
+        baseTimeOfDay: ["Afternoon", "Evening", "After Meals"],
+        baseActivityHints: ["Digestive", "Contemplative", "Grounding", "Warming"],
+        commonProcessing: ["Withered", "Fermented", "Compressed", "Aged"]
+      },
+      subTypes: {
+        "liu bao": {
+          description: "Liu Bao dark tea from Guangxi, known for smooth, sweet, beetle-leaf aroma.",
+          dominantFlavorCategories: ["Earthy", "Sweet", "Beetle-leaf", "Mineral"],
+          baseActivityHints: ["Digestive", "Gentle Warming", "After-meal"]
+        },
+        "fu brick": {
+          description: "Fu tea, a compressed dark tea known for golden 'golden flowers' (fungal colonies) and earthy notes.",
+          dominantFlavorCategories: ["Earthy", "Slightly Floral", "Aged"],
+          baseActivityHints: ["Digestive", "Grounding", "Warming"]
+        }
+      }
     },
 
-    // Mapping for seasonal flavor affinities
-    seasonalFlavorAffinities: {
-        spring: ["floral", "fresh", "grassy", "vegetal", "bright", "green", "herbaceous", "light", "crisp"],
-        summer: ["fruity", "citrus", "floral", "crisp", "mineral", "light", "refreshing", "bright"],
-        fall: ["nutty", "toasty", "malty", "honey", "spicy", "woody", "earthy", "warm", "smooth"],
-        winter: ["roasted", "chocolate", "spicy", "earthy", "woody", "malty", "full", "sweet", "deep", "rich"]
+    herbal: {
+      base: {
+        description: "Herbal infusions are caffeine-free blends of dried herbs, flowers, seeds, and botanicals. Properties vary dramatically based on ingredients, offering diverse effects from soothing to invigorating.",
+        typicalCaffeine: "None",
+        typicalTheanine: "None",
+        dominantFlavorCategories: ["Variable", "Aromatic", "Medicinal", "Sweet", "Floral"],
+        seasonalTendency: "variable",
+        baseTimeOfDay: ["Anytime"],
+        baseActivityHints: ["Wellness", "Relaxation", "Digestion", "Variety"],
+        commonProcessing: ["Dried", "Blended", "Cut"]
+      }
     },
 
-    // Season opposites for explanation generation
-    seasonOpposites: {
-        spring: "fall",
-        summer: "winter",
-        fall: "spring",
-        winter: "summer"
+    tisane: {
+      base: {
+        description: "Tisanes are botanical infusions without tea leaves, created from flowers, leaves, seeds, roots, and barks. They provide diverse flavors and effects based on their unique plant combinations.",
+        typicalCaffeine: "None",
+        typicalTheanine: "None",
+        dominantFlavorCategories: ["Variable", "Botanical", "Aromatic", "Floral", "Fruity"],
+        seasonalTendency: "variable",
+        baseTimeOfDay: ["Anytime"],
+        baseActivityHints: ["Wellness", "Relaxation", "Social", "Variety"],
+        commonProcessing: ["Dried", "Blended", "Whole"]
+      }
     }
-};
 
-export default teaTypeDescriptors; 
+  };
+  
+  // Exporting the structure
+  export default teaTypeDescriptors;

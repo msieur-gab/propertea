@@ -1,433 +1,246 @@
 // FlavorInfluences.js
-// Defines the influences of various tea flavors on mental and physical effects
+// Defines influences of tea flavors, focusing on pairing and contextual hints.
 
 export const flavorInfluences = {
-    // Floral flavors generally elevate mood and promote relaxation
+    // Note: Structure groups flavors under categories for organization.
+    // The FlavorCalculator might look up specific flavors directly or by category.
+
     floral: {
         jasmine: {
-            effects: { calming: 8, elevating: 10, clarifying: 6 },
-            intensity: 8,
-            associatedFlavors: ["sweet", "perfumed", "honey"]
+            // removed 'effects', 'intensity'
+            foodPairingHints: ["Light Desserts", "Steamed Vegetables", "White Fish", "Rice Dishes"],
+            seasonalAffinityHints: ["Spring", "Summer"],
+            activityHints: ["Relaxation", "Social", "Evening", "Unwinding"],
+            associatedFlavors: ["jasmine", "honey"]
         },
         rose: {
-            effects: { calming: 7, elevating: 9, nurturing: 6 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "perfumed", "honey"]
+            foodPairingHints: ["Pastries", "Fruit Salads", "Middle Eastern Sweets", "Yogurt"],
+            seasonalAffinityHints: ["Spring", "Summer"],
+            activityHints: ["Relaxation", "Social", "Romantic"],
+            associatedFlavors: ["rose", "honey"]
         },
         orchid: {
-            effects: { elevating: 8, clarifying: 6, focusing: 5 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "perfumed", "honey", "creamy"]
+            foodPairingHints: ["Creamy Desserts", "Light Cakes", "Tropical Fruit", "Subtle Pastries"],
+            seasonalAffinityHints: ["Spring", "Anytime (Subtle)"],
+            activityHints: ["Relaxation", "Contemplative", "Social"],
+            associatedFlavors: ["orchid", "honey"]
         },
         lilac: {
-            effects: { elevating: 9, clarifying: 5, focusing: 4 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "perfumed", "spring-like"]
+            foodPairingHints: ["Spring Salads", "Light Fruit Tarts", "Madeleines"],
+            seasonalAffinityHints: ["Spring"],
+            activityHints: ["Uplifting", "Social", "Creative"],
+            associatedFlavors: ["lilac", "floral"]
         },
         osmanthus: {
-            effects: { elevating: 8, harmonizing: 6, nurturing: 5 },
-            intensity: 7,
-            associatedFlavors: ["apricot", "sweet", "honey"]
-        },
-        elderflower: {
-            effects: { elevating: 7, clarifying: 5, focusing: 5 },
-            intensity: 6,
-            associatedFlavors: ["sweet", "delicate", "honey"]
+            foodPairingHints: ["Apricot Pastries", "Moon Cakes", "Jellies", "Light Cookies"],
+            seasonalAffinityHints: ["Autumn", "Spring"],
+            activityHints: ["Uplifting", "Social", "Relaxation"],
+            associatedFlavors: ["apricot", "osmanthus", "honey"]
         },
         honeysuckle: {
-            effects: { elevating: 9, calming: 2.0, focusing: 4 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "nectar", "floral"]
-        }
+             foodPairingHints: ["Fruit Salads", "Light Cakes", "Sorbets"],
+             seasonalAffinityHints: ["Spring", "Summer"],
+             activityHints: ["Uplifting", "Relaxation", "Social"],
+             associatedFlavors: ["honeysuckle", "nectar"]
+         }
     },
 
-    // Fruity flavors tend to elevate mood and increase energy
     fruity: {
         apple: {
-            effects: { energizing: 5, elevating: 7, harmonizing: 5 },
-            intensity: 5,
-            associatedFlavors: ["sweet", "crisp", "light"]
-        },
-        pear: {
-            effects: { nurturing: 6, harmonizing: 7, elevating: 6 },
-            intensity: 5,
-            associatedFlavors: ["sweet", "juicy", "delicate"]
-        },
-        peach: {
-            effects: { elevating: 8, nurturing: 6, energizing: 5 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "juicy", "honey"]
-        },
-        apricot: {
-            effects: { elevating: 8, energizing: 6, harmonizing: 5 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "tangy", "bright"]
+            foodPairingHints: ["Cheese Plates", "Pork Dishes", "Oatmeal", "Light Cakes"],
+            seasonalAffinityHints: ["Autumn", "Spring"],
+            activityHints: ["Social", "Afternoon Break", "Gentle Energy"],
+            associatedFlavors: ["apple", "red apple", "green apple"]
         },
         citrus: {
-            effects: { energizing: 8, elevating: 7, focusing: 6 },
-            intensity: 7,
-            associatedFlavors: ["bright", "tangy", "zesty"]
-        },
+             foodPairingHints: ["Seafood", "Salads", "Chicken", "Light Desserts"],
+             seasonalAffinityHints: ["Summer", "Spring"],
+             activityHints: ["Energy", "Focus", "Morning", "Refreshment"],
+             associatedFlavors: ["lemon", "orange", "grapefruit", "lime", "citrus peel"]
+         },
         berry: {
-            effects: { energizing: 7, elevating: 6, grounding: 4 },
-            intensity: 6,
-            associatedFlavors: ["sweet", "tangy", "bright"]
-        },
-        tropical: {
-            effects: { energizing: 8, elevating: 7, focusing: 5 },
-            intensity: 7,
-            associatedFlavors: ["sweet", "exotic", "bright"]
-        },
-        stone_fruit: {
-            effects: { elevating: 7, harmonizing: 6, nurturing: 5 },
-            intensity: 6,
-            associatedFlavors: ["sweet", "juicy", "smooth"]
-        }
+             foodPairingHints: ["Desserts", "Yogurt", "Breakfast Foods", "Salads"],
+             seasonalAffinityHints: ["Summer", "Spring"],
+             activityHints: ["Energy", "Social", "Uplifting"],
+             associatedFlavors: ["strawberry", "raspberry", "blueberry", "blackberry"]
+         },
+        dark_fruits: {
+             foodPairingHints: ["Dark Chocolate", "Game Meats", "Roasted Meats", "Strong Cheese", "Spiced Desserts", "Rich Stews", "Red Wine Sauces"],
+             seasonalAffinityHints: ["Autumn", "Winter"],
+             activityHints: ["Evening", "Social", "Contemplative", "Relaxation"],
+             associatedFlavors: ["raisin", "prune", "fig", "blackberry", "black currant", "cherry", "plum"]
+         }
     },
 
-    // Vegetal flavors tend to promote focus and clarity
     vegetal: {
-        leafy: {
-            effects: {
-                calming: 2.0,            // Was 'soothing'
-                harmonizing: 2.0,        // Was 'balancing'
-                focusing: 2.0,           // Was 'clarifying'
-                restorative: 2.0,
-                elevating: 1.0           // Added elevating effect
-            },
-            intensity: 1.7,
-            flavors: ['spinach', 'kale', 'lettuce', 'grass']
+        // Using broader category hints, specific notes might refine this
+        _categoryDefaults: { // Example of category-level defaults
+            foodPairingHints: ["Savory Dishes", "Vegetables", "Rice", "Steamed Foods"],
+            seasonalAffinityHints: ["Spring", "Summer"],
+            activityHints: ["Focus", "Cleansing", "Refreshment"]
         },
-        cruciferous: {
-            effects: {
-                grounding: 2.0,          // Was 'reflective'
-                harmonizing: 2.0,        // Was 'balancing'
-                grounding: 2.0,          // Was 'stabilizing'
-                focusing: 1.5            // Was 'clarifying'
-            },
-            intensity: 1.3,
-            flavors: ['broccoli', 'cabbage', 'cauliflower']
+
+        grassy: {
+            foodPairingHints: ["Fresh Salads", "Light Vegetable Dishes", "White Fish"],
+            seasonalAffinityHints: ["Spring", "Early Summer"],
+            activityHints: ["Morning", "Focus", "Cleansing"],
+            associatedFlavors: ["fresh cut grass", "hay", "green", 'vegetal',"vegetable"]
+          },
+
+        leafy: { // Specific notes can override or add to defaults
+            foodPairingHints: ["Salads", "Steamed Greens", "Light Soups"],
+            seasonalAffinityHints: ["Spring"],
+            activityHints: ["Focus", "Detox/Cleansing"],
+            associatedFlavors: ['spinach', 'kale', 'lettuce', 'grass']
         },
         herbaceous: {
-            effects: {
-                calming: 2.0,            // Was 'soothing'
-                energizing: 1.5,         // Was 'awakening'
-                focusing: 2.0,           // Was 'clarifying'
-                restorative: 1.5,        // Was 'renewing'
-                elevating: 2.0           // Boosted from previous
-            },
-            intensity: 1.6,
-            flavors: ['parsley', 'thyme', 'mint', 'sage', 'basil']
-        }
+             foodPairingHints: ["Grilled Vegetables", "Savory Pastries", "Cheese", "Soups"],
+             seasonalAffinityHints: ["Spring", "Summer"],
+             activityHints: ["Focus", "Refreshment", "Calm (Mint)"],
+             associatedFlavors: ['parsley', 'thyme', 'mint', 'sage', 'basil']
+         }
     },
 
-    // Nutty and toasty flavors tend to provide grounding and comfort
     nutty_and_toasty: {
         nuts: {
-            effects: {
-                comforting: 3.0,         // Was 'nurturing', boosted
-                grounding: 2.5,          // Was 'centering'/'stabilizing', boosted
-                harmonizing: 1.5         // Was part of 'reflective'
-            },
-            intensity: 1.5,
-            flavors: ['almond', 'hazelnut', 'walnut', 'chestnut', 'peanut']
+            foodPairingHints: ["Baked Goods", "Cheese", "Roasted Vegetables", "Light Meats", "Roasted Nuts", "Hard Cheese"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Warming", "Comfort", "Relaxation", "Focus"],
+            associatedFlavors: ['almond', 'hazelnut', 'walnut', 'chestnut', 'creamy', 'peanut']
         },
         toasted: {
-            effects: {
-                comforting: 3.0,         // Was 'nurturing', boosted
-                grounding: 2.5,          // Was 'reflective'/'stabilizing', boosted
-                harmonizing: 1.5,        // Was part of 'centering'
-                restorative: 1.0         // Added restorative
-            },
-            intensity: 1.3,
-            flavors: ['bread', 'grain', 'barley', 'rice']
+            foodPairingHints: ["Breakfast Foods (Toast, Grains)", "Roasted Nuts", "Comfort Food", "Baked Goods", "Grilled Meats"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Warming", "Comfort", "Routine"],
+            associatedFlavors: ['bread', 'grain', 'barley', 'rice', 'toast']
         }
     },
 
-    // Spicy flavors tend to energize and stimulate
     spicy: {
-        pungent: {
-            effects: {
-                energizing: 2.0,         // Was 'revitalizing', decreased
-                focusing: 1.5,           // Was 'clarifying'
-                elevating: 2.5,          // Was 'elevating', boosted
-                restorative: 1.5         // Was 'renewing'
-            },
-            intensity: 1.6,
-            flavors: ['pepper', 'ginger', 'cinnamon', 'clove', 'anise', 'licorice']
+        pungent: { // Warming spices
+            foodPairingHints: ["Rich Desserts", "Spiced Cakes", "Curries", "Stews", "Spiced Foods"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Warming", "Energy", "Digestive"],
+            associatedFlavors: ['pepper', 'ginger', 'cinnamon', 'clove', 'anise', 'licorice']
         },
-        cooling: {
-            effects: {
-                calming: 2.5,            // Was 'soothing'/'peaceful'
-                restorative: 2.0,        // Was 'renewing'
-                harmonizing: 1.5,        // Was 'balancing'
-                elevating: 1.0           // Added elevating
-            },
-            intensity: 1.4,
-            flavors: ['menthol', 'camphor']
+        cooling: { // e.g., Mint
+            foodPairingHints: ["Fruit Salads", "Chocolate", "Lamb Dishes", "Yogurt"],
+            seasonalAffinityHints: ["Summer", "Spring"],
+            activityHints: ["Refreshment", "Focus", "Digestive"],
+            associatedFlavors: ['menthol', 'camphor', 'mint']
         }
     },
 
-    // Sweet flavors tend to provide comfort and nurturing effects
     sweet: {
-        caramelized: {
-            effects: {
-                comforting: 3.0,         // Was 'comforting', boosted
-                harmonizing: 2.0,        // Was 'balancing'
-                restorative: 2.0,
-                grounding: 2.0           // Was 'centering'
-            },
-            intensity: 1.7,
-            flavors: ['honey', 'caramel', 'brown sugar', 'molasses']
+        caramel: {
+            foodPairingHints: ["Desserts", "Roasted Foods", "Cheese", "Coffee", "Dark Chocolate", "Baked Goods", 
+                              "Nuts", "Apples", "Ice Cream", "Spiced Desserts", "Cream Desserts", "Roasted Nuts", 
+                              "Roasted Meats"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Comfort", "Warming", "Relaxation", "Evening", "Social"],
+            associatedFlavors: ['caramel', 'brown sugar', 'toffee', 'burnt sugar', 'molasses']
         },
-        vanilla: {
-            effects: {
-                calming: 2.5,            // Was 'peaceful'
-                restorative: 2.0,
-                harmonizing: 1.5,        // Was 'balancing'
-                comforting: 2.0          // Added comforting
-            },
-            intensity: 1.5,
-            flavors: ['vanilla']
+        sweet: { // Add this entry if 'sweet' is a possible input flavor
+            foodPairingHints: ["Light Desserts", "Fruits", "Pastries", "Yogurt"],
+            seasonalAffinityHints: ["Any Season"],
+            activityHints: ["Comfort", "Relaxation", "Social", "Treat"],
+            associatedFlavors: ["sugary", "honey", "malt", "caramel"] // Examples
         },
         chocolate: {
-            effects: {
-                comforting: 3.0,         // Boosted
-                grounding: 2.5,          // Was 'centering'/'stabilizing'
-                harmonizing: 1.5         // Was 'reflective'
-            },
-            intensity: 1.6,
-            flavors: ['cocoa', 'dark chocolate']
-        },
-        malt: {
-            effects: { nurturing: 7, grounding: 6, comforting: 5 },
-            intensity: 6,
-            associatedFlavors: ["sweet", "cereal", "warm"]
-        }
+             foodPairingHints: ["Desserts", "Berries", "Coffee", "Nuts", "Dark Chocolate", "Baked Goods", "Roasted Nuts"],
+             seasonalAffinityHints: ["Winter", "Autumn"],
+             activityHints: ["Comfort", "Indulgence", "Relaxation"],
+             associatedFlavors: ['cocoa', 'dark chocolate', 'chocolate']
+         },
+         malt: {
+             foodPairingHints: ["Breakfast Foods", "Baked Goods", "Biscuits", "Caramel", "Hard Cheese"],
+             seasonalAffinityHints: ["Autumn", "Winter"],
+             activityHints: ["Warming", "Comfort", "Routine"],
+             associatedFlavors: ["malt", "cereal", "grain"]
+         }
     },
 
-    // Earthy flavors tend to provide grounding and centering effects
     earthy: {
-        soil: {
-            effects: {
-                grounding: 3.0,          // Was 'centering', boosted
-                harmonizing: 2.0,        // Was 'balancing'
-                restorative: 2.0
-            },
-            intensity: 1.8,
-            flavors: ['petrichor', 'loam', 'forest floor']
+        _categoryDefaults: {
+            foodPairingHints: ["Mushrooms", "Root Vegetables", "Stews", "Dark Meats", "Grilled Meats", "Spiced Foods"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Grounding (Physical)", "Contemplative", "Warming", "Digestive"]
         },
-        minerals: {
-            effects: {
-                grounding: 2.5,          // Was 'reflective', boosted
-                focusing: 2.0,           // Was 'clarifying'
-                harmonizing: 1.5         // Was 'stabilizing'
-            },
-            intensity: 2.2,
-            flavors: ['wet stone', 'flint', 'slate']
+        soil: { 
+            foodPairingHints: ["Mushrooms", "Root Vegetables", "Hearty Soups", "Dark Meats", "Grilled Meats"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Grounding", "Contemplative", "Warming"],
+            associatedFlavors: ['petrichor', 'loam', 'forest floor', 'wet stone', 'soil', 'earth']
         },
-        fungal: {
-            effects: {
-                grounding: 2.8,          // Was 'centering', boosted
-                restorative: 2.0,
-                harmonizing: 1.5         // Was 'balancing'
-            },
-            intensity: 1.4,
-            flavors: ['truffle']
+        mineral: {
+             foodPairingHints: ["Seafood", "Shellfish", "Light Cheese", "Oysters", "Hard Cheese"],
+             seasonalAffinityHints: ["Spring", "Summer", "Autumn"], // Can be year-round
+             activityHints: ["Focus", "Refreshment", "Contemplative"],
+             associatedFlavors: ['mineral', 'flint', 'slate', 'chalk']
         },
-        aged: {
-            effects: {
-                grounding: 3.0,          // Was 'centering', boosted
-                harmonizing: 2.0,        // Was 'balancing'
-                comforting: 2.0          // Added comforting
-            },
-            intensity: 2.0,
-            flavors: ['aged', 'forest floor', 'leather', 'autumn leaves']
-        }
+        aged: { // Flavors from aging, like in Puerh
+             foodPairingHints: ["Rich Foods", "Game Meats", "Dark Chocolate", "Mushrooms", "Root Vegetables", "Spiced Foods"],
+             seasonalAffinityHints: ["Autumn", "Winter"],
+             activityHints: ["Contemplative", "Digestive", "Warming"],
+             associatedFlavors: ['leather', 'autumn leaves', 'camphor', 'moss', 'aged wood', 'stored grain']
+         }
     },
 
-    // Woody flavors tend to center and ground
     woody: {
-        oak: {
-            effects: { grounding: 7, centering: 6, comforting: 5 },
-            intensity: 6,
-            associatedFlavors: ["tannic", "dry", "smooth"]
-        },
-        pine: {
-            effects: { clarifying: 8, energizing: 7, focusing: 6 },
-            intensity: 7,
-            associatedFlavors: ["fresh", "resinous", "green"]
+        _categoryDefaults: {
+            foodPairingHints: ["Smoked Foods", "Grilled Meats", "Cheese", "Mushrooms", "Hard Cheese", "Root Vegetables", 
+                              "Dark Chocolate", "Roasted Nuts", "Rich Stews"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Grounding (Physical)", "Contemplative", "Warming", "Relaxation", "Evening"],
+            associatedFlavors: ["wood", "bark", "oak", "pine", "forest"]
         },
         cedar: {
-            effects: { centering: 7, clarifying: 6, grounding: 5 },
-            intensity: 6,
-            associatedFlavors: ["aromatic", "clean", "dry"]
-        },
-        bamboo: {
-            effects: { clarifying: 6, focusing: 5, harmonizing: 5 },
-            intensity: 5,
-            associatedFlavors: ["green", "fresh", "clean"]
-        },
-        sandalwood: {
-            effects: { calming: 7, centering: 6, grounding: 5 },
-            intensity: 6,
-            associatedFlavors: ["aromatic", "sweet", "warm"]
-        },
-        resinous: {
-            effects: {
-                grounding: 3.0,          // Was 'centering'/'stabilizing', boosted
-                focusing: 2.0,           // Was 'clarifying'
-                harmonizing: 1.5         // Was 'balancing'
-            },
-            intensity: 1.7,
-            flavors: ['pine', 'cedar', 'sandalwood']
-        },
-        fresh: {
-            effects: {
-                grounding: 2.0,          // Was 'reflective'
-                calming: 2.0,            // Was 'peaceful'
-                restorative: 2.0,        // Was 'renewing'
-                focusing: 1.5            // Was 'clarifying'
-            },
-            intensity: 1.5,
-            flavors: ['bamboo', 'oak', 'eucalyptus']
+            foodPairingHints: ["Smoked Salmon", "Hard Cheese", "Game Meats", "Grilled Meats"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Focus", "Contemplative"],
+            associatedFlavors: ["cedar", "pine"]
         }
     },
 
-    // Roasted flavors tend to provide comfort and grounding
     roasted: {
-        smoky: {
-            effects: {
-                comforting: 3.0,         // Was 'nurturing', boosted
-                grounding: 2.5,          // Was 'centering'/'stabilizing', boosted
-                harmonizing: 1.0         // Was 'reflective'
-            },
-            intensity: 1.2,
-            flavors: ['bonfire', 'tobacco', 'burnt']
+        _categoryDefaults: {
+            foodPairingHints: ["Grilled/Roasted Meats", "Root Vegetables", "Comfort Foods", "Chocolate", "Dark Chocolate", 
+                              "Roasted Nuts", "Hard Cheese", "Spiced Foods", "Baked Goods", "Rich Stews"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Warming", "Comfort", "Evening", "Relaxation", "Contemplative"],
+            associatedFlavors: ["roasted", "charred", "toasted", "burnt"]
         },
-        nutty: {
-            effects: {
-                comforting: 3.0,         // Was 'nurturing', boosted
-                grounding: 2.5,          // Was 'centering'/'stabilizing', boosted
-                harmonizing: 1.5         // Was 'balancing'
-            },
-            intensity: 1,
-            flavors: ['roasted nuts', 'coffee']
-        },
-        toasted_rice: {
-            effects: { comforting: 7, nurturing: 6, calming: 5 },
-            intensity: 5,
-            associatedFlavors: ["grainy", "warm", "sweet"]
-        }
+        smoky: { // Lapsang Souchong etc.
+            foodPairingHints: ["Smoked Foods", "BBQ", "Strong Cheese", "Bacon", "Grilled Meats", "Dark Chocolate"],
+            seasonalAffinityHints: ["Winter", "Autumn"],
+            activityHints: ["Warming", "Contemplative", "Bold Experience"],
+            associatedFlavors: ['smoke', 'bonfire', 'tobacco', 'burnt', 'pine resin']
+         },
+         coffee_chicory: { // Coffee-like notes etc.
+             foodPairingHints: ["Desserts", "Baked Goods", "Cheese", "Roasted Nuts", "Dark Chocolate"],
+             seasonalAffinityHints: ["Autumn", "Winter"],
+             activityHints: ["Warming", "Comfort", "Focus"],
+             associatedFlavors: ['coffee', 'chicory', 'roasted nuts', 'espresso']
+         }
     },
 
-    // Aged flavors tend to provide depth and complexity
-    aged: {
-        fermented: {
-            effects: {
-                grounding: 3.0,          // Was 'centering', boosted
-                harmonizing: 2.0,        // Was 'balancing'
-                restorative: 2.0,
-                comforting: 2.0          // Added comforting
-            },
-            intensity: 1.5,
-            flavors: ['leather', 'compost', 'autumn leaves']
-        },
-        oxidized: {
-            effects: {
-                grounding: 2.5,          // Was 'centering'/'stabilizing', boosted
-                focusing: 1.5,           // Was 'clarifying'
-                harmonizing: 1.5         // Was 'balancing'
-            },
-            intensity: 1.3,
-            flavors: ['dried leaves', 'prune']
-        }
-    },
-
-    // Umami flavors tend to provide satisfaction and nourishment
-    umami: {
+    umami: { // Savory
         marine: {
-            effects: {
-                focusing: 2.5,
-                calming: 2.0,
-                restorative: 2.0,
-                elevating: 2.0,
-                harmonizing: 1.5
-            },
-            intensity: 2.4,
-            flavors: ['seaweed', 'fish', 'brine', 'oceanic']
+            foodPairingHints: ["Seafood", "Sushi", "Rice Dishes", "Light vegetables"],
+            seasonalAffinityHints: ["Spring", "Summer"],
+            activityHints: ["Focus", "Refreshment", "Cleansing"],
+            associatedFlavors: ['seaweed', 'nori', 'brine', 'oceanic', 'sea salt']
         },
-        meaty: {
-            effects: {
-                grounding: 2.5,
-                comforting: 2.0,
-                restorative: 1.5,
-                harmonizing: 1.5
-            },
-            intensity: 1.8,
-            flavors: ['savory', 'meaty', 'broth']
+        meaty: { // Brothy, savory
+            foodPairingHints: ["Savory Soups", "Stews", "Mushrooms", "Rich Dishes"],
+            seasonalAffinityHints: ["Autumn", "Winter"],
+            activityHints: ["Warming", "Comfort", "Satiating"],
+            associatedFlavors: ['savory', 'broth', 'mushroom', 'umami']
         }
     },
 
-    // Chemical or medicinal flavors - more challenging
-    chemical: {
-        off_flavors: {
-            effects: {},
-            intensity: 0,
-            flavors: ['metallic', 'sulfurous', 'medicinal']
-        }
-    },
+    // Add Chemical, Sour categories if needed, likely with fewer positive hints
 
-    // Sour flavors tend to be energizing and stimulating
-    sour: {
-        acidic: {
-            effects: {
-                energizing: 2.0,         // Was 'awakening'
-                focusing: 1.5,           // Was 'clarifying'
-                restorative: 1.0,        // Was 'renewing'
-                elevating: 1.5           // Was 'elevating'
-            },
-            intensity: 0.5,
-            flavors: ['sour', 'tart', 'acidic']
-        }
-    }
 };
 
-// Map flavor categories to their primary effects
-export const flavorCategoryToPrimaryEffects = {
-    floral: ["elevating", "calming"],
-    fruity: ["elevating", "energizing"],
-    vegetal: ["clarifying", "focusing"],
-    nutty_and_toasty: ["grounding", "comforting"],
-    spicy: ["energizing", "warming"],
-    sweet: ["comforting", "nurturing"],
-    earthy: ["grounding", "centering"],
-    woody: ["grounding", "centering"],
-    roasted: ["grounding", "energizing"],
-    aged: ["centering", "grounding"],
-    umami: ["nurturing", "grounding"],
-    chemical: ["clarifying", "focusing"],
-    sour: ["energizing", "clarifying"]
-};
-
-// Map individual flavor notes to their primary effects
-export const flavorToPrimaryEffects = {};
-
-// Populate the flavorToPrimaryEffects mapping
-Object.entries(flavorInfluences).forEach(([category, flavors]) => {
-    Object.entries(flavors).forEach(([flavor, data]) => {
-        // Get top 2 effects by intensity
-        const sortedEffects = Object.entries(data.effects)
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, 2)
-            .map(([effect]) => effect);
-        
-        flavorToPrimaryEffects[flavor] = sortedEffects;
-    });
-});
-
-export default {
-    flavorInfluences,
-    flavorCategoryToPrimaryEffects,
-    flavorToPrimaryEffects
-}; 
+export default flavorInfluences;

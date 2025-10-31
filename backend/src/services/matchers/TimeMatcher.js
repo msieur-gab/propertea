@@ -1,10 +1,6 @@
-/**
- * TimeMatcher.js (Hourly Version - Smoothed Transitions V2)
- * Backend port from /js/derivation/TimeMatcher.js
- *
- * Matches a tea's profile to suitable hours, aiming for lower night scores and smoother curves.
- * Includes fixes for 06:00 peak and reduced evening boosts/penalties.
- */
+// TimeMatcher.js (Hourly Version - Smoothed Transitions V2)
+// Matches a tea's profile to suitable hours, aiming for lower night scores and smoother curves.
+// Includes fixes for 06:00 peak and reduced evening boosts/penalties.
 
 export class TimeMatcher {
     constructor(config = {}) {
@@ -25,10 +21,11 @@ export class TimeMatcher {
         };
     }
 
-    // Helper to add score adjustment
+    // Helper to add score adjustment (unchanged)
     _adjustScoreForHour(trace, scoreMap, hour, adjustment, reasonStep, reasonDetail) {
         if (hour < 0 || hour > 23) return;
         const currentScore = scoreMap.get(hour);
+        // Clamp score slightly above 0 if penalty is applied, to allow some granularity
         let newScore = currentScore + adjustment;
         if (adjustment < 0) {
              newScore = Math.max(1, newScore); // Clamp penalties at 1 instead of 0
@@ -39,7 +36,7 @@ export class TimeMatcher {
         trace.push({ step: reasonStep, reason: reasonDetail, adjustment: `${adjustment >= 0 ? '+' : ''}${adjustment} @ Hour ${hour}`, value: newScore.toFixed(1) });
     }
 
-    // Helper to apply profile
+    // Helper to apply profile (unchanged)
     _applyHourlyProfile(trace, scoreMap, profile, reasonStep, reasonDetail) {
         if (!Array.isArray(profile) || profile.length !== 24) {
             console.error("Invalid hourly profile provided.");
@@ -165,7 +162,8 @@ export class TimeMatcher {
          return profile.map(p => Math.round(p));
     }
 
-    // Main matching function
+
+    // Main matching function (structure unchanged)
     matchTime(compoundAnalysis = {}, teaTypeAnalysis = {}, processingAnalysis = {}) {
         let trace = [];
         const hourlyScores = new Map();
@@ -173,14 +171,14 @@ export class TimeMatcher {
         this.hours.forEach(hour => hourlyScores.set(hour, this.config.baseScore));
         trace.push({ step: "Initialization", reason: "Baseline setup", adjustment: `All 24 hours initialized to ${this.config.baseScore}` });
 
-        // Extract Inputs
+        // --- Extract Inputs (Unchanged) ---
         const stimulationStr = compoundAnalysis?.analysis?.stimulationLevel || compoundAnalysis.stimulationLevel || "moderate";
         const relaxationStr = compoundAnalysis?.analysis?.relaxationLevel || compoundAnalysis.relaxationLevel || "moderate";
         const compoundProfile = compoundAnalysis?.analysis?.compoundProfile || compoundAnalysis.compoundProfile || "Balanced";
         const stimulationLevelNum = this.levelMap[stimulationStr.toLowerCase()] ?? 3;
         const relaxationLevelNum = this.levelMap[relaxationStr.toLowerCase()] ?? 3;
 
-        const primaryTeaType = teaTypeAnalysis?.teaType || "";
+        const primaryTeaType = teaTypeAnalysis?.teaType || ""; // Assumes fix where this can be 'matcha' etc.
         const subType = teaTypeAnalysis?.subType || "";
         const typicalCaffeineStr = teaTypeAnalysis?.analysis?.typicalCaffeine || "medium";
 
@@ -191,7 +189,7 @@ export class TimeMatcher {
 
         trace.push({ step: "Input Processing", reason: "Extracting analysis data", adjustment: `Stim: ${stimulationStr}(${stimulationLevelNum}), Relax: ${relaxationStr}(${relaxationLevelNum}), Profile: ${compoundProfile}, CaffeineCat: ${caffeineCategory}, Type: ${primaryTeaType}, SubType: ${subType}` });
 
-        // Apply Tuned Profiles
+        // --- Apply Tuned Profiles ---
         const compoundProfileAdjustments = this._getCompoundEffectProfile(compoundProfile);
         this._applyHourlyProfile(trace, hourlyScores, compoundProfileAdjustments, "Compound Profile Adjustment", `Based on profile: '${compoundProfile}'`);
 
@@ -207,12 +205,12 @@ export class TimeMatcher {
         const teaTypeAdjustments = this._getTeaTypeSpecificProfile(primaryTeaType, subType);
         this._applyHourlyProfile(trace, hourlyScores, teaTypeAdjustments, "Tea Type Specific Adjustment", `Based on type: '${primaryTeaType}', subtype: '${subType}'`);
 
-        // Final Processing
+        // --- Final Processing (Unchanged) ---
         const finalScores = Object.fromEntries(hourlyScores);
         const rawScoresArray = Object.entries(finalScores).map(([hour, score]) => `${hour}: ${score.toFixed(0)}`);
         trace.push({ step: "Raw Scores", reason: "Before normalization", adjustment: "Aggregated raw scores for each hour", value: rawScoresArray.join(', ') });
 
-        const normalizedScores = this.normalizeScores(finalScores);
+        const normalizedScores = this.normalizeScores(finalScores); // Using percentile normalization
         trace.push({ step: "Score Normalization", reason: "Converting to 0-100 scale (Percentile)", adjustment: "Normalized all scores", value: Object.entries(normalizedScores).map(([h, s]) => `${h}:${s}`).join(', ') });
 
         const recommendedTimes = this.getRecommendedTimes(normalizedScores);
@@ -230,6 +228,9 @@ export class TimeMatcher {
             trace
         };
     }
+
+    // --- Helper functions (normalizeScores, getRecommendedTimes, identifyTimeRanges, calculateAverageScore) ---
+    // Keep these the same as the previous percentile version.
 
     normalizeScores(hourlyScores) {
         const scoreEntries = Object.entries(hourlyScores);

@@ -2,7 +2,7 @@
 
 // Import the recommendations data
 // Adjust the path if your brewingRecommendations file is elsewhere
-import brewingRecommendations from './descriptors/brewingGuide.js';
+import brewingRecommendations from '../descriptors/brewingGuide.js';
 
 export const brewingMatcher = {
     /**

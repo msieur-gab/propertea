@@ -11,6 +11,7 @@
  */
 
 import { validateAnalysisRequest, validateCoreAnalysis } from './validators.js';
+import { contentGenerationService } from '../services/ContentGenerationService.js';
 
 export class TeaCalculationOrchestrator {
   /**
@@ -141,9 +142,12 @@ export class TeaCalculationOrchestrator {
         }
       };
 
+      // Step 6: Enrich with narrative content
+      const enrichedAnalysis = contentGenerationService.enrich(teaModel, completeAnalysis);
+
       return {
         success: true,
-        data: completeAnalysis
+        data: enrichedAnalysis
       };
     } catch (error) {
       console.error('Error in TeaCalculationOrchestrator:', error);

@@ -113,6 +113,15 @@ export const teaTypeEffects = {
             comforting: 5
         }
     },
+    red: {
+        description: "Red teas (Hong Cha) are fully oxidized, offering robust and invigorating effects.",
+        effects: {
+            energizing: 6,
+            focusing: 6,
+            harmonizing: 5,
+            grounding: 5
+        }
+    },
     black: {
         description: "Black teas are fully oxidized, offering robust and invigorating effects.",
         effects: {
@@ -122,31 +131,41 @@ export const teaTypeEffects = {
             grounding: 5
         }
     },
-    'puerh-sheng': {
-        description: "Raw puerh teas are known for their complex, evolving character.",
+    puerh: {
+        description: "Pu-erh teas are aged and fermented, offering complex, earthy effects with warming properties.",
         effects: {
-            energizing: 5,
-            focusing: 6,
-            harmonizing: 5,
-            grounding: 6
-        }
-    },
-    'puerh-shou': {
-        description: "Ripened puerh teas offer deep, earthy flavors and grounding effects.",
-        effects: {
-            grounding: 9,
-            harmonizing: 5,
-            comforting: 8,
-            restorative: 4
+            grounding: 8,
+            harmonizing: 6,
+            comforting: 7,
+            restorative: 4,
+            energizing: 5
         }
     },
     dark: {
-        description: "Dark teas are known for their rich, earthy character and grounding effects.",
+        description: "Dark teas (Hei Cha) are known for their rich, earthy character and grounding effects.",
         effects: {
             grounding: 8,
             harmonizing: 6,
             comforting: 7,
             restorative: 4
+        }
+    },
+    herbal: {
+        description: "Herbal infusions offer diverse effects depending on ingredients and processing.",
+        effects: {
+            calming: 5,
+            harmonizing: 4,
+            restorative: 4,
+            elevating: 3
+        }
+    },
+    tisane: {
+        description: "Tisanes are botanical infusions with varied effects based on their ingredients.",
+        effects: {
+            calming: 5,
+            harmonizing: 4,
+            restorative: 4,
+            elevating: 3
         }
     }
 };
