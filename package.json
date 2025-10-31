@@ -8,6 +8,7 @@
     "dev": "netlify dev",
     "build": "echo 'No build step needed for serverless functions'",
     "start": "netlify dev",
+    "serve:express": "node backend/server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "deploy": "netlify deploy --prod"
   },
@@ -21,9 +22,12 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
   "devDependencies": {
-    "netlify-cli": "^17.0.0"
+    "netlify-cli": "^23.9.5"
   },
   "engines": {
     "node": "18.x || 20.x"

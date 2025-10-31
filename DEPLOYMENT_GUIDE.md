@@ -115,6 +115,41 @@ curl -X POST http://localhost:8888/.netlify/functions/analyze \
   }'
 ```
 
+### Alternative: Run the Express server locally
+
+If you prefer to exercise the Express application (useful when targeting a VPS or traditional hosting provider), start it with:
+
+```bash
+npm run serve:express
+```
+
+This boots the API on `http://localhost:3000` by default. Update `HOST` or `PORT` environment variables to change the bind address.
+
+#### Response modes
+
+The analysis endpoint supports two modes:
+
+- **Standard (default):** returns concise data suitable for UI consumption.
+- **Explain:** include reasoning traces and matcher debug info by adding `?mode=explain` to the request URL or passing `{ "options": { "explain": true } }` inside the JSON body.
+
+Example:
+
+```bash
+curl -X POST "http://localhost:3000/api/analyze?mode=explain" \
+  -H "Content-Type: application/json" \
+  -d '{ "name": "Long Jing", "type": "green" }'
+```
+
+or
+
+```json
+{
+  "name": "Long Jing",
+  "type": "green",
+  "options": { "explain": true }
+}
+```
+
 ## API Endpoints
 
 All endpoints are accessible both locally and on Netlify:
@@ -129,6 +164,8 @@ All endpoints are accessible both locally and on Netlify:
 | POST | `/.netlify/functions/analyze-tea-type` | Tea type analysis only |
 | POST | `/.netlify/functions/analyze-processing` | Processing analysis only |
 | POST | `/.netlify/functions/analyze-geography` | Geography analysis only |
+
+> **Note:** When running the Express server, these endpoints are available under `/api/...` by default (see the section below for details).
 
 ## Input Format
 
@@ -172,6 +209,36 @@ All POST endpoints accept JSON with tea data:
   }
 }
 ```
+
+## Self-Hosted Deployment (OVH / VPS)
+
+Some hosting platforms (e.g., OVH shared hosting, bare VPS) expect you to run a traditional Node process instead of serverless functions. Use the new Express entry point provided in `backend/server.js`.
+
+1. **Install dependencies** on the target machine:
+   ```bash
+   npm ci --omit=dev
+   ```
+2. **Start the server**:
+   ```bash
+   HOST=0.0.0.0 PORT=8080 npm run serve:express
+   ```
+   Adjust `HOST`/`PORT` as required by your provider. You can wrap this command with a process manager like `pm2` or `forever` for resiliency.
+
+3. **Expose the API** via reverse proxy (NGINX/Apache) so that `/api/*` routes point to the Node process.
+
+4. **Configure the admin UI** to target the correct base URL. You can either set a global override before loading `app.js`:
+   ```html
+   <script>
+     window.__PROPERTEA_API_BASE__ = '/api';
+   </script>
+   ```
+   or add a data attribute on the `<html>` tag:
+   ```html
+   <html lang="en" data-api-base="/api">
+   ```
+   The updated `APIService` will automatically pick up either override and call `/api/analyze`.
+
+With these steps the same codebase can be deployed on Netlify (serverless) or any Node-ready hosting provider.
 
 ## Output Format
 

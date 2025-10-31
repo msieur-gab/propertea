@@ -17,6 +17,7 @@ import { FlavorService } from './services/FlavorService.js';
 import { TeaTypeService } from './services/TeaTypeService.js';
 import { ProcessingService } from './services/ProcessingService.js';
 import { GeographyService } from './services/GeographyService.js';
+import { EffectService } from './services/EffectService.js';
 import { RecommendationService } from './services/RecommendationService.js';
 
 // Import orchestrator and utilities
@@ -57,11 +58,43 @@ const services = {
   flavorService: new FlavorService(),
   processingService: new ProcessingService(),
   geographyService: new GeographyService(),
+  effectService: new EffectService(),
   recommendationService: new RecommendationService()
 };
 
 // Create the orchestrator with all services
 const orchestrator = new TeaCalculationOrchestrator(services);
+
+/**
+ * Remove verbose trace/debug fields when running in standard mode
+ * Mutates a cloned copy of the analysis object so the original stays intact.
+ *
+ * @param {Object} analysis
+ * @returns {Object}
+ */
+function prepareAnalysisForUi(analysis) {
+  if (!analysis || typeof analysis !== 'object') return analysis;
+  const clone = structuredClone(analysis);
+  removeKeys(clone, new Set(['trace', '_debug']));
+  return clone;
+}
+
+function removeKeys(value, keysToRemove) {
+  if (!value) return;
+  if (Array.isArray(value)) {
+    value.forEach(item => removeKeys(item, keysToRemove));
+    return;
+  }
+  if (typeof value !== 'object') return;
+
+  Object.keys(value).forEach(key => {
+    if (keysToRemove.has(key)) {
+      delete value[key];
+    } else {
+      removeKeys(value[key], keysToRemove);
+    }
+  });
+}
 
 /**
  * Custom Middleware: Attach orchestrator to request
@@ -131,6 +164,11 @@ app.get('/api/info', (req, res) => {
  */
 app.post('/api/analyze', async (req, res) => {
   try {
+    const explainMode =
+      req.query.mode === 'explain' ||
+      req.query.explain === 'true' ||
+      req.body?.options?.explain === true;
+
     const result = await req.teaOrchestrator.calculateTea(req.body);
 
     if (!result.success) {
@@ -140,9 +178,14 @@ app.post('/api/analyze', async (req, res) => {
       });
     }
 
+    const payload = explainMode
+      ? result.data
+      : prepareAnalysisForUi(result.data);
+
     res.json({
       success: true,
-      data: result.data
+      mode: explainMode ? 'explain' : 'standard',
+      data: payload
     });
   } catch (error) {
     console.error('Error in /api/analyze:', error);

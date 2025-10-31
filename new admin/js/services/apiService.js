@@ -8,9 +8,57 @@
 export class APIService {
     constructor(apiBaseUrl = null) {
         // Use provided URL or auto-detect based on environment
-        this.apiBaseUrl = apiBaseUrl || this._detectApiUrl();
-        this.analyzeEndpoint = `${this.apiBaseUrl}/analyze`;
+        this.apiBaseUrl = this._resolveBaseUrl(apiBaseUrl);
+        this.analyzeEndpoint = this._buildEndpoint(this.apiBaseUrl, 'analyze');
         this.timeout = 10000; // 10 second timeout
+    }
+
+    /**
+     * Determine the API base URL using override options or environment detection
+     * Priority order:
+     *   1. Explicit constructor argument
+     *   2. Global override (window.__PROPERTEA_API_BASE__)
+     *   3. <html data-api-base="..."> attribute
+     *   4. Environment auto-detection (Netlify default)
+     */
+    _resolveBaseUrl(explicitUrl) {
+        if (explicitUrl) return this._normalizeBaseUrl(explicitUrl);
+
+        if (typeof window !== 'undefined') {
+            if (window.__PROPERTEA_API_BASE__) {
+                return this._normalizeBaseUrl(window.__PROPERTEA_API_BASE__);
+            }
+
+            const htmlBase =
+                typeof document !== 'undefined'
+                    ? document.documentElement?.dataset?.apiBase
+                    : null;
+
+            if (htmlBase) {
+                return this._normalizeBaseUrl(htmlBase);
+            }
+        }
+
+        return this._normalizeBaseUrl(this._detectApiUrl());
+    }
+
+    /**
+     * Remove trailing slash so endpoint concatenation stays consistent
+     */
+    _normalizeBaseUrl(url) {
+        if (!url) return '';
+        return url.endsWith('/') && url.length > 1 ? url.slice(0, -1) : url;
+    }
+
+    /**
+     * Build endpoint from base URL and path, handling edge cases
+     */
+    _buildEndpoint(baseUrl, path) {
+        const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+        if (!baseUrl) {
+            return `/${cleanPath}`;
+        }
+        return `${baseUrl}/${cleanPath}`;
     }
 
     /**
