@@ -466,13 +466,25 @@ export class ContentGenerationService {
 
     // Enrich effects
     if (enriched.effects) {
-      // Handle both string and object formats
-      const dominant = typeof enriched.effects.dominant === 'string'
-        ? enriched.effects.dominant
-        : enriched.effects.dominant?.name;
-      const supporting = typeof enriched.effects.supporting === 'string'
-        ? enriched.effects.supporting
-        : enriched.effects.supporting?.name;
+      // Extract dominant and supporting from various possible formats
+      let dominant = null;
+      let supporting = null;
+
+      // Format 1: expectedEffects object with dominant/supporting strings
+      if (enriched.effects.expectedEffects) {
+        dominant = enriched.effects.expectedEffects.dominant;
+        supporting = enriched.effects.expectedEffects.supporting;
+      }
+      // Format 2: Direct dominant/supporting properties (strings)
+      else if (typeof enriched.effects.dominant === 'string') {
+        dominant = enriched.effects.dominant;
+        supporting = enriched.effects.supporting;
+      }
+      // Format 3: Object format with .name property
+      else if (enriched.effects.dominant?.name) {
+        dominant = enriched.effects.dominant.name;
+        supporting = enriched.effects.supporting?.name;
+      }
 
       // Only enrich if we have valid dominant and supporting effects
       if (dominant && supporting) {
@@ -509,10 +521,13 @@ export class ContentGenerationService {
 
     // Enrich food
     if (enriched.food) {
+      const foodData = enriched.food.recommendedFoods
+        || enriched.food.recommendations
+        || enriched.food;
       enriched.food = {
         ...enriched.food,
         narrative: this.generateFoodNarrative(
-          enriched.food.recommendedFoods || enriched.food,
+          foodData,
           teaModel.flavorProfile
         )
       };
@@ -520,10 +535,13 @@ export class ContentGenerationService {
 
     // Enrich activities
     if (enriched.activities) {
+      const activityData = enriched.activities.recommendedActivities
+        || enriched.activities.suggestions
+        || enriched.activities;
       enriched.activities = {
         ...enriched.activities,
         narrative: this.generateActivityNarrative(
-          enriched.activities.recommendedActivities || enriched.activities,
+          activityData,
           enriched.effects
         )
       };
