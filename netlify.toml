@@ -97,6 +97,7 @@ environment = "preview"
 [dev]
 # Port for local development
 port = 8888
-
+# Serve the new admin panel
+publish = "new admin"
 # Command to run (not needed for functions-only setup)
 # framework = "#custom" is removed as it's not needed

@@ -357,4 +357,26 @@ export class GeoUI {
 
         this._updateInitialUIState(); // Re-apply initial visibility and button states
     }
+
+    // Public getter to return current geo data for API submission
+    get geoData() {
+        return {
+            country: this.elements.countryInput?.value || '',
+            province: this.elements.provinceInput?.value || '',
+            location: this.elements.locationDetailInput?.value || '',
+            latitude: this.elements.latitudeInput?.value ? parseFloat(this.elements.latitudeInput.value) : null,
+            longitude: this.elements.longitudeInput?.value ? parseFloat(this.elements.longitudeInput.value) : null,
+            altitude: this.elements.altitudeInput?.value ? parseFloat(this.elements.altitudeInput.value) : null,
+            temperature: this.elements.temperatureInput?.value ? this._parseWeatherValue(this.elements.temperatureInput.value) : null,
+            humidity: this.elements.humidityInput?.value ? this._parseWeatherValue(this.elements.humidityInput.value) : null,
+            solarRadiation: this.elements.solarRadiationInput?.value ? this._parseWeatherValue(this.elements.solarRadiationInput.value) : null
+        };
+    }
+
+    // Helper to parse weather values that might contain units
+    _parseWeatherValue(value) {
+        const numStr = value.replace(/[°C%\s W/m²]/g, '').trim();
+        const parsed = parseFloat(numStr);
+        return !isNaN(parsed) ? parsed : null;
+    }
 }

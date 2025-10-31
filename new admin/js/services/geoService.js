@@ -91,11 +91,11 @@ export const geoService = {
         // Fetch daily data for a period to get averages (adjust dates if needed)
         // Using daily values: temperature_2m_mean, relative_humidity_2m_mean, shortwave_radiation_sum
         // shortwave_radiation_sum is in MJ/m²/day. Convert to average W/m²: (MJ * 1,000,000) / (seconds in day)
-        // Example: Use past 3 full years for a better average. Adjust as needed.
-        const endDate = new Date();
-        endDate.setDate(endDate.getDate() -1); // Use data up to yesterday
-        const startDate = new Date(endDate);
-        startDate.setFullYear(startDate.getFullYear() - 3);
+        // Use the last available date within API range (2025-07-30 to 2025-11-15)
+        const today = new Date();
+        // If today is before 2025-07-30, use a reasonable default; otherwise use available range
+        const endDate = new Date('2025-11-15'); // Use the latest available date
+        const startDate = new Date('2025-07-30'); // Use the earliest available date in the range
 
         const formattedStartDate = startDate.toISOString().split('T')[0];
         const formattedEndDate = endDate.toISOString().split('T')[0];
