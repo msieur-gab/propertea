@@ -4,6 +4,9 @@
  * Validates matcher outputs against expected recommendations from dataset
  */
 
+// Import synonym mappings for better activity/food matching
+import { ActivitySynonyms, FoodSynonyms } from '../services/matchers/SynonymMappings.js';
+
 export class TimingValidator {
   /**
    * Map hour numbers to time-of-day labels
@@ -184,6 +187,14 @@ export class ActivityValidator {
     // Substring match (one is contained in the other)
     if (recLower.includes(expLower) || expLower.includes(recLower)) return true;
 
+    // Synonym matching - check if expected term maps to recommended activity
+    if (ActivitySynonyms[expLower]) {
+      const synonyms = ActivitySynonyms[expLower];
+      if (synonyms.some(syn => syn.toLowerCase() === recLower)) {
+        return true;
+      }
+    }
+
     // Key word matching - check if any significant words match
     const recWords = this.getKeyWords(rec);
     const expWords = this.getKeyWords(exp);
@@ -254,6 +265,14 @@ export class FoodValidator {
 
     // Substring match (one is contained in the other)
     if (recLower.includes(expLower) || expLower.includes(recLower)) return true;
+
+    // Synonym matching - check if expected food maps to recommended food
+    if (FoodSynonyms[expLower]) {
+      const synonyms = FoodSynonyms[expLower];
+      if (synonyms.some(syn => syn.toLowerCase() === recLower)) {
+        return true;
+      }
+    }
 
     // Key word matching - check if any significant words match
     const recWords = this.getKeyWords(rec);

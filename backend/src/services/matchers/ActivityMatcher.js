@@ -7,9 +7,9 @@ export class ActivityMatcher {
         // Configuration options
         this.config = {
             // Minimum score (0-100) required to be included in a recommended cluster
-            clusterThreshold: config.clusterThreshold || 80,
+            clusterThreshold: config.clusterThreshold || 65,
             // Maximum number of top activities to return
-            maxRecommendations: config.maxRecommendations || 3,
+            maxRecommendations: config.maxRecommendations || 6,
             ...config
         };
         

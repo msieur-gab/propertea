@@ -196,51 +196,75 @@ export class ContentGenerationService {
   }
 
   /**
-   * Generate food pairing explanation with flavor context
+   * Generate food pairing explanation with flavor and texture context
    */
   generateFoodNarrative(foodPairings, flavorProfile, teaType = '') {
-    if (!foodPairings || (Array.isArray(foodPairings) && foodPairings.length === 0)) {
+    if (!foodPairings ||
+        (Array.isArray(foodPairings) && foodPairings.length === 0) ||
+        (typeof foodPairings === 'object' && Object.keys(foodPairings).length === 0)) {
       return {
         summary: 'Versatile with various cuisines',
         explanation: 'This tea adapts beautifully to different foods and occasions',
-        pairings: [],
-        pairingLogic: 'Universal compatibility'
+        recommendedFoods: [],
+        pairingLogic: 'Universal compatibility',
+        mealOccasions: ['Breakfast', 'Lunch', 'Dinner', 'Snacking']
       };
     }
 
-    const topPairings = Array.isArray(foodPairings)
-      ? foodPairings.slice(0, 5)
-      : Object.entries(foodPairings)
-          .sort(([, a], [, b]) => b - a)
-          .slice(0, 5)
-          .map(([food]) => food);
+    // Extract top food pairings, handling both array and object formats
+    let topPairings = [];
+    let foodNames = [];
+
+    if (Array.isArray(foodPairings)) {
+      topPairings = foodPairings.slice(0, 6);
+      foodNames = topPairings.slice(0, 2).map(food => {
+        if (typeof food === 'string') return food;
+        if (food.name) return food.name;
+        return String(food);
+      });
+    } else {
+      topPairings = Object.entries(foodPairings)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 6)
+        .map(([food]) => food);
+      foodNames = topPairings.slice(0, 2);
+    }
 
     let explanation = '';
     let pairingLogic = 'Complementary flavors';
 
     // Enhanced flavor-based explanation
     if (flavorProfile && flavorProfile.length > 0) {
-      const mainFlavors = flavorProfile.slice(0, 2);
+      const mainFlavors = Array.isArray(flavorProfile) ? flavorProfile.slice(0, 2) : [flavorProfile];
       const flavorStr = mainFlavors.join(' and ');
 
-      if (mainFlavors.some(f => ['floral', 'fruity', 'sweet'].includes(f))) {
-        explanation = `The delicate ${flavorStr} character of this tea pairs beautifully with light desserts, fresh fruits, and delicate proteins. The subtle sweetness complements rather than competes with food.`;
+      if (mainFlavors.some(f => {
+        const lower = (f || '').toLowerCase();
+        return ['floral', 'fruity', 'sweet', 'light', 'delicate'].includes(lower);
+      })) {
+        explanation = `The delicate ${flavorStr} character of this tea pairs beautifully with light desserts, fresh fruits, and delicate proteins. The subtle sweetness complements rather than competes with food, making each bite and sip enhance one another.`;
         pairingLogic = 'Subtle flavors enhance lighter dishes';
-      } else if (mainFlavors.some(f => ['roasted', 'woody', 'earthy'].includes(f))) {
-        explanation = `The robust ${flavorStr} profile stands up well to hearty foods, grilled proteins, and rich flavors. This tea brings depth and complexity to the meal.`;
+      } else if (mainFlavors.some(f => {
+        const lower = (f || '').toLowerCase();
+        return ['roasted', 'woody', 'earthy', 'nutty', 'toasted'].includes(lower);
+      })) {
+        explanation = `The robust ${flavorStr} profile stands up well to hearty foods, grilled proteins, and rich flavors. This tea brings depth and complexity to the meal, creating a satisfying pairing experience.`;
         pairingLogic = 'Bold flavors balance rich foods';
-      } else if (mainFlavors.some(f => ['creamy', 'honey', 'smooth'].includes(f))) {
-        explanation = `The smooth, ${flavorStr} notes create harmony with both delicate and rich foods. It acts as a pleasant palate cleanser while enhancing flavors.`;
+      } else if (mainFlavors.some(f => {
+        const lower = (f || '').toLowerCase();
+        return ['creamy', 'honey', 'smooth', 'caramel', 'vanilla'].includes(lower);
+      })) {
+        explanation = `The smooth, ${flavorStr} notes create harmony with both delicate and rich foods. It acts as a pleasant palate cleanser while enhancing flavors, making it a versatile choice for diverse menus.`;
         pairingLogic = 'Smooth texture bridges diverse foods';
       } else {
-        explanation = `The ${flavorStr} notes create an elegant pairing experience, enhancing the natural flavors of complementary dishes.`;
+        explanation = `The ${flavorStr} notes create an elegant pairing experience, enhancing the natural flavors of complementary dishes while providing pleasant textural contrast.`;
       }
     } else {
-      explanation = 'This tea provides excellent balance with a wide range of foods, cleansing the palate while enhancing flavors.';
+      explanation = 'This tea provides excellent balance with a wide range of foods, cleansing the palate while enhancing flavors. Its versatile character adapts gracefully to any table.';
     }
 
     return {
-      summary: `Pairs beautifully with ${topPairings.slice(0, 2).join(', ')}, and more`,
+      summary: foodNames.length > 0 ? `Pairs beautifully with ${foodNames.join(', ')}, and more` : 'Versatile pairing partner',
       explanation: explanation,
       recommendedFoods: topPairings.slice(0, 4),
       pairingLogic: pairingLogic,
@@ -290,11 +314,24 @@ export class ContentGenerationService {
     let explanation = '';
     let context = '';
 
-    // Build narrative based on effect profile
-    if (effects && effects.dominant) {
-      const dominant = effects.dominant;
-      const supporting = effects.supporting;
+    // Extract dominant effect (handle both simple and enriched objects)
+    let dominant = null;
+    let supporting = null;
 
+    if (effects) {
+      if (effects.expectedEffects) {
+        // Enriched effect object structure
+        dominant = effects.expectedEffects.dominant;
+        supporting = effects.expectedEffects.supporting;
+      } else if (effects.dominant) {
+        // Simple effect object structure
+        dominant = effects.dominant;
+        supporting = effects.supporting;
+      }
+    }
+
+    // Build narrative based on effect profile
+    if (dominant) {
       if (dominant === 'calming' || dominant === 'harmonizing') {
         explanation = `This tea excels during moments of reflection, meditation, and personal contemplation. Its ${supporting || 'balanced'} nature creates the perfect environment for unwinding, journaling, or peaceful solitude. Ideal for evening rituals and transition moments.`;
         context = 'For calm, reflective moments';
@@ -307,14 +344,24 @@ export class ContentGenerationService {
       } else if (dominant === 'grounding') {
         explanation = `This tea provides stability and connection, making it perfect for grounding practices, contemplative walks, or moments when you need to feel centered. Excellent for yoga, tai chi, or any practice that benefits from deep presence and stability.`;
         context = 'For grounding and centering';
+      } else if (dominant === 'restorative') {
+        explanation = `This tea supports recovery and renewal, making it perfect for rest days, gentle practices, and moments of self-care. Its restorative qualities create an environment for healing and rejuvenation after demanding periods.`;
+        context = 'For restorative and healing moments';
+      } else if (dominant === 'comforting') {
+        explanation = `This tea wraps you in warmth and comfort, perfect for quiet moments, cozy afternoons, or when seeking emotional support. It enhances feelings of security and belonging in any setting.`;
+        context = 'For comforting and warm moments';
       } else {
         explanation = `This tea brings ${dominant} qualities to your moment. Whether you're working, relaxing, or socializing, it adapts to enhance your experience with its unique character.`;
         context = `For moments benefiting from ${dominant} energy`;
       }
     }
 
+    const firstActivity = Array.isArray(topActivities) && topActivities.length > 0
+      ? (topActivities[0].name || topActivities[0])
+      : 'focused moments';
+
     return {
-      summary: `Perfect for ${topActivities[0] || 'focused moments'}`,
+      summary: `Perfect for ${firstActivity}`,
       explanation: explanation,
       suggestions: topActivities.slice(0, 3),
       context: context,

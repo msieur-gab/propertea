@@ -1,0 +1,685 @@
+{
+  "total": 26,
+  "dominantMatches": 7,
+  "supportingMatches": 0,
+  "fullMatches": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "name": "Huangshan Maofeng",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "clarifying",
+        "supporting": "refreshing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "clarifying",
+          "supporting": "refreshing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Lu An Gua Pian",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Xin Yang Mao Jian",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Du Yun Mao Jian",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Anji Bai Cha",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Baimao Hou",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Chun Mee",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Da Fang",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Mengding Ganlu",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "refreshing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "refreshing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Zhuyeqing",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "refreshing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "refreshing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "En Shi Yu Lu",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "refreshing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "refreshing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Cui Ming Green",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Gunpowder",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "energizing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "energizing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Taiping Houkui",
+      "type": "Green",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "refreshing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "refreshing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Liu An Gua Pian",
+      "type": "Green",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "refreshing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "refreshing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Tie Guan Yin",
+      "type": "Oolong",
+      "status": "partial_match",
+      "expected": {
+        "dominant": "harmonizing",
+        "supporting": "energizing"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": true,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "harmonizing",
+          "supporting": "energizing"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Da Hong Pao",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "energizing",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "energizing",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Rougui",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "warming",
+        "supporting": "aromatic"
+      },
+      "actual": {
+        "dominant": "energizing",
+        "supporting": "focusing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "warming",
+          "supporting": "aromatic"
+        },
+        "actual": {
+          "dominant": "energizing",
+          "supporting": "focusing"
+        }
+      }
+    },
+    {
+      "name": "Bai Jiguan",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "calming",
+        "supporting": "clarifying"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "calming",
+          "supporting": "clarifying"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Ban Tian Yao",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "aromatic",
+        "supporting": "relaxing"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "aromatic",
+          "supporting": "relaxing"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Bu Zhi Chun",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "aromatic",
+        "supporting": "relaxing"
+      },
+      "actual": {
+        "dominant": "calming",
+        "supporting": "harmonizing"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "aromatic",
+          "supporting": "relaxing"
+        },
+        "actual": {
+          "dominant": "calming",
+          "supporting": "harmonizing"
+        }
+      }
+    },
+    {
+      "name": "Fo Shou",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "relaxing",
+        "supporting": "aromatic"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "relaxing",
+          "supporting": "aromatic"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Huang Guanyin",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "aromatic",
+        "supporting": "relaxing"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "aromatic",
+          "supporting": "relaxing"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Huang Meigui",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "aromatic",
+        "supporting": "relaxing"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "aromatic",
+          "supporting": "relaxing"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Jin Fo",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "aromatic",
+        "supporting": "relaxing"
+      },
+      "actual": {
+        "dominant": "harmonizing",
+        "supporting": "elevating"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "aromatic",
+          "supporting": "relaxing"
+        },
+        "actual": {
+          "dominant": "harmonizing",
+          "supporting": "elevating"
+        }
+      }
+    },
+    {
+      "name": "Jin Suo Chi",
+      "type": "Oolong",
+      "status": "mismatch",
+      "expected": {
+        "dominant": "warming",
+        "supporting": "mentally-stimulating"
+      },
+      "actual": {
+        "dominant": "grounding",
+        "supporting": "comforting"
+      },
+      "comparison": {
+        "dominantMatch": false,
+        "supportingMatch": false,
+        "fullMatch": false,
+        "expected": {
+          "dominant": "warming",
+          "supporting": "mentally-stimulating"
+        },
+        "actual": {
+          "dominant": "grounding",
+          "supporting": "comforting"
+        }
+      }
+    }
+  ]
+}

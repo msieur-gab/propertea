@@ -486,7 +486,8 @@ export class EffectService {
   }
 
   /**
-   * Generate human-readable description
+   * Generate human-readable description with contextual reasoning
+   * Explains WHY the tea has these effects based on its characteristics
    *
    * @private
    */
@@ -494,7 +495,56 @@ export class EffectService {
     const dominantDesc = CORE_EFFECTS[dominant] || dominant;
     const supportingDesc = CORE_EFFECTS[supporting] || supporting;
 
-    return `This tea's dominant effect is ${dominant} (${dominantDesc.toLowerCase()}), supported by ${supporting} characteristics (${supportingDesc.toLowerCase()}). The effect profile is shaped by ${reasoning.dominant} and enhanced by ${reasoning.supporting}.`;
+    // Build a more compelling narrative that explains the WHY
+    const explanationParts = [];
+
+    // Start with dominant effect
+    explanationParts.push(`This tea's dominant effect is **${dominant}** — ${dominantDesc.toLowerCase()}`);
+
+    // Add supporting effect context
+    explanationParts.push(`supported by **${supporting}** characteristics — ${supportingDesc.toLowerCase()}`);
+
+    // Create effect profile name
+    const effectProfile = this._getEffectProfileName(dominant, supporting);
+
+    return {
+      summary: `${effectProfile}`,
+      detailed: `${explanationParts.join(', ')}. The effect profile is shaped by the tea's compound balance (${reasoning.dominant}) and enhanced by its natural characteristics (${reasoning.supporting}).`,
+      dominant: {
+        effect: dominant,
+        description: dominantDesc,
+        reasoning: reasoning.dominant
+      },
+      supporting: {
+        effect: supporting,
+        description: supportingDesc,
+        reasoning: reasoning.supporting
+      }
+    };
+  }
+
+  /**
+   * Create a friendly name for effect combinations
+   * @private
+   */
+  _getEffectProfileName(dominant, supporting) {
+    const combinations = {
+      'energizing+focusing': 'Alert & Sharp',
+      'energizing+elevating': 'Vibrant & Uplifted',
+      'energizing+grounding': 'Energized & Grounded',
+      'calming+grounding': 'Grounded & Peaceful',
+      'calming+harmonizing': 'Harmonious & Peaceful',
+      'calming+restorative': 'Restorative & Calm',
+      'focusing+harmonizing': 'Focused & Balanced',
+      'focusing+elevating': 'Focused & Inspired',
+      'harmonizing+elevating': 'Harmonious & Uplifted',
+      'grounding+comforting': 'Grounded & Warm',
+      'restorative+comforting': 'Restful & Comforting',
+      'elevating+harmonizing': 'Elevating & Balanced'
+    };
+
+    const key = `${dominant}+${supporting}`;
+    return combinations[key] || `${dominant.charAt(0).toUpperCase() + dominant.slice(1)} & ${supporting.charAt(0).toUpperCase() + supporting.slice(1)}`;
   }
 
   /**

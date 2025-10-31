@@ -9,8 +9,8 @@ export class FoodMatcher {
     constructor(config = {}) {
         // --- Configuration ---
         this.config = {
-            clusterThreshold: config.clusterThreshold || 75, // Score needed for a food to be part of a cluster
-            maxRecommendations: config.maxRecommendations || 5, // Max individual foods to list as "Recommended"
+            clusterThreshold: config.clusterThreshold || 60, // Score needed for a food to be part of a cluster
+            maxRecommendations: config.maxRecommendations || 8, // Max individual foods to list as "Recommended"
             baseScore: 50,              // Starting score for potential pairings
             // Scoring Bonuses/Penalties (Adjust these values for tuning)
             hintBonus: 30,              // For direct hints from FlavorAnalysis
