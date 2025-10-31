@@ -103,8 +103,15 @@ export class GeographyService {
           : 'Unknown'
     };
 
-    // Climate analysis
+    // Climate analysis - BOTH formatted (display) and raw numeric (for EffectService calculations)
     const climateData = {
+      // Raw numeric values for EffectService to use in comparisons
+      // Defaults align with typical tea-growing regions: mid-altitude, cool, humid, moderate sun
+      altitude_value: altitude !== null ? altitude : 600,     // Default to mid-altitude (600m)
+      temperature_value: temperature !== null ? temperature : 16,  // Default to cool-moderate (16°C)
+      humidity_value: humidity !== null ? humidity : 70,       // Default to high humidity (70%)
+      solarRadiation_value: solarRadiation !== null ? solarRadiation : 175, // Default to moderate radiation (175 W/m²)
+      // Formatted display values for UI
       altitude: altitude !== null ? `${altitude}m` : 'Unknown',
       altitudeCategory: this.categorizeAltitude(altitude),
       humidity: humidity !== null ? `${humidity}%` : 'Unknown',

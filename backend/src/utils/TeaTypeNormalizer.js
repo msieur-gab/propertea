@@ -32,7 +32,15 @@ const CANONICAL_TYPES = {
   'black tea': 'red',
   'hongcha': 'red',
 
-  // Puerh Tea (普洱茶) and subtypes
+  // Dark Tea / Heicha (黑茶) - Fermented/Post-fermented teas (not puerh)
+  'dark': 'dark',
+  'dark tea': 'dark',
+  'heicha': 'dark',
+  'hei cha': 'dark',
+  'fermented tea': 'dark',
+  'post-fermented': 'dark',
+
+  // Puerh Tea (普洱茶) and subtypes - DISTINCT from general heicha
   'puerh': 'puerh',
   'pu-erh': 'puerh',
   'pu erh': 'puerh',

@@ -32,13 +32,15 @@ const CORE_EFFECTS = {
 // Base effects by tea type (100% Chinese tea classification system)
 // green (绿茶), white (白茶), yellow (黄茶), oolong (乌龙茶),
 // red/hongcha (红茶 - known as "black tea" in Western terminology),
-// puerh (普洱茶 - with sheng/shou subtypes)
+// dark/heicha (黑茶 - fermented post-fermented teas like Liu Bao, An Hua, Fu Zhuan),
+// puerh (普洱茶 - with sheng/shou subtypes, historically part of heicha but independent effects)
 const TEA_TYPE_EFFECTS = {
-  green: { energizing: 5, focusing: 7, harmonizing: 5, calming: 2, elevating: 4 },
-  white: { restorative: 8, calming: 6, harmonizing: 5, focusing: 3, elevating: 4 },
+  green: { energizing: 5, focusing: 6, harmonizing: 5, calming: 4, elevating: 4 },  // Priority 1: reduce focusing 7→6, increase calming 2→4
+  white: { restorative: 8, calming: 6, comforting: 5, harmonizing: 5, focusing: 3, elevating: 4 },  // Priority 1: add comforting: 5
   yellow: { harmonizing: 7, focusing: 6, elevating: 6, calming: 4 },
   oolong: { harmonizing: 7, focusing: 5, elevating: 7, comforting: 5 },
-  red: { energizing: 5, focusing: 5, harmonizing: 4, grounding: 6, comforting: 5 },  // hongcha (红茶) - Western: black tea
+  red: { energizing: 6, comforting: 6, focusing: 4, grounding: 4, harmonizing: 3 },  // hongcha (红茶) - Priority 1 rebalance: energizing 5→6, grounding 6→4, comforting 5→6, focusing 5→4, harmonizing 4→3
+  dark: { grounding: 7, comforting: 7, harmonizing: 4, restorative: 5, calming: 3 },  // heicha (黑茶) - fermented/post-fermented teas (Liu Bao, An Hua, Fu Zhuan)
   puerh: {
     sheng: { energizing: 5, focusing: 6, harmonizing: 5, grounding: 6 },      // 生普 - raw/young puerh
     shou: { grounding: 9, harmonizing: 5, comforting: 8, restorative: 4 }     // 熟普 - ripe/aged puerh
@@ -50,8 +52,8 @@ const COMPOUND_EFFECT_MODIFIERS = {
   'Very High Caffeine': { energizing: 2, focusing: 2, grounding: -1, calming: -2 },
   'High Caffeine': { energizing: 1, focusing: 1, calming: -1 },
   'Moderate Caffeine': { energizing: 0.5, focusing: 0.5 },
-  'Very High L-Theanine': { calming: 3, harmonizing: 2, restorative: 1.5, elevating: 1 },
-  'High L-Theanine': { calming: 2, harmonizing: 1, restorative: 0.5, comforting: 0.5 },
+  'Very High L-Theanine': { calming: 4, harmonizing: 2, restorative: 1.5, elevating: 1 },  // Priority 1: increase calming 3→4
+  'High L-Theanine': { calming: 3, harmonizing: 1, restorative: 0.5, comforting: 0.5 },  // Priority 1: increase calming 2→3
   'Balanced': { harmonizing: 1, focusing: 0.5 },
   'Caffeine Dominant': { energizing: 1, focusing: 0.5, comforting: -0.5 }
 };
@@ -82,35 +84,41 @@ const ROAST_LEVEL_MODIFIERS = {
 };
 
 // Geographic/Climate effect modifiers
-// Based on altitude, temperature, humidity, and solar radiation
+// Based on original GeographicalDescriptors from frontend
+// Using correct thresholds: altitude (300/600/1200/1800), humidity (40/55/70/85),
+//                          temperature (10/16/22/28), solar (130/170/210/250)
+// Calibrated with conservative values to avoid over-weighting geography factor
 const GEOGRAPHIC_EFFECT_MODIFIERS = {
   altitude: {
-    // Altitude in meters
-    veryLow: { energizing: 0.5, comforting: 0.5 },      // < 500m
-    low: { harmonizing: 0.5, focusing: 0.5 },           // 500-1000m
-    medium: { elevating: 0.75, harmonizing: 0.5 },      // 1000-1500m (Ali Shan territory)
-    high: { elevating: 1, restorative: 0.5, calming: 0.5 }  // > 1500m
+    // Altitude in meters - higher altitude produces more delicate, complex teas (more L-theanine)
+    veryLow: { energizing: 0.3, focusing: 0.1 },                // < 300m - bold flavors
+    low: { harmonizing: 0.2, energizing: 0.1 },                 // 300-600m - strong flavors
+    medium: { elevating: 0.3, harmonizing: 0.3, restorative: 0.2 }, // 600-1200m - balanced
+    high: { elevating: 0.6, calming: 0.4, restorative: 0.5 }    // 1200-1800m - delicate, sweet
   },
   temperature: {
-    // Temperature in Celsius
-    warm: { energizing: 0.5, comforting: 0.5 },         // > 18°C
-    moderate: { harmonizing: 0.75, elevating: 0.5 },    // 15-18°C
-    cool: { calming: 1, harmonizing: 0.5 },             // 12-15°C (Ali Shan at 14.8°C)
-    cold: { calming: 1, restorative: 0.5, focusing: 0.5 }  // < 12°C
+    // Temperature in Celsius - affects amino acid vs catechin balance
+    veryLow: { calming: 0.5, restorative: 0.4, focusing: 0.1 },  // < 10°C - high L-theanine
+    low: { calming: 0.4, restorative: 0.3, elevating: 0.2 },     // 10-16°C - delicate, aromatic
+    moderate: { harmonizing: 0.3, elevating: 0.3, focusing: 0.1 }, // 16-22°C - balanced
+    high: { energizing: 0.3, focusing: 0.2, grounding: 0.1 },     // 22-28°C - stronger flavors
+    veryHigh: { energizing: 0.4, grounding: 0.3, comforting: 0.1 } // > 28°C - rapid growth
   },
   humidity: {
-    // Humidity as percentage
-    low: { energizing: 0.5, focusing: 0.5 },            // < 60%
-    moderate: { harmonizing: 0.75, focusing: 0.5 },     // 60-75%
-    high: { elevating: 0.75, harmonizing: 0.75, calming: 0.25 },  // 75-85% (Ali Shan at 80%)
-    veryHigh: { calming: 1, restorative: 0.5, harmonizing: 0.5 }  // > 85%
+    // Humidity as percentage - affects growth rate and amino acid development
+    veryLow: { energizing: 0.2, focusing: 0.2 },                // < 40% - stressed growth
+    low: { energizing: 0.15, focusing: 0.1 },                   // 40-55% - pronounced intensity
+    moderate: { harmonizing: 0.2, elevating: 0.1 },             // 55-70% - balanced
+    high: { elevating: 0.3, harmonizing: 0.2, calming: 0.15 },  // 70-85% - mist effect, amino acids
+    veryHigh: { calming: 0.3, restorative: 0.2, harmonizing: 0.15 } // > 85% - very smooth
   },
   solarRadiation: {
-    // Solar radiation in W/m²
-    low: { calming: 0.5, restorative: 0.5, focusing: 0.25 },    // < 150
-    moderate: { harmonizing: 0.5, elevating: 0.5 },             // 150-200
-    high: { energizing: 0.75, focusing: 0.5 },                  // > 200
-    veryHigh: { energizing: 1, grounding: 0.5 }                 // > 250
+    // Solar radiation in W/m² - affects catechin vs L-theanine balance
+    veryLow: { calming: 0.3, restorative: 0.2, elevating: 0.15 },  // < 130 - shade-grown
+    low: { calming: 0.2, restorative: 0.15, focusing: 0.1 },       // 130-170 - slower growth
+    moderate: { harmonizing: 0.2, elevating: 0.15 },              // 170-210 - balanced
+    high: { energizing: 0.3, focusing: 0.2, grounding: 0.1 },     // 210-250 - stronger
+    veryHigh: { energizing: 0.4, grounding: 0.3, comforting: 0.1 } // > 250 - maximum catechins
   }
 };
 
@@ -273,35 +281,40 @@ export class EffectService {
     const geographicWeight = 2.0;
     const climate = coreAnalysis?.geography?.climate || {};
 
-    // Altitude effect (in meters)
-    const altitude = climate.altitude || 0;
+    // Altitude effect (in meters) - use raw numeric value from GeographyService
+    // Using correct thresholds from GeographicalDescriptors: 300, 600, 1200, 1800
+    const altitude = climate.altitude_value !== undefined ? climate.altitude_value : 600;
     let altitudeModifier = {};
-    if (altitude < 500) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.veryLow;
-    else if (altitude < 1000) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.low;
-    else if (altitude < 1500) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.medium;
+    if (altitude < 300) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.veryLow;
+    else if (altitude < 600) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.low;
+    else if (altitude < 1200) altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.medium;
     else altitudeModifier = GEOGRAPHIC_EFFECT_MODIFIERS.altitude.high;
 
     Object.entries(altitudeModifier).forEach(([effect, modifier]) => {
       scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
     });
 
-    // Temperature effect (in Celsius)
-    const temperature = climate.temperature || 15;
+    // Temperature effect (in Celsius) - use raw numeric value from GeographyService
+    // Using correct thresholds from GeographicalDescriptors: 10, 16, 22, 28
+    const temperature = climate.temperature_value !== undefined ? climate.temperature_value : 16;
     let temperatureModifier = {};
-    if (temperature > 18) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.warm;
-    else if (temperature >= 15) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.moderate;
-    else if (temperature >= 12) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.cool;
-    else temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.cold;
+    if (temperature < 10) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.veryLow;
+    else if (temperature < 16) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.low;
+    else if (temperature < 22) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.moderate;
+    else if (temperature < 28) temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.high;
+    else temperatureModifier = GEOGRAPHIC_EFFECT_MODIFIERS.temperature.veryHigh;
 
     Object.entries(temperatureModifier).forEach(([effect, modifier]) => {
       scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
     });
 
-    // Humidity effect (as percentage)
-    const humidity = climate.humidity || 70;
+    // Humidity effect (as percentage) - use raw numeric value from GeographyService
+    // Using correct thresholds from GeographicalDescriptors: 40, 55, 70, 85
+    const humidity = climate.humidity_value !== undefined ? climate.humidity_value : 70;
     let humidityModifier = {};
-    if (humidity < 60) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.low;
-    else if (humidity <= 75) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.moderate;
+    if (humidity < 40) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.veryLow;
+    else if (humidity < 55) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.low;
+    else if (humidity < 70) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.moderate;
     else if (humidity <= 85) humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.high;
     else humidityModifier = GEOGRAPHIC_EFFECT_MODIFIERS.humidity.veryHigh;
 
@@ -309,11 +322,13 @@ export class EffectService {
       scores[effect] = (scores[effect] || 0) + modifier * geographicWeight;
     });
 
-    // Solar radiation effect (in W/m²)
-    const solarRadiation = climate.solarRadiation || 175;
+    // Solar radiation effect (in W/m²) - use raw numeric value from GeographyService
+    // Using correct thresholds from GeographicalDescriptors: 130, 170, 210, 250
+    const solarRadiation = climate.solarRadiation_value !== undefined ? climate.solarRadiation_value : 175;
     let radiationModifier = {};
-    if (solarRadiation < 150) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.low;
-    else if (solarRadiation <= 200) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.moderate;
+    if (solarRadiation < 130) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.veryLow;
+    else if (solarRadiation < 170) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.low;
+    else if (solarRadiation < 210) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.moderate;
     else if (solarRadiation <= 250) radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.high;
     else radiationModifier = GEOGRAPHIC_EFFECT_MODIFIERS.solarRadiation.veryHigh;
 
