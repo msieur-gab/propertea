@@ -298,10 +298,10 @@ export class NormalizationDescriptorService {
 
     if (relaxationLevel === 'Very High') {
       profile = 'Very High L-Theanine';
-      effects = { calming: 4, harmonizing: 2, restorative: 1.5, elevating: 1 };
+      effects = { calming: 1.5, harmonizing: 1, restorative: 0.75, elevating: 0.5 };
     } else if (relaxationLevel === 'High') {
       profile = 'High L-Theanine';
-      effects = { calming: 3, harmonizing: 1.5, restorative: 1, comforting: 1 };
+      effects = { calming: 1, harmonizing: 0.75, restorative: 0.5, comforting: 0.5 };
     } else if (stimulationLevel === 'Very High') {
       profile = 'Very High Caffeine';
       effects = { energizing: 2, focusing: 2, grounding: -1, calming: -2 };

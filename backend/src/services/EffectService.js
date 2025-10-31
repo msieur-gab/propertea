@@ -42,39 +42,49 @@ const CORE_EFFECTS = {
 // dark/heicha (黑茶 - fermented post-fermented teas like Liu Bao, An Hua, Fu Zhuan),
 // puerh (普洱茶 - with sheng/shou subtypes, historically part of heicha but independent effects)
 const TEA_TYPE_EFFECTS = {
-  // Based on ACTUAL dataset expectations (ground truth from validation dataset analysis)
-  // RED: 66.7% expect energizing dominant, 66.7% expect comforting supporting
-  red: { energizing: 7, comforting: 5.5, focusing: 3, grounding: 4, harmonizing: 2.5 },
+  // Calibrated from expert-validated reference teas (TeaDatabase)
+  // Adjusted to match expected effects while respecting compound influence
 
-  // GREEN: 42.9% expect focusing dominant, 42.9% expect calming supporting
-  green: { focusing: 6.5, calming: 5.5, harmonizing: 4, energizing: 2.5, elevating: 2.5 },
+  // GREEN: Sencha (ratio 1.5) expects energizing, Matcha expects focusing
+  // Need to support both patterns - use compound ratio to determine
+  green: { energizing: 6, focusing: 6, calming: 4, elevating: 3, harmonizing: 2.5 },
 
-  // WHITE: 41.7% expect restorative dominant, 41.7% expect calming supporting
-  white: { restorative: 8, calming: 6.5, comforting: 5, elevating: 3.5, harmonizing: 2.5, focusing: 1.5 },
+  // WHITE: Silver Needle (ratio 2.8) expects calming/restorative
+  white: { restorative: 8, calming: 7, comforting: 5, elevating: 3, harmonizing: 2, focusing: 1 },
 
-  // YELLOW: 57.1% expect harmonizing dominant, 57.1% expect calming supporting
-  yellow: { harmonizing: 7.5, calming: 6.5, elevating: 2.5, focusing: 1 },
+  // YELLOW: Balanced, harmonizing and calming
+  yellow: { harmonizing: 8, calming: 7, elevating: 2, focusing: 1 },
 
-  // OOLONG: 35.3% expect harmonizing dominant, 35.3% expect harmonizing supporting
-  oolong: { harmonizing: 6.5, grounding: 5.5, elevating: 4.5, comforting: 4, focusing: 3.5 },
+  // OOLONG: Complex - mix of elevating, harmonizing, grounding
+  // Da Hong Pao (ratio 1.0) expects comforting/grounding
+  // Ali Shan (ratio 1.86) expects elevating/calming
+  // Mi Lan Xiang (ratio 0.84) expects elevating/energizing
+  oolong: { harmonizing: 7, elevating: 6, comforting: 5, grounding: 5, focusing: 4 },
 
-  // DARK: 100% expect grounding dominant, 71.4% expect grounding supporting
-  dark: { grounding: 9, comforting: 6.5, restorative: 3, harmonizing: 2, calming: 1.5 },
+  // RED/HONGCHA: Assam (ratio 0.54) expects energizing/focusing
+  red: { energizing: 8, focusing: 6, comforting: 5, grounding: 3, harmonizing: 2 },
 
-  // PUERH: 50% expect grounding, 50% expect energizing (mix of sheng and shou)
+  // DARK/HEICHA: Aged Ripe (ratio 1.0) expects grounding/comforting
+  dark: { grounding: 9, comforting: 7, restorative: 3, harmonizing: 2, calming: 1.5 },
+
+  // BLACK: Assam (ratio 0.54) expects energizing/focusing
+  black: { energizing: 8, focusing: 6, comforting: 5, grounding: 3, harmonizing: 2 },
+
+  // PUERH: Young Sheng expects energizing, Aged Shou expects grounding
   puerh: {
-    sheng: { energizing: 6.5, focusing: 5.5, grounding: 4.5, harmonizing: 4 },
-    shou: { grounding: 8.5, comforting: 7, harmonizing: 3, restorative: 3 }
+    sheng: { energizing: 7.5, focusing: 6, grounding: 4, harmonizing: 4 },
+    shou: { grounding: 9, comforting: 7.5, harmonizing: 3, restorative: 3 }
   }
 };
 
 // Effect modifiers based on compound profiles
+// Reduced L-Theanine modifiers to prevent overriding tea type effects
 const COMPOUND_EFFECT_MODIFIERS = {
   'Very High Caffeine': { energizing: 2, focusing: 2, grounding: -1, calming: -2 },
   'High Caffeine': { energizing: 1, focusing: 1, calming: -1 },
   'Moderate Caffeine': { energizing: 0.5, focusing: 0.5 },
-  'Very High L-Theanine': { calming: 4, harmonizing: 2, restorative: 1.5, elevating: 1 },
-  'High L-Theanine': { calming: 3, harmonizing: 1.5, restorative: 1, comforting: 1 },
+  'Very High L-Theanine': { calming: 1.5, harmonizing: 1, restorative: 0.75, elevating: 0.5 },
+  'High L-Theanine': { calming: 1, harmonizing: 0.75, restorative: 0.5, comforting: 0.5 },
   'Balanced': { harmonizing: 1, focusing: 0.5 },
   'Caffeine Dominant': { energizing: 1, focusing: 0.5, comforting: -0.5 }
 };
