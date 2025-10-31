@@ -1,0 +1,35 @@
+{
+  "name": "tea-analysis-api",
+  "version": "2.0.0",
+  "description": "Single-pass tea analysis API with consolidated services - Netlify Functions",
+  "type": "module",
+  "main": "netlify/functions/analyze.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step needed for serverless functions'",
+    "start": "netlify dev",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "tea",
+    "analysis",
+    "api",
+    "netlify",
+    "serverless",
+    "functions"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": "18.x || 20.x"
+  },
+  "netlify": {
+    "functions": "netlify/functions",
+    "builder": "@netlify/functions"
+  }
+}
