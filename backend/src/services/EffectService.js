@@ -29,17 +29,20 @@ const CORE_EFFECTS = {
   restorative: 'Aids in recovery and renewal'
 };
 
-// Base effects by tea type
+// Base effects by tea type (100% Chinese tea classification system)
+// green (绿茶), white (白茶), yellow (黄茶), oolong (乌龙茶),
+// red/hongcha (红茶 - known as "black tea" in Western terminology),
+// puerh (普洱茶 - with sheng/shou subtypes)
 const TEA_TYPE_EFFECTS = {
-  green: { energizing: 5, focusing: 6, harmonizing: 5, calming: 4, elevating: 4 },
-  white: { calming: 8, harmonizing: 6, restorative: 5, focusing: 3, elevating: 5 },
+  green: { energizing: 5, focusing: 7, harmonizing: 5, calming: 2, elevating: 4 },
+  white: { restorative: 8, calming: 6, harmonizing: 5, focusing: 3, elevating: 4 },
   yellow: { harmonizing: 7, focusing: 6, elevating: 6, calming: 4 },
   oolong: { harmonizing: 7, focusing: 5, elevating: 7, comforting: 5 },
-  black: { energizing: 6, focusing: 6, harmonizing: 5, grounding: 5 },
-  red: { energizing: 6, focusing: 6, harmonizing: 5, grounding: 5 },  // Chinese naming: hongcha (同 black tea)
-  'puerh-sheng': { energizing: 5, focusing: 6, harmonizing: 5, grounding: 6 },
-  'puerh-shou': { grounding: 9, harmonizing: 5, comforting: 8, restorative: 4 },
-  dark: { grounding: 8, harmonizing: 6, comforting: 7, restorative: 4 }
+  red: { energizing: 5, focusing: 5, harmonizing: 4, grounding: 6, comforting: 5 },  // hongcha (红茶) - Western: black tea
+  puerh: {
+    sheng: { energizing: 5, focusing: 6, harmonizing: 5, grounding: 6 },      // 生普 - raw/young puerh
+    shou: { grounding: 9, harmonizing: 5, comforting: 8, restorative: 4 }     // 熟普 - ripe/aged puerh
+  }
 };
 
 // Effect modifiers based on compound profiles
@@ -70,8 +73,8 @@ const FLAVOR_EFFECT_MAP = {
 
 // Processing roast level effect modifiers
 const ROAST_LEVEL_MODIFIERS = {
-  Charcoal: { grounding: 2, comforting: 1, warming: 1 },
-  Heavy: { grounding: 1.5, comforting: 1, warming: 0.5 },
+  Charcoal: { grounding: 3, comforting: 2, warming: 1 },
+  Heavy: { grounding: 2.5, comforting: 1.5, warming: 0.5 },
   Medium: { comforting: 0.5, harmonizing: 0.5 },
   Light: { energizing: 0.5, elevating: 0.5 },
   Minimal: { elevating: 0.5, focusing: 0.5 },
@@ -204,21 +207,24 @@ export class EffectService {
     const canonicalTeaType = normalized.canonical || 'unknown';
     const normalizedSubtype = normalized.subtype || '';
 
-    // Determine the lookup key for effect profiles
-    // Priority: explicit teaModel.subType > normalized subtype > canonical type
-    let effectLookupKey = canonicalTeaType;
+    // Determine base effects based on tea type and subtype
+    let baseEffects = {};
 
-    // Check explicit subType from teaModel (e.g., from form: type="dark", subType="puerh-sheng")
-    const explicitSubType = teaModel?.subType || '';
-    if (explicitSubType && canonicalTeaType === 'dark') {
-      effectLookupKey = explicitSubType;
-    }
-    // Or use normalized subtype (e.g., when type="puerh-sheng" is normalized)
-    else if (normalizedSubtype && canonicalTeaType === 'dark') {
-      effectLookupKey = normalizedSubtype;
+    if (canonicalTeaType === 'puerh') {
+      // For puerh, get effects from nested structure: puerh.sheng or puerh.shou
+      const pueringEffectsObj = TEA_TYPE_EFFECTS.puerh || {};
+
+      // Get subtype: explicit subType has priority
+      const explicitSubType = (teaModel?.subType || '').toLowerCase().trim();
+      const pueringSubtype = explicitSubType || normalizedSubtype || 'sheng';
+
+      // Get effects for this puerh subtype
+      baseEffects = pueringEffectsObj[pueringSubtype] || pueringEffectsObj.sheng || {};
+    } else {
+      // For other tea types, simple lookup
+      baseEffects = TEA_TYPE_EFFECTS[canonicalTeaType] || {};
     }
 
-    const baseEffects = TEA_TYPE_EFFECTS[effectLookupKey] || {};
     Object.entries(baseEffects).forEach(([effect, score]) => {
       scores[effect] = (scores[effect] || 0) + score * teaTypeWeight;
     });

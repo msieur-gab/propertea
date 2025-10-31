@@ -170,8 +170,8 @@
   {
     "name": "Aged Ripe Puerh",
     "originalName": "熟普洱 (Shú Pǔ'ěr)",
-    "type": "dark",
-    "subType": "puerh-shou",
+    "type": "puerh",
+    "subType": "shou",
     "origin": "Menghai, Yunnan, China",
     "caffeineLevel": 4.5,
     "lTheanineLevel": 4.5,
@@ -199,8 +199,8 @@
   {
     "name": "Young Raw Puerh",
     "originalName": "生普洱 (Shēng Pǔ'ěr)",
-    "type": "dark",
-    "subType": "puerh-sheng",
+    "type": "puerh",
+    "subType": "sheng",
     "origin": "Lincang, Yunnan, China",
     "caffeineLevel": 4.0,
     "lTheanineLevel": 4.0,

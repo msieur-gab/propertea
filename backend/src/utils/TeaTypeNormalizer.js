@@ -1,197 +1,115 @@
 /**
- * TeaTypeNormalizer.js
+ * TeaTypeNormalizer.js - Minimal Version
  *
- * Normalizes tea type names from both Western and Chinese conventions
- * to canonical internal types used by the system.
+ * Normalizes tea type names to canonical Chinese tea classification system
+ * Canonical types: green, white, yellow, oolong, red, puerh (with sheng/shou subtypes)
  *
- * Chinese categories (official):
- * - 绿茶 (lǜchá) - Green Tea
- * - 白茶 (báichá) - White Tea
- * - 黄茶 (huángchá) - Yellow Tea
- * - 乌龙茶 / 青茶 (wūlóngchá / qīngchá) - Oolong Tea
- * - 红茶 (hóngchá) - Red Tea (West calls it "Black Tea")
- * - 黑茶 (hēichá) - Dark Tea / Fermented Tea (post-fermented)
- *   - 普洱茶 (pǔ'ěr chá) - Puerh Tea (subcategory)
- *     - 生普洱 (shēng pǔ'ěr) - Raw/Aged Puerh
- *     - 熟普洱 (shú pǔ'ěr) - Ripe/Cooked Puerh
+ * This is a simple mapping utility with no external dependencies.
  */
 
-const TEA_TYPE_MAPPING = {
+const CANONICAL_TYPES = {
   // Green Tea (绿茶)
-  'green': { canonical: 'green', chinese: '绿茶', pinyin: 'lǜchá', western: 'Green Tea' },
-  'green tea': { canonical: 'green', chinese: '绿茶', pinyin: 'lǜchá', western: 'Green Tea' },
-  'lü cha': { canonical: 'green', chinese: '绿茶', pinyin: 'lǜchá', western: 'Green Tea' },
-  'lücha': { canonical: 'green', chinese: '绿茶', pinyin: 'lǜchá', western: 'Green Tea' },
+  'green': 'green',
+  'green tea': 'green',
 
   // White Tea (白茶)
-  'white': { canonical: 'white', chinese: '白茶', pinyin: 'báichá', western: 'White Tea' },
-  'white tea': { canonical: 'white', chinese: '白茶', pinyin: 'báichá', western: 'White Tea' },
-  'bai cha': { canonical: 'white', chinese: '白茶', pinyin: 'báichá', western: 'White Tea' },
-  'baicha': { canonical: 'white', chinese: '白茶', pinyin: 'báichá', western: 'White Tea' },
+  'white': 'white',
+  'white tea': 'white',
 
   // Yellow Tea (黄茶)
-  'yellow': { canonical: 'yellow', chinese: '黄茶', pinyin: 'huángchá', western: 'Yellow Tea' },
-  'yellow tea': { canonical: 'yellow', chinese: '黄茶', pinyin: 'huángchá', western: 'Yellow Tea' },
-  'huang cha': { canonical: 'yellow', chinese: '黄茶', pinyin: 'huángchá', western: 'Yellow Tea' },
-  'huangcha': { canonical: 'yellow', chinese: '黄茶', pinyin: 'huángchá', western: 'Yellow Tea' },
+  'yellow': 'yellow',
+  'yellow tea': 'yellow',
 
-  // Oolong Tea (乌龙茶 / 青茶)
-  'oolong': { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea' },
-  'oolong tea': { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea' },
-  'wulong': { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea' },
-  'wulong tea': { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea' },
-  'wu long': { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea' },
-  'qing cha': { canonical: 'oolong', chinese: '青茶', pinyin: 'qīngchá', western: 'Oolong Tea (Blue-Green)' },
-  'qingcha': { canonical: 'oolong', chinese: '青茶', pinyin: 'qīngchá', western: 'Oolong Tea (Blue-Green)' },
+  // Oolong Tea (乌龙茶)
+  'oolong': 'oolong',
+  'oolong tea': 'oolong',
+  'wulong': 'oolong',
 
-  // Red Tea / Hongcha (红茶) - What the West calls "Black Tea"
-  'red': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
-  'red tea': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
-  'hong cha': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
-  'hongcha': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
+  // Red Tea / Hongcha (红茶) - Western: Black Tea
+  'red': 'red',
+  'red tea': 'red',
+  'black': 'red',                    // CRITICAL: Western "black" → Chinese "red"
+  'black tea': 'red',
+  'hongcha': 'red',
 
-  // Western "Black Tea" maps to Red Tea (红茶) - CRITICAL MAPPING
-  'black': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
-  'black tea': { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)' },
+  // Puerh Tea (普洱茶) and subtypes
+  'puerh': 'puerh',
+  'pu-erh': 'puerh',
+  'pu erh': 'puerh',
+  'puer': 'puerh',
+  'pu\'er': 'puerh',
 
-  // Dark Tea / Heicha (黑茶) - Post-fermented teas
-  'dark': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
-  'dark tea': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
-  'hei cha': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
-  'heicha': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
-  'fermented tea': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
-  'post-fermented': { canonical: 'dark', chinese: '黑茶', pinyin: 'hēichá', western: 'Dark Tea / Fermented Tea' },
+  // Puerh Sheng - Raw/Aged (生普)
+  'puerh-sheng': 'puerh',
+  'puerh sheng': 'puerh',
+  'raw puerh': 'puerh',
+  'aged puerh': 'puerh',
 
-  // Puerh Tea (普洱茶) - Subcategory of Dark Tea
-  'puerh': { canonical: 'dark', subtype: 'puerh', chinese: '普洱茶', pinyin: 'pǔ\'ěr chá', western: 'Puerh Tea' },
-  'pu-erh': { canonical: 'dark', subtype: 'puerh', chinese: '普洱茶', pinyin: 'pǔ\'ěr chá', western: 'Puerh Tea' },
-  'pu erh': { canonical: 'dark', subtype: 'puerh', chinese: '普洱茶', pinyin: 'pǔ\'ěr chá', western: 'Puerh Tea' },
-  'puer': { canonical: 'dark', subtype: 'puerh', chinese: '普洱茶', pinyin: 'pǔ\'ěr chá', western: 'Puerh Tea' },
-  'pu\'er': { canonical: 'dark', subtype: 'puerh', chinese: '普洱茶', pinyin: 'pǔ\'ěr chá', western: 'Puerh Tea' },
-
-  // Puerh Sheng - Raw/Aged Puerh (生普洱)
-  'puerh-sheng': { canonical: 'dark', subtype: 'puerh-sheng', chinese: '生普洱', pinyin: 'shēng pǔ\'ěr', western: 'Raw/Aged Puerh' },
-  'puerh sheng': { canonical: 'dark', subtype: 'puerh-sheng', chinese: '生普洱', pinyin: 'shēng pǔ\'ěr', western: 'Raw/Aged Puerh' },
-  'raw puerh': { canonical: 'dark', subtype: 'puerh-sheng', chinese: '生普洱', pinyin: 'shēng pǔ\'ěr', western: 'Raw/Aged Puerh' },
-  'aged puerh': { canonical: 'dark', subtype: 'puerh-sheng', chinese: '生普洱', pinyin: 'shēng pǔ\'ěr', western: 'Raw/Aged Puerh' },
-  'sheng puerh': { canonical: 'dark', subtype: 'puerh-sheng', chinese: '生普洱', pinyin: 'shēng pǔ\'ěr', western: 'Raw/Aged Puerh' },
-
-  // Puerh Shou - Ripe/Cooked Puerh (熟普洱)
-  'puerh-shou': { canonical: 'dark', subtype: 'puerh-shou', chinese: '熟普洱', pinyin: 'shú pǔ\'ěr', western: 'Ripe/Cooked Puerh' },
-  'puerh shou': { canonical: 'dark', subtype: 'puerh-shou', chinese: '熟普洱', pinyin: 'shú pǔ\'ěr', western: 'Ripe/Cooked Puerh' },
-  'ripe puerh': { canonical: 'dark', subtype: 'puerh-shou', chinese: '熟普洱', pinyin: 'shú pǔ\'ěr', western: 'Ripe/Cooked Puerh' },
-  'cooked puerh': { canonical: 'dark', subtype: 'puerh-shou', chinese: '熟普洱', pinyin: 'shú pǔ\'ěr', western: 'Ripe/Cooked Puerh' },
-  'shou puerh': { canonical: 'dark', subtype: 'puerh-shou', chinese: '熟普洱', pinyin: 'shú pǔ\'ěr', western: 'Ripe/Cooked Puerh' }
+  // Puerh Shou - Ripe/Cooked (熟普)
+  'puerh-shou': 'puerh',
+  'puerh shou': 'puerh',
+  'ripe puerh': 'puerh',
+  'cooked puerh': 'puerh'
 };
 
 export class TeaTypeNormalizer {
   /**
-   * Normalize tea type from any input format (Western or Chinese)
-   * @param {string} input - Tea type in any format
-   * @returns {Object} Normalized result with canonical type and metadata
+   * Normalize tea type to canonical form
+   * @param {string} input - Tea type (any format)
+   * @returns {Object} { canonical, subtype, valid }
    */
   static normalize(input) {
     if (!input || typeof input !== 'string') {
-      return { canonical: 'unknown', subtype: null, error: 'Invalid input' };
+      return { canonical: 'unknown', subtype: null, valid: false };
     }
 
-    const normalizedInput = input.toLowerCase().trim();
-    const mapping = TEA_TYPE_MAPPING[normalizedInput];
+    const normalized = input.toLowerCase().trim();
+    const canonical = CANONICAL_TYPES[normalized];
 
-    if (mapping) {
-      return {
-        canonical: mapping.canonical,
-        subtype: mapping.subtype || null,
-        chinese: mapping.chinese,
-        pinyin: mapping.pinyin,
-        western: mapping.western
-      };
+    if (!canonical) {
+      return { canonical: 'unknown', subtype: null, valid: false };
     }
 
-    // If not found, return unknown
+    // Extract subtype if present (for puerh)
+    let subtype = null;
+    if (canonical === 'puerh') {
+      if (normalized.includes('sheng') || normalized.includes('raw') || normalized.includes('aged')) {
+        subtype = 'sheng';
+      } else if (normalized.includes('shou') || normalized.includes('ripe') || normalized.includes('cooked')) {
+        subtype = 'shou';
+      }
+    }
+
     return {
-      canonical: 'unknown',
-      subtype: null,
-      original: input,
-      error: `Unknown tea type: "${input}"`
+      canonical,
+      subtype,
+      valid: true
     };
   }
 
   /**
-   * Get all available tea types with metadata
-   * @returns {Array} List of canonical tea types with display names
-   */
-  static getAllTypes() {
-    const types = [
-      { canonical: 'green', chinese: '绿茶', pinyin: 'lǜchá', western: 'Green Tea', subtypes: [] },
-      { canonical: 'white', chinese: '白茶', pinyin: 'báichá', western: 'White Tea', subtypes: [] },
-      { canonical: 'yellow', chinese: '黄茶', pinyin: 'huángchá', western: 'Yellow Tea', subtypes: [] },
-      { canonical: 'oolong', chinese: '乌龙茶', pinyin: 'wūlóngchá', western: 'Oolong Tea', subtypes: [] },
-      { canonical: 'red', chinese: '红茶', pinyin: 'hóngchá', western: 'Red Tea (Black Tea)', subtypes: [] },
-      {
-        canonical: 'dark',
-        chinese: '黑茶',
-        pinyin: 'hēichá',
-        western: 'Dark Tea / Fermented Tea',
-        subtypes: [
-          { subtype: 'puerh-sheng', chinese: '生普洱', western: 'Raw/Aged Puerh' },
-          { subtype: 'puerh-shou', chinese: '熟普洱', western: 'Ripe/Cooked Puerh' }
-        ]
-      }
-    ];
-    return types;
-  }
-
-  /**
-   * Check if a type is valid
+   * Check if input is a valid tea type
    * @param {string} input - Tea type to validate
-   * @returns {boolean} True if valid tea type
+   * @returns {boolean}
    */
   static isValid(input) {
     const result = this.normalize(input);
-    return result.canonical !== 'unknown';
+    return result.valid;
   }
 
   /**
-   * Get display name for tea type (for UI)
-   * @param {string} canonical - Canonical tea type
-   * @param {string} subtype - Optional subtype
-   * @returns {string} User-friendly display name
+   * Get all canonical tea types
+   * @returns {Array} ['green', 'white', 'yellow', 'oolong', 'red', 'puerh']
    */
-  static getDisplayName(canonical, subtype = null) {
-    const allTypes = this.getAllTypes();
-    const type = allTypes.find(t => t.canonical === canonical);
-
-    if (!type) return 'Unknown Tea';
-
-    if (subtype && type.subtypes) {
-      const sub = type.subtypes.find(s => s.subtype === subtype);
-      if (sub) return `${type.western} - ${sub.western}`;
-    }
-
-    return type.western;
+  static getCanonicalTypes() {
+    return ['green', 'white', 'yellow', 'oolong', 'red', 'puerh'];
   }
 
   /**
-   * Get Chinese name for tea type
-   * @param {string} canonical - Canonical tea type
-   * @param {string} subtype - Optional subtype
-   * @returns {string} Chinese name with characters
+   * Get puerh subtypes
+   * @returns {Array} ['sheng', 'shou']
    */
-  static getChineseName(canonical, subtype = null) {
-    const allTypes = this.getAllTypes();
-    const type = allTypes.find(t => t.canonical === canonical);
-
-    if (!type) return '未知茶';
-
-    if (subtype && type.subtypes) {
-      const sub = type.subtypes.find(s => s.subtype === subtype);
-      if (sub) return sub.chinese;
-    }
-
-    return type.chinese;
+  static getPueringSubtypes() {
+    return ['sheng', 'shou'];
   }
 }
-
-// Export singleton for convenience
-export const teaTypeNormalizer = new TeaTypeNormalizer();
