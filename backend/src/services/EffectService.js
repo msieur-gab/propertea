@@ -197,7 +197,7 @@ export class EffectService {
     const { scores: effectScores, contributors } = this._buildEffectScoresWithContributors(teaModel, coreAnalysis);
 
     // Select top 2 effects
-    const { dominant, supporting } = this._selectTopEffects(effectScores);
+    const { dominant, supporting } = this._selectTopEffects(effectScores, teaModel);
 
     // Generate detailed reasoning from contributors
     const reasoning = this._generateDetailedReasoning(dominant, supporting, effectScores, contributors, teaModel);
@@ -471,7 +471,7 @@ export class EffectService {
    *
    * @private
    */
-  _selectTopEffects(effectScores) {
+  _selectTopEffects(effectScores, teaModel) {
     // Sort by score descending
     const sorted = Object.entries(effectScores)
       .sort(([, scoreA], [, scoreB]) => scoreB - scoreA);
@@ -484,13 +484,39 @@ export class EffectService {
     let supporting = null;
     let supportingScore = 0;
 
-    // Prefer complementary effects with positive scores
-    const complementary = COMPLEMENTARY_EFFECTS[dominant] || [];
-    for (const effect of complementary) {
-      const score = effectScores[effect] || 0;
-      if (score > 0 && score > supportingScore && effect !== dominant) {
-        supporting = effect;
-        supportingScore = score;
+    // Green tea special handling for supporting effects
+    // Low-caffeine greens with focusing dominant should prefer calming when it's close to energizing
+    const normalized = TeaTypeNormalizer.normalize(teaModel?.type || '');
+    const canonicalTeaType = normalized?.canonical || normalized;
+    if (canonicalTeaType === 'green' && dominant === 'focusing') {
+      const caffeineLevel = teaModel?.caffeineLevel || 0;
+      if (caffeineLevel < 4.0) {
+        // For low-caffeine greens, if calming and energizing are close, prefer calming
+        const calmingScore = effectScores['calming'] || 0;
+        const energizingScore = effectScores['energizing'] || 0;
+        const harmonisingScore = effectScores['harmonizing'] || 0;
+
+        // Only force calming if it has reasonable score and energizing is not much stronger
+        // (allows energizing to win if it's significantly higher)
+        if (calmingScore > 15 && energizingScore < calmingScore + 3) {
+          supporting = 'calming';
+          supportingScore = calmingScore;
+        } else if (harmonisingScore > 0 && harmonisingScore > energizingScore && harmonisingScore > (effectScores['grounding'] || 0)) {
+          supporting = 'harmonizing';
+          supportingScore = harmonisingScore;
+        }
+      }
+    }
+
+    // If still no supporting, prefer complementary effects with positive scores
+    if (!supporting) {
+      const complementary = COMPLEMENTARY_EFFECTS[dominant] || [];
+      for (const effect of complementary) {
+        const score = effectScores[effect] || 0;
+        if (score > 0 && score > supportingScore && effect !== dominant) {
+          supporting = effect;
+          supportingScore = score;
+        }
       }
     }
 
