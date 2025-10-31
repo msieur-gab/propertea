@@ -15,15 +15,10 @@
  */
 
 // Import all reference descriptors from backend/src/descriptors/
-import flavorInfluencesModule from '../descriptors/FlavorInfluences.js';
-import processingInfluencesModule from '../descriptors/ProcessingInfluences.js';
-import teaTypeDescriptorsModule from '../descriptors/TeaTypeDescriptors.js';
-import geographicalDescriptorsModule from '../descriptors/GeographicalDescriptors.js';
-
-const { flavorInfluences, flavorCategoryToPrimaryEffects, flavorToPrimaryEffects } = flavorInfluencesModule;
-const { processingInfluences, processingToPrimaryEffectMap } = processingInfluencesModule;
-const { teaTypeDescriptors } = teaTypeDescriptorsModule;
-const { elevationLevels, latitudeZones } = geographicalDescriptorsModule;
+import { flavorInfluences } from '../descriptors/FlavorInfluences.js';
+import { processingInfluences } from '../descriptors/ProcessingInfluences.js';
+import { teaTypeDescriptors } from '../descriptors/TeaTypeDescriptors.js';
+import { elevationLevels, latitudeZones } from '../descriptors/GeographicalDescriptors.js';
 
 export class ReferenceDescriptorService {
   /**

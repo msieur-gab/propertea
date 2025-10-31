@@ -14,20 +14,12 @@ import {
   effectMapping,
   teaTypeEffects,
   effectInteractionRules,
-  effectCombinations
-} from '../descriptors/index.js';
-import {
+  effectCombinations,
   flavorInfluences,
-  flavorToPrimaryEffects
-} from '../descriptors/index.js';
-import {
-  teaTypeDescriptors
-} from '../descriptors/index.js';
-import {
-  processingInfluences
-} from '../descriptors/index.js';
-import {
-  seasonalFactors
+  teaTypeDescriptors,
+  processingInfluences,
+  seasonalDescriptions,
+  seasonalProfiles
 } from '../descriptors/index.js';
 
 export class ContentGenerationService {
