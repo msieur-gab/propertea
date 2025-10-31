@@ -18,6 +18,13 @@
  */
 
 import ReferenceDescriptorService from './ReferenceDescriptorService.js';
+import { elevationLevels, temperatureLevels, humidityLevels, solarRadiationLevels, latitudeZones } from '../descriptors/GeographicalDescriptors.js';
+
+// Scale factor for geography effects to prevent them from overpowering other factors
+// Descriptors have values like { calming: 2.0, focusing: 1.5 } which are too strong
+// when applied at 2.0x weight alongside tea type (2.5x) and compounds (2.0-2.8x)
+// Using 0.25 scale brings descriptors back to conservative 0.5-0.375 range
+const GEOGRAPHY_EFFECT_SCALE = 0.25;
 
 export class NormalizationDescriptorService {
   /**
@@ -192,7 +199,7 @@ export class NormalizationDescriptorService {
         value: geography.altitude,
         level: this._getElevationLevelName(geography.altitude),
         description: elevLevel.description,
-        effects: elevLevel.effects || {},
+        effects: this._scaleEffects(elevLevel.effects || {}),
         range: { min: elevLevel.min, max: elevLevel.max }
       };
     } else {
@@ -366,122 +373,91 @@ export class NormalizationDescriptorService {
   }
 
   /**
-   * Get elevation level name
+   * Get elevation level name from actual GeographicalDescriptors
    * @private
    */
   static _getElevationLevelName(altitude) {
-    if (altitude < 300) return 'veryLow';
-    if (altitude < 600) return 'low';
-    if (altitude < 1200) return 'medium';
-    if (altitude < 1800) return 'high';
+    // Find matching elevation level from descriptors
+    for (const [levelName, levelData] of Object.entries(elevationLevels)) {
+      if (altitude >= levelData.min && altitude < levelData.max) {
+        return levelName;
+      }
+    }
     return 'veryHigh';
   }
 
   /**
-   * Get temperature level
+   * Get temperature level from actual GeographicalDescriptors (scaled to prevent dominance)
    * @private
    */
   static _getTemperatureLevel(celsius) {
-    if (celsius < 10)
-      return {
-        name: 'veryLow',
-        description: 'Very cool climate promoting high L-Theanine content',
-        effects: { calming: 0.3, restorative: 0.2, focusing: 0.1 }
-      };
-    if (celsius < 16)
-      return {
-        name: 'low',
-        description: 'Cool climate creating delicate, aromatic characteristics',
-        effects: { calming: 0.2, restorative: 0.2, elevating: 0.15 }
-      };
-    if (celsius < 22)
-      return {
-        name: 'moderate',
-        description: 'Moderate temperature creating balanced tea characteristics',
-        effects: { harmonizing: 0.3, elevating: 0.3, focusing: 0.1 }
-      };
-    if (celsius < 28)
-      return {
-        name: 'high',
-        description: 'Warm climate producing stronger flavors and tannins',
-        effects: { energizing: 0.3, focusing: 0.2, grounding: 0.1 }
-      };
+    // Find matching temperature level from descriptors
+    for (const [levelName, levelData] of Object.entries(temperatureLevels)) {
+      if (celsius >= levelData.min && celsius < levelData.max) {
+        return {
+          name: levelName,
+          description: levelData.description,
+          effects: this._scaleEffects(levelData.effects)
+        };
+      }
+    }
+
+    // Fallback to veryHigh if no match
+    const veryHighLevel = temperatureLevels.veryHigh;
     return {
       name: 'veryHigh',
-      description: 'Very warm climate promoting rapid growth and bold characteristics',
-      effects: { energizing: 0.4, grounding: 0.3, comforting: 0.1 }
+      description: veryHighLevel.description,
+      effects: this._scaleEffects(veryHighLevel.effects)
     };
   }
 
   /**
-   * Get humidity level
+   * Get humidity level from actual GeographicalDescriptors (scaled to prevent dominance)
    * @private
    */
   static _getHumidityLevel(percent) {
-    if (percent < 40)
-      return {
-        name: 'veryLow',
-        description: 'Dry climate causing stressed plant growth',
-        effects: { energizing: 0.2, focusing: 0.2 }
-      };
-    if (percent < 55)
-      return {
-        name: 'low',
-        description: 'Low humidity creating pronounced flavors',
-        effects: { energizing: 0.15, focusing: 0.1 }
-      };
-    if (percent < 70)
-      return {
-        name: 'moderate',
-        description: 'Moderate humidity supporting balanced development',
-        effects: { harmonizing: 0.2, elevating: 0.1 }
-      };
-    if (percent <= 85)
-      return {
-        name: 'high',
-        description: 'High humidity with mist effect supporting amino acid development',
-        effects: { elevating: 0.3, harmonizing: 0.2, focusing: 0.15 }
-      };
+    // Find matching humidity level from descriptors
+    for (const [levelName, levelData] of Object.entries(humidityLevels)) {
+      if (percent >= levelData.min && percent < levelData.max) {
+        return {
+          name: levelName,
+          description: levelData.description,
+          effects: this._scaleEffects(levelData.effects)
+        };
+      }
+    }
+
+    // Fallback to veryHigh if no match
+    const veryHighLevel = humidityLevels.veryHigh;
     return {
       name: 'veryHigh',
-      description: 'Very high humidity creating smooth, balanced tea characteristics',
-      effects: { calming: 0.2, restorative: 0.2, harmonizing: 0.15 }
+      description: veryHighLevel.description,
+      effects: this._scaleEffects(veryHighLevel.effects)
     };
   }
 
   /**
-   * Get solar radiation level
+   * Get solar radiation level from actual GeographicalDescriptors (scaled to prevent dominance)
    * @private
    */
   static _getSolarLevel(wattPerM2) {
-    if (wattPerM2 < 130)
-      return {
-        name: 'veryLow',
-        description: 'Low sun exposure preserving delicate compounds',
-        effects: { calming: 0.2, restorative: 0.15, focusing: 0.1 }
-      };
-    if (wattPerM2 < 170)
-      return {
-        name: 'low',
-        description: 'Reduced sun exposure developing subtle complexity',
-        effects: { elevating: 0.2, harmonizing: 0.15, calming: 0.1 }
-      };
-    if (wattPerM2 < 210)
-      return {
-        name: 'moderate',
-        description: 'Balanced sun exposure creating well-developed flavors',
-        effects: { harmonizing: 0.2, elevating: 0.2, focusing: 0.1 }
-      };
-    if (wattPerM2 <= 250)
-      return {
-        name: 'high',
-        description: 'High sun exposure increasing catechin development',
-        effects: { energizing: 0.2, focusing: 0.15, grounding: 0.1 }
-      };
+    // Find matching solar radiation level from descriptors
+    for (const [levelName, levelData] of Object.entries(solarRadiationLevels)) {
+      if (wattPerM2 >= levelData.min && wattPerM2 < levelData.max) {
+        return {
+          name: levelName,
+          description: levelData.description,
+          effects: this._scaleEffects(levelData.effects)
+        };
+      }
+    }
+
+    // Fallback to veryHigh if no match
+    const veryHighLevel = solarRadiationLevels.veryHigh;
     return {
       name: 'veryHigh',
-      description: 'Very high sun exposure producing bold, robust characteristics',
-      effects: { energizing: 0.3, grounding: 0.2, elevating: 0.1 }
+      description: veryHighLevel.description,
+      effects: this._scaleEffects(veryHighLevel.effects)
     };
   }
 
@@ -498,38 +474,59 @@ export class NormalizationDescriptorService {
   }
 
   /**
-   * Default values for missing data
+   * Scale geography effects to prevent them from dominating
+   * Descriptors have values like { calming: 2.0 } which are too strong when
+   * applied at 2.0x weight alongside tea type (2.5x) and compounds (2.0-2.8x)
+   * @private
+   */
+  static _scaleEffects(effects) {
+    if (!effects || typeof effects !== 'object') {
+      return effects;
+    }
+    const scaled = {};
+    for (const [effect, value] of Object.entries(effects)) {
+      scaled[effect] = value * GEOGRAPHY_EFFECT_SCALE;
+    }
+    return scaled;
+  }
+
+  /**
+   * Default values for missing data - using actual descriptors (scaled)
    * @private
    */
   static _getDefaultAltitudeData() {
+    const mediumData = elevationLevels.medium;
     return {
       level: 'medium',
-      description: 'Medium elevation (assumed)',
-      effects: { harmonizing: 2.0, focusing: 1.5, elevating: 1.0 }
+      description: `${mediumData.description} (assumed)`,
+      effects: this._scaleEffects(mediumData.effects)
     };
   }
 
   static _getDefaultTemperatureData() {
+    const moderateData = temperatureLevels.moderate;
     return {
       level: 'moderate',
-      description: 'Moderate temperature (assumed)',
-      effects: { harmonizing: 0.3, elevating: 0.3, focusing: 0.1 }
+      description: `${moderateData.description} (assumed)`,
+      effects: this._scaleEffects(moderateData.effects)
     };
   }
 
   static _getDefaultHumidityData() {
+    const moderateData = humidityLevels.moderate;
     return {
       level: 'moderate',
-      description: 'Moderate humidity (assumed)',
-      effects: { harmonizing: 0.2, elevating: 0.1 }
+      description: `${moderateData.description} (assumed)`,
+      effects: this._scaleEffects(moderateData.effects)
     };
   }
 
   static _getDefaultSolarData() {
+    const moderateData = solarRadiationLevels.moderate;
     return {
       level: 'moderate',
-      description: 'Moderate solar radiation (assumed)',
-      effects: { harmonizing: 0.2, elevating: 0.2, focusing: 0.1 }
+      description: `${moderateData.description} (assumed)`,
+      effects: this._scaleEffects(moderateData.effects)
     };
   }
 

@@ -50,7 +50,8 @@ const TEA_TYPE_EFFECTS = {
   green: { energizing: 6, focusing: 6, calming: 4, elevating: 3, harmonizing: 2.5 },
 
   // WHITE: Silver Needle (ratio 2.8) expects calming/restorative
-  white: { restorative: 8, calming: 7, comforting: 5, elevating: 3, harmonizing: 2, focusing: 1 },
+  // Reduce comforting to prevent it from competing with calming/restorative
+  white: { restorative: 8, calming: 7, elevating: 3, harmonizing: 2, comforting: 0.5, focusing: 0.5 },
 
   // YELLOW: Balanced, harmonizing and calming
   yellow: { harmonizing: 8, calming: 7, elevating: 2, focusing: 1 },
@@ -62,7 +63,8 @@ const TEA_TYPE_EFFECTS = {
   oolong: { harmonizing: 7, elevating: 6, comforting: 5, grounding: 5, focusing: 4 },
 
   // RED/HONGCHA: Assam (ratio 0.54) expects energizing/focusing
-  red: { energizing: 8, focusing: 6, comforting: 5, grounding: 3, harmonizing: 2 },
+  // Increased energizing to ensure it dominates over comforting from processing
+  red: { energizing: 9, focusing: 6.5, comforting: 3, grounding: 2, harmonizing: 1 },
 
   // DARK/HEICHA: Aged Ripe (ratio 1.0) expects grounding/comforting
   dark: { grounding: 9, comforting: 7, restorative: 3, harmonizing: 2, calming: 1.5 },
@@ -265,6 +267,64 @@ export class EffectService {
       scores[effect] = (scores[effect] || 0) + score * teaTypeWeight;
     });
 
+    // GREEN TEA DIFFERENTIATION: Apply caffeine-level-based branching
+    // Matcha/high caffeine greens (≥4.5) → focusing should dominate
+    // Sencha/medium caffeine (3.5-4.5) → energizing base effect wins
+    // Low caffeine greens (<3.5) → calming/focusing balance
+    if (canonicalTeaType === 'green') {
+      const caffeineLevel = teaModel?.caffeineLevel || 0;
+      if (caffeineLevel >= 4.5) {
+        // High caffeine green (Matcha, strong greens) → strongly boost focusing
+        scores.focusing = (scores.focusing || 0) + 8;
+        scores.energizing = (scores.energizing || 0) - 5;
+        scores.elevating = (scores.elevating || 0) - 3;
+      } else if (caffeineLevel >= 3.8) {
+        // Medium caffeine (Sencha-like) → moderate boost to energizing
+        scores.energizing = (scores.energizing || 0) + 4;
+        scores.focusing = (scores.focusing || 0) - 1;
+      } else if (caffeineLevel > 0) {
+        // Low caffeine (<3.8) → reduce energizing, let calming/harmonizing win
+        scores.energizing = (scores.energizing || 0) - 3;
+        scores.calming = (scores.calming || 0) + 2;
+        scores.harmonizing = (scores.harmonizing || 0) + 1;
+      }
+    }
+
+    // RED TEA DIFFERENTIATION: Handle smoked reds (Lapsang Souchong)
+    // Most other reds stay energizing by default
+    if (canonicalTeaType === 'red') {
+      const processingData = (Array.isArray(teaModel?.processingMethods) ? teaModel.processingMethods : null)
+        || teaModel?.processingMethods?.methods || [];
+      const processingStr = processingData.join(' ').toLowerCase();
+
+      // Smoked reds (Lapsang Souchong) → comforting/grounding instead of energizing
+      if (processingStr.includes('smoked')) {
+        scores.comforting = (scores.comforting || 0) + 6;
+        scores.grounding = (scores.grounding || 0) + 4;
+        scores.energizing = (scores.energizing || 0) - 5;
+        scores.focusing = (scores.focusing || 0) - 2;
+      }
+    }
+
+    // PUERH DIFFERENTIATION: Sheng (young/raw) vs Shou (aged/ripe)
+    if (canonicalTeaType === 'puerh') {
+      const pueringSubtype = (teaModel?.subType || '').toLowerCase().trim();
+
+      // Sheng (young) expects energizing/focusing
+      if (pueringSubtype === 'sheng' || !pueringSubtype) {
+        scores.energizing = (scores.energizing || 0) + 10;
+        scores.focusing = (scores.focusing || 0) - 5;
+        scores.comforting = (scores.comforting || 0) - 5;
+        scores.grounding = (scores.grounding || 0) - 2;
+      }
+      // Shou (aged/ripe) expects grounding/comforting (already in base effects)
+      else if (pueringSubtype === 'shou') {
+        scores.grounding = (scores.grounding || 0) + 3;
+        scores.comforting = (scores.comforting || 0) + 2;
+        scores.energizing = (scores.energizing || 0) - 2;
+      }
+    }
+
     // STEP 2: Normalize and apply compound-based modifiers (weight: 2.0-2.8x)
     const normalizedCompounds = NormalizationDescriptorService.normalizeCompounds(
       teaModel?.caffeineLevel,
@@ -420,26 +480,25 @@ export class EffectService {
     const dominant = sorted[0]?.[0] || 'harmonizing';
     const dominantScore = sorted[0]?.[1] || 0;
 
-    // Get supporting: prefer highest-scoring complementary effect
-    let supporting = 'calming';
+    // Get supporting: prefer complementary effect if it scores > 0
+    let supporting = null;
     let supportingScore = 0;
 
-    // Prefer complementary effects if they have meaningful scores (> 0)
+    // Prefer complementary effects with positive scores
     const complementary = COMPLEMENTARY_EFFECTS[dominant] || [];
     for (const effect of complementary) {
       const score = effectScores[effect] || 0;
-      if (score > supportingScore && effect !== dominant) {
+      if (score > 0 && score > supportingScore && effect !== dominant) {
         supporting = effect;
         supportingScore = score;
       }
     }
 
-    // If no good complementary found, use second highest overall
-    if (supportingScore === 0) {
+    // If no complementary with positive score, use second highest overall
+    if (!supporting) {
       const nonDominant = sorted.find(([eff]) => eff !== dominant);
       if (nonDominant) {
         supporting = nonDominant[0];
-        supportingScore = nonDominant[1];
       }
     }
 
