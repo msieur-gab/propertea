@@ -1,9 +1,14 @@
 // js/derivation/FoodMatcher.js
 // Rewritten version (April 10, 2025) to ensure correct input handling,
 // implement clearer scoring logic, clustering, and detailed tracing.
+//
+// REFACTORED: Added confidence weighting system
+// Now wraps all recommendations with confidence metrics based on data completeness
 
 // Import necessary descriptors if they live in separate files
 // import { flavorCategoryToFoodGroups, flavorToSpecificFoods } from '../descriptors/FoodPairingDescriptors.js'; // Example
+
+import { calculateDataConfidence } from '../../models/ConfidenceCalculator.js';
 
 export class FoodMatcher {
     constructor(config = {}) {
@@ -184,10 +189,18 @@ export class FoodMatcher {
 
     /**
      * Main function to match tea to foods.
+     * @param {Object} teaModel - Tea model (for confidence calculation)
+     * @param {Object} flavorAnalysis - Flavor analysis result
+     * @param {Object} processingAnalysis - Processing analysis result
+     * @param {Object} teaTypeAnalysis - Tea type analysis result
+     * @returns {Object} Food pairing recommendations with confidence
      */
-    matchFood(flavorAnalysis = {}, processingAnalysis = {}, teaTypeAnalysis = {}) {
+    matchFood(teaModel = {}, flavorAnalysis = {}, processingAnalysis = {}, teaTypeAnalysis = {}) {
         let trace = [];
         const foodPairingScores = new Map();
+
+        // Calculate data confidence from tea model
+        const dataConfidence = calculateDataConfidence(teaModel);
 
         // --- 1. Initialize Scores ---
         this.allKnownFoods.forEach(food => foodPairingScores.set(food, this.config.baseScore));
@@ -308,12 +321,21 @@ export class FoodMatcher {
         const description = this.generateFoodDescription({ recommendedFoods: recommendedPairings, mealClusters: mealClusters }); // Adjusted parameter names
         trace.push({ step: "Description Generation", reason: "Creating summary", adjustment: "Generated final description" });
 
+        // Add confidence to recommendations
+        const recommendedFoodsWithConfidence = this._addConfidenceToFoods(recommendedPairings, dataConfidence);
+        const mealClustersWithConfidence = this._addConfidenceToMealClusters(mealClusters, dataConfidence);
+        trace.push({ step: "Confidence Assignment", reason: "Adding uncertainty metrics", adjustment: `Data confidence: ${Math.round(dataConfidence * 100)}%` });
+
         // Return the final results including the trace
         return {
             recommendations: normalizedScores, // Full map of normalized scores
-            recommendedFoods: recommendedPairings, // Top N list [{name, score}]
-            mealClusters: mealClusters, // Clustered list [{occasion, foods: [{name, score}], score}]
+            recommendedFoods: recommendedFoodsWithConfidence, // Top N list [{name, score, confidence%, range}]
+            mealClusters: mealClustersWithConfidence, // Clustered list [{occasion, foods, score, confidence%, range}]
             description: description, // Human-readable summary
+            confidence: {
+                overall: Math.round(dataConfidence * 100),
+                label: this._getConfidenceLabel(dataConfidence)
+            },
             trace: trace // Detailed log of steps
         };
     }
@@ -415,11 +437,11 @@ export class FoodMatcher {
      */
     generateFoodDescription(results) {
         const { recommendedFoods, mealClusters } = results;
-        
+
         if (!recommendedFoods || recommendedFoods.length === 0 || (recommendedFoods.length === 1 && recommendedFoods[0].name === "Versatile")) {
             return "This tea is versatile and pairs well with a wide variety of foods.";
         }
-        
+
         let description = "This tea pairs especially well with ";
         if (recommendedFoods.length === 1) {
             description += `${recommendedFoods[0].name.toLowerCase()} (${recommendedFoods[0].score}% match).`;
@@ -432,8 +454,68 @@ export class FoodMatcher {
             const topCluster = mealClusters[0];
             description += ` It's particularly suited for "${topCluster.occasion}" occasions (${topCluster.score}% match).`;
         }
-        
+
         return description;
+    }
+
+    /**
+     * Add confidence metrics to recommended foods
+     * @private
+     */
+    _addConfidenceToFoods(recommendedFoods, dataConfidence) {
+        return recommendedFoods.map(food => {
+            const confidenceScore = (food.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60;
+            const spread = Math.round(25 * (1 - dataConfidence));
+            return {
+                name: food.name,
+                score: food.score,
+                confidence: Math.round(confidenceScore),
+                range: {
+                    low: Math.max(0, Math.round(food.score - spread)),
+                    high: Math.min(100, Math.round(food.score + spread))
+                },
+                confidenceLabel: this._getConfidenceLabel(confidenceScore / 100)
+            };
+        });
+    }
+
+    /**
+     * Add confidence metrics to meal clusters
+     * @private
+     */
+    _addConfidenceToMealClusters(mealClusters, dataConfidence) {
+        return mealClusters.map(cluster => {
+            const confidenceScore = (cluster.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60;
+            const spread = Math.round(25 * (1 - dataConfidence));
+            const foodsWithConfidence = cluster.foods.map(food => ({
+                name: food.name,
+                score: food.score,
+                confidence: Math.round((food.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60)
+            }));
+            return {
+                occasion: cluster.occasion,
+                foods: foodsWithConfidence,
+                score: cluster.score,
+                confidence: Math.round(confidenceScore),
+                range: {
+                    low: Math.max(0, Math.round(cluster.score - spread)),
+                    high: Math.min(100, Math.round(cluster.score + spread))
+                },
+                confidenceLabel: this._getConfidenceLabel(confidenceScore / 100)
+            };
+        });
+    }
+
+    /**
+     * Get human-readable confidence label
+     * @private
+     */
+    _getConfidenceLabel(confidence) {
+        if (confidence >= 0.85) return 'Very High';
+        if (confidence >= 0.70) return 'High';
+        if (confidence >= 0.55) return 'Moderate';
+        if (confidence >= 0.40) return 'Low';
+        return 'Very Low';
     }
 }
 

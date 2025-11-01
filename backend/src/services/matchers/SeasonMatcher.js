@@ -1,6 +1,23 @@
-// SeasonMatcher.js
-// Matches a tea's profile to the most suitable season(s) for consumption.
-// Updated to identify continuous seasonal ranges
+/**
+ * SeasonMatcher.js - REFACTORED WITH CONFIDENCE WEIGHTING
+ *
+ * Matches a tea's profile to the most suitable season(s) for consumption.
+ * Now includes confidence metrics for seasonal recommendations.
+ *
+ * IMPROVEMENTS:
+ * - Each seasonal score includes confidence bounds
+ * - Confidence reflects data completeness (more data = higher confidence)
+ * - Recommended seasons include confidence assessment
+ * - Ideal seasonal ranges show confidence levels
+ *
+ * INPUT: Tea model with geography, processing, tea type, flavor analysis
+ * OUTPUT: Season scores with confidence, recommended seasons, seasonal ranges
+ */
+
+import ConfidenceCalculator, {
+  calculateDataConfidence,
+  calculateUncertaintyRange
+} from '../../models/ConfidenceCalculator.js';
 
 export class SeasonMatcher {
     constructor(config = {}) {
@@ -52,14 +69,15 @@ export class SeasonMatcher {
     }
 
     /**
-     * Matches the tea's profile to suitable seasons.
+     * Matches the tea's profile to suitable seasons with confidence metrics
+     * @param {object} teaModel - Full tea model with all characteristics
      * @param {object} geographyAnalysis - Analysis from GeographyCalculator
      * @param {object} processingAnalysis - Analysis from ProcessingCalculator
      * @param {object} teaTypeAnalysis - Analysis from TeaTypeCalculator
      * @param {object} flavorAnalysis - Analysis from FlavorCalculator
-     * @returns {Object} Results containing recommended seasons and seasonal ranges
+     * @returns {Object} Results containing recommended seasons with confidence, seasonal ranges
      */
-    matchSeason(geographyAnalysis = {}, processingAnalysis = {}, teaTypeAnalysis = {}, flavorAnalysis = {}) {
+    matchSeason(teaModel = {}, geographyAnalysis = {}, processingAnalysis = {}, teaTypeAnalysis = {}, flavorAnalysis = {}) {
         // Initialize the trace array
         let trace = [];
         
@@ -270,21 +288,41 @@ export class SeasonMatcher {
             });
         }
 
+        // Calculate confidence for seasonal matching
+        const dataConfidence = calculateDataConfidence(teaModel || {});
+        trace.push({
+            step: 'Confidence Assessment',
+            reason: 'Data quality evaluation',
+            adjustment: `Data confidence: ${(dataConfidence * 100).toFixed(0)}%`
+        });
+
+        // Wrap season scores with confidence
+        const recommendedSeasonsWithConfidence = recommendedSeasons.map(season => ({
+            ...season,
+            confidence: Math.round((season.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60)
+        }));
+
+        // Wrap seasonal ranges with confidence
+        const seasonalRangesWithConfidence = seasonalRanges.map(range => ({
+            ...range,
+            confidence: Math.round((range.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60)
+        }));
+
         // For legacy compatibility, also provide simplified season recommendations
         const simplifiedScores = this.generateSimplifiedScores(normalizedScores);
         const simplifiedRecommended = this.getSimplifiedRecommendations(simplifiedScores);
-        
-        trace.push({ 
-            step: "Simplified Results", 
-            reason: "Generating simplified season scores", 
-            adjustment: "Mapped detailed seasons to simple seasons", 
+
+        trace.push({
+            step: "Simplified Results",
+            reason: "Generating simplified season scores",
+            adjustment: "Mapped detailed seasons to simple seasons",
             value: Object.entries(simplifiedScores).map(([season, score]) => `${season}: ${score}`).join(', ')
         });
 
         return {
-            recommendations: normalizedScores,
-            recommendedSeasons,
-            idealRanges: seasonalRanges,
+            recommendations: this._addConfidenceToSeasons(normalizedScores, dataConfidence),
+            recommendedSeasons: recommendedSeasonsWithConfidence,
+            idealRanges: seasonalRangesWithConfidence,
             // For backwards compatibility
             simplified: {
                 scores: simplifiedScores,
@@ -292,6 +330,10 @@ export class SeasonMatcher {
             },
             // Direct recommended property for even better backwards compatibility
             recommended: simplifiedRecommended,
+            confidence: {
+                overall: Math.round(dataConfidence * 100),
+                dataQuality: this._getConfidenceLabel(dataConfidence)
+            },
             trace
         };
     }
@@ -657,10 +699,10 @@ export class SeasonMatcher {
         if (ranges.length === 0) {
             return "No specific seasonal range recommended";
         }
-        
+
         // Sort ranges by score
         const sortedRanges = [...ranges].sort((a, b) => b.score - a.score);
-        
+
         // Format each range
         return sortedRanges.map(range => {
             if (range.isWraparound) {
@@ -671,6 +713,40 @@ export class SeasonMatcher {
             }
             return `${range.start} to ${range.end} (${range.score}%)`;
         }).join(', ');
+    }
+
+    /**
+     * Add confidence metrics to season scores
+     * @private
+     */
+    _addConfidenceToSeasons(normalizedScores, baseConfidence) {
+        const result = {};
+
+        for (const [season, score] of Object.entries(normalizedScores)) {
+            // Confidence is higher for recommended seasons, lower for non-recommended
+            const seasonConfidence = baseConfidence * (0.5 + (score / 200));
+            const range = calculateUncertaintyRange(score, seasonConfidence);
+
+            result[season] = {
+                score: score,
+                confidence: Math.round(seasonConfidence * 100),
+                range: range
+            };
+        }
+
+        return result;
+    }
+
+    /**
+     * Get human-readable confidence label
+     * @private
+     */
+    _getConfidenceLabel(confidence) {
+        if (confidence >= 0.85) return 'Very High';
+        if (confidence >= 0.70) return 'High';
+        if (confidence >= 0.55) return 'Moderate';
+        if (confidence >= 0.40) return 'Low';
+        return 'Very Low';
     }
 }
 
