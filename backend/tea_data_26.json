@@ -1,0 +1,1878 @@
+
+[
+  {
+    "name": "Huangshan Maofeng",
+    "originalName": "黄山毛峰",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 35,
+    "lTheanineLevel": 70,
+    "flavorProfile": [
+      "sweet",
+      "floral",
+      "nutty",
+      "vegetal",
+      "fresh"
+    ],
+    "processingMethods": [
+      "plucking",
+      "withering",
+      "pan-firing",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Huangshan (Yellow Mountain)",
+      "province": "Anhui",
+      "elevation": 700
+    },
+    "expectedEffects": {
+      "dominant": "clarifying",
+      "supporting": "refreshing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring"
+      ],
+      "recommendedActivity": [
+        "daily enjoyment",
+        "relaxation",
+        "tea exploration"
+      ],
+      "foodPairing": [
+        "seafood",
+        "light desserts",
+        "mild cheeses",
+        "fresh vegetables"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Lu An Gua Pian",
+    "originalName": "六安瓜片",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "nutty",
+      "vegetal",
+      "sweet",
+      "smoky",
+      "savory",
+      "umami"
+    ],
+    "processingMethods": [
+      "picking",
+      "sorting",
+      "pan-firing",
+      "shaping",
+      "baking"
+    ],
+    "geography": {
+      "region": "Lu'an City",
+      "province": "Anhui",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "contemplation",
+        "social gatherings",
+        "everyday enjoyment",
+        "refreshing break"
+      ],
+      "foodPairing": [
+        "light and fresh dishes",
+        "mildly savory foods",
+        "dishes with a hint of sweetness",
+        "unsalted nuts",
+        "plain crackers"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "20-30s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Xin Yang Mao Jian",
+    "originalName": "信阳毛尖",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 10,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "savory",
+      "sweet",
+      "vegetal",
+      "nutty",
+      "fruity",
+      "floral"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "pan-frying",
+      "cooling",
+      "re-roasting",
+      "drying"
+    ],
+    "geography": {
+      "region": "Xinyang",
+      "province": "Henan",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "spring",
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "unwinding",
+        "tea tasting",
+        "after work",
+        "hot weather"
+      ],
+      "foodPairing": [
+        "pastries",
+        "snacks",
+        "desserts",
+        "roasted meats",
+        "savory asian cuisine"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "3-7s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Du Yun Mao Jian",
+    "originalName": "都匀毛尖",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 10,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "sweet",
+      "savory",
+      "vegetal",
+      "nutty",
+      "buttery",
+      "floral"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "frying",
+      "kneading",
+      "shaping",
+      "drying"
+    ],
+    "geography": {
+      "region": "Duyun City",
+      "province": "Guizhou",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "contemplation",
+        "social gatherings",
+        "afternoon tea",
+        "focus"
+      ],
+      "foodPairing": [
+        "light dishes",
+        "salads",
+        "steamed vegetables",
+        "delicate seafood",
+        "sushi",
+        "sashimi",
+        "mildly sweet desserts"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Anji Bai Cha",
+    "originalName": "安吉白茶",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 20,
+    "lTheanineLevel": 90,
+    "flavorProfile": [
+      "sweet",
+      "umami",
+      "buttery",
+      "floral",
+      "citrus",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "fixation",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Anji County",
+      "province": "Zhejiang",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22
+      ],
+      "drinkingSeason": [
+        "spring"
+      ],
+      "recommendedActivity": [
+        "quiet moments",
+        "reflection",
+        "light snacks",
+        "afternoon tea",
+        "evening ritual"
+      ],
+      "foodPairing": [
+        "scallops",
+        "almond biscuits",
+        "fruit salads",
+        "plain salted crackers",
+        "fish",
+        "seafood"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "30-40s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Baimao Hou",
+    "originalName": "白毛猴茶",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "sweet",
+      "woody",
+      "herbaceous",
+      "peppery",
+      "honeyed",
+      "fruity",
+      "nutty",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "steaming",
+      "drying"
+    ],
+    "geography": {
+      "region": "Taimu Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "spring"
+      ],
+      "recommendedActivity": [
+        "resting",
+        "relaxing",
+        "after-meal drink",
+        "socializing"
+      ],
+      "foodPairing": [
+        "light snacks",
+        "sweet dishes",
+        "nutty foods",
+        "fruity dishes",
+        "granola",
+        "oatmeal",
+        "fresh fruit"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "5-8s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Chun Mee",
+    "originalName": "珍眉",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 25,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "smoky",
+      "sweet",
+      "tangy",
+      "plum",
+      "buttery"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "drying",
+      "frying",
+      "rolling",
+      "shaping"
+    ],
+    "geography": {
+      "region": "Taishun County",
+      "province": "Zhejiang",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "daily enjoyment",
+        "wellness",
+        "relaxation",
+        "social gatherings",
+        "culinary applications"
+      ],
+      "foodPairing": [
+        "light and fresh dishes",
+        "sweet and fruity notes",
+        "mildly savory foods",
+        "steamed fish",
+        "sushi",
+        "lightly seasoned chicken",
+        "fruit salads"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Da Fang",
+    "originalName": "大方",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 35,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "nutty",
+      "vegetal",
+      "sweet",
+      "smoky"
+    ],
+    "processingMethods": [
+      "plucking",
+      "sha qing",
+      "twisting",
+      "shaping",
+      "wok-roasting",
+      "flattening",
+      "drying"
+    ],
+    "geography": {
+      "region": "She County, Huangshan",
+      "province": "Anhui",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "summer"
+      ],
+      "recommendedActivity": [
+        "tea tasting",
+        "relaxation",
+        "contemplation",
+        "gifting",
+        "special gatherings"
+      ],
+      "foodPairing": [
+        "valancay cheese",
+        "delice de jura cheese",
+        "le burgond cheese",
+        "young reblochon aoc cheese",
+        "light stir-fries",
+        "chicken",
+        "unsweetened pastries",
+        "fruit salads"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "5-10s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Mengding Ganlu",
+    "originalName": "蒙顶甘露",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 70,
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "vegetal",
+      "floral",
+      "fruity"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "fixation",
+      "kneading",
+      "rolling",
+      "shaping",
+      "drying"
+    ],
+    "geography": {
+      "region": "Meng Mountain",
+      "province": "Sichuan",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "refreshing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "serenity",
+        "rejuvenation",
+        "meditation",
+        "intellectual pursuits",
+        "daily refreshment",
+        "relaxation"
+      ],
+      "foodPairing": [
+        "cakes",
+        "chocolates",
+        "light snacks"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Zhuyeqing",
+    "originalName": "竹叶青",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 20,
+    "lTheanineLevel": 80,
+    "flavorProfile": [
+      "sweet",
+      "floral",
+      "vegetal",
+      "nutty",
+      "buttery"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "fixation",
+      "sorting",
+      "pot drying",
+      "shaping",
+      "roasting"
+    ],
+    "geography": {
+      "region": "Mount Emei",
+      "province": "Sichuan",
+      "elevation": 1000
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "refreshing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "meditation",
+        "nature appreciation",
+        "daily enjoyment",
+        "post-meal digestif",
+        "gifting"
+      ],
+      "foodPairing": [
+        "salads",
+        "light vegetarian dishes",
+        "dim sum",
+        "seafood"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "En Shi Yu Lu",
+    "originalName": "恩施玉露",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 20,
+    "lTheanineLevel": 70,
+    "flavorProfile": [
+      "sweet",
+      "umami",
+      "vegetal",
+      "nutty",
+      "buttery",
+      "floral"
+    ],
+    "processingMethods": [
+      "plucking",
+      "steaming",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Enshi City",
+      "province": "Hubei",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "refreshing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "unwinding",
+        "contemplation",
+        "focused work",
+        "afternoon tea"
+      ],
+      "foodPairing": [
+        "wok-roasted chinese greens",
+        "bibimbap",
+        "red bean cheesecake",
+        "almond cookies"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "6-20s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Cui Ming Green",
+    "originalName": "翠明绿茶",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "nutty",
+      "green apple",
+      "vegetal",
+      "fruity",
+      "sweet"
+    ],
+    "processingMethods": [
+      "plucking",
+      "fixation",
+      "rolling",
+      "drying",
+      "sifting"
+    ],
+    "geography": {
+      "region": "Puer County or Simao",
+      "province": "Yunnan",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "daily enjoyment",
+        "relaxation",
+        "contemplation",
+        "refreshing beverage",
+        "extended tea sessions"
+      ],
+      "foodPairing": [
+        "seafood",
+        "lightly cooked greens",
+        "salads",
+        "stir-fried vegetables",
+        "poultry"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 80,
+        "steepTime": "30s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "2 minutes"
+      }
+    }
+  },
+  {
+    "name": "Gunpowder",
+    "originalName": "珠茶",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 70,
+    "flavorProfile": [
+      "smoky",
+      "earthy",
+      "nutty",
+      "sweet",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "withering",
+      "steaming",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Pingshui",
+      "province": "Zhejiang",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "recommendedActivity": [
+        "morning starter",
+        "afternoon pick-me-up",
+        "post-meal drink",
+        "social gatherings",
+        "enhancing physical activity",
+        "relaxation"
+      ],
+      "foodPairing": [
+        "bbq meats",
+        "chicken dishes",
+        "pork",
+        "fish",
+        "mint",
+        "basil",
+        "lemon",
+        "roasted potatoes",
+        "root vegetables"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 90,
+        "steepTime": "10-30s"
+      },
+      "western": {
+        "waterTemperature": 80,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Taiping Houkui",
+    "originalName": "太平猴魁",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "sweet",
+      "floral",
+      "orchid",
+      "nutty",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "picking",
+      "sorting",
+      "spreading",
+      "kill-green",
+      "drying",
+      "shaping"
+    ],
+    "geography": {
+      "region": "Huangshan (Yellow Mountain)",
+      "province": "Anhui",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "refreshing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "mindful tea sessions",
+        "relaxation",
+        "contemplation",
+        "gifting",
+        "special gatherings"
+      ],
+      "foodPairing": [
+        "seafood",
+        "steamed vegetables",
+        "lightly stir-fried vegetables",
+        "mild cheeses",
+        "light desserts"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "10-30s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "1-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Liu An Gua Pian",
+    "originalName": "六安瓜片",
+    "type": "Green",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "nutty",
+      "vegetal",
+      "sweet",
+      "smoky",
+      "savory",
+      "umami"
+    ],
+    "processingMethods": [
+      "picking",
+      "sorting",
+      "pan-firing",
+      "shaping",
+      "baking"
+    ],
+    "geography": {
+      "region": "Lu'an City",
+      "province": "Anhui",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "refreshing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "contemplation",
+        "social gatherings",
+        "everyday enjoyment",
+        "refreshing break"
+      ],
+      "foodPairing": [
+        "light and fresh dishes",
+        "mildly savory foods",
+        "dishes with a hint of sweetness",
+        "unsalted nuts",
+        "plain crackers"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 82,
+        "steepTime": "20-30s"
+      },
+      "western": {
+        "waterTemperature": 82,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Tie Guan Yin",
+    "originalName": "铁观音",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 45,
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "rich",
+      "orchid",
+      "white pepper",
+      "cocoa",
+      "hazelnut"
+    ],
+    "processingMethods": [
+      "plucking",
+      "sun withering",
+      "cooling",
+      "tossing",
+      "fixation",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Anxi",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "energizing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "focused work",
+        "creative thinking",
+        "social gathering",
+        "reflection",
+        "mindfulness"
+      ],
+      "foodPairing": [
+        "white meats",
+        "asian stir-fries",
+        "spicy foods",
+        "creamy goat cheese",
+        "green curry",
+        "honey cakes",
+        "caramelized fruit tarts",
+        "apple crumble with cream"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 95,
+        "steepTime": "10-30s"
+      },
+      "western": {
+        "waterTemperature": 95,
+        "steepTime": "3-5 minutes"
+      }
+    }
+  },
+  {
+    "name": "Da Hong Pao",
+    "originalName": "大红袍",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 40,
+    "flavorProfile": [
+      "roasted",
+      "floral",
+      "fruity",
+      "mineral",
+      "sweet",
+      "caramel",
+      "nutty"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "withering",
+      "tossing",
+      "oxidation",
+      "fixation",
+      "rolling",
+      "roasting",
+      "drying",
+      "sorting"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "autumn",
+        "winter"
+      ],
+      "recommendedActivity": [
+        "appreciation",
+        "mindfulness",
+        "formal gatherings",
+        "meditation",
+        "intellectual pursuits"
+      ],
+      "foodPairing": [
+        "roasted meats",
+        "mushroom dishes",
+        "smoked cheeses",
+        "creamy cheeses",
+        "dark chocolate",
+        "dried fruits",
+        "roasted nuts"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 95,
+        "steepTime": "8-20s"
+      },
+      "western": {
+        "waterTemperature": 95,
+        "steepTime": "2-3 minutes"
+      }
+    }
+  },
+  {
+    "name": "Rougui",
+    "originalName": "肉桂茶",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 30,
+    "flavorProfile": [
+      "cinnamon",
+      "spicy",
+      "woody",
+      "sweet",
+      "fruity",
+      "smoky"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "withering",
+      "fermentation",
+      "roasting",
+      "kneading",
+      "drying"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "warming",
+      "supporting": "aromatic"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "summer"
+      ],
+      "recommendedActivity": [
+        "mindful moments",
+        "daily rituals",
+        "tea ceremonies",
+        "post-meal digestif",
+        "social gatherings"
+      ],
+      "foodPairing": [
+        "seafood",
+        "heavy meals"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 100,
+        "steepTime": "1-5s"
+      },
+      "western": {
+        "waterTemperature": 95,
+        "steepTime": "1 minute"
+      }
+    }
+  },
+  {
+    "name": "Bai Jiguan",
+    "originalName": "白鸡冠",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "sweet",
+      "fruity",
+      "floral",
+      "creamy",
+      "savory"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "withering",
+      "bruising",
+      "tossing",
+      "fixation",
+      "shaping",
+      "rolling",
+      "drying",
+      "roasting",
+      "sorting"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "clarifying"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "autumn",
+        "spring"
+      ],
+      "recommendedActivity": [
+        "mindful tea sessions",
+        "relaxation",
+        "contemplation",
+        "light meals",
+        "digestive support",
+        "immune boosting"
+      ],
+      "foodPairing": [
+        "steamed seafood",
+        "grilled seafood",
+        "sushi",
+        "sashimi",
+        "poached chicken",
+        "grilled turkey",
+        "apples",
+        "pears",
+        "lychees",
+        "almond cookies",
+        "sesame cookies",
+        "shortbread",
+        "fruit-based desserts"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 85,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 93,
+        "steepTime": "3-5 minutes"
+      }
+    }
+  },
+  {
+    "name": "Ban Tian Yao",
+    "originalName": "半天腰",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "sweet",
+      "smoky",
+      "woody",
+      "mineral"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "withering",
+      "oxidation",
+      "hand-firing",
+      "roasting",
+      "resting"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "aromatic",
+      "supporting": "relaxing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "recommendedActivity": [
+        "contemplative moments",
+        "social gatherings",
+        "tea ceremonies",
+        "post-meal digestif",
+        "relaxation"
+      ],
+      "foodPairing": [
+        "seafood",
+        "lightly salted foods",
+        "heavier foods",
+        "maple syrup"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 100,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 100,
+        "steepTime": "20-30s"
+      }
+    }
+  },
+  {
+    "name": "Bu Zhi Chun",
+    "originalName": "不知春",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 30,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "smoky",
+      "sweet"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "roasting",
+      "rolling",
+      "drying"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "aromatic",
+      "supporting": "relaxing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "winter",
+        "spring"
+      ],
+      "recommendedActivity": [
+        "relaxation",
+        "mindfulness",
+        "social gatherings",
+        "afternoon tea",
+        "dessert accompaniment"
+      ],
+      "foodPairing": [
+        "seafood",
+        "rich poultry",
+        "light vegetarian dishes"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 100,
+        "steepTime": "30s"
+      },
+      "western": {
+        "waterTemperature": 100,
+        "steepTime": "30s"
+      }
+    }
+  },
+  {
+    "name": "Fo Shou",
+    "originalName": "佛手",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "citrus",
+      "floral",
+      "sweet",
+      "fruity",
+      "spicy",
+      "woody"
+    ],
+    "processingMethods": [
+      "picking",
+      "withering",
+      "cooling",
+      "heating",
+      "tossing",
+      "oxidation",
+      "rolling",
+      "roasting"
+    ],
+    "geography": {
+      "region": "Yongchun County",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "relaxing",
+      "supporting": "aromatic"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "evening relaxation",
+        "meditation",
+        "quiet reflection",
+        "reading",
+        "journaling",
+        "social gatherings",
+        "tea ceremonies"
+      ],
+      "foodPairing": [
+        "citrus-infused dishes",
+        "lightly spiced foods",
+        "honeyed desserts",
+        "seafood",
+        "oily or richer dishes",
+        "spicy foods"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 99,
+        "steepTime": "8-10s"
+      },
+      "western": {
+        "waterTemperature": 98,
+        "steepTime": "40s"
+      }
+    }
+  },
+  {
+    "name": "Huang Guanyin",
+    "originalName": "黄观音",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "sweet",
+      "spicy",
+      "woody",
+      "mineral"
+    ],
+    "processingMethods": [
+      "plucking",
+      "withering",
+      "tossing",
+      "oxidation",
+      "fixation",
+      "rolling",
+      "drying",
+      "roasting"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "aromatic",
+      "supporting": "relaxing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "tea tasting",
+        "relaxation",
+        "contemplation",
+        "social gatherings"
+      ],
+      "foodPairing": [
+        "white meats",
+        "asian stir-fries",
+        "seafood",
+        "light vegetarian dishes",
+        "creamy goat cheese",
+        "honey cakes",
+        "fruit tarts"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 100,
+        "steepTime": "5-10s"
+      },
+      "western": {
+        "waterTemperature": 100,
+        "steepTime": "1-2 minutes"
+      }
+    }
+  },
+  {
+    "name": "Huang Meigui",
+    "originalName": "黄玫瑰",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fruity",
+      "creamy",
+      "honey"
+    ],
+    "processingMethods": [
+      "withering",
+      "bruising",
+      "oxidation",
+      "firing"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "aromatic",
+      "supporting": "relaxing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "drinkingSeason": [
+        "spring",
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "mindful sipping",
+        "daily enjoyment",
+        "gongfu tea ceremony",
+        "relaxation",
+        "unwinding"
+      ],
+      "foodPairing": [
+        "white meats",
+        "seafood",
+        "light vegetarian dishes",
+        "mild cheeses",
+        "light pastries",
+        "fruit salads"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 90,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 95,
+        "steepTime": "2-5 minutes"
+      }
+    }
+  },
+  {
+    "name": "Jin Fo",
+    "originalName": "金佛茶",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "creamy",
+      "floral",
+      "cinnamon",
+      "chocolate"
+    ],
+    "processingMethods": [
+      "plucking",
+      "withering",
+      "bruising",
+      "oxidation",
+      "fixation",
+      "shaping",
+      "drying"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "aromatic",
+      "supporting": "relaxing"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        15,
+        16,
+        17
+      ],
+      "drinkingSeason": [
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "gong fu cha tea tastings",
+        "social gatherings",
+        "relaxation",
+        "mindfulness",
+        "aesthetic appreciation"
+      ],
+      "foodPairing": [
+        "roasted meats",
+        "grilled meats",
+        "mushroom dishes",
+        "toasted nuts",
+        "seeds",
+        "chocolate desserts",
+        "maple syrup"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 100,
+        "steepTime": "30-50s"
+      },
+      "western": {
+        "waterTemperature": 96,
+        "steepTime": "3-5 minutes"
+      }
+    }
+  },
+  {
+    "name": "Jin Suo Chi",
+    "originalName": "金锁匙",
+    "type": "Oolong",
+    "subType": null,
+    "caffeineLevel": 50,
+    "lTheanineLevel": 50,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "sweet",
+      "smoky",
+      "woody"
+    ],
+    "processingMethods": [
+      "harvesting",
+      "twisting",
+      "charcoal roasting"
+    ],
+    "geography": {
+      "region": "Wuyi Mountains",
+      "province": "Fujian",
+      "elevation": null
+    },
+    "expectedEffects": {
+      "dominant": "warming",
+      "supporting": "mentally-stimulating"
+    },
+    "recommendedContext": {
+      "timeOfDay": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "drinkingSeason": [
+        "autumn"
+      ],
+      "recommendedActivity": [
+        "focused productivity",
+        "relaxation",
+        "contemplation",
+        "tea tasting",
+        "afternoon tea"
+      ],
+      "foodPairing": [
+        "seafood",
+        "shellfish",
+        "lightly salted foods",
+        "grilled fish",
+        "fruits",
+        "baked goods",
+        "cheeses"
+      ]
+    },
+    "brewingGuide": {
+      "gongfu": {
+        "waterTemperature": 95,
+        "steepTime": "5-15s"
+      },
+      "western": {
+        "waterTemperature": 95,
+        "steepTime": "3-5 minutes"
+      }
+    }
+  }
+]

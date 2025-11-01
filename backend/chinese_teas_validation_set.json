@@ -1,0 +1,3798 @@
+[
+  {
+    "name": "Traditional Tie Guan Yin",
+    "originalName": "铁观音 (Tiěguānyīn)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "floral",
+      "creamy",
+      "orchid",
+      "buttery",
+      "lightly sweet"
+    ],
+    "processingMethods": [
+      "medium oxidation",
+      "light roast",
+      "rolled"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 25.13,
+      "longitude": 118.18,
+      "temperature": 19.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Early Summer"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh fruit (peaches, melon)",
+        "Unspiced seafood",
+        "White chocolate"
+      ],
+      "recommendedActivity": [
+        "Social gathering",
+        "Creative work",
+        "Afternoon tea ceremony",
+        "Mindful tasting"
+      ],
+      "timeOfDay": [
+        "Late Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Wuyi Rock Oolong",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "mineral",
+      "roasty",
+      "dark chocolate",
+      "orchid",
+      "caramel"
+    ],
+    "processingMethods": [
+      "heavy roast",
+      "high oxidation",
+      "strip-style"
+    ],
+    "geography": {
+      "altitude": 650,
+      "humidity": 82,
+      "latitude": 27.68,
+      "longitude": 117.98,
+      "temperature": 18.2,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted nuts",
+        "Dark chocolate",
+        "Game meats",
+        "Aged cheeses",
+        "Mushroom-based dishes"
+      ],
+      "recommendedActivity": [
+        "Focused study",
+        "Deep conversation",
+        "After a heavy meal",
+        "Cold weather contemplation"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon",
+        "Early Evening"
+      ]
+    }
+  },
+  {
+    "name": "Dragon Well Green Tea",
+    "originalName": "龙井茶 (Lóngjǐng Chá)",
+    "type": "green",
+    "origin": "Hangzhou, Zhejiang, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "chestnut",
+      "vegetal",
+      "sweet",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "minimal oxidation",
+      "flattened"
+    ],
+    "geography": {
+      "altitude": 300,
+      "humidity": 80,
+      "latitude": 30.23,
+      "longitude": 120.16,
+      "temperature": 16.8,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Steamed fish",
+        "Rice dishes",
+        "Light salads",
+        "Shellfish",
+        "Green vegetables"
+      ],
+      "recommendedActivity": [
+        "Focused work",
+        "Reading",
+        "Morning meditation",
+        "After a light meal"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Bi Luo Chun",
+    "originalName": "碧螺春 (Bìluóchūn)",
+    "type": "green",
+    "origin": "Dongting Mountain, Jiangsu, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "tightly rolled",
+      "minimal processing"
+    ],
+    "geography": {
+      "altitude": 350,
+      "humidity": 85,
+      "latitude": 31.32,
+      "longitude": 120.28,
+      "temperature": 17.2,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Fresh berries",
+        "Goat cheese",
+        "Sushi",
+        "White-fleshed fish",
+        "Almond cookies"
+      ],
+      "recommendedActivity": [
+        "Creative brainstorming",
+        "Casual socializing",
+        "Afternoon refreshment",
+        "Writing"
+      ],
+      "timeOfDay": [
+        "Mid-Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Silver Needle White Tea",
+    "originalName": "白毫银针 (Báiháo Yínzhēn)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "cucumber",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "sun-withered",
+      "minimal processing",
+      "buds only"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 82,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "restorative"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Summer",
+        "Early Autumn"
+      ],
+      "foodPairing": [
+        "Fresh fruit platters",
+        "Light cakes",
+        "Cucumber sandwiches",
+        "Oysters",
+        "Melon and prosciutto"
+      ],
+      "recommendedActivity": [
+        "Quiet reflection",
+        "Yoga or stretching",
+        "Afternoon nap recovery",
+        "Spa-like relaxation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Early Evening"
+      ]
+    }
+  },
+  {
+    "name": "White Peony",
+    "originalName": "白牡丹 (Báimǔdān)",
+    "type": "white",
+    "origin": "Zhenghe, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "honey",
+      "chamomile",
+      "sweet",
+      "floral",
+      "light"
+    ],
+    "processingMethods": [
+      "indoor withering",
+      "buds and leaves",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "temperature": 17.8,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "restorative",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light pasta",
+        "Grilled chicken",
+        "Fruit tarts",
+        "Mild cheeses",
+        "Green salads with vinaigrette"
+      ],
+      "recommendedActivity": [
+        "Leisurely reading",
+        "Gentle social visits",
+        "Recovery from illness",
+        "Wind-down after work"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Aged Ripe Puerh",
+    "originalName": "熟普洱 (Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "shou",
+    "origin": "Menghai, Yunnan, China",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "earthy",
+      "woody",
+      "sweet",
+      "leather",
+      "compost"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 1300,
+      "humidity": 75,
+      "latitude": 21.98,
+      "longitude": 100.45,
+      "temperature": 21.2,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Rich, fatty meats",
+        "Dark chocolate",
+        "Mushroom dishes",
+        "Spicy Szechuan food",
+        "After a large meal"
+      ],
+      "recommendedActivity": [
+        "Meditation",
+        "Reading philosophy",
+        "After-dinner digestif",
+        "Cold, rainy day contemplation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Young Raw Puerh",
+    "originalName": "生普洱 (Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "sheng",
+    "origin": "Lincang, Yunnan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "floral",
+      "bitter",
+      "astringent",
+      "orchid",
+      "mineral"
+    ],
+    "processingMethods": [
+      "sun-withered",
+      "compressed",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1800,
+      "humidity": 70,
+      "latitude": 23.88,
+      "longitude": 100.08,
+      "temperature": 18.5,
+      "solarRadiation": 210
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Dim Sum",
+        "Light, slightly sweet pastries",
+        "Fresh fruit to contrast bitterness",
+        "Steamed buns"
+      ],
+      "recommendedActivity": [
+        "'Tea drunk' sessions with friends",
+        "Intense creative work",
+        "Morning kickstart",
+        "Mental challenges"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Jun Shan Yin Zhen",
+    "originalName": "君山银针 (Jūnshān Yínzhēn)",
+    "type": "yellow",
+    "origin": "Junshan Island, Hunan, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "delicate",
+      "fresh",
+      "lightly floral"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "buds only",
+      "slow-dried"
+    ],
+    "geography": {
+      "altitude": 200,
+      "humidity": 85,
+      "latitude": 29.42,
+      "longitude": 113.08,
+      "temperature": 17.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light cakes",
+        "Steamed vegetables",
+        "Scallops",
+        "Subtle desserts like panna cotta"
+      ],
+      "recommendedActivity": [
+        "Meditative practice",
+        "Casual business meeting",
+        "Quiet afternoon break",
+        "Appreciating a calm moment"
+      ],
+      "timeOfDay": [
+        "Mid-Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Meng Ding Huang Ya",
+    "originalName": "蒙顶黄芽 (Méngdǐng Huángyá)",
+    "type": "yellow",
+    "origin": "Mengding Mountain, Sichuan, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "sweet",
+      "buttery",
+      "mellow",
+      "chestnut",
+      "smooth"
+    ],
+    "processingMethods": [
+      "smothered",
+      "multiple firings",
+      "yellowed"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 80,
+      "latitude": 30.12,
+      "longitude": 103.03,
+      "temperature": 15.5,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Any season"
+      ],
+      "foodPairing": [
+        "Rice-based dishes",
+        "Poached chicken",
+        "Buttery cookies",
+        "Soft, mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Stress relief",
+        "Pre-meeting calm",
+        "Evening wind-down",
+        "Gentle conversation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèngshān Xiǎozhǒng)",
+    "type": "red",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 3,
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "longan",
+      "dark chocolate"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "pine-smoked",
+      "heavily processed"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 82,
+      "latitude": 27.72,
+      "longitude": 117.68,
+      "temperature": 17.8,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "comforting",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Smoked meats and cheeses",
+        "Barbecue",
+        "Charcuterie",
+        "Dark rye bread",
+        "Russian cuisine"
+      ],
+      "recommendedActivity": [
+        "Campfires",
+        "Outdoor activities in cold weather",
+        "Storytelling",
+        "After a long, taxing day"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon",
+        "Evening (for those not sensitive to caffeine)"
+      ]
+    }
+  },
+  {
+    "name": "Golden Monkey Black Tea",
+    "originalName": "金猴红茶 (Jīnhóu Hóngchá)",
+    "type": "red",
+    "origin": "Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "stone fruit"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "lightly rolled",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 78,
+      "latitude": 27.5,
+      "longitude": 118.35,
+      "temperature": 18.2,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter",
+        "Spring"
+      ],
+      "foodPairing": [
+        "Chocolate desserts",
+        "Pancakes with maple syrup",
+        "Strong cheeses",
+        "Spiced cakes",
+        "Breakfast foods"
+      ],
+      "recommendedActivity": [
+        "Morning routine",
+        "Physical energy boost",
+        "Social brunch",
+        "Comforting afternoon pick-me-up"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Phoenix Dan Cong Oolong",
+    "originalName": "凤凰单丛 (Fènghuáng Dāncóng)",
+    "type": "oolong",
+    "origin": "Chaozhou, Guangdong, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "peach",
+      "orchid",
+      "spicy",
+      "complex"
+    ],
+    "processingMethods": [
+      "semi-oxidized",
+      "strip-style",
+      "multiple roastings"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 80,
+      "latitude": 23.67,
+      "longitude": 116.62,
+      "temperature": 20.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Roasted duck",
+        "Spicy dishes",
+        "Fruit tarts",
+        "Aged gouda"
+      ],
+      "recommendedActivity": [
+        "Tea appreciation session",
+        "Creative writing",
+        "Afternoon contemplation"
+      ],
+      "timeOfDay": [
+        "Late Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Taiwanese High Mountain Oolong",
+    "originalName": "高山乌龙 (Gāoshān Wūlóng)",
+    "type": "oolong",
+    "origin": "Alishan, Taiwan",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "creamy",
+      "floral",
+      "buttery",
+      "lightly sweet",
+      "fresh"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "ball-rolled",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 1600,
+      "humidity": 85,
+      "latitude": 23.51,
+      "longitude": 120.81,
+      "temperature": 15,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Steamed buns",
+        "Fresh fruit",
+        "Vanilla cake"
+      ],
+      "recommendedActivity": [
+        "Mountain retreat",
+        "Meditative practice",
+        "Social tea gathering"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Huang Jin Gui Oolong",
+    "originalName": "黄金桂 (Huángjīnguì)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "honey",
+      "bright",
+      "aromatic"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "light roast",
+      "ball-rolled"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 78,
+      "latitude": 25.06,
+      "longitude": 118.18,
+      "temperature": 19,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh mango",
+        "Cucumber sandwiches",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning refreshment",
+        "Casual meeting",
+        "Afternoon tea break"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Shui Xian Oolong",
+    "originalName": "水仙 (Shuǐxiān)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "woody",
+      "mineral",
+      "orchid",
+      "toasty",
+      "smooth"
+    ],
+    "processingMethods": [
+      "medium-heavy oxidation",
+      "roasted",
+      "strip-style"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 82,
+      "latitude": 27.68,
+      "longitude": 117.98,
+      "temperature": 18,
+      "solarRadiation": 178
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted vegetables",
+        "Nutty dishes",
+        "Dark chocolate",
+        "Mushroom risotto"
+      ],
+      "recommendedActivity": [
+        "Evening relaxation",
+        "Reading novels",
+        "Post-dinner digestif"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Jin Xuan Milk Oolong",
+    "originalName": "金萱 (Jīnxuān)",
+    "type": "oolong",
+    "origin": "Nantou, Taiwan",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "creamy",
+      "milky",
+      "buttery",
+      "lightly sweet",
+      "smooth"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "ball-rolled",
+      "steamed"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 83,
+      "latitude": 23.91,
+      "longitude": 120.88,
+      "temperature": 18.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Shortbread cookies",
+        "Vanilla ice cream",
+        "Scones with cream",
+        "Light salads"
+      ],
+      "recommendedActivity": [
+        "Afternoon relaxation",
+        "Quiet reading",
+        "Casual chat with friends"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Lu Shan Yun Wu Green Tea",
+    "originalName": "庐山云雾 (Lúshān Yúnwù)",
+    "type": "green",
+    "origin": "Mount Lu, Jiangxi, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "fresh",
+      "grassy",
+      "sweet",
+      "clean",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "curly leaves",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 85,
+      "latitude": 29.55,
+      "longitude": 115.98,
+      "temperature": 15,
+      "solarRadiation": 170
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Steamed fish",
+        "Rice porridge",
+        "Fresh spring rolls",
+        "Light soups"
+      ],
+      "recommendedActivity": [
+        "Morning meditation",
+        "Study sessions",
+        "Mountain hiking break"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Xin Yang Mao Jian Green Tea",
+    "originalName": "信阳毛尖 (Xìnyáng Máojiān)",
+    "type": "green",
+    "origin": "Xinyang, Henan, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "smooth",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "tightly rolled",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 32.13,
+      "longitude": 114.08,
+      "temperature": 16.5,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Steamed dumplings",
+        "Green vegetables",
+        "Light poultry dishes",
+        "Fresh fruit"
+      ],
+      "recommendedActivity": [
+        "Morning wake-up",
+        "Work focus",
+        "After-lunch refreshment"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Huo Shan Huang Ya Green Tea",
+    "originalName": "霍山黄芽 (Huòshān Huángyá)",
+    "type": "green",
+    "origin": "Huoshan, Anhui, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "chestnut",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "yellowed",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 900,
+      "humidity": 80,
+      "latitude": 31.38,
+      "longitude": 116.32,
+      "temperature": 16,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Steamed vegetables",
+        "White fish",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Quiet contemplation",
+        "Afternoon break",
+        "Casual reading"
+      ],
+      "timeOfDay": [
+        "Mid-Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Liu An Gua Pian Green Tea",
+    "originalName": "六安瓜片 (Lù'ān Guāpiàn)",
+    "type": "green",
+    "origin": "Lu'an, Anhui, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "nutty",
+      "sweet",
+      "smooth",
+      "fresh",
+      "clean"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "flattened leaves",
+      "no buds"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 78,
+      "latitude": 31.75,
+      "longitude": 116.5,
+      "temperature": 16.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "energizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Nuts and seeds",
+        "Steamed chicken",
+        "Rice dishes",
+        "Light desserts"
+      ],
+      "recommendedActivity": [
+        "Work focus",
+        "Study groups",
+        "Morning routine"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Tai Ping Hou Kui Green Tea",
+    "originalName": "太平猴魁 (Tàipíng Hóukuí)",
+    "type": "green",
+    "origin": "Taiping, Anhui, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "smooth",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "pressed flat",
+      "large leaves"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 80,
+      "latitude": 30.28,
+      "longitude": 118.13,
+      "temperature": 16,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Fresh fruit",
+        "Steamed vegetables",
+        "Delicate pastries"
+      ],
+      "recommendedActivity": [
+        "Tea tasting",
+        "Relaxing afternoon",
+        "Creative inspiration"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Gong Mei White Tea",
+    "originalName": "贡眉 (Gòngméi)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "fruity",
+      "sweet",
+      "mellow",
+      "honey",
+      "smooth"
+    ],
+    "processingMethods": [
+      "sun-withered",
+      "minimal processing",
+      "mature leaves"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 80,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "restorative",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Summer",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light fruit salads",
+        "Mild cheeses",
+        "Steamed buns",
+        "Honey cakes"
+      ],
+      "recommendedActivity": [
+        "Afternoon relaxation",
+        "Recovery days",
+        "Gentle social visits"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Shou Mei White Tea",
+    "originalName": "寿眉 (Shòuméi)",
+    "type": "white",
+    "origin": "Zhenghe, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "sweet",
+      "woodsy",
+      "honey",
+      "full-bodied"
+    ],
+    "processingMethods": [
+      "withered",
+      "slightly oxidized",
+      "mature leaves"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "temperature": 18,
+      "solarRadiation": 192
+    },
+    "expectedEffects": {
+      "dominant": "comforting",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted root vegetables",
+        "Mushroom dishes",
+        "Aged cheeses",
+        "Nutty desserts"
+      ],
+      "recommendedActivity": [
+        "Cozy evenings",
+        "Reading by the fire",
+        "After-dinner relaxation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Moonlight White Tea",
+    "originalName": "月光白 (Yuèguāng Bái)",
+    "type": "white",
+    "origin": "Yunnan, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "muscatel",
+      "sweet",
+      "smooth",
+      "fruity"
+    ],
+    "processingMethods": [
+      "indoor withered",
+      "minimal oxidation",
+      "buds and leaves"
+    ],
+    "geography": {
+      "altitude": 1600,
+      "humidity": 75,
+      "latitude": 22,
+      "longitude": 100,
+      "temperature": 19,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "restorative"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Fresh berries",
+        "Light pastries",
+        "Goat cheese",
+        "Melon"
+      ],
+      "recommendedActivity": [
+        "Evening wind-down",
+        "Stargazing",
+        "Gentle conversation"
+      ],
+      "timeOfDay": [
+        "Late Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Aged White Tea Cake",
+    "originalName": "老白茶 (Lǎo Báichá)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "herbal",
+      "sweet",
+      "medicinal",
+      "honey",
+      "smooth"
+    ],
+    "processingMethods": [
+      "compressed",
+      "aged",
+      "slow-oxidized"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 78,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "restorative",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Dried fruits",
+        "Nut cakes",
+        "Herbal dishes",
+        "Light soups"
+      ],
+      "recommendedActivity": [
+        "Cold weather contemplation",
+        "Recovery from fatigue",
+        "Evening tea ceremony"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "White Darjeeling (Silver Tips)",
+    "originalName": "दार्जिलिंग व्हाइट टी (Darjiling White Tea)",
+    "type": "white",
+    "origin": "Darjeeling, India",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "muscatel",
+      "sweet",
+      "floral",
+      "delicate",
+      "fresh"
+    ],
+    "processingMethods": [
+      "withered",
+      "minimal processing",
+      "buds only"
+    ],
+    "geography": {
+      "altitude": 2000,
+      "humidity": 70,
+      "latitude": 27.04,
+      "longitude": 88.26,
+      "temperature": 15,
+      "solarRadiation": 210
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light salads",
+        "Fresh fruit",
+        "Soft cheeses",
+        "Cucumber sandwiches"
+      ],
+      "recommendedActivity": [
+        "Morning meditation",
+        "Garden tea party",
+        "Afternoon relaxation"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Liu Bao Hei Cha",
+    "originalName": "六堡茶 (Liùbǎo Chá)",
+    "type": "dark",
+    "origin": "Wuzhou, Guangxi, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "smooth",
+      "sweet",
+      "mineral",
+      "herbal"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "aged",
+      "compressed"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 85,
+      "latitude": 23.48,
+      "longitude": 111.3,
+      "temperature": 20.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Rich stews",
+        "Roasted meats",
+        "Spicy dishes",
+        "Fermented foods"
+      ],
+      "recommendedActivity": [
+        "After heavy meals",
+        "Cold weather warming",
+        "Meditative practice"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "An Hua Hei Cha",
+    "originalName": "安化黑茶 (Ānhuà Hēichá)",
+    "type": "dark",
+    "origin": "Anhua, Hunan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "sweet",
+      "smooth",
+      "woody",
+      "herbal"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 80,
+      "latitude": 28.38,
+      "longitude": 111.22,
+      "temperature": 18,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Fatty meats",
+        "Spicy cuisine",
+        "Dark breads",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Post-dinner relaxation",
+        "Cold evenings",
+        "Social gatherings"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Hu Nan Fu Zhuan Brick Tea",
+    "originalName": "茯砖茶 (Fúzhuān Chá)",
+    "type": "dark",
+    "origin": "Anhua, Hunan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "fungal",
+      "smooth",
+      "sweet",
+      "complex"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "brick compressed",
+      "golden flowers"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 82,
+      "latitude": 28.38,
+      "longitude": 111.22,
+      "temperature": 18.5,
+      "solarRadiation": 182
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Hearty soups",
+        "Roasted game",
+        "Spicy sausages",
+        "Dark rye bread"
+      ],
+      "recommendedActivity": [
+        "After large meals",
+        "Cold weather warming",
+        "Evening contemplation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Yellow Gold Buds Yellow Tea",
+    "originalName": "黄芽茶 (Huángyá Chá)",
+    "type": "yellow",
+    "origin": "Mengding Mountain, Sichuan, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "buttery",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "slow-dried"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 80,
+      "latitude": 30.12,
+      "longitude": 103.03,
+      "temperature": 15.5,
+      "solarRadiation": 178
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light cakes",
+        "Steamed vegetables",
+        "Fresh fruit",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Meditative practice",
+        "Quiet afternoons",
+        "Gentle socializing"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Huoshan Huang Ya Yellow Tea",
+    "originalName": "霍山黄芽 (Huòshān Huángyá)",
+    "type": "yellow",
+    "origin": "Huoshan, Anhui, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "chestnut",
+      "smooth",
+      "fresh"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "pan-fired"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 31.38,
+      "longitude": 116.32,
+      "temperature": 16,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Steamed fish",
+        "Fresh vegetables",
+        "Mild desserts"
+      ],
+      "recommendedActivity": [
+        "Afternoon relaxation",
+        "Casual reading",
+        "Quiet reflection"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Zheng He Gong Fu Black Tea",
+    "originalName": "政和工夫 (Zhènghé Gōngfū)",
+    "type": "red",
+    "origin": "Zhenghe, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "smooth"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "rolled",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "temperature": 18,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Chocolate desserts",
+        "Spiced cakes",
+        "Breakfast foods",
+        "Strong cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning routine",
+        "Afternoon pick-me-up",
+        "Social brunch"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Yunnan Dian Hong Black Tea",
+    "originalName": "滇红 (Diānhóng)",
+    "type": "red",
+    "origin": "Fengqing, Yunnan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "chocolate",
+      "spicy"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "curly leaves",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 1800,
+      "humidity": 75,
+      "latitude": 24.58,
+      "longitude": 99.9,
+      "temperature": 18.5,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Rich breakfast foods",
+        "Chocolate desserts",
+        "Spiced cakes",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning boost",
+        "Afternoon energy",
+        "Social gatherings"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Keemun Hao Ya Black Tea",
+    "originalName": "祁门香 (Qímén Xiāng)",
+    "type": "red",
+    "origin": "Qimen, Anhui, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "sweet",
+      "orchid",
+      "smooth"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "finely rolled",
+      "fermented"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 80,
+      "latitude": 29.87,
+      "longitude": 117.73,
+      "temperature": 16.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Dark chocolate",
+        "Rich desserts",
+        "Spiced nuts",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Afternoon tea",
+        "Creative work",
+        "Social events"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Bailin Gong Fu Black Tea",
+    "originalName": "白琳工夫 (Báilín Gōngfū)",
+    "type": "red",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "sweet",
+      "malty",
+      "honey",
+      "smooth",
+      "fruity"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "strip-style",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 80,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Breakfast foods",
+        "Sweet pastries",
+        "Rich desserts",
+        "Spiced cakes"
+      ],
+      "recommendedActivity": [
+        "Morning routine",
+        "Afternoon energy",
+        "Social tea time"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Jiukeng Zao Chun Green Tea",
+    "originalName": "九坑早春 (Jiǔkēng Zǎochūn)",
+    "type": "green",
+    "origin": "Jiukeng, Zhejiang, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "fresh",
+      "sweet",
+      "vegetal",
+      "clean",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "minimal oxidation",
+      "tightly rolled"
+    ],
+    "geography": {
+      "altitude": 400,
+      "humidity": 82,
+      "latitude": 30,
+      "longitude": 119.7,
+      "temperature": 16,
+      "solarRadiation": 192
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Steamed fish",
+        "Light salads",
+        "Fresh vegetables",
+        "Rice dishes"
+      ],
+      "recommendedActivity": [
+        "Morning meditation",
+        "Work focus",
+        "After-lunch refreshment"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Mei Zhan Oolong",
+    "originalName": "梅占 (Méizhàn)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "floral",
+      "fruity",
+      "sweet",
+      "aromatic",
+      "complex"
+    ],
+    "processingMethods": [
+      "medium oxidation",
+      "ball-rolled",
+      "roasted"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 25.06,
+      "longitude": 118.18,
+      "temperature": 19,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh fruit",
+        "Unspiced seafood",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Social gatherings",
+        "Creative work",
+        "Afternoon tea ceremony"
+      ],
+      "timeOfDay": [
+        "Late Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Zhong Ping Oolong",
+    "originalName": "中平乌龙 (Zhōngpíng Wūlóng)",
+    "type": "oolong",
+    "origin": "Taiwan",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "creamy",
+      "floral",
+      "buttery",
+      "smooth",
+      "lightly sweet"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "ball-rolled",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 82,
+      "latitude": 23.7,
+      "longitude": 120.9,
+      "temperature": 19,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Steamed buns",
+        "Fresh fruit",
+        "Vanilla cake"
+      ],
+      "recommendedActivity": [
+        "Casual socializing",
+        "Afternoon relaxation",
+        "Tea tasting"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Da Hong Pao Oolong (Classic)",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "mineral",
+      "roasty",
+      "dark chocolate",
+      "orchid",
+      "caramel"
+    ],
+    "processingMethods": [
+      "heavy roast",
+      "high oxidation",
+      "strip-style"
+    ],
+    "geography": {
+      "altitude": 650,
+      "humidity": 82,
+      "latitude": 27.68,
+      "longitude": 117.98,
+      "temperature": 18.2,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted nuts",
+        "Dark chocolate",
+        "Game meats",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Focused study",
+        "Deep conversation",
+        "After a heavy meal"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon",
+        "Early Evening"
+      ]
+    }
+  },
+  {
+    "name": "Tie Guan Yin Oolong (Modern Light)",
+    "originalName": "铁观音 (Tiěguānyīn)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "floral",
+      "creamy",
+      "orchid",
+      "buttery",
+      "lightly sweet"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "light roast",
+      "ball-rolled"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 25.13,
+      "longitude": 118.18,
+      "temperature": 19.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh fruit",
+        "Unspiced seafood",
+        "White chocolate"
+      ],
+      "recommendedActivity": [
+        "Social gathering",
+        "Creative work",
+        "Afternoon tea ceremony"
+      ],
+      "timeOfDay": [
+        "Late Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Guei Fei Oolong",
+    "originalName": "贵妃乌龙 (Guìfēi Wūlóng)",
+    "type": "oolong",
+    "origin": "Nantou, Taiwan",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "ripe fruit",
+      "cinnamon",
+      "sweet",
+      "complex"
+    ],
+    "processingMethods": [
+      "bug-bitten leaves",
+      "medium oxidation",
+      "light roast"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 80,
+      "latitude": 23.91,
+      "longitude": 120.88,
+      "temperature": 20,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Summer",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Fruit desserts",
+        "Spiced cakes",
+        "Soft cheeses",
+        "Roasted poultry"
+      ],
+      "recommendedActivity": [
+        "Romantic evenings",
+        "Art appreciation",
+        "Musical performances",
+        "Sunset contemplation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Early Evening"
+      ]
+    }
+  },
+  {
+    "name": "Mi Lan Xiang Dan Cong",
+    "originalName": "蜜兰香单丛 (Mìlán Xiāng Dāncóng)",
+    "type": "oolong",
+    "origin": "Fenghuang Mountain, Guangdong, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey-orchid",
+      "sweet",
+      "fruity",
+      "complex",
+      "lingering"
+    ],
+    "processingMethods": [
+      "traditional roasting",
+      "strip-style",
+      "medium oxidation"
+    ],
+    "geography": {
+      "altitude": 1100,
+      "humidity": 78,
+      "latitude": 23.92,
+      "longitude": 116.63,
+      "temperature": 19.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Honey-glazed meats",
+        "Almond cakes",
+        "Fresh lychee",
+        "Light pastries"
+      ],
+      "recommendedActivity": [
+        "Tea ceremony",
+        "Poetry reading",
+        "Calligraphy practice",
+        "Morning inspiration"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Bao Zhong Oolong",
+    "originalName": "包种茶 (Bāozhǒng Chá)",
+    "type": "oolong",
+    "origin": "Pinglin, Taiwan",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "floral",
+      "fresh",
+      "grassy",
+      "delicate",
+      "lightly sweet"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "strip-style",
+      "minimal roast"
+    ],
+    "geography": {
+      "altitude": 400,
+      "humidity": 85,
+      "latitude": 24.93,
+      "longitude": 121.73,
+      "temperature": 21,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Steamed vegetables",
+        "Fresh fruit",
+        "Rice cakes"
+      ],
+      "recommendedActivity": [
+        "Afternoon relaxation",
+        "Garden tea",
+        "Casual conversation",
+        "Light reading"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Dong Ding Oolong",
+    "originalName": "冻顶乌龙 (Dòngdǐng Wūlóng)",
+    "type": "oolong",
+    "origin": "Lugu, Taiwan",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "toasty",
+      "orchid",
+      "sweet",
+      "creamy",
+      "mineral"
+    ],
+    "processingMethods": [
+      "medium oxidation",
+      "traditional roast",
+      "ball-rolled"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 82,
+      "latitude": 23.75,
+      "longitude": 120.75,
+      "temperature": 18.5,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted nuts",
+        "Mild cheeses",
+        "Steamed buns",
+        "Light desserts"
+      ],
+      "recommendedActivity": [
+        "Afternoon tea ceremony",
+        "Mountain retreat",
+        "Focused work",
+        "Cool weather contemplation"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Huang Jin Gui Oolong",
+    "originalName": "黄金桂 (Huángjīnguì)",
+    "type": "oolong",
+    "origin": "Anxi, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "osmanthus",
+      "fruity",
+      "bright",
+      "aromatic",
+      "lightly sweet"
+    ],
+    "processingMethods": [
+      "light oxidation",
+      "light roast",
+      "ball-rolled"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 78,
+      "latitude": 25.06,
+      "longitude": 118.18,
+      "temperature": 19.5,
+      "solarRadiation": 192
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "energizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh peaches",
+        "Cucumber sandwiches",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning refreshment",
+        "Social gatherings",
+        "Creative brainstorming",
+        "Afternoon pick-me-up"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Shui Xian Oolong",
+    "originalName": "水仙 (Shuǐxiān)",
+    "type": "oolong",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "woody",
+      "mineral",
+      "orchid",
+      "toasty",
+      "smooth"
+    ],
+    "processingMethods": [
+      "medium-heavy oxidation",
+      "roasted",
+      "strip-style"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 82,
+      "latitude": 27.68,
+      "longitude": 117.98,
+      "temperature": 18.5,
+      "solarRadiation": 178
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted vegetables",
+        "Mushroom dishes",
+        "Dark chocolate",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Evening relaxation",
+        "Reading philosophy",
+        "Post-dinner conversation",
+        "Cold weather warming"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Lu Shan Yun Wu Green Tea",
+    "originalName": "庐山云雾 (Lúshān Yúnwù)",
+    "type": "green",
+    "origin": "Mount Lu, Jiangxi, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "fresh",
+      "grassy",
+      "sweet",
+      "clean",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "curly leaves",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 85,
+      "latitude": 29.55,
+      "longitude": 115.98,
+      "temperature": 15,
+      "solarRadiation": 170
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Steamed fish",
+        "Rice porridge",
+        "Fresh spring rolls",
+        "Light soups"
+      ],
+      "recommendedActivity": [
+        "Morning meditation",
+        "Study sessions",
+        "Mountain hiking break",
+        "Calligraphy practice"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "En Shi Yu Lu Green Tea",
+    "originalName": "恩施玉露 (Ēnshī Yùlù)",
+    "type": "green",
+    "origin": "Enshi, Hubei, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "sweet",
+      "fresh",
+      "vegetal",
+      "clean",
+      "umami"
+    ],
+    "processingMethods": [
+      "steamed",
+      "needle-shaped",
+      "shade-grown"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 80,
+      "latitude": 30.3,
+      "longitude": 109.48,
+      "temperature": 16.5,
+      "solarRadiation": 175
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Sashimi",
+        "Steamed vegetables",
+        "Tofu dishes",
+        "Light seafood"
+      ],
+      "recommendedActivity": [
+        "Zen meditation",
+        "Tea ceremony",
+        "Quiet contemplation",
+        "Afternoon refreshment"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Mao Feng Green Tea",
+    "originalName": "毛峰 (Máofēng)",
+    "type": "green",
+    "origin": "Huangshan, Anhui, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "delicate",
+      "smooth"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "fuzzy buds",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 82,
+      "latitude": 30.13,
+      "longitude": 118.17,
+      "temperature": 16,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Fresh vegetables",
+        "White fish",
+        "Mild desserts"
+      ],
+      "recommendedActivity": [
+        "Mountain viewing",
+        "Poetry writing",
+        "Gentle socializing",
+        "Afternoon tea"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Gunpowder Green Tea",
+    "originalName": "珠茶 (Zhū Chá)",
+    "type": "green",
+    "origin": "Zhejiang, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "smoky",
+      "strong",
+      "slightly bitter",
+      "grassy",
+      "robust"
+    ],
+    "processingMethods": [
+      "steamed",
+      "rolled pellets",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 400,
+      "humidity": 78,
+      "latitude": 29.18,
+      "longitude": 120.08,
+      "temperature": 17.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Any season"
+      ],
+      "foodPairing": [
+        "Spicy foods",
+        "Moroccan cuisine",
+        "Hearty stews",
+        "Strong cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning wake-up",
+        "Work focus",
+        "After heavy meals",
+        "Cool weather warming"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Liu An Gua Pian Green Tea",
+    "originalName": "六安瓜片 (Lù'ān Guāpiàn)",
+    "type": "green",
+    "origin": "Lu'an, Anhui, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "nutty",
+      "sweet",
+      "smooth",
+      "fresh",
+      "clean"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "flattened leaves",
+      "no buds"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 78,
+      "latitude": 31.75,
+      "longitude": 116.5,
+      "temperature": 16.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "energizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Nuts and seeds",
+        "Steamed chicken",
+        "Rice dishes",
+        "Light desserts"
+      ],
+      "recommendedActivity": [
+        "Work focus",
+        "Study groups",
+        "Morning routine",
+        "Afternoon refreshment"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Tian Mu Qing Ding Green Tea",
+    "originalName": "天目青顶 (Tiānmù Qīngdǐng)",
+    "type": "green",
+    "origin": "Tianmu Mountain, Zhejiang, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "fresh",
+      "grassy",
+      "delicate",
+      "clean"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "flat leaves",
+      "minimal oxidation"
+    ],
+    "geography": {
+      "altitude": 1000,
+      "humidity": 85,
+      "latitude": 30.34,
+      "longitude": 119.45,
+      "temperature": 15.5,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "focusing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Steamed fish",
+        "Fresh vegetables",
+        "Light soups",
+        "Rice dishes"
+      ],
+      "recommendedActivity": [
+        "Mountain meditation",
+        "Tea ceremony",
+        "Quiet reading",
+        "Nature appreciation"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Gong Mei White Tea",
+    "originalName": "贡眉 (Gòngméi)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "fruity",
+      "sweet",
+      "mellow",
+      "honey",
+      "smooth"
+    ],
+    "processingMethods": [
+      "sun-withered",
+      "minimal processing",
+      "mature leaves"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 80,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "restorative",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Summer",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light fruit salads",
+        "Mild cheeses",
+        "Steamed buns",
+        "Honey cakes"
+      ],
+      "recommendedActivity": [
+        "Afternoon relaxation",
+        "Recovery days",
+        "Gentle social visits",
+        "Quiet reflection"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Shou Mei White Tea",
+    "originalName": "寿眉 (Shòuméi)",
+    "type": "white",
+    "origin": "Zhenghe, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "sweet",
+      "woodsy",
+      "honey",
+      "full-bodied"
+    ],
+    "processingMethods": [
+      "withered",
+      "slightly oxidized",
+      "mature leaves"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "temperature": 18,
+      "solarRadiation": 192
+    },
+    "expectedEffects": {
+      "dominant": "comforting",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Roasted root vegetables",
+        "Mushroom dishes",
+        "Aged cheeses",
+        "Nutty desserts"
+      ],
+      "recommendedActivity": [
+        "Cozy evenings",
+        "Reading by the fire",
+        "After-dinner relaxation",
+        "Cold weather contemplation"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Moonlight White Tea",
+    "originalName": "月光白 (Yuèguāng Bái)",
+    "type": "white",
+    "origin": "Yunnan, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "muscatel",
+      "sweet",
+      "smooth",
+      "fruity"
+    ],
+    "processingMethods": [
+      "indoor withered",
+      "minimal oxidation",
+      "buds and leaves"
+    ],
+    "geography": {
+      "altitude": 1600,
+      "humidity": 75,
+      "latitude": 22,
+      "longitude": 100,
+      "temperature": 19,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "restorative"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Fresh berries",
+        "Light pastries",
+        "Goat cheese",
+        "Melon"
+      ],
+      "recommendedActivity": [
+        "Evening wind-down",
+        "Stargazing",
+        "Gentle conversation",
+        "Moon viewing"
+      ],
+      "timeOfDay": [
+        "Late Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Aged White Tea Cake",
+    "originalName": "老白茶 (Lǎo Báichá)",
+    "type": "white",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "herbal",
+      "sweet",
+      "medicinal",
+      "honey",
+      "smooth"
+    ],
+    "processingMethods": [
+      "compressed",
+      "aged",
+      "slow-oxidized"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 78,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "restorative",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Dried fruits",
+        "Nut cakes",
+        "Herbal dishes",
+        "Light soups"
+      ],
+      "recommendedActivity": [
+        "Cold weather contemplation",
+        "Recovery from fatigue",
+        "Evening tea ceremony",
+        "Medicinal use"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "White Darjeeling (Silver Tips)",
+    "originalName": "दार्जिलिंग व्हाइट टी (Darjiling White Tea)",
+    "type": "white",
+    "origin": "Darjeeling, India",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "muscatel",
+      "sweet",
+      "floral",
+      "delicate",
+      "fresh"
+    ],
+    "processingMethods": [
+      "withered",
+      "minimal processing",
+      "buds only"
+    ],
+    "geography": {
+      "altitude": 2000,
+      "humidity": 70,
+      "latitude": 27.04,
+      "longitude": 88.26,
+      "temperature": 15,
+      "solarRadiation": 210
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Summer"
+      ],
+      "foodPairing": [
+        "Light salads",
+        "Fresh fruit",
+        "Soft cheeses",
+        "Cucumber sandwiches"
+      ],
+      "recommendedActivity": [
+        "Morning meditation",
+        "Garden tea party",
+        "Afternoon relaxation",
+        "Mountain viewing"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Liu Bao Hei Cha",
+    "originalName": "六堡茶 (Liùbǎo Chá)",
+    "type": "dark",
+    "origin": "Wuzhou, Guangxi, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "smooth",
+      "sweet",
+      "mineral",
+      "herbal"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "aged",
+      "compressed"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 85,
+      "latitude": 23.48,
+      "longitude": 111.3,
+      "temperature": 20.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Rich stews",
+        "Roasted meats",
+        "Spicy dishes",
+        "Fermented foods"
+      ],
+      "recommendedActivity": [
+        "After heavy meals",
+        "Cold weather warming",
+        "Meditative practice",
+        "Digestive aid"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "An Hua Hei Cha",
+    "originalName": "安化黑茶 (Ānhuà Hēichá)",
+    "type": "dark",
+    "origin": "Anhua, Hunan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "sweet",
+      "smooth",
+      "woody",
+      "herbal"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 80,
+      "latitude": 28.38,
+      "longitude": 111.22,
+      "temperature": 18,
+      "solarRadiation": 180
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Fatty meats",
+        "Spicy cuisine",
+        "Dark breads",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Post-dinner relaxation",
+        "Cold evenings",
+        "Social gatherings",
+        "Traditional medicine practice"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Hu Nan Fu Zhuan Brick Tea",
+    "originalName": "茯砖茶 (Fúzhuān Chá)",
+    "type": "dark",
+    "origin": "Anhua, Hunan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "fungal",
+      "smooth",
+      "sweet",
+      "complex"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "brick compressed",
+      "golden flowers"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 82,
+      "latitude": 28.38,
+      "longitude": 111.22,
+      "temperature": 18.5,
+      "solarRadiation": 182
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Hearty soups",
+        "Roasted game",
+        "Spicy sausages",
+        "Dark rye bread"
+      ],
+      "recommendedActivity": [
+        "After large meals",
+        "Cold weather warming",
+        "Evening contemplation",
+        "Traditional brewing"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Qing Zhuan Hei Cha",
+    "originalName": "青砖茶 (Qīngzhuān Chá)",
+    "type": "dark",
+    "origin": "Hubei, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "earthy",
+      "smoky",
+      "smooth",
+      "sweet",
+      "robust"
+    ],
+    "processingMethods": [
+      "pile-fermented",
+      "brick compressed",
+      "aged"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 78,
+      "latitude": 30.57,
+      "longitude": 114.27,
+      "temperature": 17.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "grounding",
+      "supporting": "grounding"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Mongolian hot pot",
+        "Grilled meats",
+        "Strong cheeses",
+        "Hearty breads"
+      ],
+      "recommendedActivity": [
+        "Nomadic-style brewing",
+        "Cold weather activities",
+        "After feasts",
+        "Traditional ceremonies"
+      ],
+      "timeOfDay": [
+        "Afternoon",
+        "Evening"
+      ]
+    }
+  },
+  {
+    "name": "Yellow Gold Buds Yellow Tea",
+    "originalName": "黄芽茶 (Huángyá Chá)",
+    "type": "yellow",
+    "origin": "Mengding Mountain, Sichuan, China",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "buttery",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "slow-dried"
+    ],
+    "geography": {
+      "altitude": 1200,
+      "humidity": 80,
+      "latitude": 30.12,
+      "longitude": 103.03,
+      "temperature": 15.5,
+      "solarRadiation": 178
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring",
+        "Autumn"
+      ],
+      "foodPairing": [
+        "Light cakes",
+        "Steamed vegetables",
+        "Fresh fruit",
+        "Mild cheeses"
+      ],
+      "recommendedActivity": [
+        "Meditative practice",
+        "Quiet afternoons",
+        "Gentle socializing",
+        "Imperial-style tea ceremony"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Mo Gan Huang Ya Yellow Tea",
+    "originalName": "莫干黄芽 (Mògān Huángyá)",
+    "type": "yellow",
+    "origin": "Mogan Mountain, Zhejiang, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "fresh",
+      "delicate",
+      "smooth"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "pan-fired"
+    ],
+    "geography": {
+      "altitude": 700,
+      "humidity": 82,
+      "latitude": 30.6,
+      "longitude": 119.87,
+      "temperature": 16.5,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "calming",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Steamed fish",
+        "Fresh vegetables",
+        "Mild desserts"
+      ],
+      "recommendedActivity": [
+        "Mountain retreat",
+        "Afternoon relaxation",
+        "Casual reading",
+        "Quiet reflection"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Wenzhou Huang Tang Yellow Tea",
+    "originalName": "温州黄汤 (Wēnzhōu Huángtāng)",
+    "type": "yellow",
+    "origin": "Wenzhou, Zhejiang, China",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "sweet",
+      "mellow",
+      "smooth",
+      "fresh",
+      "delicate"
+    ],
+    "processingMethods": [
+      "smothered",
+      "yellowed",
+      "multiple firings"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 80,
+      "latitude": 28.02,
+      "longitude": 120.65,
+      "temperature": 17,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "harmonizing",
+      "supporting": "calming"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Spring"
+      ],
+      "foodPairing": [
+        "Light seafood",
+        "Steamed vegetables",
+        "Rice cakes",
+        "Mild desserts"
+      ],
+      "recommendedActivity": [
+        "Coastal tea ceremony",
+        "Afternoon relaxation",
+        "Gentle conversation",
+        "Tea appreciation"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Zheng He Gong Fu Black Tea",
+    "originalName": "政和工夫 (Zhènghé Gōngfū)",
+    "type": "red",
+    "origin": "Zhenghe, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "smooth"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "rolled",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 78,
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "temperature": 18,
+      "solarRadiation": 190
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Chocolate desserts",
+        "Spiced cakes",
+        "Breakfast foods",
+        "Strong cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning routine",
+        "Afternoon pick-me-up",
+        "Social brunch",
+        "Cool weather warming"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Yunnan Dian Hong Black Tea",
+    "originalName": "滇红 (Diānhóng)",
+    "type": "red",
+    "origin": "Fengqing, Yunnan, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "chocolate",
+      "spicy"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "curly leaves",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 1800,
+      "humidity": 75,
+      "latitude": 24.58,
+      "longitude": 99.9,
+      "temperature": 18.5,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Rich breakfast foods",
+        "Chocolate desserts",
+        "Spiced cakes",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Morning boost",
+        "Afternoon energy",
+        "Social gatherings",
+        "Mountain hiking"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Keemun Hao Ya Black Tea",
+    "originalName": "祁门香 (Qímén Xiāng)",
+    "type": "red",
+    "origin": "Qimen, Anhui, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "sweet",
+      "orchid",
+      "smooth"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "finely rolled",
+      "fermented"
+    ],
+    "geography": {
+      "altitude": 600,
+      "humidity": 80,
+      "latitude": 29.87,
+      "longitude": 117.73,
+      "temperature": 16.5,
+      "solarRadiation": 188
+    },
+    "expectedEffects": {
+      "dominant": "focusing",
+      "supporting": "elevating"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Dark chocolate",
+        "Rich desserts",
+        "Spiced nuts",
+        "Aged cheeses"
+      ],
+      "recommendedActivity": [
+        "Afternoon tea",
+        "Creative work",
+        "Social events",
+        "English-style tea service"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Bailin Gong Fu Black Tea",
+    "originalName": "白琳工夫 (Báilín Gōngfū)",
+    "type": "red",
+    "origin": "Fuding, Fujian, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "sweet",
+      "malty",
+      "honey",
+      "smooth",
+      "fruity"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "strip-style",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 500,
+      "humidity": 80,
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Breakfast foods",
+        "Sweet pastries",
+        "Rich desserts",
+        "Spiced cakes"
+      ],
+      "recommendedActivity": [
+        "Morning routine",
+        "Afternoon energy",
+        "Social tea time",
+        "Traditional Fujian tea service"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Ying De Hong Black Tea",
+    "originalName": "英德红茶 (Yīngdé Hóngchá)",
+    "type": "red",
+    "origin": "Yingde, Guangdong, China",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 3.5,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "bold"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "CTC processed",
+      "baked"
+    ],
+    "geography": {
+      "altitude": 300,
+      "humidity": 78,
+      "latitude": 24.18,
+      "longitude": 113.4,
+      "temperature": 20.5,
+      "solarRadiation": 200
+    },
+    "expectedEffects": {
+      "dominant": "energizing",
+      "supporting": "comforting"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Full breakfast",
+        "Rich desserts",
+        "Strong cheeses",
+        "Spiced foods"
+      ],
+      "recommendedActivity": [
+        "Morning boost",
+        "Afternoon pick-me-up",
+        "Social gatherings",
+        "British-style tea"
+      ],
+      "timeOfDay": [
+        "Morning",
+        "Early Afternoon"
+      ]
+    }
+  },
+  {
+    "name": "Jin Jun Mei Black Tea",
+    "originalName": "金骏眉 (Jīnjùnméi)",
+    "type": "red",
+    "origin": "Wuyi Mountains, Fujian, China",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "fruity",
+      "delicate",
+      "complex"
+    ],
+    "processingMethods": [
+      "fully oxidized",
+      "golden buds",
+      "smoked"
+    ],
+    "geography": {
+      "altitude": 800,
+      "humidity": 82,
+      "latitude": 27.68,
+      "longitude": 117.98,
+      "temperature": 18,
+      "solarRadiation": 185
+    },
+    "expectedEffects": {
+      "dominant": "elevating",
+      "supporting": "harmonizing"
+    },
+    "recommendedContext": {
+      "drinkingSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "foodPairing": [
+        "Light pastries",
+        "Fresh fruit",
+        "Mild cheeses",
+        "Honey cakes"
+      ],
+      "recommendedActivity": [
+        "Special occasions",
+        "Tea tasting",
+        "Afternoon luxury",
+        "Celebratory moments"
+      ],
+      "timeOfDay": [
+        "Afternoon"
+      ]
+    }
+  }
+]
