@@ -213,6 +213,42 @@
       "type": ["string", "null"],
       "description": "Additional notes or comments",
       "maxLength": 1000
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for easy categorization and search",
+      "examples": [["morning", "energizing"], ["evening", "calming"]]
+    },
+    "bestPairedFood": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Foods that pair well with this tea"
+    },
+    "optimalTemperature": {
+      "type": ["number", "null"],
+      "minimum": 40,
+      "maximum": 100,
+      "description": "Optimal steeping temperature in Celsius"
+    },
+    "steepTime": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Recommended steeping time in seconds"
+    },
+    "steepCount": {
+      "type": ["number", "null"],
+      "minimum": 1,
+      "description": "Typical number of infusions possible"
+    },
+    "preparation": {
+      "type": ["string", "null"],
+      "enum": ["steeped", "whisked", "decocted", null],
+      "description": "Special preparation method"
     }
   },
   "additionalProperties": false
