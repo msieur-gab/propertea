@@ -42,6 +42,9 @@ import ConfidenceCalculator, {
 // Import comprehensive effect scorer
 import { ComprehensiveEffectScorer } from '../models/ComprehensiveEffectScorer.js';
 
+// Import Cha Qi matcher for tea drunk evaluation
+import ChaQiMatcher from './matchers/ChaQiMatcher.js';
+
 // ============================================================================
 // COMPLEMENTARY EFFECTS (for selecting supporting effect)
 // ============================================================================
@@ -128,6 +131,13 @@ export class EffectService {
       // Identify data gaps for transparency
       const dataGaps = identifyDataGaps(teaModel);
 
+      // Assess Cha Qi (tea drunk) potential
+      const effectAnalysis = {
+        expectedEffects: { dominant, supporting, tertiary },
+        allScores: comprehensiveResult.allScores
+      };
+      const chaQiAssessment = ChaQiMatcher.assessChaQi(teaModel, effectAnalysis);
+
       return {
         description,
         expectedEffects: {
@@ -137,6 +147,7 @@ export class EffectService {
         },
         reasoning,
         allScores: allEffectScores,
+        chaQi: chaQiAssessment,
         confidence: {
           overall: Math.round(
             Object.values(allEffectScores).reduce((sum, s) => sum + (s.confidence?.overall || 50), 0) /

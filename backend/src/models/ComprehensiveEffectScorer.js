@@ -1,197 +1,183 @@
 /**
- * ComprehensiveEffectScorer.js - Multi-factor effect scoring system
+ * ComprehensiveEffectScorer.js - Multi-factor effect scoring with 8 core effects
  *
- * Instead of isolated tea-type rules, this scorer evaluates ALL contributors:
- * - Tea type base effects
- * - Processing methods and oxidation/roasting levels
- * - Flavor profiles and characteristics
- * - Geographic/terroir factors
- * - Compound balance (caffeine/L-theanine)
+ * The 8 Core Effects (from expert Chinese tea perspective):
+ * 1. Clarifying - Mental focus, sharpness
+ * 2. Invigorating - Awakening, vibrant energy (提神 - tí shén)
+ * 3. Calming - Tranquility, peace
+ * 4. Centering - Balance, presence, grounding (中心 - zhōng xīn)
+ * 5. Harmonizing - Internal balance, integration (和 - hé)
+ * 6. Uplifting - Emotional-spiritual lightness (輕揚 - qīng yáng)
+ * 7. Releasing - Expansive energy, stagnation expulsion (發散 - fā sàn)
+ * 8. Nourishing - Deep replenishing sustenance (滋養 - zī yǎng)
  *
- * Each contributor adds points to an effect pool. The top 2-3 effects
- * are selected based on total accumulated points.
+ * Scoring Model:
+ * - All factors (tea type, processing, flavor, geography, compounds) contribute to ALL effects
+ * - Weighted accumulation determines which effects dominate
+ * - Geography weights (1.5-1.8x) reflect impact on caffeine/L-theanine development
  */
 
 export class ComprehensiveEffectScorer {
-  // All possible effects
+  // The 8 Core Effects
   static EFFECTS = [
     'clarifying',
-    'refreshing',
-    'energizing',
+    'invigorating',
     'calming',
+    'centering',
     'harmonizing',
-    'grounding',
-    'elevating',
-    'comforting',
-    'warming',
-    'aromatic',
-    'relaxing',
-    'mentally-stimulating'
+    'uplifting',
+    'releasing',
+    'nourishing'
   ];
 
   // TEA TYPE CONTRIBUTIONS
+  // Each tea type has intrinsic effect profile
   static TEA_TYPE_EFFECTS = {
     'green': {
-      clarifying: 5,
-      refreshing: 4,
-      energizing: 3,
-      elevating: 2,
-      calming: 1
+      clarifying: 5,      // Fresh, bright mind
+      invigorating: 3,    // Clean awakening
+      uplifting: 2,       // Elevates mood
+      refreshing: 2,      // Cooling, revitalizing (expressed as clarifying)
+      calming: 1          // Some L-theanine
     },
     'white': {
-      calming: 4,
-      refreshing: 3,
-      harmonizing: 2,
-      elevating: 1,
-      clarifying: 1
+      calming: 4,         // Higher L-theanine, delicate
+      uplifting: 2,       // Subtle emotional lift
+      clarifying: 1,      // Gentle focus
+      centering: 1,       // Grounding nature
+      nourishing: 1       // Gentle sustenance
+    },
+    'yellow': {
+      calming: 3,         // Gentle tranquility
+      uplifting: 2,       // Refined joy
+      clarifying: 2,      // Light mental clarity
+      nourishing: 2,      // Subtle sustenance
+      centering: 1        // Balanced presence
     },
     'oolong': {
-      harmonizing: 3,  // Reduced - oolongs vary widely by roasting
-      aromatic: 4,     // Stable - most oolongs have aromatic notes
-      warming: 2,      // Will increase with roasting
-      energizing: 2,   // Lightlly roasted oolongs lean energizing
-      elevating: 2
-    },
-    'black': {
-      energizing: 5,
-      clarifying: 3,
-      warming: 2,
-      comforting: 1,
-      aromatic: 1
+      harmonizing: 3,     // Oolongs naturally balance
+      invigorating: 3,    // Clean energy from partial oxidation
+      uplifting: 3,       // Floral varieties lift spirit
+      clarifying: 2,      // Mental clarity
+      centering: 2        // Brings to center
     },
     'puerh': {
-      grounding: 5,
-      comforting: 4,
-      warming: 3,
-      harmonizing: 2,
-      digestive: 1
+      nourishing: 5,      // Deep replenishment (especially aged)
+      centering: 3,       // Grounding, present-moment focus
+      releasing: 2,       // Moves stagnant energy
+      harmonizing: 2,     // Brings balance
+      calming: 2          // Settles mind
     },
     'dark': {
-      warming: 4,
-      grounding: 3,
-      comforting: 3,
-      aromatic: 2,
-      energizing: 1
+      releasing: 4,       // Moving, warming energy
+      nourishing: 3,      // Sustained warmth and nourishment
+      centering: 3,       // Grounding effect
+      invigorating: 2,    // Gentle awakening
+      harmonizing: 1      // Smooth, integrated feel
     },
-    'herbal': {
-      calming: 4,
-      relaxing: 3,
-      comforting: 2,
-      harmonizing: 1
+    'black': {
+      invigorating: 5,    // Strong awakening energy
+      clarifying: 3,      // Mental sharpness
+      uplifting: 2,       // Mood enhancement
+      releasing: 1,       // Some energy movement
+      centering: 1        // Base stability
     }
   };
 
   // PROCESSING CONTRIBUTIONS
   static PROCESSING_EFFECTS = {
-    // Oxidation levels
+    // Oxidation levels (0-5 scale, where 5 = 90-100% oxidized)
     oxidation: {
-      0: { calming: 2, refreshing: 1 },           // 0-10%
-      1: { calming: 1, refreshing: 2 },           // 10-30%
-      2: { harmonizing: 2, elevating: 1 },        // 30-50%
-      3: { warming: 2, energizing: 1 },           // 50-70%
-      4: { energizing: 3, warming: 2 },           // 70-90%
-      5: { energizing: 2, warming: 3 }            // 90-100%
+      0: { calming: 2, clarifying: 1 },           // 0-10% - very fresh
+      1: { calming: 1, clarifying: 2 },           // 10-30% - slightly oxidized
+      2: { harmonizing: 2, uplifting: 1 },        // 30-50% - moderate oxidation
+      3: { releasing: 2, invigorating: 1 },       // 50-70% - increasing oxidation
+      4: { invigorating: 3, releasing: 2 },       // 70-90% - highly oxidized
+      5: { invigorating: 2, releasing: 3 }        // 90-100% - fully oxidized
     },
-    // Roasting levels
+    // Roasting levels - affects energetic properties
     roast: {
-      'none': { refreshing: 2, elevating: 1 },
-      'light': { refreshing: 2, clarifying: 1 },
-      'medium': { warming: 2, aromatic: 2 },
-      'heavy': { warming: 3, aromatic: 3, comforting: 1 },
-      'charcoal': { warming: 4, grounding: 2, aromatic: 2 }
+      'none': { clarifying: 2, uplifting: 1 },
+      'light': { clarifying: 2, invigorating: 1 },
+      'medium': { releasing: 2, nourishing: 2 },
+      'heavy': { releasing: 3, nourishing: 2, centering: 1 },
+      'charcoal': { releasing: 4, centering: 2, nourishing: 1 }
     },
-    // Processing methods
+    // Processing methods - specific techniques
     methods: {
-      'steaming': { refreshing: 2, clarifying: 1 },
-      'pan-firing': { warming: 2, aromatic: 1 },
-      'roasting': { warming: 3, aromatic: 3 },
-      'rolling': { harmonizing: 2, elevating: 1 },
-      'oxidation': { energizing: 2, warming: 1 },
-      'fermentation': { grounding: 3, comforting: 2 },
-      'piling': { grounding: 3, warming: 2 },
-      'withering': { calming: 1, refreshing: 1 },
-      'shade-grown': { calming: 2, elevating: 1 }
+      'steaming': { clarifying: 2, calming: 1 },
+      'pan-firing': { releasing: 2, uplifting: 1 },
+      'roasting': { releasing: 3, nourishing: 2 },
+      'rolling': { harmonizing: 2, uplifting: 1 },
+      'oxidation': { invigorating: 2, releasing: 1 },
+      'fermentation': { centering: 3, nourishing: 2 },
+      'piling': { centering: 3, releasing: 2 },
+      'withering': { calming: 1, clarifying: 1 },
+      'shade-grown': { calming: 2, uplifting: 1 }
     }
   };
 
   // FLAVOR CONTRIBUTIONS
+  // Flavors carry energetic properties (from expert assessment)
   static FLAVOR_EFFECTS = {
-    'floral': { harmonizing: 3, elevating: 2, aromatic: 2 },
-    'fruity': { refreshing: 3, elevating: 2, energizing: 1 },
-    'earthy': { grounding: 4, comforting: 3, warming: 1 },
-    'woody': { warming: 3, grounding: 2, aromatic: 2 },
-    'sweet': { comforting: 3, calming: 1, harmonizing: 1 },
-    'buttery': { comforting: 2, harmonizing: 2, warming: 1 },
-    'creamy': { comforting: 3, harmonizing: 2, calming: 1 },
-    'mineral': { clarifying: 3, grounding: 2, energizing: 1 },
-    'vegetal': { refreshing: 2, clarifying: 1, calming: 1 },
-    'grassy': { refreshing: 3, clarifying: 2, energizing: 1 },
-    'fresh': { refreshing: 3, clarifying: 1, energizing: 1 },
-    'honey': { comforting: 2, harmonizing: 2, elevating: 1 },
-    'caramel': { comforting: 3, warming: 2, grounding: 1 },
-    'chocolate': { comforting: 3, warming: 2, grounding: 1 },
-    'roasty': { warming: 3, comforting: 2, aromatic: 1 },
-    'orchid': { aromatic: 3, harmonizing: 2, elevating: 2 },
-    'nutty': { comforting: 2, warming: 1, grounding: 1 },
-    'spicy': { warming: 3, energizing: 2, aromatic: 1 },
-    'citrus': { refreshing: 2, elevating: 2, energizing: 1 },
-    'herbal': { calming: 2, harmonizing: 1, refreshing: 1 }
+    'floral': { harmonizing: 3, uplifting: 2, centering: 1 },
+    'fruity': { uplifting: 3, clarifying: 1, invigorating: 1 },
+    'earthy': { centering: 4, nourishing: 3, calming: 1 },
+    'woody': { releasing: 3, centering: 2, nourishing: 1 },
+    'sweet': { nourishing: 3, calming: 1, harmonizing: 1 },
+    'buttery': { nourishing: 2, harmonizing: 2, calming: 1 },
+    'creamy': { nourishing: 3, harmonizing: 2, calming: 1 },
+    'mineral': { clarifying: 3, centering: 2, invigorating: 1 },
+    'vegetal': { clarifying: 2, calming: 1, uplifting: 1 },
+    'grassy': { clarifying: 3, invigorating: 1, uplifting: 1 },
+    'fresh': { clarifying: 2, invigorating: 1, uplifting: 1 },
+    'honey': { nourishing: 2, harmonizing: 2, uplifting: 1 },
+    'caramel': { nourishing: 3, releasing: 1, centering: 1 },
+    'chocolate': { nourishing: 3, releasing: 1, centering: 1 },
+    'roasty': { releasing: 3, nourishing: 2, invigorating: 1 },
+    'orchid': { uplifting: 3, harmonizing: 2, clarifying: 1 },
+    'nutty': { nourishing: 2, centering: 1, releasing: 1 },
+    'spicy': { releasing: 3, invigorating: 2, clarifying: 1 },
+    'citrus': { uplifting: 2, clarifying: 2, invigorating: 1 },
+    'herbal': { calming: 2, harmonizing: 1, clarifying: 1 }
   };
 
   // GEOGRAPHY/TERROIR CONTRIBUTIONS
+  // Climate and altitude directly influence caffeine/L-theanine development
   static GEOGRAPHY_EFFECTS = {
     altitude: {
-      // High altitude (>1200m) - cooler, more minerals
-      high: { clarifying: 2, refreshing: 1, elevating: 1 },
-      // Medium altitude (800-1200m)
-      medium: { harmonizing: 1, elevating: 1 },
-      // Low altitude (<800m) - warmer
-      low: { warming: 2, comforting: 1 }
+      high: { clarifying: 2, uplifting: 1, invigorating: 1 },   // >1200m - cooler, higher L-theanine
+      medium: { harmonizing: 1, uplifting: 1, centering: 1 },   // 800-1200m
+      low: { releasing: 2, nourishing: 1, centering: 1 }        // <800m - warmer, higher caffeine
     },
     temperature: {
-      // Cool (<12°C)
-      cool: { clarifying: 2, refreshing: 2, calming: 1 },
-      // Mild (12-16°C)
-      mild: { harmonizing: 2, elevating: 1 },
-      // Warm (16-20°C)
-      warm: { warming: 2, comforting: 1, aromatic: 1 },
-      // Hot (>20°C)
-      hot: { warming: 3, energizing: 1 }
+      cool: { clarifying: 2, calming: 2, invigorating: 1 },     // <12°C - favors L-theanine
+      mild: { harmonizing: 2, uplifting: 1, centering: 1 },     // 12-16°C
+      warm: { releasing: 2, nourishing: 1, invigorating: 1 },   // 16-20°C
+      hot: { releasing: 3, invigorating: 1, centering: 1 }      // >20°C - higher caffeine
     },
     humidity: {
-      // Low (<60%)
-      low: { clarifying: 1, energizing: 1 },
-      // Medium (60-75%)
-      medium: { harmonizing: 1 },
-      // High (75-85%)
-      high: { aromatic: 2, comforting: 1 },
-      // Very high (>85%)
-      veryHigh: { aromatic: 3, warming: 1 }
+      low: { clarifying: 1, invigorating: 1, uplifting: 1 },    // <60%
+      medium: { harmonizing: 1, centering: 1, calming: 1 },     // 60-75%
+      high: { releasing: 2, harmonizing: 1, nourishing: 1 },    // 75-85%
+      veryHigh: { releasing: 3, centering: 1, nourishing: 1 }   // >85%
     },
     solar: {
-      // Low (<120 W/m²) - shade
-      low: { calming: 2, elevating: 1 },
-      // Medium (120-160 W/m²)
-      medium: { harmonizing: 1, elevating: 1 },
-      // High (>160 W/m²)
-      high: { energizing: 2, clarifying: 1 }
+      low: { calming: 2, uplifting: 1, clarifying: 1 },         // <120 W/m² - shade-grown
+      medium: { harmonizing: 1, uplifting: 1, centering: 1 },   // 120-160 W/m²
+      high: { invigorating: 2, clarifying: 1, uplifting: 1 }    // >160 W/m² - full sun
     }
   };
 
-  // COMPOUND CONTRIBUTIONS (caffeine to L-theanine ratio)
+  // COMPOUND CONTRIBUTIONS
+  // Caffeine/L-theanine ratio is fundamental to effect expression
   static COMPOUND_EFFECTS = {
-    // High caffeine, low L-theanine (ratio > 2:1)
-    highCaffeine: { energizing: 4, clarifying: 3, mentally_stimulating: 2 },
-    // Balanced high caffeine + high L-theanine (ratio 1:1 to 1.5:1)
-    balancedHigh: { harmonizing: 4, elevating: 2, energizing: 2 },
-    // Balanced moderate (ratio 0.8:1 to 1:1)
-    balancedModerate: { harmonizing: 3, refreshing: 2, elevating: 1 },
-    // High L-theanine, moderate caffeine (ratio 0.5:1 to 0.8:1)
-    highTheanine: { calming: 3, harmonizing: 2, relaxing: 1 },
-    // High L-theanine, low caffeine (ratio < 0.5:1)
-    dominantTheanine: { calming: 4, relaxing: 3, comforting: 1 },
-    // Low both (herbal-like)
-    lowBoth: { calming: 3, relaxing: 2, comforting: 1 }
+    highCaffeine: { invigorating: 4, clarifying: 3, uplifting: 2 },
+    balancedHigh: { harmonizing: 4, uplifting: 2, invigorating: 2 },
+    balancedModerate: { harmonizing: 3, clarifying: 2, uplifting: 1 },
+    highTheanine: { calming: 3, harmonizing: 2, centering: 1 },
+    dominantTheanine: { calming: 4, centering: 2, nourishing: 1 },
+    lowBoth: { calming: 3, centering: 2, nourishing: 1 }
   };
 
   /**
@@ -206,27 +192,27 @@ export class ComprehensiveEffectScorer {
       effectScores[effect] = 0;
     });
 
-    // 1. TEA TYPE CONTRIBUTIONS
+    // 1. TEA TYPE CONTRIBUTIONS (weight: 2.0 - foundational)
     const teaType = (teaData.type || 'green').toLowerCase();
     const typeEffects = this.TEA_TYPE_EFFECTS[teaType] || this.TEA_TYPE_EFFECTS['green'];
-    this._addEffects(effectScores, typeEffects, 2.0); // weight: 2.0 - tea type is foundational
+    this._addEffects(effectScores, typeEffects, 2.0);
 
     // 2. PROCESSING CONTRIBUTIONS
     if (teaData.processing) {
-      // Oxidation level
+      // Oxidation level (weight: 0.9)
       if (teaData.processing.oxidationLevel !== undefined) {
         const oxCategory = this._categorizeOxidation(teaData.processing.oxidationLevel);
         const oxEffects = this.PROCESSING_EFFECTS.oxidation[oxCategory] || {};
         this._addEffects(effectScores, oxEffects, 0.9);
       }
 
-      // Roast level
+      // Roast level (weight: 1.4 - heavily influences profile)
       if (teaData.processing.roastLevel) {
         const roastEffects = this.PROCESSING_EFFECTS.roast[teaData.processing.roastLevel] || {};
-        this._addEffects(effectScores, roastEffects, 1.4);  // Higher weight - roasting heavily influences profile
+        this._addEffects(effectScores, roastEffects, 1.4);
       }
 
-      // Processing methods
+      // Processing methods (weight: 0.7)
       if (teaData.processing.methods && Array.isArray(teaData.processing.methods)) {
         teaData.processing.methods.forEach(method => {
           const methodLower = (method || '').toLowerCase();
@@ -236,7 +222,7 @@ export class ComprehensiveEffectScorer {
       }
     }
 
-    // 3. FLAVOR CONTRIBUTIONS
+    // 3. FLAVOR CONTRIBUTIONS (weight: 0.8)
     if (teaData.flavor) {
       const flavorNotes = [
         ...(teaData.flavor.primary || []),
@@ -251,31 +237,28 @@ export class ComprehensiveEffectScorer {
     }
 
     // 4. GEOGRAPHY/TERROIR CONTRIBUTIONS
+    // Geography heavily influences caffeine/L-theanine development
     if (teaData.geography) {
       const geo = teaData.geography;
 
-      // Altitude - influences caffeine/L-theanine development
       if (geo.altitude !== undefined) {
         const altCategory = this._categorizeAltitude(geo.altitude);
         const altEffects = this.GEOGRAPHY_EFFECTS.altitude[altCategory] || {};
         this._addEffects(effectScores, altEffects, 1.6);
       }
 
-      // Temperature - critical for tea leaf chemistry
       if (geo.temperature !== undefined) {
         const tempCategory = this._categorizeTemperature(geo.temperature);
         const tempEffects = this.GEOGRAPHY_EFFECTS.temperature[tempCategory] || {};
         this._addEffects(effectScores, tempEffects, 1.8);
       }
 
-      // Humidity - affects oxidation and fermentation
       if (geo.humidity !== undefined) {
         const humidCategory = this._categorizeHumidity(geo.humidity);
         const humidEffects = this.GEOGRAPHY_EFFECTS.humidity[humidCategory] || {};
         this._addEffects(effectScores, humidEffects, 1.5);
       }
 
-      // Solar radiation - influences polyphenol and amino acid development
       if (geo.solarRadiation !== undefined) {
         const solarCategory = this._categorizeSolar(geo.solarRadiation);
         const solarEffects = this.GEOGRAPHY_EFFECTS.solar[solarCategory] || {};
@@ -283,26 +266,25 @@ export class ComprehensiveEffectScorer {
       }
     }
 
-    // 5. COMPOUND CONTRIBUTIONS
+    // 5. COMPOUND CONTRIBUTIONS (weight: 1.0 - supports tea type)
     if (teaData.caffeineLevel !== undefined && teaData.lTheanineLevel !== undefined) {
       const ratio = teaData.caffeineLevel / (teaData.lTheanineLevel || 1);
       const compoundCategory = this._categorizeCaffeine(teaData.caffeineLevel, teaData.lTheanineLevel, ratio);
       const compoundEffects = this.COMPOUND_EFFECTS[compoundCategory] || {};
-      this._addEffects(effectScores, compoundEffects, 1.0); // weight: 1.0 - support tea type
+      this._addEffects(effectScores, compoundEffects, 1.0);
     }
 
-    // Select top 2-3 effects
+    // Select top 2-3 effects based on balance
     const sortedEffects = Object.entries(effectScores)
       .sort(([, a], [, b]) => b - a)
       .map(([effect, score]) => ({ effect, score: Math.round(score * 10) / 10 }));
 
-    // Determine how many top effects to return (2-3)
     const topCount = this._selectTopEffectCount(sortedEffects);
     const topEffects = sortedEffects.slice(0, topCount);
 
     return {
       dominant: topEffects[0]?.effect || 'harmonizing',
-      supporting: topEffects[1]?.effect || 'elevating',
+      supporting: topEffects[1]?.effect || 'uplifting',
       tertiary: topEffects[2]?.effect || null,
       allScores: Object.fromEntries(sortedEffects.map(e => [e.effect, e.score])),
       breakdown: {
@@ -322,7 +304,10 @@ export class ComprehensiveEffectScorer {
    */
   static _addEffects(scores, effects, weight) {
     Object.entries(effects).forEach(([effect, points]) => {
-      scores[effect] = (scores[effect] || 0) + (points * weight);
+      // Only add if effect is in the 8 core effects
+      if (this.EFFECTS.includes(effect)) {
+        scores[effect] = (scores[effect] || 0) + (points * weight);
+      }
     });
   }
 
@@ -399,7 +384,7 @@ export class ComprehensiveEffectScorer {
     const top2 = sortedEffects[1].score;
     const top3 = sortedEffects[2].score;
 
-    // If top 3 is close to top 2, include it
+    // If top 3 is close to top 2 (within 60%), include it
     if (top3 > top2 * 0.6) return 3;
     return 2;
   }
