@@ -1,0 +1,341 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://api.propertea.local/schemas/RecommendationResult.schema.json",
+  "title": "Recommendation Result Schema",
+  "description": "Schema for tea recommendation analysis results",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "#/definitions/effectResult" },
+    { "$ref": "#/definitions/timeResult" },
+    { "$ref": "#/definitions/seasonResult" },
+    { "$ref": "#/definitions/foodResult" },
+    { "$ref": "#/definitions/activityResult" }
+  ],
+  "definitions": {
+    "scoreWithConfidence": {
+      "type": "object",
+      "required": ["score", "confidence"],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Score on 0-100 scale"
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Confidence percentage"
+        },
+        "confidenceLabel": {
+          "type": "string",
+          "enum": ["Very High", "High", "Moderate", "Low", "Very Low"]
+        },
+        "range": {
+          "type": "object",
+          "required": ["low", "high"],
+          "properties": {
+            "low": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "high": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "spread": {
+              "type": ["integer", "null"],
+              "minimum": 0,
+              "maximum": 50
+            }
+          }
+        }
+      }
+    },
+    "effectResult": {
+      "type": "object",
+      "required": ["description", "expectedEffects", "confidence"],
+      "properties": {
+        "description": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "description": "Brief effect profile name"
+            },
+            "detailed": {
+              "type": "string",
+              "description": "Detailed explanation"
+            },
+            "dominant": {
+              "type": "object",
+              "properties": {
+                "effect": { "type": "string" },
+                "description": { "type": "string" },
+                "score": { "type": "integer" },
+                "confidence": { "type": "integer" }
+              }
+            },
+            "supporting": {
+              "type": "object",
+              "properties": {
+                "effect": { "type": "string" },
+                "description": { "type": "string" },
+                "score": { "type": "integer" },
+                "confidence": { "type": "integer" }
+              }
+            }
+          }
+        },
+        "expectedEffects": {
+          "type": "object",
+          "required": ["dominant", "supporting"],
+          "properties": {
+            "dominant": { "type": "string" },
+            "supporting": { "type": "string" }
+          }
+        },
+        "allScores": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/scoreWithConfidence"
+          },
+          "description": "Scores for all effect types evaluated"
+        },
+        "reasoning": {
+          "type": "object",
+          "properties": {
+            "dominant": { "type": "string" },
+            "supporting": { "type": "string" },
+            "dataQuality": { "type": "string" }
+          }
+        },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "dataGaps": {
+              "type": "object",
+              "properties": {
+                "missing": { "type": "array", "items": { "type": "string" } },
+                "lowQuality": { "type": "array", "items": { "type": "string" } },
+                "suggestions": { "type": "array", "items": { "type": "string" } }
+              }
+            },
+            "note": { "type": ["string", "null"] }
+          }
+        },
+        "factorBreakdowns": {
+          "type": ["object", "null"],
+          "additionalProperties": true
+        }
+      }
+    },
+    "timeResult": {
+      "type": "object",
+      "required": ["recommendedTimes", "confidence"],
+      "properties": {
+        "recommendedTimes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "hour": { "type": "integer", "minimum": 0, "maximum": 23 },
+              "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "confidence": { "type": "integer", "minimum": 0, "maximum": 100 }
+            }
+          }
+        },
+        "hourlyScores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "hour": { "type": "integer" },
+              "score": { "type": "integer" },
+              "confidence": { "type": "integer" }
+            }
+          }
+        },
+        "idealRanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start": { "type": "integer" },
+              "end": { "type": "integer" },
+              "score": { "type": "integer" },
+              "confidence": { "type": "integer" }
+            }
+          }
+        },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "dataQuality": { "type": "string" }
+          }
+        }
+      }
+    },
+    "seasonResult": {
+      "type": "object",
+      "required": ["recommendedSeasons", "confidence"],
+      "properties": {
+        "recommendedSeasons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "season": { "type": ["string", "null"] },
+              "score": { "type": "integer" },
+              "confidence": { "type": "integer" }
+            }
+          }
+        },
+        "recommendations": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/scoreWithConfidence"
+          }
+        },
+        "idealRanges": {
+          "type": ["array", "null"]
+        },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "integer" },
+            "dataQuality": { "type": "string" }
+          }
+        }
+      }
+    },
+    "foodResult": {
+      "type": "object",
+      "required": ["recommendedFoods", "confidence"],
+      "properties": {
+        "recommendedFoods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "score", "confidence"],
+            "properties": {
+              "name": { "type": "string" },
+              "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "confidenceLabel": { "type": "string" },
+              "range": {
+                "type": "object",
+                "properties": {
+                  "low": { "type": "integer" },
+                  "high": { "type": "integer" }
+                }
+              }
+            }
+          }
+        },
+        "mealClusters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "occasion": { "type": "string" },
+              "foods": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "score": { "type": "integer" },
+                    "confidence": { "type": "integer" }
+                  }
+                }
+              },
+              "score": { "type": "integer" },
+              "confidence": { "type": "integer" },
+              "confidenceLabel": { "type": "string" }
+            }
+          }
+        },
+        "description": { "type": "string" },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "integer" },
+            "label": { "type": "string" }
+          }
+        },
+        "recommendations": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        }
+      }
+    },
+    "activityResult": {
+      "type": "object",
+      "required": ["recommendedActivities", "confidence"],
+      "properties": {
+        "recommendedActivities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "score", "confidence"],
+            "properties": {
+              "name": { "type": "string" },
+              "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "confidenceLabel": { "type": "string" },
+              "range": {
+                "type": "object",
+                "properties": {
+                  "low": { "type": "integer" },
+                  "high": { "type": "integer" }
+                }
+              }
+            }
+          }
+        },
+        "activityClusters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "theme": { "type": "string" },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "score": { "type": "integer" },
+                    "confidence": { "type": "integer" }
+                  }
+                }
+              },
+              "score": { "type": "integer" },
+              "confidence": { "type": "integer" },
+              "confidenceLabel": { "type": "string" }
+            }
+          }
+        },
+        "description": { "type": "string" },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "integer" },
+            "label": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

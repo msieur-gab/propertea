@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://api.propertea.local/schemas/TeaModel.schema.json",
+  "title": "Tea Model Schema",
+  "description": "Complete schema for a tea model used in recommendation calculations",
+  "type": "object",
+  "required": ["name", "type"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the tea",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "description": "Common name of the tea",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "type": {
+      "type": "string",
+      "enum": ["green", "white", "oolong", "black", "puerh", "dark", "herbal"],
+      "description": "Primary tea type classification"
+    },
+    "subType": {
+      "type": ["string", "null"],
+      "description": "Sub-classification (e.g., 'sheng' or 'shou' for puerh)",
+      "examples": ["sheng", "shou", "roasted"]
+    },
+    "caffeineLevel": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Caffeine content on 0-10 scale"
+    },
+    "lTheanineLevel": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 10,
+      "description": "L-theanine content on 0-10 scale"
+    },
+    "flavor": {
+      "type": "object",
+      "description": "Flavor profile information",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Primary flavor notes (e.g., 'vegetal', 'grassy', 'floral')",
+          "examples": [["vegetal", "grassy"], ["floral", "sweet"]]
+        },
+        "secondary": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string"
+          },
+          "description": "Secondary/subtle flavor notes"
+        },
+        "intensity": {
+          "type": ["string", "null"],
+          "enum": ["subtle", "moderate", "pronounced", "intense", null],
+          "description": "Overall flavor intensity"
+        }
+      }
+    },
+    "geography": {
+      "type": "object",
+      "description": "Geographic origin and terroir information",
+      "properties": {
+        "country": {
+          "type": ["string", "null"],
+          "description": "Country of origin"
+        },
+        "province": {
+          "type": ["string", "null"],
+          "description": "Province or region"
+        },
+        "location": {
+          "type": ["string", "null"],
+          "description": "Specific location or mountain"
+        },
+        "altitude": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 5000,
+          "description": "Elevation in meters"
+        },
+        "latitude": {
+          "type": ["number", "null"],
+          "minimum": -90,
+          "maximum": 90,
+          "description": "Geographic latitude"
+        },
+        "longitude": {
+          "type": ["number", "null"],
+          "minimum": -180,
+          "maximum": 180,
+          "description": "Geographic longitude"
+        },
+        "temperature": {
+          "type": ["number", "null"],
+          "minimum": -50,
+          "maximum": 50,
+          "description": "Average temperature in Celsius"
+        },
+        "humidity": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Average humidity as percentage"
+        },
+        "solarRadiation": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Solar radiation exposure (W/m²)"
+        }
+      }
+    },
+    "processing": {
+      "type": "object",
+      "description": "Processing method information",
+      "properties": {
+        "methods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Processing techniques applied (e.g., 'steaming', 'roasting', 'oxidation')",
+          "examples": [["steaming"], ["roasting", "oxidation"]]
+        },
+        "oxidationLevel": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Oxidation percentage (0=unoxidized, 100=fully oxidized)"
+        },
+        "roastLevel": {
+          "type": ["string", "null"],
+          "enum": ["none", "light", "medium", "heavy", "charcoal", null],
+          "description": "Roasting intensity"
+        },
+        "fermentationDays": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Days of fermentation (for puerh)"
+        },
+        "dryingMethod": {
+          "type": ["string", "null"],
+          "enum": ["sun-dried", "shade-dried", "pan-fired", "oven-dried", null],
+          "description": "Drying technique used"
+        }
+      }
+    },
+    "harvest": {
+      "type": "object",
+      "description": "Harvest information",
+      "properties": {
+        "season": {
+          "type": ["string", "null"],
+          "enum": ["spring", "summer", "autumn", "winter", null],
+          "description": "Season of harvest"
+        },
+        "harvestDate": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Specific harvest date (YYYY-MM-DD)"
+        },
+        "flush": {
+          "type": ["string", "null"],
+          "enum": ["first-flush", "second-flush", "third-flush", "autumn-flush", null],
+          "description": "Tea plant flush/picking"
+        }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "description": "Storage conditions",
+      "properties": {
+        "ageInYears": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Years aged"
+        },
+        "storageCondition": {
+          "type": ["string", "null"],
+          "enum": ["dry", "humid", "cool-dry", "natural", null],
+          "description": "Storage environment"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "description": "Data source information",
+      "properties": {
+        "producer": {
+          "type": ["string", "null"],
+          "description": "Tea producer or estate name"
+        },
+        "vendor": {
+          "type": ["string", "null"],
+          "description": "Vendor or retailer"
+        },
+        "importDate": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Import date"
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Additional notes or comments",
+      "maxLength": 1000
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://api.propertea.local/schemas/ValidationError.schema.json",
+  "title": "Validation Error Schema",
+  "description": "Schema for validation errors and field-level validation results",
+  "type": "object",
+  "required": ["isValid"],
+  "properties": {
+    "isValid": {
+      "type": "boolean",
+      "description": "Whether validation passed"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "message"],
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "Field path (e.g., 'geography.altitude')"
+          },
+          "value": {
+            "description": "The invalid value provided"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "REQUIRED",
+              "TYPE_MISMATCH",
+              "RANGE_VIOLATION",
+              "ENUM_VIOLATION",
+              "FORMAT_INVALID",
+              "PATTERN_MISMATCH"
+            ],
+            "description": "Error code"
+          },
+          "constraint": {
+            "type": "object",
+            "description": "Constraint that was violated",
+            "properties": {
+              "min": { "type": ["number", "null"] },
+              "max": { "type": ["number", "null"] },
+              "minLength": { "type": ["number", "null"] },
+              "maxLength": { "type": ["number", "null"] },
+              "pattern": { "type": ["string", "null"] },
+              "enum": { "type": ["array", "null"] },
+              "type": { "type": ["string", "null"] }
+            }
+          }
+        }
+      },
+      "description": "Array of validation errors"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "message": { "type": "string" },
+          "code": {
+            "type": "string",
+            "enum": [
+              "MISSING_OPTIONAL",
+              "DATA_QUALITY_LOW",
+              "DEPRECATED_FIELD",
+              "UNUSUAL_VALUE"
+            ]
+          }
+        }
+      },
+      "description": "Non-critical warnings"
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "totalErrors": { "type": "integer" },
+        "totalWarnings": { "type": "integer" },
+        "dataCompleteness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of data fields populated"
+        },
+        "estimatedConfidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Estimated recommendation confidence based on data quality"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
