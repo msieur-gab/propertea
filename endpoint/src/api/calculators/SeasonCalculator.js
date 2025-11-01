@@ -41,7 +41,6 @@ export class SeasonCalculator extends BaseCalculator {
     try {
       const altitude = teaModel.geography.altitude;
       const temperature = teaModel.geography.temperature;
-      const harvestSeason = this.normalize(teaModel.geography.harvestSeason);
       const roastLevel = this.normalize(teaModel.processing.roastLevel);
       const oxidationLevel = teaModel.processing.oxidationLevel;
       const caffeine = teaModel.compounds.caffeine;
@@ -53,27 +52,7 @@ export class SeasonCalculator extends BaseCalculator {
 
       let reasoning = [];
 
-      // 1. Harvest season matching (boost seasons matching harvest)
-      if (harvestSeason.includes('spring')) {
-        seasonalScores['Early Spring'] += 30;
-        seasonalScores['Spring'] += 25;
-        seasonalScores['Late Spring'] += 20;
-        reasoning.push(`Spring harvest best consumed in spring seasons`);
-      } else if (harvestSeason.includes('summer')) {
-        seasonalScores['Early Summer'] += 20;
-        seasonalScores['Summer'] += 30;
-        seasonalScores['Late Summer'] += 20;
-        reasoning.push(`Summer harvest best consumed in summer seasons`);
-      } else if (harvestSeason.includes('autumn')) {
-        seasonalScores['Early Autumn'] += 20;
-        seasonalScores['Autumn'] += 30;
-        seasonalScores['Late Autumn'] += 25;
-        reasoning.push(`Autumn harvest best consumed in autumn/winter seasons`);
-        seasonalScores['Early Winter'] += 15;
-        seasonalScores['Winter'] += 10;
-      }
-
-      // 2. Altitude-based scoring (high altitude = spring/early summer preference)
+      // 1. Altitude-based scoring (high altitude = spring/early summer preference)
       if (altitude > 1500) {
         seasonalScores['Early Spring'] += 25;
         seasonalScores['Spring'] += 20;
@@ -98,6 +77,7 @@ export class SeasonCalculator extends BaseCalculator {
       } else if (roastLevel === 'light' || roastLevel === 'none') {
         seasonalScores['Spring'] += 20;
         seasonalScores['Early Summer'] += 15;
+        reasoning.push(`Light/no roast (${roastLevel}) best consumed in spring`);
       }
 
       // 4. Oxidation level scoring
@@ -111,6 +91,7 @@ export class SeasonCalculator extends BaseCalculator {
         seasonalScores['Early Spring'] += 20;
         seasonalScores['Spring'] += 15;
         seasonalScores['Summer'] += 10;
+        reasoning.push(`Light oxidation (${oxidationLevel}%) indicates spring/summer tea`);
       }
 
       // 5. Caffeine/stimulation level scoring
@@ -122,6 +103,7 @@ export class SeasonCalculator extends BaseCalculator {
         // Low caffeine = evening/relaxation = winter preference
         seasonalScores['Late Autumn'] += 10;
         seasonalScores['Winter'] += 15;
+        reasoning.push(`Low caffeine (${caffeine}mg) suitable for relaxing autumn/winter seasons`);
       }
 
       // 6. Ratio-based thermal effect
@@ -130,10 +112,12 @@ export class SeasonCalculator extends BaseCalculator {
         seasonalScores['Early Winter'] += 15;
         seasonalScores['Winter'] += 20;
         seasonalScores['Late Winter'] += 15;
+        reasoning.push(`Low caffeine/L-theanine ratio (${ratio.toFixed(2)}) indicates calming winter tea`);
       } else if (ratio > 2) {
         // Stimulating (cooling effect) = spring
         seasonalScores['Early Spring'] += 15;
         seasonalScores['Spring'] += 15;
+        reasoning.push(`High caffeine/L-theanine ratio (${ratio.toFixed(2)}) indicates stimulating spring tea`);
       }
 
       // Normalize scores
@@ -157,7 +141,6 @@ export class SeasonCalculator extends BaseCalculator {
         factors: {
           altitude,
           temperature,
-          harvestSeason,
           roastLevel,
           oxidationLevel
         },
