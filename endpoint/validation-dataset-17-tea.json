@@ -1,0 +1,274 @@
+[
+  {
+    "name": "Dragon Well (Longjing) - Premium Grade",
+    "type": "green",
+    "origin": { "region": "Hangzhou, Zhejiang", "country": "China", "latitude": 30.2, "longitude": 120.1 },
+    "geography": { "altitude_meters": 600, "temperature_celsius": 17, "humidity_percent": 70, "solar_radiation_w_m2": 200 },
+    "processing": { "oxidation_level": 8, "roast_level": "none", "methods": ["pan-firing"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 7, "l_theanine_level": 4 },
+    "compounds_calculated": { "caffeine_level": 8.4, "l_theanine_level": 3.6, "ratio": 2.33 },
+    "flavor": { "primary_categories": ["grassy", "fresh", "chestnut"], "secondary_categories": ["sweet"], "intensity": "moderate" },
+    "expected_effects": ["Gentle energy boost", "Enhances alertness and concentration", "Promotes sense of calm and focus"],
+    "characteristics": {
+      "caffeine_level": "high",
+      "mood_energy_effects": ["Gentle energy boost", "Enhances alertness and concentration", "Promotes sense of calm and focus"]
+    },
+    "best_time_of_day": ["Morning", "Afternoon"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Silver Needle (Bai Hao Yin Zhen)",
+    "type": "white",
+    "origin": { "region": "Fujian", "country": "China", "latitude": 27.5, "longitude": 119.5 },
+    "geography": { "altitude_meters": 800, "temperature_celsius": 14, "humidity_percent": 80, "solar_radiation_w_m2": 120 },
+    "processing": { "oxidation_level": 12, "roast_level": "none", "methods": ["withering"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 3, "l_theanine_level": 7 },
+    "compounds_calculated": { "caffeine_level": 2.4, "l_theanine_level": 8.8, "ratio": 0.27 },
+    "flavor": { "primary_categories": ["floral", "sweet", "delicate"], "secondary_categories": ["honey"], "intensity": "subtle" },
+    "expected_effects": ["Calming", "Relaxing", "Promotes gentle alertness", "Reduces stress and anxiety"],
+    "characteristics": {
+      "caffeine_level": "low",
+      "mood_energy_effects": ["Calming", "Relaxing", "Promotes gentle alertness", "Reduces stress and anxiety"]
+    },
+    "best_time_of_day": ["Evening", "Night"],
+    "best_season": ["Winter", "Spring"]
+  },
+  {
+    "name": "Tie Guan Yin (Iron Goddess)",
+    "type": "oolong",
+    "origin": { "region": "Anxi, Fujian", "country": "China", "latitude": 25.1, "longitude": 118.2 },
+    "geography": { "altitude_meters": 700, "temperature_celsius": 16, "humidity_percent": 75, "solar_radiation_w_m2": 180 },
+    "processing": { "oxidation_level": 50, "roast_level": "medium", "methods": ["rolling", "roasting"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 6, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 8.2, "l_theanine_level": 3.5, "ratio": 2.34 },
+    "flavor": { "primary_categories": ["floral", "fruity", "orchid"], "secondary_categories": ["creamy"], "intensity": "moderate-high" },
+    "expected_effects": ["Balanced energy boost", "Mental clarity and focus", "Promotes sense of calm within energy"],
+    "characteristics": {
+      "caffeine_level": "high",
+      "mood_energy_effects": ["Balanced energy boost", "Mental clarity and focus", "Promotes sense of calm within energy"]
+    },
+    "best_time_of_day": ["Afternoon", "Morning"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Bai Mudan (White Peony)",
+    "type": "white",
+    "origin": { "region": "Fujian", "country": "China", "latitude": 27.0, "longitude": 119.0 },
+    "geography": { "altitude_meters": 800, "temperature_celsius": 14, "humidity_percent": 75, "solar_radiation_w_m2": 135 },
+    "processing": { "oxidation_level": 15, "roast_level": "none", "methods": ["withering"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 3, "l_theanine_level": 7 },
+    "compounds_calculated": { "caffeine_level": 2.7, "l_theanine_level": 8.5, "ratio": 0.32 },
+    "flavor": { "primary_categories": ["floral", "sweet", "fruity"], "secondary_categories": ["honey", "peachy"], "intensity": "delicate" },
+    "expected_effects": ["Gentle energy boost", "Aids mental clarity", "Promotes calm and stress reduction"],
+    "characteristics": {
+      "caffeine_level": "low",
+      "mood_energy_effects": ["Gentle energy boost", "Aids mental clarity", "Promotes calm and stress reduction"]
+    },
+    "best_time_of_day": ["Evening", "Afternoon"],
+    "best_season": ["Winter", "Spring"]
+  },
+  {
+    "name": "Aged Ripe Puerh Shou (20 years)",
+    "type": "puerh",
+    "origin": { "region": "Yunnan", "country": "China", "latitude": 22.5, "longitude": 101.0 },
+    "geography": { "altitude_meters": 1500, "temperature_celsius": 15, "humidity_percent": 80, "solar_radiation_w_m2": 160 },
+    "processing": { "oxidation_level": 95, "roast_level": "none", "methods": ["fermentation", "aging"], "age_years": 20 },
+    "compounds_base": { "caffeine_level": 4, "l_theanine_level": 4 },
+    "compounds_calculated": { "caffeine_level": 3.6, "l_theanine_level": 5.2, "ratio": 0.69 },
+    "flavor": { "primary_categories": ["earthy", "woody", "smooth"], "secondary_categories": ["sweet", "mineral"], "intensity": "full-bodied" },
+    "expected_effects": ["Gentle alertness", "Steady energy", "Promotes relaxation and digestion", "Centering and grounding"],
+    "characteristics": {
+      "caffeine_level": "medium",
+      "mood_energy_effects": ["Gentle alertness", "Steady energy", "Promotes relaxation and digestion", "Centering and grounding"]
+    },
+    "best_time_of_day": ["Afternoon", "Evening"],
+    "best_season": ["Fall", "Winter"]
+  },
+  {
+    "name": "Young Raw Puerh Sheng (1-2 years)",
+    "type": "puerh",
+    "origin": { "region": "Yunnan, Guishu area", "country": "China", "latitude": 22.8, "longitude": 101.5 },
+    "geography": { "altitude_meters": 1600, "temperature_celsius": 14, "humidity_percent": 78, "solar_radiation_w_m2": 150 },
+    "processing": { "oxidation_level": 5, "roast_level": "none", "methods": ["drying", "minimal aging"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 7, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 7.2, "l_theanine_level": 5.8, "ratio": 1.24 },
+    "flavor": { "primary_categories": ["fresh", "floral", "fruity"], "secondary_categories": ["grassy", "astringent"], "intensity": "bright" },
+    "expected_effects": ["Energizing and alerting", "Mental clarity and focus", "Can feel slightly astringent when young"],
+    "characteristics": {
+      "caffeine_level": "high",
+      "mood_energy_effects": ["Energizing and alerting", "Mental clarity and focus", "Can feel slightly astringent when young"]
+    },
+    "best_time_of_day": ["Morning", "Afternoon"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Bi Luo Chun (Green Snail Spring)",
+    "type": "green",
+    "origin": { "region": "Jiangsu", "country": "China", "latitude": 31.2, "longitude": 120.5 },
+    "geography": { "altitude_meters": 400, "temperature_celsius": 18, "humidity_percent": 68, "solar_radiation_w_m2": 210 },
+    "processing": { "oxidation_level": 5, "roast_level": "light", "methods": ["pan-firing", "rolling"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 8, "l_theanine_level": 3 },
+    "compounds_calculated": { "caffeine_level": 9.2, "l_theanine_level": 2.8, "ratio": 3.29 },
+    "flavor": { "primary_categories": ["fresh", "fruity", "floral"], "secondary_categories": ["slightly sweet"], "intensity": "bright" },
+    "expected_effects": ["Invigorating", "Improves thinking and mental efficiency", "Reduces fatigue", "Can also be relaxing despite high caffeine"],
+    "characteristics": {
+      "caffeine_level": "very high",
+      "mood_energy_effects": ["Invigorating", "Improves thinking and mental efficiency", "Reduces fatigue", "Can also be relaxing despite high caffeine"]
+    },
+    "best_time_of_day": ["Morning"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Da Hong Pao (Big Red Robe)",
+    "type": "oolong",
+    "origin": { "region": "Wuyi Mountains, Fujian", "country": "China", "latitude": 27.6, "longitude": 117.5 },
+    "geography": { "altitude_meters": 700, "temperature_celsius": 16, "humidity_percent": 76, "solar_radiation_w_m2": 175 },
+    "processing": { "oxidation_level": 60, "roast_level": "heavy", "methods": ["rolling", "heavy-roasting"], "age_years": 3 },
+    "compounds_base": { "caffeine_level": 6, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 8.5, "l_theanine_level": 3.0, "ratio": 2.83 },
+    "flavor": { "primary_categories": ["roasted", "fruity", "deep"], "secondary_categories": ["chocolate", "mineral"], "intensity": "full" },
+    "expected_effects": ["Balanced energy boost", "Enhances mental focus and alertness", "Creates clear-headed energy", "Warming effect"],
+    "characteristics": {
+      "caffeine_level": "high",
+      "mood_energy_effects": ["Balanced energy boost", "Enhances mental focus and alertness", "Creates clear-headed energy", "Warming effect"]
+    },
+    "best_time_of_day": ["Afternoon", "Morning"],
+    "best_season": ["Fall", "Winter"]
+  },
+  {
+    "name": "Huang Jin Gui (Golden Osmanthus)",
+    "type": "oolong",
+    "origin": { "region": "Anxi, Fujian", "country": "China", "latitude": 25.2, "longitude": 118.3 },
+    "geography": { "altitude_meters": 650, "temperature_celsius": 16, "humidity_percent": 73, "solar_radiation_w_m2": 185 },
+    "processing": { "oxidation_level": 40, "roast_level": "light", "methods": ["rolling", "light-roasting"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 6, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 7.0, "l_theanine_level": 4.5, "ratio": 1.56 },
+    "flavor": { "primary_categories": ["floral", "osmanthus", "fruity"], "secondary_categories": ["creamy", "sweet"], "intensity": "moderate" },
+    "expected_effects": ["Relaxing yet refreshing", "Enhances energy and focus balance", "Promotes sense of well-being and lightness"],
+    "characteristics": {
+      "caffeine_level": "medium-high",
+      "mood_energy_effects": ["Relaxing yet refreshing", "Enhances energy and focus balance", "Promotes sense of well-being and lightness"]
+    },
+    "best_time_of_day": ["Afternoon"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Lapsang Souchong (Smoked Black Tea)",
+    "type": "black",
+    "origin": { "region": "Wuyi Mountains, Fujian", "country": "China", "latitude": 27.6, "longitude": 117.5 },
+    "geography": { "altitude_meters": 900, "temperature_celsius": 15, "humidity_percent": 72, "solar_radiation_w_m2": 165 },
+    "processing": { "oxidation_level": 100, "roast_level": "heavy", "methods": ["fermenting", "pine-smoking"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 8, "l_theanine_level": 3 },
+    "compounds_calculated": { "caffeine_level": 7.2, "l_theanine_level": 3.6, "ratio": 2.0 },
+    "flavor": { "primary_categories": ["smoky", "woody", "bold"], "secondary_categories": ["mineral"], "intensity": "strong" },
+    "expected_effects": ["Energizing and alerting", "Warming effect", "Can be calming despite bold nature due to fermentation"],
+    "characteristics": {
+      "caffeine_level": "high",
+      "mood_energy_effects": ["Energizing and alerting", "Warming effect", "Can be calming despite bold nature due to fermentation"]
+    },
+    "best_time_of_day": ["Morning", "Afternoon"],
+    "best_season": ["Fall", "Winter"]
+  },
+  {
+    "name": "Keemun Hao Ya (Black Tea)",
+    "type": "black",
+    "origin": { "region": "Anhui", "country": "China", "latitude": 29.8, "longitude": 118.2 },
+    "geography": { "altitude_meters": 600, "temperature_celsius": 16, "humidity_percent": 71, "solar_radiation_w_m2": 190 },
+    "processing": { "oxidation_level": 100, "roast_level": "light", "methods": ["fermenting", "drying"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 8, "l_theanine_level": 3 },
+    "compounds_calculated": { "caffeine_level": 8.6, "l_theanine_level": 2.8, "ratio": 3.07 },
+    "flavor": { "primary_categories": ["fruity", "floral", "wine-like"], "secondary_categories": ["honey"], "intensity": "moderate-high" },
+    "expected_effects": ["Provides energy boost", "Improves mental alertness", "Creates clear, focused energy without jitteriness"],
+    "characteristics": {
+      "caffeine_level": "very high",
+      "mood_energy_effects": ["Provides energy boost", "Improves mental alertness", "Creates clear, focused energy without jitteriness"]
+    },
+    "best_time_of_day": ["Morning"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Liu Bao (Dark Tea)",
+    "type": "dark",
+    "origin": { "region": "Guangxi", "country": "China", "latitude": 24.0, "longitude": 110.5 },
+    "geography": { "altitude_meters": 400, "temperature_celsius": 19, "humidity_percent": 80, "solar_radiation_w_m2": 200 },
+    "processing": { "oxidation_level": 85, "roast_level": "none", "methods": ["fermentation", "heap-fermentation"], "age_years": 5 },
+    "compounds_base": { "caffeine_level": 5, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 4.5, "l_theanine_level": 5.8, "ratio": 0.78 },
+    "flavor": { "primary_categories": ["earthy", "smooth", "betel-nut"], "secondary_categories": ["sweet", "aged"], "intensity": "mellow" },
+    "expected_effects": ["Mindful alertness", "Gentler start to the day", "Calming effect that can clear the mind", "Aids digestion"],
+    "characteristics": {
+      "caffeine_level": "medium",
+      "mood_energy_effects": ["Mindful alertness", "Gentler start to the day", "Calming effect that can clear the mind", "Aids digestion"]
+    },
+    "best_time_of_day": ["Afternoon", "Evening"],
+    "best_season": ["Fall", "Winter"]
+  },
+  {
+    "name": "Jun Shan Yin Zhen (Silver Needle from Jun Mountain)",
+    "type": "yellow",
+    "origin": { "region": "Hunan", "country": "China", "latitude": 28.9, "longitude": 113.0 },
+    "geography": { "altitude_meters": 600, "temperature_celsius": 17, "humidity_percent": 72, "solar_radiation_w_m2": 170 },
+    "processing": { "oxidation_level": 10, "roast_level": "none", "methods": ["light-fermentation", "drying"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 4, "l_theanine_level": 6 },
+    "compounds_calculated": { "caffeine_level": 3.8, "l_theanine_level": 6.8, "ratio": 0.56 },
+    "flavor": { "primary_categories": ["sweet", "floral", "fresh"], "secondary_categories": ["chestnut", "honey"], "intensity": "delicate" },
+    "expected_effects": ["Calming", "Relaxing", "Promotes gentle focus and clarity", "Soothing effect"],
+    "characteristics": {
+      "caffeine_level": "low",
+      "mood_energy_effects": ["Calming", "Relaxing", "Promotes gentle focus and clarity", "Soothing effect"]
+    },
+    "best_time_of_day": ["Evening", "Afternoon"],
+    "best_season": ["Spring", "Winter"]
+  },
+  {
+    "name": "Meng Ding Huang Ya (Yellow Bud)",
+    "type": "yellow",
+    "origin": { "region": "Sichuan", "country": "China", "latitude": 29.5, "longitude": 103.0 },
+    "geography": { "altitude_meters": 1200, "temperature_celsius": 13, "humidity_percent": 78, "solar_radiation_w_m2": 145 },
+    "processing": { "oxidation_level": 8, "roast_level": "light", "methods": ["light-fermentation", "gentle-heating"], "age_years": 0 },
+    "compounds_base": { "caffeine_level": 4, "l_theanine_level": 6 },
+    "compounds_calculated": { "caffeine_level": 3.2, "l_theanine_level": 7.4, "ratio": 0.43 },
+    "flavor": { "primary_categories": ["sweet", "fresh", "floral"], "secondary_categories": ["fruity"], "intensity": "moderate" },
+    "expected_effects": ["Bright and powerful", "Relaxing yet uplifting", "Promotes mental clarity without stimulation"],
+    "characteristics": {
+      "caffeine_level": "low",
+      "mood_energy_effects": ["Bright and powerful", "Relaxing yet uplifting", "Promotes mental clarity without stimulation"]
+    },
+    "best_time_of_day": ["Afternoon", "Evening"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "Phoenix Dan Cong (Oolong)",
+    "type": "oolong",
+    "origin": { "region": "Guangdong", "country": "China", "latitude": 23.5, "longitude": 116.8 },
+    "geography": { "altitude_meters": 1000, "temperature_celsius": 16, "humidity_percent": 74, "solar_radiation_w_m2": 170 },
+    "processing": { "oxidation_level": 45, "roast_level": "medium", "methods": ["rolling", "roasting"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 6, "l_theanine_level": 5 },
+    "compounds_calculated": { "caffeine_level": 6.8, "l_theanine_level": 5.2, "ratio": 1.31 },
+    "flavor": { "primary_categories": ["fruity", "floral", "complex"], "secondary_categories": ["honey", "aromatic"], "intensity": "moderate-high" },
+    "expected_effects": ["Can lift spirits and boost energy", "Promotes sense of relaxation within energy", "Complex, multi-layered experience"],
+    "characteristics": {
+      "caffeine_level": "medium-high",
+      "mood_energy_effects": ["Can lift spirits and boost energy", "Promotes sense of relaxation within energy", "Complex, multi-layered experience"]
+    },
+    "best_time_of_day": ["Afternoon"],
+    "best_season": ["Spring", "Summer"]
+  },
+  {
+    "name": "High Mountain Oolong (Taiwan)",
+    "type": "oolong",
+    "origin": { "region": "Central Taiwan Mountains", "country": "Taiwan", "latitude": 23.8, "longitude": 120.8 },
+    "geography": { "altitude_meters": 1800, "temperature_celsius": 12, "humidity_percent": 85, "solar_radiation_w_m2": 125 },
+    "processing": { "oxidation_level": 35, "roast_level": "light", "methods": ["rolling", "light-roasting"], "age_years": 1 },
+    "compounds_base": { "caffeine_level": 5, "l_theanine_level": 6 },
+    "compounds_calculated": { "caffeine_level": 4.0, "l_theanine_level": 7.8, "ratio": 0.51 },
+    "flavor": { "primary_categories": ["floral", "fruity", "creamy"], "secondary_categories": ["milk-like", "orchid"], "intensity": "delicate-complex" },
+    "expected_effects": ["Gentle energy with clarity", "Calming yet uplifting", "Promotes mental focus and emotional balance"],
+    "characteristics": {
+      "caffeine_level": "low-medium",
+      "mood_energy_effects": ["Gentle energy with clarity", "Calming yet uplifting", "Promotes mental focus and emotional balance"]
+    },
+    "best_time_of_day": ["Afternoon", "Evening"],
+    "best_season": ["Spring", "Summer"]
+  }
+]

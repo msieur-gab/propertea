@@ -1,20 +1,15 @@
 // ActivityMatcher.js
 // Matches a tea's profile to suitable activities and identifies activity clusters.
 // Enhanced to group related activities into thematic clusters
-//
-// REFACTORED: Added confidence weighting system
-// Now wraps all recommendations with confidence metrics based on data completeness
-
-import { calculateDataConfidence } from '../../models/ConfidenceCalculator.js';
 
 export class ActivityMatcher {
     constructor(config = {}) {
         // Configuration options
         this.config = {
             // Minimum score (0-100) required to be included in a recommended cluster
-            clusterThreshold: config.clusterThreshold || 65,
+            clusterThreshold: config.clusterThreshold || 70,
             // Maximum number of top activities to return
-            maxRecommendations: config.maxRecommendations || 8,
+            maxRecommendations: config.maxRecommendations || 3,
             ...config
         };
         
@@ -22,7 +17,7 @@ export class ActivityMatcher {
         this.activityClusters = [
             {
                 theme: "Mindfulness & Relaxation",
-                activities: ["Meditation", "Yoga", "Deep Breathing", "Gentle Stretching", "Mindfulness Practice", "Mindfulness"]
+                activities: ["Meditation", "Yoga", "Deep Breathing", "Gentle Stretching", "Mindfulness Practice"]
             },
             {
                 theme: "Focus & Productivity",
@@ -34,7 +29,7 @@ export class ActivityMatcher {
             },
             {
                 theme: "Social Engagement",
-                activities: ["Social Gatherings", "Conversation", "Hosting", "Meetings", "Group Activities", "Tea Ceremony", "Social Events", "Gifting", "Appreciation"]
+                activities: ["Social Gatherings", "Conversation", "Hosting", "Meetings", "Group Activities", "Tea Ceremony", "Social Events"]
             },
             {
                 theme: "Active & Energetic",
@@ -50,7 +45,7 @@ export class ActivityMatcher {
             },
             {
                 theme: "Everyday Rituals",
-                activities: ["Daily Rituals", "Morning Routines", "Afternoon Break", "Breakfast Companion", "Casual Sipping", "General Enjoyment", "Everyday Activities", "Tea rituals"]
+                activities: ["Daily Rituals", "Morning Routines", "Afternoon Break", "Breakfast Companion", "Casual Sipping", "General Enjoyment", "Everyday Activities"]
             }
         ];
         
@@ -83,21 +78,17 @@ export class ActivityMatcher {
 
     /**
      * Matches the tea's profile to suitable activities.
-     * @param {Object} teaModel - Tea model (for confidence calculation)
      * @param {object} compoundAnalysis - The 'analysis' object from CompoundCalculator.
      * Expected: stimulationLevel, relaxationLevel, compoundProfile.
      * @param {object} teaTypeAnalysis - The 'analysis' object from TeaTypeCalculator.
      * Expected: baseActivityHints.
      * @param {object} flavorAnalysis - The 'analysis' object from FlavorCalculator.
      * Expected: activityHints.
-     * @returns {Object} - Results with recommended activities and activity clusters with confidence
+     * @returns {Object} - Results with recommended activities and activity clusters
      */
-    matchActivity(teaModel = {}, compoundAnalysis = {}, teaTypeAnalysis = {}, flavorAnalysis = {}) {
+    matchActivity(compoundAnalysis = {}, teaTypeAnalysis = {}, flavorAnalysis = {}) {
         // Initialize the trace array
         let trace = [];
-
-        // Calculate data confidence from tea model
-        const dataConfidence = calculateDataConfidence(teaModel);
         
         // --- Extract and CONVERT data ---
         const compoundProfile = compoundAnalysis?.analysis?.compoundProfile || compoundAnalysis.compoundProfile || "Balanced";
@@ -174,20 +165,12 @@ export class ActivityMatcher {
                 break;
             case "Balanced":
             case "Balanced & Focused":
-                this.addActivityWithTrace(trace, activityScores, "Social Gatherings", 20, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
+                this.addActivityWithTrace(trace, activityScores, "Social Gatherings", 15, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
                 this.addActivityWithTrace(trace, activityScores, "Reading", 15, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
                 this.addActivityWithTrace(trace, activityScores, "Light Exercise", 15, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
                 this.addActivityWithTrace(trace, activityScores, "Everyday Activities", 15, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
                 this.addActivityWithTrace(trace, activityScores, "Work", 5, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
-
-                // Boost tea ceremony and reflection activities for balanced profile
-                this.addActivityWithTrace(trace, activityScores, "Tea rituals", 20, "Compound Profile Adjustment", "Profile is 'Balanced' - tea rituals ideal");
-                this.addActivityWithTrace(trace, activityScores, "Reflection", 20, "Compound Profile Adjustment", "Profile is 'Balanced' - reflection ideal");
-                this.addActivityWithTrace(trace, activityScores, "Mindfulness", 18, "Compound Profile Adjustment", "Profile is 'Balanced' - mindfulness boost");
-                this.addActivityWithTrace(trace, activityScores, "Appreciation", 18, "Compound Profile Adjustment", "Profile is 'Balanced' - appreciation boost");
-                this.addActivityWithTrace(trace, activityScores, "Tea Ceremony", 18, "Compound Profile Adjustment", "Profile is 'Balanced' - tea ceremony ideal");
-                this.addActivityWithTrace(trace, activityScores, "Gifting", 18, "Compound Profile Adjustment", "Profile is 'Balanced' - gifting ideal for sharing tea");
-
+                
                 // Only apply Puerh-specific boosts if the tea type is actually Puerh
                 if (primaryTeaType === 'puerh-shou' || primaryTeaType === 'puerh-sheng') {
                     this.addActivityWithTrace(trace, activityScores, "Relaxation", 20, "Compound Profile Adjustment", "Profile is 'Balanced' for Puerh");
@@ -196,7 +179,7 @@ export class ActivityMatcher {
                     this.addActivityWithTrace(trace, activityScores, "Digestive", 25, "Compound Profile Adjustment", "Profile is 'Balanced' for Puerh");
                     this.addActivityWithTrace(trace, activityScores, "Evening Wind-Down", 15, "Compound Profile Adjustment", "Profile is 'Balanced' for Puerh");
                 }
-
+                
                 // Reduce high-focus work for balanced profile
                 this.addActivityWithTrace(trace, activityScores, "High-Focus Work", -10, "Compound Profile Adjustment", "Profile is 'Balanced' or 'Balanced & Focused'");
                 break;
@@ -337,33 +320,24 @@ export class ActivityMatcher {
 
         // Generate a natural language description of the results
         const description = this.generateActivityDescription(
-            {
+            { 
                 recommendedActivities,
                 activityClusters
-            },
+            }, 
             primaryTeaType || "tea"
         );
-
-        trace.push({
-            step: "Description Generation",
-            reason: "Summarizing activity analysis",
-            adjustment: "Generated human-readable description",
+        
+        trace.push({ 
+            step: "Description Generation", 
+            reason: "Summarizing activity analysis", 
+            adjustment: "Generated human-readable description", 
             value: description.substring(0, 50) + "..." // Truncate for trace
         });
 
-        // Add confidence to recommendations
-        const recommendedActivitiesWithConfidence = this._addConfidenceToActivities(recommendedActivities, dataConfidence);
-        const activityClustersWithConfidence = this._addConfidenceToActivityClusters(activityClusters, dataConfidence);
-        trace.push({ step: "Confidence Assignment", reason: "Adding uncertainty metrics", adjustment: `Data confidence: ${Math.round(dataConfidence * 100)}%` });
-
         return {
-            recommendedActivities: recommendedActivitiesWithConfidence,
-            activityClusters: activityClustersWithConfidence,
+            recommendedActivities,
+            activityClusters,
             description,
-            confidence: {
-                overall: Math.round(dataConfidence * 100),
-                label: this._getConfidenceLabel(dataConfidence)
-            },
             trace
         };
     }
@@ -546,66 +520,6 @@ export class ActivityMatcher {
         if (!hint) return '';
         // Simple capitalize first letter
         return hint.charAt(0).toUpperCase() + hint.slice(1).toLowerCase();
-    }
-
-    /**
-     * Add confidence metrics to recommended activities
-     * @private
-     */
-    _addConfidenceToActivities(recommendedActivities, dataConfidence) {
-        return recommendedActivities.map(activity => {
-            const confidenceScore = (activity.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60;
-            const spread = Math.round(25 * (1 - dataConfidence));
-            return {
-                name: activity.name,
-                score: activity.score,
-                confidence: Math.round(confidenceScore),
-                range: {
-                    low: Math.max(0, Math.round(activity.score - spread)),
-                    high: Math.min(100, Math.round(activity.score + spread))
-                },
-                confidenceLabel: this._getConfidenceLabel(confidenceScore / 100)
-            };
-        });
-    }
-
-    /**
-     * Add confidence metrics to activity clusters
-     * @private
-     */
-    _addConfidenceToActivityClusters(activityClusters, dataConfidence) {
-        return activityClusters.map(cluster => {
-            const confidenceScore = (cluster.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60;
-            const spread = Math.round(25 * (1 - dataConfidence));
-            const activitiesWithConfidence = cluster.activities.map(activity => ({
-                name: activity.name,
-                score: activity.score,
-                confidence: Math.round((activity.score / 100) * dataConfidence * 100 + (1 - dataConfidence) * 60)
-            }));
-            return {
-                theme: cluster.theme,
-                activities: activitiesWithConfidence,
-                score: cluster.score,
-                confidence: Math.round(confidenceScore),
-                range: {
-                    low: Math.max(0, Math.round(cluster.score - spread)),
-                    high: Math.min(100, Math.round(cluster.score + spread))
-                },
-                confidenceLabel: this._getConfidenceLabel(confidenceScore / 100)
-            };
-        });
-    }
-
-    /**
-     * Get human-readable confidence label
-     * @private
-     */
-    _getConfidenceLabel(confidence) {
-        if (confidence >= 0.85) return 'Very High';
-        if (confidence >= 0.70) return 'High';
-        if (confidence >= 0.55) return 'Moderate';
-        if (confidence >= 0.40) return 'Low';
-        return 'Very Low';
     }
 }
 
