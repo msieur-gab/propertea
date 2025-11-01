@@ -254,32 +254,32 @@ export class ComprehensiveEffectScorer {
     if (teaData.geography) {
       const geo = teaData.geography;
 
-      // Altitude
+      // Altitude - influences caffeine/L-theanine development
       if (geo.altitude !== undefined) {
         const altCategory = this._categorizeAltitude(geo.altitude);
         const altEffects = this.GEOGRAPHY_EFFECTS.altitude[altCategory] || {};
-        this._addEffects(effectScores, altEffects, 0.6);
+        this._addEffects(effectScores, altEffects, 1.6);
       }
 
-      // Temperature
+      // Temperature - critical for tea leaf chemistry
       if (geo.temperature !== undefined) {
         const tempCategory = this._categorizeTemperature(geo.temperature);
         const tempEffects = this.GEOGRAPHY_EFFECTS.temperature[tempCategory] || {};
-        this._addEffects(effectScores, tempEffects, 0.6);
+        this._addEffects(effectScores, tempEffects, 1.8);
       }
 
-      // Humidity
+      // Humidity - affects oxidation and fermentation
       if (geo.humidity !== undefined) {
         const humidCategory = this._categorizeHumidity(geo.humidity);
         const humidEffects = this.GEOGRAPHY_EFFECTS.humidity[humidCategory] || {};
-        this._addEffects(effectScores, humidEffects, 0.5);
+        this._addEffects(effectScores, humidEffects, 1.5);
       }
 
-      // Solar radiation
+      // Solar radiation - influences polyphenol and amino acid development
       if (geo.solarRadiation !== undefined) {
         const solarCategory = this._categorizeSolar(geo.solarRadiation);
         const solarEffects = this.GEOGRAPHY_EFFECTS.solar[solarCategory] || {};
-        this._addEffects(effectScores, solarEffects, 0.5);
+        this._addEffects(effectScores, solarEffects, 1.7);
       }
     }
 

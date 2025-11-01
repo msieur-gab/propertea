@@ -1,13 +1,15 @@
 /**
- * test-api-accuracy.js - Validate API accuracy against ground truth
+ * test-17-tea-validation.js - Validate API against real-world Chinese tea dataset
  *
- * Tests the Phase 2 API against the 26-tea validation set
- * Measures accuracy for effects, timing, seasons, food pairings, and activities
+ * Tests the comprehensive effect scorer against a diverse 17-tea dataset provided by an expert
+ * Chinese tea enthusiast. Validates:
+ * - Mood/Energy Effects accuracy
+ * - Food pairing matches (fuzzy)
+ * - Activities matches (fuzzy)
+ * - Timing recommendations (best_time_of_day)
+ * - Season recommendations
  *
- * Notes on matching:
- * - Effects: Direct comparison + semantic similarity (harmonizing ≈ balancing)
- * - Food/Activities: Fuzzy matching (different references allowed)
- * - Seasons/Times: Exact interval comparison
+ * Dataset covers all major tea types: green, white, yellow, oolong, puerh, dark, red/black
  */
 
 import fs from 'fs';
@@ -18,8 +20,8 @@ import SeasonMatcher from './src/services/matchers/SeasonMatcher.js';
 import FoodMatcher from './src/services/matchers/FoodMatcher.js';
 import ActivityMatcher from './src/services/matchers/ActivityMatcher.js';
 
-// Load validation dataset
-const validationData = JSON.parse(fs.readFileSync('./tea_data_26.json', 'utf-8'));
+// Load the 17-tea dataset
+const validationData = JSON.parse(fs.readFileSync('./validation-dataset-17-tea.json', 'utf-8'));
 
 // Initialize services
 const effectService = new EffectService({ useNewModel: true });
@@ -28,7 +30,7 @@ const seasonMatcher = new SeasonMatcher();
 const foodMatcher = new FoodMatcher();
 const activityMatcher = new ActivityMatcher();
 
-// Mock analyses for testing
+// Mock analysis objects for matchers
 const mockCompoundAnalysis = {
   analysis: {
     compoundProfile: 'Balanced',
@@ -58,35 +60,54 @@ const mockFlavorAnalysis = {
   }
 };
 
-// Semantic similarity mapping for effects
-const effectSimilarity = {
-  'clarifying': ['focusing', 'energizing', 'stimulating'],
-  'refreshing': ['energizing', 'clarifying', 'focusing'],
-  'calming': ['relaxing', 'soothing', 'harmonizing'],
-  'relaxing': ['calming', 'soothing', 'grounding'],
-  'energizing': ['clarifying', 'refreshing', 'focusing'],
-  'harmonizing': ['balancing', 'calming', 'elevating'],
-  'warming': ['grounding', 'comforting', 'energizing'],
-  'aromatic': ['elevating', 'energizing', 'refreshing'],
-  'mentally-stimulating': ['energizing', 'focusing', 'clarifying']
+// Mood to Effect Mapping (conservative approach)
+const moodEffectMapping = {
+  'calming': ['calming', 'relaxing'],
+  'relaxing': ['relaxing', 'calming'],
+  'energizing': ['energizing', 'clarifying'],
+  'alerting': ['energizing', 'mentally-stimulating'],
+  'alertness': ['energizing', 'mentally-stimulating'],
+  'alert': ['energizing', 'mentally-stimulating'],
+  'mental clarity': ['clarifying', 'mentally-stimulating'],
+  'clear-headed': ['clarifying', 'mentally-stimulating'],
+  'mental alertness': ['mentally-stimulating', 'clarifying'],
+  'concentration': ['clarifying', 'mentally-stimulating'],
+  'focus': ['clarifying', 'mentally-stimulating'],
+  'focus and alertness': ['mentally-stimulating', 'clarifying'],
+  'focus and energy': ['mentally-stimulating', 'energizing'],
+  'gentle energy boost': ['elevating', 'energizing'],
+  'gentle alertness': ['elevating', 'energizing'],
+  'balanced energy': ['harmonizing', 'elevating'],
+  'balanced and calm': ['harmonizing', 'calming'],
+  'balanced state of mind': ['harmonizing', 'elevating'],
+  'steady energy': ['grounding', 'energizing'],
+  'enhances efficiency': ['mentally-stimulating', 'clarifying'],
+  'improves thinking': ['mentally-stimulating', 'clarifying'],
+  'improves concentration': ['clarifying', 'mentally-stimulating'],
+  'improves alertness': ['mentally-stimulating', 'clarifying'],
+  'stress reduction': ['relaxing', 'calming'],
+  'reduces anxiety': ['relaxing', 'calming'],
+  'reduces fatigue': ['energizing', 'clarifying'],
+  'refreshing': ['refreshing', 'energizing'],
+  'invigorating': ['energizing', 'clarifying'],
+  'lift spirits': ['elevating', 'harmonizing'],
+  'bright and powerful': ['clarifying', 'energizing'],
+  'promotes relaxation': ['relaxing', 'calming'],
+  'mindful alertness': ['clarifying', 'grounding'],
+  'mindful tasting': ['harmonizing', 'clarifying'],
+  'balanced energy boost': ['harmonizing', 'energizing'],
+  'gentle start to the day': ['calming', 'harmonizing'],
+  'calming effect': ['calming', 'relaxing'],
 };
 
-// Fuzzy match helper
+// Fuzzy match helper (from previous test)
 function fuzzyMatch(actual, expected, threshold = 0.6) {
   const actualLower = (actual || '').toLowerCase();
   const expectedLower = (expected || '').toLowerCase();
 
-  // Exact match
   if (actualLower === expectedLower) return 1.0;
-
-  // Substring match
   if (actualLower.includes(expectedLower) || expectedLower.includes(actualLower)) return 0.8;
 
-  // Check semantic similarity
-  const similar = effectSimilarity[expectedLower] || [];
-  if (similar.some(s => s === actualLower)) return 0.85;
-
-  // Levenshtein distance
   return levenshteinSimilarity(actualLower, expectedLower);
 }
 
@@ -112,18 +133,38 @@ function levenshteinSimilarity(a, b) {
   return 1 - (distance / maxLength);
 }
 
-// Test results tracking
+// Check if mood effect matches API effect
+function checkMoodEffectMatch(moodPhrase, apiDominant, apiSupporting) {
+  const moodLower = (moodPhrase || '').toLowerCase().trim();
+  const possibleEffects = moodEffectMapping[moodLower] || [];
+
+  // Check if either API effect matches the mapped effects
+  for (const possibleEffect of possibleEffects) {
+    if (apiDominant === possibleEffect || apiSupporting === possibleEffect) {
+      return 1.0;  // Primary effect match
+    }
+  }
+
+  // Check if mood phrase mentions the API effect directly
+  if (moodLower.includes(apiDominant) || moodLower.includes(apiSupporting)) {
+    return 0.8;  // Partial match
+  }
+
+  return 0.0;
+}
+
+// Results tracking
 const results = {
   total: 0,
   passed: 0,
-  effectsMatched: 0,
-  effectsTotal: 0,
+  moodEffectsMatched: 0,
+  moodEffectsTotal: 0,
   foodMatched: 0,
   foodTotal: 0,
   activitiesMatched: 0,
   activitiesTotal: 0,
-  timingMatched: 0,
-  timingTotal: 0,
+  timeMatched: 0,
+  timeTotal: 0,
   seasonMatched: 0,
   seasonTotal: 0,
   details: []
@@ -131,53 +172,48 @@ const results = {
 
 console.log('\n');
 console.log('████████████████████████████████████████████████████████████████████████████████');
-console.log('█ API ACCURACY VALIDATION - 26 CHINESE TEAS');
+console.log('█ VALIDATION TEST - 17 TEA DIVERSITY DATASET');
 console.log('████████████████████████████████████████████████████████████████████████████████\n');
+
+// Helper to map tea type to our format
+function mapTeaType(teaType) {
+  const mapping = {
+    'green': 'green',
+    'white': 'white',
+    'yellow': 'yellow',
+    'oolong': 'oolong',
+    'puerh': 'puerh',
+    'dark': 'dark',
+    'red/black': 'black',
+    'red': 'black'
+  };
+  return mapping[teaType.toLowerCase()] || 'green';
+}
 
 // Test each tea
 for (const validation of validationData) {
   results.total++;
 
-  // Helper function to derive roast level from processing methods
-  const deriveRoastLevel = (methods) => {
-    if (!methods) return 'light';
-    const methodsLower = methods.map(m => m.toLowerCase());
-
-    if (methodsLower.includes('charcoal roasting')) return 'charcoal';
-    if (methodsLower.includes('heavy roasting')) return 'heavy';
-    if (methodsLower.includes('roasting') || methodsLower.includes('roasted')) {
-      // Check context - oolong with roasting is typically medium-heavy
-      return 'medium';
-    }
-    if (methodsLower.includes('baking')) return 'light';
-    if (methodsLower.includes('drying')) return 'none';
-
-    return 'light';
-  };
-
-  // Convert validation data to our API format
+  // Convert validation data to API format
   const teaData = {
     name: validation.name,
-    type: validation.type.toLowerCase(),
-    caffeineLevel: normalizeCaffeine(validation.caffeineLevel),
-    lTheanineLevel: normalizeTheanine(validation.lTheanineLevel),
+    type: mapTeaType(validation.type),
+    caffeineLevel: validation.characteristics?.caffeine_level ? mapCaffeineLevel(validation.characteristics.caffeine_level) : 5,
+    lTheanineLevel: 5,  // Default - not provided in this dataset
     flavor: {
-      primary: validation.flavorProfile || [],
+      primary: [],  // Not explicitly provided, would be extracted from flavor_profile
       intensity: 'moderate'
     },
     geography: {
-      ...validation.geography,
+      altitude: 1000,  // Default
       temperature: 15,
       humidity: 70,
       solarRadiation: 150
     },
     processing: {
-      methods: validation.processingMethods || [],
+      methods: [],  // Not in this dataset
       oxidationLevel: 30,
-      roastLevel: deriveRoastLevel(validation.processingMethods)
-    },
-    harvest: {
-      season: (validation.recommendedContext?.drinkingSeason || ['spring'])[0].toLowerCase()
+      roastLevel: 'light'
     }
   };
 
@@ -186,65 +222,73 @@ for (const validation of validationData) {
     name: validation.name,
     type: validation.type,
     metrics: {
-      effects: 0,
+      moodEffects: 0,
       food: 0,
       activities: 0,
       timing: 0,
       season: 0
+    },
+    results: {
+      moodEffects: [],
+      food: [],
+      activities: [],
+      timing: null,
+      season: null
     }
   };
 
   try {
-    // Run analysis
+    // Run effect analysis
     const effectResult = effectService.infer(teaData);
     const timeResult = timeMatcher.matchTime(teaData, mockCompoundAnalysis, mockTeaTypeAnalysis, mockFlavorAnalysis);
     const seasonResult = seasonMatcher.matchSeason(teaData);
     const foodResult = foodMatcher.matchFood(teaData, mockFlavorAnalysis, mockCompoundAnalysis, mockTeaTypeAnalysis);
     const activityResult = activityMatcher.matchActivity(teaData, mockCompoundAnalysis, mockTeaTypeAnalysis, mockFlavorAnalysis);
 
-    // === EFFECTS ACCURACY ===
-    results.effectsTotal += 2;
-
     const apiDominant = effectResult.expectedEffects.dominant || '';
-    const expectedDominant = validation.expectedEffects.dominant || '';
-    const dominantMatch = fuzzyMatch(apiDominant, expectedDominant);
-
-    if (dominantMatch >= 0.7) {
-      results.effectsMatched++;
-      detail.metrics.effects += 1;
-    } else {
-      passed = false;
-    }
-
     const apiSupporting = effectResult.expectedEffects.supporting || '';
-    const expectedSupporting = validation.expectedEffects.supporting || '';
-    const supportingMatch = fuzzyMatch(apiSupporting, expectedSupporting);
 
-    if (supportingMatch >= 0.7) {
-      results.effectsMatched++;
-      detail.metrics.effects += 1;
-    } else {
-      passed = false;
+    // === MOOD ENERGY EFFECTS ACCURACY ===
+    if (validation.characteristics?.mood_energy_effects && Array.isArray(validation.characteristics.mood_energy_effects)) {
+      validation.characteristics.mood_energy_effects.forEach(moodPhrase => {
+        results.moodEffectsTotal++;
+        const match = checkMoodEffectMatch(moodPhrase, apiDominant, apiSupporting);
+
+        if (match >= 0.7) {
+          results.moodEffectsMatched++;
+          detail.metrics.moodEffects += 1;
+          detail.results.moodEffects.push({ mood: moodPhrase, status: '✓' });
+        } else {
+          detail.results.moodEffects.push({ mood: moodPhrase, status: '✗' });
+          passed = false;
+        }
+      });
     }
 
     // === TIMING ACCURACY ===
-    results.timingTotal++;
-    const validationTimes = validation.recommendedContext?.timeOfDay || [12];
-    const apiTimes = timeResult.recommendedTimes.slice(0, 3).map(t => t.hour);
+    results.timeTotal++;
+    const validationTimes = validation.best_time_of_day || [];
+    const apiTimes = timeResult.recommendedTimes.slice(0, 3).map(t => {
+      const hour = t.hour;
+      if (hour < 12) return 'Morning';
+      if (hour < 17) return 'Afternoon';
+      if (hour < 21) return 'Evening';
+      return 'Night';
+    });
 
-    const timeMatch = validationTimes.some(vt => apiTimes.includes(vt) ||
-      Math.abs(vt - (apiTimes[0] || 12)) <= 2);
-
+    const timeMatch = validationTimes.some(vt => apiTimes.includes(vt));
     if (timeMatch) {
-      results.timingMatched++;
+      results.timeMatched++;
       detail.metrics.timing = 1;
+      detail.results.timing = `✓ ${apiTimes[0]}`;
     } else {
+      detail.results.timing = `✗ API: ${apiTimes[0]}, Expected: ${validationTimes[0]}`;
       passed = false;
     }
 
     // === SEASON ACCURACY ===
     results.seasonTotal++;
-    const validationSeasons = validation.recommendedContext?.drinkingSeason || ['spring'];
+    const validationSeasons = validation.best_season || [];
     const apiSeasons = seasonResult.recommendedSeasons.map(s => s.season?.toLowerCase() || '');
 
     const seasonMatch = validationSeasons.some(vs =>
@@ -254,12 +298,14 @@ for (const validation of validationData) {
     if (seasonMatch) {
       results.seasonMatched++;
       detail.metrics.season = 1;
+      detail.results.season = `✓ ${apiSeasons[0]}`;
     } else {
+      detail.results.season = `✗ API: ${apiSeasons[0]}, Expected: ${validationSeasons[0]}`;
       passed = false;
     }
 
     // === FOOD PAIRING ACCURACY ===
-    const validationFoods = validation.recommendedContext?.foodPairing || [];
+    const validationFoods = validation.food_pairings || [];
     const apiFoods = foodResult.recommendedFoods.map(f => f.name);
 
     validationFoods.forEach(vf => {
@@ -272,7 +318,7 @@ for (const validation of validationData) {
     });
 
     // === ACTIVITY ACCURACY ===
-    const validationActivities = validation.recommendedContext?.recommendedActivity || [];
+    const validationActivities = validation.activities || [];
     const apiActivities = activityResult.recommendedActivities.map(a => a.name);
 
     validationActivities.forEach(va => {
@@ -289,8 +335,7 @@ for (const validation of validationData) {
     }
 
     detail.status = passed ? '✅' : '⚠️';
-    detail.dominantEffect = { api: apiDominant, expected: expectedDominant, match: (dominantMatch * 100).toFixed(0) + '%' };
-    detail.supportingEffect = { api: apiSupporting, expected: expectedSupporting, match: (supportingMatch * 100).toFixed(0) + '%' };
+    detail.apiEffects = { dominant: apiDominant, supporting: apiSupporting };
 
     results.details.push(detail);
 
@@ -303,13 +348,13 @@ for (const validation of validationData) {
 }
 
 // === PRINT RESULTS ===
-console.log('\n📊 OVERALL ACCURACY METRICS');
+console.log('📊 OVERALL ACCURACY METRICS');
 console.log('─'.repeat(80));
 console.log(`✅ Teas with valid analysis: ${results.passed}/${results.total} (${(results.passed/results.total*100).toFixed(1)}%)`);
-console.log(`\n💫 EFFECTS ACCURACY`);
-console.log(`  Dominant + Supporting: ${results.effectsMatched}/${results.effectsTotal} (${(results.effectsMatched/results.effectsTotal*100).toFixed(1)}%)`);
+console.log(`\n💫 MOOD/ENERGY EFFECTS ACCURACY`);
+console.log(`  Matches: ${results.moodEffectsMatched}/${results.moodEffectsTotal} (${(results.moodEffectsMatched/results.moodEffectsTotal*100).toFixed(1)}%)`);
 console.log(`\n⏰ TIMING ACCURACY`);
-console.log(`  Recommended times: ${results.timingMatched}/${results.timingTotal} (${(results.timingMatched/results.timingTotal*100).toFixed(1)}%)`);
+console.log(`  Best times of day: ${results.timeMatched}/${results.timeTotal} (${(results.timeMatched/results.timeTotal*100).toFixed(1)}%)`);
 console.log(`\n🌍 SEASON ACCURACY`);
 console.log(`  Best seasons: ${results.seasonMatched}/${results.seasonTotal} (${(results.seasonMatched/results.seasonTotal*100).toFixed(1)}%)`);
 console.log(`\n🍽️ FOOD PAIRING ACCURACY`);
@@ -325,9 +370,12 @@ results.details.forEach((detail, idx) => {
   if (detail.error) {
     console.log(`   Error: ${detail.error}`);
   } else {
-    console.log(`   Dominant:  ${detail.dominantEffect.api} vs ${detail.dominantEffect.expected} (${detail.dominantEffect.match})`);
-    console.log(`   Supporting: ${detail.supportingEffect.api} vs ${detail.supportingEffect.expected} (${detail.supportingEffect.match})`);
-    console.log(`   Metrics: E:${detail.metrics.effects.toFixed(1)} F:${detail.metrics.food.toFixed(1)} A:${detail.metrics.activities.toFixed(1)} T:${detail.metrics.timing} S:${detail.metrics.season}`);
+    console.log(`   API Effects: ${detail.apiEffects.dominant} / ${detail.apiEffects.supporting}`);
+    if (detail.results.moodEffects.length > 0) {
+      console.log(`   Mood Effects: ${detail.results.moodEffects.map(m => m.status).join('/')}`);
+    }
+    console.log(`   Timing: ${detail.results.timing} | Season: ${detail.results.season}`);
+    console.log(`   Metrics: Mood:${detail.metrics.moodEffects.toFixed(1)} Food:${detail.metrics.food.toFixed(1)} Act:${detail.metrics.activities.toFixed(1)}`);
   }
 });
 
@@ -335,15 +383,14 @@ console.log('\n' + '████████████████████
 console.log('█ VALIDATION COMPLETE');
 console.log('████████████████████████████████████████████████████████████████████████████████\n');
 
-// Helper functions
-function normalizeCaffeine(level) {
-  // Convert from 0-100 scale to 0-10 scale
-  if (level > 10) return Math.round(level / 10);
-  return level;
-}
-
-function normalizeTheanine(level) {
-  // Convert from 0-100 scale to 0-10 scale
-  if (level > 10) return Math.round(level / 10);
-  return level;
+// Helper: Map caffeine level text to numeric
+function mapCaffeineLevel(level) {
+  const mapping = {
+    'low': 2,
+    'low to moderate': 3,
+    'moderate': 5,
+    'moderate to high': 7,
+    'high': 8
+  };
+  return mapping[level.toLowerCase()] || 5;
 }
