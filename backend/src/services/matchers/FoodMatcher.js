@@ -32,15 +32,15 @@ export class FoodMatcher {
         
         // Define food clusters with related items
         this.foodClusters = [
-             { occasion: "Breakfast", foods: ["Breakfast Foods", "Toast", "Oatmeal", "Yogurt", "Fruit Salad", "Pancakes", "Pastries", "Scones", "Eggs"] },
-             { occasion: "Light Lunch", foods: ["Salads", "Sandwiches", "Light Soups", "Steamed Vegetables", "Sushi", "Rice Dishes", "Light Cheese", "Wraps", "Quiche"] },
-             { occasion: "Afternoon Tea", foods: ["Pastries", "Light Desserts", "Scones", "Cookies", "Cakes", "Biscuits", "Fruit Tarts", "Madeleines"] },
-             { occasion: "Dinner", foods: ["Grilled Meats", "Roasted Vegetables", "Stews", "Rich Soups", "Dark Meats", "Mushrooms", "Root Vegetables", "Fish Dishes", "Hearty Dishes", "Game Meats"] },
-             { occasion: "Dessert", foods: ["Desserts", "Chocolate", "Light Desserts", "Fruit Desserts", "Ice Cream", "Sorbets", "Sweet Pastries", "Rich Desserts", "Custards", "Spiced Desserts", "Creamy Desserts"] },
-             { occasion: "Asian Cuisine", foods: ["Sushi", "Steamed Rice", "Rice Dishes", "Stir-fried Vegetables", "Tofu", "Miso Soup", "Noodles", "Dumplings", "Thai Curry", "Dim Sum", "Seafood"] },
+             { occasion: "Breakfast", foods: ["Breakfast Foods", "Toast", "Oatmeal", "Yogurt", "Fruit Salad", "Pancakes", "Pastries", "Scones", "Eggs", "Honey Cakes"] },
+             { occasion: "Light Lunch", foods: ["Salads", "Sandwiches", "Light Soups", "Steamed Vegetables", "Sushi", "Rice Dishes", "Light Cheese", "Wraps", "Quiche", "White Meats"] },
+             { occasion: "Afternoon Tea", foods: ["Pastries", "Light Desserts", "Scones", "Cookies", "Cakes", "Biscuits", "Fruit Tarts", "Madeleines", "Honey Cakes", "Caramelized Fruits"] },
+             { occasion: "Dinner", foods: ["Grilled Meats", "Roasted Vegetables", "Stews", "Rich Soups", "Dark Meats", "Mushrooms", "Root Vegetables", "Fish Dishes", "Hearty Dishes", "Game Meats", "White Meats", "Spicy Foods", "Creamy Dishes"] },
+             { occasion: "Dessert", foods: ["Desserts", "Chocolate", "Light Desserts", "Fruit Desserts", "Ice Cream", "Sorbets", "Sweet Pastries", "Rich Desserts", "Custards", "Spiced Desserts", "Creamy Desserts", "White Chocolate", "Caramelized Fruits", "Apple Desserts"] },
+             { occasion: "Asian Cuisine", foods: ["Sushi", "Steamed Rice", "Rice Dishes", "Stir-fried Vegetables", "Tofu", "Miso Soup", "Noodles", "Dumplings", "Thai Curry", "Dim Sum", "Seafood", "Green Curry", "Asian Stir-fries"] },
              { occasion: "Mediterranean Cuisine", foods: ["Olive Oil", "Fresh Herbs", "Cheese", "Grilled Fish", "Salads", "Hummus", "Falafel", "Lamb Dishes"] },
-             { occasion: "Cheese Pairing", foods: ["Cheese", "Hard Cheese", "Soft Cheese", "Goat Cheese", "Brie", "Cheddar", "Blue Cheese", "Cheese Plates", "Light Cheese", "Strong Cheese"] },
-             { occasion: "Spiced Foods Pairing", foods: ["Spiced Cakes", "Curries", "Spiced Dishes", "Thai Curry", "Middle Eastern Sweets"] }
+             { occasion: "Cheese Pairing", foods: ["Cheese", "Hard Cheese", "Soft Cheese", "Goat Cheese", "Brie", "Cheddar", "Blue Cheese", "Cheese Plates", "Light Cheese", "Strong Cheese", "Creamy Goat Cheese"] },
+             { occasion: "Spiced Foods Pairing", foods: ["Spiced Cakes", "Curries", "Spiced Dishes", "Thai Curry", "Middle Eastern Sweets", "Spicy Foods", "Green Curry"] }
         ];
 
         // Map flavor categories to relevant food items or groups
@@ -66,14 +66,14 @@ export class FoodMatcher {
         this.flavorToSpecificFoods = {
             "jasmine": ["Light Desserts", "Steamed Vegetables"],
             "bergamot": ["Citrus Desserts", "Scones", "Dark Chocolate"],
-            "cinnamon": ["Baked Goods", "Apples", "Spiced Desserts"],
+            "cinnamon": ["Baked Goods", "Apples", "Spiced Desserts", "Honey Cakes"],
             "vanilla": ["Ice Cream", "Custards", "Light Cakes", "Pastries"],
-            "chocolate": ["Dark Chocolate", "Chocolate Desserts", "Berries"],
-            "honey": ["Yogurt", "Nuts", "Fruits", "Toast", "Light Cheese"],
-            "caramel": ["Apples", "Ice Cream", "Nuts", "Dark Chocolate", "Baked Goods", "Roasted Meats"],
+            "chocolate": ["Dark Chocolate", "Chocolate Desserts", "Berries", "White Chocolate"],
+            "honey": ["Yogurt", "Nuts", "Fruits", "Toast", "Light Cheese", "Honey Cakes"],
+            "caramel": ["Apples", "Ice Cream", "Nuts", "Dark Chocolate", "Baked Goods", "Roasted Meats", "Caramelized Fruits"],
             "peach": ["Cream Desserts", "Light Cakes", "Soft Cheese"],
             "dark fruits": ["Dark Chocolate", "Game Meats", "Strong Cheese", "Spiced Desserts"],
-            "apple": ["Pork Dishes", "Caramel", "Cheddar"],
+            "apple": ["Pork Dishes", "Caramel", "Cheddar", "Apple Desserts"],
             "citrus": ["Seafood", "Salads", "Chicken"],
             "smoke": ["Smoked Meats", "BBQ", "Strong Cheese"],
             "malt": ["Baked Goods", "Biscuits", "Breakfast Foods"],
@@ -303,6 +303,16 @@ export class FoodMatcher {
             if (roastLevel === "Heavy" || roastLevel === "Charcoal") {
                  ["Dark Chocolate", "Spiced Desserts", "Game Meats", "Rich Stews", "BBQ"].forEach(f => this.addFoodWithTrace(trace, foodPairingScores, f, this.config.heavyRoastExtra, "Heavy Roast Pairing", `Extra boost for ${roastLevel}`));
             }
+        }
+
+        // Oolong-Specific Food Boosts
+        const teaType = teaTypeAnalysis?.primaryType || "";
+        if (teaType.toLowerCase().includes('oolong')) {
+            const oolongFoods = ["Asian Stir Fries", "Green Curry", "Thai Curry", "Spicy Foods", "White Meats", "Creamy Goat Cheese", "Fruit Tarts", "Caramelized Fruits", "Honey Cakes", "White Chocolate", "Grilled Meats", "Seafood"];
+            trace.push({ step: "Tea Type Boost", reason: "Oolong-specific pairings", adjustment: `Boosting ${oolongFoods.length} oolong-compatible foods` });
+            oolongFoods.forEach(food => {
+                this.addFoodWithTrace(trace, foodPairingScores, food, 20, "Oolong Pairing", `Perfect pairing for ${teaType}`);
+            });
         }
 
         // --- 7. Final Processing ---
