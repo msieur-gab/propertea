@@ -55,9 +55,9 @@ export class BrewingRenderer {
   /**
    * Render brewing recommendations from tea data
    * @param {Object} teaData - Tea object { type, subType, processingMethods, name, ... }
-   * @param {string} preferredStyle - 'gongfu' or 'western'
+   * @param {string} preferredStyle - 'gongfu' or 'western' (now provides both)
    * @param {Object} processingAnalysis - Optional processing analysis data
-   * @returns {Object} - Brewing recommendations
+   * @returns {Object} - Brewing recommendations with multiple styles and vessel options
    */
   render(teaData = {}, preferredStyle = 'gongfu', processingAnalysis = {}) {
     const trace = [];
@@ -113,49 +113,83 @@ export class BrewingRenderer {
     });
 
     // Adjust brewing parameters based on processing
-    const adjustedParams = this._adjustParamsForProcessing(baseParams, normalizedMethods);
+    const adjustedGongfuParams = this._adjustParamsForProcessing(baseParams, normalizedMethods);
+    const adjustedWesternParams = this._adjustParamsForProcessing(
+      this.defaultBrewingParams[teaType]?.western || baseParams,
+      normalizedMethods
+    );
 
     trace.push({
       step: "Parameter Adjustment",
-      reason: "Apply processing adjustments",
-      adjustment: `Adjusted temperature and steep time`,
-      value: `Temperature: ${adjustedParams.temperature}°C, Steep: ${adjustedParams.steepTime}s`
+      reason: "Apply processing adjustments to both styles",
+      adjustment: `Gongfu: ${adjustedGongfuParams.temperature}°C/${adjustedGongfuParams.steepTime}s | Western: ${adjustedWesternParams.temperature}°C/${adjustedWesternParams.steepTime}s`,
+      value: "Both brewing styles calibrated"
     });
 
+    // Get tea description from already-fetched tea type object
+    const teaDescription = teaTypeObj?.description || `A tea from the ${teaType} family`;
+
+    // Determine vessel recommendations
+    const vesselRecommendations = this._getVesselRecommendations(teaType, brewingStyle, normalizedMethods);
+
     // Generate brewing guidance
-    const guidance = this._generateGuidance(teaType, brewingStyle, adjustedParams, normalizedMethods);
+    const gongfuGuidance = this._generateGuidance(teaType, 'gongfu', adjustedGongfuParams, normalizedMethods);
+    const westernGuidance = this._generateGuidance(teaType, 'western', adjustedWesternParams, normalizedMethods);
+
+    trace.push({
+      step: "Vessel & Style Selection",
+      reason: "Determine optimal brewing vessels and philosophy",
+      adjustment: `${vesselRecommendations.recommended.name} recommended for ${brewingStyle} style`,
+      value: `Available vessels: ${vesselRecommendations.allOptions.map(v => v.name).join(', ')}`
+    });
 
     return {
-      // Tea identification
+      // Tea identification with description
       tea: {
         name: teaName,
         type: teaType,
-        subType: teaData.subType || null
+        subType: teaData.subType || null,
+        description: teaDescription,
+        characteristics: {
+          caffeine,
+          theanine,
+          processingMethods: Array.from(normalizedMethods)
+        }
       },
 
-      // Brewing parameters
-      brewingParameters: adjustedParams,
+      // Multiple brewing styles with full parameters
+      brewingStyles: [
+        {
+          style: 'gongfu',
+          philosophy: this._getStylePhilosophy('gongfu'),
+          description: this._getStyleDescription('gongfu'),
+          parameters: adjustedGongfuParams,
+          guidance: gongfuGuidance,
+          vessels: this._getStyleVessels('gongfu', vesselRecommendations)
+        },
+        {
+          style: 'western',
+          philosophy: this._getStylePhilosophy('western'),
+          description: this._getStyleDescription('western'),
+          parameters: adjustedWesternParams,
+          guidance: westernGuidance,
+          vessels: this._getStyleVessels('western', vesselRecommendations)
+        }
+      ],
 
-      // Brewing style info
-      style: {
+      // Recommended style
+      recommendedStyle: {
         name: brewingStyle,
-        description: this._getStyleDescription(brewingStyle)
+        reason: this._getStyleRecommendationReason(teaType, brewingStyle, normalizedMethods)
       },
 
-      // Tea characteristics
-      characteristics: {
-        caffeine,
-        theanine,
-        processingMethods: Array.from(normalizedMethods)
-      },
-
-      // Brewing guidance
-      guidance,
+      // Vessel recommendations (detailed)
+      vessels: vesselRecommendations,
 
       // Supporting data
       trace,
       confidence: 0.9,
-      rendererVersion: '1.0'
+      rendererVersion: '2.0'
     };
   }
 
@@ -332,6 +366,17 @@ export class BrewingRenderer {
   }
 
   /**
+   * Get brewing style philosophy (why this approach works)
+   */
+  _getStylePhilosophy(style) {
+    const philosophies = {
+      'gongfu': 'Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions, creating a contemplative experience where each steep tells a new story of the leaf\'s character',
+      'western': 'Simplicity & Accessibility - Single longer infusion captures the essential character of the tea in a straightforward, approachable manner suitable for everyday enjoyment'
+    };
+    return philosophies[style] || 'Traditional brewing approach';
+  }
+
+  /**
    * Get brewing style description
    */
   _getStyleDescription(style) {
@@ -340,6 +385,154 @@ export class BrewingRenderer {
       'western': 'European/American style with larger amount of water and longer steep time'
     };
     return descriptions[style] || 'Unknown brewing style';
+  }
+
+  /**
+   * Get vessel recommendations for tea type and style
+   */
+  _getVesselRecommendations(teaType, style, processingMethods) {
+    const vesselDatabase = {
+      'white': {
+        gongfu: {
+          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Porcelain covered cup reveals delicate white tea characteristics' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Allows observation of fine white leaves unfurling' },
+            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Gentle heat retention for delicate infusions' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser/Strainer', description: 'Simple steeping in larger cup for white tea' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Allows admiration of white tea\'s pale liquor and leaf movement' },
+            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Distributes heat evenly for consistent steeping' }
+          ]
+        }
+      },
+      'green': {
+        gongfu: {
+          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Traditional vessel that preserves fresh, vibrant green tea characteristics' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases the jade-green color and leaf movement' },
+            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Provides gentle, even heat distribution' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Quick steeping captures fresh, vegetal character' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Displays vibrant jade-green color beautifully' },
+            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Fine mesh captures even the smallest green tea leaves' }
+          ]
+        }
+      },
+      'oolong': {
+        gongfu: {
+          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Gold standard for oolong - perfectly suited for multiple infusions and leaf observation' },
+          alternatives: [
+            { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Seasoned clay enhances oolong\'s complex flavors and retains heat beautifully' },
+            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Elegant way to watch oolong leaves dance through infusions' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Holds enough volume for longer steep while maintaining heat' },
+          alternatives: [
+            { id: 'VESSEL_TEA_INFUSER', name: 'Large Tea Infuser', description: 'Gives oolong leaves room to unfurl in larger cup' },
+            { id: 'VESSEL_GLASS_CUP', name: 'Large Glass Cup', description: 'Displays oolong\'s rich colors and allows easy leaf observation' }
+          ]
+        }
+      },
+      'black': {
+        gongfu: {
+          recommended: { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Retains heat well for robust black tea\'s full expression across infusions' },
+          alternatives: [
+            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Good heat retention for bold, complex flavors' },
+            { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Modern gongfu approach to black tea appreciation' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Classic choice for full-bodied black tea brewing' },
+          alternatives: [
+            { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Works well for simple, straightforward black tea' },
+            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Allows leaf expansion for full flavor extraction' }
+          ]
+        }
+      },
+      'puerh': {
+        gongfu: {
+          recommended: { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Ideal for puerh - seasoned pots develop character that complements aged tea perfectly' },
+          alternatives: [
+            { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Modern approach for observing puerh\'s deep colors and transformations' },
+            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases puerh\'s rich, dark liquor through infusions' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Heavy-walled pot maintains heat for puerh\'s extractive steeping' },
+          alternatives: [
+            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Generous opening accommodates puerh leaf pieces' },
+            { id: 'VESSEL_INFUSER_BASKET', name: 'Infuser Basket', description: 'Allows puerh to fully expand in larger cup' }
+          ]
+        }
+      },
+      'yellow': {
+        gongfu: {
+          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Perfect for rare yellow tea - allows gentle brewing of delicate leaves' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases yellow tea\'s unique golden hue' },
+            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Gentle heat retention preserves subtle flavors' }
+          ]
+        },
+        western: {
+          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Simple approach for this rare tea variety' },
+          alternatives: [
+            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Displays yellow tea\'s signature golden color' },
+            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Gentle brewing for delicate characteristics' }
+          ]
+        }
+      }
+    };
+
+    const teaVessels = vesselDatabase[teaType] || vesselDatabase['oolong'];
+    const styleVessels = teaVessels[style] || teaVessels['gongfu'];
+
+    return {
+      recommended: styleVessels.recommended,
+      alternatives: styleVessels.alternatives,
+      allOptions: [styleVessels.recommended, ...styleVessels.alternatives]
+    };
+  }
+
+  /**
+   * Get vessels suited for specific brewing style
+   */
+  _getStyleVessels(style, vesselRecommendations) {
+    return {
+      recommended: vesselRecommendations.recommended,
+      alternatives: vesselRecommendations.alternatives
+    };
+  }
+
+  /**
+   * Get reason for recommending specific brewing style
+   */
+  _getStyleRecommendationReason(teaType, style, processingMethods) {
+    const reasons = {
+      'gongfu': 'This style is ideal for appreciating the full complexity and evolution of this tea across multiple infusions. Each steep reveals new flavor dimensions and allows observation of leaf unfurling.',
+      'western': 'This straightforward approach captures the essential character of this tea in a single steeping, perfect for everyday enjoyment and accessibility.'
+    };
+
+    // Add processing-specific recommendations
+    if (processingMethods.has('PROCESSING_ROASTED')) {
+      if (style === 'gongfu') {
+        return 'Gongfu brewing extracts the nuanced roasted character beautifully through multiple short infusions, allowing the roasting notes to evolve across steeps.';
+      }
+    }
+
+    if (processingMethods.has('PROCESSING_FERMENTED')) {
+      if (style === 'gongfu') {
+        return 'Gongfu style works particularly well with fermented teas, as each infusion reveals the complex fermentation notes through progressive extraction.';
+      }
+    }
+
+    return reasons[style] || reasons['gongfu'];
   }
 
   /**

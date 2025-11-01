@@ -196,11 +196,17 @@ export class ActivityRenderer {
       .sort((a, b) => b[1] - a[1])
       .slice(0, this.config.maxRecommendations);
 
-    const recommendedActivities = sortedActivities.map(([activity, score]) => ({
-      activity,
-      score: Math.min(100, score),
-      rationale: this._getRationale(activity, compoundProfile, stimulationLevel)
-    }));
+    const recommendedActivities = sortedActivities.map(([activity, score]) => {
+      const activityObj = this._getActivityObject(activity);
+      return {
+        activity,
+        score: Math.min(100, score),
+        description: activityObj?.description || 'A recommended activity',
+        rationale: this._getRationale(activity, compoundProfile, stimulationLevel),
+        timing: activityObj?.suggestedTiming || 'Flexible timing',
+        benefits: activityObj?.benefits || []
+      };
+    });
 
     trace.push({
       step: "Final Selection",
@@ -234,6 +240,20 @@ export class ActivityRenderer {
   }
 
   // ========== Helper Methods ==========
+
+  /**
+   * Get activity object from taxonomy
+   */
+  _getActivityObject(activityName) {
+    // Search through taxonomy for matching activity
+    let activityObj = null;
+    Object.entries(this.activityTaxonomy.ACTIVITIES).forEach(([id, activity]) => {
+      if (activity.displayName === activityName) {
+        activityObj = activity;
+      }
+    });
+    return activityObj;
+  }
 
   /**
    * Score bonus based on compound profile

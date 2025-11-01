@@ -242,9 +242,12 @@ export class FoodRenderer {
       return {
         food: foodName,
         foodId: foodId,
+        description: foodObj?.description || 'A complementary food pairing',
         score: Math.min(100, score),
         rationale: this._getRationale(foodName, dominantFlavors, dominantCategories),
-        category: this._getFoodCategory(foodName)
+        category: this._getFoodCategory(foodName),
+        flavorProfile: foodObj?.flavorProfile || [],
+        pairingTechnique: this._getPairingTechnique(foodName, dominantFlavors)
       };
     });
 
@@ -342,6 +345,38 @@ export class FoodRenderer {
       : `overall profile`;
 
     return `${food} ${flavorMatch}, enhancing ${categoryMatch}`;
+  }
+
+  /**
+   * Get pairing technique guidance for specific food and flavors
+   */
+  _getPairingTechnique(foodName, dominantFlavors) {
+    const techniqueMap = {
+      // Light Desserts
+      'Light Desserts': 'Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony',
+      'Pastries': 'The tea\'s complexity complements delicate pastry layers without overwhelming',
+      'Fruit Desserts': 'Fruity tea notes echo fruit-based dessert flavors',
+
+      // Proteins
+      'White Fish': 'Lighter, delicate tea pairs perfectly with mild fish - each enhances the other\'s subtlety',
+      'Poultry': 'Tea\'s complexity pairs well with poultry\'s neutral canvas',
+      'Shellfish': 'Mineral notes align with oceanic flavors',
+
+      // Vegetables
+      'Steamed Vegetables': 'Tea\'s warmth complements fresh, light vegetable preparations',
+      'Leafy Greens': 'Herbaceous tea notes mirror green vegetable characters',
+      'Root Vegetables': 'Earthy tea components resonate with vegetable earthiness',
+
+      // Prepared Dishes
+      'Rice Dishes': 'Tea cleanses palate between spoonfuls while complementing rice\'s subtle flavors',
+      'Noodle Dishes': 'Traditional pairing - tea and noodles have long been companions',
+      'Breakfast Foods': 'Morning tea ritual pairs harmoniously with breakfast preparation',
+
+      // Default
+      'default': 'Enjoy tea alongside food for complementary flavor experience'
+    };
+
+    return techniqueMap[foodName] || techniqueMap['default'];
   }
 
   /**
