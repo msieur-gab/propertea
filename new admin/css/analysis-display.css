@@ -1,0 +1,354 @@
+/* Analysis Display Styles */
+
+.analysis-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.analysis-header {
+    margin-bottom: 40px;
+    border-bottom: 3px solid #8B4513;
+    padding-bottom: 20px;
+}
+
+.analysis-header h2 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.analysis-header .original-name {
+    display: block;
+    font-size: 1.1em;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.analysis-section {
+    margin-bottom: 35px;
+    background: #f9f7f4;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #8B4513;
+}
+
+.analysis-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #8B4513;
+    font-size: 1.8em;
+}
+
+.analysis-section .description {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Tea Type Section */
+.tea-type-section .info-block {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.tea-type-section .info-block p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.tea-type-section .characteristics {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.tea-type-section .characteristics p {
+    margin: 8px 0;
+}
+
+/* Compounds Section */
+.compounds-section .compounds-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.compound-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.compound-item label {
+    display: block;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 8px;
+}
+
+.compound-item span {
+    display: block;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.compounds-section .compounds-analysis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.analysis-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.analysis-item.highlight {
+    background: #fef5f0;
+    border: 2px solid #8B4513;
+}
+
+.analysis-item label {
+    display: block;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.analysis-item span {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Flavor Section */
+.flavor-section .flavor-profile {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flavor-item {
+    margin-bottom: 20px;
+}
+
+.flavor-item:last-child {
+    margin-bottom: 0;
+}
+
+.flavor-item label {
+    display: block;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.note {
+    background: #e8d4c4;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.95em;
+}
+
+.note.dominant {
+    background: #d4a574;
+    color: white;
+    font-weight: bold;
+}
+
+.category {
+    background: #8B4513;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.95em;
+}
+
+.flavor-item > span {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Processing Section */
+.processing-section .processing-methods {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.processing-section label {
+    display: block;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+.method-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.method {
+    background: #d4a574;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+/* Geography Section */
+.geography-section .location-info,
+.geography-section .climate-info {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.geography-section .location-info p,
+.geography-section .climate-info p {
+    margin: 8px 0;
+}
+
+.climate-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.climate-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.climate-item label {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.climate-item span {
+    color: #333;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.recommendation-block {
+    background: #f0ebe5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #8B4513;
+}
+
+.recommendation-block h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #8B4513;
+    font-size: 1.3em;
+}
+
+.recommendation-block .explanation {
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.recommendation-block .recommendations {
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.recommendation-block p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.recommendation-block strong {
+    color: #8B4513;
+}
+
+/* Brewing Guide */
+.brewing-block .brewing-style {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border-top: 3px solid #d4a574;
+}
+
+.brewing-block .brewing-style h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #8B4513;
+    font-size: 1.1em;
+}
+
+.brewing-block .brewing-style p {
+    margin: 6px 0;
+    font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .analysis-container {
+        padding: 20px;
+    }
+
+    .analysis-header h2 {
+        font-size: 1.8em;
+    }
+
+    .analysis-section {
+        padding: 15px;
+    }
+
+    .analysis-section h3 {
+        font-size: 1.4em;
+    }
+
+    .recommendations-section {
+        grid-template-columns: 1fr;
+    }
+
+    .climate-info {
+        grid-template-columns: 1fr;
+    }
+
+    .compounds-section .compounds-data {
+        grid-template-columns: 1fr;
+    }
+
+    .compounds-section .compounds-analysis {
+        grid-template-columns: 1fr;
+    }
+}

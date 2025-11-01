@@ -1,0 +1,31 @@
+{
+    "id": "1744876611977",
+    "name": "Guandong Tea",
+    "originalName": "",
+    "type": "green",
+    "subType": "",
+    "caffeineLevel": null,
+    "lTheanineLevel": null,
+    "flavorProfile": [
+      "marine",
+      "chestnut",
+      "nutty",
+      "umami"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "kill-green"
+    ],
+    "geography": {
+      "location": "Fenghuang Shan, Zhuhai Shi",
+      "province": "Guangdong",
+      "country": "China",
+      "latitude": 22.31667,
+      "longitude": 113.53333,
+      "altitude": null,
+      "humidity": 73.7,
+      "temperature": 18.5,
+      "solarRadiation": 179.8
+    },
+    "dateAdded": "2025-04-17T07:56:51.978Z"
+  }
