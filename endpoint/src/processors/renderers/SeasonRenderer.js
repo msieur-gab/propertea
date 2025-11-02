@@ -172,6 +172,14 @@ export class SeasonRenderer {
         };
       });
 
+    // Build flat seasonal scores object for simple lookup and chart plotting
+    // Parallel to TimeRenderer's hourlyScores structure
+    // Uses seasonId as key (e.g., "SEASON_EARLY_SPRING") for semantic clarity
+    const monthlyScores = {};
+    circularYear.forEach(monthData => {
+      monthlyScores[monthData.seasonId] = monthData.score;
+    });
+
     return {
       // Top recommended seasons (above threshold)
       recommendations,
@@ -179,6 +187,11 @@ export class SeasonRenderer {
       // Circular year view: All 12 months with scores and names for visualization
       // Perfect for circular/radial charts showing seasonal affinity throughout the year
       circularYear,
+
+      // Flat monthly scores for simple lookup (month: score)
+      // Parallel to TimeRenderer's hourlyScores
+      // Perfect for chart implementations: { 1: 65, 2: 72, ..., 12: 58 }
+      monthlyScores,
 
       // All seasonal scores (including ANYTIME)
       seasonalScores: this._formatSeasonalScores(sortedSeasons),
@@ -204,6 +217,13 @@ export class SeasonRenderer {
 
   /**
    * Find continuous seasonal range
+   *
+   * IMPORTANT: Recommendations arrive sorted by score (descending), not chronologically.
+   * We must sort indices chronologically before checking for contiguity.
+   *
+   * Example: If recommendations = [Late Autumn (score 85), Early Winter (score 90), Winter (score 80)]
+   * - Original indices: [8, 9, 10] → happens to be continuous
+   * - But if indices were [8, 10, 9] from reordering, we'd get "scattered" without sorting first
    */
   _findContinuousRange(recommendations) {
     if (recommendations.length === 0) {
@@ -222,16 +242,21 @@ export class SeasonRenderer {
       };
     }
 
-    // Find continuous ranges
-    const ranges = [];
-    let currentRange = [indices[0]];
+    // ✅ CRITICAL: Sort indices chronologically (ascending) before checking contiguity
+    // This ensures "Late Autumn → Early Winter → Winter" is recognized as continuous,
+    // not scattered, even if recommendations arrived in score order [90, 85, 80]
+    const sortedIndices = [...indices].sort((a, b) => a - b);
 
-    for (let i = 1; i < indices.length; i++) {
-      if (indices[i] === currentRange[currentRange.length - 1] + 1) {
-        currentRange.push(indices[i]);
+    // Find continuous ranges using chronologically sorted indices
+    const ranges = [];
+    let currentRange = [sortedIndices[0]];
+
+    for (let i = 1; i < sortedIndices.length; i++) {
+      if (sortedIndices[i] === currentRange[currentRange.length - 1] + 1) {
+        currentRange.push(sortedIndices[i]);
       } else {
         ranges.push([...currentRange]);
-        currentRange = [indices[i]];
+        currentRange = [sortedIndices[i]];
       }
     }
     ranges.push(currentRange);

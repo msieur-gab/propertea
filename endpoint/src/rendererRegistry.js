@@ -36,11 +36,18 @@ export const rendererRegistry = {
     description: 'Suggests seasons based on tea type and processing method'
   },
 
-  // Brewing Method: needs tea type
+  // Brewing Method: needs tea type + processing + geography + compound for full optimization
   brewing: {
     displayName: 'Brewing Recommendations',
-    requiredInferrers: ['teaType'],
-    description: 'Suggests brewing methods based on tea type'
+    requiredInferrers: ['teaType', 'processing', 'geography', 'compound'],
+    description: 'Suggests brewing parameters adjusted for processing (roast, oxidation), geography (altitude), and compound profile (astringency)'
+  },
+
+  // Terroir Presentation: needs geography + tea type (+ optional compound and flavor for context)
+  terroir: {
+    displayName: 'Terroir Presentation',
+    requiredInferrers: ['geography', 'teaType'],
+    description: 'Narrative presentation of geographic origin and environmental influence on tea properties'
   }
 };
 

@@ -47,61 +47,71 @@ export class GeographyInferrer {
     // Step 2: Classify elevation
     const elevationObj = this.geographyTaxonomy.getElevation(altitude);
     const elevationLevel = elevationObj?.displayName || "Unknown";
-    const elevationEffect = elevationObj?.flavorEffect || "Neutral";
+    const elevationDescription = elevationObj?.description || "Neutral";
+    const elevationFlavorInfluence = elevationObj?.flavorInfluence || [];
+    const elevationCompoundTendency = elevationObj?.compoundTendency || [];
 
     trace.push({
       step: "Elevation Classification",
       reason: `Based on altitude: ${altitude}m`,
       adjustment: `Classified as: ${elevationLevel}`,
-      value: `Effect: ${elevationEffect}`
+      value: `Influences: ${elevationFlavorInfluence.join(', ') || 'Neutral'}`
     });
 
     // Step 3: Classify humidity
     const humidityObj = this.geographyTaxonomy.getHumidity(humidity);
     const humidityLevel = humidityObj?.displayName || "Unknown";
-    const humidityEffect = humidityObj?.description || "Neutral";
+    const humidityDescription = humidityObj?.description || "Neutral";
+    const humidityFlavorInfluence = humidityObj?.flavorInfluence || [];
+    const humidityCompoundTendency = humidityObj?.compoundTendency || [];
 
     trace.push({
       step: "Humidity Classification",
       reason: `Based on humidity: ${humidity}%`,
       adjustment: `Classified as: ${humidityLevel}`,
-      value: `Effect: ${humidityEffect}`
+      value: `Influences: ${humidityFlavorInfluence.join(', ') || 'Neutral'}`
     });
 
     // Step 4: Classify latitude/climate zone
     const latitudeObj = this.geographyTaxonomy.getLatitude(latitude);
     const latitudeZone = latitudeObj?.displayName || "Unknown";
-    const climateType = latitudeObj?.climateType || "Unknown";
+    const latitudeDescription = latitudeObj?.description || "Unknown";
+    const latitudeFlavorInfluence = latitudeObj?.flavorInfluence || [];
+    const latitudeCompoundTendency = latitudeObj?.compoundTendency || [];
 
     trace.push({
       step: "Latitude/Climate Zone Classification",
       reason: `Based on latitude: ${latitude}°`,
       adjustment: `Classified as: ${latitudeZone}`,
-      value: `Climate Type: ${climateType}`
+      value: `Influences: ${latitudeFlavorInfluence.join(', ') || 'Neutral'}`
     });
 
     // Step 5: Classify temperature
     const temperatureObj = this.geographyTaxonomy.getTemperature(temperature);
     const temperatureRange = temperatureObj?.displayName || "Unknown";
-    const temperatureCharacteristic = temperatureObj?.characteristic || "Neutral";
+    const temperatureDescription = temperatureObj?.description || "Neutral";
+    const temperatureFlavorInfluence = temperatureObj?.flavorInfluence || [];
+    const temperatureCompoundTendency = temperatureObj?.compoundTendency || [];
 
     trace.push({
       step: "Temperature Classification",
       reason: `Based on average temperature: ${temperature}°C`,
       adjustment: `Classified as: ${temperatureRange}`,
-      value: `Characteristic: ${temperatureCharacteristic}`
+      value: `Influences: ${temperatureFlavorInfluence.join(', ') || 'Neutral'}`
     });
 
     // Step 6: Classify solar radiation
     const solarObj = this.geographyTaxonomy.getSolarRadiation(solarRadiation);
     const solarLevel = solarObj?.displayName || "Unknown";
-    const solarEffect = solarObj?.flavorEffect || "Neutral";
+    const solarDescription = solarObj?.description || "Neutral";
+    const solarFlavorInfluence = solarObj?.flavorInfluence || [];
+    const solarCompoundTendency = solarObj?.compoundTendency || [];
 
     trace.push({
       step: "Solar Radiation Classification",
       reason: `Based on solar radiation: ${solarRadiation} MJ/m²/day`,
       adjustment: `Classified as: ${solarLevel}`,
-      value: `Effect: ${solarEffect}`
+      value: `Influences: ${solarFlavorInfluence.join(', ') || 'Neutral'}`
     });
 
     // Step 7: Determine quality indicator based on combined factors
@@ -176,7 +186,9 @@ export class GeographyInferrer {
         elevation: {
           value: altitude,
           classification: elevationLevel,
-          effect: elevationEffect
+          description: elevationDescription,
+          flavorInfluence: elevationFlavorInfluence,
+          compoundTendency: elevationCompoundTendency
         },
 
         // Climate
@@ -184,22 +196,30 @@ export class GeographyInferrer {
           humidity: {
             value: humidity,
             classification: humidityLevel,
-            effect: humidityEffect
+            description: humidityDescription,
+            flavorInfluence: humidityFlavorInfluence,
+            compoundTendency: humidityCompoundTendency
           },
           latitude: {
             value: latitude,
             zone: latitudeZone,
-            climateType
+            description: latitudeDescription,
+            flavorInfluence: latitudeFlavorInfluence,
+            compoundTendency: latitudeCompoundTendency
           },
           temperature: {
             value: temperature,
             classification: temperatureRange,
-            characteristic: temperatureCharacteristic
+            description: temperatureDescription,
+            flavorInfluence: temperatureFlavorInfluence,
+            compoundTendency: temperatureCompoundTendency
           },
           solarRadiation: {
             value: solarRadiation,
             classification: solarLevel,
-            effect: solarEffect
+            description: solarDescription,
+            flavorInfluence: solarFlavorInfluence,
+            compoundTendency: solarCompoundTendency
           }
         },
 
@@ -382,12 +402,12 @@ export class GeographyInferrer {
         solarRadiation: 0
       },
       analysis: {
-        elevation: { value: 0, classification: "Unknown", effect: "Unknown" },
+        elevation: { value: 0, classification: "Unknown", description: "Unknown", flavorInfluence: [], compoundTendency: [] },
         climate: {
-          humidity: { value: 0, classification: "Unknown", effect: "Unknown" },
-          latitude: { value: 0, zone: "Unknown", climateType: "Unknown" },
-          temperature: { value: 0, classification: "Unknown", characteristic: "Unknown" },
-          solarRadiation: { value: 0, classification: "Unknown", effect: "Unknown" }
+          humidity: { value: 0, classification: "Unknown", description: "Unknown", flavorInfluence: [], compoundTendency: [] },
+          latitude: { value: 0, zone: "Unknown", description: "Unknown", flavorInfluence: [], compoundTendency: [] },
+          temperature: { value: 0, classification: "Unknown", description: "Unknown", flavorInfluence: [], compoundTendency: [] },
+          solarRadiation: { value: 0, classification: "Unknown", description: "Unknown", flavorInfluence: [], compoundTendency: [] }
         },
         qualityIndicator: "Unknown",
         harvestSeasonPotential: "Unknown",

@@ -1,179 +1,206 @@
 /**
  * BrewingRenderer.js
  *
- * Purpose: Render brewing recommendations based on tea type and processing
- * Input: Tea data { type, subType, processingMethods }, brewing style preference
- * Output: Brewing parameters and method guidance
+ * Purpose: Render brewing recommendations based on tea type and all relevant factors
+ * Input:
+ *   - formData: Tea information { name, type, subType }
+ *   - processingInference: Output from ProcessingInferrer
+ *   - geographyInference: Output from GeographyInferrer
+ *   - compoundInference: Output from CompoundInferrer
+ * Output: Data-driven brewing parameters with transparent reasoning and confidence scoring
  *
- * This Renderer adapts logic from brewingMatcher using ProcessingTaxonomy and TeaTypeTaxonomy
+ * Architecture:
+ * Collects adjustment rules from multiple inferences and applies them cumulatively
+ * to base parameters from BrewingTaxonomy. Generates narrative explanations for all adjustments.
  */
 
-import { ProcessingTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
+import { BrewingTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
 
 export class BrewingRenderer {
   constructor(config = {}) {
-    this.config = {
-      defaultBrewingStyle: config.defaultBrewingStyle || 'gongfu',
-      ...config
-    };
-
-    this.processingTaxonomy = ProcessingTaxonomy;
+    this.config = config;
+    this.brewingTaxonomy = BrewingTaxonomy;
     this.teaTypeTaxonomy = TeaTypeTaxonomy;
-
-    // Brewing style recommendations
-    this.brewingStyles = ['gongfu', 'western'];
-
-    // Default brewing parameters by tea type
-    this.defaultBrewingParams = {
-      white: {
-        gongfu: { temperature: 70, steepTime: 3, amountPerGram: 0.05, infusions: 4 },
-        western: { temperature: 75, steepTime: 4, amountPerGram: 0.03, infusions: 1 }
-      },
-      green: {
-        gongfu: { temperature: 75, steepTime: 2, amountPerGram: 0.06, infusions: 5 },
-        western: { temperature: 80, steepTime: 3, amountPerGram: 0.04, infusions: 1 }
-      },
-      yellow: {
-        gongfu: { temperature: 75, steepTime: 3, amountPerGram: 0.05, infusions: 4 },
-        western: { temperature: 80, steepTime: 4, amountPerGram: 0.03, infusions: 1 }
-      },
-      oolong: {
-        gongfu: { temperature: 95, steepTime: 3, amountPerGram: 0.08, infusions: 7 },
-        western: { temperature: 90, steepTime: 5, amountPerGram: 0.05, infusions: 2 }
-      },
-      black: {
-        gongfu: { temperature: 95, steepTime: 3, amountPerGram: 0.06, infusions: 4 },
-        western: { temperature: 95, steepTime: 4, amountPerGram: 0.04, infusions: 1 }
-      },
-      puerh: {
-        gongfu: { temperature: 95, steepTime: 3, amountPerGram: 0.10, infusions: 10 },
-        western: { temperature: 95, steepTime: 4, amountPerGram: 0.06, infusions: 2 }
-      }
-    };
   }
 
   /**
-   * Render brewing recommendations from tea data
-   * @param {Object} teaData - Tea object { type, subType, processingMethods, name, ... }
-   * @param {string} preferredStyle - 'gongfu' or 'western' (now provides both)
-   * @param {Object} processingAnalysis - Optional processing analysis data
-   * @returns {Object} - Brewing recommendations with multiple styles and vessel options
+   * Render brewing recommendations from tea data and inference results
+   * @param {Object} formData - Tea data { name, type, subType }
+   * @param {Object} processingInference - Output from ProcessingInferrer
+   * @param {Object} geographyInference - Output from GeographyInferrer
+   * @param {Object} compoundInference - Output from CompoundInferrer
+   * @param {string} brewingStyle - Preferred style (gongfu or western, default: gongfu)
+   * @returns {Object} - Brewing recommendations with parameters and reasoning
    */
-  render(teaData = {}, preferredStyle = 'gongfu', processingAnalysis = {}) {
+  render(formData = {}, processingInference = {}, geographyInference = {}, compoundInference = {}, brewingStyle = 'gongfu') {
     const trace = [];
 
-    // Validate inputs
-    if (!teaData || !teaData.type) {
-      return this._failedRender("Tea data and tea type are required", trace);
+    // ========== VALIDATION ==========
+    if (!formData || !formData.type) {
+      return this._failedRender("Tea type is required", trace);
     }
 
-    const teaName = teaData.name || `${teaData.type}${teaData.subType ? ` (${teaData.subType})` : ''}`;
-    const teaType = this._normalizeTeaType(teaData.type, teaData.subType);
-    const brewingStyle = (preferredStyle || 'gongfu').toLowerCase();
+    const style = String(brewingStyle).toLowerCase();
+    const teaTypeId = this._normalizeTeaTypeToId(formData.type, formData.subType);
+    const teaName = formData.name || `${formData.type}${formData.subType ? ` (${formData.subType})` : ''}`;
 
     trace.push({
-      step: "Input Reception",
-      reason: "Received tea and brewing preference",
-      adjustment: `Tea: ${teaName}, Type: ${teaType}, Style: ${brewingStyle}`,
-      value: "Data validated"
+      step: "Input Validation",
+      reason: "Validate tea type and inferences",
+      adjustment: `Tea: ${teaName}, Type: ${teaTypeId}, Style: ${style}`,
+      value: "Inputs validated"
     });
 
-    // Get base parameters for tea type
-    const baseParams = this._getBaseBrewingParams(teaType, brewingStyle);
+    // ========== BASE PARAMETERS ==========
+    const baseParams = this.brewingTaxonomy.getBaseParameters(teaTypeId, style);
     if (!baseParams) {
-      return this._failedRender(
-        `No default brewing parameters for tea type '${teaType}' in '${brewingStyle}' style`,
-        trace
-      );
+      return this._failedRender(`Unsupported tea type: ${teaTypeId}`, trace);
     }
 
     trace.push({
-      step: "Base Parameters Loaded",
-      reason: `Tea type: ${teaType}`,
-      adjustment: `Temperature: ${baseParams.temperature}°C, Steep: ${baseParams.steepTime}s`,
-      value: `Amount: ${baseParams.amountPerGram}g/ml, Infusions: ${baseParams.infusions}`
+      step: "Base Parameters",
+      reason: `Tea type: ${teaTypeId}`,
+      adjustment: `${baseParams.temperature}°C, ${baseParams.steepTime}s`,
+      value: baseParams.reasoning
     });
 
-    // Get tea type info from taxonomy
-    const teaTypeObj = this.teaTypeTaxonomy.getType(teaType);
-    const caffeine = teaTypeObj?.caffeineRange?.[1] || 'N/A';
-    const theanine = teaTypeObj?.theanineRange?.[1] || 'N/A';
+    // ========== COLLECT ADJUSTMENTS ==========
+    const adjustments = [];
+    const adjustmentSources = [];
 
-    // Normalize processing methods
-    const normalizedMethods = this._normalizeProcessingMethods(
-      teaData.processingMethods || [],
-      processingAnalysis
-    );
+    // Processing adjustments
+    if (processingInference?.analysis?.identifiedMethods) {
+      processingInference.analysis.identifiedMethods.forEach(method => {
+        // Check for leaf style
+        const leafAdj = this.brewingTaxonomy.getLeafStyleAdjustment(method.id);
+        if (leafAdj.tempDelta !== 0 || leafAdj.steepDelta !== 0) {
+          adjustments.push(leafAdj);
+          adjustmentSources.push({ source: `Leaf style (${method.displayName})`, description: leafAdj.description });
+        }
+
+        // Check for roast level
+        const roastAdj = this.brewingTaxonomy.getRoastAdjustment(method.id);
+        if (roastAdj.tempDelta !== 0 || roastAdj.steepDelta !== 0) {
+          adjustments.push(roastAdj);
+          adjustmentSources.push({ source: `Roast (${method.displayName})`, description: roastAdj.description });
+        }
+
+        // Check for oxidation
+        const oxidAdj = this.brewingTaxonomy.getOxidationAdjustment(method.id);
+        if (oxidAdj.tempDelta !== 0 || oxidAdj.steepDelta !== 0) {
+          adjustments.push(oxidAdj);
+          adjustmentSources.push({ source: `Oxidation (${method.displayName})`, description: oxidAdj.description });
+        }
+      });
+    }
 
     trace.push({
       step: "Processing Analysis",
-      reason: "Normalize processing methods",
-      adjustment: `Found ${normalizedMethods.size} processing methods`,
-      value: Array.from(normalizedMethods).join(', ')
+      reason: "Extract brewing adjustments from processing inference",
+      adjustment: `Found ${adjustmentSources.length} processing adjustments`,
+      value: adjustmentSources.map(s => s.source).join(', ') || 'None'
     });
 
-    // Adjust brewing parameters based on processing
-    const adjustedGongfuParams = this._adjustParamsForProcessing(baseParams, normalizedMethods);
-    const adjustedWesternParams = this._adjustParamsForProcessing(
-      this.defaultBrewingParams[teaType]?.western || baseParams,
-      normalizedMethods
-    );
+    // Geography adjustments
+    if (geographyInference?.inputs?.altitude) {
+      const altAdj = this.brewingTaxonomy.getAltitudeAdjustment(geographyInference.inputs.altitude);
+      adjustments.push(altAdj);
+      adjustmentSources.push({ source: `Altitude (${altAdj.key})`, description: altAdj.description });
+
+      trace.push({
+        step: "Geography Analysis",
+        reason: "Altitude affects brewing temperature",
+        adjustment: `${geographyInference.inputs.altitude}m → ${altAdj.key}`,
+        value: altAdj.description
+      });
+    }
+
+    // Compound adjustments (astringency)
+    if (compoundInference?.analysis?.caffeine !== undefined && compoundInference?.analysis?.theanine !== undefined) {
+      const caffeine = compoundInference.analysis.caffeine;
+      const theanine = compoundInference.analysis.theanine;
+      const catechins = compoundInference.analysis?.catechins || 0;
+
+      const astringency = this.brewingTaxonomy.calculateAstringencyFromCompounds(caffeine, theanine, catechins);
+      const astringencyAdj = this.brewingTaxonomy.getAstringencyAdjustment(astringency);
+
+      if (astringencyAdj.tempDelta !== 0 || astringencyAdj.steepDelta !== 0) {
+        adjustments.push(astringencyAdj);
+        adjustmentSources.push({ source: `Astringency (${astringency})`, description: astringencyAdj.description });
+      }
+
+      trace.push({
+        step: "Compound Analysis",
+        reason: "Astringency from caffeine/theanine ratio",
+        adjustment: `Caffeine: ${caffeine}, Theanine: ${theanine} → ${astringency}`,
+        value: astringencyAdj.description
+      });
+    }
+
+    // ========== CALCULATE FINAL PARAMETERS FOR BOTH STYLES ==========
+    // Each style needs its own base parameters and calculated result
+    const gongfuBase = this.brewingTaxonomy.getBaseParameters(teaTypeId, 'gongfu');
+    const westernBase = this.brewingTaxonomy.getBaseParameters(teaTypeId, 'western');
+
+    const gongfuParams = this.brewingTaxonomy.calculateAdjustedParameters(gongfuBase, adjustments);
+    const westernParams = this.brewingTaxonomy.calculateAdjustedParameters(westernBase, adjustments);
 
     trace.push({
-      step: "Parameter Adjustment",
-      reason: "Apply processing adjustments to both styles",
-      adjustment: `Gongfu: ${adjustedGongfuParams.temperature}°C/${adjustedGongfuParams.steepTime}s | Western: ${adjustedWesternParams.temperature}°C/${adjustedWesternParams.steepTime}s`,
-      value: "Both brewing styles calibrated"
+      step: "Parameter Calculation",
+      reason: "Apply all adjustments to base parameters for each style",
+      adjustment: `Gongfu: ${gongfuBase.temperature}°C/${gongfuBase.steepTime}s → ${gongfuParams.temperature}°C/${gongfuParams.steepTime}s | Western: ${westernBase.temperature}°C/${westernBase.steepTime}s → ${westernParams.temperature}°C/${westernParams.steepTime}s`,
+      value: `Total adjustments applied: ${adjustments.length}`
     });
 
-    // Get tea description from already-fetched tea type object
-    const teaDescription = teaTypeObj?.description || `A tea from the ${teaType} family`;
+    // ========== CONFIDENCE SCORING ==========
+    const confidence = this.brewingTaxonomy.calculateAdvancedConfidence({
+      hasProcessing: !!processingInference?.analysis,
+      hasRoastLevel: adjustmentSources.some(s => s.source.includes('Roast')),
+      hasLeafStyle: adjustmentSources.some(s => s.source.includes('Leaf style')),
+      hasGeography: !!geographyInference?.inputs?.altitude,
+      hasAltitude: !!geographyInference?.inputs?.altitude,
+      hasCompound: !!compoundInference?.analysis?.caffeine,
+      hasAstringency: adjustmentSources.some(s => s.source.includes('Astringency'))
+    });
 
-    // Determine vessel recommendations
-    const vesselRecommendations = this._getVesselRecommendations(teaType, brewingStyle, normalizedMethods);
-
-    // Generate brewing guidance
-    const gongfuGuidance = this._generateGuidance(teaType, 'gongfu', adjustedGongfuParams, normalizedMethods);
-    const westernGuidance = this._generateGuidance(teaType, 'western', adjustedWesternParams, normalizedMethods);
+    // ========== BUILD STYLE NARRATIVES ==========
+    const narrativeGongfu = this._buildStyleNarrative('gongfu', gongfuParams, adjustmentSources);
+    const narrativeWestern = this._buildStyleNarrative('western', westernParams, adjustmentSources);
 
     trace.push({
-      step: "Vessel & Style Selection",
-      reason: "Determine optimal brewing vessels and philosophy",
-      adjustment: `${vesselRecommendations.recommended.name} recommended for ${brewingStyle} style`,
-      value: `Available vessels: ${vesselRecommendations.allOptions.map(v => v.name).join(', ')}`
+      step: "Style Narratives",
+      reason: "Generate brewing philosophy and guidance",
+      adjustment: "Created narratives for both gongfu and western styles",
+      value: "Narratives include adjustment reasoning and technique"
     });
 
+    // ========== RETURN RESULT ==========
     return {
-      // Tea identification with description
+      // Tea identification
       tea: {
         name: teaName,
-        type: teaType,
-        subType: teaData.subType || null,
-        description: teaDescription,
-        characteristics: {
-          caffeine,
-          theanine,
-          processingMethods: Array.from(normalizedMethods)
-        }
+        type: formData.type,
+        subType: formData.subType || null,
+        typeId: teaTypeId
       },
 
-      // Multiple brewing styles with full parameters
+      // Brewing recommendations for both styles
       brewingStyles: [
         {
           style: 'gongfu',
-          philosophy: this._getStylePhilosophy('gongfu'),
-          description: this._getStyleDescription('gongfu'),
-          parameters: adjustedGongfuParams,
-          guidance: gongfuGuidance,
-          vessels: this._getStyleVessels('gongfu', vesselRecommendations)
+          philosophy: this.brewingTaxonomy.getStyleNarrative('gongfu').philosophy,
+          parameters: gongfuParams,
+          narrative: narrativeGongfu,
+          adjustmentsApplied: adjustmentSources,
+          confidence
         },
         {
           style: 'western',
-          philosophy: this._getStylePhilosophy('western'),
-          description: this._getStyleDescription('western'),
-          parameters: adjustedWesternParams,
-          guidance: westernGuidance,
-          vessels: this._getStyleVessels('western', vesselRecommendations)
+          philosophy: this.brewingTaxonomy.getStyleNarrative('western').philosophy,
+          parameters: westernParams,
+          narrative: narrativeWestern,
+          adjustmentsApplied: adjustmentSources,
+          confidence
         }
       ],
 
@@ -181,376 +208,83 @@ export class BrewingRenderer {
       recommendations: [
         {
           style: 'gongfu',
-          parameters: adjustedGongfuParams,
-          guidance: gongfuGuidance,
-          vessel: this._getStyleVessels('gongfu', vesselRecommendations).recommended?.name || 'Gaiwan',
-          score: 90
+          parameters: gongfuParams,
+          narrative: narrativeGongfu,
+          score: Math.round(confidence * 100)
         },
         {
           style: 'western',
-          parameters: adjustedWesternParams,
-          guidance: westernGuidance,
-          vessel: this._getStyleVessels('western', vesselRecommendations).recommended?.name || 'Teapot',
-          score: 85
+          parameters: westernParams,
+          narrative: narrativeWestern,
+          score: Math.round(confidence * 95)
         }
       ],
 
-      // Recommended style
-      recommendedStyle: {
-        name: brewingStyle,
-        reason: this._getStyleRecommendationReason(teaType, brewingStyle, normalizedMethods)
+      // Analysis and metadata
+      analysis: {
+        baseParameters: {
+          gongfu: gongfuBase,
+          western: westernBase
+        },
+        adjustmentsApplied: adjustmentSources,
+        teaType: teaTypeId
       },
 
-      // Vessel recommendations (detailed)
-      vessels: vesselRecommendations,
-
-      // Supporting data
       trace,
-      confidence: 0.9,
-      rendererVersion: '2.0'
+      confidence,
+      rendererVersion: '3.0'
     };
   }
 
   // ========== Helper Methods ==========
 
   /**
-   * Normalize tea type to standard taxonomy ID
+   * Normalize tea type to BrewingTaxonomy ID format
+   * Converts user input to TEA_TYPE_* format
    */
-  _normalizeTeaType(type, subType) {
+  _normalizeTeaTypeToId(type, subType) {
     const typeStr = String(type).toLowerCase().trim();
 
-    // Map common names
+    // Map common names to BrewingTaxonomy IDs
     const typeMap = {
-      'white': 'white',
-      'green': 'green',
-      'yellow': 'yellow',
-      'oolong': 'oolong',
-      'black': 'black',
-      'puerh': 'puerh',
-      'pu-er': 'puerh',
-      'pu erh': 'puerh',
-      'puer': 'puerh'
+      'white': 'TEA_TYPE_WHITE',
+      'green': 'TEA_TYPE_GREEN',
+      'yellow': 'TEA_TYPE_YELLOW',
+      'oolong': 'TEA_TYPE_OOLONG',
+      'black': 'TEA_TYPE_BLACK',
+      'puerh': 'TEA_TYPE_PUERH',
+      'pu-er': 'TEA_TYPE_PUERH',
+      'pu erh': 'TEA_TYPE_PUERH',
+      'puer': 'TEA_TYPE_PUERH'
     };
 
-    const normalized = typeMap[typeStr] || typeStr;
-
-    // Try direct lookup with taxonomy
-    try {
-      const teaType = this.teaTypeTaxonomy.getType(normalized);
-      if (teaType) {
-        return normalized.toLowerCase();
-      }
-    } catch (e) {
-      // Not found, continue with normalized name
-    }
-
-    return normalized.toLowerCase();
+    return typeMap[typeStr] || `TEA_TYPE_${typeStr.toUpperCase()}`;
   }
 
   /**
-   * Get base brewing parameters for tea type and style
+   * Build narrative for brewing style
+   * Combines style philosophy with parameters and adjustments
    */
-  _getBaseBrewingParams(teaType, brewingStyle) {
-    const params = this.defaultBrewingParams[teaType]?.[brewingStyle];
-    return params ? { ...params } : null;
-  }
+  _buildStyleNarrative(style, parameters, adjustmentSources) {
+    const styleInfo = this.brewingTaxonomy.getStyleNarrative(style);
 
-  /**
-   * Normalize processing methods
-   */
-  _normalizeProcessingMethods(methods = [], processingAnalysis = {}) {
-    const normalized = new Set();
+    let narrative = `${styleInfo.philosophy}\n\n`;
+    narrative += `**Approach:** ${styleInfo.approach}\n\n`;
+    narrative += `**Technique:** ${styleInfo.technique}\n\n`;
+    narrative += `**Parameters:**\n`;
+    narrative += `- Water Temperature: ${parameters.temperature}°C (${Math.round(parameters.temperature * 9/5 + 32)}°F)\n`;
+    narrative += `- Steep Time: ${parameters.steepTime} seconds\n`;
+    narrative += `- Leaf Amount: ${parameters.gramsPer100ml}g per 100ml of water\n`;
+    narrative += `- Infusions: ${parameters.infusions}\n`;
 
-    // Process array of methods
-    if (Array.isArray(methods)) {
-      methods.forEach(method => {
-        const normalized_method = this._normalizeMethod(method);
-        if (normalized_method) {
-          normalized.add(normalized_method);
-        }
+    if (adjustmentSources && adjustmentSources.length > 0) {
+      narrative += `\n**Brewing Adjustments Applied:**\n`;
+      adjustmentSources.forEach(adj => {
+        narrative += `- ${adj.source}: ${adj.description}\n`;
       });
     }
 
-    // Add roast level if from analysis
-    if (processingAnalysis.roastLevel) {
-      const roastMap = {
-        'none': null,
-        'light': 'light-roast',
-        'medium': 'medium-roast',
-        'heavy': 'heavy-roast',
-        'very heavy': 'heavy-roast'
-      };
-      const roastMethod = roastMap[processingAnalysis.roastLevel.toLowerCase()];
-      if (roastMethod) {
-        normalized.add(roastMethod);
-      }
-    }
-
-    return normalized;
-  }
-
-  /**
-   * Normalize a single processing method
-   */
-  _normalizeMethod(method) {
-    if (!method) return null;
-
-    const str = String(method).toLowerCase().trim();
-
-    // Direct taxonomy lookup
-    try {
-      const processingObj = this.processingTaxonomy.getMethod(str);
-      if (processingObj) {
-        return processingObj.id;
-      }
-    } catch (e) {
-      // Not found in taxonomy
-    }
-
-    // Common mappings
-    const methodMap = {
-      'steamed': 'PROCESSING_STEAMED',
-      'pan-fired': 'PROCESSING_PAN_FIRED',
-      'roasted': 'PROCESSING_ROASTED',
-      'oxidized': 'PROCESSING_OXIDIZED',
-      'partially-oxidized': 'PROCESSING_OXIDIZED',
-      'withered': 'PROCESSING_WITHERED',
-      'rolled': 'PROCESSING_ROLLED',
-      'fermented': 'PROCESSING_FERMENTED',
-      'aged': 'PROCESSING_AGED'
-    };
-
-    return methodMap[str] || null;
-  }
-
-  /**
-   * Adjust parameters based on processing methods
-   */
-  _adjustParamsForProcessing(baseParams, methods) {
-    const params = { ...baseParams };
-
-    if (methods.has('PROCESSING_ROASTED') || methods.has('PROCESSING_CHARCOAL_ROAST')) {
-      params.temperature = Math.min(100, params.temperature + 5);
-      params.steepTime = Math.max(params.steepTime - 0.5, 2);
-    }
-
-    if (methods.has('PROCESSING_FERMENTED') || methods.has('PROCESSING_AGED')) {
-      params.temperature = Math.max(95, params.temperature);
-      params.steepTime = Math.min(params.steepTime + 1, 5);
-    }
-
-    if (methods.has('PROCESSING_WITHERED')) {
-      params.temperature = Math.max(params.temperature - 5, 70);
-      params.steepTime = Math.max(params.steepTime + 0.5, 3);
-    }
-
-    return params;
-  }
-
-  /**
-   * Generate brewing guidance text
-   */
-  _generateGuidance(teaType, brewingStyle, params, methods) {
-    const guidance = [];
-
-    // Temperature guidance
-    guidance.push(`Water Temperature: ${params.temperature}°C (${Math.round(params.temperature * 9/5 + 32)}°F)`);
-
-    // Steep time guidance
-    guidance.push(`Initial Steep Time: ${params.steepTime} seconds`);
-
-    // Amount guidance
-    guidance.push(`Tea Amount: ${params.amountPerGram} grams per ml of water`);
-
-    // Infusion guidance
-    if (brewingStyle === 'gongfu') {
-      guidance.push(`Multiple Infusions: ${params.infusions} infusions recommended`);
-      guidance.push(`Infusion Method: Short steeps with full leaf rehydration between infusions`);
-    } else {
-      guidance.push(`Single Infusion: ${params.infusions} typical for western style`);
-      guidance.push(`Infusion Method: Longer steep time with strainer or infuser`);
-    }
-
-    // Processing-specific notes
-    if (methods.has('PROCESSING_ROASTED')) {
-      guidance.push(`Note: Roasted tea - use hotter water for fuller extraction`);
-    }
-
-    if (methods.has('PROCESSING_FERMENTED')) {
-      guidance.push(`Note: Aged or fermented tea - rinse leaves briefly before brewing`);
-    }
-
-    return guidance;
-  }
-
-  /**
-   * Get brewing style philosophy (why this approach works)
-   */
-  _getStylePhilosophy(style) {
-    const philosophies = {
-      'gongfu': 'Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions, creating a contemplative experience where each steep tells a new story of the leaf\'s character',
-      'western': 'Simplicity & Accessibility - Single longer infusion captures the essential character of the tea in a straightforward, approachable manner suitable for everyday enjoyment'
-    };
-    return philosophies[style] || 'Traditional brewing approach';
-  }
-
-  /**
-   * Get brewing style description
-   */
-  _getStyleDescription(style) {
-    const descriptions = {
-      'gongfu': 'Traditional Chinese brewing with small vessel and multiple short infusions',
-      'western': 'European/American style with larger amount of water and longer steep time'
-    };
-    return descriptions[style] || 'Unknown brewing style';
-  }
-
-  /**
-   * Get vessel recommendations for tea type and style
-   */
-  _getVesselRecommendations(teaType, style, processingMethods) {
-    const vesselDatabase = {
-      'white': {
-        gongfu: {
-          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Porcelain covered cup reveals delicate white tea characteristics' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Allows observation of fine white leaves unfurling' },
-            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Gentle heat retention for delicate infusions' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser/Strainer', description: 'Simple steeping in larger cup for white tea' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Allows admiration of white tea\'s pale liquor and leaf movement' },
-            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Distributes heat evenly for consistent steeping' }
-          ]
-        }
-      },
-      'green': {
-        gongfu: {
-          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Traditional vessel that preserves fresh, vibrant green tea characteristics' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases the jade-green color and leaf movement' },
-            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Provides gentle, even heat distribution' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Quick steeping captures fresh, vegetal character' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Displays vibrant jade-green color beautifully' },
-            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Fine mesh captures even the smallest green tea leaves' }
-          ]
-        }
-      },
-      'oolong': {
-        gongfu: {
-          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Gold standard for oolong - perfectly suited for multiple infusions and leaf observation' },
-          alternatives: [
-            { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Seasoned clay enhances oolong\'s complex flavors and retains heat beautifully' },
-            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Elegant way to watch oolong leaves dance through infusions' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Holds enough volume for longer steep while maintaining heat' },
-          alternatives: [
-            { id: 'VESSEL_TEA_INFUSER', name: 'Large Tea Infuser', description: 'Gives oolong leaves room to unfurl in larger cup' },
-            { id: 'VESSEL_GLASS_CUP', name: 'Large Glass Cup', description: 'Displays oolong\'s rich colors and allows easy leaf observation' }
-          ]
-        }
-      },
-      'black': {
-        gongfu: {
-          recommended: { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Retains heat well for robust black tea\'s full expression across infusions' },
-          alternatives: [
-            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Good heat retention for bold, complex flavors' },
-            { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Modern gongfu approach to black tea appreciation' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Classic choice for full-bodied black tea brewing' },
-          alternatives: [
-            { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Works well for simple, straightforward black tea' },
-            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Allows leaf expansion for full flavor extraction' }
-          ]
-        }
-      },
-      'puerh': {
-        gongfu: {
-          recommended: { id: 'VESSEL_CLAY_TEAPOT', name: 'Yixing Clay Teapot', description: 'Ideal for puerh - seasoned pots develop character that complements aged tea perfectly' },
-          alternatives: [
-            { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Modern approach for observing puerh\'s deep colors and transformations' },
-            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases puerh\'s rich, dark liquor through infusions' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Heavy-walled pot maintains heat for puerh\'s extractive steeping' },
-          alternatives: [
-            { id: 'VESSEL_MESH_STRAINER', name: 'Mesh Strainer', description: 'Generous opening accommodates puerh leaf pieces' },
-            { id: 'VESSEL_INFUSER_BASKET', name: 'Infuser Basket', description: 'Allows puerh to fully expand in larger cup' }
-          ]
-        }
-      },
-      'yellow': {
-        gongfu: {
-          recommended: { id: 'VESSEL_GAIWAN', name: 'Gaiwan', description: 'Perfect for rare yellow tea - allows gentle brewing of delicate leaves' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_TEAPOT', name: 'Glass Teapot', description: 'Showcases yellow tea\'s unique golden hue' },
-            { id: 'VESSEL_SMALL_CERAMIC_POT', name: 'Small Ceramic Pot', description: 'Gentle heat retention preserves subtle flavors' }
-          ]
-        },
-        western: {
-          recommended: { id: 'VESSEL_TEA_INFUSER', name: 'Tea Infuser', description: 'Simple approach for this rare tea variety' },
-          alternatives: [
-            { id: 'VESSEL_GLASS_CUP', name: 'Glass Cup', description: 'Displays yellow tea\'s signature golden color' },
-            { id: 'VESSEL_CERAMIC_TEAPOT', name: 'Ceramic Teapot', description: 'Gentle brewing for delicate characteristics' }
-          ]
-        }
-      }
-    };
-
-    const teaVessels = vesselDatabase[teaType] || vesselDatabase['oolong'];
-    const styleVessels = teaVessels[style] || teaVessels['gongfu'];
-
-    return {
-      recommended: styleVessels.recommended,
-      alternatives: styleVessels.alternatives,
-      allOptions: [styleVessels.recommended, ...styleVessels.alternatives]
-    };
-  }
-
-  /**
-   * Get vessels suited for specific brewing style
-   */
-  _getStyleVessels(style, vesselRecommendations) {
-    return {
-      recommended: vesselRecommendations.recommended,
-      alternatives: vesselRecommendations.alternatives
-    };
-  }
-
-  /**
-   * Get reason for recommending specific brewing style
-   */
-  _getStyleRecommendationReason(teaType, style, processingMethods) {
-    const reasons = {
-      'gongfu': 'This style is ideal for appreciating the full complexity and evolution of this tea across multiple infusions. Each steep reveals new flavor dimensions and allows observation of leaf unfurling.',
-      'western': 'This straightforward approach captures the essential character of this tea in a single steeping, perfect for everyday enjoyment and accessibility.'
-    };
-
-    // Add processing-specific recommendations
-    if (processingMethods.has('PROCESSING_ROASTED')) {
-      if (style === 'gongfu') {
-        return 'Gongfu brewing extracts the nuanced roasted character beautifully through multiple short infusions, allowing the roasting notes to evolve across steeps.';
-      }
-    }
-
-    if (processingMethods.has('PROCESSING_FERMENTED')) {
-      if (style === 'gongfu') {
-        return 'Gongfu style works particularly well with fermented teas, as each infusion reveals the complex fermentation notes through progressive extraction.';
-      }
-    }
-
-    return reasons[style] || reasons['gongfu'];
+    return narrative;
   }
 
   /**
@@ -563,18 +297,15 @@ export class BrewingRenderer {
         type: "Unknown",
         subType: null
       },
-      brewingParameters: null,
-      style: null,
-      characteristics: null,
-      guidance: [],
-      trace: [{
+      recommendations: [],
+      trace: [...trace, {
         step: "Error",
         reason,
         adjustment: "Unable to generate brewing recommendations",
         value: "Failed"
       }],
       confidence: 0.0,
-      rendererVersion: '1.0'
+      rendererVersion: '3.0'
     };
   }
 }

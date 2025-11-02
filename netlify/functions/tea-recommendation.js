@@ -27,95 +27,129 @@ import { FoodRenderer } from '../../endpoint/src/processors/renderers/FoodRender
 import { TimeRenderer } from '../../endpoint/src/processors/renderers/TimeRenderer.js';
 import { SeasonRenderer } from '../../endpoint/src/processors/renderers/SeasonRenderer.js';
 import { BrewingRenderer } from '../../endpoint/src/processors/renderers/BrewingRenderer.js';
+import { TerroirRenderer } from '../../endpoint/src/processors/renderers/TerroirRenderer.js';
 
 import { rendererRegistry, getRequiredInferrers, getTraceInferrerNames, validateRenderers } from '../../endpoint/src/rendererRegistry.js';
 
 /**
- * Main handler function
+ * Shared CORS headers for all responses (success and error)
  */
-export default async function handler(event, context) {
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json'
+};
+
+/**
+ * Main handler function (Netlify v2 runtime - receives Request object)
+ */
+export default async function handler(request) {
   // Handle CORS preflight
-  if (event.httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type'
-      }
-    };
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 200,
+      headers: corsHeaders
+    });
   }
 
   // Only accept POST requests
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
+  if (request.method !== 'POST') {
+    return new Response(JSON.stringify({ error: 'Method not allowed. Use POST or OPTIONS.' }), {
+      status: 405,
+      headers: corsHeaders
+    });
   }
 
+  // Parse request body with proper error handling
+  let requestBody;
   try {
-    // Parse request body
-    const requestBody = JSON.parse(event.body);
-    const formData = requestBody;
+    const bodyText = await request.text();
+    requestBody = JSON.parse(bodyText);
+  } catch (parseError) {
+    return new Response(JSON.stringify({
+      error: 'Invalid JSON in request body',
+      hint: 'Ensure payload is valid JSON and contains required fields: name, type'
+    }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
 
-    // Validate required fields
-    if (!formData.name || !formData.type) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          error: 'Missing required fields',
-          required: ['name', 'type']
-        })
-      };
-    }
+  const formData = requestBody;
 
-    // Extract optional parameters
-    const renderers = formData.renderers || ['activity', 'food', 'time', 'season', 'brewing'];
-    const format = formData.format || 'production';
+  // Validate required fields
+  if (!formData.name || !formData.type) {
+    return new Response(JSON.stringify({
+      error: 'Missing required fields',
+      required: ['name', 'type']
+    }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
 
-    // Validate format parameter
-    if (!['production', 'trace'].includes(format)) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          error: 'Invalid format parameter',
-          validValues: ['production', 'trace']
-        })
-      };
-    }
+  // Extract optional parameters
+  let renderers = formData.renderers || ['activity', 'food', 'time', 'season', 'brewing'];
+  const format = formData.format || 'production';
 
-    // Validate requested renderers
-    try {
-      validateRenderers(renderers);
-    } catch (error) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: error.message })
-      };
-    }
+  // Normalize renderers to array: handle string input, deduplicate, lowercase
+  if (typeof renderers === 'string') {
+    renderers = [renderers];
+  }
+  if (!Array.isArray(renderers)) {
+    return new Response(JSON.stringify({
+      error: 'renderers must be a string or array of strings',
+      example: 'renderers: "activity" or renderers: ["activity", "food", "time"]',
+      available: ['activity', 'food', 'time', 'season', 'brewing']
+    }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
 
-    // Run pipeline
+  // Deduplicate and normalize to lowercase
+  renderers = [...new Set(renderers.map(r => String(r).toLowerCase()))];
+
+  // Validate format parameter
+  if (!['production', 'trace'].includes(format)) {
+    return new Response(JSON.stringify({
+      error: 'Invalid format parameter',
+      validValues: ['production', 'trace']
+    }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
+
+  // Validate requested renderers
+  try {
+    validateRenderers(renderers);
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
+
+  // Run pipeline
+  try {
     const result = await runRecommendationPipeline(formData, renderers, format);
 
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify(result)
-    };
+    return new Response(JSON.stringify(result), {
+      status: 200,
+      headers: corsHeaders
+    });
   } catch (error) {
     console.error('Error in tea-recommendation:', error);
 
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        error: 'Failed to generate recommendations',
-        details: error.message
-      })
-    };
+    return new Response(JSON.stringify({
+      error: 'Failed to generate recommendations',
+      details: error.message
+    }), {
+      status: 500,
+      headers: corsHeaders
+    });
   }
 }
 
@@ -214,10 +248,11 @@ async function runRecommendationPipeline(formData, renderers, format) {
       allInferences.teaType,
       allInferences.processing
     );
-    // Preserve full SeasonRenderer result including circularYear for 12-month visualization
+    // Preserve full SeasonRenderer result including circularYear and monthlyScores for 12-month visualization
     recommendations.season = {
       recommendations: result.recommendations || [],
       circularYear: result.circularYear || [],
+      monthlyScores: result.monthlyScores || {},
       seasonalScores: result.seasonalScores || {},
       seasonalRange: result.seasonalRange || null,
       analysis: result.analysis || {},
@@ -226,8 +261,47 @@ async function runRecommendationPipeline(formData, renderers, format) {
     };
   }
   if (renderers.includes('brewing')) {
-    const result = new BrewingRenderer().render(formData);
-    recommendations.brewing = result.recommendations || [];
+    // Brewing recommendations: Tea Type + Processing + Geography + Compound
+    const result = new BrewingRenderer().render(
+      formData,
+      allInferences.processing,
+      allInferences.geography,
+      allInferences.compound
+    );
+    // Preserve full BrewingRenderer result with brewing styles, parameters, and reasoning
+    recommendations.brewing = {
+      brewingStyles: result.brewingStyles || [],
+      recommendations: result.recommendations || [],
+      analysis: result.analysis || {},
+      trace: result.trace || [],
+      confidence: result.confidence || 0,
+      rendererVersion: result.rendererVersion || '3.0'
+    };
+  }
+  if (renderers.includes('terroir')) {
+    // Terroir narrative: Geography + Tea Type + FormData (location) + optional Compound and Flavor context
+    const result = new TerroirRenderer().render(
+      allInferences.geography,
+      allInferences.teaType,
+      formData,
+      allInferences.compound,
+      allInferences.flavor
+    );
+    // Preserve full TerroirRenderer result with narrative sections and influences
+    recommendations.terroir = {
+      narrative: result.narrative || '',
+      sections: result.sections || [],
+      geographicInfluences: result.geographicInfluences || [],
+      teaType: result.teaType || '',
+      teaTypeId: result.teaTypeId || null,
+      location: result.location || '',
+      qualityIndicator: result.qualityIndicator || 'Unknown',
+      characteristics: result.characteristics || [],
+      harvestSeason: result.harvestSeason || '',
+      analysis: result.analysis || {},
+      confidence: result.confidence || 0,
+      rendererVersion: result.rendererVersion || '1.0'
+    };
   }
 
   // ========== FORMAT RESPONSE ==========

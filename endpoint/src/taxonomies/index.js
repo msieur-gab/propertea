@@ -16,6 +16,7 @@ import SeasonTaxonomy from './seasons.js';
 import GeographyTaxonomy from './geography.js';
 import TeaTypeTaxonomy from './teaTypes.js';
 import CompoundTaxonomy from './compoundTaxonomy.js';
+import BrewingTaxonomy from './brewing.js';
 
 /**
  * Central registry providing unified access to all taxonomies
@@ -30,6 +31,7 @@ export class TaxonomyRegistry {
   static geography = GeographyTaxonomy;
   static teaTypes = TeaTypeTaxonomy;
   static compounds = CompoundTaxonomy;
+  static brewing = BrewingTaxonomy;
 
   /**
    * Safe lookup across any domain
@@ -299,7 +301,8 @@ export {
   SeasonTaxonomy,
   GeographyTaxonomy,
   TeaTypeTaxonomy,
-  CompoundTaxonomy
+  CompoundTaxonomy,
+  BrewingTaxonomy
 };
 
 // Default export is the registry
