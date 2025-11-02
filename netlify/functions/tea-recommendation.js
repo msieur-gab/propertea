@@ -170,11 +170,11 @@ async function runRecommendationPipeline(formData, renderers, format) {
     recommendations.time = result.recommendations || [];
   }
   if (renderers.includes('season')) {
+    // Simplified seasonal rendering: uses only tea type and processing method
+    // Seasonal affinity comes from the tea's intrinsic nature, not geography or flavor
     const result = new SeasonRenderer().render(
-      geographyAnalysis,
-      processingAnalysis,
       teaTypeAnalysis,
-      flavorAnalysis
+      processingAnalysis
     );
     // Preserve full SeasonRenderer result including circularYear for 12-month visualization
     recommendations.season = {

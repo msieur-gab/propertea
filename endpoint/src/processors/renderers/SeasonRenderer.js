@@ -1,21 +1,23 @@
 /**
  * SeasonRenderer.js
  *
- * Purpose: Render seasonal recommendations based on multiple analyses
- * Input: Geography, Processing, TeaType, and Flavor analysis data
- * Output: Seasonal recommendations with continuous seasonal ranges
+ * Purpose: Render seasonal recommendations based on tea type and processing method
+ * Input: TeaType analysis and Processing analysis data
+ * Output: Seasonal recommendations with complete 12-month circular visualization
  *
- * This Renderer adapts logic from SeasonMatcher using SeasonTaxonomy
+ * This Renderer uses SeasonTaxonomy and seasonal affinities from TeaTypeTaxonomy
  *
  * SEASONAL RECOMMENDATION HIERARCHY (Chinese Tea Culture):
- * Tier 1 (Primary 60-70%): Processing method thermal character & seasonal affinity
- *   - Heavy roast → Winter tea (dominates even if warm region)
- *   - Steamed/minimal → Spring/Summer tea
- * Tier 2 (Refinement 20-30%): Geographic seasonality & tea type
- * Tier 3 (Nuance 10%): Flavor profile hints
+ * Tier 1 (Primary 60%): Tea type/subtype seasonal affinity
+ *   - Reflects cultural traditions and natural seasonal pairing (green tea = spring)
+ * Tier 2 (Secondary 40%): Processing method seasonal affinity
+ *   - Reflects thermal character and post-harvest processing (heavy roast = winter)
+ *
+ * Note: Seasonal affinity comes from the TEA itself (type + processing), not external factors
+ * Geography, climate, and flavor are not used - they don't determine seasonal suitability
  */
 
-import { SeasonTaxonomy, ProcessingTaxonomy } from '../../taxonomies/index.js';
+import { SeasonTaxonomy, ProcessingTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
 
 export class SeasonRenderer {
   constructor(config = {}) {
@@ -48,33 +50,13 @@ export class SeasonRenderer {
   }
 
   /**
-   * Render seasonal recommendations from multiple analyses
-   * @param {Object} geographyAnalysis - Analysis from geography/harvest data
+   * Render seasonal recommendations from tea type and processing analysis
+   * @param {Object} teaTypeAnalysis - Analysis from tea type/subtype
    * @param {Object} processingAnalysis - Analysis from processing methods
-   * @param {Object} teaTypeAnalysis - Analysis from tea type
-   * @param {Object} flavorAnalysis - Analysis from flavor profile
    * @returns {Object} - Seasonal recommendations
    */
-  render(geographyAnalysis = {}, processingAnalysis = {}, teaTypeAnalysis = {}, flavorAnalysis = {}) {
+  render(teaTypeAnalysis = {}, processingAnalysis = {}) {
     const trace = [];
-
-    // Extract relevant seasonal hints from inputs
-    const geographySeasonalHint = geographyAnalysis?.harvestSeason || geographyAnalysis?.season?.harvestSeason || "Unknown";
-    const processingThermalEffect = processingAnalysis?.energeticTendency || processingAnalysis?.thermalEffect || "neutral";
-    const teaSeasonalTendency = teaTypeAnalysis?.seasonalTendency || teaTypeAnalysis?.analysis?.seasonalTendency || "neutral";
-    const seasonalAffinityHints = flavorAnalysis?.analysis?.seasonalAffinityHints ||
-                                  flavorAnalysis?.seasonalAffinityHints ||
-                                  [];
-    const dominantFlavorCategories = flavorAnalysis?.analysis?.dominantCategories ||
-                                     flavorAnalysis?.dominantFlavorCategories ||
-                                     [];
-
-    trace.push({
-      step: "Input Processing",
-      reason: "Extract seasonal data from multiple analyses",
-      adjustment: `Geography: ${geographySeasonalHint}, Processing: ${processingThermalEffect}, Type: ${teaSeasonalTendency}`,
-      value: `Flavor categories: ${dominantFlavorCategories.join(', ')}`
-    });
 
     // Initialize season scores
     const seasonScores = new Map();
@@ -84,30 +66,48 @@ export class SeasonRenderer {
 
     trace.push({
       step: "Scoring Initialization",
-      reason: "Initialize all 13 seasons with base score",
+      reason: "Initialize all 13 seasons with neutral base score",
       adjustment: `Initialized ${this.granularSeasons.length} seasons with base score 50`,
-      value: "Ready for matching"
+      value: "Using tea type + processing for seasonal affinity"
     });
 
-    // Apply geography/harvest season affinity (TIER 2 REFINEMENT)
-    if (geographySeasonalHint && geographySeasonalHint !== "Unknown") {
-      const harvestSeasonMap = this._getHarvestSeasonMap(geographySeasonalHint);
-      harvestSeasonMap.forEach((boost, seasonId) => {
-        const current = seasonScores.get(seasonId) || 50;
-        seasonScores.set(seasonId, current + boost);
-      });
+    // ========== TIER 1 (60%): Tea Type/Subtype Seasonal Affinity ==========
+    // Extract tea type IDs from analysis and look up objects from taxonomy
+    const teaTypeId = teaTypeAnalysis?.analysis?.teaType;
+    const teaSubtypeId = teaTypeAnalysis?.analysis?.teaSubType;
 
-      trace.push({
-        step: "Geography Matching (TIER 2 REFINEMENT)",
-        reason: `Harvest season: ${geographySeasonalHint}`,
-        adjustment: "Applied harvest season affinities to refine processing recommendations",
-        value: "Note: Processing method dominates in Chinese tea culture (e.g., roasted oolong from warm region = winter tea)"
+    // Look up full objects from taxonomy to get seasonalAffinity
+    const teaType = teaTypeId ? TeaTypeTaxonomy.getType(teaTypeId) : null;
+    const teaSubtype = teaSubtypeId ? TeaTypeTaxonomy.getSubtype(teaSubtypeId) : null;
+    let typeAffinitiesApplied = 0;
+
+    if (teaType && teaType.seasonalAffinity && Array.isArray(teaType.seasonalAffinity)) {
+      teaType.seasonalAffinity.forEach(affinity => {
+        const current = seasonScores.get(affinity.seasonId) || 50;
+        // Tier 1: 60% weight
+        seasonScores.set(affinity.seasonId, current + (affinity.boost * 0.6));
+        typeAffinitiesApplied++;
       });
     }
 
-    // Apply processing seasonal affinity (PRIMARY TIER 1 DRIVER)
-    // In Chinese tea culture, processing method dominates seasonal recommendations
-    // Example: Heavy roasted oolong from warm region = winter tea (processing dominates)
+    // If subtype has different affinity, apply it with additional boost
+    if (teaSubtype && teaSubtype.seasonalAffinity && Array.isArray(teaSubtype.seasonalAffinity)) {
+      teaSubtype.seasonalAffinity.forEach(affinity => {
+        const current = seasonScores.get(affinity.seasonId) || 50;
+        // Subtype provides additional refinement (up to 60% total for tea type)
+        seasonScores.set(affinity.seasonId, current + (affinity.boost * 0.4));
+        typeAffinitiesApplied++;
+      });
+    }
+
+    trace.push({
+      step: "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+      reason: `Tea type: ${teaType?.displayName || 'unknown'}, Subtype: ${teaSubtype?.displayName || 'none'}`,
+      adjustment: `Applied ${typeAffinitiesApplied} seasonal affinity boosts from tea type/subtype`,
+      value: "Tea type defines intrinsic seasonal suitability per cultural tradition"
+    });
+
+    // ========== TIER 2 (40%): Processing Method Seasonal Affinity ==========
     let processingAffinitiesApplied = 0;
     let appliedMethods = [];
 
@@ -119,55 +119,19 @@ export class SeasonRenderer {
           appliedMethods.push(methodData.displayName);
           fullMethod.seasonalAffinity.forEach(affinity => {
             const current = seasonScores.get(affinity.seasonId) || 50;
-            seasonScores.set(affinity.seasonId, current + affinity.boost);
+            // Tier 2: 40% weight
+            seasonScores.set(affinity.seasonId, current + (affinity.boost * 0.4));
             processingAffinitiesApplied++;
           });
         }
       });
     }
 
-    // Also apply thermal effect adjustments as supplement
-    const thermalAdjustments = this._getProcessingThermalAdjustments(processingThermalEffect);
-    thermalAdjustments.forEach((boost, seasonId) => {
-      const current = seasonScores.get(seasonId) || 50;
-      // Reduce thermal adjustments since seasonalAffinity is now primary
-      seasonScores.set(seasonId, current + (boost * 0.5)); // 50% weight as supplement
-    });
-
     trace.push({
-      step: "Processing Affinity (TIER 1 PRIMARY)",
-      reason: `Processing methods: ${appliedMethods.join(', ') || 'none'}, Thermal: ${processingThermalEffect}`,
+      step: "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+      reason: `Processing methods: ${appliedMethods.join(', ') || 'none'}`,
       adjustment: `Applied ${processingAffinitiesApplied} seasonal affinity boosts from processing methods`,
-      value: `Processing method dominates seasonal recommendation per Chinese tea culture wisdom`
-    });
-
-    // Apply tea type seasonal tendency (TIER 2 REFINEMENT)
-    const typeAdjustments = this._getTeaTypeSeasonalAdjustments(teaSeasonalTendency);
-    typeAdjustments.forEach((boost, seasonId) => {
-      const current = seasonScores.get(seasonId) || 50;
-      seasonScores.set(seasonId, current + boost);
-    });
-
-    trace.push({
-      step: "Tea Type Tendency (TIER 2 REFINEMENT)",
-      reason: `Tea type seasonal tendency: ${teaSeasonalTendency}`,
-      adjustment: "Applied tea type seasonal affinities to refine processing recommendations",
-      value: "Season scores updated (secondary to processing method)"
-    });
-
-    // Apply flavor seasonal affinity hints (TIER 3 NUANCE)
-    let flavorHintsApplied = 0;
-    seasonalAffinityHints.forEach(seasonId => {
-      const current = seasonScores.get(seasonId) || 50;
-      seasonScores.set(seasonId, current + 10); // Reduced from 15 - nuance tier
-      flavorHintsApplied++;
-    });
-
-    trace.push({
-      step: "Flavor Matching (TIER 3 NUANCE)",
-      reason: `Applied ${seasonalAffinityHints.length} flavor seasonal hints`,
-      adjustment: `Boosted ${flavorHintsApplied} season scores by +10 for nuanced seasonal affinity`,
-      value: `Hint seasons: ${seasonalAffinityHints.join(', ')}`
+      value: "Processing thermal character refines seasonal recommendation"
     });
 
     // Get recommendations
@@ -224,10 +188,9 @@ export class SeasonRenderer {
 
       // Supporting data
       analysis: {
-        geographySeasonalHint,
-        processingThermalEffect,
-        teaSeasonalTendency,
-        flavorHintsCount: seasonalAffinityHints.length
+        teaTypeApplied: true,
+        processingApplied: true,
+        method: 'Tea type + Processing seasonal affinity'
       },
 
       // Metadata
@@ -238,95 +201,6 @@ export class SeasonRenderer {
   }
 
   // ========== Helper Methods ==========
-
-  /**
-   * Map harvest season to season score adjustments
-   */
-  _getHarvestSeasonMap(harvestSeason) {
-    const map = new Map();
-    const seasonMatch = harvestSeason.toLowerCase();
-
-    // Default boost for seasons matching harvest
-    if (seasonMatch.includes('spring')) {
-      ['SEASON_EARLY_SPRING', 'SEASON_SPRING', 'SEASON_LATE_SPRING'].forEach(s => {
-        map.set(s, 20);
-      });
-    } else if (seasonMatch.includes('summer')) {
-      ['SEASON_EARLY_SUMMER', 'SEASON_SUMMER', 'SEASON_LATE_SUMMER'].forEach(s => {
-        map.set(s, 20);
-      });
-    } else if (seasonMatch.includes('autumn')) {
-      ['SEASON_EARLY_AUTUMN', 'SEASON_AUTUMN', 'SEASON_LATE_AUTUMN'].forEach(s => {
-        map.set(s, 20);
-      });
-    } else if (seasonMatch.includes('winter')) {
-      ['SEASON_EARLY_WINTER', 'SEASON_WINTER', 'SEASON_LATE_WINTER'].forEach(s => {
-        map.set(s, 20);
-      });
-    }
-
-    return map;
-  }
-
-  /**
-   * Get processing thermal effect adjustments
-   */
-  _getProcessingThermalAdjustments(thermalEffect) {
-    const map = new Map();
-    const effect = thermalEffect.toLowerCase();
-
-    if (effect.includes('warming') || effect.includes('hot')) {
-      // Warming teas are better in cold seasons
-      ['SEASON_EARLY_WINTER', 'SEASON_WINTER', 'SEASON_LATE_WINTER', 'SEASON_LATE_AUTUMN'].forEach(s => {
-        map.set(s, 12);
-      });
-      // Penalize hot seasons
-      ['SEASON_EARLY_SUMMER', 'SEASON_SUMMER', 'SEASON_LATE_SUMMER'].forEach(s => {
-        map.set(s, -8);
-      });
-    } else if (effect.includes('cooling') || effect.includes('cool')) {
-      // Cooling teas are better in warm seasons
-      ['SEASON_EARLY_SUMMER', 'SEASON_SUMMER', 'SEASON_LATE_SUMMER'].forEach(s => {
-        map.set(s, 12);
-      });
-      // Penalize cold seasons
-      ['SEASON_EARLY_WINTER', 'SEASON_WINTER', 'SEASON_LATE_WINTER'].forEach(s => {
-        map.set(s, -8);
-      });
-    }
-
-    return map;
-  }
-
-  /**
-   * Get tea type seasonal adjustments
-   */
-  _getTeaTypeSeasonalAdjustments(seasonalTendency) {
-    const map = new Map();
-    const tendency = seasonalTendency.toLowerCase();
-
-    if (tendency.includes('spring')) {
-      ['SEASON_EARLY_SPRING', 'SEASON_SPRING', 'SEASON_LATE_SPRING'].forEach(s => {
-        map.set(s, 10);
-      });
-    } else if (tendency.includes('summer')) {
-      ['SEASON_EARLY_SUMMER', 'SEASON_SUMMER', 'SEASON_LATE_SUMMER'].forEach(s => {
-        map.set(s, 10);
-      });
-    } else if (tendency.includes('autumn')) {
-      ['SEASON_EARLY_AUTUMN', 'SEASON_AUTUMN', 'SEASON_LATE_AUTUMN'].forEach(s => {
-        map.set(s, 10);
-      });
-    } else if (tendency.includes('winter')) {
-      ['SEASON_EARLY_WINTER', 'SEASON_WINTER', 'SEASON_LATE_WINTER'].forEach(s => {
-        map.set(s, 10);
-      });
-    } else if (tendency.includes('year') || tendency.includes('anytime')) {
-      map.set('SEASON_ANYTIME', 15);
-    }
-
-    return map;
-  }
 
   /**
    * Find continuous seasonal range

@@ -26,7 +26,16 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'cooling',
       baseTimeOfDay: ['Afternoon', 'Evening', 'Anytime'],
       baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_GENTLE_ENERGY', 'ACTIVITY_UNWINDING'],
-      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_MINIMAL_PROCESSING']
+      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_MINIMAL_PROCESSING'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 20 },
+        { seasonId: 'SEASON_SPRING', boost: 25 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+        { seasonId: 'SEASON_SUMMER', boost: 12 },
+        { seasonId: 'SEASON_LATE_SUMMER', boost: 8 }
+      ]
     },
 
     TEA_TYPE_GREEN: {
@@ -41,7 +50,16 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'cooling',
       baseTimeOfDay: ['Morning', 'Afternoon'],
       baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_GENTLE_ENERGY', 'ACTIVITY_REFRESHMENT'],
-      commonProcessing: ['PROCESSING_STEAMED', 'PROCESSING_PAN_FIRED', 'PROCESSING_ROLLED', 'PROCESSING_SHADE_GROWN']
+      commonProcessing: ['PROCESSING_STEAMED', 'PROCESSING_PAN_FIRED', 'PROCESSING_ROLLED', 'PROCESSING_SHADE_GROWN'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 15 },
+        { seasonId: 'SEASON_SPRING', boost: 25 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+        { seasonId: 'SEASON_SUMMER', boost: 15 },
+        { seasonId: 'SEASON_LATE_SUMMER', boost: 10 }
+      ]
     },
 
     TEA_TYPE_YELLOW: {
@@ -56,7 +74,15 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'neutral-cooling',
       baseTimeOfDay: ['Morning', 'Afternoon'],
       baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL'],
-      commonProcessing: ['PROCESSING_KILL_GREEN', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_PARTIAL_OXIDATION']
+      commonProcessing: ['PROCESSING_KILL_GREEN', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_PARTIAL_OXIDATION'],
+      thermalEffect: 'neutral-cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 20 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 12 },
+        { seasonId: 'SEASON_AUTUMN', boost: 10 }
+      ]
     },
 
     TEA_TYPE_OOLONG: {
@@ -71,7 +97,16 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'variable',
       baseTimeOfDay: ['Afternoon', 'Evening', 'Social'],
       baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_FOCUS', 'ACTIVITY_RELAXATION'],
-      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_PARTIAL_OXIDATION', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_MEDIUM_ROAST', 'PROCESSING_HEAVY_ROAST']
+      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_PARTIAL_OXIDATION', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_MEDIUM_ROAST', 'PROCESSING_HEAVY_ROAST'],
+      thermalEffect: 'neutral-warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 12 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 10 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 },
+        { seasonId: 'SEASON_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 15 },
+        { seasonId: 'SEASON_ANYTIME', boost: 10 }
+      ]
     },
 
     TEA_TYPE_BLACK: {
@@ -86,7 +121,16 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'warming',
       baseTimeOfDay: ['Morning', 'Afternoon'],
       baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_ROUTINE', 'ACTIVITY_FOCUS', 'ACTIVITY_MORNING'],
-      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_FULL_OXIDATION']
+      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_FULL_OXIDATION'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_AUTUMN', boost: 22 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 25 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 28 },
+        { seasonId: 'SEASON_WINTER', boost: 25 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 20 }
+      ]
     },
 
     TEA_TYPE_PUERH: {
@@ -101,7 +145,15 @@ export class TeaTypeTaxonomy {
       seasonalTendency: 'warming',
       baseTimeOfDay: ['Afternoon', 'Evening', 'After Meals'],
       baseActivityHints: ['ACTIVITY_DIGESTIVE', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_GROUNDING', 'ACTIVITY_WARMING'],
-      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_COMPRESSED', 'PROCESSING_AGED', 'PROCESSING_FERMENTED']
+      commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_COMPRESSED', 'PROCESSING_AGED', 'PROCESSING_FERMENTED'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 25 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 30 },
+        { seasonId: 'SEASON_WINTER', boost: 35 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 30 },
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 15 }
+      ]
     }
   };
 
@@ -121,7 +173,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 1, max: 2, label: 'Very Low' },
       typicalTheanine: { min: 6, max: 8, label: 'Very High' },
       dominantFlavorCategories: ['Delicate', 'Sweet', 'Hay', 'Floral'],
-      baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_UNWINDING']
+      baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_UNWINDING'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 25 },
+        { seasonId: 'SEASON_SPRING', boost: 30 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 25 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 20 }
+      ]
     },
 
     TEA_SUBTYPE_WHITE_PEONY: {
@@ -134,7 +193,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 2, max: 3, label: 'Low' },
       typicalTheanine: { min: 5, max: 7, label: 'High' },
       dominantFlavorCategories: ['Floral', 'Sweet', 'Fruity', 'Delicate'],
-      baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK']
+      baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 22 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+        { seasonId: 'SEASON_SUMMER', boost: 15 }
+      ]
     },
 
     // ========== GREEN TEA SUBTYPES ==========
@@ -148,7 +214,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 6, max: 8, label: 'High' },
       typicalTheanine: { min: 7, max: 9, label: 'Very High' },
       dominantFlavorCategories: ['Umami', 'Sweet', 'Vegetal', 'Creamy'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_MORNING']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_MORNING'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 18 },
+        { seasonId: 'SEASON_SPRING', boost: 22 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
+      ]
     },
 
     TEA_SUBTYPE_GYOKURO: {
@@ -161,7 +234,13 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
       typicalTheanine: { min: 7, max: 8, label: 'Very High' },
       dominantFlavorCategories: ['Umami', 'Marine', 'Sweet', 'Vegetal'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_CALM']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_CALM'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 25 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 22 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 }
+      ]
     },
 
     TEA_SUBTYPE_SENCHA: {
@@ -174,7 +253,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium' },
       dominantFlavorCategories: ['Vegetal', 'Marine', 'Sweet', 'Grassy'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_MORNING']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_MORNING'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 20 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+        { seasonId: 'SEASON_SUMMER', boost: 12 }
+      ]
     },
 
     TEA_SUBTYPE_LONGJING: {
@@ -187,7 +273,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium' },
       dominantFlavorCategories: ['Nutty', 'Sweet', 'Grassy', 'Floral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 22 },
+        { seasonId: 'SEASON_SPRING', boost: 25 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
+      ]
     },
 
     // ========== YELLOW TEA SUBTYPES ==========
@@ -201,7 +294,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium' },
       dominantFlavorCategories: ['Sweet', 'Delicate', 'Floral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_AFTERNOON_BREAK']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_AFTERNOON_BREAK'],
+      thermalEffect: 'neutral-cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 22 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
+      ]
     },
 
     // ========== OOLONG TEA SUBTYPES ==========
@@ -215,8 +315,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium-High' },
       dominantFlavorCategories: ['Floral', 'Creamy', 'Sweet'],
-      seasonalTendency: 'cooling',
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION']
+      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 20 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 12 }
+      ]
     },
 
     TEA_SUBTYPE_DA_HONG_PAO: {
@@ -229,8 +335,15 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 5, max: 6, label: 'Medium-High' },
       typicalTheanine: { min: 3, max: 5, label: 'Medium' },
       dominantFlavorCategories: ['Roasted', 'Mineral', 'Woody', 'Caramel'],
-      seasonalTendency: 'warming',
-      baseActivityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_FOCUS']
+      baseActivityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_FOCUS'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 25 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 28 },
+        { seasonId: 'SEASON_WINTER', boost: 25 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 20 }
+      ]
     },
 
     TEA_SUBTYPE_DONG_DING: {
@@ -243,7 +356,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium' },
       dominantFlavorCategories: ['Floral', 'Fruity', 'Sweet', 'Creamy'],
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_CONTEMPLATIVE']
+      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_CONTEMPLATIVE'],
+      thermalEffect: 'neutral-warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 15 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 }
+      ]
     },
 
     TEA_SUBTYPE_BAOZHONG: {
@@ -256,7 +376,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
       typicalTheanine: { min: 4, max: 6, label: 'Medium' },
       dominantFlavorCategories: ['Fruity', 'Floral', 'Sweet'],
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION']
+      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
+      thermalEffect: 'cooling',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 18 },
+        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
+      ]
     },
 
     // ========== BLACK TEA SUBTYPES ==========
@@ -270,7 +397,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 6, max: 8, label: 'Very High' },
       typicalTheanine: { min: 2, max: 3, label: 'Low' },
       dominantFlavorCategories: ['Malty', 'Bold', 'Honey', 'Sweet'],
-      baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS']
+      baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+        { seasonId: 'SEASON_WINTER', boost: 30 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 25 },
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 15 }
+      ]
     },
 
     TEA_SUBTYPE_DARJEELING: {
@@ -283,7 +417,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
       typicalTheanine: { min: 3, max: 4, label: 'Medium' },
       dominantFlavorCategories: ['Floral', 'Fruity', 'Mineral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL']
+      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL'],
+      thermalEffect: 'neutral-warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_AUTUMN', boost: 22 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 18 }
+      ]
     },
 
     TEA_SUBTYPE_KEEMUN: {
@@ -296,7 +437,14 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 5, label: 'Medium-High' },
       typicalTheanine: { min: 3, max: 4, label: 'Medium' },
       dominantFlavorCategories: ['Fruity', 'Winey', 'Floral', 'Slightly Sweet'],
-      baseActivityHints: ['ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE']
+      baseActivityHints: ['ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 22 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+        { seasonId: 'SEASON_WINTER', boost: 22 }
+      ]
     },
 
     // ========== PUERH TEA SUBTYPES ==========
@@ -310,8 +458,15 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 5, max: 7, label: 'High' },
       typicalTheanine: { min: 3, max: 5, label: 'Medium' },
       dominantFlavorCategories: ['Earthy', 'Fruity (young)', 'Sweet (aged)', 'Mineral'],
-      seasonalTendency: 'neutral-cooling (young) -> warming (aged)',
-      baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE']
+      baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE'],
+      thermalEffect: 'variable',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 22 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 20 },
+        { seasonId: 'SEASON_SPRING', boost: 15 }
+      ]
     },
 
     TEA_SUBTYPE_SHOU_PUERH: {
@@ -324,8 +479,15 @@ export class TeaTypeTaxonomy {
       typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
       typicalTheanine: { min: 3, max: 4, label: 'Medium' },
       dominantFlavorCategories: ['Earthy', 'Woody', 'Sweet', 'Smooth'],
-      seasonalTendency: 'warming',
-      baseActivityHints: ['ACTIVITY_DIGESTIVE', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION', 'ACTIVITY_GROUNDING']
+      baseActivityHints: ['ACTIVITY_DIGESTIVE', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION', 'ACTIVITY_GROUNDING'],
+      thermalEffect: 'warming',
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 28 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 32 },
+        { seasonId: 'SEASON_WINTER', boost: 35 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 30 },
+        { seasonId: 'SEASON_EARLY_SPRING', boost: 18 }
+      ]
     }
   };
 
