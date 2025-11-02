@@ -8,11 +8,12 @@
  */
 
 export const rendererRegistry = {
-  // Activity Recommendations: needs compound analysis (caffeine/theanine levels)
+  // Activity Recommendations: flavor-driven with compound & tea type context
+  // Rebalanced to prioritize emotional/sensory associations over pure biochemistry
   activity: {
     displayName: 'Activity Recommendations',
-    requiredInferrers: ['compound'],
-    description: 'Suggests activities based on caffeine/theanine stimulation profile'
+    requiredInferrers: ['compound', 'teaType', 'flavor'],
+    description: 'Flavor-driven recommendations (40% sensory/emotional), compound profile (35% biochemical), tea type tradition (25% cultural baseline). Captures why people really choose teas - flavor creates emotional associations that compound tells us how to experience'
   },
 
   // Food Pairing: needs flavor analysis

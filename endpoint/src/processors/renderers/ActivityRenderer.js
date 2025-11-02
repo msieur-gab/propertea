@@ -1,25 +1,37 @@
 /**
  * ActivityRenderer.js
  *
- * Purpose: Render activity recommendations based on compound inference
- * Input: CompoundInferrer output { analysis: { stimulationLevel, relaxationLevel, compoundProfile } }
+ * Purpose: Render activity recommendations from three contributing sources:
+ *   1. Compound Profile (40%) - biochemical stimulation/relaxation from caffeine/theanine
+ *   2. Tea Type Hints (35%) - cultural/traditional activity associations
+ *   3. Flavor Profile Hints (25%) - sensory/thematic activity suggestions
+ *
+ * Input: Inferences from CompoundInferrer, TeaTypeInferrer, and FlavorInferrer
  * Output: Activity recommendations with confidence and reasoning
  *
  * This Renderer uses the Unified Taxonomy System (ActivityTaxonomy) for activity definitions
  * and organization, replacing hardcoded activity lists with dynamic registry data
  */
 
-import { ActivityTaxonomy } from '../../taxonomies/index.js';
+import { ActivityTaxonomy, TeaTypeTaxonomy, FlavorTaxonomy } from '../../taxonomies/index.js';
 
 export class ActivityRenderer {
   constructor(config = {}) {
     this.config = {
       clusterThreshold: config.clusterThreshold || 70,
       maxRecommendations: config.maxRecommendations || 3,
+      // Rebalanced weighting for three sources of activity suggestions
+      // Flavor now primary (40%) because it drives real-world tea selection and emotional associations
+      flavorWeight: config.flavorWeight || 0.40,          // 40% - sensory/emotional/thematic (PRIMARY)
+      compoundWeight: config.compoundWeight || 0.35,      // 35% - biochemical (tells us IF we want stimulation)
+      teaTypeWeight: config.teaTypeWeight || 0.25,        // 25% - cultural tradition (provides baseline context)
       ...config
     };
 
+    // Store taxonomy references
     this.activityTaxonomy = ActivityTaxonomy;
+    this.teaTypeTaxonomy = TeaTypeTaxonomy;
+    this.flavorTaxonomy = FlavorTaxonomy;
 
     // Build activity clusters from ActivityTaxonomy
     // Map cluster IDs to theme names and profile associations
@@ -94,29 +106,47 @@ export class ActivityRenderer {
   }
 
   /**
-   * Render activity recommendations from compound inference
-   * @param {Object} compoundInference - Output from CompoundInferrer
+   * Render activity recommendations from multiple inference sources
+   * @param {Object} inferences - Object with compound, teaType, and flavor analyses
+   *   - inferences.compound: Output from CompoundInferrer
+   *   - inferences.teaType: Output from TeaTypeInferrer
+   *   - inferences.flavor: Output from FlavorInferrer
    * @returns {Object} - Activity recommendations with cluster grouping
    */
-  render(compoundInference) {
+  render(inferences) {
     const trace = [];
 
-    // Extract inference data
-    if (!compoundInference?.analysis) {
+    // Extract inference data from all sources
+    const compoundInf = inferences?.compound;
+    const teaTypeInf = inferences?.teaType;
+    const flavorInf = inferences?.flavor;
+
+    if (!compoundInf?.analysis) {
       return this._failedRender("No compound inference data provided", trace);
     }
 
-    const analysis = compoundInference.analysis;
-    const { stimulationLevel, relaxationLevel, compoundProfile } = analysis;
+    const compoundAnalysis = compoundInf.analysis;
+    const { stimulationLevel, relaxationLevel, compoundProfile } = compoundAnalysis;
 
     trace.push({
       step: "Data Reception",
-      reason: "Received compound inference",
-      adjustment: `Profile: ${compoundProfile}, Stimulation: ${stimulationLevel}, Relaxation: ${relaxationLevel}`,
-      value: "Inference validated"
+      reason: "Received multi-source inferences",
+      adjustment: `Compound: ${compoundProfile}, TeaType: ${teaTypeInf?.analysis?.teaType}, Flavor: ${flavorInf?.analysis?.dominantFlavor}`,
+      value: "All inferences validated"
     });
 
-    // Score activities based on compound profile
+    // Collect activity hints from all three sources
+    const teaTypeActivityHints = this._getTeaTypeActivityHints(teaTypeInf);
+    const flavorActivityHints = this._getFlavorActivityHints(flavorInf);
+
+    trace.push({
+      step: "Hint Collection",
+      reason: "Extracted activity hints from taxonomy sources",
+      adjustment: `TeaType hints: ${teaTypeActivityHints.size}, Flavor hints: ${flavorActivityHints.size}`,
+      value: "Hints collected from cultural and sensory sources"
+    });
+
+    // Score activities based on three weighted sources
     const activityScores = new Map();
 
     // Initialize all activities with base score
@@ -130,36 +160,55 @@ export class ActivityRenderer {
       step: "Scoring Initialization",
       reason: "Set base scores for all activities",
       adjustment: `Initialized ${activityScores.size} activities with base score 50`,
-      value: "Ready for profile matching"
+      value: "Ready for three-factor scoring"
     });
 
-    // Score based on compound profile
-    const profileBonus = this._getProfileBonus(compoundProfile);
-    let boostedActivities = 0;
+    // SCORING FACTOR 1: Flavor Activity Hints (40% - PRIMARY)
+    // Flavor drives real-world tea selection through emotional & psychological associations
+    let flavorBoosted = 0;
+    flavorActivityHints.forEach((count, activity) => {
+      const currentScore = activityScores.get(activity) || 0;
+      // Strong bonus based on how many flavors suggest this activity
+      // Multiple flavor matches indicate strong thematic alignment
+      const flavorBonus = (20 + count * 8) * this.config.flavorWeight;
+      activityScores.set(activity, currentScore + flavorBonus);
+      flavorBoosted++;
+    });
+
+    trace.push({
+      step: "Flavor Hints Scoring (40% - PRIMARY)",
+      reason: "Sensory/emotional/thematic activity suggestions from flavor profile",
+      adjustment: `Boosted ${flavorBoosted} activities by +${(20 * this.config.flavorWeight).toFixed(2)} base + multi-flavor multiplier`,
+      value: `Flavor-driven emotional associations applied`
+    });
+
+    // SCORING FACTOR 2: Compound Profile (35%)
+    // Biochemistry tells us IF we want stimulation, but flavor tells us HOW & WHEN
+    const profileBonus = this._getProfileBonus(compoundProfile) * this.config.compoundWeight;
+    let compoundBoosted = 0;
 
     this.activityClusters.forEach(cluster => {
       if (cluster.targetProfiles.includes(compoundProfile)) {
         cluster.activities.forEach(activity => {
           const currentScore = activityScores.get(activity) || 0;
           activityScores.set(activity, currentScore + profileBonus);
-          boostedActivities++;
+          compoundBoosted++;
         });
       }
     });
 
     trace.push({
-      step: "Profile Matching",
+      step: "Compound Scoring (35%)",
       reason: `Compound profile: ${compoundProfile}`,
-      adjustment: `Boosted ${boostedActivities} activities by +${profileBonus}`,
-      value: `Profile score applied`
+      adjustment: `Boosted ${compoundBoosted} activities by +${profileBonus.toFixed(2)}`,
+      value: `Biochemical score applied`
     });
 
-    // Score based on stimulation level
-    const stimulationBonus = this._getStimulationBonus(stimulationLevel);
+    // SCORING FACTOR 3: Stimulation Level (within 35%)
+    const stimulationBonus = this._getStimulationBonus(stimulationLevel) * this.config.compoundWeight;
     let stimulationBoosted = 0;
 
     if (this._isStimulating(stimulationLevel)) {
-      // Boost stimulating activities
       const stimulatingThemes = ["Focus & Productivity", "Active & Energetic"];
       this.activityClusters.forEach(cluster => {
         if (stimulatingThemes.includes(cluster.theme)) {
@@ -171,8 +220,7 @@ export class ActivityRenderer {
         }
       });
     } else {
-      // Boost relaxing activities
-      const relaxingThemes = ["Mindfulness & Relaxation", "Evening Wind-Down", "Contemplative & Reflective"];
+      const relaxingThemes = ["Mindfulness & Relaxation", "Evening Wind-Down"];
       this.activityClusters.forEach(cluster => {
         if (relaxingThemes.includes(cluster.theme)) {
           cluster.activities.forEach(activity => {
@@ -185,10 +233,27 @@ export class ActivityRenderer {
     }
 
     trace.push({
-      step: "Stimulation Scoring",
+      step: "Stimulation Scoring (within 35%)",
       reason: `Stimulation level: ${stimulationLevel}`,
-      adjustment: `Boosted ${stimulationBoosted} activities by +${stimulationBonus}`,
-      value: `Stimulation score applied`
+      adjustment: `Boosted ${stimulationBoosted} activities by +${stimulationBonus.toFixed(2)}`,
+      value: `Stimulation multiplier applied`
+    });
+
+    // SCORING FACTOR 4: Tea Type Activity Hints (25%)
+    // Cultural context provides baseline, but individual character comes from flavor
+    let teaTypeBoosted = 0;
+    teaTypeActivityHints.forEach((activityId, activity) => {
+      const currentScore = activityScores.get(activity) || 0;
+      const teaTypeBonus = 20 * this.config.teaTypeWeight;
+      activityScores.set(activity, currentScore + teaTypeBonus);
+      teaTypeBoosted++;
+    });
+
+    trace.push({
+      step: "Tea Type Hints Scoring (25%)",
+      reason: "Cultural/traditional activity associations (baseline context)",
+      adjustment: `Boosted ${teaTypeBoosted} activities by +${(20 * this.config.teaTypeWeight).toFixed(2)}`,
+      value: `Cultural tradition score applied`
     });
 
     // Get top activities
@@ -229,13 +294,34 @@ export class ActivityRenderer {
       analysis: {
         compoundProfile,
         stimulationLevel,
-        relaxationLevel
+        relaxationLevel,
+        teaType: teaTypeInf?.analysis?.teaType,
+        dominantFlavor: flavorInf?.analysis?.dominantFlavor
+      },
+
+      // Scoring sources - rebalanced for flavor-driven recommendations
+      scoringSources: {
+        flavor: {
+          weight: this.config.flavorWeight,
+          role: "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+          importance: "Drives real-world tea selection and mood-based pairing"
+        },
+        compound: {
+          weight: this.config.compoundWeight,
+          role: "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+          importance: "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+        },
+        teaType: {
+          weight: this.config.teaTypeWeight,
+          role: "BASELINE (25%) - Cultural/traditional activity associations",
+          importance: "Provides context, but individual character comes from flavor"
+        }
       },
 
       // Metadata
       trace,
-      confidence: compoundInference.confidence || 0.85,
-      rendererVersion: '1.0'
+      confidence: Math.min(1.0, (compoundInf.confidence || 0.85) * 0.9),
+      rendererVersion: '2.0'
     };
   }
 
@@ -337,6 +423,77 @@ export class ActivityRenderer {
   }
 
   /**
+   * Extract activity hints from tea type taxonomy
+   * @param {Object} teaTypeInf - Output from TeaTypeInferrer
+   * @returns {Map<string, number>} - Map of activity names to hint count
+   */
+  _getTeaTypeActivityHints(teaTypeInf) {
+    const hints = new Map();
+
+    if (!teaTypeInf?.analysis?.teaType) {
+      return hints;
+    }
+
+    const teaType = teaTypeInf.analysis.teaType;
+    const teaTypeObj = this.teaTypeTaxonomy.getType(teaType);
+
+    if (!teaTypeObj?.baseActivityHints || !Array.isArray(teaTypeObj.baseActivityHints)) {
+      return hints;
+    }
+
+    // Convert activity IDs to display names and count
+    teaTypeObj.baseActivityHints.forEach(activityId => {
+      const activityObj = this._getActivityObjectById(activityId);
+      if (activityObj?.displayName) {
+        hints.set(activityObj.displayName, (hints.get(activityObj.displayName) || 0) + 1);
+      }
+    });
+
+    return hints;
+  }
+
+  /**
+   * Extract activity hints from flavor profile
+   * @param {Object} flavorInf - Output from FlavorInferrer
+   * @returns {Map<string, number>} - Map of activity names to hint count (weighted by flavor matches)
+   */
+  _getFlavorActivityHints(flavorInf) {
+    const hints = new Map();
+
+    // FlavorInferrer provides identifiedFlavors, not flavorProfile
+    if (!flavorInf?.analysis?.identifiedFlavors || !Array.isArray(flavorInf.analysis.identifiedFlavors)) {
+      return hints;
+    }
+
+    const flavors = flavorInf.analysis.identifiedFlavors;
+
+    // Collect activity hints from all flavors in the profile
+    flavors.forEach(flavorName => {
+      const flavorObj = this.flavorTaxonomy.getFlavor(flavorName);
+
+      if (flavorObj?.activityHints && Array.isArray(flavorObj.activityHints)) {
+        flavorObj.activityHints.forEach(activityId => {
+          const activityObj = this._getActivityObjectById(activityId);
+          if (activityObj?.displayName) {
+            hints.set(activityObj.displayName, (hints.get(activityObj.displayName) || 0) + 1);
+          }
+        });
+      }
+    });
+
+    return hints;
+  }
+
+  /**
+   * Get activity object from taxonomy by ID
+   * @param {string} activityId - Activity ID (e.g., ACTIVITY_RELAXATION)
+   * @returns {Object|null} - Activity object or null
+   */
+  _getActivityObjectById(activityId) {
+    return this.activityTaxonomy.ACTIVITIES[activityId] || null;
+  }
+
+  /**
    * Return error render when inference fails
    */
   _failedRender(reason, trace) {
@@ -346,7 +503,14 @@ export class ActivityRenderer {
       analysis: {
         compoundProfile: "Unknown",
         stimulationLevel: "Unknown",
-        relaxationLevel: "Unknown"
+        relaxationLevel: "Unknown",
+        teaType: "Unknown",
+        dominantFlavor: "Unknown"
+      },
+      scoringSources: {
+        flavor: { weight: 0.40, role: "PRIMARY - Emotional/sensory associations" },
+        compound: { weight: 0.35, role: "SECONDARY - Biochemical" },
+        teaType: { weight: 0.25, role: "BASELINE - Cultural context" }
       },
       trace: [{
         step: "Error",
@@ -355,7 +519,7 @@ export class ActivityRenderer {
         value: "Failed"
       }],
       confidence: 0.0,
-      rendererVersion: '1.0'
+      rendererVersion: '2.0'
     };
   }
 }

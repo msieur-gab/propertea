@@ -84,7 +84,8 @@ export class FlavorTaxonomy {
       aliases: ['jasmine', 'jasmine flower', 'jasmine scent', 'floral'],
       foodPairingHints: ['FOOD_LIGHT_DESSERTS', 'FOOD_STEAMED_VEGETABLES', 'FOOD_WHITE_FISH', 'FOOD_RICE_DISHES'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER'],
-      activityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_EVENING', 'ACTIVITY_UNWINDING']
+      // Jasmine suggests gentle calm, soothing evening grace - ideal for peaceful unwinding and light social connection
+      activityHints: ['ACTIVITY_UNWINDING', 'ACTIVITY_RELAXATION', 'ACTIVITY_EVENING', 'ACTIVITY_CALM', 'ACTIVITY_SOCIAL']
     },
     FLAVOR_ROSE: {
       id: 'FLAVOR_ROSE',
@@ -93,7 +94,8 @@ export class FlavorTaxonomy {
       aliases: ['rose', 'rose petal', 'floral rose'],
       foodPairingHints: ['FOOD_PASTRIES', 'FOOD_FRUIT_SALADS', 'FOOD_MIDDLE_EASTERN_SWEETS', 'FOOD_YOGURT'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER'],
-      activityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_ROMANTIC']
+      // Rose suggests romance, elegance, evening intimacy - evokes emotional connection and beauty
+      activityHints: ['ACTIVITY_ROMANTIC', 'ACTIVITY_EVENING', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_APPRECIATION']
     },
     FLAVOR_ORCHID: {
       id: 'FLAVOR_ORCHID',
@@ -102,7 +104,8 @@ export class FlavorTaxonomy {
       aliases: ['orchid', 'orchid floral'],
       foodPairingHints: ['FOOD_CREAMY_DESSERTS', 'FOOD_LIGHT_CAKES', 'FOOD_TROPICAL_FRUIT', 'FOOD_SUBTLE_PASTRIES'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_ANYTIME'],
-      activityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_SOCIAL']
+      // Orchid suggests refined elegance, deep appreciation, sophisticated meditation - perfect for mindful moments
+      activityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_RELAXATION', 'ACTIVITY_APPRECIATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_UNWINDING']
     },
     FLAVOR_LILAC: {
       id: 'FLAVOR_LILAC',
@@ -111,7 +114,8 @@ export class FlavorTaxonomy {
       aliases: ['lilac', 'lilac flower'],
       foodPairingHints: ['FOOD_SPRING_SALADS', 'FOOD_LIGHT_FRUIT_TARTS', 'FOOD_MADELEINES'],
       seasonalAffinityHints: ['SEASON_SPRING'],
-      activityHints: ['ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL', 'ACTIVITY_CREATIVE']
+      // Lilac brings spring joy and creative energy - uplifting and inspiring
+      activityHints: ['ACTIVITY_UPLIFTING', 'ACTIVITY_CREATIVE', 'ACTIVITY_SOCIAL', 'ACTIVITY_ENERGY', 'ACTIVITY_MORNING']
     },
     FLAVOR_OSMANTHUS: {
       id: 'FLAVOR_OSMANTHUS',
@@ -120,7 +124,8 @@ export class FlavorTaxonomy {
       aliases: ['osmanthus', 'sweet osmanthus'],
       foodPairingHints: ['FOOD_APRICOT_PASTRIES', 'FOOD_MOON_CAKES', 'FOOD_JELLIES', 'FOOD_LIGHT_COOKIES'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_SPRING'],
-      activityHints: ['ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL', 'ACTIVITY_RELAXATION']
+      // Osmanthus brings warm apricot sweetness - autumn appreciation with gentle nostalgia
+      activityHints: ['ACTIVITY_APPRECIATION', 'ACTIVITY_RELAXATION', 'ACTIVITY_UPLIFTING', 'ACTIVITY_WARMING', 'ACTIVITY_COMFORT']
     },
     FLAVOR_HONEYSUCKLE: {
       id: 'FLAVOR_HONEYSUCKLE',
@@ -129,7 +134,8 @@ export class FlavorTaxonomy {
       aliases: ['honeysuckle', 'honeysuckle flower'],
       foodPairingHints: ['FOOD_FRUIT_SALADS', 'FOOD_LIGHT_CAKES', 'FOOD_SORBETS'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER'],
-      activityHints: ['ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL']
+      // Honeysuckle brings natural sweetness and warmth - perfect for social connection and gentle delight
+      activityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_TREAT', 'ACTIVITY_RELAXATION', 'ACTIVITY_AFTERNOON_BREAK']
     },
 
     // ========== FRUITY FLAVORS ==========
@@ -140,7 +146,8 @@ export class FlavorTaxonomy {
       aliases: ['apple', 'red apple', 'green apple'],
       foodPairingHints: ['FOOD_CHEESE_PLATES', 'FOOD_PORK_DISHES', 'FOOD_OATMEAL', 'FOOD_LIGHT_CAKES'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_SPRING'],
-      activityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_GENTLE_ENERGY']
+      // Apple brings wholesome comfort and gentle freshness - perfect for afternoon respite and casual connection
+      activityHints: ['ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_SOCIAL', 'ACTIVITY_GENTLE_ENERGY', 'ACTIVITY_COMFORT', 'ACTIVITY_RELAXATION']
     },
     FLAVOR_CITRUS: {
       id: 'FLAVOR_CITRUS',
@@ -149,7 +156,8 @@ export class FlavorTaxonomy {
       aliases: ['citrus', 'lemon', 'orange', 'grapefruit', 'lime', 'citrus peel'],
       foodPairingHints: ['FOOD_SEAFOOD', 'FOOD_SALADS', 'FOOD_CHICKEN', 'FOOD_LIGHT_DESSERTS'],
       seasonalAffinityHints: ['SEASON_SUMMER', 'SEASON_SPRING'],
-      activityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_FOCUS', 'ACTIVITY_MORNING', 'ACTIVITY_REFRESHMENT']
+      // Citrus brings brightness and clarity - perfect for morning energy and crisp focus
+      activityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_UPLIFTING']
     },
     FLAVOR_BERRY: {
       id: 'FLAVOR_BERRY',
@@ -158,7 +166,8 @@ export class FlavorTaxonomy {
       aliases: ['berry', 'strawberry', 'raspberry', 'blueberry', 'blackberry'],
       foodPairingHints: ['FOOD_DESSERTS', 'FOOD_YOGURT', 'FOOD_BREAKFAST_FOODS', 'FOOD_SALADS'],
       seasonalAffinityHints: ['SEASON_SUMMER', 'SEASON_SPRING'],
-      activityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING']
+      // Berry brings natural sweet joy and vitality - perfect for bright social moments and celebration
+      activityHints: ['ACTIVITY_UPLIFTING', 'ACTIVITY_ENERGY', 'ACTIVITY_SOCIAL', 'ACTIVITY_TREAT', 'ACTIVITY_GENTLE_ENERGY']
     },
     FLAVOR_DARK_FRUITS: {
       id: 'FLAVOR_DARK_FRUITS',
@@ -167,7 +176,8 @@ export class FlavorTaxonomy {
       aliases: ['dark fruits', 'dark fruit', 'raisin', 'prune', 'fig', 'cherry', 'plum'],
       foodPairingHints: ['FOOD_DARK_CHOCOLATE', 'FOOD_GAME_MEATS', 'FOOD_ROASTED_MEATS', 'FOOD_STRONG_CHEESE', 'FOOD_SPICED_DESSERTS', 'FOOD_RICH_STEWS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_EVENING', 'ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_RELAXATION']
+      // Dark fruits suggest richness and sophistication - ideal for evening contemplation and deeper appreciation
+      activityHints: ['ACTIVITY_EVENING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_APPRECIATION', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL']
     },
 
     // ========== VEGETAL FLAVORS ==========
@@ -178,7 +188,8 @@ export class FlavorTaxonomy {
       aliases: ['grassy', 'fresh cut grass', 'hay', 'green', 'vegetal', 'vegetable'],
       foodPairingHints: ['FOOD_FRESH_SALADS', 'FOOD_LIGHT_VEGETABLE_DISHES', 'FOOD_WHITE_FISH'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_EARLY_SUMMER'],
-      activityHints: ['ACTIVITY_MORNING', 'ACTIVITY_FOCUS', 'ACTIVITY_CLEANSING']
+      // Grassy brings spring freshness and morning clarity - ideal for awakening focus and clean vitality
+      activityHints: ['ACTIVITY_MORNING', 'ACTIVITY_CLEANSING', 'ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_REFRESHMENT']
     },
     FLAVOR_LEAFY: {
       id: 'FLAVOR_LEAFY',
@@ -187,7 +198,8 @@ export class FlavorTaxonomy {
       aliases: ['leafy', 'spinach', 'kale', 'lettuce', 'grass'],
       foodPairingHints: ['FOOD_SALADS', 'FOOD_STEAMED_GREENS', 'FOOD_LIGHT_SOUPS'],
       seasonalAffinityHints: ['SEASON_SPRING'],
-      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_DETOX_CLEANSING']
+      // Leafy brings green clarity and renewal - perfect for cleansing and fresh-start focus
+      activityHints: ['ACTIVITY_DETOX_CLEANSING', 'ACTIVITY_FOCUS', 'ACTIVITY_MORNING', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_GROUNDING']
     },
     FLAVOR_HERBACEOUS: {
       id: 'FLAVOR_HERBACEOUS',
@@ -196,7 +208,8 @@ export class FlavorTaxonomy {
       aliases: ['herbaceous', 'parsley', 'thyme', 'mint', 'sage', 'basil'],
       foodPairingHints: ['FOOD_GRILLED_VEGETABLES', 'FOOD_SAVORY_PASTRIES', 'FOOD_CHEESE', 'FOOD_SOUPS'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER'],
-      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_CALM']
+      // Herbaceous brings aromatic clarity and calming herbs - perfect for focused tranquility
+      activityHints: ['ACTIVITY_CALM', 'ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_CLEANSING']
     },
 
     // ========== NUTTY & TOASTY FLAVORS ==========
@@ -207,7 +220,8 @@ export class FlavorTaxonomy {
       aliases: ['nutty', 'almond', 'hazelnut', 'walnut', 'chestnut', 'creamy', 'peanut'],
       foodPairingHints: ['FOOD_BAKED_GOODS', 'FOOD_CHEESE', 'FOOD_ROASTED_VEGETABLES', 'FOOD_LIGHT_MEATS', 'FOOD_ROASTED_NUTS', 'FOOD_HARD_CHEESE'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_RELAXATION', 'ACTIVITY_FOCUS']
+      // Nutty brings rich comfort and grounding warmth - perfect for sustained focus and cozy contemplation
+      activityHints: ['ACTIVITY_COMFORT', 'ACTIVITY_FOCUS', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION', 'ACTIVITY_CONTEMPLATIVE']
     },
     FLAVOR_TOASTED: {
       id: 'FLAVOR_TOASTED',
@@ -216,7 +230,8 @@ export class FlavorTaxonomy {
       aliases: ['toasted', 'bread', 'grain', 'barley', 'rice', 'toast', 'buttery', 'butter'],
       foodPairingHints: ['FOOD_BREAKFAST_FOODS', 'FOOD_ROASTED_NUTS', 'FOOD_COMFORT_FOOD', 'FOOD_BAKED_GOODS', 'FOOD_GRILLED_MEATS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_ROUTINE']
+      // Toasted brings breakfast warmth and familiar comfort - perfect for morning routine and grounding start
+      activityHints: ['ACTIVITY_ROUTINE', 'ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS']
     },
 
     // ========== SPICY FLAVORS ==========
@@ -227,7 +242,8 @@ export class FlavorTaxonomy {
       aliases: ['pungent', 'pepper', 'ginger', 'cinnamon', 'clove', 'anise', 'licorice'],
       foodPairingHints: ['FOOD_RICH_DESSERTS', 'FOOD_SPICED_DESSERTS', 'FOOD_CURRIES', 'FOOD_STEWS', 'FOOD_SPICED_FOODS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_ENERGY', 'ACTIVITY_DIGESTIVE']
+      // Pungent spices bring heat and vitality - perfect for warming, energizing, and digestive support
+      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_DIGESTIVE', 'ACTIVITY_ENERGY', 'ACTIVITY_BOLD_EXPERIENCE', 'ACTIVITY_EVENING']
     },
     FLAVOR_COOLING_SPICE: {
       id: 'FLAVOR_COOLING_SPICE',
@@ -236,7 +252,8 @@ export class FlavorTaxonomy {
       aliases: ['cooling', 'menthol', 'camphor', 'mint'],
       foodPairingHints: ['FOOD_FRUIT_SALADS', 'FOOD_CHOCOLATE', 'FOOD_LAMB_DISHES', 'FOOD_YOGURT'],
       seasonalAffinityHints: ['SEASON_SUMMER', 'SEASON_SPRING'],
-      activityHints: ['ACTIVITY_REFRESHMENT', 'ACTIVITY_FOCUS', 'ACTIVITY_DIGESTIVE']
+      // Cooling spices bring freshness and clarity - perfect for summer focus and light refreshment
+      activityHints: ['ACTIVITY_REFRESHMENT', 'ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_DIGESTIVE', 'ACTIVITY_CALM']
     },
 
     // ========== SWEET FLAVORS ==========
@@ -247,7 +264,8 @@ export class FlavorTaxonomy {
       aliases: ['caramel', 'brown sugar', 'toffee', 'burnt sugar', 'molasses'],
       foodPairingHints: ['FOOD_DESSERTS', 'FOOD_ROASTED_NUTS', 'FOOD_CHEESE', 'FOOD_COFFEE', 'FOOD_DARK_CHOCOLATE', 'FOOD_BAKED_GOODS', 'FOOD_NUTS', 'FOOD_ICE_CREAM'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_COMFORT', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION', 'ACTIVITY_EVENING', 'ACTIVITY_SOCIAL']
+      // Caramel suggests rich indulgence and deep sweetness - perfect for evening comfort and luxurious moments
+      activityHints: ['ACTIVITY_EVENING', 'ACTIVITY_COMFORT', 'ACTIVITY_INDULGENCE', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION']
     },
     FLAVOR_HONEY: {
       id: 'FLAVOR_HONEY',
@@ -256,7 +274,8 @@ export class FlavorTaxonomy {
       aliases: ['honey', 'sweet', 'sugary', 'malt'],
       foodPairingHints: ['FOOD_LIGHT_DESSERTS', 'FOOD_FRUITS', 'FOOD_PASTRIES', 'FOOD_YOGURT'],
       seasonalAffinityHints: ['SEASON_ANYTIME'],
-      activityHints: ['ACTIVITY_COMFORT', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_TREAT']
+      // Honey brings natural sweetness and gentle warmth - perfect for comfort moments and kind connection
+      activityHints: ['ACTIVITY_COMFORT', 'ACTIVITY_TREAT', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL', 'ACTIVITY_WARMING']
     },
     FLAVOR_CHOCOLATE: {
       id: 'FLAVOR_CHOCOLATE',
@@ -265,7 +284,8 @@ export class FlavorTaxonomy {
       aliases: ['chocolate', 'cocoa', 'dark chocolate'],
       foodPairingHints: ['FOOD_DESSERTS', 'FOOD_BERRIES', 'FOOD_COFFEE', 'FOOD_NUTS', 'FOOD_DARK_CHOCOLATE', 'FOOD_BAKED_GOODS', 'FOOD_ROASTED_NUTS'],
       seasonalAffinityHints: ['SEASON_WINTER', 'SEASON_AUTUMN'],
-      activityHints: ['ACTIVITY_COMFORT', 'ACTIVITY_INDULGENCE', 'ACTIVITY_RELAXATION']
+      // Chocolate brings indulgence and deep pleasure - perfect for evening luxury and contemplative moments
+      activityHints: ['ACTIVITY_INDULGENCE', 'ACTIVITY_COMFORT', 'ACTIVITY_EVENING', 'ACTIVITY_RELAXATION', 'ACTIVITY_CONTEMPLATIVE']
     },
     FLAVOR_MALT: {
       id: 'FLAVOR_MALT',
@@ -274,7 +294,8 @@ export class FlavorTaxonomy {
       aliases: ['malt', 'cereal', 'grain', 'malted'],
       foodPairingHints: ['FOOD_BREAKFAST_FOODS', 'FOOD_BAKED_GOODS', 'FOOD_BISCUITS', 'FOOD_CARAMEL', 'FOOD_HARD_CHEESE'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_ROUTINE']
+      // Malty flavor evokes morning routine and sustained focus - comfort with concentration
+      activityHints: ['ACTIVITY_MORNING', 'ACTIVITY_FOCUS', 'ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_ROUTINE']
     },
 
     // ========== EARTHY FLAVORS ==========
@@ -285,7 +306,8 @@ export class FlavorTaxonomy {
       aliases: ['soil', 'petrichor', 'loam', 'forest floor', 'wet stone', 'earth'],
       foodPairingHints: ['FOOD_MUSHROOMS', 'FOOD_ROOT_VEGETABLES', 'FOOD_HEARTY_SOUPS', 'FOOD_DARK_MEATS', 'FOOD_GRILLED_MEATS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_GROUNDING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING']
+      // Soil brings earthy grounding and natural foundation - perfect for deep roots and connection to nature
+      activityHints: ['ACTIVITY_GROUNDING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION', 'ACTIVITY_DIGESTIVE']
     },
     FLAVOR_MINERAL: {
       id: 'FLAVOR_MINERAL',
@@ -294,7 +316,8 @@ export class FlavorTaxonomy {
       aliases: ['mineral', 'flint', 'slate', 'chalk', 'minerality'],
       foodPairingHints: ['FOOD_SEAFOOD', 'FOOD_SHELLFISH', 'FOOD_LIGHT_CHEESE', 'FOOD_OYSTERS', 'FOOD_HARD_CHEESE'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER', 'SEASON_AUTUMN'],
-      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_CONTEMPLATIVE']
+      // Mineral suggests deep, crisp clarity - ideal for serious focused work and study
+      activityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_FOCUS', 'ACTIVITY_GROUNDING', 'ACTIVITY_REFRESHMENT']
     },
     FLAVOR_AGED: {
       id: 'FLAVOR_AGED',
@@ -303,7 +326,8 @@ export class FlavorTaxonomy {
       aliases: ['aged', 'leather', 'autumn leaves', 'camphor', 'moss', 'aged wood', 'stored grain'],
       foodPairingHints: ['FOOD_RICH_STEWS', 'FOOD_GAME_MEATS', 'FOOD_DARK_CHOCOLATE', 'FOOD_MUSHROOMS', 'FOOD_ROOT_VEGETABLES', 'FOOD_SPICED_FOODS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_DIGESTIVE', 'ACTIVITY_WARMING']
+      // Aged brings wisdom and depth - perfect for deep contemplation and refined appreciation over time
+      activityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_APPRECIATION', 'ACTIVITY_WARMING', 'ACTIVITY_DIGESTIVE', 'ACTIVITY_RELAXATION']
     },
 
     // ========== WOODY FLAVORS ==========
@@ -314,7 +338,8 @@ export class FlavorTaxonomy {
       aliases: ['cedar', 'pine', 'cedar wood'],
       foodPairingHints: ['FOOD_SMOKED_SALMON', 'FOOD_HARD_CHEESE', 'FOOD_GAME_MEATS', 'FOOD_GRILLED_MEATS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE']
+      // Cedar brings clear wood clarity and grounding focus - perfect for serious work and deep reflection
+      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_GROUNDING', 'ACTIVITY_BOLD_EXPERIENCE', 'ACTIVITY_CREATIVE']
     },
     FLAVOR_WOODY_GENERAL: {
       id: 'FLAVOR_WOODY_GENERAL',
@@ -323,7 +348,8 @@ export class FlavorTaxonomy {
       aliases: ['woody', 'wood', 'bark', 'oak', 'forest'],
       foodPairingHints: ['FOOD_SMOKED_FOODS', 'FOOD_GRILLED_MEATS', 'FOOD_CHEESE', 'FOOD_MUSHROOMS', 'FOOD_HARD_CHEESE', 'FOOD_ROOT_VEGETABLES'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_GROUNDING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_RELAXATION']
+      // Woody brings forest grounding and evening contemplation - perfect for nature connection and rest
+      activityHints: ['ACTIVITY_GROUNDING', 'ACTIVITY_WARMING', 'ACTIVITY_EVENING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_RELAXATION']
     },
 
     // ========== ROASTED FLAVORS ==========
@@ -334,7 +360,8 @@ export class FlavorTaxonomy {
       aliases: ['smoky', 'smoke', 'bonfire', 'tobacco', 'burnt', 'pine resin'],
       foodPairingHints: ['FOOD_SMOKED_FOODS', 'FOOD_BBQ', 'FOOD_STRONG_CHEESE', 'FOOD_BACON', 'FOOD_GRILLED_MEATS', 'FOOD_DARK_CHOCOLATE'],
       seasonalAffinityHints: ['SEASON_WINTER', 'SEASON_AUTUMN'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_BOLD_EXPERIENCE']
+      // Smoky flavor creates campfire/evening atmosphere - suggests creative, bold, evening activities
+      activityHints: ['ACTIVITY_CREATIVE', 'ACTIVITY_BOLD_EXPERIENCE', 'ACTIVITY_EVENING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_SOCIAL']
     },
     FLAVOR_COFFEE_LIKE: {
       id: 'FLAVOR_COFFEE_LIKE',
@@ -343,7 +370,8 @@ export class FlavorTaxonomy {
       aliases: ['coffee', 'chicory', 'roasted nuts', 'espresso'],
       foodPairingHints: ['FOOD_DESSERTS', 'FOOD_BAKED_GOODS', 'FOOD_CHEESE', 'FOOD_ROASTED_NUTS', 'FOOD_DARK_CHOCOLATE'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_FOCUS']
+      // Coffee-like roasted suggests sustained focus, deep work, contemplative depth - perfect for serious study sessions
+      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_MORNING', 'ACTIVITY_BOLD_EXPERIENCE', 'ACTIVITY_WARMING', 'ACTIVITY_COMFORT']
     },
     FLAVOR_ROASTED_GENERAL: {
       id: 'FLAVOR_ROASTED_GENERAL',
@@ -352,7 +380,8 @@ export class FlavorTaxonomy {
       aliases: ['roasted', 'charred', 'toasted', 'burnt'],
       foodPairingHints: ['FOOD_GRILLED_ROASTED_MEATS', 'FOOD_ROOT_VEGETABLES', 'FOOD_COMFORT_FOODS', 'FOOD_CHOCOLATE', 'FOOD_ROASTED_NUTS', 'FOOD_SPICED_FOODS'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_EVENING', 'ACTIVITY_RELAXATION']
+      // General roasted suggests warmth and comfort - especially suited for evening wind-down and contemplative moments
+      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_EVENING', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_RELAXATION', 'ACTIVITY_SOCIAL']
     },
 
     // ========== UMAMI FLAVORS ==========
@@ -363,7 +392,8 @@ export class FlavorTaxonomy {
       aliases: ['marine', 'seaweed', 'nori', 'brine', 'oceanic', 'sea salt'],
       foodPairingHints: ['FOOD_SEAFOOD', 'FOOD_SUSHI', 'FOOD_RICE_DISHES', 'FOOD_LIGHT_VEGETABLES'],
       seasonalAffinityHints: ['SEASON_SPRING', 'SEASON_SUMMER'],
-      activityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_CLEANSING']
+      // Marine brings oceanic clarity and umami depth - perfect for fresh focus and mineral clarity
+      activityHints: ['ACTIVITY_REFRESHMENT', 'ACTIVITY_CLEANSING', 'ACTIVITY_FOCUS', 'ACTIVITY_GROUNDING', 'ACTIVITY_ENERGY']
     },
     FLAVOR_MEATY: {
       id: 'FLAVOR_MEATY',
@@ -372,7 +402,8 @@ export class FlavorTaxonomy {
       aliases: ['meaty', 'savory', 'broth', 'mushroom', 'umami'],
       foodPairingHints: ['FOOD_SAVORY_SOUPS', 'FOOD_STEWS', 'FOOD_MUSHROOMS', 'FOOD_RICH_DISHES'],
       seasonalAffinityHints: ['SEASON_AUTUMN', 'SEASON_WINTER'],
-      activityHints: ['ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_SATIATING']
+      // Meaty umami brings deep satisfaction and warming depth - perfect for grounding, comfort, and digestive support
+      activityHints: ['ACTIVITY_SATIATING', 'ACTIVITY_WARMING', 'ACTIVITY_COMFORT', 'ACTIVITY_DIGESTIVE', 'ACTIVITY_GROUNDING']
     }
   };
 

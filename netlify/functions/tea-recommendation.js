@@ -216,8 +216,22 @@ async function runRecommendationPipeline(formData, renderers, format) {
   const recommendations = {};
 
   if (renderers.includes('activity')) {
-    const result = new ActivityRenderer().render(allInferences.compound);
-    recommendations.activity = result.recommendations || [];
+    // Activity recommendations: compound (40%) + tea type (35%) + flavor (25%)
+    const result = new ActivityRenderer().render({
+      compound: allInferences.compound,
+      teaType: allInferences.teaType,
+      flavor: allInferences.flavor
+    });
+    // Preserve full ActivityRenderer result with scoring sources and analysis
+    recommendations.activity = {
+      recommendations: result.recommendations || [],
+      clusters: result.clusters || [],
+      scoringSources: result.scoringSources || {},
+      analysis: result.analysis || {},
+      trace: result.trace || [],
+      confidence: result.confidence || 0,
+      rendererVersion: result.rendererVersion || '2.0'
+    };
   }
   if (renderers.includes('food')) {
     const result = new FoodRenderer().render(allInferences.flavor);
