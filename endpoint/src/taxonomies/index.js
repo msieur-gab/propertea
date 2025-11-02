@@ -15,6 +15,7 @@ import ProcessingTaxonomy from './processing.js';
 import SeasonTaxonomy from './seasons.js';
 import GeographyTaxonomy from './geography.js';
 import TeaTypeTaxonomy from './teaTypes.js';
+import CompoundTaxonomy from './compoundTaxonomy.js';
 
 /**
  * Central registry providing unified access to all taxonomies
@@ -28,6 +29,7 @@ export class TaxonomyRegistry {
   static seasons = SeasonTaxonomy;
   static geography = GeographyTaxonomy;
   static teaTypes = TeaTypeTaxonomy;
+  static compounds = CompoundTaxonomy;
 
   /**
    * Safe lookup across any domain
@@ -54,7 +56,9 @@ export class TaxonomyRegistry {
       geography: { taxonomy: GeographyTaxonomy, method: 'getElevation' },
       teatypes: { taxonomy: TeaTypeTaxonomy, method: 'getType' },
       'tea-types': { taxonomy: TeaTypeTaxonomy, method: 'getType' },
-      'tea types': { taxonomy: TeaTypeTaxonomy, method: 'getType' }
+      'tea types': { taxonomy: TeaTypeTaxonomy, method: 'getType' },
+      compounds: { taxonomy: CompoundTaxonomy, method: 'getProfile' },
+      compound: { taxonomy: CompoundTaxonomy, method: 'getProfile' }
     };
 
     const entry = taxonomyMap[normalizedDomain];
@@ -97,7 +101,9 @@ export class TaxonomyRegistry {
       season: () => SeasonTaxonomy.getAllSeasons(),
       'tea-types': () => TeaTypeTaxonomy.getAllTypes(),
       teatypes: () => TeaTypeTaxonomy.getAllTypes(),
-      'tea types': () => TeaTypeTaxonomy.getAllTypes()
+      'tea types': () => TeaTypeTaxonomy.getAllTypes(),
+      compounds: () => CompoundTaxonomy.getAllProfiles(),
+      compound: () => CompoundTaxonomy.getAllProfiles()
     };
 
     const method = methods[normalizedDomain];
@@ -205,7 +211,7 @@ export class TaxonomyRegistry {
       isConsistent: issues.length === 0,
       issues,
       timestamp: new Date().toISOString(),
-      taxonomyCount: 7,
+      taxonomyCount: 8,
       itemCounts: {
         flavors: Object.keys(FlavorTaxonomy.FLAVORS).length,
         activities: Object.keys(ActivityTaxonomy.ACTIVITIES).length,
@@ -213,7 +219,8 @@ export class TaxonomyRegistry {
         processing: Object.keys(ProcessingTaxonomy.METHODS).length,
         seasons: Object.keys(SeasonTaxonomy.SEASONS).length,
         teaTypes: Object.keys(TeaTypeTaxonomy.TYPES).length,
-        teaSubtypes: Object.keys(TeaTypeTaxonomy.SUBTYPES).length
+        teaSubtypes: Object.keys(TeaTypeTaxonomy.SUBTYPES).length,
+        compounds: Object.keys(CompoundTaxonomy.profiles).length
       }
     };
   }
@@ -266,6 +273,7 @@ export class TaxonomyRegistry {
     report += `  Seasons:      ${validation.itemCounts.seasons}\n`;
     report += `  Tea Types:    ${validation.itemCounts.teaTypes}\n`;
     report += `  Subtypes:     ${validation.itemCounts.teaSubtypes}\n`;
+    report += `  Compounds:    ${validation.itemCounts.compounds}\n`;
     report += `  Total Items:  ${
       Object.values(validation.itemCounts).reduce((a, b) => a + b, 0)
     }\n`;
@@ -290,7 +298,8 @@ export {
   ProcessingTaxonomy,
   SeasonTaxonomy,
   GeographyTaxonomy,
-  TeaTypeTaxonomy
+  TeaTypeTaxonomy,
+  CompoundTaxonomy
 };
 
 // Default export is the registry

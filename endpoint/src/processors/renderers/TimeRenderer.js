@@ -5,8 +5,10 @@
  * Input: CompoundInferrer output { analysis: { stimulationLevel, relaxationLevel, compoundProfile } }
  * Output: Hourly recommendations with optimal drinking times
  *
- * This Renderer adapts logic from TimeMatcher to provide time-based recommendations
+ * Uses CompoundTaxonomy for data-driven compound profile definitions and circadian curves
  */
+
+import { CompoundTaxonomy } from '../../taxonomies/index.js';
 
 export class TimeRenderer {
   constructor(config = {}) {
@@ -117,16 +119,18 @@ export class TimeRenderer {
       value: `Total adjustments: ${relaxationAdjusted.toFixed(0)}`
     });
 
-    // Apply compound profile adjustments
-    const compoundProfile_adjusted = this._getCompoundEffectProfile(compoundProfile);
+    // Apply compound profile adjustments from CompoundTaxonomy
+    const compoundProfileObj = CompoundTaxonomy.getProfileByName(compoundProfile);
     let compoundAdjusted = 0;
 
-    this.hours.forEach(hour => {
-      const adjustment = compoundProfile_adjusted[hour];
-      const currentScore = hourlyScores.get(hour);
-      hourlyScores.set(hour, Math.max(1, currentScore + adjustment));
-      compoundAdjusted += Math.abs(adjustment);
-    });
+    if (compoundProfileObj && compoundProfileObj.circadianProfile) {
+      this.hours.forEach(hour => {
+        const adjustment = compoundProfileObj.circadianProfile[hour];
+        const currentScore = hourlyScores.get(hour);
+        hourlyScores.set(hour, Math.max(1, currentScore + adjustment));
+        compoundAdjusted += Math.abs(adjustment);
+      });
+    }
 
     trace.push({
       step: "Compound Profile Scoring",
@@ -235,98 +239,6 @@ export class TimeRenderer {
     return profile.map(p => Math.round(p));
   }
 
-  /**
-   * Get compound profile adjustments
-   */
-  _getCompoundEffectProfile(profileName) {
-    const profile = new Array(24).fill(0);
-
-    switch (profileName) {
-      case "Intense & Sharp":
-        for (let h = 7; h <= 13; h++) {
-          profile[h] = 18 * (1 - Math.abs(h - 9.5) / 4.5);
-        }
-        for (let h = 18; h <= 23; h++) {
-          profile[h] = -35 * ((h - 17) / 6);
-        }
-        for (let h = 0; h <= 5; h++) {
-          profile[h] = -45;
-        }
-        break;
-
-      case "Focused & Energized":
-        for (let h = 8; h <= 15; h++) {
-          profile[h] = 15 * (1 - Math.abs(h - 11) / 5);
-        }
-        for (let h = 19; h <= 23; h++) {
-          profile[h] = -25 * ((h - 18) / 5);
-        }
-        for (let h = 0; h <= 6; h++) {
-          profile[h] = -30;
-        }
-        break;
-
-      case "Calm & Clear":
-        for (let h = 9; h <= 18; h++) {
-          profile[h] = 10 * (1 - Math.abs(h - 13.5) / 9);
-        }
-        for (let h = 19; h <= 22; h++) {
-          profile[h] = 12 * (1 - Math.abs(h - 20.5) / 2.5);
-        }
-        for (let h = 0; h <= 7; h++) {
-          profile[h] = -20;
-        }
-        break;
-
-      case "Deeply Calm":
-        for (let h = 17; h <= 23; h++) {
-          profile[h] = 20 * (1 - Math.abs(h - 21) / 6);
-        }
-        for (let h = 0; h <= 7; h++) {
-          profile[h] = 5;
-        }
-        for (let h = 8; h <= 16; h++) {
-          profile[h] = -25;
-        }
-        break;
-
-      case "Balanced & Focused":
-        for (let h = 8; h <= 17; h++) {
-          profile[h] = 12 * (1 - Math.abs(h - 12.5) / 9);
-        }
-        for (let h = 18; h <= 21; h++) {
-          profile[h] = 8;
-        }
-        for (let h = 0; h <= 6; h++) {
-          profile[h] = -15;
-        }
-        break;
-
-      case "Smooth & Sustained":
-        for (let h = 8; h <= 20; h++) {
-          profile[h] = 8;
-        }
-        for (let h = 0; h <= 7; h++) {
-          profile[h] = -10;
-        }
-        break;
-
-      case "Smooth & Alert":
-        for (let h = 7; h <= 19; h++) {
-          profile[h] = 10 * (1 - Math.abs(h - 13) / 12);
-        }
-        for (let h = 0; h <= 6; h++) {
-          profile[h] = -20;
-        }
-        break;
-
-      default:
-        // Neutral profile
-        break;
-    }
-
-    return profile.map(p => Math.round(p));
-  }
 
   /**
    * Get time period name for an hour
