@@ -142,11 +142,110 @@ export class FoodRenderer {
   }
 
   /**
+   * Get tea-type specific pairing templates
+   * Returns high-confidence food IDs that are classically paired with a tea type
+   * @param {string} teaType - Tea type ID (e.g., TEA_TYPE_BLACK)
+   * @returns {Array} - Array of food IDs with tea-type affinity
+   */
+  _getTeaTypeSpecificPairings(teaType) {
+    const templates = {
+      'TEA_TYPE_BLACK': [
+        'FOOD_AGED_CHEESE',      // Rich, fatty - balances astringency
+        'FOOD_GRILLED_MEATS',    // Hearty - complements body
+        'FOOD_ROASTED_NUTS',     // Warm, toasty - echo tea roast
+        'FOOD_DARK_CHOCOLATE',   // Rich, bitter - contrasts/complements
+        'FOOD_CARAMEL_SWEETS'    // Natural pairing with honey/malt notes
+      ],
+      'TEA_TYPE_GREEN': [
+        'FOOD_WHITE_FISH',       // Delicate - respects tea's subtlety
+        'FOOD_SUSHI_RICE',       // Complementary, traditional
+        'FOOD_LIGHT_VEGETABLES', // Mild, vegetal - synergistic
+        'FOOD_FRESH_FRUIT',      // Bright, fresh - echoes tea character
+        'FOOD_RICE_CAKES'        // Neutral base to showcase tea
+      ],
+      'TEA_TYPE_OOLONG': [
+        'FOOD_DARK_CHOCOLATE',   // Complex, roasted - matches oolong complexity
+        'FOOD_GRILLED_MEATS',    // Medium-heavy - suits medium-heavy oolong
+        'FOOD_ROOT_VEGETABLES',  // Earthy - mineral tea affinity
+        'FOOD_AGED_CHEESE',      // Sophisticated pairing
+        'FOOD_DIM_SUM'           // Traditional pairing, savory
+      ],
+      'TEA_TYPE_WHITE': [
+        'FOOD_LIGHT_DESSERTS',   // Delicate - matches tea profile
+        'FOOD_FRESH_FRUIT',      // Bright, floral - synergistic
+        'FOOD_WHITE_FISH',       // Subtle - respects tea finesse
+        'FOOD_RICE_CAKES',       // Neutral vehicle
+        'FOOD_HONEY_SWEETS'      // Natural sweetness pairing
+      ],
+      'TEA_TYPE_YELLOW': [
+        'FOOD_LIGHT_DESSERTS',   // Delicate, sweet character
+        'FOOD_FRESH_FRUIT',      // Balanced sweetness
+        'FOOD_HONEY_SWEETS',     // Natural honey affinity
+        'FOOD_PASTRIES',         // Buttery - light richness
+        'FOOD_WHITE_FISH'        // Subtle, delicate
+      ],
+      'TEA_TYPE_PUERH': [
+        'FOOD_GRILLED_MEATS',    // Fatty cuts - astringency cuts through
+        'FOOD_AGED_CHEESE',      // Strong flavor - matches puerh intensity
+        'FOOD_ROASTED_NUTS',     // Earthy, roasted - echo fermentation
+        'FOOD_DIM_SUM',          // Traditional, savory
+        'FOOD_CARAMEL_SWEETS'    // Earthiness + sweetness
+      ]
+    };
+
+    return templates[teaType] || [];
+  }
+
+  /**
+   * Get astringency-based food recommendations
+   * High astringency needs fatty, protein-rich foods
+   * @param {Object} compoundAnalysis - Compound analysis with caffeine/L-theanine
+   * @returns {Array} - Food IDs suitable for astringency level
+   */
+  _getAstringencyBasedPairings(compoundAnalysis) {
+    // Simple heuristic: higher caffeine (relative to L-theanine) often = higher astringency
+    const { caffeineLevel = "Unknown", lTheanineLevel = "Unknown" } = compoundAnalysis;
+
+    const astringencyMap = {
+      'High': [
+        'FOOD_AGED_CHEESE',      // Fat and umami
+        'FOOD_GRILLED_MEATS',    // Protein, fat
+        'FOOD_RICH_PASTRIES',    // Butter, richness
+        'FOOD_DARK_CHOCOLATE'    // Fat, bitterness
+      ],
+      'Medium': [
+        'FOOD_CARAMEL_SWEETS',   // Balanced sweetness
+        'FOOD_PASTRIES',         // Medium richness
+        'FOOD_ROOT_VEGETABLES',  // Earthiness
+        'FOOD_ROASTED_NUTS'      // Richness
+      ],
+      'Low': [
+        'FOOD_LIGHT_DESSERTS',   // Gentle pairing
+        'FOOD_FRESH_FRUIT',      // Light, bright
+        'FOOD_WHITE_FISH',       // Delicate
+        'FOOD_RICE_CAKES'        // Subtle
+      ]
+    };
+
+    // Rough astringency classification based on compound profile
+    let astringencyLevel = "Medium";
+    if (caffeineLevel === "High" && lTheanineLevel === "Low") {
+      astringencyLevel = "High";
+    } else if (caffeineLevel === "Low" || lTheanineLevel === "High") {
+      astringencyLevel = "Low";
+    }
+
+    return astringencyMap[astringencyLevel] || astringencyMap['Medium'];
+  }
+
+  /**
    * Render food pairing recommendations from flavor inference
-   * @param {Object} flavorInference - Output from FlavorInferrer
+   * @param {Object} flavorInference - Output from FlavorInferrer (primary)
+   * @param {Object} compoundInference - Output from CompoundInferrer (astringency context)
+   * @param {Object} teaTypeInference - Output from TeaTypeInferrer (tea-type templates)
    * @returns {Object} - Food pairing recommendations with grouping
    */
-  render(flavorInference) {
+  render(flavorInference, compoundInference = {}, teaTypeInference = {}) {
     const trace = [];
 
     // Extract flavor analysis data
@@ -161,6 +260,14 @@ export class FoodRenderer {
       dominantFlavors = [],
       intensityEstimate = "N/A"
     } = analysis;
+
+    // Extract compound profile (astringency awareness)
+    const compoundAnalysis = compoundInference?.analysis || {};
+    const { caffeineLevel = "Unknown", lTheanineLevel = "Unknown", compoundProfile = {} } = compoundAnalysis;
+
+    // Extract tea type for template-based pairings
+    const teaTypeAnalysis = teaTypeInference?.analysis || {};
+    const { teaType = null, teaSubType = null } = teaTypeAnalysis;
 
     trace.push({
       step: "Data Reception",
@@ -213,7 +320,53 @@ export class FoodRenderer {
       value: dominantCategories.join(', ')
     });
 
-    // Step 3: Apply intensity adjustment
+    // Step 3: Apply tea-type specific boosts (high confidence)
+    let typeBoosts = 0;
+    const typeSpecificFoods = this._getTeaTypeSpecificPairings(teaType);
+    typeSpecificFoods.forEach(foodId => {
+      if (foodScores.has(foodId)) {
+        const currentScore = foodScores.get(foodId);
+        // Strong boost (+15) for tea-type specific pairings
+        foodScores.set(foodId, currentScore + 15);
+        typeBoosts++;
+      } else {
+        // Add to map if not already present
+        foodScores.set(foodId, 65);
+        typeBoosts++;
+      }
+    });
+
+    trace.push({
+      step: "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+      reason: `Tea type: ${teaType || 'Unknown'}`,
+      adjustment: `Applied +15 boost to ${typeBoosts} tea-type specific foods`,
+      value: typeBoosts > 0 ? `Tea-type specific pairings activated` : 'No tea-type template available'
+    });
+
+    // Step 4: Apply astringency-based boosts
+    let astringencyBoosts = 0;
+    const astringencyFoods = this._getAstringencyBasedPairings(compoundAnalysis);
+    astringencyFoods.forEach(foodId => {
+      if (foodScores.has(foodId)) {
+        const currentScore = foodScores.get(foodId);
+        // Moderate boost (+8) for astringency-appropriate foods
+        foodScores.set(foodId, currentScore + 8);
+        astringencyBoosts++;
+      } else {
+        // Add to map if not already present
+        foodScores.set(foodId, 58);
+        astringencyBoosts++;
+      }
+    });
+
+    trace.push({
+      step: "Astringency-Based Matching (Tier 2 - Biochemistry)",
+      reason: `Caffeine: ${caffeineLevel}, L-Theanine: ${lTheanineLevel}`,
+      adjustment: `Applied +8 boost to ${astringencyBoosts} astringency-appropriate foods`,
+      value: astringencyBoosts > 0 ? `Astringency matching activated` : 'No astringency profile'
+    });
+
+    // Step 5: Apply intensity adjustment
     const intensityBonus = this._getIntensityBonus(intensityEstimate);
     let intensityAdjusted = 0;
 
@@ -230,7 +383,7 @@ export class FoodRenderer {
       value: `${intensityAdjusted} foods adjusted`
     });
 
-    // Step 4: Rank and select top foods
+    // Step 6: Rank and select top foods
     const sortedFoods = Array.from(foodScores.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, this.config.maxRecommendations);
@@ -269,6 +422,31 @@ export class FoodRenderer {
       value: `Cuisines: ${cuisineGrouping.map(g => g.cuisine).join(', ')}`
     });
 
+    // Calculate composite confidence based on multi-source agreement
+    let compositeConfidence = flavorInference.confidence || 0.75;
+
+    // Boost confidence if we have tea-type specific matches
+    if (typeBoosts > 0) {
+      compositeConfidence = Math.min(0.95, compositeConfidence + 0.10);
+    }
+
+    // Boost confidence if we have astringency-based matches
+    if (astringencyBoosts > 0) {
+      compositeConfidence = Math.min(0.95, compositeConfidence + 0.08);
+    }
+
+    // Reduce confidence if flavor hints are sparse
+    if (foodPairingHints.length < 3) {
+      compositeConfidence = Math.max(0.50, compositeConfidence - 0.15);
+    }
+
+    trace.push({
+      step: "Confidence Calculation",
+      reason: "Multi-source agreement scoring",
+      adjustment: `Base: ${(flavorInference.confidence || 0.75).toFixed(2)}, Tea-type: +${typeBoosts > 0 ? '0.10' : '0.00'}, Astringency: +${astringencyBoosts > 0 ? '0.08' : '0.00'}`,
+      value: `Final confidence: ${compositeConfidence.toFixed(2)}`
+    });
+
     return {
       // Top recommended foods
       recommendations,
@@ -284,13 +462,15 @@ export class FoodRenderer {
         flavorCategories: dominantCategories,
         dominantFlavors,
         intensityEstimate,
-        hintCount: foodPairingHints.length
+        hintCount: foodPairingHints.length,
+        teaTypeSpecificBoosts: typeBoosts,
+        astringencyBoosts: astringencyBoosts
       },
 
       // Metadata
       trace,
-      confidence: flavorInference.confidence || 0.85,
-      rendererVersion: '1.0'
+      confidence: compositeConfidence,
+      rendererVersion: '2.0'
     };
   }
 

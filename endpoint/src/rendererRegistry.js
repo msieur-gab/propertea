@@ -16,11 +16,11 @@ export const rendererRegistry = {
     description: 'Flavor-driven recommendations (40% sensory/emotional), compound profile (35% biochemical), tea type tradition (25% cultural baseline). Captures why people really choose teas - flavor creates emotional associations that compound tells us how to experience'
   },
 
-  // Food Pairing: needs flavor analysis
+  // Food Pairing: flavor (primary) + compound (astringency) + tea type (specific templates)
   food: {
     displayName: 'Food Pairings',
-    requiredInferrers: ['flavor'],
-    description: 'Suggests food pairings based on flavor profile'
+    requiredInferrers: ['flavor', 'compound', 'teaType'],
+    description: 'Suggests food pairings based on flavor (complementary), compound profile (astringency awareness), and tea type (specific templates). Higher confidence for tea-specific pairings.'
   },
 
   // Time of Day: needs compound + tea type (cultural traditions)
@@ -30,11 +30,14 @@ export const rendererRegistry = {
     description: 'Suggests optimal times based on compound profile (85%) + tea type cultural tradition (15%)'
   },
 
-  // Seasonal Recommendations: needs tea type + processing only (tea's intrinsic nature)
+  // Seasonal Recommendations: tea type + processing + geography for altitude awareness
+  // Tier 1 (60%): Tea type seasonal affinity
+  // Tier 2 (40%): Processing method seasonal affinity
+  // Tier 3 (±15% modifier): Geographic/altitude awareness - high-mountain = extended spring, low-elevation = autumn focus
   season: {
     displayName: 'Seasonal Recommendations',
-    requiredInferrers: ['teaType', 'processing'],
-    description: 'Suggests seasons based on tea type and processing method'
+    requiredInferrers: ['teaType', 'processing', 'geography'],
+    description: 'Suggests seasons based on tea type (60%), processing (40%), and geographic altitude (±15% modifier). High-mountain teas have extended spring seasons; low-elevation teas emphasize autumn/winter'
   },
 
   // Brewing Method: needs tea type + processing + geography + compound for full optimization
