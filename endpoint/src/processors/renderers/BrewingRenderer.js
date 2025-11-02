@@ -177,6 +177,24 @@ export class BrewingRenderer {
         }
       ],
 
+      // Standardized recommendations array (for API compatibility)
+      recommendations: [
+        {
+          style: 'gongfu',
+          parameters: adjustedGongfuParams,
+          guidance: gongfuGuidance,
+          vessel: this._getStyleVessels('gongfu', vesselRecommendations).recommended?.name || 'Gaiwan',
+          score: 90
+        },
+        {
+          style: 'western',
+          parameters: adjustedWesternParams,
+          guidance: westernGuidance,
+          vessel: this._getStyleVessels('western', vesselRecommendations).recommended?.name || 'Teapot',
+          score: 85
+        }
+      ],
+
       // Recommended style
       recommendedStyle: {
         name: brewingStyle,

@@ -140,7 +140,7 @@ export class TimeRenderer {
       .map(([hour, score]) => ({
         hour,
         score: Math.min(100, Math.max(0, score)),
-        period: this._getTimePeriod(hour)
+        timeOfDay: this._getTimePeriod(hour)
       }))
       .sort((a, b) => b.score - a.score);
 

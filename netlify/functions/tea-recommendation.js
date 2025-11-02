@@ -170,7 +170,12 @@ async function runRecommendationPipeline(formData, renderers, format) {
     recommendations.time = result.recommendations || [];
   }
   if (renderers.includes('season')) {
-    const result = new SeasonRenderer().render(geographyAnalysis);
+    const result = new SeasonRenderer().render(
+      geographyAnalysis,
+      processingAnalysis,
+      teaTypeAnalysis,
+      flavorAnalysis
+    );
     recommendations.season = result.recommendations || [];
   }
   if (renderers.includes('brewing')) {

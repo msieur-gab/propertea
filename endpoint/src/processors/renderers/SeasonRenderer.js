@@ -13,7 +13,7 @@ import { SeasonTaxonomy } from '../../taxonomies/index.js';
 export class SeasonRenderer {
   constructor(config = {}) {
     this.config = {
-      rangeThreshold: config.rangeThreshold || 70,
+      rangeThreshold: config.rangeThreshold || 60,
       ...config
     };
 
