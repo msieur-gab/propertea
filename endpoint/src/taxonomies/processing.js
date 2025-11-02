@@ -71,7 +71,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'lighter',
       energeticTendency: 'cooling',
       compoundEffect: 'clean focus',
-      compoundNotes: ['preserves catechins well', 'maintains L-theanine']
+      compoundNotes: ['preserves catechins well', 'maintains L-theanine'],
+      // Seasonal affinity: Cooling methods best for warm seasons
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 15 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 20 },
+        { seasonId: 'SEASON_SUMMER', boost: 25 },
+        { seasonId: 'SEASON_LATE_SUMMER', boost: 20 }
+      ]
     },
     PROCESSING_PAN_FIRED: {
       id: 'PROCESSING_PAN_FIRED',
@@ -83,7 +90,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'medium-light',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'focused',
-      compoundNotes: ['slightly modifies catechins', 'preserves most compounds']
+      compoundNotes: ['slightly modifies catechins', 'preserves most compounds'],
+      // Seasonal affinity: Neutral-warming, transitional seasons
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_SPRING', boost: 10 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 12 },
+        { seasonId: 'SEASON_AUTUMN', boost: 10 }
+      ]
     },
     PROCESSING_KILL_GREEN: {
       id: 'PROCESSING_KILL_GREEN',
@@ -95,7 +108,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'variable',
       energeticTendency: 'neutral',
       compoundEffect: 'neutral',
-      compoundNotes: ['stops enzymatic changes']
+      compoundNotes: ['stops enzymatic changes'],
+      // Seasonal affinity: Neutral, year-round, no strong preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
 
     // ========== SHAPING & BRUISING ==========
@@ -109,7 +126,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller extraction',
       energeticTendency: 'neutral',
       compoundEffect: 'enhanced strength',
-      compoundNotes: ['increased compound extraction', 'accelerates oxidation']
+      compoundNotes: ['increased compound extraction', 'accelerates oxidation'],
+      // Seasonal affinity: Neutral shaping, year-round
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
     PROCESSING_BALL_ROLLED: {
       id: 'PROCESSING_BALL_ROLLED',
@@ -121,7 +142,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'silky, evolving with each infusion',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'gradual release',
-      compoundNotes: ['extended release of compounds', 'preserves volatile aromatics']
+      compoundNotes: ['extended release of compounds', 'preserves volatile aromatics'],
+      // Seasonal affinity: Neutral-warming, mild autumn preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 10 },
+        { seasonId: 'SEASON_AUTUMN', boost: 12 }
+      ]
     },
     PROCESSING_STRIP_ROLLED: {
       id: 'PROCESSING_STRIP_ROLLED',
@@ -133,7 +159,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'medium',
       energeticTendency: 'neutral',
       compoundEffect: 'balanced',
-      compoundNotes: ['balanced oxidation', 'moderate cell rupture']
+      compoundNotes: ['balanced oxidation', 'moderate cell rupture'],
+      // Seasonal affinity: Neutral, year-round
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
     PROCESSING_TUMBLED: {
       id: 'PROCESSING_TUMBLED',
@@ -145,7 +175,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'medium',
       energeticTendency: 'neutral',
       compoundEffect: 'balanced',
-      compoundNotes: ['controlled bruising', 'moderate extraction']
+      compoundNotes: ['controlled bruising', 'moderate extraction'],
+      // Seasonal affinity: Neutral, year-round
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
 
     // ========== ROASTING ==========
@@ -159,7 +193,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'unchanged',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'smooths slightly',
-      compoundNotes: []
+      compoundNotes: [],
+      // Seasonal affinity: Light roast, transitional seasons preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_SPRING', boost: 12 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 10 }
+      ]
     },
     PROCESSING_LIGHT_ROAST: {
       id: 'PROCESSING_LIGHT_ROAST',
@@ -171,7 +210,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'slightly fuller',
       energeticTendency: 'warming',
       compoundEffect: 'smooths',
-      compoundNotes: ['starts Maillard reactions']
+      compoundNotes: ['starts Maillard reactions'],
+      // Seasonal affinity: Light warming, spring & early autumn
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 15 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
+      ]
     },
     PROCESSING_MEDIUM_ROAST: {
       id: 'PROCESSING_MEDIUM_ROAST',
@@ -183,7 +227,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller',
       energeticTendency: 'warming',
       compoundEffect: 'smooths significantly',
-      compoundNotes: ['promotes Maillard reactions', 'may slightly degrade volatile compounds']
+      compoundNotes: ['promotes Maillard reactions', 'may slightly degrade volatile compounds'],
+      // Seasonal affinity: Warming, autumn & winter preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 15 }
+      ]
     },
     PROCESSING_HEAVY_ROAST: {
       id: 'PROCESSING_HEAVY_ROAST',
@@ -195,7 +245,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'much fuller',
       energeticTendency: 'very warming',
       compoundEffect: 'very smooth, blunts peak',
-      compoundNotes: ['significant Maillard/caramelization', 'may degrade catechins/vitamins']
+      compoundNotes: ['significant Maillard/caramelization', 'may degrade catechins/vitamins'],
+      // Seasonal affinity: Strongly warming, winter preference (PRIMARY driver)
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+        { seasonId: 'SEASON_WINTER', boost: 30 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 20 }
+      ]
     },
     PROCESSING_CHARCOAL_ROASTED: {
       id: 'PROCESSING_CHARCOAL_ROASTED',
@@ -207,7 +264,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller',
       energeticTendency: 'very warming',
       compoundEffect: 'very smooth, complex energy',
-      compoundNotes: ['similar to heavy roast', 'may add trace elements']
+      compoundNotes: ['similar to heavy roast', 'may add trace elements'],
+      // Seasonal affinity: Very warming, deep winter preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 22 },
+        { seasonId: 'SEASON_WINTER', boost: 28 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 18 }
+      ]
     },
     PROCESSING_ROCK_FIRED: {
       id: 'PROCESSING_ROCK_FIRED',
@@ -219,7 +283,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller',
       energeticTendency: 'warming',
       compoundEffect: 'smooth with character',
-      compoundNotes: ['mineral infusion', 'Maillard reactions']
+      compoundNotes: ['mineral infusion', 'Maillard reactions'],
+      // Seasonal affinity: Warming mineral notes, autumn & winter
+      seasonalAffinity: [
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 16 },
+        { seasonId: 'SEASON_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 16 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 14 }
+      ]
     },
 
     // ========== OXIDATION & WITHERING ==========
@@ -233,7 +304,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'unchanged',
       energeticTendency: 'neutral',
       compoundEffect: 'neutral',
-      compoundNotes: ['starts enzymatic activity', 'reduces water content']
+      compoundNotes: ['starts enzymatic activity', 'reduces water content'],
+      // Seasonal affinity: Neutral preparation, year-round
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
     PROCESSING_SUN_DRIED: {
       id: 'PROCESSING_SUN_DRIED',
@@ -245,7 +320,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'lighter',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'neutral',
-      compoundNotes: ['UV exposure can alter some compounds']
+      compoundNotes: ['UV exposure can alter some compounds'],
+      // Seasonal affinity: Neutral-warming, spring/summer preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 12 },
+        { seasonId: 'SEASON_SUMMER', boost: 10 }
+      ]
     },
     PROCESSING_OXIDISED: {
       id: 'PROCESSING_OXIDISED',
@@ -257,7 +337,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller',
       energeticTendency: 'warming',
       compoundEffect: 'smooths (compared to green)',
-      compoundNotes: ['converts catechins to theaflavins/thearubigins']
+      compoundNotes: ['converts catechins to theaflavins/thearubigins'],
+      // Seasonal affinity: Warming oxidation, autumn & winter preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 16 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 18 },
+        { seasonId: 'SEASON_WINTER', boost: 16 }
+      ]
     },
     PROCESSING_PARTIAL_OXIDATION: {
       id: 'PROCESSING_PARTIAL_OXIDATION',
@@ -269,7 +355,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'variable (lighter to fuller)',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'balanced/smooth',
-      compoundNotes: ['partial catechin conversion']
+      compoundNotes: ['partial catechin conversion'],
+      // Seasonal affinity: Balanced, spring & autumn preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 14 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 14 },
+        { seasonId: 'SEASON_AUTUMN', boost: 12 }
+      ]
     },
     PROCESSING_FULL_OXIDATION: {
       id: 'PROCESSING_FULL_OXIDATION',
@@ -281,7 +373,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'fuller/robust',
       energeticTendency: 'warming',
       compoundEffect: 'strong but potentially less sharp',
-      compoundNotes: ['maximizes theaflavins/thearubigins']
+      compoundNotes: ['maximizes theaflavins/thearubigins'],
+      // Seasonal affinity: Warming oxidation, autumn & winter preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 20 },
+        { seasonId: 'SEASON_WINTER', boost: 18 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 14 }
+      ]
     },
 
     // ========== GROWING & SPECIAL ==========
@@ -295,7 +394,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smoother, sometimes thicker',
       energeticTendency: 'neutral-cooling',
       compoundEffect: 'enhanced focus, calming influence',
-      compoundNotes: ['increases L-theanine', 'increases chlorophyll', 'reduces catechins slightly']
+      compoundNotes: ['increases L-theanine', 'increases chlorophyll', 'reduces catechins slightly'],
+      // Seasonal affinity: Cooling, spring & summer preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 18 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 20 },
+        { seasonId: 'SEASON_SUMMER', boost: 20 }
+      ]
     },
     PROCESSING_INSECT_BITTEN: {
       id: 'PROCESSING_INSECT_BITTEN',
@@ -307,7 +412,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smoother',
       energeticTendency: 'neutral',
       compoundEffect: 'enhanced aroma',
-      compoundNotes: ['increases volatile compounds', 'enhances natural aromatics']
+      compoundNotes: ['increases volatile compounds', 'enhances natural aromatics'],
+      // Seasonal affinity: Neutral, spring preference (harvest season dependent)
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 16 },
+        { seasonId: 'SEASON_SUMMER', boost: 12 }
+      ]
     },
     PROCESSING_MINIMAL_PROCESSING: {
       id: 'PROCESSING_MINIMAL_PROCESSING',
@@ -319,7 +429,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'lighter, delicate',
       energeticTendency: 'cooling',
       compoundEffect: 'gentle',
-      compoundNotes: ['preserves high levels of antioxidants', 'minimal enzymatic change']
+      compoundNotes: ['preserves high levels of antioxidants', 'minimal enzymatic change'],
+      // Seasonal affinity: Cooling white tea, spring & summer
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+        { seasonId: 'SEASON_SUMMER', boost: 15 }
+      ]
     },
     PROCESSING_GABA_PROCESSED: {
       id: 'PROCESSING_GABA_PROCESSED',
@@ -331,7 +447,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smooth',
       energeticTendency: 'neutral',
       compoundEffect: 'calming influence, reduces sharp peak',
-      compoundNotes: ['significantly increases GABA', 'increases alanine']
+      compoundNotes: ['significantly increases GABA', 'increases alanine'],
+      // Seasonal affinity: Neutral-calming, year-round with spring preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 12 },
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
 
     // ========== AGING & FERMENTATION ==========
@@ -345,7 +466,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smoother, often thicker',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'smooth, sustained',
-      compoundNotes: ['slow oxidation/fermentation continues', 'volatile compounds change']
+      compoundNotes: ['slow oxidation/fermentation continues', 'volatile compounds change'],
+      // Seasonal affinity: Neutral-warming aged, autumn & winter preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 14 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 16 },
+        { seasonId: 'SEASON_WINTER', boost: 16 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 12 }
+      ]
     },
     PROCESSING_COMPRESSED: {
       id: 'PROCESSING_COMPRESSED',
@@ -357,7 +485,11 @@ export class ProcessingTaxonomy {
       mouthFeel: 'may increase perceived thickness over time',
       energeticTendency: 'neutral',
       compoundEffect: 'neutral',
-      compoundNotes: ['affects microbial activity during aging']
+      compoundNotes: ['affects microbial activity during aging'],
+      // Seasonal affinity: Neutral, year-round
+      seasonalAffinity: [
+        { seasonId: 'SEASON_ANYTIME', boost: 5 }
+      ]
     },
     PROCESSING_FERMENTED: {
       id: 'PROCESSING_FERMENTED',
@@ -369,7 +501,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smooth, thick',
       energeticTendency: 'warming',
       compoundEffect: 'smooth, grounding energy',
-      compoundNotes: ['microbial transformation of compounds', 'produces statins (in some)', 'reduces caffeine bioavailability?']
+      compoundNotes: ['microbial transformation of compounds', 'produces statins (in some)', 'reduces caffeine bioavailability?'],
+      // Seasonal affinity: Warming fermentation, autumn & winter preference (especially puerh)
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 22 },
+        { seasonId: 'SEASON_WINTER', boost: 24 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 16 }
+      ]
     },
     PROCESSING_PILE_FERMENTED: {
       id: 'PROCESSING_PILE_FERMENTED',
@@ -381,7 +520,14 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smooth, thick',
       energeticTendency: 'warming',
       compoundEffect: 'gentle, grounding',
-      compoundNotes: ['rapid microbial transformation', 'changes compound profile']
+      compoundNotes: ['rapid microbial transformation', 'changes compound profile'],
+      // Seasonal affinity: Warming shou puerh, winter preference (PRIMARY winter tea)
+      seasonalAffinity: [
+        { seasonId: 'SEASON_LATE_AUTUMN', boost: 20 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+        { seasonId: 'SEASON_WINTER', boost: 28 },
+        { seasonId: 'SEASON_LATE_WINTER', boost: 18 }
+      ]
     },
     PROCESSING_ANAEROBIC_FERMENTED: {
       id: 'PROCESSING_ANAEROBIC_FERMENTED',
@@ -393,7 +539,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'smooth',
       energeticTendency: 'neutral-warming',
       compoundEffect: 'balanced',
-      compoundNotes: ['anaerobic microbial activity', 'produces unique esters']
+      compoundNotes: ['anaerobic microbial activity', 'produces unique esters'],
+      // Seasonal affinity: Neutral-warming fermented, year-round with slight autumn preference
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 12 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 14 }
+      ]
     },
 
     // ========== SCENTING ==========
@@ -407,7 +558,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'unchanged (depends on base tea)',
       energeticTendency: 'cooling',
       compoundEffect: 'calming influence',
-      compoundNotes: ['adds volatile aroma compounds from jasmine']
+      compoundNotes: ['adds volatile aroma compounds from jasmine'],
+      // Seasonal affinity: Cooling floral, spring & summer
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 18 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 16 },
+        { seasonId: 'SEASON_SUMMER', boost: 14 }
+      ]
     },
     PROCESSING_ROSE_SCENTED: {
       id: 'PROCESSING_ROSE_SCENTED',
@@ -419,7 +576,12 @@ export class ProcessingTaxonomy {
       mouthFeel: 'unchanged (depends on base tea)',
       energeticTendency: 'cooling',
       compoundEffect: 'uplifting, calming',
-      compoundNotes: ['adds rose volatile compounds', 'may contain trace essential oils']
+      compoundNotes: ['adds rose volatile compounds', 'may contain trace essential oils'],
+      // Seasonal affinity: Cooling floral, spring & early summer
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 20 },
+        { seasonId: 'SEASON_EARLY_SUMMER', boost: 16 }
+      ]
     },
     PROCESSING_OSMANTHUS_SCENTED: {
       id: 'PROCESSING_OSMANTHUS_SCENTED',
@@ -431,7 +593,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'unchanged (depends on base tea)',
       energeticTendency: 'neutral-cooling',
       compoundEffect: 'uplifting',
-      compoundNotes: ['adds fruity-floral volatiles']
+      compoundNotes: ['adds fruity-floral volatiles'],
+      // Seasonal affinity: Neutral-cooling floral, spring through early autumn
+      seasonalAffinity: [
+        { seasonId: 'SEASON_SPRING', boost: 16 },
+        { seasonId: 'SEASON_SUMMER', boost: 12 },
+        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 14 }
+      ]
     },
 
     // ========== MODERN/INDUSTRIAL ==========
@@ -445,7 +613,13 @@ export class ProcessingTaxonomy {
       mouthFeel: 'strong, robust, astringent',
       energeticTendency: 'warming',
       compoundEffect: 'sharp peak, fast acting',
-      compoundNotes: ['maximizes surface area for quick extraction', 'can damage leaf structure']
+      compoundNotes: ['maximizes surface area for quick extraction', 'can damage leaf structure'],
+      // Seasonal affinity: Warming, autumn & winter (CTC black teas often drunk hot)
+      seasonalAffinity: [
+        { seasonId: 'SEASON_AUTUMN', boost: 14 },
+        { seasonId: 'SEASON_EARLY_WINTER', boost: 16 },
+        { seasonId: 'SEASON_WINTER', boost: 14 }
+      ]
     }
   };
 
