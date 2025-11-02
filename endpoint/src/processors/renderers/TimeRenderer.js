@@ -38,15 +38,43 @@ export class TimeRenderer {
       "very high (smooth)": 6
     };
 
-    // Time period names
+    // Time period names with narrative hints
     this.timePeriods = {
-      night: { name: 'Night (0-5)', hours: [0, 1, 2, 3, 4, 5] },
-      early_morning: { name: 'Early Morning (6-8)', hours: [6, 7, 8] },
-      morning: { name: 'Morning (9-11)', hours: [9, 10, 11] },
-      midday: { name: 'Midday (12-14)', hours: [12, 13, 14] },
-      afternoon: { name: 'Afternoon (15-17)', hours: [15, 16, 17] },
-      evening: { name: 'Evening (18-20)', hours: [18, 19, 20] },
-      late_evening: { name: 'Late Evening (21-23)', hours: [21, 22, 23] }
+      night: {
+        name: 'Night (0-5)',
+        hours: [0, 1, 2, 3, 4, 5],
+        narrativeHint: 'Rest and recovery - seek calming, low-stimulation profiles'
+      },
+      early_morning: {
+        name: 'Early Morning (6-8)',
+        hours: [6, 7, 8],
+        narrativeHint: 'Gentle awakening - subtle stimulation supports gradual alertness'
+      },
+      morning: {
+        name: 'Morning (9-11)',
+        hours: [9, 10, 11],
+        narrativeHint: 'Peak alertness - higher stimulation aligns with circadian energy peaks'
+      },
+      midday: {
+        name: 'Midday (12-14)',
+        hours: [12, 13, 14],
+        narrativeHint: 'Post-lunch support - stimulation counters afternoon dip'
+      },
+      afternoon: {
+        name: 'Afternoon (15-17)',
+        hours: [15, 16, 17],
+        narrativeHint: 'Extended focus - sustained stimulation maintains work momentum'
+      },
+      evening: {
+        name: 'Evening (18-20)',
+        hours: [18, 19, 20],
+        narrativeHint: 'Social hours - balanced profiles support relaxed connection'
+      },
+      late_evening: {
+        name: 'Late Evening (21-23)',
+        hours: [21, 22, 23],
+        narrativeHint: 'Wind-down - minimal stimulation prepares for sleep'
+      }
     };
   }
 
@@ -198,7 +226,10 @@ export class TimeRenderer {
       }))
       .sort((a, b) => b.score - a.score);
 
-    const recommendations = sortedHours.slice(0, this.config.maxRecommendations);
+    const recommendations = sortedHours.slice(0, this.config.maxRecommendations).map(rec => ({
+      ...rec,
+      narrative: this._buildTimeNarrative(rec.timeOfDay, stimulationLevel, appliedTeaType)
+    }));
 
     trace.push({
       step: "Final Selection",
@@ -252,6 +283,44 @@ export class TimeRenderer {
   }
 
   // ========== Helper Methods ==========
+
+  /**
+   * Build dynamic narrative for time recommendation using taxonomy hint
+   * Combines time period hint with stimulation context
+   */
+  _buildTimeNarrative(timeOfDayStr, stimulationLevel, appliedTeaType) {
+    if (!timeOfDayStr) return null;
+
+    // Find the time period object that matches the timeOfDay string
+    let periodObj = null;
+    for (const period of Object.values(this.timePeriods)) {
+      if (period.name === timeOfDayStr) {
+        periodObj = period;
+        break;
+      }
+    }
+
+    if (!periodObj || !periodObj.narrativeHint) {
+      return null;
+    }
+
+    const hint = periodObj.narrativeHint;
+
+    // Customize based on stimulation level
+    if (stimulationLevel.toLowerCase().includes('high')) {
+      return `${hint} (optimal for your high-stimulation profile)`;
+    }
+
+    if (stimulationLevel.toLowerCase().includes('low')) {
+      return `${hint} (suitable for your low-stimulation preference)`;
+    }
+
+    if (appliedTeaType) {
+      return `${hint} (${appliedTeaType} tradition)`;
+    }
+
+    return hint;
+  }
 
   /**
    * Get stimulation profile for all 24 hours
