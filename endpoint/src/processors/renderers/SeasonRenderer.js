@@ -194,11 +194,29 @@ export class SeasonRenderer {
     // Identify continuous seasonal range
     const seasonalRange = this._findContinuousRange(recommendations);
 
+    // Build month-by-month circular year view (all 12 granular seasons with scores)
+    const circularYear = this.granularSeasons
+      .filter(seasonId => seasonId !== 'SEASON_ANYTIME') // Exclude ANYTIME from circular view
+      .map((seasonId, index) => {
+        const season = this.seasonTaxonomy.getSeason(seasonId);
+        const score = seasonScores.get(seasonId) || 50;
+        return {
+          month: index + 1, // 1-12 for display
+          seasonId,
+          displayName: season ? season.displayName : seasonId,
+          score: Math.min(100, Math.max(0, score))
+        };
+      });
+
     return {
-      // Top recommended seasons
+      // Top recommended seasons (above threshold)
       recommendations,
 
-      // All seasonal scores
+      // Circular year view: All 12 months with scores and names for visualization
+      // Perfect for circular/radial charts showing seasonal affinity throughout the year
+      circularYear,
+
+      // All seasonal scores (including ANYTIME)
       seasonalScores: this._formatSeasonalScores(sortedSeasons),
 
       // Continuous seasonal range (if applicable)

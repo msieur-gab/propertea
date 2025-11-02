@@ -176,7 +176,16 @@ async function runRecommendationPipeline(formData, renderers, format) {
       teaTypeAnalysis,
       flavorAnalysis
     );
-    recommendations.season = result.recommendations || [];
+    // Preserve full SeasonRenderer result including circularYear for 12-month visualization
+    recommendations.season = {
+      recommendations: result.recommendations || [],
+      circularYear: result.circularYear || [],
+      seasonalScores: result.seasonalScores || {},
+      seasonalRange: result.seasonalRange || null,
+      analysis: result.analysis || {},
+      confidence: result.confidence || 0,
+      rendererVersion: result.rendererVersion || '1.0'
+    };
   }
   if (renderers.includes('brewing')) {
     const result = new BrewingRenderer().render(formData);
