@@ -141,6 +141,9 @@ console.log(`  ✅ Recommendations: ${activityRecommendations.recommendations.le
 if (activityRecommendations.recommendations.length > 0) {
   activityRecommendations.recommendations.forEach((rec, i) => {
     console.log(`     ${i+1}. ${rec.activity} (${rec.score.toFixed(0)})`);
+    if (rec.description && rec.description !== 'A recommended activity') {
+      console.log(`        → ${rec.description}`);
+    }
   });
 }
 console.log(`  ✅ Grouped into ${activityRecommendations.clusters.length} clusters\n`);
@@ -153,6 +156,9 @@ console.log(`  ✅ Food Recommendations: ${foodRecommendations.recommendations.l
 if (foodRecommendations.recommendations.length > 0) {
   foodRecommendations.recommendations.slice(0, 3).forEach((rec, i) => {
     console.log(`     ${i+1}. ${rec.food} (${rec.score.toFixed(0)})`);
+    if (rec.pairingTechnique) {
+      console.log(`        → ${rec.pairingTechnique}`);
+    }
   });
 }
 console.log(`  ✅ Organized by ${foodRecommendations.cuisineGroupings.length} cuisines\n`);
@@ -194,13 +200,19 @@ if (seasonRecommendations.seasonalRange) {
 console.log('5️⃣  BREWING RECOMMENDATIONS\n');
 const brewingRenderer = new BrewingRenderer();
 const brewingRecommendations = brewingRenderer.render(aliShanOolong, 'gongfu', processingAnalysis);
-if (brewingRecommendations.brewingParameters) {
-  console.log(`  ✅ Brewing Style: ${brewingRecommendations.style?.name || 'Gongfu'}`);
-  console.log(`  ✅ Temperature: ${brewingRecommendations.brewingParameters.temperature}°C`);
-  console.log(`  ✅ Steep Time: ${brewingRecommendations.brewingParameters.steepTime}s`);
-  console.log(`  ✅ Amount: ${brewingRecommendations.brewingParameters.amountPerGram}g/ml`);
-  console.log(`  ✅ Infusions: ${brewingRecommendations.brewingParameters.infusions}`);
-  console.log(`  ✅ Guidance Tips: ${brewingRecommendations.guidance.length} provided\n`);
+if (brewingRecommendations.brewingStyles && brewingRecommendations.brewingStyles.length > 0) {
+  console.log(`  ✅ Tea: ${brewingRecommendations.tea?.name}`);
+  console.log(`  ✅ Type: ${brewingRecommendations.tea?.type}`);
+  console.log(`  ✅ Brewing Styles Provided: ${brewingRecommendations.brewingStyles.length}`);
+
+  brewingRecommendations.brewingStyles.forEach((style, i) => {
+    console.log(`\n     ${i + 1}. ${style.style.toUpperCase()}`);
+    console.log(`        Temperature: ${style.parameters.temperature}°C, Steep: ${style.parameters.steepTime}s`);
+    console.log(`        Vessel: ${style.vessels?.recommended?.name || 'Recommended vessel'}`);
+    console.log(`        Infusions: ${style.parameters.infusions}`);
+  });
+
+  console.log(`\n  ✅ Recommended Style: ${brewingRecommendations.recommendedStyle?.name || 'Gongfu'}\n`);
 } else {
   console.log(`  ⚠️  Brewing: ${brewingRecommendations.trace[0]?.reason || 'Error'}\n`);
 }
@@ -223,7 +235,7 @@ console.log(`  ✅ ActivityRenderer - ${activityRecommendations.recommendations.
 console.log(`  ✅ FoodRenderer - ${foodRecommendations.recommendations.length} foods recommended`);
 console.log(`  ✅ TimeRenderer - ${timeRecommendations.recommendations.length} optimal hours identified`);
 console.log(`  ✅ SeasonRenderer - ${seasonRecommendations.recommendations?.length || 'All'} seasons recommended`);
-console.log(`  ✅ BrewingRenderer - ${brewingRecommendations.brewingParameters ? 'Gongfu brewing parameters provided' : 'Error processing'}\n`);
+console.log(`  ✅ BrewingRenderer - ${brewingRecommendations.brewingStyles ? brewingRecommendations.brewingStyles.length + ' brewing styles with vessels' : 'Error processing'}\n`);
 
 console.log('🎯 COMPLETE PIPELINE OPERATIONAL\n');
 console.log(`📊 Data Flow: Raw Tea → 5 Inferrers → Analysis Data → 5 Renderers → Recommendations\n`);
