@@ -46,22 +46,26 @@ const server = http.createServer(async (req, res) => {
 
     req.on('end', async () => {
       try {
-        // Create mock Netlify event
-        const event = {
-          httpMethod: 'POST',
-          body: body,
-          headers: req.headers
-        };
+        // Create a Request object for Netlify v2
+        const mockRequest = new Request('http://localhost:3000/.netlify/functions/tea-recommendation', {
+          method: 'POST',
+          headers: req.headers,
+          body: body
+        });
 
-        // Call the handler
-        const response = await handler(event);
+        // Call the handler (v2 format)
+        const response = await handler(mockRequest);
 
         // Send response
-        res.writeHead(response.statusCode, {
-          'Content-Type': 'application/json',
-          ...response.headers
+        const statusCode = response.status || 200;
+        const responseHeaders = {};
+        response.headers.forEach((value, name) => {
+          responseHeaders[name] = value;
         });
-        res.end(response.body);
+
+        const responseBody = await response.text();
+        res.writeHead(statusCode, responseHeaders);
+        res.end(responseBody);
       } catch (error) {
         console.error('API Error:', error);
         res.writeHead(500, { 'Content-Type': 'application/json' });

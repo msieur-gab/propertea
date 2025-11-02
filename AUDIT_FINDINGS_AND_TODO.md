@@ -177,6 +177,89 @@ recommendations.season = {
 
 ---
 
+### BrewingRenderer: Realistic Steep Times & Taxonomy-Driven Parameters (COMPLETED ✅)
+**Files Created/Modified:**
+- ✅ Created `endpoint/src/taxonomies/brewing.js` (501 lines, complete taxonomy)
+- ✅ Refactored `endpoint/src/processors/renderers/BrewingRenderer.js` (now data-driven)
+- ✅ Updated `endpoint/src/taxonomies/index.js` (added BrewingTaxonomy export)
+- ✅ Updated `endpoint/src/rendererRegistry.js` (brewing dependencies)
+- ✅ Updated `netlify/functions/tea-recommendation.js` (Netlify v2 compatibility)
+- ✅ Updated `dev-server.js` (Netlify v2 Request format support)
+
+**Critical Fix: Base Steep Times**
+- **Problem:** Base steep times were impossible (3-4 seconds for all teas)
+  - Gongfu: 3-5 seconds → completely unbrewed
+  - Western: 4-5 seconds → espresso-like, not tea
+- **Root Cause:** Parameters never validated against real brewing practice
+- **Solution:** Updated to scientifically-grounded values:
+
+| Tea Type | Before (s) | After (s) | Context |
+|----------|-----------|----------|---------|
+| White Gongfu | 3 | 35 | Gentle extraction of delicate aromatics |
+| White Western | 4 | 180 (3 min) | Single longer infusion in larger vessel |
+| Green Gongfu | 2 | 25 | Quick extraction across multiple infusions |
+| Green Western | 3 | 150 (2.5 min) | Careful extraction avoiding astringency |
+| Yellow Gongfu | 3 | 30 | Balanced between green and oxidized |
+| Yellow Western | 4 | 120 (2 min) | Subtle character preservation |
+| Oolong Gongfu | 3 | 15 | Complex flavors in short, hot infusions |
+| Oolong Western | 5 | 240 (4 min) | Full oxidized tea development |
+| Black Gongfu | 3 | 12 | Robust extraction in high heat |
+| Black Western | 4 | 210 (3.5 min) | Standard black tea brewing time |
+| Puerh Gongfu | 3 | 10 | Dense aged leaves, quick release |
+| Puerh Western | 4 | 240 (4 min) | Full aging character expression |
+
+**BrewingTaxonomy Structure:**
+```javascript
+// Base parameters (tea type × style) with realistic values
+BASE_PARAMETERS {
+  'TEA_TYPE_WHITE': {
+    gongfu: { temperature: 75, steepTime: 35, gramsPer100ml: 5, infusions: 4, reasoning: '...' },
+    western: { temperature: 80, steepTime: 180, gramsPer100ml: 3, infusions: 2, reasoning: '...' }
+  },
+  // ... 6 tea types total
+}
+
+// Adjustment rules (roast, oxidation, altitude, astringency, age, vessel)
+LEAF_STYLE_ADJUSTMENTS { ... }
+ROAST_LEVEL_ADJUSTMENTS { ... }
+OXIDATION_ADJUSTMENTS { ... }
+ALTITUDE_ADJUSTMENTS { ... }
+AGE_ADJUSTMENTS { ... }
+VESSEL_MATERIALS { ... }
+
+// Helper methods
+getBaseParameters(teaType, style)
+calculateAdjustedParameters(baseParams, adjustments)
+calculateAstringencyFromCompounds(caffeine, theanine, catechins)
+calculateAdvancedConfidence(dataAvailable)
+```
+
+**BrewingRenderer Improvements:**
+1. ✅ **Data-driven:** All parameters come from BrewingTaxonomy
+2. ✅ **Multi-inference synthesis:** Uses processing, geography, compound inferences
+3. ✅ **Cumulative adjustments:** Multiple factors (roast, altitude, astringency) compose naturally
+4. ✅ **Separate gongfu/western:** Each style calculated independently from start
+5. ✅ **Transparent reasoning:** Every adjustment explained to user
+6. ✅ **Confidence scoring:** Based on data completeness (70% base + increments for each data source)
+7. ✅ **Bounds safety:** Temperature stays 70-100°C, steep time minimum 1s
+
+**Testing & Validation:**
+- ✅ All 6 tea types verified with realistic parameters
+- ✅ Adjustment logic tested (altitude + astringency adjustments compose correctly)
+- ✅ Gongfu/western parameters independently calculated and distinct
+- ✅ gramsPer100ml displays correctly in narrative output
+- ✅ Confidence scoring increases with more complete input data
+
+**Files Modified:**
+- ✅ `/endpoint/src/taxonomies/brewing.js` (created)
+- ✅ `/endpoint/src/processors/renderers/BrewingRenderer.js` (refactored)
+- ✅ `/endpoint/src/taxonomies/index.js`
+- ✅ `/endpoint/src/rendererRegistry.js`
+- ✅ `/netlify/functions/tea-recommendation.js` (v2 compatibility)
+- ✅ `/dev-server.js` (v2 compatibility)
+
+---
+
 ## ✅ Fixed Issues (Applied Commits)
 
 ### [HIGH] CORS Headers Missing on Error Responses
@@ -501,34 +584,52 @@ These aspects are well-designed and should be maintained:
 
 ## 🚀 Next Iteration Roadmap
 
-### Iteration 2: Solidify Foundation
-**Target:** Data validation + error handling + observability
+### Iteration 2 (Current): Foundation + Brewing Excellence
+**Target:** Data validation + error handling + observability + BrewingRenderer refactor
 
-1. ✅ Apply 4 critical fixes (DONE - this iteration)
-2. Implement `PayloadValidator` with full schema validation
-3. Add structured logging with request IDs
-4. Improve error messages (no stack traces, actionable hints)
-5. Add basic rate limiting
+1. ✅ Apply 4 critical fixes (DONE - previous iteration)
+2. ✅ **BrewingRenderer major refactor** (COMPLETED THIS SESSION)
+   - ✅ Created BrewingTaxonomy with realistic base parameters
+   - ✅ Implemented multi-inference synthesis (processing, geography, compound)
+   - ✅ Added cumulative adjustment logic with bounds
+   - ✅ Confidence scoring and transparent reasoning
+3. Implement `PayloadValidator` with full schema validation
+4. Add structured logging with request IDs
+5. Improve error messages (no stack traces, actionable hints)
+6. Add basic rate limiting
 
-**Effort:** 8-12 hours
-**Outcome:** Production-ready reliability
+**Effort:** 8-12 hours total (4 completed, 4-8 remaining)
+**Outcome:** Production-ready reliability with excellent brewing recommendations
 
 ---
 
-### Iteration 3: Geography Integration
-**Target:** Leverage geography data in renderers
+### Iteration 3: Validation & Observability
+**Target:** Data validation + error handling + logging (continuation of Iteration 2)
+
+1. Implement `PayloadValidator` with full schema validation
+2. Add structured logging with request IDs
+3. Improve error messages (no stack traces, actionable hints)
+4. Add basic rate limiting
+
+**Effort:** 4-8 hours
+**Outcome:** Production hardening
+
+---
+
+### Iteration 4: Geography Integration
+**Target:** Leverage geography data in renderers (now that BrewingRenderer is complete)
 
 1. Update `SeasonRenderer` to optionally incorporate climate data
 2. Create `ClimateRenderer` for geographically-adjusted recommendations
-3. Add `OriginStoryRenderer` with terroir/provenance info
+3. Enhance `TerroirRenderer` with seasonal variations
 4. Test with teas from diverse origins (high-altitude Yunnan, sea-level Fujian, etc.)
 
 **Effort:** 6-10 hours
-**Outcome:** Recommendations become location-aware
+**Outcome:** Recommendations become location and season aware
 
 ---
 
-### Iteration 4: Advanced Features (Future)
+### Iteration 5: Advanced Features (Future)
 - **Caching:** Cache inferences by payload hash (1-5 min TTL)
 - **Async renderers:** Support renderers that make external API calls
 - **OpenAPI documentation:** Auto-generate from `rendererRegistry`
