@@ -28,6 +28,8 @@ import { TimeRenderer } from '../../endpoint/src/processors/renderers/TimeRender
 import { SeasonRenderer } from '../../endpoint/src/processors/renderers/SeasonRenderer.js';
 import { BrewingRenderer } from '../../endpoint/src/processors/renderers/BrewingRenderer.js';
 
+import { rendererRegistry, getRequiredInferrers, getTraceInferrerNames, validateRenderers } from '../../endpoint/src/rendererRegistry.js';
+
 /**
  * Main handler function
  */
@@ -83,6 +85,16 @@ export default async function handler(event, context) {
       };
     }
 
+    // Validate requested renderers
+    try {
+      validateRenderers(renderers);
+    } catch (error) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: error.message })
+      };
+    }
+
     // Run pipeline
     const result = await runRecommendationPipeline(formData, renderers, format);
 
@@ -118,63 +130,75 @@ async function runRecommendationPipeline(formData, renderers, format) {
   const startTime = Date.now();
 
   // ========== PHASE 1: INFERRERS ==========
-  // Run all inferrers in parallel to analyze the tea
-  // (Always run all inferrers since renderers may depend on each other)
+  // Run only inferrers needed by requested renderers
+  // Uses rendererRegistry to determine dependencies
 
-  const [
-    flavorAnalysis,
-    compoundAnalysis,
-    teaTypeAnalysis,
-    geographyAnalysis,
-    processingAnalysis
-  ] = await Promise.all([
-    new FlavorInferrer().infer({ flavorProfiles: formData.flavorProfile || [] }),
-    new CompoundInferrer().infer({
+  const requiredInferrers = getRequiredInferrers(renderers);
+  const allInferences = {};
+
+  // Build array of inference tasks based on what's actually needed
+  const inferenceTasks = [];
+  const inferenceNames = [];
+
+  if (requiredInferrers.has('flavor')) {
+    inferenceTasks.push(new FlavorInferrer().infer({ flavorProfiles: formData.flavorProfile || [] }));
+    inferenceNames.push('flavor');
+  }
+  if (requiredInferrers.has('compound')) {
+    inferenceTasks.push(new CompoundInferrer().infer({
       caffeineLevel: formData.caffeineLevel,
       lTheanineLevel: formData.lTheanineLevel
-    }),
-    new TeaTypeInferrer().infer({
+    }));
+    inferenceNames.push('compound');
+  }
+  if (requiredInferrers.has('teaType')) {
+    inferenceTasks.push(new TeaTypeInferrer().infer({
       type: formData.type,
       subType: formData.subType
-    }),
-    new GeographyInferrer().infer({ geography: formData.geography || {} }),
-    new ProcessingInferrer().infer({
+    }));
+    inferenceNames.push('teaType');
+  }
+  if (requiredInferrers.has('geography')) {
+    inferenceTasks.push(new GeographyInferrer().infer({ geography: formData.geography || {} }));
+    inferenceNames.push('geography');
+  }
+  if (requiredInferrers.has('processing')) {
+    inferenceTasks.push(new ProcessingInferrer().infer({
       processingMethods: formData.processingMethods || []
-    })
-  ]);
+    }));
+    inferenceNames.push('processing');
+  }
 
-  // Aggregate inference results
-  const allInferences = {
-    flavor: flavorAnalysis,
-    compound: compoundAnalysis,
-    teaType: teaTypeAnalysis,
-    geography: geographyAnalysis,
-    processing: processingAnalysis
-  };
+  // Run only needed inferrers in parallel
+  const inferenceResults = await Promise.all(inferenceTasks);
+  inferenceResults.forEach((result, index) => {
+    allInferences[inferenceNames[index]] = result;
+  });
 
   // ========== PHASE 2: RENDERERS ==========
   // Only run requested renderers (note: renderers are synchronous)
+  // Each renderer uses only the analyses it needs (from allInferences)
 
   const recommendations = {};
 
   if (renderers.includes('activity')) {
-    const result = new ActivityRenderer().render(compoundAnalysis);
+    const result = new ActivityRenderer().render(allInferences.compound);
     recommendations.activity = result.recommendations || [];
   }
   if (renderers.includes('food')) {
-    const result = new FoodRenderer().render(flavorAnalysis);
+    const result = new FoodRenderer().render(allInferences.flavor);
     recommendations.food = result.recommendations || [];
   }
   if (renderers.includes('time')) {
-    const result = new TimeRenderer().render(compoundAnalysis);
+    const result = new TimeRenderer().render(allInferences.compound);
     recommendations.time = result.recommendations || [];
   }
   if (renderers.includes('season')) {
     // Simplified seasonal rendering: uses only tea type and processing method
     // Seasonal affinity comes from the tea's intrinsic nature, not geography or flavor
     const result = new SeasonRenderer().render(
-      teaTypeAnalysis,
-      processingAnalysis
+      allInferences.teaType,
+      allInferences.processing
     );
     // Preserve full SeasonRenderer result including circularYear for 12-month visualization
     recommendations.season = {
@@ -217,35 +241,24 @@ async function runRecommendationPipeline(formData, renderers, format) {
 
   // Return production or trace format
   if (format === 'trace') {
+    // Build analysis object with only the inferrers that were actually run
+    const analysisOutput = {};
+    const traceInferrers = getTraceInferrerNames(renderers);
+
+    traceInferrers.forEach(inferrerName => {
+      if (allInferences[inferrerName]) {
+        const inference = allInferences[inferrerName];
+        analysisOutput[inferrerName] = {
+          analysis: inference.analysis,
+          trace: inference.trace,
+          confidence: inference.confidence
+        };
+      }
+    });
+
     return {
       ...baseResponse,
-      analysis: {
-        flavor: {
-          analysis: allInferences.flavor.analysis,
-          trace: allInferences.flavor.trace,
-          confidence: allInferences.flavor.confidence
-        },
-        compound: {
-          analysis: allInferences.compound.analysis,
-          trace: allInferences.compound.trace,
-          confidence: allInferences.compound.confidence
-        },
-        teaType: {
-          analysis: allInferences.teaType.analysis,
-          trace: allInferences.teaType.trace,
-          confidence: allInferences.teaType.confidence
-        },
-        geography: {
-          analysis: allInferences.geography.analysis,
-          trace: allInferences.geography.trace,
-          confidence: allInferences.geography.confidence
-        },
-        processing: {
-          analysis: allInferences.processing.analysis,
-          trace: allInferences.processing.trace,
-          confidence: allInferences.processing.confidence
-        }
-      }
+      analysis: analysisOutput
     };
   }
 
