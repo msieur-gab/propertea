@@ -210,11 +210,21 @@ export class TimeRenderer {
     // Group by time period
     const periodGrouping = this._groupByPeriod(sortedHours);
 
+    // Build 24-hour circadian curve array for chart plotting
+    const circadianCurve = this.hours.map(hour => {
+      const score = hourlyScores.get(hour) || 50;
+      return Math.min(100, Math.max(0, score));
+    });
+
     return {
       // Top recommended hours
       recommendations,
 
-      // All hourly scores (for visualization)
+      // 24-hour circadian curve array (index 0 = hour 0, index 23 = hour 23)
+      // Perfect for radar/polar charts showing suitability across all 24 hours
+      circadianCurve,
+
+      // All hourly scores as object (for reference/lookup)
       hourlyScores: Object.fromEntries(hourlyScores),
 
       // Grouped by time period

@@ -43,6 +43,8 @@ console.log(`✓ Top 3 Recommendations:`);
 blackTeaResult.recommendations.slice(0, 3).forEach((rec, idx) => {
   console.log(`  ${idx + 1}. Hour ${rec.hour}:00 (${rec.timeOfDay}) - Score: ${rec.score.toFixed(1)}`);
 });
+console.log(`✓ 24-Hour Circadian Curve (for charting):`);
+console.log(`  [${blackTeaResult.circadianCurve.map(s => s.toFixed(1)).join(', ')}]`);
 
 // Test Case 2: OOLONG TEA (Should peak in afternoon)
 console.log('\n📋 TEST 2: Oolong Tea - Afternoon Peak');

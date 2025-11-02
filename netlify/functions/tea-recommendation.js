@@ -198,6 +198,7 @@ async function runRecommendationPipeline(formData, renderers, format) {
     // Return full result with analysis and weighting information
     recommendations.time = {
       recommendations: result.recommendations || [],
+      circadianCurve: result.circadianCurve || [],  // 24-hour array for chart plotting
       hourlyScores: result.hourlyScores || {},
       periodGrouping: result.periodGrouping || {},
       analysis: result.analysis || {},
