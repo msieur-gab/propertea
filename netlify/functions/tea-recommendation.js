@@ -1,12 +1,19 @@
 /**
- * Netlify Function: Tea Recommendation API
+ * Netlify Function: Tea Recommendation API v2
  *
  * Purpose: HTTP transport layer for the tea recommendation engine
- * Accepts: Tea data from admin form interface
- * Returns: Complete recommendations via Inferrer/Renderer pipeline
+ * Accepts: Tea data + optional parameters
+ * Returns: Recommendations via Inferrer/Renderer pipeline
  *
  * Architecture:
  * Form Data → Inferrers (analysis) → Renderers (recommendations) → JSON Response
+ *
+ * Parameters:
+ * - renderers: array of renderer names to execute (default: all)
+ *   values: "activity", "food", "time", "season", "brewing"
+ * - format: output format (default: "production")
+ *   "production": lean response with recommendations only
+ *   "trace": includes analysis traces and reasoning for debugging
  */
 
 import { FlavorInferrer } from '../../endpoint/src/processors/inferrers/FlavorInferrer.js';
@@ -47,7 +54,8 @@ export default async function handler(event, context) {
 
   try {
     // Parse request body
-    const formData = JSON.parse(event.body);
+    const requestBody = JSON.parse(event.body);
+    const formData = requestBody;
 
     // Validate required fields
     if (!formData.name || !formData.type) {
@@ -60,8 +68,23 @@ export default async function handler(event, context) {
       };
     }
 
+    // Extract optional parameters
+    const renderers = formData.renderers || ['activity', 'food', 'time', 'season', 'brewing'];
+    const format = formData.format || 'production';
+
+    // Validate format parameter
+    if (!['production', 'trace'].includes(format)) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          error: 'Invalid format parameter',
+          validValues: ['production', 'trace']
+        })
+      };
+    }
+
     // Run pipeline
-    const result = await runRecommendationPipeline(formData);
+    const result = await runRecommendationPipeline(formData, renderers, format);
 
     return {
       statusCode: 200,
@@ -87,13 +110,16 @@ export default async function handler(event, context) {
 /**
  * Run the complete Inferrer/Renderer pipeline
  * @param {Object} formData - Form data from admin interface
- * @returns {Object} - Complete recommendations
+ * @param {Array} renderers - Which renderers to execute
+ * @param {string} format - Output format: "production" or "trace"
+ * @returns {Object} - Recommendations in requested format
  */
-async function runRecommendationPipeline(formData) {
+async function runRecommendationPipeline(formData, renderers, format) {
   const startTime = Date.now();
 
   // ========== PHASE 1: INFERRERS ==========
   // Run all inferrers in parallel to analyze the tea
+  // (Always run all inferrers since renderers may depend on each other)
 
   const [
     flavorAnalysis,
@@ -118,7 +144,7 @@ async function runRecommendationPipeline(formData) {
   ]);
 
   // Aggregate inference results
-  const inference = {
+  const allInferences = {
     flavor: flavorAnalysis,
     compound: compoundAnalysis,
     teaType: teaTypeAnalysis,
@@ -127,68 +153,88 @@ async function runRecommendationPipeline(formData) {
   };
 
   // ========== PHASE 2: RENDERERS ==========
-  // Run all renderers to generate recommendations
+  // Only run requested renderers (note: renderers are synchronous)
 
-  const [
-    activityRecommendations,
-    foodRecommendations,
-    timeRecommendations,
-    seasonRecommendations,
-    brewingRecommendations
-  ] = await Promise.all([
-    new ActivityRenderer().render(compoundAnalysis),
-    new FoodRenderer().render(flavorAnalysis),
-    new TimeRenderer().render(compoundAnalysis),
-    new SeasonRenderer().render(geographyAnalysis),
-    new BrewingRenderer().render(formData)
-  ]);
+  const recommendations = {};
 
-  // Aggregate recommendations
-  const recommendations = {
-    activity: activityRecommendations,
-    food: foodRecommendations,
-    time: timeRecommendations,
-    season: seasonRecommendations,
-    brewing: brewingRecommendations
-  };
+  if (renderers.includes('activity')) {
+    const result = new ActivityRenderer().render(compoundAnalysis);
+    recommendations.activity = result.recommendations || [];
+  }
+  if (renderers.includes('food')) {
+    const result = new FoodRenderer().render(flavorAnalysis);
+    recommendations.food = result.recommendations || [];
+  }
+  if (renderers.includes('time')) {
+    const result = new TimeRenderer().render(compoundAnalysis);
+    recommendations.time = result.recommendations || [];
+  }
+  if (renderers.includes('season')) {
+    const result = new SeasonRenderer().render(geographyAnalysis);
+    recommendations.season = result.recommendations || [];
+  }
+  if (renderers.includes('brewing')) {
+    const result = new BrewingRenderer().render(formData);
+    recommendations.brewing = result.recommendations || [];
+  }
 
-  // ========== RESPONSE ==========
+  // ========== FORMAT RESPONSE ==========
 
   const elapsedTime = Date.now() - startTime;
 
-  return {
-    // Tea identity
+  // Base response (always included)
+  const baseResponse = {
     tea: {
       name: formData.name,
       originalName: formData.originalName || '',
       type: formData.type,
       subType: formData.subType || ''
     },
-
-    // Analysis phase results (inference data)
-    analysis: {
-      flavor: flavorAnalysis.analysis || {},
-      compound: compoundAnalysis.analysis || {},
-      teaType: teaTypeAnalysis.analysis || {},
-      geography: geographyAnalysis.analysis || {},
-      processing: processingAnalysis.analysis || {}
-    },
-
-    // Recommendation phase results
-    recommendations: {
-      activity: activityRecommendations.recommendations || [],
-      food: foodRecommendations.recommendations || [],
-      time: timeRecommendations.recommendations || [],
-      season: seasonRecommendations.recommendations || [],
-      brewing: brewingRecommendations.recommendations || []
-    },
-
-    // Metadata
+    recommendations,
     metadata: {
       timestamp: new Date().toISOString(),
       processingTimeMs: elapsedTime,
-      version: '1.0',
-      pipeline: 'inferrer-renderer'
+      version: '2.0',
+      pipeline: 'inferrer-renderer',
+      format,
+      renderersRequested: renderers
     }
   };
+
+  // Return production or trace format
+  if (format === 'trace') {
+    return {
+      ...baseResponse,
+      analysis: {
+        flavor: {
+          analysis: allInferences.flavor.analysis,
+          trace: allInferences.flavor.trace,
+          confidence: allInferences.flavor.confidence
+        },
+        compound: {
+          analysis: allInferences.compound.analysis,
+          trace: allInferences.compound.trace,
+          confidence: allInferences.compound.confidence
+        },
+        teaType: {
+          analysis: allInferences.teaType.analysis,
+          trace: allInferences.teaType.trace,
+          confidence: allInferences.teaType.confidence
+        },
+        geography: {
+          analysis: allInferences.geography.analysis,
+          trace: allInferences.geography.trace,
+          confidence: allInferences.geography.confidence
+        },
+        processing: {
+          analysis: allInferences.processing.analysis,
+          trace: allInferences.processing.trace,
+          confidence: allInferences.processing.confidence
+        }
+      }
+    };
+  }
+
+  // Production format (lean, no traces)
+  return baseResponse;
 }

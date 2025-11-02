@@ -40,7 +40,11 @@ const sampleFormData = {
     temperature: 14.8,
     solarRadiation: 180
   },
-  dateAdded: new Date().toISOString()
+  dateAdded: new Date().toISOString(),
+  // Request trace format to see analysis and reasoning
+  format: 'trace',
+  // Request all renderers
+  renderers: ['activity', 'food', 'time', 'season', 'brewing']
 };
 
 /**
