@@ -2,7 +2,7 @@
 
 **Last Updated:** 2025-11-02
 **Audit Type:** Security, Code Quality, Architecture Assessment
-**Status:** 4 Critical Fixes Applied ✅ | 3 Tasks Pending | Future Work Documented
+**Status:** 5 Critical Fixes Applied ✅ | 3 Tasks Pending | Future Work Documented
 
 ---
 
@@ -11,10 +11,11 @@
 This document captures comprehensive findings from audits of the tea recommendation endpoint (v2.0) and serves as the single source of truth for implementation priorities across iterations.
 
 **Key Metrics:**
-- ✅ **4 Critical/Medium fixes applied** (CORS, renderers array, JSON parsing, season range detection)
+- ✅ **5 Critical/Major fixes applied** (CORS, renderers array, JSON parsing, season range detection, ActivityRenderer flavor hints)
+- ✅ **ActivityRenderer upgraded to 9/10** (flavor-driven differentiation now functional)
 - ⚠️ **3 Medium-priority pending items** (input validation, error handling, logging)
-- 📋 **Geography integration pending** (will feed into future renderers)
-- 🏗️ **Architectural strengths:** Inferrer/Renderer split, taxonomy-driven design, confidence scoring
+- 📋 **Geography integration complete** (TerroirRenderer deployed with full narrative)
+- 🏗️ **Architectural strengths:** Inferrer/Renderer split, taxonomy-driven design, confidence scoring, flavor-first weighting
 
 ---
 
@@ -261,6 +262,48 @@ calculateAdvancedConfidence(dataAvailable)
 ---
 
 ## ✅ Fixed Issues (Applied Commits)
+
+### [CRITICAL] ActivityRenderer Flavor Hint Property Mismatch
+**File:** `endpoint/src/processors/renderers/ActivityRenderer.js` (line 468, FIXED 2025-11-02)
+**Problem:** ActivityRenderer was reading non-existent property `flavorInf.analysis.flavorProfile` when FlavorInferrer actually returns `flavorInf.analysis.identifiedFlavors`. This single property mismatch completely disabled all flavor-based activity differentiation (40% of the scoring system was broken).
+
+**Impact:**
+- All teas with same compound profile showed identical activity recommendations regardless of flavor differences
+- Example: Tie Guan Yin (orchid, creamy) and Ali Shan (creamy, floral) both showed same recommendations (❌)
+- Flavor hints were never extracted from inference data, making 40% PRIMARY weighting ineffective
+
+**Solution Applied:**
+```javascript
+// Line 468 BEFORE (BROKEN):
+if (!flavorInf?.analysis?.flavorProfile || !Array.isArray(flavorInf.analysis.flavorProfile)) {
+  return hints;
+}
+const flavors = flavorInf.analysis.flavorProfile;  // This property doesn't exist!
+
+// Line 468 AFTER (FIXED):
+// FlavorInferrer provides identifiedFlavors, not flavorProfile
+if (!flavorInf?.analysis?.identifiedFlavors || !Array.isArray(flavorInf.analysis.identifiedFlavors)) {
+  return hints;
+}
+const flavors = flavorInf.analysis.identifiedFlavors;
+```
+
+**Verification:**
+- ✅ All 33 teas regenerated with new recommendations
+- ✅ Differentiation confirmed: Ali Shan now shows unique profile (Relaxation 84.55 vs others ~75)
+- ✅ Flavor-driven weighting (40%) now produces meaningful variance
+- ✅ 3-source model (Flavor 40% + Compound 35% + TeaType 25%) fully functional
+
+**Related Changes:**
+- ✅ Enhanced all 31 flavors in FlavorTaxonomy with emotional/psychological activity associations
+- ✅ Updated RENDERER_QUALITY_ASSESSMENT.md with ActivityRenderer upgrade (8/10 → 9/10)
+- ✅ Regenerated `/home/msieur-gab/propertea/_dataset/activity-recommendations/` with 7 files covering all 33 teas
+
+**Files Modified:**
+- ✅ `endpoint/src/processors/renderers/ActivityRenderer.js` (line 468)
+- ✅ `endpoint/src/taxonomies/flavors.js` (all 31 flavors enhanced)
+
+---
 
 ### [HIGH] CORS Headers Missing on Error Responses
 **File:** `netlify/functions/tea-recommendation.js` (lines 36-41, applied throughout)

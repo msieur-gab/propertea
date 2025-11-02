@@ -1,0 +1,442 @@
+[
+  {
+    "teaName": "Menghai Shou",
+    "originalName": "勐海熟普洱 (Měng Hǎi Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "earthy",
+      "woody",
+      "sweet",
+      "leather",
+      "compost"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements woody and sweet, enhancing woody notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements woody and sweet, enhancing woody notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements woody and sweet, enhancing woody notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances woody notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements woody and sweet, enhancing woody notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements woody and sweet, enhancing woody notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Woody",
+        "Sweet",
+        "Earthy"
+      ],
+      "dominantFlavors": [
+        "woody",
+        "sweet",
+        "leather"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 14,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.735Z"
+  },
+  {
+    "teaName": "Xiaguan Shou",
+    "originalName": "下关熟普洱 (Xià Guān Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "earthy",
+      "smoky",
+      "strong",
+      "medicinal",
+      "woody"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements smoky and woody, enhancing roasted notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements smoky and woody, enhancing roasted notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements smoky and woody, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances smoky notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements smoky and woody, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements smoky and woody, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Woody"
+      ],
+      "dominantFlavors": [
+        "smoky",
+        "woody"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 10,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.8799999999999999,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.738Z"
+  },
+  {
+    "teaName": "Lincang Shou",
+    "originalName": "临沧熟普洱 (Lín Cāng Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "sweet",
+      "earthy",
+      "smooth",
+      "chocolate",
+      "dates"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "chocolate"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 11,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.8799999999999999,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.741Z"
+  },
+  {
+    "teaName": "Aged Shou Brick",
+    "originalName": "老熟砖 (Lǎo Shú Zhuān)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "smooth",
+      "sweet",
+      "earthy",
+      "dates",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements sweet and caramel, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements sweet and caramel, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements sweet and caramel, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements sweet and caramel, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements sweet and caramel, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "caramel"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 12,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.8799999999999999,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.744Z"
+  },
+  {
+    "teaName": "Golden Buds Shou",
+    "originalName": "金芽熟普洱 (Jīn Yá Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "sweet",
+      "chocolate",
+      "smooth",
+      "caramel",
+      "dates"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements sweet and chocolate, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "chocolate",
+        "caramel"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.746Z"
+  }
+]

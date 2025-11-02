@@ -1,0 +1,455 @@
+[
+  {
+    "teaName": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements orchid and creamy, enhancing floral notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements orchid and creamy, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements orchid and creamy, enhancing floral notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements orchid and creamy, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements orchid and creamy, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Nutty & Toasty",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "orchid",
+        "creamy",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 20,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.705Z"
+  },
+  {
+    "teaName": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances roasted notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Earthy",
+        "Fruity",
+        "Woody",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "roasted",
+        "mineral",
+        "dark fruits"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 26,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.707Z"
+  },
+  {
+    "teaName": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements honey and orchid, enhancing sweet notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements honey and orchid, enhancing sweet notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements honey and orchid, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements honey and orchid, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements honey and orchid, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "orchid",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 8,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.710Z"
+  },
+  {
+    "teaName": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances roasted notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Nutty & Toasty",
+        "Sweet",
+        "Floral",
+        "Earthy"
+      ],
+      "dominantFlavors": [
+        "roasted",
+        "creamy",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 22,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.713Z"
+  },
+  {
+    "teaName": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements floral and buttery, enhancing floral notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements floral and buttery, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements floral and buttery, enhancing floral notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements floral and buttery, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements floral and buttery, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Nutty & Toasty",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "buttery",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 19,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.716Z"
+  }
+]

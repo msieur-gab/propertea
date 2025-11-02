@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "subType": "white-silver-needle",
+    "caffeineLevel": 2.5,
+    "lTheanineLevel": 7,
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "minimal-processing"
+    ],
+    "geography": {
+      "location": "Fuding",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "altitude": 800,
+      "humidity": 78,
+      "temperature": 18.6,
+      "solarRadiation": 177
+    }
+  },
+  {
+    "name": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔ Dān)",
+    "type": "white",
+    "subType": "white-peony",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 6.5,
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "minimal-processing"
+    ],
+    "geography": {
+      "location": "Zhenghe",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.37,
+      "longitude": 118.85,
+      "altitude": 750,
+      "humidity": 76,
+      "temperature": 18.2,
+      "solarRadiation": 175
+    }
+  },
+  {
+    "name": "Gong Mei",
+    "originalName": "贡眉 (Gòng Méi)",
+    "type": "white",
+    "subType": "gong-mei",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 6,
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "aged"
+    ],
+    "geography": {
+      "location": "Jianyang",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.33,
+      "longitude": 118.12,
+      "altitude": 600,
+      "humidity": 75,
+      "temperature": 19,
+      "solarRadiation": 178
+    }
+  },
+  {
+    "name": "Shou Mei",
+    "originalName": "寿眉 (Shòu Méi)",
+    "type": "white",
+    "subType": "shou-mei",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "aged"
+    ],
+    "geography": {
+      "location": "Fuding",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.33,
+      "longitude": 120.2,
+      "altitude": 650,
+      "humidity": 77,
+      "temperature": 18.8,
+      "solarRadiation": 176
+    }
+  },
+  {
+    "name": "Moonlight White",
+    "originalName": "月光白 (Yuè Guāng Bái)",
+    "type": "white",
+    "subType": "moonlight-white",
+    "caffeineLevel": 3,
+    "lTheanineLevel": 6,
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
+    "processingMethods": [
+      "withered",
+      "sun-dried",
+      "minimal-processing"
+    ],
+    "geography": {
+      "location": "Yunnan",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 23.7,
+      "longitude": 100.03,
+      "altitude": 1600,
+      "humidity": 72,
+      "temperature": 17.5,
+      "solarRadiation": 185
+    }
+  }
+]

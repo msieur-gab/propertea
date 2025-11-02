@@ -1,0 +1,470 @@
+[
+  {
+    "teaName": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 79.9,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 79.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 75.8,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.118Z"
+  },
+  {
+    "teaName": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 76.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 76.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 75.8,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.119Z"
+  },
+  {
+    "teaName": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 79.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 72.6,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Contemplative",
+        "score": 66.2,
+        "description": "Deep, mindful reflection on thoughts, feelings, and life experiences",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning or quiet evening moments",
+        "benefits": [
+          "Increases self-awareness",
+          "Promotes wisdom and insight",
+          "Deepens emotional understanding",
+          "Supports personal growth"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation",
+          "Contemplative"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.120Z"
+  },
+  {
+    "teaName": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 79.9,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 79.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 75.8,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.121Z"
+  },
+  {
+    "teaName": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 84.55,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Contemplative",
+        "score": 74.95,
+        "description": "Deep, mindful reflection on thoughts, feelings, and life experiences",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Morning or quiet evening moments",
+        "benefits": [
+          "Increases self-awareness",
+          "Promotes wisdom and insight",
+          "Deepens emotional understanding",
+          "Supports personal growth"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 74.6,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation",
+          "Contemplative"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.122Z"
+  }
+]

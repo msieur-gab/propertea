@@ -1,0 +1,284 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 76.35,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 72.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 71.4,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.139Z"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 74.6,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 71.4,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 71.4,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort",
+          "Warming"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.139Z"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 76.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 76.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 67.6,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.140Z"
+  }
+]

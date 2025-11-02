@@ -50,12 +50,13 @@ export class SeasonRenderer {
   }
 
   /**
-   * Render seasonal recommendations from tea type and processing analysis
+   * Render seasonal recommendations from tea type, processing, and geography analysis
    * @param {Object} teaTypeAnalysis - Analysis from tea type/subtype
    * @param {Object} processingAnalysis - Analysis from processing methods
-   * @returns {Object} - Seasonal recommendations
+   * @param {Object} geographyAnalysis - Analysis from geographic/altitude data (optional)
+   * @returns {Object} - Seasonal recommendations with altitude awareness
    */
-  render(teaTypeAnalysis = {}, processingAnalysis = {}) {
+  render(teaTypeAnalysis = {}, processingAnalysis = {}, geographyAnalysis = {}) {
     const trace = [];
 
     // Initialize season scores
@@ -133,6 +134,82 @@ export class SeasonRenderer {
       adjustment: `Applied ${processingAffinitiesApplied} seasonal affinity boosts from processing methods`,
       value: "Processing thermal character refines seasonal recommendation"
     });
+
+    // ========== TIER 3 (±15% Modifier): Geographic/Altitude Awareness ==========
+    // High-mountain teas (1200m+): Extended spring, cooler preference
+    // Low-elevation teas (<600m): Stronger autumn/winter, warmer affinity
+    let altitudeModifier = 0;
+    let elevationLevel = "Unknown";
+
+    if (geographyAnalysis?.analysis?.elevation) {
+      // Extract classification from elevation object
+      const elevationObj = geographyAnalysis.analysis.elevation;
+      elevationLevel = typeof elevationObj === 'object' ? elevationObj.classification : elevationObj;
+
+      // Apply altitude-based seasonal modulation
+      if (elevationLevel === "Very High" || elevationLevel === "High") {
+        // High-mountain teas: Extend spring, reduce hot seasons, slight autumn
+        altitudeModifier = 8; // +8 points for spring/cool seasons
+
+        // Boost spring seasons (+8)
+        ['SEASON_EARLY_SPRING', 'SEASON_SPRING', 'SEASON_LATE_SPRING'].forEach(seasonId => {
+          const current = seasonScores.get(seasonId) || 50;
+          seasonScores.set(seasonId, current + altitudeModifier);
+        });
+
+        // Slight reduction for hot seasons (-3)
+        ['SEASON_SUMMER', 'SEASON_LATE_SUMMER'].forEach(seasonId => {
+          const current = seasonScores.get(seasonId) || 50;
+          seasonScores.set(seasonId, Math.max(50, current - 3));
+        });
+
+        trace.push({
+          step: "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+          reason: `Elevation: ${elevationLevel} (high-mountain)`,
+          adjustment: `High-altitude boosts spring seasons (+${altitudeModifier}), reduces summer (-3)`,
+          value: "Cooler microclimate extends spring season, limits heat-tolerant months"
+        });
+
+      } else if (elevationLevel === "Very Low" || elevationLevel === "Low") {
+        // Low-elevation teas: Emphasize autumn/winter, reduce spring intensity
+        altitudeModifier = -5; // -5 for spring/cool, +8 for autumn/winter
+
+        // Reduce spring seasons (-5)
+        ['SEASON_EARLY_SPRING', 'SEASON_SPRING', 'SEASON_LATE_SPRING'].forEach(seasonId => {
+          const current = seasonScores.get(seasonId) || 50;
+          seasonScores.set(seasonId, Math.max(50, current + altitudeModifier));
+        });
+
+        // Boost autumn/winter (+8)
+        ['SEASON_EARLY_AUTUMN', 'SEASON_AUTUMN', 'SEASON_LATE_AUTUMN', 'SEASON_EARLY_WINTER', 'SEASON_WINTER', 'SEASON_LATE_WINTER'].forEach(seasonId => {
+          const current = seasonScores.get(seasonId) || 50;
+          seasonScores.set(seasonId, current + 8);
+        });
+
+        trace.push({
+          step: "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+          reason: `Elevation: ${elevationLevel} (low-elevation)`,
+          adjustment: `Low-altitude reduces spring (-5), boosts autumn/winter (+8)`,
+          value: "Warmer microclimate favors autumn/winter drinking, weak spring affinity"
+        });
+
+      } else {
+        // Medium elevation: No altitude adjustment
+        trace.push({
+          step: "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+          reason: `Elevation: ${elevationLevel} (medium-altitude)`,
+          adjustment: "No altitude modifier applied",
+          value: "Medium elevation has balanced seasonal affinity"
+        });
+      }
+    } else {
+      trace.push({
+        step: "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+        reason: "No geographic data provided",
+        adjustment: "Skipped altitude-based seasonal modulation",
+        value: "Using Tier 1 and Tier 2 scoring only"
+      });
+    }
 
     // Get recommendations
     const sortedSeasons = Array.from(seasonScores.entries())

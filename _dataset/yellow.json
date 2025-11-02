@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 6,
+    "flavorProfile": [
+      "sweet",
+      "delicate",
+      "floral",
+      "honey",
+      "fresh"
+    ],
+    "processingMethods": [
+      "withered",
+      "kill-green",
+      "men-huang",
+      "dried"
+    ],
+    "geography": {
+      "location": "Junshan Island",
+      "province": "Hunan",
+      "country": "China",
+      "latitude": 29.42,
+      "longitude": 113.08,
+      "altitude": 300,
+      "humidity": 82,
+      "temperature": 17.8,
+      "solarRadiation": 165
+    }
+  },
+  {
+    "name": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "caffeineLevel": 3.8,
+    "lTheanineLevel": 5.8,
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "floral",
+      "smooth",
+      "delicate"
+    ],
+    "processingMethods": [
+      "withered",
+      "kill-green",
+      "men-huang",
+      "dried"
+    ],
+    "geography": {
+      "location": "Mengding Mountain",
+      "province": "Sichuan",
+      "country": " China",
+      "latitude": 30.1,
+      "longitude": 103.03,
+      "altitude": 1200,
+      "humidity": 78,
+      "temperature": 15.5,
+      "solarRadiation": 170
+    }
+  },
+  {
+    "name": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "smooth",
+      "floral",
+      "fresh"
+    ],
+    "processingMethods": [
+      "withered",
+      "kill-green",
+      "men-huang",
+      "dried"
+    ],
+    "geography": {
+      "location": "Huoshan",
+      "province": "Anhui",
+      "country": "China",
+      "latitude": 31.4,
+      "longitude": 116.32,
+      "altitude": 800,
+      "humidity": 75,
+      "temperature": 16.2,
+      "solarRadiation": 172
+    }
+  }
+]

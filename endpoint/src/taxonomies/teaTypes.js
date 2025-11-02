@@ -258,248 +258,248 @@ export class TeaTypeTaxonomy {
     },
 
     // ========== GREEN TEA SUBTYPES ==========
-    TEA_SUBTYPE_MATCHA: {
-      id: 'TEA_SUBTYPE_MATCHA',
-      displayName: 'Matcha',
-      chineseName: '抹茶',
-      parentType: 'TEA_TYPE_GREEN',
-      aliases: ['matcha', 'powdered green tea'],
-      description: 'A stone-ground green tea powder made from shade-grown leaves, consumed whole',
-      typicalCaffeine: { min: 6, max: 8, label: 'High' },
-      typicalTheanine: { min: 7, max: 9, label: 'Very High' },
-      dominantFlavorCategories: ['Umami', 'Sweet', 'Vegetal', 'Creamy'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_MORNING'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_EARLY_SPRING', boost: 18 },
-        { seasonId: 'SEASON_SPRING', boost: 22 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
-      ]
-    },
+    // TEA_SUBTYPE_MATCHA: {
+    //   id: 'TEA_SUBTYPE_MATCHA',
+    //   displayName: 'Matcha',
+    //   chineseName: '抹茶',
+    //   parentType: 'TEA_TYPE_GREEN',
+    //   aliases: ['matcha', 'powdered green tea'],
+    //   description: 'A stone-ground green tea powder made from shade-grown leaves, consumed whole',
+    //   typicalCaffeine: { min: 6, max: 8, label: 'High' },
+    //   typicalTheanine: { min: 7, max: 9, label: 'Very High' },
+    //   dominantFlavorCategories: ['Umami', 'Sweet', 'Vegetal', 'Creamy'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_ENERGY', 'ACTIVITY_MORNING'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_EARLY_SPRING', boost: 18 },
+    //     { seasonId: 'SEASON_SPRING', boost: 22 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_GYOKURO: {
-      id: 'TEA_SUBTYPE_GYOKURO',
-      displayName: 'Gyokuro',
-      chineseName: '玉露',
-      parentType: 'TEA_TYPE_GREEN',
-      aliases: ['gyokuro', 'jade dew'],
-      description: 'A premium shade-grown Japanese green tea known for its intense umami and sweetness',
-      typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
-      typicalTheanine: { min: 7, max: 8, label: 'Very High' },
-      dominantFlavorCategories: ['Umami', 'Marine', 'Sweet', 'Vegetal'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_CALM'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 25 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 22 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 }
-      ]
-    },
+    // TEA_SUBTYPE_GYOKURO: {
+    //   id: 'TEA_SUBTYPE_GYOKURO',
+    //   displayName: 'Gyokuro',
+    //   chineseName: '玉露',
+    //   parentType: 'TEA_TYPE_GREEN',
+    //   aliases: ['gyokuro', 'jade dew'],
+    //   description: 'A premium shade-grown Japanese green tea known for its intense umami and sweetness',
+    //   typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
+    //   typicalTheanine: { min: 7, max: 8, label: 'Very High' },
+    //   dominantFlavorCategories: ['Umami', 'Marine', 'Sweet', 'Vegetal'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_CALM'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 25 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 22 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_SENCHA: {
-      id: 'TEA_SUBTYPE_SENCHA',
-      displayName: 'Sencha',
-      chineseName: '煎茶',
-      parentType: 'TEA_TYPE_GREEN',
-      aliases: ['sencha', 'japanese green tea'],
-      description: 'Standard Japanese green tea with a balance of freshness, vegetal notes, and slight sweetness',
-      typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium' },
-      dominantFlavorCategories: ['Vegetal', 'Marine', 'Sweet', 'Grassy'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_MORNING'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 20 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
-        { seasonId: 'SEASON_SUMMER', boost: 12 }
-      ]
-    },
+    // TEA_SUBTYPE_SENCHA: {
+    //   id: 'TEA_SUBTYPE_SENCHA',
+    //   displayName: 'Sencha',
+    //   chineseName: '煎茶',
+    //   parentType: 'TEA_TYPE_GREEN',
+    //   aliases: ['sencha', 'japanese green tea'],
+    //   description: 'Standard Japanese green tea with a balance of freshness, vegetal notes, and slight sweetness',
+    //   typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium' },
+    //   dominantFlavorCategories: ['Vegetal', 'Marine', 'Sweet', 'Grassy'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_REFRESHMENT', 'ACTIVITY_MORNING'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+    //     { seasonId: 'SEASON_SUMMER', boost: 12 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_LONGJING: {
-      id: 'TEA_SUBTYPE_LONGJING',
-      displayName: 'Longjing',
-      chineseName: '龙井',
-      parentType: 'TEA_TYPE_GREEN',
-      aliases: ['longjing', 'dragon well', 'lung ching'],
-      description: 'Premium Chinese green tea with a distinctive flat leaf shape and nutty, slightly sweet character',
-      typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium' },
-      dominantFlavorCategories: ['Nutty', 'Sweet', 'Grassy', 'Floral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_EARLY_SPRING', boost: 22 },
-        { seasonId: 'SEASON_SPRING', boost: 25 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
-      ]
-    },
+    // TEA_SUBTYPE_LONGJING: {
+    //   id: 'TEA_SUBTYPE_LONGJING',
+    //   displayName: 'Longjing',
+    //   chineseName: '龙井',
+    //   parentType: 'TEA_TYPE_GREEN',
+    //   aliases: ['longjing', 'dragon well', 'lung ching'],
+    //   description: 'Premium Chinese green tea with a distinctive flat leaf shape and nutty, slightly sweet character',
+    //   typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium' },
+    //   dominantFlavorCategories: ['Nutty', 'Sweet', 'Grassy', 'Floral'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_EARLY_SPRING', boost: 22 },
+    //     { seasonId: 'SEASON_SPRING', boost: 25 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 }
+    //   ]
+    // },
 
-    // ========== YELLOW TEA SUBTYPES ==========
-    TEA_SUBTYPE_JUNSHAN_YINZHEN: {
-      id: 'TEA_SUBTYPE_JUNSHAN_YINZHEN',
-      displayName: 'Junshan Yinzhen',
-      chineseName: '君山银针',
-      parentType: 'TEA_TYPE_YELLOW',
-      aliases: ['junshan yinzhen', 'junshan', 'silver needle yellow'],
-      description: 'Premium yellow tea made from buds, known for its sweet and delicate character',
-      typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium' },
-      dominantFlavorCategories: ['Sweet', 'Delicate', 'Floral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_AFTERNOON_BREAK'],
-      thermalEffect: 'neutral-cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 22 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
-        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
-      ]
-    },
+    // // ========== YELLOW TEA SUBTYPES ==========
+    // TEA_SUBTYPE_JUNSHAN_YINZHEN: {
+    //   id: 'TEA_SUBTYPE_JUNSHAN_YINZHEN',
+    //   displayName: 'Junshan Yinzhen',
+    //   chineseName: '君山银针',
+    //   parentType: 'TEA_TYPE_YELLOW',
+    //   aliases: ['junshan yinzhen', 'junshan', 'silver needle yellow'],
+    //   description: 'Premium yellow tea made from buds, known for its sweet and delicate character',
+    //   typicalCaffeine: { min: 3, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium' },
+    //   dominantFlavorCategories: ['Sweet', 'Delicate', 'Floral'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_AFTERNOON_BREAK'],
+    //   thermalEffect: 'neutral-cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 22 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+    //     { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
+    //   ]
+    // },
 
-    // ========== OOLONG TEA SUBTYPES ==========
-    TEA_SUBTYPE_TIE_GUAN_YIN_LIGHT: {
-      id: 'TEA_SUBTYPE_TIE_GUAN_YIN_LIGHT',
-      displayName: 'Tie Guan Yin (Light)',
-      chineseName: '铁观音（轻焙）',
-      parentType: 'TEA_TYPE_OOLONG',
-      aliases: ['tie guan yin light', 'tie guan yin', 'iron goddess light'],
-      description: 'Lightly oxidized Tie Guan Yin, known for vibrant floral (orchid) notes and creamy mouthfeel',
-      typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium-High' },
-      dominantFlavorCategories: ['Floral', 'Creamy', 'Sweet'],
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 20 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
-        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 12 }
-      ]
-    },
+    // // ========== OOLONG TEA SUBTYPES ==========
+    // TEA_SUBTYPE_TIE_GUAN_YIN_LIGHT: {
+    //   id: 'TEA_SUBTYPE_TIE_GUAN_YIN_LIGHT',
+    //   displayName: 'Tie Guan Yin (Light)',
+    //   chineseName: '铁观音（轻焙）',
+    //   parentType: 'TEA_TYPE_OOLONG',
+    //   aliases: ['tie guan yin light', 'tie guan yin', 'iron goddess light'],
+    //   description: 'Lightly oxidized Tie Guan Yin, known for vibrant floral (orchid) notes and creamy mouthfeel',
+    //   typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium-High' },
+    //   dominantFlavorCategories: ['Floral', 'Creamy', 'Sweet'],
+    //   baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 18 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 15 },
+    //     { seasonId: 'SEASON_EARLY_AUTUMN', boost: 12 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_DA_HONG_PAO: {
-      id: 'TEA_SUBTYPE_DA_HONG_PAO',
-      displayName: 'Da Hong Pao',
-      chineseName: '大红袍',
-      parentType: 'TEA_TYPE_OOLONG',
-      aliases: ['da hong pao', 'big red robe', 'heavy roast oolong'],
-      description: 'Heavily roasted rock oolong with mineral and caramel notes, complex and deeply flavored',
-      typicalCaffeine: { min: 5, max: 6, label: 'Medium-High' },
-      typicalTheanine: { min: 3, max: 5, label: 'Medium' },
-      dominantFlavorCategories: ['Roasted', 'Mineral', 'Woody', 'Caramel'],
-      baseActivityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_FOCUS'],
-      thermalEffect: 'warming',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_AUTUMN', boost: 20 },
-        { seasonId: 'SEASON_LATE_AUTUMN', boost: 25 },
-        { seasonId: 'SEASON_EARLY_WINTER', boost: 28 },
-        { seasonId: 'SEASON_WINTER', boost: 25 },
-        { seasonId: 'SEASON_LATE_WINTER', boost: 20 }
-      ]
-    },
+    // TEA_SUBTYPE_DA_HONG_PAO: {
+    //   id: 'TEA_SUBTYPE_DA_HONG_PAO',
+    //   displayName: 'Da Hong Pao',
+    //   chineseName: '大红袍',
+    //   parentType: 'TEA_TYPE_OOLONG',
+    //   aliases: ['da hong pao', 'big red robe', 'heavy roast oolong'],
+    //   description: 'Heavily roasted rock oolong with mineral and caramel notes, complex and deeply flavored',
+    //   typicalCaffeine: { min: 5, max: 6, label: 'Medium-High' },
+    //   typicalTheanine: { min: 3, max: 5, label: 'Medium' },
+    //   dominantFlavorCategories: ['Roasted', 'Mineral', 'Woody', 'Caramel'],
+    //   baseActivityHints: ['ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_WARMING', 'ACTIVITY_FOCUS'],
+    //   thermalEffect: 'warming',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_AUTUMN', boost: 20 },
+    //     { seasonId: 'SEASON_LATE_AUTUMN', boost: 25 },
+    //     { seasonId: 'SEASON_EARLY_WINTER', boost: 28 },
+    //     { seasonId: 'SEASON_WINTER', boost: 25 },
+    //     { seasonId: 'SEASON_LATE_WINTER', boost: 20 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_DONG_DING: {
-      id: 'TEA_SUBTYPE_DONG_DING',
-      displayName: 'Dong Ding',
-      chineseName: '冻顶',
-      parentType: 'TEA_TYPE_OOLONG',
-      aliases: ['dong ding', 'frozen peak'],
-      description: 'Taiwanese high mountain oolong, medium-oxidized with floral and fruity notes',
-      typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium' },
-      dominantFlavorCategories: ['Floral', 'Fruity', 'Sweet', 'Creamy'],
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_CONTEMPLATIVE'],
-      thermalEffect: 'neutral-warming',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 15 },
-        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 18 },
-        { seasonId: 'SEASON_AUTUMN', boost: 20 },
-        { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 }
-      ]
-    },
+    // TEA_SUBTYPE_DONG_DING: {
+    //   id: 'TEA_SUBTYPE_DONG_DING',
+    //   displayName: 'Dong Ding',
+    //   chineseName: '冻顶',
+    //   parentType: 'TEA_TYPE_OOLONG',
+    //   aliases: ['dong ding', 'frozen peak'],
+    //   description: 'Taiwanese high mountain oolong, medium-oxidized with floral and fruity notes',
+    //   typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium' },
+    //   dominantFlavorCategories: ['Floral', 'Fruity', 'Sweet', 'Creamy'],
+    //   baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_CONTEMPLATIVE'],
+    //   thermalEffect: 'neutral-warming',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 15 },
+    //     { seasonId: 'SEASON_EARLY_AUTUMN', boost: 18 },
+    //     { seasonId: 'SEASON_AUTUMN', boost: 20 },
+    //     { seasonId: 'SEASON_LATE_AUTUMN', boost: 18 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_BAOZHONG: {
-      id: 'TEA_SUBTYPE_BAOZHONG',
-      displayName: 'Baozhong',
-      chineseName: '包种',
-      parentType: 'TEA_TYPE_OOLONG',
-      aliases: ['baozhong', 'wrapped leaf', 'pouchong'],
-      description: 'Lightly oxidized Taiwanese oolong with fruity and floral characteristics',
-      typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
-      typicalTheanine: { min: 4, max: 6, label: 'Medium' },
-      dominantFlavorCategories: ['Fruity', 'Floral', 'Sweet'],
-      baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
-      thermalEffect: 'cooling',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_SPRING', boost: 18 },
-        { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
-        { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
-        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
-      ]
-    },
+    // TEA_SUBTYPE_BAOZHONG: {
+    //   id: 'TEA_SUBTYPE_BAOZHONG',
+    //   displayName: 'Baozhong',
+    //   chineseName: '包种',
+    //   parentType: 'TEA_TYPE_OOLONG',
+    //   aliases: ['baozhong', 'wrapped leaf', 'pouchong'],
+    //   description: 'Lightly oxidized Taiwanese oolong with fruity and floral characteristics',
+    //   typicalCaffeine: { min: 4, max: 5, label: 'Medium' },
+    //   typicalTheanine: { min: 4, max: 6, label: 'Medium' },
+    //   dominantFlavorCategories: ['Fruity', 'Floral', 'Sweet'],
+    //   baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_UPLIFTING', 'ACTIVITY_RELAXATION'],
+    //   thermalEffect: 'cooling',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_SPRING', boost: 18 },
+    //     { seasonId: 'SEASON_LATE_SPRING', boost: 20 },
+    //     { seasonId: 'SEASON_EARLY_SUMMER', boost: 18 },
+    //     { seasonId: 'SEASON_EARLY_AUTUMN', boost: 15 }
+    //   ]
+    // },
 
-    // ========== BLACK TEA SUBTYPES ==========
-    TEA_SUBTYPE_ASSAM: {
-      id: 'TEA_SUBTYPE_ASSAM',
-      displayName: 'Assam',
-      chineseName: '阿萨姆',
-      parentType: 'TEA_TYPE_BLACK',
-      aliases: ['assam', 'assam black'],
-      description: 'Bold, malty black tea from Assam, India with full body and high caffeine',
-      typicalCaffeine: { min: 6, max: 8, label: 'Very High' },
-      typicalTheanine: { min: 2, max: 3, label: 'Low' },
-      dominantFlavorCategories: ['Malty', 'Bold', 'Honey', 'Sweet'],
-      baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS'],
-      thermalEffect: 'warming',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
-        { seasonId: 'SEASON_WINTER', boost: 30 },
-        { seasonId: 'SEASON_LATE_WINTER', boost: 25 },
-        { seasonId: 'SEASON_EARLY_SPRING', boost: 15 }
-      ]
-    },
+    // // ========== BLACK TEA SUBTYPES ==========
+    // TEA_SUBTYPE_ASSAM: {
+    //   id: 'TEA_SUBTYPE_ASSAM',
+    //   displayName: 'Assam',
+    //   chineseName: '阿萨姆',
+    //   parentType: 'TEA_TYPE_BLACK',
+    //   aliases: ['assam', 'assam black'],
+    //   description: 'Bold, malty black tea from Assam, India with full body and high caffeine',
+    //   typicalCaffeine: { min: 6, max: 8, label: 'Very High' },
+    //   typicalTheanine: { min: 2, max: 3, label: 'Low' },
+    //   dominantFlavorCategories: ['Malty', 'Bold', 'Honey', 'Sweet'],
+    //   baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_MORNING', 'ACTIVITY_FOCUS'],
+    //   thermalEffect: 'warming',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+    //     { seasonId: 'SEASON_WINTER', boost: 30 },
+    //     { seasonId: 'SEASON_LATE_WINTER', boost: 25 },
+    //     { seasonId: 'SEASON_EARLY_SPRING', boost: 15 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_DARJEELING: {
-      id: 'TEA_SUBTYPE_DARJEELING',
-      displayName: 'Darjeeling',
-      chineseName: '大吉岭',
-      parentType: 'TEA_TYPE_BLACK',
-      aliases: ['darjeeling', 'champagne tea'],
-      description: 'Delicate black tea from the foothills of the Himalayas with floral and fruity notes that vary by flush',
-      typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
-      typicalTheanine: { min: 3, max: 4, label: 'Medium' },
-      dominantFlavorCategories: ['Floral', 'Fruity', 'Mineral'],
-      baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL'],
-      thermalEffect: 'neutral-warming',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_EARLY_AUTUMN', boost: 20 },
-        { seasonId: 'SEASON_AUTUMN', boost: 22 },
-        { seasonId: 'SEASON_LATE_AUTUMN', boost: 20 },
-        { seasonId: 'SEASON_EARLY_WINTER', boost: 18 }
-      ]
-    },
+    // TEA_SUBTYPE_DARJEELING: {
+    //   id: 'TEA_SUBTYPE_DARJEELING',
+    //   displayName: 'Darjeeling',
+    //   chineseName: '大吉岭',
+    //   parentType: 'TEA_TYPE_BLACK',
+    //   aliases: ['darjeeling', 'champagne tea'],
+    //   description: 'Delicate black tea from the foothills of the Himalayas with floral and fruity notes that vary by flush',
+    //   typicalCaffeine: { min: 4, max: 6, label: 'Medium-High' },
+    //   typicalTheanine: { min: 3, max: 4, label: 'Medium' },
+    //   dominantFlavorCategories: ['Floral', 'Fruity', 'Mineral'],
+    //   baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL'],
+    //   thermalEffect: 'neutral-warming',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_EARLY_AUTUMN', boost: 20 },
+    //     { seasonId: 'SEASON_AUTUMN', boost: 22 },
+    //     { seasonId: 'SEASON_LATE_AUTUMN', boost: 20 },
+    //     { seasonId: 'SEASON_EARLY_WINTER', boost: 18 }
+    //   ]
+    // },
 
-    TEA_SUBTYPE_KEEMUN: {
-      id: 'TEA_SUBTYPE_KEEMUN',
-      displayName: 'Keemun',
-      chineseName: '祁门',
-      parentType: 'TEA_TYPE_BLACK',
-      aliases: ['keemun', 'qimen', 'chi men'],
-      description: 'Elegant Chinese black tea with winey, fruity, and slightly floral characteristics',
-      typicalCaffeine: { min: 4, max: 5, label: 'Medium-High' },
-      typicalTheanine: { min: 3, max: 4, label: 'Medium' },
-      dominantFlavorCategories: ['Fruity', 'Winey', 'Floral', 'Slightly Sweet'],
-      baseActivityHints: ['ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE'],
-      thermalEffect: 'warming',
-      seasonalAffinity: [
-        { seasonId: 'SEASON_AUTUMN', boost: 20 },
-        { seasonId: 'SEASON_LATE_AUTUMN', boost: 22 },
-        { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
-        { seasonId: 'SEASON_WINTER', boost: 22 }
-      ]
-    },
+    // TEA_SUBTYPE_KEEMUN: {
+    //   id: 'TEA_SUBTYPE_KEEMUN',
+    //   displayName: 'Keemun',
+    //   chineseName: '祁门',
+    //   parentType: 'TEA_TYPE_BLACK',
+    //   aliases: ['keemun', 'qimen', 'chi men'],
+    //   description: 'Elegant Chinese black tea with winey, fruity, and slightly floral characteristics',
+    //   typicalCaffeine: { min: 4, max: 5, label: 'Medium-High' },
+    //   typicalTheanine: { min: 3, max: 4, label: 'Medium' },
+    //   dominantFlavorCategories: ['Fruity', 'Winey', 'Floral', 'Slightly Sweet'],
+    //   baseActivityHints: ['ACTIVITY_AFTERNOON_BREAK', 'ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE'],
+    //   thermalEffect: 'warming',
+    //   seasonalAffinity: [
+    //     { seasonId: 'SEASON_AUTUMN', boost: 20 },
+    //     { seasonId: 'SEASON_LATE_AUTUMN', boost: 22 },
+    //     { seasonId: 'SEASON_EARLY_WINTER', boost: 25 },
+    //     { seasonId: 'SEASON_WINTER', boost: 22 }
+    //   ]
+    // },
 
     // ========== PUERH TEA SUBTYPES ==========
     TEA_SUBTYPE_SHENG_PUERH: {

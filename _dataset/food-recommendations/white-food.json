@@ -1,0 +1,446 @@
+[
+  {
+    "teaName": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "subType": "white-silver-needle",
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
+    "recommendations": [
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements honey and hay, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements honey and hay, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements honey and hay, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements honey and hay, enhancing sweet notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements honey and hay, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "hay"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 7,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.8799999999999999,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.750Z"
+  },
+  {
+    "teaName": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔ Dān)",
+    "type": "white",
+    "subType": "white-peony",
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements floral and honey, enhancing floral notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements floral and honey, enhancing floral notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements floral and honey, enhancing floral notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements floral and honey, enhancing floral notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements floral and honey, enhancing floral notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "honey",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 7,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.758Z"
+  },
+  {
+    "teaName": "Gong Mei",
+    "originalName": "贡眉 (Gòng Méi)",
+    "type": "white",
+    "subType": "gong-mei",
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements woody and honey, enhancing woody notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements woody and honey, enhancing woody notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements woody and honey, enhancing woody notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements woody and honey, enhancing woody notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements woody and honey, enhancing woody notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Woody",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "woody",
+        "honey",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 10,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.765Z"
+  },
+  {
+    "teaName": "Shou Mei",
+    "originalName": "寿眉 (Shòu Méi)",
+    "type": "white",
+    "subType": "shou-mei",
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements wood and honey, enhancing woody notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements wood and honey, enhancing woody notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements wood and honey, enhancing woody notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements wood and honey, enhancing woody notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements wood and honey, enhancing woody notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Woody",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "wood",
+        "honey",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 10,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.770Z"
+  },
+  {
+    "teaName": "Moonlight White",
+    "originalName": "月光白 (Yuè Guāng Bái)",
+    "type": "white",
+    "subType": "moonlight-white",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements honey and orchid, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements honey and orchid, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements honey and orchid, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements honey and orchid, enhancing sweet notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements honey and orchid, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "orchid",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 8,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.774Z"
+  }
+]

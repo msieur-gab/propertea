@@ -1,0 +1,762 @@
+[
+  {
+    "teaName": "Yiwu Sheng",
+    "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 54
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 51
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 51.8
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 50
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 67,
+      "SEASON_SPRING": 64,
+      "SEASON_LATE_SPRING": 62.8,
+      "SEASON_EARLY_SUMMER": 54,
+      "SEASON_SUMMER": 51,
+      "SEASON_LATE_SUMMER": 51.8,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 50,
+      "SEASON_LATE_AUTUMN": 65,
+      "SEASON_EARLY_WINTER": 68,
+      "SEASON_WINTER": 71,
+      "SEASON_LATE_WINTER": 68
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Winter",
+        "Early Winter",
+        "Late Winter",
+        "Early Spring",
+        "Late Autumn",
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.048Z"
+  },
+  {
+    "teaName": "Bulang Sheng",
+    "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 54
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 51
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 51.8
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 50
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 67,
+      "SEASON_SPRING": 64,
+      "SEASON_LATE_SPRING": 62.8,
+      "SEASON_EARLY_SUMMER": 54,
+      "SEASON_SUMMER": 51,
+      "SEASON_LATE_SUMMER": 51.8,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 50,
+      "SEASON_LATE_AUTUMN": 65,
+      "SEASON_EARLY_WINTER": 68,
+      "SEASON_WINTER": 71,
+      "SEASON_LATE_WINTER": 68
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Winter",
+        "Early Winter",
+        "Late Winter",
+        "Early Spring",
+        "Late Autumn",
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.049Z"
+  },
+  {
+    "teaName": "Banzhang Sheng",
+    "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 54
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 51
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 51.8
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 50
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 67,
+      "SEASON_SPRING": 64,
+      "SEASON_LATE_SPRING": 62.8,
+      "SEASON_EARLY_SUMMER": 54,
+      "SEASON_SUMMER": 51,
+      "SEASON_LATE_SUMMER": 51.8,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 50,
+      "SEASON_LATE_AUTUMN": 65,
+      "SEASON_EARLY_WINTER": 68,
+      "SEASON_WINTER": 71,
+      "SEASON_LATE_WINTER": 68
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Winter",
+        "Early Winter",
+        "Late Winter",
+        "Early Spring",
+        "Late Autumn",
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.049Z"
+  },
+  {
+    "teaName": "Mengku Sheng",
+    "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 54
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 51
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 51.8
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 50
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 67,
+      "SEASON_SPRING": 64,
+      "SEASON_LATE_SPRING": 62.8,
+      "SEASON_EARLY_SUMMER": 54,
+      "SEASON_SUMMER": 51,
+      "SEASON_LATE_SUMMER": 51.8,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 50,
+      "SEASON_LATE_AUTUMN": 65,
+      "SEASON_EARLY_WINTER": 68,
+      "SEASON_WINTER": 71,
+      "SEASON_LATE_WINTER": 68
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Winter",
+        "Early Winter",
+        "Late Winter",
+        "Early Spring",
+        "Late Autumn",
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.049Z"
+  },
+  {
+    "teaName": "Jingmai Sheng",
+    "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      },
+      {
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 67
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 64
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 62.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 54
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 51
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 51.8
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 50
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 65
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 68
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 71
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 68
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 67,
+      "SEASON_SPRING": 64,
+      "SEASON_LATE_SPRING": 62.8,
+      "SEASON_EARLY_SUMMER": 54,
+      "SEASON_SUMMER": 51,
+      "SEASON_LATE_SUMMER": 51.8,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 50,
+      "SEASON_LATE_AUTUMN": 65,
+      "SEASON_EARLY_WINTER": 68,
+      "SEASON_WINTER": 71,
+      "SEASON_LATE_WINTER": 68
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Winter",
+        "Early Winter",
+        "Late Winter",
+        "Early Spring",
+        "Late Autumn",
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.050Z"
+  }
+]

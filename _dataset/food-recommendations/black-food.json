@@ -1,0 +1,447 @@
+[
+  {
+    "teaName": "Keemun",
+    "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
+    "type": "black",
+    "subType": "keemun",
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "floral",
+      "sweet",
+      "smoky"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements floral and sweet, enhancing floral notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements floral and sweet, enhancing floral notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements floral and sweet, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements floral and sweet, enhancing floral notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements floral and sweet, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet",
+        "Roasted"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "sweet",
+        "smoky"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.660Z"
+  },
+  {
+    "teaName": "Dian Hong",
+    "originalName": "滇红 (Diān Hóng)",
+    "type": "black",
+    "subType": "dian-hong",
+    "flavorProfile": [
+      "malty",
+      "honey",
+      "sweet",
+      "chocolate",
+      "dried fruit"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements honey and sweet, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements honey and sweet, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements honey and sweet, enhancing sweet notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements honey and sweet, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements honey and sweet, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "sweet",
+        "chocolate"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 11,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.674Z"
+  },
+  {
+    "teaName": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "black",
+    "subType": "jin-jun-mei",
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "floral",
+      "fruity",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements honey and sweet, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements honey and sweet, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements honey and sweet, enhancing sweet notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements honey and sweet, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements honey and sweet, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "sweet",
+        "floral"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 15,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.676Z"
+  },
+  {
+    "teaName": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
+    "type": "black",
+    "subType": "lapsang-souchong",
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "dried fruit",
+      "tobacco"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements smoky and pine, enhancing roasted notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements smoky and pine, enhancing roasted notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements smoky and pine, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances smoky notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements smoky and pine, enhancing roasted notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements smoky and pine, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Woody",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "smoky",
+        "pine",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.680Z"
+  },
+  {
+    "teaName": "Yingde Hong",
+    "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
+    "type": "black",
+    "subType": "yingde-hong",
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "robust"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements sweet and honey, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements sweet and honey, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements sweet and honey, enhancing sweet notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements sweet and honey, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements sweet and honey, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "honey",
+        "cocoa"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 11,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.683Z"
+  }
+]

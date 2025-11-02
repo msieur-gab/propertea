@@ -117,7 +117,8 @@ export class FoodTaxonomy {
       id: 'FOOD_DARK_CHOCOLATE',
       displayName: 'Dark Chocolate',
       category: 'CATEGORY_DESSERTS',
-      aliases: ['dark chocolate', 'chocolate', 'cocoa']
+      aliases: ['dark chocolate', 'chocolate', 'cocoa'],
+      narrativeHint: 'Cocoa bitterness mirrors catechin astringency, creating harmony'
     },
     FOOD_DESSERTS: {
       id: 'FOOD_DESSERTS',
@@ -223,7 +224,8 @@ export class FoodTaxonomy {
       id: 'FOOD_WHITE_FISH',
       displayName: 'White Fish',
       category: 'CATEGORY_PROTEINS',
-      aliases: ['white fish', 'fish', 'cod', 'halibut', 'sole']
+      aliases: ['white fish', 'fish', 'cod', 'halibut', 'sole'],
+      narrativeHint: 'Delicate fish flavors resonate with subtle tea notes'
     },
     FOOD_SEAFOOD: {
       id: 'FOOD_SEAFOOD',
@@ -253,7 +255,8 @@ export class FoodTaxonomy {
       id: 'FOOD_SUSHI',
       displayName: 'Sushi',
       category: 'CATEGORY_PROTEINS',
-      aliases: ['sushi', 'sashimi', 'nigiri']
+      aliases: ['sushi', 'sashimi', 'nigiri'],
+      narrativeHint: 'Clean, mineral-forward notes complement fresh rice and delicate fish'
     },
     FOOD_CHICKEN: {
       id: 'FOOD_CHICKEN',
@@ -277,7 +280,8 @@ export class FoodTaxonomy {
       id: 'FOOD_GRILLED_MEATS',
       displayName: 'Grilled Meats',
       category: 'CATEGORY_PROTEINS',
-      aliases: ['grilled meats', 'bbq', 'barbecue']
+      aliases: ['grilled meats', 'bbq', 'barbecue'],
+      narrativeHint: 'Smoky char and savory umami complement woody and roasted tea profiles'
     },
     FOOD_GAME_MEATS: {
       id: 'FOOD_GAME_MEATS',
@@ -369,7 +373,8 @@ export class FoodTaxonomy {
       id: 'FOOD_ROOT_VEGETABLES',
       displayName: 'Root Vegetables',
       category: 'CATEGORY_VEGETABLES',
-      aliases: ['root vegetables', 'roots', 'potatoes', 'carrots', 'beets']
+      aliases: ['root vegetables', 'roots', 'potatoes', 'carrots', 'beets'],
+      narrativeHint: 'Earthy mineral notes resonate with mineral-rich tea profiles'
     },
     FOOD_MUSHROOMS: {
       id: 'FOOD_MUSHROOMS',
@@ -381,7 +386,8 @@ export class FoodTaxonomy {
       id: 'FOOD_LIGHT_VEGETABLES',
       displayName: 'Light Vegetables',
       category: 'CATEGORY_VEGETABLES',
-      aliases: ['light vegetables', 'delicate vegetables']
+      aliases: ['light vegetables', 'delicate vegetables'],
+      narrativeHint: 'Fresh, subtle vegetable notes align with delicate and floral tea profiles'
     },
 
     // ========== DAIRY & CHEESE ==========
@@ -421,13 +427,27 @@ export class FoodTaxonomy {
       category: 'CATEGORY_DAIRY_CHEESE',
       aliases: ['light cheese', 'soft cheese', 'fresh cheese']
     },
+    FOOD_AGED_CHEESE: {
+      id: 'FOOD_AGED_CHEESE',
+      displayName: 'Aged Cheese',
+      category: 'CATEGORY_DAIRY_CHEESE',
+      aliases: ['aged cheese', 'mature cheese', 'vintage cheese'],
+      narrativeHint: 'Richness and umami balance astringency, creating elegant contrast'
+    },
 
     // ========== FRUITS & BERRIES ==========
     FOOD_FRUITS: {
       id: 'FOOD_FRUITS',
       displayName: 'Fruits',
       category: 'CATEGORY_FRUITS',
-      aliases: ['fruits', 'fruit', 'fresh fruit']
+      aliases: ['fruits', 'fruit']
+    },
+    FOOD_FRESH_FRUIT: {
+      id: 'FOOD_FRESH_FRUIT',
+      displayName: 'Fresh Fruit',
+      category: 'CATEGORY_FRUITS',
+      aliases: ['fresh fruit', 'fresh fruits', 'ripe fruit'],
+      narrativeHint: 'Natural fruit sweetness brightens and elevates subtle tea notes'
     },
     FOOD_FRUIT_SALADS: {
       id: 'FOOD_FRUIT_SALADS',
@@ -454,6 +474,20 @@ export class FoodTaxonomy {
       displayName: 'Rice Dishes',
       category: 'CATEGORY_PREPARED_DISHES',
       aliases: ['rice dishes', 'rice', 'pilaf', 'risotto']
+    },
+    FOOD_SUSHI_RICE: {
+      id: 'FOOD_SUSHI_RICE',
+      displayName: 'Sushi Rice',
+      category: 'CATEGORY_PREPARED_DISHES',
+      aliases: ['sushi rice', 'vinegared rice', 'sushi'],
+      narrativeHint: 'Subtle vinegar and rice sweetness harmonize with green tea\'s freshness'
+    },
+    FOOD_RICE_CAKES: {
+      id: 'FOOD_RICE_CAKES',
+      displayName: 'Rice Cakes',
+      category: 'CATEGORY_PREPARED_DISHES',
+      aliases: ['rice cakes', 'rice cake', 'mochi', 'glutinous rice'],
+      narrativeHint: 'Delicate rice texture pairs with lighter, vegetal tea profiles'
     },
     FOOD_SOUPS: {
       id: 'FOOD_SOUPS',
@@ -557,6 +591,13 @@ export class FoodTaxonomy {
       category: 'CATEGORY_PREPARED_DISHES',
       aliases: ['bbq', 'barbecue', 'grilled']
     },
+    FOOD_DIM_SUM: {
+      id: 'FOOD_DIM_SUM',
+      displayName: 'Dim Sum',
+      category: 'CATEGORY_PREPARED_DISHES',
+      aliases: ['dim sum', 'dim sums', 'dumplings', 'small plates'],
+      narrativeHint: 'Delicate flavors and textures complement the complexity of aged puerh'
+    },
 
     // ========== BEVERAGES & EXTRAS ==========
     FOOD_COFFEE: {
@@ -575,19 +616,29 @@ export class FoodTaxonomy {
       id: 'FOOD_ROASTED_NUTS',
       displayName: 'Roasted Nuts',
       category: 'CATEGORY_FRUITS',
-      aliases: ['roasted nuts', 'roasted', 'toasted nuts']
+      aliases: ['roasted nuts', 'roasted', 'toasted nuts'],
+      narrativeHint: 'Nutty warmth complements the tea\'s roasted character'
     },
     FOOD_CARAMEL: {
       id: 'FOOD_CARAMEL',
       displayName: 'Caramel',
       category: 'CATEGORY_DESSERTS',
-      aliases: ['caramel', 'toffee', 'caramel sauce']
+      aliases: ['caramel', 'toffee', 'caramel sauce'],
+      narrativeHint: 'Sweet caramel notes echo the tea\'s inherent sweetness'
+    },
+    FOOD_CARAMEL_SWEETS: {
+      id: 'FOOD_CARAMEL_SWEETS',
+      displayName: 'Caramel Sweets',
+      category: 'CATEGORY_DESSERTS',
+      aliases: ['caramel sweets', 'caramel candies', 'toffee sweets'],
+      narrativeHint: 'Rich caramel sweetness harmonizes with the tea\'s depth'
     },
     FOOD_CHOCOLATE: {
       id: 'FOOD_CHOCOLATE',
       displayName: 'Chocolate',
       category: 'CATEGORY_DESSERTS',
-      aliases: ['chocolate', 'cocoa', 'chocolate dessert']
+      aliases: ['chocolate', 'cocoa', 'chocolate dessert'],
+      narrativeHint: 'Cocoa bitterness mirrors catechin astringency'
     }
   };
 

@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Longjing",
+    "originalName": "龙井 (Lóng Jǐng)",
+    "type": "green",
+    "subType": "longjing",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "delicate"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "shaped",
+      "dried"
+    ],
+    "geography": {
+      "location": "West Lake",
+      "province": "Zhejiang",
+      "country": "China",
+      "latitude": 30.25,
+      "longitude": 120.1,
+      "altitude": 200,
+      "humidity": 78,
+      "temperature": 17.2,
+      "solarRadiation": 168
+    }
+  },
+  {
+    "name": "Biluochun",
+    "originalName": "碧螺春 (Bì Luó Chūn)",
+    "type": "green",
+    "subType": "biluochun",
+    "caffeineLevel": 3.8,
+    "lTheanineLevel": 5.8,
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "rolled",
+      "dried"
+    ],
+    "geography": {
+      "location": "Dongting Mountain",
+      "province": "Jiangsu",
+      "country": "China",
+      "latitude": 31.15,
+      "longitude": 120.48,
+      "altitude": 350,
+      "humidity": 80,
+      "temperature": 16.8,
+      "solarRadiation": 166
+    }
+  },
+  {
+    "name": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+    "type": "green",
+    "subType": "huangshan-maofeng",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "floral"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "shaped",
+      "dried"
+    ],
+    "geography": {
+      "location": "Huangshan",
+      "province": "Anhui",
+      "country": "China",
+      "latitude": 30.12,
+      "longitude": 118.15,
+      "altitude": 800,
+      "humidity": 76,
+      "temperature": 15.8,
+      "solarRadiation": 172
+    }
+  },
+  {
+    "name": "Xinyang Maojian",
+    "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+    "type": "green",
+    "subType": "xinyang-maojian",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 5,
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "brisk"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "rolled",
+      "dried"
+    ],
+    "geography": {
+      "location": "Xinyang",
+      "province": "Henan",
+      "country": "China",
+      "latitude": 32.13,
+      "longitude": 114.07,
+      "altitude": 500,
+      "humidity": 74,
+      "temperature": 16.5,
+      "solarRadiation": 174
+    }
+  },
+  {
+    "name": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+    "type": "green",
+    "subType": "taiping-houkui",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 6,
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "lingering"
+    ],
+    "processingMethods": [
+      "pan-fired",
+      "pressed",
+      "dried"
+    ],
+    "geography": {
+      "location": "Taiping",
+      "province": "Anhui",
+      "country": "China",
+      "latitude": 30.3,
+      "longitude": 118.3,
+      "altitude": 600,
+      "humidity": 77,
+      "temperature": 16.2,
+      "solarRadiation": 170
+    }
+  }
+]

@@ -1,0 +1,271 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "flavorProfile": [
+      "sweet",
+      "delicate",
+      "floral",
+      "honey",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements sweet and floral, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements sweet and floral, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (enhances sweet notes)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "floral",
+        "honey"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 7,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.779Z"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "floral",
+      "smooth",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements sweet and nutty, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements sweet and nutty, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (enhances sweet notes)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Nutty & Toasty",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "nutty",
+        "floral"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.781Z"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "smooth",
+      "floral",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "categories": {},
+    "analysis": {
+      "flavorCategories": [
+        "Nutty & Toasty",
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "chestnut",
+        "sweet",
+        "floral"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "confidence": 0.95,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T18:05:59.784Z"
+  }
+]

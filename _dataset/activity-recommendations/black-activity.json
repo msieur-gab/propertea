@@ -1,0 +1,476 @@
+[
+  {
+    "teaName": "Keemun",
+    "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
+    "type": "black",
+    "subType": "keemun",
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 74.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Bold Experience",
+        "score": 68.2,
+        "description": "Embracing adventurous moments and bold experiences",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "When pursuing new challenges or adventures",
+        "benefits": [
+          "Encourages courage and boldness",
+          "Enhances sense of aliveness",
+          "Supports daring pursuits",
+          "Inspires confidence"
+        ]
+      },
+      {
+        "activity": "Creative",
+        "score": 68.2,
+        "description": "Unlocking creative expression and artistic inspiration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "During creative work or artistic pursuits",
+        "benefits": [
+          "Enhances creative thinking",
+          "Improves artistic flow",
+          "Supports problem-solving",
+          "Inspires original ideas"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Creative Pursuits",
+        "activities": [
+          "Bold Experience",
+          "Creative"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.100Z"
+  },
+  {
+    "teaName": "Dian Hong",
+    "originalName": "滇红 (Diān Hóng)",
+    "type": "black",
+    "subType": "dian-hong",
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 71.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 67.6,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 67.6,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.101Z"
+  },
+  {
+    "teaName": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "black",
+    "subType": "jin-jun-mei",
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 74.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 70.8,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 67.6,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.102Z"
+  },
+  {
+    "teaName": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
+    "type": "black",
+    "subType": "lapsang-souchong",
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 76.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 74.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Contemplative",
+        "score": 67.6,
+        "description": "Deep, mindful reflection on thoughts, feelings, and life experiences",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning or quiet evening moments",
+        "benefits": [
+          "Increases self-awareness",
+          "Promotes wisdom and insight",
+          "Deepens emotional understanding",
+          "Supports personal growth"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Contemplative"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Focused & Energized",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.103Z"
+  },
+  {
+    "teaName": "Yingde Hong",
+    "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
+    "type": "black",
+    "subType": "yingde-hong",
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 71.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Focus",
+        "score": 69,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Energy",
+        "score": 69,
+        "description": "Activating and invigorating the mind and body with dynamic vitality",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning through midday",
+        "benefits": [
+          "Increases alertness and energy",
+          "Enhances physical performance",
+          "Improves mental clarity",
+          "Boosts motivation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Active & Energetic",
+        "activities": [
+          "Energy"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Focused & Energized",
+      "stimulationLevel": "High",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "confidence": 0.855,
+    "rendererVersion": "2.0",
+    "generatedAt": "2025-11-02T16:29:36.104Z"
+  }
+]

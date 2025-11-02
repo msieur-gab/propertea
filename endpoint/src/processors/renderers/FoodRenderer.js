@@ -398,6 +398,7 @@ export class FoodRenderer {
         description: foodObj?.description || 'A complementary food pairing',
         score: Math.min(100, score),
         rationale: this._getRationale(foodName, dominantFlavors, dominantCategories),
+        narrative: this._buildNarrative(foodObj, teaType, dominantFlavors, astringencyFoods.includes(foodId)),
         category: this._getFoodCategory(foodName),
         flavorProfile: foodObj?.flavorProfile || [],
         pairingTechnique: this._getPairingTechnique(foodName, dominantFlavors)
@@ -488,6 +489,36 @@ export class FoodRenderer {
       "N/A": 0
     };
     return bonuses[intensity] || 0;
+  }
+
+  /**
+   * Build dynamic narrative for food pairing using taxonomy hint
+   * Combines narrativeHint from taxonomy with context (tea type, flavor match, astringency)
+   * to create pedagogical one-line explanations
+   */
+  _buildNarrative(foodObj, teaType, dominantFlavors, isAstringencyMatch) {
+    if (!foodObj || !foodObj.narrativeHint) {
+      return null; // No narrative hint available
+    }
+
+    const hint = foodObj.narrativeHint;
+
+    // Simple case: just return the hint as-is if it's already pedagogical
+    // (most hints are already written in narrative form)
+    if (isAstringencyMatch) {
+      // Add emphasis when astringency is a key match
+      return `${hint} (astringency balance)`;
+    }
+
+    if (teaType && hint.toLowerCase().includes('puerh')) {
+      return `${hint} (especially with aged puerh)`;
+    }
+
+    if (dominantFlavors.length > 0 && hint.toLowerCase().includes(dominantFlavors[0])) {
+      return `${hint} (enhances ${dominantFlavors[0]} notes)`;
+    }
+
+    return hint;
   }
 
   /**

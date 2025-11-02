@@ -1,0 +1,368 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 65.2
+      },
+      {
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 64
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 50
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 57
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 55.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 59
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 50
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 50
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 65.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 64
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 58
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 58
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 58
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 58
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 50,
+      "SEASON_SPRING": 57,
+      "SEASON_LATE_SPRING": 55.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 65.2,
+      "SEASON_AUTUMN": 64,
+      "SEASON_LATE_AUTUMN": 58,
+      "SEASON_EARLY_WINTER": 58,
+      "SEASON_WINTER": 58,
+      "SEASON_LATE_WINTER": 58
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Early Autumn",
+        "Autumn"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.073Z"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 70
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 68.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 58
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 70
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 68.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 59
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 50
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 50
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 56
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 50
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 50
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 50
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 50
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 58,
+      "SEASON_SPRING": 70,
+      "SEASON_LATE_SPRING": 68.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 56,
+      "SEASON_LATE_AUTUMN": 50,
+      "SEASON_EARLY_WINTER": 50,
+      "SEASON_WINTER": 50,
+      "SEASON_LATE_WINTER": 50
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.074Z"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "recommendations": [
+      {
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 62
+      },
+      {
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 60.8
+      }
+    ],
+    "circularYear": [
+      {
+        "month": 1,
+        "seasonId": "SEASON_EARLY_SPRING",
+        "displayName": "Early Spring",
+        "score": 50
+      },
+      {
+        "month": 2,
+        "seasonId": "SEASON_SPRING",
+        "displayName": "Spring",
+        "score": 62
+      },
+      {
+        "month": 3,
+        "seasonId": "SEASON_LATE_SPRING",
+        "displayName": "Late Spring",
+        "score": 60.8
+      },
+      {
+        "month": 4,
+        "seasonId": "SEASON_EARLY_SUMMER",
+        "displayName": "Early Summer",
+        "score": 59
+      },
+      {
+        "month": 5,
+        "seasonId": "SEASON_SUMMER",
+        "displayName": "Summer",
+        "score": 50
+      },
+      {
+        "month": 6,
+        "seasonId": "SEASON_LATE_SUMMER",
+        "displayName": "Late Summer",
+        "score": 50
+      },
+      {
+        "month": 7,
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 57.2
+      },
+      {
+        "month": 8,
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 56
+      },
+      {
+        "month": 9,
+        "seasonId": "SEASON_LATE_AUTUMN",
+        "displayName": "Late Autumn",
+        "score": 50
+      },
+      {
+        "month": 10,
+        "seasonId": "SEASON_EARLY_WINTER",
+        "displayName": "Early Winter",
+        "score": 50
+      },
+      {
+        "month": 11,
+        "seasonId": "SEASON_WINTER",
+        "displayName": "Winter",
+        "score": 50
+      },
+      {
+        "month": 12,
+        "seasonId": "SEASON_LATE_WINTER",
+        "displayName": "Late Winter",
+        "score": 50
+      }
+    ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 50,
+      "SEASON_SPRING": 62,
+      "SEASON_LATE_SPRING": 60.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 56,
+      "SEASON_LATE_AUTUMN": 50,
+      "SEASON_EARLY_WINTER": 50,
+      "SEASON_WINTER": 50,
+      "SEASON_LATE_WINTER": 50
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
+    },
+    "analysis": {
+      "teaTypeApplied": true,
+      "processingApplied": true,
+      "method": "Tea type + Processing seasonal affinity"
+    },
+    "confidence": 0.85,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-02T17:09:15.077Z"
+  }
+]
