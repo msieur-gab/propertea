@@ -22,11 +22,11 @@ export const rendererRegistry = {
     description: 'Suggests food pairings based on flavor profile'
   },
 
-  // Time of Day: needs compound analysis
+  // Time of Day: needs compound + tea type (cultural traditions)
   time: {
     displayName: 'Time of Day',
-    requiredInferrers: ['compound'],
-    description: 'Suggests optimal times to drink based on caffeine content'
+    requiredInferrers: ['compound', 'teaType'],
+    description: 'Suggests optimal times based on compound profile (85%) + tea type cultural tradition (15%)'
   },
 
   // Seasonal Recommendations: needs tea type + processing only (tea's intrinsic nature)

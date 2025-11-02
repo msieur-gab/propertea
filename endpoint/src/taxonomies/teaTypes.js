@@ -25,6 +25,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Delicate', 'Subtle Sweet', 'Floral', 'Fruity', 'Hay'],
       seasonalTendency: 'cooling',
       baseTimeOfDay: ['Afternoon', 'Evening', 'Anytime'],
+      baseTimeOfDayAffinities: {
+        night: 10,          // 0-5am: Very low (high theanine, low caffeine)
+        earlyMorning: 30,   // 6-8am: Low-moderate
+        morning: 40,        // 9-11am: Moderate
+        midday: 55,         // 12-14pm: Moderate-high
+        afternoon: 80,      // 15-17pm: Peak (good for afternoon)
+        evening: 70,        // 18-20pm: High (evening option)
+        lateEvening: 60     // 21-23pm: Moderate (gentle evening)
+      },
       baseActivityHints: ['ACTIVITY_RELAXATION', 'ACTIVITY_GENTLE_ENERGY', 'ACTIVITY_UNWINDING'],
       commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_MINIMAL_PROCESSING'],
       thermalEffect: 'cooling',
@@ -49,6 +58,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Vegetal', 'Marine', 'Nutty', 'Grassy', 'Sweet'],
       seasonalTendency: 'cooling',
       baseTimeOfDay: ['Morning', 'Afternoon'],
+      baseTimeOfDayAffinities: {
+        night: 5,           // 0-5am: Very low (not suitable)
+        earlyMorning: 60,   // 6-8am: Moderate-high (morning tea)
+        morning: 90,        // 9-11am: Peak (classic morning tea)
+        midday: 85,         // 12-14pm: Very high (afternoon option)
+        afternoon: 75,      // 15-17pm: High (afternoon)
+        evening: 25,        // 18-20pm: Low (caffeine concern)
+        lateEvening: 10     // 21-23pm: Very low (avoid)
+      },
       baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_GENTLE_ENERGY', 'ACTIVITY_REFRESHMENT'],
       commonProcessing: ['PROCESSING_STEAMED', 'PROCESSING_PAN_FIRED', 'PROCESSING_ROLLED', 'PROCESSING_SHADE_GROWN'],
       thermalEffect: 'cooling',
@@ -73,6 +91,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Sweet', 'Nutty', 'Floral', 'Delicate'],
       seasonalTendency: 'neutral-cooling',
       baseTimeOfDay: ['Morning', 'Afternoon'],
+      baseTimeOfDayAffinities: {
+        night: 10,          // 0-5am: Very low
+        earlyMorning: 55,   // 6-8am: Moderate (morning option)
+        morning: 85,        // 9-11am: High (good morning tea)
+        midday: 80,         // 12-14pm: High (afternoon option)
+        afternoon: 70,      // 15-17pm: Moderate-high
+        evening: 30,        // 18-20pm: Low (caffeine)
+        lateEvening: 15     // 21-23pm: Very low
+      },
       baseActivityHints: ['ACTIVITY_FOCUS', 'ACTIVITY_UPLIFTING', 'ACTIVITY_SOCIAL'],
       commonProcessing: ['PROCESSING_KILL_GREEN', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_PARTIAL_OXIDATION'],
       thermalEffect: 'neutral-cooling',
@@ -96,6 +123,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Floral', 'Fruity', 'Roasted', 'Woody', 'Mineral', 'Creamy'],
       seasonalTendency: 'variable',
       baseTimeOfDay: ['Afternoon', 'Evening', 'Social'],
+      baseTimeOfDayAffinities: {
+        night: 15,          // 0-5am: Very low
+        earlyMorning: 35,   // 6-8am: Low-moderate
+        morning: 50,        // 9-11am: Moderate (social/brunch)
+        midday: 65,         // 12-14pm: Moderate-high
+        afternoon: 85,      // 15-17pm: Peak (traditional gongfu tea time)
+        evening: 80,        // 18-20pm: High (after-dinner social)
+        lateEvening: 50     // 21-23pm: Moderate (evening social)
+      },
       baseActivityHints: ['ACTIVITY_SOCIAL', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_FOCUS', 'ACTIVITY_RELAXATION'],
       commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_PARTIAL_OXIDATION', 'PROCESSING_LIGHT_ROAST', 'PROCESSING_MEDIUM_ROAST', 'PROCESSING_HEAVY_ROAST'],
       thermalEffect: 'neutral-warming',
@@ -120,6 +156,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Malty', 'Fruity', 'Spicy', 'Sweet', 'Woody'],
       seasonalTendency: 'warming',
       baseTimeOfDay: ['Morning', 'Afternoon'],
+      baseTimeOfDayAffinities: {
+        night: 5,           // 0-5am: Very low
+        earlyMorning: 75,   // 6-8am: High (morning wake-up tea)
+        morning: 95,        // 9-11am: Peak (traditional morning tea - breakfast tea)
+        midday: 80,         // 12-14pm: High (afternoon option)
+        afternoon: 60,      // 15-17pm: Moderate (afternoon but high caffeine)
+        evening: 15,        // 18-20pm: Very low (caffeine concern)
+        lateEvening: 5      // 21-23pm: Avoid
+      },
       baseActivityHints: ['ACTIVITY_ENERGY', 'ACTIVITY_ROUTINE', 'ACTIVITY_FOCUS', 'ACTIVITY_MORNING'],
       commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_ROLLED', 'PROCESSING_FULL_OXIDATION'],
       thermalEffect: 'warming',
@@ -144,6 +189,15 @@ export class TeaTypeTaxonomy {
       dominantFlavorCategories: ['Earthy', 'Woody', 'Sweet', 'Aged', 'Mineral'],
       seasonalTendency: 'warming',
       baseTimeOfDay: ['Afternoon', 'Evening', 'After Meals'],
+      baseTimeOfDayAffinities: {
+        night: 20,          // 0-5am: Very low
+        earlyMorning: 25,   // 6-8am: Low
+        morning: 35,        // 9-11am: Low-moderate
+        midday: 55,         // 12-14pm: Moderate (after-lunch option)
+        afternoon: 80,      // 15-17pm: High (afternoon digestive tea)
+        evening: 85,        // 18-20pm: Peak (after-dinner, evening contemplation)
+        lateEvening: 70     // 21-23pm: High (evening digestive)
+      },
       baseActivityHints: ['ACTIVITY_DIGESTIVE', 'ACTIVITY_CONTEMPLATIVE', 'ACTIVITY_GROUNDING', 'ACTIVITY_WARMING'],
       commonProcessing: ['PROCESSING_WITHERED', 'PROCESSING_SUN_DRIED', 'PROCESSING_COMPRESSED', 'PROCESSING_AGED', 'PROCESSING_FERMENTED'],
       thermalEffect: 'warming',

@@ -1,14 +1,17 @@
 /**
  * TimeRenderer.js
  *
- * Purpose: Render time-of-day recommendations based on compound inference
- * Input: CompoundInferrer output { analysis: { stimulationLevel, relaxationLevel, compoundProfile } }
+ * Purpose: Render time-of-day recommendations based on compound + tea type
+ * Input:
+ *   - compoundInference: { analysis: { stimulationLevel, relaxationLevel, compoundProfile } }
+ *   - teaTypeInference: { analysis: { teaType, teaSubType } } (optional, for 15% refinement)
  * Output: Hourly recommendations with optimal drinking times
  *
- * Uses CompoundTaxonomy for data-driven compound profile definitions and circadian curves
+ * Weighting: 85% compound profile + 15% tea type cultural tradition
+ * Both use CompoundTaxonomy and TeaTypeTaxonomy for data-driven profiles
  */
 
-import { CompoundTaxonomy } from '../../taxonomies/index.js';
+import { CompoundTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
 
 export class TimeRenderer {
   constructor(config = {}) {
@@ -48,11 +51,12 @@ export class TimeRenderer {
   }
 
   /**
-   * Render time recommendations from compound inference
+   * Render time recommendations from compound + tea type
    * @param {Object} compoundInference - Output from CompoundInferrer
+   * @param {Object} teaTypeInference - Output from TeaTypeInferrer (optional)
    * @returns {Object} - Time recommendations organized by hour and period
    */
-  render(compoundInference) {
+  render(compoundInference, teaTypeInference = null) {
     const trace = [];
 
     // Extract inference data
@@ -119,7 +123,7 @@ export class TimeRenderer {
       value: `Total adjustments: ${relaxationAdjusted.toFixed(0)}`
     });
 
-    // Apply compound profile adjustments from CompoundTaxonomy
+    // ========== Apply Compound Profile (85% weight) ==========
     const compoundProfileObj = CompoundTaxonomy.getProfileByName(compoundProfile);
     let compoundAdjusted = 0;
 
@@ -127,16 +131,62 @@ export class TimeRenderer {
       this.hours.forEach(hour => {
         const adjustment = compoundProfileObj.circadianProfile[hour];
         const currentScore = hourlyScores.get(hour);
-        hourlyScores.set(hour, Math.max(1, currentScore + adjustment));
+        // Apply 85% of compound adjustment (the rest is for tea type)
+        hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.85)));
         compoundAdjusted += Math.abs(adjustment);
       });
     }
 
     trace.push({
-      step: "Compound Profile Scoring",
+      step: "Compound Profile Scoring (85%)",
       reason: `Compound profile: ${compoundProfile}`,
-      adjustment: `Applied compound profile to all 24 hours`,
+      adjustment: `Applied compound profile at 85% weight to all 24 hours`,
       value: `Total adjustments: ${compoundAdjusted.toFixed(0)}`
+    });
+
+    // ========== Apply Tea Type Tradition (15% weight) ==========
+    let teaTypeAdjusted = 0;
+    let appliedTeaType = null;
+
+    if (teaTypeInference?.analysis) {
+      const teaTypeId = teaTypeInference.analysis.teaType;
+      const teaType = teaTypeId ? TeaTypeTaxonomy.getType(teaTypeId) : null;
+
+      if (teaType && teaType.baseTimeOfDayAffinities) {
+        appliedTeaType = teaType.displayName;
+
+        // Map time period affinities to hourly adjustments (centered on each period)
+        const affinities = teaType.baseTimeOfDayAffinities;
+        const timePeriodMaps = {
+          night: [0, 1, 2, 3, 4, 5],
+          earlyMorning: [6, 7, 8],
+          morning: [9, 10, 11],
+          midday: [12, 13, 14],
+          afternoon: [15, 16, 17],
+          evening: [18, 19, 20],
+          lateEvening: [21, 22, 23]
+        };
+
+        // Calculate adjustment factor: convert 0-100 affinity to -50 to +50 adjustment
+        Object.entries(timePeriodMaps).forEach(([period, hours]) => {
+          const affinity = affinities[period] || 50; // Default to neutral (50)
+          const adjustment = (affinity - 50) * 0.3; // Scale: -50 to +50 range * 0.3 intensity
+
+          hours.forEach(hour => {
+            const currentScore = hourlyScores.get(hour);
+            // Apply 15% of tea type adjustment
+            hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.15)));
+            teaTypeAdjusted += Math.abs(adjustment);
+          });
+        });
+      }
+    }
+
+    trace.push({
+      step: "Tea Type Tradition Scoring (15%)",
+      reason: appliedTeaType ? `Tea type: ${appliedTeaType} (cultural tradition)` : 'No tea type provided',
+      adjustment: `Applied tea type cultural preference at 15% weight`,
+      value: `Total adjustments: ${teaTypeAdjusted.toFixed(0)}`
     });
 
     // Get top recommendations
@@ -174,7 +224,14 @@ export class TimeRenderer {
       analysis: {
         compoundProfile,
         stimulationLevel,
-        relaxationLevel
+        relaxationLevel,
+        teaTypeApplied: appliedTeaType ? true : false,
+        teaType: appliedTeaType,
+        weighting: {
+          compound: '85%',
+          teaType: '15%',
+          note: 'Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%'
+        }
       },
 
       // Metadata

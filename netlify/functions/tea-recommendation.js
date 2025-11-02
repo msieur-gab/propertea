@@ -190,8 +190,21 @@ async function runRecommendationPipeline(formData, renderers, format) {
     recommendations.food = result.recommendations || [];
   }
   if (renderers.includes('time')) {
-    const result = new TimeRenderer().render(allInferences.compound);
-    recommendations.time = result.recommendations || [];
+    // Time recommendations: 85% compound profile + 15% tea type tradition
+    const result = new TimeRenderer().render(
+      allInferences.compound,
+      allInferences.teaType
+    );
+    // Return full result with analysis and weighting information
+    recommendations.time = {
+      recommendations: result.recommendations || [],
+      hourlyScores: result.hourlyScores || {},
+      periodGrouping: result.periodGrouping || {},
+      analysis: result.analysis || {},
+      trace: result.trace || [],
+      confidence: result.confidence || 0,
+      rendererVersion: result.rendererVersion || '1.0'
+    };
   }
   if (renderers.includes('season')) {
     // Simplified seasonal rendering: uses only tea type and processing method
