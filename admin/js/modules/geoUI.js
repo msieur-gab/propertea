@@ -285,7 +285,7 @@ export class GeoUI {
         };
         setVal(this.elements.temperatureInput, weatherData.avgTemperature, '°C');
         setVal(this.elements.humidityInput, weatherData.avgHumidity, '%');
-        setVal(this.elements.solarRadiationInput, weatherData.avgSolarRadiation, ' W/m²'); // Assuming W/m²
+        setVal(this.elements.solarRadiationInput, weatherData.avgSolarRadiation, ' MJ/m²/day'); // Solar radiation in MJ/m²/day
     }
 
     _clearWeatherFields() {
@@ -375,7 +375,8 @@ export class GeoUI {
 
     // Helper to parse weather values that might contain units
     _parseWeatherValue(value) {
-        const numStr = value.replace(/[°C%\s W/m²]/g, '').trim();
+        // Remove units: °C, %, W/m², MJ/m²/day, spaces, etc.
+        const numStr = value.replace(/[°C%\s W/m²Jday]/g, '').trim();
         const parsed = parseFloat(numStr);
         return !isNaN(parsed) ? parsed : null;
     }
