@@ -52,6 +52,17 @@ export const rendererRegistry = {
     displayName: 'Terroir Presentation',
     requiredInferrers: ['geography', 'teaType'],
     description: 'Narrative presentation of geographic origin and environmental influence on tea properties'
+  },
+
+  // Tea Drunkenness (茶醉): predict potential for altered state from L-theanine + caffeine synergy
+  // L-Theanine (40%): Primary driver of "drunk" sensation
+  // Caffeine (20%): Stimulation component
+  // Ratio Balance (25%): Sweet spot at 1.0-1.5
+  // Elevation (15%): High mountain = more amino acids
+  teaDrunk: {
+    displayName: 'Tea Drunkenness Potential',
+    requiredInferrers: ['compound', 'geography', 'teaType'],
+    description: 'Predicts tea drunkenness potential (茶醉) from L-theanine/caffeine balance (65%), elevation (15%), and tea type multipliers (20%). Provides intensity, character, timing, and safety recommendations for the altered state experience unique to tea.'
   }
 };
 

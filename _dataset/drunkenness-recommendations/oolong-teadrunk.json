@@ -1,0 +1,419 @@
+[
+  {
+    "tea": {
+      "name": "Tie Guan Yin",
+      "originalName": "铁观音 (Tiě Guān Yīn)",
+      "type": "oolong",
+      "subType": "tie-guan-yin"
+    },
+    "drunkennessPotential": 77,
+    "intensity": "Very High",
+    "character": "Stimulated Awareness (Less 'Drunk', More Alert)",
+    "timing": {
+      "onset": "20-30 minutes",
+      "peak": "73-103 minutes",
+      "description": "Effects build gradually and can last several hours with multiple infusions"
+    },
+    "recommendations": [
+      "Use gongfu brewing (multiple short infusions) for sustained, evolving experience",
+      "Can be enjoyed throughout the day",
+      "Empty stomach amplifies effects - consider light food if sensitive",
+      "Create a calm environment for mindful appreciation",
+      "Start with 2-3 infusions, pause to assess effects before continuing"
+    ],
+    "warnings": [
+      "Strong tea drunk potential - start with shorter steeps if sensitive",
+      "May cause dizziness, nausea, or cold sweats if over-consumed on empty stomach",
+      "Individual sensitivity varies - reduce amount or steep time if effects are too strong"
+    ],
+    "analysis": {
+      "factors": {
+        "lTheanine": "16.5",
+        "caffeine": "6.0",
+        "catechins": "14.3",
+        "elevation": 5
+      },
+      "teaTypeMultiplier": 1.25,
+      "idealRatioRange": "1.5-3.0",
+      "currentRatio": "1.38"
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Extract compound and terroir data",
+        "adjustment": "Caffeine: 4, L-Theanine: 5.5, Catechins: 5.7 (estimated), Ratio: 1.38",
+        "value": "Data validated"
+      },
+      {
+        "step": "L-Theanine Contribution (30%)",
+        "reason": "L-theanine creates mental calm and euphoric sensation",
+        "adjustment": "5.5/10 → +16.5 points",
+        "value": "Mental clarity with mild euphoria"
+      },
+      {
+        "step": "Caffeine Contribution (15%)",
+        "reason": "Caffeine provides stimulation that synergizes with L-theanine",
+        "adjustment": "4/10 → +6.0 points",
+        "value": "Calm alertness and mental sharpness"
+      },
+      {
+        "step": "Catechin Contribution (25%)",
+        "reason": "Catechins/EGCG create body sensations and 'buzz' (estimated from tea type and processing)",
+        "adjustment": "5.7/10 → +14.3 points",
+        "value": "Body warmth, lightness, buzzing sensations"
+      },
+      {
+        "step": "Elevation Factor (10%)",
+        "reason": "High elevation → slower growth → more amino acids (L-theanine + catechins)",
+        "adjustment": "700m → +5 points",
+        "value": "Lower elevation reduces intensity"
+      },
+      {
+        "step": "Tea Type Multiplier (20%)",
+        "reason": "Empirical cultural knowledge - certain tea types have stronger tea drunk effects",
+        "adjustment": "Type: TEA_TYPE_OOLONG (1.25x): 61.8 → 77.2",
+        "value": "This tea type amplifies tea drunk"
+      },
+      {
+        "step": "Final Classification",
+        "reason": "Determine intensity level from total score",
+        "adjustment": "Score 77.2 → Very High",
+        "value": "Intensity level determined"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Da Hong Pao",
+      "originalName": "大红袍 (Dà Hóng Páo)",
+      "type": "oolong",
+      "subType": "wuyi-oolong"
+    },
+    "drunkennessPotential": 66,
+    "intensity": "Medium",
+    "character": "Stimulated Awareness (Less 'Drunk', More Alert)",
+    "timing": {
+      "onset": "21-31 minutes",
+      "peak": "68-98 minutes",
+      "description": "Effects build gradually and can last several hours with multiple infusions"
+    },
+    "recommendations": [
+      "Use gongfu brewing (multiple short infusions) for sustained, evolving experience",
+      "Can be enjoyed throughout the day",
+      "Start with 2-3 infusions, pause to assess effects before continuing"
+    ],
+    "warnings": [
+      "Individual sensitivity varies - reduce amount or steep time if effects are too strong"
+    ],
+    "analysis": {
+      "factors": {
+        "lTheanine": "13.5",
+        "caffeine": "6.8",
+        "catechins": "7.5",
+        "elevation": 5
+      },
+      "teaTypeMultiplier": 1.25,
+      "idealRatioRange": "1.5-3.0",
+      "currentRatio": "1.00"
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Extract compound and terroir data",
+        "adjustment": "Caffeine: 4.5, L-Theanine: 4.5, Catechins: 3.0 (estimated), Ratio: 1.00",
+        "value": "Data validated"
+      },
+      {
+        "step": "L-Theanine Contribution (30%)",
+        "reason": "L-theanine creates mental calm and euphoric sensation",
+        "adjustment": "4.5/10 → +13.5 points",
+        "value": "Mental clarity with mild euphoria"
+      },
+      {
+        "step": "Caffeine Contribution (15%)",
+        "reason": "Caffeine provides stimulation that synergizes with L-theanine",
+        "adjustment": "4.5/10 → +6.8 points",
+        "value": "Calm alertness and mental sharpness"
+      },
+      {
+        "step": "Catechin Contribution (25%)",
+        "reason": "Catechins/EGCG create body sensations and 'buzz' (estimated from tea type and processing)",
+        "adjustment": "3.0/10 → +7.5 points",
+        "value": "Body warmth, lightness, buzzing sensations"
+      },
+      {
+        "step": "Elevation Factor (10%)",
+        "reason": "High elevation → slower growth → more amino acids (L-theanine + catechins)",
+        "adjustment": "600m → +5 points",
+        "value": "Lower elevation reduces intensity"
+      },
+      {
+        "step": "Tea Type Multiplier (20%)",
+        "reason": "Empirical cultural knowledge - certain tea types have stronger tea drunk effects",
+        "adjustment": "Type: TEA_TYPE_OOLONG (1.25x): 52.8 → 65.9",
+        "value": "This tea type amplifies tea drunk"
+      },
+      {
+        "step": "Final Classification",
+        "reason": "Determine intensity level from total score",
+        "adjustment": "Score 65.9 → Medium",
+        "value": "Intensity level determined"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Fenghuang Dancong",
+      "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+      "type": "oolong",
+      "subType": "fenghuang-dancong"
+    },
+    "drunkennessPotential": 78,
+    "intensity": "Very High",
+    "character": "Stimulated Awareness (Less 'Drunk', More Alert)",
+    "timing": {
+      "onset": "20-30 minutes",
+      "peak": "69-99 minutes",
+      "description": "Effects build gradually and can last several hours with multiple infusions"
+    },
+    "recommendations": [
+      "Use gongfu brewing (multiple short infusions) for sustained, evolving experience",
+      "Can be enjoyed throughout the day",
+      "Empty stomach amplifies effects - consider light food if sensitive",
+      "Create a calm environment for mindful appreciation",
+      "Start with 2-3 infusions, pause to assess effects before continuing"
+    ],
+    "warnings": [
+      "Strong tea drunk potential - start with shorter steeps if sensitive",
+      "May cause dizziness, nausea, or cold sweats if over-consumed on empty stomach",
+      "Individual sensitivity varies - reduce amount or steep time if effects are too strong"
+    ],
+    "analysis": {
+      "factors": {
+        "lTheanine": "14.4",
+        "caffeine": "7.2",
+        "catechins": "13.0",
+        "elevation": 8
+      },
+      "teaTypeMultiplier": 1.25,
+      "idealRatioRange": "1.5-3.0",
+      "currentRatio": "1.00"
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Extract compound and terroir data",
+        "adjustment": "Caffeine: 4.8, L-Theanine: 4.8, Catechins: 5.2 (estimated), Ratio: 1.00",
+        "value": "Data validated"
+      },
+      {
+        "step": "L-Theanine Contribution (30%)",
+        "reason": "L-theanine creates mental calm and euphoric sensation",
+        "adjustment": "4.8/10 → +14.4 points",
+        "value": "Mental clarity with mild euphoria"
+      },
+      {
+        "step": "Caffeine Contribution (15%)",
+        "reason": "Caffeine provides stimulation that synergizes with L-theanine",
+        "adjustment": "4.8/10 → +7.2 points",
+        "value": "Calm alertness and mental sharpness"
+      },
+      {
+        "step": "Catechin Contribution (25%)",
+        "reason": "Catechins/EGCG create body sensations and 'buzz' (estimated from tea type and processing)",
+        "adjustment": "5.2/10 → +13.0 points",
+        "value": "Body warmth, lightness, buzzing sensations"
+      },
+      {
+        "step": "Elevation Factor (10%)",
+        "reason": "High elevation → slower growth → more amino acids (L-theanine + catechins)",
+        "adjustment": "1100m → +8 points",
+        "value": "High-mountain amplifies tea drunk"
+      },
+      {
+        "step": "Tea Type Multiplier (20%)",
+        "reason": "Empirical cultural knowledge - certain tea types have stronger tea drunk effects",
+        "adjustment": "Type: TEA_TYPE_OOLONG (1.25x): 62.6 → 78.3",
+        "value": "This tea type amplifies tea drunk"
+      },
+      {
+        "step": "Final Classification",
+        "reason": "Determine intensity level from total score",
+        "adjustment": "Score 78.3 → Very High",
+        "value": "Intensity level determined"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Dong Ding",
+      "originalName": "冻顶 (Dòng Dǐng)",
+      "type": "oolong",
+      "subType": "dong-ding"
+    },
+    "drunkennessPotential": 75,
+    "intensity": "Medium",
+    "character": "Stimulated Awareness (Less 'Drunk', More Alert)",
+    "timing": {
+      "onset": "20-30 minutes",
+      "peak": "71-101 minutes",
+      "description": "Effects build gradually and can last several hours with multiple infusions"
+    },
+    "recommendations": [
+      "Use gongfu brewing (multiple short infusions) for sustained, evolving experience",
+      "Can be enjoyed throughout the day",
+      "Start with 2-3 infusions, pause to assess effects before continuing"
+    ],
+    "warnings": [
+      "Individual sensitivity varies - reduce amount or steep time if effects are too strong"
+    ],
+    "analysis": {
+      "factors": {
+        "lTheanine": "15.6",
+        "caffeine": "6.3",
+        "catechins": "13.0",
+        "elevation": 5
+      },
+      "teaTypeMultiplier": 1.25,
+      "idealRatioRange": "1.5-3.0",
+      "currentRatio": "1.24"
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Extract compound and terroir data",
+        "adjustment": "Caffeine: 4.2, L-Theanine: 5.2, Catechins: 5.2 (estimated), Ratio: 1.24",
+        "value": "Data validated"
+      },
+      {
+        "step": "L-Theanine Contribution (30%)",
+        "reason": "L-theanine creates mental calm and euphoric sensation",
+        "adjustment": "5.2/10 → +15.6 points",
+        "value": "Mental clarity with mild euphoria"
+      },
+      {
+        "step": "Caffeine Contribution (15%)",
+        "reason": "Caffeine provides stimulation that synergizes with L-theanine",
+        "adjustment": "4.2/10 → +6.3 points",
+        "value": "Calm alertness and mental sharpness"
+      },
+      {
+        "step": "Catechin Contribution (25%)",
+        "reason": "Catechins/EGCG create body sensations and 'buzz' (estimated from tea type and processing)",
+        "adjustment": "5.2/10 → +13.0 points",
+        "value": "Body warmth, lightness, buzzing sensations"
+      },
+      {
+        "step": "Elevation Factor (10%)",
+        "reason": "High elevation → slower growth → more amino acids (L-theanine + catechins)",
+        "adjustment": "800m → +5 points",
+        "value": "Lower elevation reduces intensity"
+      },
+      {
+        "step": "Tea Type Multiplier (20%)",
+        "reason": "Empirical cultural knowledge - certain tea types have stronger tea drunk effects",
+        "adjustment": "Type: TEA_TYPE_OOLONG (1.25x): 59.9 → 74.9",
+        "value": "This tea type amplifies tea drunk"
+      },
+      {
+        "step": "Final Classification",
+        "reason": "Determine intensity level from total score",
+        "adjustment": "Score 74.9 → Medium",
+        "value": "Intensity level determined"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Ali Shan Oolong",
+      "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+      "type": "oolong",
+      "subType": "high-mountain-oolong"
+    },
+    "drunkennessPotential": 87,
+    "intensity": "Very High",
+    "character": "Alert Euphoria with Mental Sharpness",
+    "timing": {
+      "onset": "20-30 minutes",
+      "peak": "78-108 minutes",
+      "description": "Effects build gradually and can last several hours with multiple infusions"
+    },
+    "recommendations": [
+      "Use gongfu brewing (multiple short infusions) for sustained, evolving experience",
+      "Can be enjoyed throughout the day",
+      "Empty stomach amplifies effects - consider light food if sensitive",
+      "Create a calm environment for mindful appreciation",
+      "Start with 2-3 infusions, pause to assess effects before continuing"
+    ],
+    "warnings": [
+      "Strong tea drunk potential - start with shorter steeps if sensitive",
+      "May cause dizziness, nausea, or cold sweats if over-consumed on empty stomach",
+      "Individual sensitivity varies - reduce amount or steep time if effects are too strong"
+    ],
+    "analysis": {
+      "factors": {
+        "lTheanine": "19.5",
+        "caffeine": "5.3",
+        "catechins": "15.0",
+        "elevation": 10
+      },
+      "teaTypeMultiplier": 1.25,
+      "idealRatioRange": "1.5-3.0",
+      "currentRatio": "1.86"
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Extract compound and terroir data",
+        "adjustment": "Caffeine: 3.5, L-Theanine: 6.5, Catechins: 6.0 (estimated), Ratio: 1.86",
+        "value": "Data validated"
+      },
+      {
+        "step": "L-Theanine Contribution (30%)",
+        "reason": "L-theanine creates mental calm and euphoric sensation",
+        "adjustment": "6.5/10 → +19.5 points",
+        "value": "Mental clarity with mild euphoria"
+      },
+      {
+        "step": "Caffeine Contribution (15%)",
+        "reason": "Caffeine provides stimulation that synergizes with L-theanine",
+        "adjustment": "3.5/10 → +5.3 points",
+        "value": "Calm alertness and mental sharpness"
+      },
+      {
+        "step": "Catechin Contribution (25%)",
+        "reason": "Catechins/EGCG create body sensations and 'buzz' (estimated from tea type and processing)",
+        "adjustment": "6.0/10 → +15.0 points",
+        "value": "Body warmth, lightness, buzzing sensations"
+      },
+      {
+        "step": "Elevation Factor (10%)",
+        "reason": "High elevation → slower growth → more amino acids (L-theanine + catechins)",
+        "adjustment": "1500m → +10 points",
+        "value": "High-mountain amplifies tea drunk"
+      },
+      {
+        "step": "Tea Type Multiplier (20%)",
+        "reason": "Empirical cultural knowledge - certain tea types have stronger tea drunk effects",
+        "adjustment": "Type: TEA_TYPE_OOLONG (1.25x): 69.8 → 87.2",
+        "value": "This tea type amplifies tea drunk"
+      },
+      {
+        "step": "Final Classification",
+        "reason": "Determine intensity level from total score",
+        "adjustment": "Score 87.2 → Very High",
+        "value": "Intensity level determined"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  }
+]
