@@ -83,14 +83,14 @@ export class CompoundInferrer {
     });
 
     return {
-      // Raw inputs (for reference)
-      inputs: {
-        caffeineLevel,
-        lTheanineLevel
-      },
-
       // Inferred analysis (for Renderers to consume)
+      // ALL analyzed metrics go here - renderers should ONLY access .analysis
       analysis: {
+        // Raw compound values
+        caffeineLevel,
+        lTheanineLevel,
+
+        // Derived metrics
         ratio: ratio.toFixed(2),
         ratioCategory,
         stimulationLevel,
@@ -101,7 +101,7 @@ export class CompoundInferrer {
       // Metadata
       trace,
       confidence: this._calculateConfidence(caffeineLevel, lTheanineLevel),
-      inferrerVersion: '1.0'
+      inferrerVersion: '2.0'
     };
   }
 
@@ -203,11 +203,9 @@ export class CompoundInferrer {
    */
   _emptyInference() {
     return {
-      inputs: {
-        caffeineLevel: 0,
-        lTheanineLevel: 0
-      },
       analysis: {
+        caffeineLevel: 0,
+        lTheanineLevel: 0,
         ratio: "0.00",
         ratioCategory: "N/A",
         stimulationLevel: "None",
@@ -221,7 +219,7 @@ export class CompoundInferrer {
         value: "No data"
       }],
       confidence: 0.0,
-      inferrerVersion: '1.0'
+      inferrerVersion: '2.0'
     };
   }
 }

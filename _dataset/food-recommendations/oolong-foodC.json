@@ -1,0 +1,1090 @@
+[
+  {
+    "tea": {
+      "name": "Tie Guan Yin",
+      "originalName": "铁观音 (Tiě Guān Yīn)",
+      "type": "oolong",
+      "subType": "tie-guan-yin"
+    },
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements orchid and creamy, enhancing floral notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements orchid and creamy, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements orchid and creamy, enhancing floral notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements orchid and creamy, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements orchid and creamy, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Grilled Meats",
+          "Dark Chocolate"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Nutty & Toasty",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "orchid",
+        "creamy",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 20,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 20, Categories: 3",
+        "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 20 unique foods with base score 50",
+        "value": "20"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Nutty & Toasty, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4, L-Theanine: 5.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "25 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Grilled Meats, Dark Chocolate, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Da Hong Pao",
+      "originalName": "大红袍 (Dà Hóng Páo)",
+      "type": "oolong",
+      "subType": "wuyi-oolong"
+    },
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances roasted notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements roasted and mineral, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Earthy",
+        "Fruity",
+        "Woody",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "roasted",
+        "mineral",
+        "dark fruits"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 26,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 26, Categories: 5",
+        "value": "Sample hints: FOOD_GRILLED_ROASTED_MEATS, FOOD_ROOT_VEGETABLES, FOOD_COMFORT_FOODS"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 26 unique foods with base score 50",
+        "value": "26"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 5 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted, Earthy, Fruity, Woody, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.5, L-Theanine: 4.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "30 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Fenghuang Dancong",
+      "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+      "type": "oolong",
+      "subType": "fenghuang-dancong"
+    },
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements honey and orchid, enhancing sweet notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements honey and orchid, enhancing sweet notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements honey and orchid, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements honey and orchid, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements honey and orchid, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "orchid",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 8,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 8, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 8 unique foods with base score 50",
+        "value": "8"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.8, L-Theanine: 4.8",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "15 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Dong Ding",
+      "originalName": "冻顶 (Dòng Dǐng)",
+      "type": "oolong",
+      "subType": "dong-ding"
+    },
+    "recommendations": [
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Root Vegetables complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances roasted notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements roasted and creamy, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Roasted",
+        "Nutty & Toasty",
+        "Sweet",
+        "Floral",
+        "Earthy"
+      ],
+      "dominantFlavors": [
+        "roasted",
+        "creamy",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 22,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 22, Categories: 5",
+        "value": "Sample hints: FOOD_GRILLED_ROASTED_MEATS, FOOD_ROOT_VEGETABLES, FOOD_COMFORT_FOODS"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 22 unique foods with base score 50",
+        "value": "22"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 5 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted, Nutty & Toasty, Sweet, Floral, Earthy"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.2, L-Theanine: 5.2",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "27 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Ali Shan Oolong",
+      "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+      "type": "oolong",
+      "subType": "high-mountain-oolong"
+    },
+    "recommendations": [
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements floral and buttery, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dark Chocolate",
+        "foodId": "FOOD_DARK_CHOCOLATE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dark Chocolate complements floral and buttery, enhancing floral notes",
+        "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Root Vegetables complements floral and buttery, enhancing floral notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements floral and buttery, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements floral and buttery, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Grilled Meats",
+          "Dark Chocolate",
+          "Root Vegetables"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Nutty & Toasty",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "buttery",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 19,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 19, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 19 unique foods with base score 50",
+        "value": "19"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Nutty & Toasty, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 3.5, L-Theanine: 6.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "25 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Grilled Meats, Dark Chocolate, Root Vegetables, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  }
+]

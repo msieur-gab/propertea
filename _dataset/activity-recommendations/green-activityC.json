@@ -1,0 +1,689 @@
+[
+  {
+    "tea": {
+      "name": "Longjing",
+      "originalName": "龙井 (Lóng Jǐng)",
+      "type": "green",
+      "subType": "longjing"
+    },
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 79.9,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 76.7,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      },
+      {
+        "activity": "Cleansing",
+        "score": 71.7,
+        "description": "Detoxifying and purifying the body and mind",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning or between meals",
+        "benefits": [
+          "Supports natural detoxification",
+          "Aids digestive system",
+          "Clarifies mental state",
+          "Reduces inflammation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment",
+          "Cleansing"
+        ],
+        "count": 3
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_GREEN, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 11",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 11 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Refreshment, Cleansing"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Biluochun",
+      "originalName": "碧螺春 (Bì Luó Chūn)",
+      "type": "green",
+      "subType": "biluochun"
+    },
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 71.4,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Focus",
+        "score": 69.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 69.7,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Smooth & Sustained, TeaType: TEA_TYPE_GREEN, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 13",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 13 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Boosted 13 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Focus, Refreshment"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Huangshan Maofeng",
+      "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+      "type": "green",
+      "subType": "huangshan-maofeng"
+    },
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 76.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 76.7,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 74.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_GREEN, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 14",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 14 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Refreshment, Social"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Xinyang Maojian",
+      "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+      "type": "green",
+      "subType": "xinyang-maojian"
+    },
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 79.9,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 76.7,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      },
+      {
+        "activity": "Cleansing",
+        "score": 71.7,
+        "description": "Detoxifying and purifying the body and mind",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning or between meals",
+        "benefits": [
+          "Supports natural detoxification",
+          "Aids digestive system",
+          "Clarifies mental state",
+          "Reduces inflammation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment",
+          "Cleansing"
+        ],
+        "count": 3
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_GREEN, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 11",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 11 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Refreshment, Cleansing"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Taiping Houkui",
+      "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+      "type": "green",
+      "subType": "taiping-houkui"
+    },
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 73.15,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Unwinding",
+        "score": 69.95,
+        "description": "Gently releasing tension and transitioning to a calmer state",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Late afternoon to evening",
+        "benefits": [
+          "Eases physical tension",
+          "Transitions mind from work mode",
+          "Promotes gradual relaxation",
+          "Encourages introspection"
+        ]
+      },
+      {
+        "activity": "Contemplative",
+        "score": 69.95,
+        "description": "Deep, mindful reflection on thoughts, feelings, and life experiences",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Morning or quiet evening moments",
+        "benefits": [
+          "Increases self-awareness",
+          "Promotes wisdom and insight",
+          "Deepens emotional understanding",
+          "Supports personal growth"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation",
+          "Unwinding",
+          "Contemplative"
+        ],
+        "count": 3
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Smooth & Sustained, TeaType: TEA_TYPE_GREEN, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 12",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Boosted 13 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Unwinding, Contemplative"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  }
+]

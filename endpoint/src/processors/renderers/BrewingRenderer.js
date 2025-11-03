@@ -125,12 +125,12 @@ export class BrewingRenderer {
     }
 
     // Compound adjustments (astringency)
-    if (compoundInference?.analysis?.caffeine !== undefined && compoundInference?.analysis?.theanine !== undefined) {
-      const caffeine = compoundInference.analysis.caffeine;
-      const theanine = compoundInference.analysis.theanine;
+    if (compoundInference?.analysis?.caffeineLevel !== undefined && compoundInference?.analysis?.lTheanineLevel !== undefined) {
+      const caffeineLevel = compoundInference.analysis.caffeineLevel;
+      const lTheanineLevel = compoundInference.analysis.lTheanineLevel;
       const catechins = compoundInference.analysis?.catechins || 0;
 
-      const astringency = this.brewingTaxonomy.calculateAstringencyFromCompounds(caffeine, theanine, catechins);
+      const astringency = this.brewingTaxonomy.calculateAstringencyFromCompounds(caffeineLevel, lTheanineLevel, catechins);
       const astringencyAdj = this.brewingTaxonomy.getAstringencyAdjustment(astringency);
 
       if (astringencyAdj.tempDelta !== 0 || astringencyAdj.steepDelta !== 0) {
@@ -140,8 +140,8 @@ export class BrewingRenderer {
 
       trace.push({
         step: "Compound Analysis",
-        reason: "Astringency from caffeine/theanine ratio",
-        adjustment: `Caffeine: ${caffeine}, Theanine: ${theanine} → ${astringency}`,
+        reason: "Astringency from caffeine/L-theanine ratio",
+        adjustment: `Caffeine: ${caffeineLevel}, L-Theanine: ${lTheanineLevel} → ${astringency}`,
         value: astringencyAdj.description
       });
     }
@@ -168,7 +168,7 @@ export class BrewingRenderer {
       hasLeafStyle: adjustmentSources.some(s => s.source.includes('Leaf style')),
       hasGeography: !!geographyInference?.inputs?.altitude,
       hasAltitude: !!geographyInference?.inputs?.altitude,
-      hasCompound: !!compoundInference?.analysis?.caffeine,
+      hasCompound: !!compoundInference?.analysis?.caffeineLevel,
       hasAstringency: adjustmentSources.some(s => s.source.includes('Astringency'))
     });
 

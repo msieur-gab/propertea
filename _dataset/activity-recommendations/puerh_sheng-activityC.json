@@ -1,0 +1,713 @@
+[
+  {
+    "tea": {
+      "name": "Yiwu Sheng",
+      "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+      "type": "puerh",
+      "subType": "puerh-sheng"
+    },
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 74.6,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Focus",
+        "score": 71.7,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 71.7,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 12",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Focus, Refreshment"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Bulang Sheng",
+      "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+      "type": "puerh",
+      "subType": "puerh-sheng"
+    },
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 68.2,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Bold Experience",
+        "score": 68.2,
+        "description": "Embracing adventurous moments and bold experiences",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "When pursuing new challenges or adventures",
+        "benefits": [
+          "Encourages courage and boldness",
+          "Enhances sense of aliveness",
+          "Supports daring pursuits",
+          "Inspires confidence"
+        ]
+      },
+      {
+        "activity": "Creative",
+        "score": 68.2,
+        "description": "Unlocking creative expression and artistic inspiration",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "During creative work or artistic pursuits",
+        "benefits": [
+          "Enhances creative thinking",
+          "Improves artistic flow",
+          "Supports problem-solving",
+          "Inspires original ideas"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Creative Pursuits",
+        "activities": [
+          "Bold Experience",
+          "Creative"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 6",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 6 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Bold Experience, Creative"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Banzhang Sheng",
+      "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+      "type": "puerh",
+      "subType": "puerh-sheng"
+    },
+    "recommendations": [
+      {
+        "activity": "Focus",
+        "score": 64,
+        "description": "Directing mental attention with clarity toward meaningful tasks",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning through early afternoon",
+        "benefits": [
+          "Enhances concentration and attention span",
+          "Improves work quality",
+          "Reduces mental fog",
+          "Boosts productivity"
+        ]
+      },
+      {
+        "activity": "Refreshment",
+        "score": 64,
+        "description": "Renewing mental and physical vitality with a sense of invigoration",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Midday or as needed for a mental reset",
+        "benefits": [
+          "Clears mental fatigue",
+          "Restores energy",
+          "Refreshes senses",
+          "Resets mental state"
+        ]
+      },
+      {
+        "activity": "Cleansing",
+        "score": 64,
+        "description": "Detoxifying and purifying the body and mind",
+        "rationale": "Matches your Focused & Energized compound profile",
+        "timing": "Morning or between meals",
+        "benefits": [
+          "Supports natural detoxification",
+          "Aids digestive system",
+          "Clarifies mental state",
+          "Reduces inflammation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Focus & Productivity",
+        "activities": [
+          "Focus",
+          "Refreshment",
+          "Cleansing"
+        ],
+        "count": 3
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Focused & Energized",
+      "stimulationLevel": "High",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Focused & Energized, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 0",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 0 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: High",
+        "adjustment": "Boosted 8 activities by +7.00",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Refreshment, Cleansing"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Mengku Sheng",
+      "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+      "type": "puerh",
+      "subType": "puerh-sheng"
+    },
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 71.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 66.2,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 64.4,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Warming"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Warming, Relaxation"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "tea": {
+      "name": "Jingmai Sheng",
+      "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+      "type": "puerh",
+      "subType": "puerh-sheng"
+    },
+    "recommendations": [
+      {
+        "activity": "Social",
+        "score": 77.8,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Relaxation",
+        "score": 70.8,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 69.4,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Warming"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 9",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 9 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Relaxation, Warming"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  }
+]

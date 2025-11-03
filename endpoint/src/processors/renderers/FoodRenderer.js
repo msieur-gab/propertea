@@ -199,12 +199,12 @@ export class FoodRenderer {
   /**
    * Get astringency-based food recommendations
    * High astringency needs fatty, protein-rich foods
-   * @param {Object} compoundAnalysis - Compound analysis with caffeine/L-theanine
+   * @param {Object} compoundAnalysis - Compound analysis with caffeine/L-theanine raw values
    * @returns {Array} - Food IDs suitable for astringency level
    */
   _getAstringencyBasedPairings(compoundAnalysis) {
     // Simple heuristic: higher caffeine (relative to L-theanine) often = higher astringency
-    const { caffeineLevel = "Unknown", lTheanineLevel = "Unknown" } = compoundAnalysis;
+    const { caffeineLevel = 0, lTheanineLevel = 0 } = compoundAnalysis;
 
     const astringencyMap = {
       'High': [
@@ -228,10 +228,11 @@ export class FoodRenderer {
     };
 
     // Rough astringency classification based on compound profile
+    // Numeric thresholds: Low (<3), Medium (3-6), High (>6)
     let astringencyLevel = "Medium";
-    if (caffeineLevel === "High" && lTheanineLevel === "Low") {
+    if (caffeineLevel > 6 && lTheanineLevel < 3) {
       astringencyLevel = "High";
-    } else if (caffeineLevel === "Low" || lTheanineLevel === "High") {
+    } else if (caffeineLevel < 3 || lTheanineLevel > 6) {
       astringencyLevel = "Low";
     }
 
@@ -270,7 +271,11 @@ export class FoodRenderer {
 
     // Extract compound profile (astringency awareness)
     const compoundAnalysis = compoundInference?.analysis || {};
-    const { caffeineLevel = "Unknown", lTheanineLevel = "Unknown", compoundProfile = {} } = compoundAnalysis;
+    const {
+      caffeineLevel = 0,
+      lTheanineLevel = 0,
+      compoundProfile = "Unknown"
+    } = compoundAnalysis;
 
     // Extract tea type for template-based pairings
     const teaTypeAnalysis = teaTypeInference?.analysis || {};

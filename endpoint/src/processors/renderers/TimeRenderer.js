@@ -3,12 +3,12 @@
  *
  * Purpose: Render time-of-day recommendations based on compound + tea type
  * Input:
- *   - compoundInference: { analysis: { stimulationLevel, relaxationLevel, compoundProfile } }
- *   - teaTypeInference: { analysis: { teaType, teaSubType } } (optional, for 15% refinement)
+ *   - compoundInference: { analysis: { caffeineLevel, lTheanineLevel, stimulationLevel, relaxationLevel, compoundProfile } }
+ *   - teaTypeInference: { analysis: { teaType, teaSubType } } (optional, for 20% refinement)
  * Output: Hourly recommendations with optimal drinking times
  *
- * Weighting: 85% compound profile + 15% tea type cultural tradition
- * Both use CompoundTaxonomy and TeaTypeTaxonomy for data-driven profiles
+ * Weighting: 80% raw compound values (caffeine/l-theanine ratio) + 20% tea type cultural tradition
+ * Raw values provide fine-grained differentiation between teas with similar categorical profiles
  */
 
 import { CompoundTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
@@ -99,12 +99,18 @@ export class TimeRenderer {
     }
 
     const analysis = compoundInference.analysis;
-    const { stimulationLevel, relaxationLevel, compoundProfile } = analysis;
+    const {
+      stimulationLevel,
+      relaxationLevel,
+      compoundProfile,
+      caffeineLevel,
+      lTheanineLevel
+    } = analysis;
 
     trace.push({
       step: "Data Reception",
-      reason: "Received compound inference",
-      adjustment: `Profile: ${compoundProfile}, Stimulation: ${stimulationLevel}, Relaxation: ${relaxationLevel}`,
+      reason: "Received compound inference with raw values",
+      adjustment: `Caffeine: ${caffeineLevel}, L-Theanine: ${lTheanineLevel} | Profile: ${compoundProfile}`,
       value: "Inference validated"
     });
 
@@ -157,28 +163,28 @@ export class TimeRenderer {
       value: `Total adjustments: ${relaxationAdjusted.toFixed(0)}`
     });
 
-    // ========== Apply Compound Profile (85% weight) ==========
-    const compoundProfileObj = CompoundTaxonomy.getProfileByName(compoundProfile);
+    // ========== Apply Raw Compound Values (80% weight) ==========
+    // Use caffeine/l-theanine ratio to create fine-grained hourly adjustments
+    // This differentiates teas that might have the same categorical profile
+    const rawCompoundProfile = this._getRawCompoundProfile(caffeineLevel, lTheanineLevel);
     let compoundAdjusted = 0;
 
-    if (compoundProfileObj && compoundProfileObj.circadianProfile) {
-      this.hours.forEach(hour => {
-        const adjustment = compoundProfileObj.circadianProfile[hour];
-        const currentScore = hourlyScores.get(hour);
-        // Apply 85% of compound adjustment (the rest is for tea type)
-        hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.85)));
-        compoundAdjusted += Math.abs(adjustment);
-      });
-    }
+    this.hours.forEach(hour => {
+      const adjustment = rawCompoundProfile[hour];
+      const currentScore = hourlyScores.get(hour);
+      // Apply 80% of raw compound adjustment (the rest is for tea type)
+      hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.80)));
+      compoundAdjusted += Math.abs(adjustment);
+    });
 
     trace.push({
-      step: "Compound Profile Scoring (85%)",
-      reason: `Compound profile: ${compoundProfile}`,
-      adjustment: `Applied compound profile at 85% weight to all 24 hours`,
+      step: "Raw Compound Scoring (80%)",
+      reason: `Raw caffeine/L-theanine ratio: ${(caffeineLevel + lTheanineLevel).toFixed(1)} total, ${(lTheanineLevel / (caffeineLevel || 1)).toFixed(2)} ratio`,
+      adjustment: `Applied raw compound values at 80% weight to all 24 hours`,
       value: `Total adjustments: ${compoundAdjusted.toFixed(0)}`
     });
 
-    // ========== Apply Tea Type Tradition (15% weight) ==========
+    // ========== Apply Tea Type Tradition (20% weight) ==========
     let teaTypeAdjusted = 0;
     let appliedTeaType = null;
 
@@ -208,8 +214,8 @@ export class TimeRenderer {
 
           hours.forEach(hour => {
             const currentScore = hourlyScores.get(hour);
-            // Apply 15% of tea type adjustment
-            hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.15)));
+            // Apply 20% of tea type adjustment
+            hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.20)));
             teaTypeAdjusted += Math.abs(adjustment);
           });
         });
@@ -217,9 +223,9 @@ export class TimeRenderer {
     }
 
     trace.push({
-      step: "Tea Type Tradition Scoring (15%)",
+      step: "Tea Type Tradition Scoring (20%)",
       reason: appliedTeaType ? `Tea type: ${appliedTeaType} (cultural tradition)` : 'No tea type provided',
-      adjustment: `Applied tea type cultural preference at 15% weight`,
+      adjustment: `Applied tea type cultural preference at 20% weight`,
       value: `Total adjustments: ${teaTypeAdjusted.toFixed(0)}`
     });
 
@@ -272,12 +278,17 @@ export class TimeRenderer {
         compoundProfile,
         stimulationLevel,
         relaxationLevel,
+        rawCompoundValues: {
+          caffeineLevel,
+          lTheanineLevel,
+          ratio: lTheanineLevel / (caffeineLevel || 1)
+        },
         teaTypeApplied: appliedTeaType ? true : false,
         teaType: appliedTeaType,
         weighting: {
-          compound: '85%',
-          teaType: '15%',
-          note: 'Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%'
+          rawCompound: '80%',
+          teaType: '20%',
+          note: 'Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%'
         }
       },
 
@@ -289,6 +300,82 @@ export class TimeRenderer {
   }
 
   // ========== Helper Methods ==========
+
+  /**
+   * Get raw compound profile from caffeine/l-theanine levels
+   * Creates fine-grained hourly adjustments that differentiate teas with same categorical profile
+   *
+   * Logic:
+   * - Higher caffeine → boost morning/afternoon, penalty evening/night
+   * - Higher l-theanine → boost evening/night, penalty morning
+   * - Net effect creates unique circadian pattern for each tea
+   */
+  _getRawCompoundProfile(caffeineLevel, lTheanineLevel) {
+    const profile = new Array(24).fill(0);
+
+    if (caffeineLevel === 0 && lTheanineLevel === 0) {
+      return profile;
+    }
+
+    // Calculate intensity of effect based on total compound levels
+    const totalCompound = caffeineLevel + lTheanineLevel;
+    const ratio = lTheanineLevel / (caffeineLevel || 1);
+
+    // Caffeine boost: morning to afternoon (6-17), peak at 10:30
+    // Intensity scales with caffeine level
+    const caffeineBoost = caffeineLevel * 3;
+    for (let h = 6; h <= 17; h++) {
+      let factor = Math.max(0, 1.0 - Math.abs(h - 10.5) / 7);
+      profile[h] += caffeineBoost * factor;
+    }
+
+    // Caffeine penalty: evening and night (18-5)
+    // Stronger penalty in deep night, gradually reduces in early morning
+    const caffeinePenalty = caffeineLevel * 4;
+    for (let h = 18; h <= 23; h++) {
+      profile[h] -= caffeinePenalty * 0.8 * (1 + (h - 18) / 5);
+    }
+    for (let h = 0; h <= 5; h++) {
+      profile[h] -= caffeinePenalty * 0.9;
+    }
+
+    // L-Theanine boost: evening and night (17-23), peak at 21:00
+    // Intensity scales with l-theanine level
+    const theanineBoost = lTheanineLevel * 2.5;
+    for (let h = 17; h <= 23; h++) {
+      let factor = Math.max(0, 1 - Math.abs(h - 21) / 4);
+      profile[h] += theanineBoost * factor;
+    }
+
+    // L-Theanine slight evening boost (18-20)
+    for (let h = 18; h <= 20; h++) {
+      profile[h] += theanineBoost * 0.3;
+    }
+
+    // L-Theanine slight morning penalty (7-11)
+    // Reduces morning alertness for high-theanine teas
+    const theaninePenalty = lTheanineLevel * 1.5;
+    for (let h = 7; h <= 11; h++) {
+      profile[h] -= theaninePenalty * 0.5;
+    }
+
+    // Ratio-based refinement: fine-tune based on caffeine-to-theanine balance
+    // High ratio (more caffeine) → stronger morning/afternoon boost
+    // Low ratio (more theanine) → stronger evening/night boost
+    if (ratio > 1.0) {
+      // Caffeine-dominant: enhance morning peaks
+      for (let h = 8; h <= 11; h++) {
+        profile[h] += (ratio - 1.0) * 5;
+      }
+    } else if (ratio < 0.8) {
+      // Theanine-dominant: enhance evening/night
+      for (let h = 19; h <= 22; h++) {
+        profile[h] += (0.8 - ratio) * 5;
+      }
+    }
+
+    return profile.map(p => Math.round(p));
+  }
 
   /**
    * Build dynamic narrative for time recommendation using taxonomy hint
