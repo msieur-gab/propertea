@@ -43,6 +43,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "hourlyScores": {
+      "0": 12.675,
+      "1": 12.675,
+      "2": 11.675,
+      "3": 11.675,
+      "4": 11.675,
+      "5": 11.675,
+      "6": 36.575,
+      "7": 38.825,
+      "8": 59.525000000000006,
+      "9": 63.2,
+      "10": 65.2,
+      "11": 65.2,
+      "12": 72.875,
+      "13": 69.875,
+      "14": 67.875,
+      "15": 66.775,
+      "16": 62.075,
+      "17": 59.375,
+      "18": 48.15,
+      "19": 47.15,
+      "20": 46.15,
+      "21": 42.25,
+      "22": 32,
+      "23": 22
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -190,32 +242,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.675,
-      12.675,
-      11.675,
-      11.675,
-      11.675,
-      11.675,
-      36.575,
-      38.825,
-      59.525000000000006,
-      63.2,
-      65.2,
-      65.2,
-      72.875,
-      69.875,
-      67.875,
-      66.775,
-      62.075,
-      59.375,
-      48.15,
-      47.15,
-      46.15,
-      42.25,
-      32,
-      22
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -228,9 +254,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Oolong Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (73), 13:00 (70), 14:00 (68), 15:00 (67), 10:00 (65)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.579Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Da Hong Pao",
@@ -276,6 +345,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "hourlyScores": {
+      "0": 12.675,
+      "1": 12.675,
+      "2": 11.675,
+      "3": 11.675,
+      "4": 11.675,
+      "5": 11.675,
+      "6": 36.575,
+      "7": 38.825,
+      "8": 59.525000000000006,
+      "9": 63.2,
+      "10": 65.2,
+      "11": 65.2,
+      "12": 72.875,
+      "13": 69.875,
+      "14": 67.875,
+      "15": 66.775,
+      "16": 62.075,
+      "17": 59.375,
+      "18": 48.15,
+      "19": 47.15,
+      "20": 46.15,
+      "21": 42.25,
+      "22": 32,
+      "23": 22
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -423,32 +544,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.675,
-      12.675,
-      11.675,
-      11.675,
-      11.675,
-      11.675,
-      36.575,
-      38.825,
-      59.525000000000006,
-      63.2,
-      65.2,
-      65.2,
-      72.875,
-      69.875,
-      67.875,
-      66.775,
-      62.075,
-      59.375,
-      48.15,
-      47.15,
-      46.15,
-      42.25,
-      32,
-      22
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -461,9 +556,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Oolong Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (73), 13:00 (70), 14:00 (68), 15:00 (67), 10:00 (65)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.580Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Fenghuang Dancong",
@@ -509,6 +647,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "hourlyScores": {
+      "0": 12.675,
+      "1": 12.675,
+      "2": 11.675,
+      "3": 11.675,
+      "4": 11.675,
+      "5": 11.675,
+      "6": 36.575,
+      "7": 38.825,
+      "8": 59.525000000000006,
+      "9": 63.2,
+      "10": 65.2,
+      "11": 65.2,
+      "12": 72.875,
+      "13": 69.875,
+      "14": 67.875,
+      "15": 66.775,
+      "16": 62.075,
+      "17": 59.375,
+      "18": 48.15,
+      "19": 47.15,
+      "20": 46.15,
+      "21": 42.25,
+      "22": 32,
+      "23": 22
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -656,32 +846,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.675,
-      12.675,
-      11.675,
-      11.675,
-      11.675,
-      11.675,
-      36.575,
-      38.825,
-      59.525000000000006,
-      63.2,
-      65.2,
-      65.2,
-      72.875,
-      69.875,
-      67.875,
-      66.775,
-      62.075,
-      59.375,
-      48.15,
-      47.15,
-      46.15,
-      42.25,
-      32,
-      22
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -694,9 +858,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Oolong Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (73), 13:00 (70), 14:00 (68), 15:00 (67), 10:00 (65)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.580Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Dong Ding",
@@ -742,6 +949,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "hourlyScores": {
+      "0": 12.675,
+      "1": 12.675,
+      "2": 11.675,
+      "3": 11.675,
+      "4": 11.675,
+      "5": 11.675,
+      "6": 36.575,
+      "7": 38.825,
+      "8": 59.525000000000006,
+      "9": 63.2,
+      "10": 65.2,
+      "11": 65.2,
+      "12": 72.875,
+      "13": 69.875,
+      "14": 67.875,
+      "15": 66.775,
+      "16": 62.075,
+      "17": 59.375,
+      "18": 48.15,
+      "19": 47.15,
+      "20": 46.15,
+      "21": 42.25,
+      "22": 32,
+      "23": 22
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -889,32 +1148,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.675,
-      12.675,
-      11.675,
-      11.675,
-      11.675,
-      11.675,
-      36.575,
-      38.825,
-      59.525000000000006,
-      63.2,
-      65.2,
-      65.2,
-      72.875,
-      69.875,
-      67.875,
-      66.775,
-      62.075,
-      59.375,
-      48.15,
-      47.15,
-      46.15,
-      42.25,
-      32,
-      22
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -927,9 +1160,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Oolong Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (73), 13:00 (70), 14:00 (68), 15:00 (67), 10:00 (65)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.583Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Ali Shan Oolong",
@@ -975,6 +1251,58 @@
         "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
       }
     ],
+    "circadianCurve": [
+      25.925,
+      25.925,
+      23.925,
+      23.925,
+      23.925,
+      23.925,
+      42.525000000000006,
+      35.075,
+      47.125,
+      49.8,
+      50.8,
+      50.8,
+      65.475,
+      63.474999999999994,
+      62.474999999999994,
+      61.375,
+      60.375,
+      60.375,
+      54.15,
+      56.15,
+      56.6,
+      55.55,
+      47,
+      32
+    ],
+    "hourlyScores": {
+      "0": 25.925,
+      "1": 25.925,
+      "2": 23.925,
+      "3": 23.925,
+      "4": 23.925,
+      "5": 23.925,
+      "6": 42.525000000000006,
+      "7": 35.075,
+      "8": 47.125,
+      "9": 49.8,
+      "10": 50.8,
+      "11": 50.8,
+      "12": 65.475,
+      "13": 63.474999999999994,
+      "14": 62.474999999999994,
+      "15": 61.375,
+      "16": 60.375,
+      "17": 60.375,
+      "18": 54.15,
+      "19": 56.15,
+      "20": 56.6,
+      "21": 55.55,
+      "22": 47,
+      "23": 32
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -1122,32 +1450,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      25.925,
-      25.925,
-      23.925,
-      23.925,
-      23.925,
-      23.925,
-      42.525000000000006,
-      35.075,
-      47.125,
-      49.8,
-      50.8,
-      50.8,
-      65.475,
-      63.474999999999994,
-      62.474999999999994,
-      61.375,
-      60.375,
-      60.375,
-      54.15,
-      56.15,
-      56.6,
-      55.55,
-      47,
-      32
-    ],
     "analysis": {
       "compoundProfile": "Smooth & Sustained",
       "stimulationLevel": "Low",
@@ -1160,8 +1462,51 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Smooth & Sustained, Stimulation: Low, Relaxation: High",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 177"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Oolong Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (65), 13:00 (63), 14:00 (62), 15:00 (61), 16:00 (60)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.583Z"
+    "rendererVersion": "1.0"
   }
 ]

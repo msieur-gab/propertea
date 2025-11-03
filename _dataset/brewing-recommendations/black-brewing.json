@@ -11,28 +11,88 @@
       "sweet",
       "smoky"
     ],
+    "tea": {
+      "name": "Keemun",
+      "type": "black",
+      "subType": "keemun",
+      "typeId": "TEA_TYPE_BLACK"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 100,
+          "steepTime": 11.7,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 11.7 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 100,
+          "steepTime": 209.7,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 209.7 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 12,
+          "temperature": 100,
+          "steepTime": 11.7,
           "gramsPer100ml": 6,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 11.7 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 95
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 210,
+          "temperature": 100,
+          "steepTime": 209.7,
           "gramsPer100ml": 4,
           "infusions": 1
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 209.7 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 90
       }
     ],
     "analysis": {
@@ -52,12 +112,62 @@
           "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Oxidation (Full-Oxidation)",
+          "description": "Full oxidation requires and tolerates hot water"
+        },
+        {
+          "source": "Altitude (lowland)",
+          "description": "Sea level to 600m - standard brewing"
+        }
+      ],
       "teaType": "TEA_TYPE_BLACK"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.752Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Keemun, Type: TEA_TYPE_BLACK, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "95°C, 12s",
+        "value": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Oxidation (Full-Oxidation)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "300m → lowland",
+        "value": "Sea level to 600m - standard brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/12s → 100°C/11.7s | Western: 95°C/210s → 100°C/209.7s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Dian Hong",
@@ -71,28 +181,88 @@
       "chocolate",
       "dried fruit"
     ],
+    "tea": {
+      "name": "Dian Hong",
+      "type": "black",
+      "subType": "dian-hong",
+      "typeId": "TEA_TYPE_BLACK"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 97.5,
+          "steepTime": 12.5,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 97.5°C (208°F)\n- Steep Time: 12.5 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 97.5,
+          "steepTime": 210.5,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 97.5°C (208°F)\n- Steep Time: 210.5 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 12,
+          "temperature": 97.5,
+          "steepTime": 12.5,
           "gramsPer100ml": 6,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 97.5°C (208°F)\n- Steep Time: 12.5 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 95
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 210,
+          "temperature": 97.5,
+          "steepTime": 210.5,
           "gramsPer100ml": 4,
           "infusions": 1
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 97.5°C (208°F)\n- Steep Time: 210.5 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 90
       }
     ],
     "analysis": {
@@ -112,12 +282,62 @@
           "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Oxidation (Full-Oxidation)",
+          "description": "Full oxidation requires and tolerates hot water"
+        },
+        {
+          "source": "Altitude (high-altitude)",
+          "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+        }
+      ],
       "teaType": "TEA_TYPE_BLACK"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.752Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Dian Hong, Type: TEA_TYPE_BLACK, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "95°C, 12s",
+        "value": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Oxidation (Full-Oxidation)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "1600m → high-altitude",
+        "value": "1200-1800m - cooler water preserves high-altitude aromatics"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/12s → 97.5°C/12.5s | Western: 95°C/210s → 97.5°C/210.5s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Jin Jun Mei",
@@ -131,28 +351,88 @@
       "fruity",
       "caramel"
     ],
+    "tea": {
+      "name": "Jin Jun Mei",
+      "type": "black",
+      "subType": "jin-jun-mei",
+      "typeId": "TEA_TYPE_BLACK"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 12.2,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 12.2 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 210.2,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 210.2 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 12,
+          "temperature": 98.5,
+          "steepTime": 12.2,
           "gramsPer100ml": 6,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 12.2 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 95
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 210,
+          "temperature": 98.5,
+          "steepTime": 210.2,
           "gramsPer100ml": 4,
           "infusions": 1
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 210.2 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 90
       }
     ],
     "analysis": {
@@ -172,12 +452,62 @@
           "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Oxidation (Full-Oxidation)",
+          "description": "Full oxidation requires and tolerates hot water"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_BLACK"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.753Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Jin Jun Mei, Type: TEA_TYPE_BLACK, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "95°C, 12s",
+        "value": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Oxidation (Full-Oxidation)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "800m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/12s → 98.5°C/12.2s | Western: 95°C/210s → 98.5°C/210.2s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Lapsang Souchong",
@@ -191,28 +521,88 @@
       "dried fruit",
       "tobacco"
     ],
+    "tea": {
+      "name": "Lapsang Souchong",
+      "type": "black",
+      "subType": "lapsang-souchong",
+      "typeId": "TEA_TYPE_BLACK"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 12.2,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 12.2 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 210.2,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 210.2 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 12,
+          "temperature": 98.5,
+          "steepTime": 12.2,
           "gramsPer100ml": 6,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 12.2 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 95
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 210,
+          "temperature": 98.5,
+          "steepTime": 210.2,
           "gramsPer100ml": 4,
           "infusions": 1
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 210.2 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 90
       }
     ],
     "analysis": {
@@ -232,12 +622,62 @@
           "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Oxidation (Full-Oxidation)",
+          "description": "Full oxidation requires and tolerates hot water"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_BLACK"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.753Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Lapsang Souchong, Type: TEA_TYPE_BLACK, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "95°C, 12s",
+        "value": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Oxidation (Full-Oxidation)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "700m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/12s → 98.5°C/12.2s | Western: 95°C/210s → 98.5°C/210.2s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Yingde Hong",
@@ -251,28 +691,88 @@
       "cocoa",
       "robust"
     ],
+    "tea": {
+      "name": "Yingde Hong",
+      "type": "black",
+      "subType": "yingde-hong",
+      "typeId": "TEA_TYPE_BLACK"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 100,
+          "steepTime": 11.7,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 11.7 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 100,
+          "steepTime": 209.7,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 209.7 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Oxidation (Full-Oxidation)",
+            "description": "Full oxidation requires and tolerates hot water"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 12,
+          "temperature": 100,
+          "steepTime": 11.7,
           "gramsPer100ml": 6,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 11.7 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 95
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 95,
-          "steepTime": 210,
+          "temperature": 100,
+          "steepTime": 209.7,
           "gramsPer100ml": 4,
           "infusions": 1
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 100°C (212°F)\n- Steep Time: 209.7 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Oxidation (Full-Oxidation): Full oxidation requires and tolerates hot water\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 90
       }
     ],
     "analysis": {
@@ -292,11 +792,61 @@
           "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Oxidation (Full-Oxidation)",
+          "description": "Full oxidation requires and tolerates hot water"
+        },
+        {
+          "source": "Altitude (lowland)",
+          "description": "Sea level to 600m - standard brewing"
+        }
+      ],
       "teaType": "TEA_TYPE_BLACK"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.753Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Yingde Hong, Type: TEA_TYPE_BLACK, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "95°C, 12s",
+        "value": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Oxidation (Full-Oxidation)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "400m → lowland",
+        "value": "Sea level to 600m - standard brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/12s → 100°C/11.7s | Western: 95°C/210s → 100°C/209.7s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
   }
 ]

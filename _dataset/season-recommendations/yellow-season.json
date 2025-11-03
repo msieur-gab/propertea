@@ -13,14 +13,14 @@
     ],
     "recommendations": [
       {
-        "seasonId": "SEASON_SPRING",
-        "displayName": "Spring",
-        "score": 62
+        "seasonId": "SEASON_EARLY_AUTUMN",
+        "displayName": "Early Autumn",
+        "score": 65.2
       },
       {
-        "seasonId": "SEASON_LATE_SPRING",
-        "displayName": "Late Spring",
-        "score": 60.8
+        "seasonId": "SEASON_AUTUMN",
+        "displayName": "Autumn",
+        "score": 64
       }
     ],
     "circularYear": [
@@ -34,13 +34,13 @@
         "month": 2,
         "seasonId": "SEASON_SPRING",
         "displayName": "Spring",
-        "score": 62
+        "score": 57
       },
       {
         "month": 3,
         "seasonId": "SEASON_LATE_SPRING",
         "displayName": "Late Spring",
-        "score": 60.8
+        "score": 55.8
       },
       {
         "month": 4,
@@ -64,59 +64,93 @@
         "month": 7,
         "seasonId": "SEASON_EARLY_AUTUMN",
         "displayName": "Early Autumn",
-        "score": 57.2
+        "score": 65.2
       },
       {
         "month": 8,
         "seasonId": "SEASON_AUTUMN",
         "displayName": "Autumn",
-        "score": 56
+        "score": 64
       },
       {
         "month": 9,
         "seasonId": "SEASON_LATE_AUTUMN",
         "displayName": "Late Autumn",
-        "score": 50
+        "score": 58
       },
       {
         "month": 10,
         "seasonId": "SEASON_EARLY_WINTER",
         "displayName": "Early Winter",
-        "score": 50
+        "score": 58
       },
       {
         "month": 11,
         "seasonId": "SEASON_WINTER",
         "displayName": "Winter",
-        "score": 50
+        "score": 58
       },
       {
         "month": 12,
         "seasonId": "SEASON_LATE_WINTER",
         "displayName": "Late Winter",
-        "score": 50
+        "score": 58
       }
     ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 50,
+      "SEASON_SPRING": 57,
+      "SEASON_LATE_SPRING": 55.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 65.2,
+      "SEASON_AUTUMN": 64,
+      "SEASON_LATE_AUTUMN": 58,
+      "SEASON_EARLY_WINTER": 58,
+      "SEASON_WINTER": 58,
+      "SEASON_LATE_WINTER": 58
+    },
     "seasonalScores": {
-      "SEASON_SPRING": {
-        "displayName": "Spring",
-        "score": 62
+      "SEASON_EARLY_AUTUMN": {
+        "displayName": "Early Autumn",
+        "score": 65.2
       },
-      "SEASON_LATE_SPRING": {
-        "displayName": "Late Spring",
-        "score": 60.8
+      "SEASON_AUTUMN": {
+        "displayName": "Autumn",
+        "score": 64
       },
       "SEASON_EARLY_SUMMER": {
         "displayName": "Early Summer",
         "score": 59
       },
-      "SEASON_EARLY_AUTUMN": {
-        "displayName": "Early Autumn",
-        "score": 57.2
+      "SEASON_LATE_AUTUMN": {
+        "displayName": "Late Autumn",
+        "score": 58
       },
-      "SEASON_AUTUMN": {
-        "displayName": "Autumn",
-        "score": 56
+      "SEASON_EARLY_WINTER": {
+        "displayName": "Early Winter",
+        "score": 58
+      },
+      "SEASON_WINTER": {
+        "displayName": "Winter",
+        "score": 58
+      },
+      "SEASON_LATE_WINTER": {
+        "displayName": "Late Winter",
+        "score": 58
+      },
+      "SEASON_SPRING": {
+        "displayName": "Spring",
+        "score": 57
+      },
+      "SEASON_LATE_SPRING": {
+        "displayName": "Late Spring",
+        "score": 55.8
+      },
+      "SEASON_ANYTIME": {
+        "displayName": "Any Time",
+        "score": 53.2
       },
       "SEASON_EARLY_SPRING": {
         "displayName": "Early Spring",
@@ -129,36 +163,55 @@
       "SEASON_LATE_SUMMER": {
         "displayName": "Late Summer",
         "score": 50
-      },
-      "SEASON_LATE_AUTUMN": {
-        "displayName": "Late Autumn",
-        "score": 50
-      },
-      "SEASON_EARLY_WINTER": {
-        "displayName": "Early Winter",
-        "score": 50
-      },
-      "SEASON_WINTER": {
-        "displayName": "Winter",
-        "score": 50
-      },
-      "SEASON_LATE_WINTER": {
-        "displayName": "Late Winter",
-        "score": 50
-      },
-      "SEASON_ANYTIME": {
-        "displayName": "Any Time",
-        "score": 50
       }
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Early Autumn",
+        "Autumn"
+      ],
+      "description": "Multiple scattered seasons"
     },
     "analysis": {
       "teaTypeApplied": true,
       "processingApplied": true,
       "method": "Tea type + Processing seasonal affinity"
     },
+    "trace": [
+      {
+        "step": "Scoring Initialization",
+        "reason": "Initialize all 13 seasons with neutral base score",
+        "adjustment": "Initialized 13 seasons with base score 50",
+        "value": "Using tea type + processing for seasonal affinity"
+      },
+      {
+        "step": "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+        "reason": "Tea type: Yellow Tea, Subtype: none",
+        "adjustment": "Applied 5 seasonal affinity boosts from tea type/subtype",
+        "value": "Tea type defines intrinsic seasonal suitability per cultural tradition"
+      },
+      {
+        "step": "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+        "reason": "Processing methods: Withered, Kill-Green",
+        "adjustment": "Applied 2 seasonal affinity boosts from processing methods",
+        "value": "Processing thermal character refines seasonal recommendation"
+      },
+      {
+        "step": "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+        "reason": "Elevation: Low (low-elevation)",
+        "adjustment": "Low-altitude reduces spring (-5), boosts autumn/winter (+8)",
+        "value": "Warmer microclimate favors autumn/winter drinking, weak spring affinity"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Filter seasons with score >= 60",
+        "adjustment": "Found 2 recommended seasons",
+        "value": "Early Autumn (65), Autumn (64)"
+      }
+    ],
     "confidence": 0.85,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:58.297Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Mengding Huangya",
@@ -176,12 +229,12 @@
       {
         "seasonId": "SEASON_SPRING",
         "displayName": "Spring",
-        "score": 62
+        "score": 70
       },
       {
         "seasonId": "SEASON_LATE_SPRING",
         "displayName": "Late Spring",
-        "score": 60.8
+        "score": 68.8
       }
     ],
     "circularYear": [
@@ -189,19 +242,19 @@
         "month": 1,
         "seasonId": "SEASON_EARLY_SPRING",
         "displayName": "Early Spring",
-        "score": 50
+        "score": 58
       },
       {
         "month": 2,
         "seasonId": "SEASON_SPRING",
         "displayName": "Spring",
-        "score": 62
+        "score": 70
       },
       {
         "month": 3,
         "seasonId": "SEASON_LATE_SPRING",
         "displayName": "Late Spring",
-        "score": 60.8
+        "score": 68.8
       },
       {
         "month": 4,
@@ -258,18 +311,36 @@
         "score": 50
       }
     ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 58,
+      "SEASON_SPRING": 70,
+      "SEASON_LATE_SPRING": 68.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 56,
+      "SEASON_LATE_AUTUMN": 50,
+      "SEASON_EARLY_WINTER": 50,
+      "SEASON_WINTER": 50,
+      "SEASON_LATE_WINTER": 50
+    },
     "seasonalScores": {
       "SEASON_SPRING": {
         "displayName": "Spring",
-        "score": 62
+        "score": 70
       },
       "SEASON_LATE_SPRING": {
         "displayName": "Late Spring",
-        "score": 60.8
+        "score": 68.8
       },
       "SEASON_EARLY_SUMMER": {
         "displayName": "Early Summer",
         "score": 59
+      },
+      "SEASON_EARLY_SPRING": {
+        "displayName": "Early Spring",
+        "score": 58
       },
       "SEASON_EARLY_AUTUMN": {
         "displayName": "Early Autumn",
@@ -279,9 +350,9 @@
         "displayName": "Autumn",
         "score": 56
       },
-      "SEASON_EARLY_SPRING": {
-        "displayName": "Early Spring",
-        "score": 50
+      "SEASON_ANYTIME": {
+        "displayName": "Any Time",
+        "score": 53.2
       },
       "SEASON_SUMMER": {
         "displayName": "Summer",
@@ -306,20 +377,55 @@
       "SEASON_LATE_WINTER": {
         "displayName": "Late Winter",
         "score": 50
-      },
-      "SEASON_ANYTIME": {
-        "displayName": "Any Time",
-        "score": 50
       }
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
     },
     "analysis": {
       "teaTypeApplied": true,
       "processingApplied": true,
       "method": "Tea type + Processing seasonal affinity"
     },
+    "trace": [
+      {
+        "step": "Scoring Initialization",
+        "reason": "Initialize all 13 seasons with neutral base score",
+        "adjustment": "Initialized 13 seasons with base score 50",
+        "value": "Using tea type + processing for seasonal affinity"
+      },
+      {
+        "step": "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+        "reason": "Tea type: Yellow Tea, Subtype: none",
+        "adjustment": "Applied 5 seasonal affinity boosts from tea type/subtype",
+        "value": "Tea type defines intrinsic seasonal suitability per cultural tradition"
+      },
+      {
+        "step": "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+        "reason": "Processing methods: Withered, Kill-Green",
+        "adjustment": "Applied 2 seasonal affinity boosts from processing methods",
+        "value": "Processing thermal character refines seasonal recommendation"
+      },
+      {
+        "step": "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+        "reason": "Elevation: High (high-mountain)",
+        "adjustment": "High-altitude boosts spring seasons (+8), reduces summer (-3)",
+        "value": "Cooler microclimate extends spring season, limits heat-tolerant months"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Filter seasons with score >= 60",
+        "adjustment": "Found 2 recommended seasons",
+        "value": "Spring (70), Late Spring (69)"
+      }
+    ],
     "confidence": 0.85,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:58.297Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Huoshan Huangya",
@@ -419,6 +525,20 @@
         "score": 50
       }
     ],
+    "monthlyScores": {
+      "SEASON_EARLY_SPRING": 50,
+      "SEASON_SPRING": 62,
+      "SEASON_LATE_SPRING": 60.8,
+      "SEASON_EARLY_SUMMER": 59,
+      "SEASON_SUMMER": 50,
+      "SEASON_LATE_SUMMER": 50,
+      "SEASON_EARLY_AUTUMN": 57.2,
+      "SEASON_AUTUMN": 56,
+      "SEASON_LATE_AUTUMN": 50,
+      "SEASON_EARLY_WINTER": 50,
+      "SEASON_WINTER": 50,
+      "SEASON_LATE_WINTER": 50
+    },
     "seasonalScores": {
       "SEASON_SPRING": {
         "displayName": "Spring",
@@ -439,6 +559,10 @@
       "SEASON_AUTUMN": {
         "displayName": "Autumn",
         "score": 56
+      },
+      "SEASON_ANYTIME": {
+        "displayName": "Any Time",
+        "score": 53.2
       },
       "SEASON_EARLY_SPRING": {
         "displayName": "Early Spring",
@@ -467,19 +591,54 @@
       "SEASON_LATE_WINTER": {
         "displayName": "Late Winter",
         "score": 50
-      },
-      "SEASON_ANYTIME": {
-        "displayName": "Any Time",
-        "score": 50
       }
+    },
+    "seasonalRange": {
+      "type": "scattered",
+      "seasons": [
+        "Spring",
+        "Late Spring"
+      ],
+      "description": "Multiple scattered seasons"
     },
     "analysis": {
       "teaTypeApplied": true,
       "processingApplied": true,
       "method": "Tea type + Processing seasonal affinity"
     },
+    "trace": [
+      {
+        "step": "Scoring Initialization",
+        "reason": "Initialize all 13 seasons with neutral base score",
+        "adjustment": "Initialized 13 seasons with base score 50",
+        "value": "Using tea type + processing for seasonal affinity"
+      },
+      {
+        "step": "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+        "reason": "Tea type: Yellow Tea, Subtype: none",
+        "adjustment": "Applied 5 seasonal affinity boosts from tea type/subtype",
+        "value": "Tea type defines intrinsic seasonal suitability per cultural tradition"
+      },
+      {
+        "step": "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+        "reason": "Processing methods: Withered, Kill-Green",
+        "adjustment": "Applied 2 seasonal affinity boosts from processing methods",
+        "value": "Processing thermal character refines seasonal recommendation"
+      },
+      {
+        "step": "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+        "reason": "Elevation: Medium (medium-altitude)",
+        "adjustment": "No altitude modifier applied",
+        "value": "Medium elevation has balanced seasonal affinity"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Filter seasons with score >= 60",
+        "adjustment": "Found 2 recommended seasons",
+        "value": "Spring (62), Late Spring (61)"
+      }
+    ],
     "confidence": 0.85,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:58.298Z"
+    "rendererVersion": "1.0"
   }
 ]

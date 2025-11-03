@@ -11,28 +11,72 @@
       "delicate",
       "cucumber"
     ],
+    "tea": {
+      "name": "Silver Needle",
+      "type": "white",
+      "subType": "white-silver-needle",
+      "typeId": "TEA_TYPE_WHITE"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 73,
+          "steepTime": 35.5,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 78,
+          "steepTime": 180.5,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 75,
-          "steepTime": 35,
+          "temperature": 73,
+          "steepTime": 35.5,
           "gramsPer100ml": 5,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 35 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 91
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 80,
-          "steepTime": 180,
+          "temperature": 78,
+          "steepTime": 180.5,
           "gramsPer100ml": 3,
           "infusions": 2
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 180 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 86
       }
     ],
     "analysis": {
@@ -52,12 +96,54 @@
           "reasoning": "Longer western steep (3 minutes) compensates for larger leaf volume and single infusion"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_WHITE"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.766Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Silver Needle, Type: TEA_TYPE_WHITE, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "75°C, 35s",
+        "value": "Delicate white tea requires gentle heat (35 seconds) to preserve aromatic compounds without over-extraction"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 0 processing adjustments",
+        "value": "None"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "800m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/35s → 73°C/35.5s | Western: 80°C/180s → 78°C/180.5s",
+        "value": "Total adjustments applied: 1"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "White Peony",
@@ -71,28 +157,72 @@
       "sweet",
       "fresh"
     ],
+    "tea": {
+      "name": "White Peony",
+      "type": "white",
+      "subType": "white-peony",
+      "typeId": "TEA_TYPE_WHITE"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 73,
+          "steepTime": 35.5,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 78,
+          "steepTime": 180.5,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 75,
-          "steepTime": 35,
+          "temperature": 73,
+          "steepTime": 35.5,
           "gramsPer100ml": 5,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 35 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 91
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 80,
-          "steepTime": 180,
+          "temperature": 78,
+          "steepTime": 180.5,
           "gramsPer100ml": 3,
           "infusions": 2
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 180 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 86
       }
     ],
     "analysis": {
@@ -112,12 +242,54 @@
           "reasoning": "Longer western steep (3 minutes) compensates for larger leaf volume and single infusion"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_WHITE"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.766Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: White Peony, Type: TEA_TYPE_WHITE, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "75°C, 35s",
+        "value": "Delicate white tea requires gentle heat (35 seconds) to preserve aromatic compounds without over-extraction"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 0 processing adjustments",
+        "value": "None"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "750m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/35s → 73°C/35.5s | Western: 80°C/180s → 78°C/180.5s",
+        "value": "Total adjustments applied: 1"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Gong Mei",
@@ -131,28 +303,72 @@
       "earthy",
       "sweet"
     ],
+    "tea": {
+      "name": "Gong Mei",
+      "type": "white",
+      "subType": "gong-mei",
+      "typeId": "TEA_TYPE_WHITE"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 73,
+          "steepTime": 35.5,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 78,
+          "steepTime": 180.5,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 75,
-          "steepTime": 35,
+          "temperature": 73,
+          "steepTime": 35.5,
           "gramsPer100ml": 5,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 35 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 91
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 80,
-          "steepTime": 180,
+          "temperature": 78,
+          "steepTime": 180.5,
           "gramsPer100ml": 3,
           "infusions": 2
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 180 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 86
       }
     ],
     "analysis": {
@@ -172,12 +388,54 @@
           "reasoning": "Longer western steep (3 minutes) compensates for larger leaf volume and single infusion"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_WHITE"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.766Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Gong Mei, Type: TEA_TYPE_WHITE, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "75°C, 35s",
+        "value": "Delicate white tea requires gentle heat (35 seconds) to preserve aromatic compounds without over-extraction"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 0 processing adjustments",
+        "value": "None"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "600m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/35s → 73°C/35.5s | Western: 80°C/180s → 78°C/180.5s",
+        "value": "Total adjustments applied: 1"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Shou Mei",
@@ -191,28 +449,72 @@
       "herbal",
       "sweet"
     ],
+    "tea": {
+      "name": "Shou Mei",
+      "type": "white",
+      "subType": "shou-mei",
+      "typeId": "TEA_TYPE_WHITE"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 73,
+          "steepTime": 35.5,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 78,
+          "steepTime": 180.5,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 75,
-          "steepTime": 35,
+          "temperature": 73,
+          "steepTime": 35.5,
           "gramsPer100ml": 5,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 35 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 73°C (163°F)\n- Steep Time: 35.5 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 91
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 80,
-          "steepTime": 180,
+          "temperature": 78,
+          "steepTime": 180.5,
           "gramsPer100ml": 3,
           "infusions": 2
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 180 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 78°C (172°F)\n- Steep Time: 180.5 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 86
       }
     ],
     "analysis": {
@@ -232,12 +534,54 @@
           "reasoning": "Longer western steep (3 minutes) compensates for larger leaf volume and single infusion"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
       "teaType": "TEA_TYPE_WHITE"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.766Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Shou Mei, Type: TEA_TYPE_WHITE, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "75°C, 35s",
+        "value": "Delicate white tea requires gentle heat (35 seconds) to preserve aromatic compounds without over-extraction"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 0 processing adjustments",
+        "value": "None"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "650m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/35s → 73°C/35.5s | Western: 80°C/180s → 78°C/180.5s",
+        "value": "Total adjustments applied: 1"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
   },
   {
     "teaName": "Moonlight White",
@@ -251,28 +595,72 @@
       "fruity",
       "delicate"
     ],
+    "tea": {
+      "name": "Moonlight White",
+      "type": "white",
+      "subType": "moonlight-white",
+      "typeId": "TEA_TYPE_WHITE"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 72,
+          "steepTime": 35.8,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 72°C (162°F)\n- Steep Time: 35.8 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 77,
+          "steepTime": 180.8,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 77°C (171°F)\n- Steep Time: 180.8 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
     "recommendations": [
       {
         "style": "gongfu",
         "parameters": {
-          "temperature": 75,
-          "steepTime": 35,
+          "temperature": 72,
+          "steepTime": 35.8,
           "gramsPer100ml": 5,
           "infusions": 4
         },
-        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 35 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
-        "score": 70
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 72°C (162°F)\n- Steep Time: 35.8 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 91
       },
       {
         "style": "western",
         "parameters": {
-          "temperature": 80,
-          "steepTime": 180,
+          "temperature": 77,
+          "steepTime": 180.8,
           "gramsPer100ml": 3,
           "infusions": 2
         },
-        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 180 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
-        "score": 67
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 77°C (171°F)\n- Steep Time: 180.8 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 86
       }
     ],
     "analysis": {
@@ -292,11 +680,53 @@
           "reasoning": "Longer western steep (3 minutes) compensates for larger leaf volume and single infusion"
         }
       },
-      "adjustmentsApplied": [],
+      "adjustmentsApplied": [
+        {
+          "source": "Altitude (high-altitude)",
+          "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+        }
+      ],
       "teaType": "TEA_TYPE_WHITE"
     },
-    "confidence": 0.7,
-    "rendererVersion": "3.0",
-    "generatedAt": "2025-11-03T09:14:49.766Z"
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Moonlight White, Type: TEA_TYPE_WHITE, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "75°C, 35s",
+        "value": "Delicate white tea requires gentle heat (35 seconds) to preserve aromatic compounds without over-extraction"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 0 processing adjustments",
+        "value": "None"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "1600m → high-altitude",
+        "value": "1200-1800m - cooler water preserves high-altitude aromatics"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/35s → 72°C/35.8s | Western: 80°C/180s → 77°C/180.8s",
+        "value": "Total adjustments applied: 1"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
   }
 ]

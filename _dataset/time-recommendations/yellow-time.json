@@ -43,6 +43,58 @@
         "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
       }
     ],
+    "circadianCurve": [
+      25.7,
+      25.7,
+      23.7,
+      23.7,
+      23.7,
+      23.7,
+      43.425000000000004,
+      35.975,
+      48.025,
+      51.375,
+      52.375,
+      52.375,
+      66.14999999999999,
+      64.14999999999999,
+      63.15,
+      60.699999999999996,
+      59.699999999999996,
+      59.699999999999996,
+      51.9,
+      53.9,
+      54.35,
+      53.974999999999994,
+      45.425,
+      30.425
+    ],
+    "hourlyScores": {
+      "0": 25.7,
+      "1": 25.7,
+      "2": 23.7,
+      "3": 23.7,
+      "4": 23.7,
+      "5": 23.7,
+      "6": 43.425000000000004,
+      "7": 35.975,
+      "8": 48.025,
+      "9": 51.375,
+      "10": 52.375,
+      "11": 52.375,
+      "12": 66.14999999999999,
+      "13": 64.14999999999999,
+      "14": 63.15,
+      "15": 60.699999999999996,
+      "16": 59.699999999999996,
+      "17": 59.699999999999996,
+      "18": 51.9,
+      "19": 53.9,
+      "20": 54.35,
+      "21": 53.974999999999994,
+      "22": 45.425,
+      "23": 30.425
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -190,32 +242,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      25.7,
-      25.7,
-      23.7,
-      23.7,
-      23.7,
-      23.7,
-      43.425000000000004,
-      35.975,
-      48.025,
-      51.375,
-      52.375,
-      52.375,
-      66.14999999999999,
-      64.14999999999999,
-      63.15,
-      60.699999999999996,
-      59.699999999999996,
-      59.699999999999996,
-      51.9,
-      53.9,
-      54.35,
-      53.974999999999994,
-      45.425,
-      30.425
-    ],
     "analysis": {
       "compoundProfile": "Smooth & Sustained",
       "stimulationLevel": "Low",
@@ -228,9 +254,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Smooth & Sustained, Stimulation: Low, Relaxation: High",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 177"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Yellow Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 203"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (66), 13:00 (64), 14:00 (63), 15:00 (61), 16:00 (60)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.602Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Mengding Huangya",
@@ -276,6 +345,58 @@
         "narrative": "Extended focus - sustained stimulation maintains work momentum (Yellow Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      17.7,
+      17.7,
+      15.7,
+      15.7,
+      15.7,
+      15.7,
+      43.425000000000004,
+      37.975,
+      51.025,
+      55.375,
+      57.375,
+      57.375,
+      70.14999999999999,
+      67.14999999999999,
+      65.14999999999999,
+      62.699999999999996,
+      59.699999999999996,
+      59.699999999999996,
+      47.9,
+      48.9,
+      47.35,
+      45.974999999999994,
+      36.425,
+      20.425
+    ],
+    "hourlyScores": {
+      "0": 17.7,
+      "1": 17.7,
+      "2": 15.7,
+      "3": 15.7,
+      "4": 15.7,
+      "5": 15.7,
+      "6": 43.425000000000004,
+      "7": 37.975,
+      "8": 51.025,
+      "9": 55.375,
+      "10": 57.375,
+      "11": 57.375,
+      "12": 70.14999999999999,
+      "13": 67.14999999999999,
+      "14": 65.14999999999999,
+      "15": 62.699999999999996,
+      "16": 59.699999999999996,
+      "17": 59.699999999999996,
+      "18": 47.9,
+      "19": 48.9,
+      "20": 47.35,
+      "21": 45.974999999999994,
+      "22": 36.425,
+      "23": 20.425
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -423,32 +544,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      17.7,
-      17.7,
-      15.7,
-      15.7,
-      15.7,
-      15.7,
-      43.425000000000004,
-      37.975,
-      51.025,
-      55.375,
-      57.375,
-      57.375,
-      70.14999999999999,
-      67.14999999999999,
-      65.14999999999999,
-      62.699999999999996,
-      59.699999999999996,
-      59.699999999999996,
-      47.9,
-      48.9,
-      47.35,
-      45.974999999999994,
-      36.425,
-      20.425
-    ],
     "analysis": {
       "compoundProfile": "Smooth & Sustained",
       "stimulationLevel": "Moderate",
@@ -461,9 +556,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Smooth & Sustained, Stimulation: Moderate, Relaxation: High",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 177"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Yellow Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 203"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (70), 13:00 (67), 14:00 (65), 15:00 (63), 16:00 (60)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.603Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Huoshan Huangya",
@@ -509,6 +647,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Yellow Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.45,
+      12.45,
+      11.45,
+      11.45,
+      11.45,
+      11.45,
+      37.475,
+      39.725,
+      60.425000000000004,
+      64.775,
+      66.775,
+      66.775,
+      73.55,
+      70.55,
+      68.55,
+      66.10000000000001,
+      61.4,
+      58.699999999999996,
+      45.9,
+      44.9,
+      43.9,
+      40.675,
+      30.425,
+      20.425
+    ],
+    "hourlyScores": {
+      "0": 12.45,
+      "1": 12.45,
+      "2": 11.45,
+      "3": 11.45,
+      "4": 11.45,
+      "5": 11.45,
+      "6": 37.475,
+      "7": 39.725,
+      "8": 60.425000000000004,
+      "9": 64.775,
+      "10": 66.775,
+      "11": 66.775,
+      "12": 73.55,
+      "13": 70.55,
+      "14": 68.55,
+      "15": 66.10000000000001,
+      "16": 61.4,
+      "17": 58.699999999999996,
+      "18": 45.9,
+      "19": 44.9,
+      "20": 43.9,
+      "21": 40.675,
+      "22": 30.425,
+      "23": 20.425
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -656,32 +846,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.45,
-      12.45,
-      11.45,
-      11.45,
-      11.45,
-      11.45,
-      37.475,
-      39.725,
-      60.425000000000004,
-      64.775,
-      66.775,
-      66.775,
-      73.55,
-      70.55,
-      68.55,
-      66.10000000000001,
-      61.4,
-      58.699999999999996,
-      45.9,
-      44.9,
-      43.9,
-      40.675,
-      30.425,
-      20.425
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -694,8 +858,51 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Yellow Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 203"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (74), 13:00 (71), 14:00 (69), 10:00 (67), 11:00 (67)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.603Z"
+    "rendererVersion": "1.0"
   }
 ]

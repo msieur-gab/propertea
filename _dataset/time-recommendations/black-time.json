@@ -43,6 +43,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Black Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      38.375,
+      40.625,
+      61.325,
+      65.22500000000001,
+      67.22500000000001,
+      67.22500000000001,
+      73.55,
+      70.55,
+      68.55,
+      65.65,
+      60.95,
+      58.25,
+      45.224999999999994,
+      44.224999999999994,
+      43.224999999999994,
+      40.225,
+      29.975,
+      19.975
+    ],
+    "hourlyScores": {
+      "0": 12.225,
+      "1": 12.225,
+      "2": 11.225,
+      "3": 11.225,
+      "4": 11.225,
+      "5": 11.225,
+      "6": 38.375,
+      "7": 40.625,
+      "8": 61.325,
+      "9": 65.22500000000001,
+      "10": 67.22500000000001,
+      "11": 67.22500000000001,
+      "12": 73.55,
+      "13": 70.55,
+      "14": 68.55,
+      "15": 65.65,
+      "16": 60.95,
+      "17": 58.25,
+      "18": 45.224999999999994,
+      "19": 44.224999999999994,
+      "20": 43.224999999999994,
+      "21": 40.225,
+      "22": 29.975,
+      "23": 19.975
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -190,32 +242,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.225,
-      12.225,
-      11.225,
-      11.225,
-      11.225,
-      11.225,
-      38.375,
-      40.625,
-      61.325,
-      65.22500000000001,
-      67.22500000000001,
-      67.22500000000001,
-      73.55,
-      70.55,
-      68.55,
-      65.65,
-      60.95,
-      58.25,
-      45.224999999999994,
-      44.224999999999994,
-      43.224999999999994,
-      40.225,
-      29.975,
-      19.975
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -228,9 +254,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Black Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 252"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (74), 13:00 (71), 14:00 (69), 10:00 (67), 11:00 (67)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.568Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Dian Hong",
@@ -276,6 +345,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Black Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      38.375,
+      40.625,
+      61.325,
+      65.22500000000001,
+      67.22500000000001,
+      67.22500000000001,
+      73.55,
+      70.55,
+      68.55,
+      65.65,
+      60.95,
+      58.25,
+      45.224999999999994,
+      44.224999999999994,
+      43.224999999999994,
+      40.225,
+      29.975,
+      19.975
+    ],
+    "hourlyScores": {
+      "0": 12.225,
+      "1": 12.225,
+      "2": 11.225,
+      "3": 11.225,
+      "4": 11.225,
+      "5": 11.225,
+      "6": 38.375,
+      "7": 40.625,
+      "8": 61.325,
+      "9": 65.22500000000001,
+      "10": 67.22500000000001,
+      "11": 67.22500000000001,
+      "12": 73.55,
+      "13": 70.55,
+      "14": 68.55,
+      "15": 65.65,
+      "16": 60.95,
+      "17": 58.25,
+      "18": 45.224999999999994,
+      "19": 44.224999999999994,
+      "20": 43.224999999999994,
+      "21": 40.225,
+      "22": 29.975,
+      "23": 19.975
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -423,32 +544,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.225,
-      12.225,
-      11.225,
-      11.225,
-      11.225,
-      11.225,
-      38.375,
-      40.625,
-      61.325,
-      65.22500000000001,
-      67.22500000000001,
-      67.22500000000001,
-      73.55,
-      70.55,
-      68.55,
-      65.65,
-      60.95,
-      58.25,
-      45.224999999999994,
-      44.224999999999994,
-      43.224999999999994,
-      40.225,
-      29.975,
-      19.975
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -461,9 +556,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Black Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 252"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (74), 13:00 (71), 14:00 (69), 10:00 (67), 11:00 (67)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.571Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Jin Jun Mei",
@@ -509,6 +647,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Black Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      38.375,
+      40.625,
+      61.325,
+      65.22500000000001,
+      67.22500000000001,
+      67.22500000000001,
+      73.55,
+      70.55,
+      68.55,
+      65.65,
+      60.95,
+      58.25,
+      45.224999999999994,
+      44.224999999999994,
+      43.224999999999994,
+      40.225,
+      29.975,
+      19.975
+    ],
+    "hourlyScores": {
+      "0": 12.225,
+      "1": 12.225,
+      "2": 11.225,
+      "3": 11.225,
+      "4": 11.225,
+      "5": 11.225,
+      "6": 38.375,
+      "7": 40.625,
+      "8": 61.325,
+      "9": 65.22500000000001,
+      "10": 67.22500000000001,
+      "11": 67.22500000000001,
+      "12": 73.55,
+      "13": 70.55,
+      "14": 68.55,
+      "15": 65.65,
+      "16": 60.95,
+      "17": 58.25,
+      "18": 45.224999999999994,
+      "19": 44.224999999999994,
+      "20": 43.224999999999994,
+      "21": 40.225,
+      "22": 29.975,
+      "23": 19.975
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -656,32 +846,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      12.225,
-      12.225,
-      11.225,
-      11.225,
-      11.225,
-      11.225,
-      38.375,
-      40.625,
-      61.325,
-      65.22500000000001,
-      67.22500000000001,
-      67.22500000000001,
-      73.55,
-      70.55,
-      68.55,
-      65.65,
-      60.95,
-      58.25,
-      45.224999999999994,
-      44.224999999999994,
-      43.224999999999994,
-      40.225,
-      29.975,
-      19.975
-    ],
     "analysis": {
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
@@ -694,9 +858,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: 258"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Black Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 252"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (74), 13:00 (71), 14:00 (69), 10:00 (67), 11:00 (67)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.571Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Lapsang Souchong",
@@ -742,6 +949,58 @@
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Black Tea tradition)"
       }
     ],
+    "circadianCurve": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      34.125,
+      40.625,
+      63.875,
+      67.775,
+      69.775,
+      69.775,
+      76.1,
+      73.1,
+      71.1,
+      68.2,
+      60.95,
+      47.2,
+      25.675,
+      20.425,
+      15.175,
+      14.725,
+      8.725,
+      50
+    ],
+    "hourlyScores": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 34.125,
+      "7": 40.625,
+      "8": 63.875,
+      "9": 67.775,
+      "10": 69.775,
+      "11": 69.775,
+      "12": 76.1,
+      "13": 73.1,
+      "14": 71.1,
+      "15": 68.2,
+      "16": 60.95,
+      "17": 47.2,
+      "18": 25.675,
+      "19": 20.425,
+      "20": 15.175,
+      "21": 14.725,
+      "22": 8.725,
+      "23": null
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -889,32 +1148,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      34.125,
-      40.625,
-      63.875,
-      67.775,
-      69.775,
-      69.775,
-      76.1,
-      73.1,
-      71.1,
-      68.2,
-      60.95,
-      47.2,
-      25.675,
-      20.425,
-      15.175,
-      14.725,
-      8.725,
-      50
-    ],
     "analysis": {
       "compoundProfile": "Focused & Energized",
       "stimulationLevel": "Moderate",
@@ -927,9 +1160,52 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Focused & Energized, Stimulation: Moderate, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: NaN"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Black Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 252"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (76), 13:00 (73), 14:00 (71), 10:00 (70), 11:00 (70)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.572Z"
+    "rendererVersion": "1.0"
   },
   {
     "teaName": "Yingde Hong",
@@ -975,6 +1251,58 @@
         "narrative": "Post-lunch support - stimulation counters afternoon dip (optimal for your high-stimulation profile)"
       }
     ],
+    "circadianCurve": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      34.125,
+      45.625,
+      69.875,
+      74.775,
+      78.775,
+      78.775,
+      83.1,
+      79.1,
+      76.1,
+      71.2,
+      62.95,
+      47.2,
+      15.675,
+      8.425,
+      1.175,
+      1,
+      1,
+      50
+    ],
+    "hourlyScores": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 34.125,
+      "7": 45.625,
+      "8": 69.875,
+      "9": 74.775,
+      "10": 78.775,
+      "11": 78.775,
+      "12": 83.1,
+      "13": 79.1,
+      "14": 76.1,
+      "15": 71.2,
+      "16": 62.95,
+      "17": 47.2,
+      "18": 15.675,
+      "19": 8.425,
+      "20": 1.175,
+      "21": 1,
+      "22": 1,
+      "23": null
+    },
     "periodGrouping": {
       "night": {
         "period": "Night (0-5)",
@@ -1122,32 +1450,6 @@
         "count": 3
       }
     },
-    "circadianCurve": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      34.125,
-      45.625,
-      69.875,
-      74.775,
-      78.775,
-      78.775,
-      83.1,
-      79.1,
-      76.1,
-      71.2,
-      62.95,
-      47.2,
-      15.675,
-      8.425,
-      1.175,
-      1,
-      1,
-      50
-    ],
     "analysis": {
       "compoundProfile": "Focused & Energized",
       "stimulationLevel": "High",
@@ -1160,8 +1462,51 @@
         "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference",
+        "adjustment": "Profile: Focused & Energized, Stimulation: High, Relaxation: Moderate",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: High",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 606"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Compound Profile Scoring (85%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+        "value": "Total adjustments: NaN"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (15%)",
+        "reason": "Tea type: Black Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "value": "Total adjustments: 252"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (83), 13:00 (79), 10:00 (79), 11:00 (79), 14:00 (76)"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "1.0",
-    "generatedAt": "2025-11-03T09:14:33.572Z"
+    "rendererVersion": "1.0"
   }
 ]
