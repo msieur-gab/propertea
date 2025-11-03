@@ -189,7 +189,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4, L-Theanine: 5.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -413,7 +413,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4.5, L-Theanine: 4.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -634,7 +634,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4.8, L-Theanine: 4.8",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -858,7 +858,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4.2, L-Theanine: 5.2",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -904,17 +904,6 @@
     ],
     "recommendations": [
       {
-        "food": "Root Vegetables",
-        "foodId": "FOOD_ROOT_VEGETABLES",
-        "description": "A complementary food pairing",
-        "score": 83,
-        "rationale": "Root Vegetables complements floral and buttery, enhancing floral notes",
-        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
-        "category": "vegetables",
-        "flavorProfile": [],
-        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
-      },
-      {
         "food": "Grilled Meats",
         "foodId": "FOOD_GRILLED_MEATS",
         "description": "A complementary food pairing",
@@ -935,6 +924,17 @@
         "category": "desserts",
         "flavorProfile": [],
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Root Vegetables",
+        "foodId": "FOOD_ROOT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Root Vegetables complements floral and buttery, enhancing floral notes",
+        "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
       },
       {
         "food": "Aged Cheese",
@@ -963,9 +963,9 @@
       {
         "cuisine": "International",
         "foods": [
-          "Root Vegetables",
           "Grilled Meats",
-          "Dark Chocolate"
+          "Dark Chocolate",
+          "Root Vegetables"
         ],
         "count": 3
       },
@@ -1002,13 +1002,6 @@
     ],
     "categoryGroupings": [
       {
-        "category": "vegetables",
-        "foods": [
-          "Root Vegetables"
-        ],
-        "count": 1
-      },
-      {
         "category": "proteins",
         "foods": [
           "Grilled Meats"
@@ -1019,6 +1012,13 @@
         "category": "desserts",
         "foods": [
           "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
         ],
         "count": 1
       },
@@ -1080,7 +1080,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 3.5, L-Theanine: 6.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -1088,13 +1088,13 @@
         "step": "Intensity Adjustment",
         "reason": "Profile intensity: Pronounced",
         "adjustment": "Applied +10 bonus to all foods",
-        "value": "24 foods adjusted"
+        "value": "25 foods adjusted"
       },
       {
         "step": "Ranking & Selection",
         "reason": "Select top food pairings",
         "adjustment": "Selected 5 top recommendations",
-        "value": "Root Vegetables, Grilled Meats, Dark Chocolate, Aged Cheese, Dim Sum"
+        "value": "Grilled Meats, Dark Chocolate, Root Vegetables, Aged Cheese, Dim Sum"
       },
       {
         "step": "Grouping",

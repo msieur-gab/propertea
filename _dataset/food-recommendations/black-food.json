@@ -175,7 +175,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 5, L-Theanine: 4",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -381,7 +381,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 5.5, L-Theanine: 4.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -588,7 +588,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4.8, L-Theanine: 5.2",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -796,7 +796,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 5.2, L-Theanine: 4",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -1002,7 +1002,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 5.8, L-Theanine: 3.8",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },

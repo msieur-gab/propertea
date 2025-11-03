@@ -16,7 +16,7 @@
         "food": "Light Desserts",
         "foodId": "FOOD_LIGHT_DESSERTS",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Light Desserts complements honey and hay, enhancing sweet notes",
         "narrative": null,
         "category": "desserts",
@@ -27,9 +27,9 @@
         "food": "White Fish",
         "foodId": "FOOD_WHITE_FISH",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "White Fish complements honey and hay, enhancing sweet notes",
-        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes (astringency balance)",
         "category": "proteins",
         "flavorProfile": [],
         "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
@@ -38,9 +38,9 @@
         "food": "Fresh Fruit",
         "foodId": "FOOD_FRESH_FRUIT",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Fresh Fruit complements honey and hay, enhancing sweet notes",
-        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (astringency balance)",
         "category": "fruits",
         "flavorProfile": [],
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
@@ -49,9 +49,9 @@
         "food": "Rice Cakes",
         "foodId": "FOOD_RICE_CAKES",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Rice Cakes complements honey and hay, enhancing sweet notes",
-        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles (astringency balance)",
         "category": "prepared_dishes",
         "flavorProfile": [],
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
@@ -178,7 +178,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 2.5, L-Theanine: 7",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -186,7 +186,7 @@
         "step": "Intensity Adjustment",
         "reason": "Profile intensity: Pronounced",
         "adjustment": "Applied +10 bonus to all foods",
-        "value": "13 foods adjusted"
+        "value": "10 foods adjusted"
       },
       {
         "step": "Ranking & Selection",
@@ -227,7 +227,7 @@
         "food": "Light Desserts",
         "foodId": "FOOD_LIGHT_DESSERTS",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Light Desserts complements floral and honey, enhancing floral notes",
         "narrative": null,
         "category": "desserts",
@@ -238,9 +238,9 @@
         "food": "White Fish",
         "foodId": "FOOD_WHITE_FISH",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "White Fish complements floral and honey, enhancing floral notes",
-        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes (astringency balance)",
         "category": "proteins",
         "flavorProfile": [],
         "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
@@ -249,9 +249,9 @@
         "food": "Fresh Fruit",
         "foodId": "FOOD_FRESH_FRUIT",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Fresh Fruit complements floral and honey, enhancing floral notes",
-        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (astringency balance)",
         "category": "fruits",
         "flavorProfile": [],
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
@@ -260,9 +260,9 @@
         "food": "Rice Cakes",
         "foodId": "FOOD_RICE_CAKES",
         "description": "A complementary food pairing",
-        "score": 75,
+        "score": 83,
         "rationale": "Rice Cakes complements floral and honey, enhancing floral notes",
-        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles (astringency balance)",
         "category": "prepared_dishes",
         "flavorProfile": [],
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
@@ -390,7 +390,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 3, L-Theanine: 6.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -398,7 +398,7 @@
         "step": "Intensity Adjustment",
         "reason": "Profile intensity: Pronounced",
         "adjustment": "Applied +10 bonus to all foods",
-        "value": "13 foods adjusted"
+        "value": "10 foods adjusted"
       },
       {
         "step": "Ranking & Selection",
@@ -602,7 +602,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 3.5, L-Theanine: 6",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -814,7 +814,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 4, L-Theanine: 5.5",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
@@ -1026,7 +1026,7 @@
       },
       {
         "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
-        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "reason": "Caffeine: 3, L-Theanine: 6",
         "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
         "value": "Astringency matching activated"
       },
