@@ -1,0 +1,302 @@
+[
+  {
+    "teaName": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 15 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 90°C (194°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.759Z"
+  },
+  {
+    "teaName": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 15 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 90°C (194°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.760Z"
+  },
+  {
+    "teaName": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 15 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 90°C (194°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.760Z"
+  },
+  {
+    "teaName": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 15 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 90°C (194°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.760Z"
+  },
+  {
+    "teaName": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 15 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 90°C (194°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.760Z"
+  }
+]

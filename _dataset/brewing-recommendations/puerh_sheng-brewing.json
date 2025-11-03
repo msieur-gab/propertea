@@ -1,0 +1,302 @@
+[
+  {
+    "teaName": "Yiwu Sheng",
+    "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "sweet",
+      "herbal",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 10 seconds\n- Leaf Amount: 10g per 100ml of water\n- Infusions: 10\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10,
+          "reasoning": "Dense aged leaves extract quickly (10 seconds) with hot water; extended infusions gradually deepen"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2,
+          "reasoning": "Puerh's robustness allows full 4-minute steep; hot water ensures thorough extraction in western style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.761Z"
+  },
+  {
+    "teaName": "Bulang Sheng",
+    "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "bitter",
+      "strong",
+      "herbal",
+      "smoky",
+      "medicinal"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 10 seconds\n- Leaf Amount: 10g per 100ml of water\n- Infusions: 10\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10,
+          "reasoning": "Dense aged leaves extract quickly (10 seconds) with hot water; extended infusions gradually deepen"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2,
+          "reasoning": "Puerh's robustness allows full 4-minute steep; hot water ensures thorough extraction in western style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.761Z"
+  },
+  {
+    "teaName": "Banzhang Sheng",
+    "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "powerful",
+      "bitter",
+      "sweet aftertaste",
+      "herbal",
+      "complex"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 10 seconds\n- Leaf Amount: 10g per 100ml of water\n- Infusions: 10\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10,
+          "reasoning": "Dense aged leaves extract quickly (10 seconds) with hot water; extended infusions gradually deepen"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2,
+          "reasoning": "Puerh's robustness allows full 4-minute steep; hot water ensures thorough extraction in western style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.762Z"
+  },
+  {
+    "teaName": "Mengku Sheng",
+    "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fresh",
+      "fruity",
+      "smooth"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 10 seconds\n- Leaf Amount: 10g per 100ml of water\n- Infusions: 10\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10,
+          "reasoning": "Dense aged leaves extract quickly (10 seconds) with hot water; extended infusions gradually deepen"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2,
+          "reasoning": "Puerh's robustness allows full 4-minute steep; hot water ensures thorough extraction in western style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.762Z"
+  },
+  {
+    "teaName": "Jingmai Sheng",
+    "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "orchid",
+      "honey",
+      "sweet",
+      "floral",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 10 seconds\n- Leaf Amount: 10g per 100ml of water\n- Infusions: 10\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 240 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 10,
+          "gramsPer100ml": 10,
+          "infusions": 10,
+          "reasoning": "Dense aged leaves extract quickly (10 seconds) with hot water; extended infusions gradually deepen"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 240,
+          "gramsPer100ml": 6,
+          "infusions": 2,
+          "reasoning": "Puerh's robustness allows full 4-minute steep; hot water ensures thorough extraction in western style"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_PUERH"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.762Z"
+  }
+]

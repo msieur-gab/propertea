@@ -4,6 +4,13 @@
     "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
     "type": "black",
     "subType": "keemun",
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "floral",
+      "sweet",
+      "smoky"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -85,15 +92,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_BLACK, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 11",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 11 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Bold Experience, Creative"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.100Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Dian Hong",
     "originalName": "滇红 (Diān Hóng)",
     "type": "black",
     "subType": "dian-hong",
+    "flavorProfile": [
+      "malty",
+      "honey",
+      "sweet",
+      "chocolate",
+      "dried fruit"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -181,15 +244,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_BLACK, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Relaxation, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.101Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Jin Jun Mei",
     "originalName": "金骏眉 (Jīn Jùn Méi)",
     "type": "black",
     "subType": "jin-jun-mei",
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "floral",
+      "fruity",
+      "caramel"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -277,15 +396,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_BLACK, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 9",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 9 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Relaxation, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.102Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Lapsang Souchong",
     "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
     "type": "black",
     "subType": "lapsang-souchong",
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "dried fruit",
+      "tobacco"
+    ],
     "recommendations": [
       {
         "activity": "Focus",
@@ -373,15 +548,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Focused & Energized, TeaType: TEA_TYPE_BLACK, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 11",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 11 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Social, Contemplative"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.103Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Yingde Hong",
     "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
     "type": "black",
     "subType": "yingde-hong",
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "robust"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -469,8 +700,57 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Focused & Energized, TeaType: TEA_TYPE_BLACK, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: High",
+        "adjustment": "Boosted 8 activities by +7.00",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Focus, Energy"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.104Z"
+    "rendererVersion": "2.0"
   }
 ]

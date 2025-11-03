@@ -4,6 +4,13 @@
     "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
     "type": "white",
     "subType": "white-silver-needle",
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -85,15 +92,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 10",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 10 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Comfort, Warming"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.133Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "White Peony",
     "originalName": "白牡丹 (Bái Mǔ Dān)",
     "type": "white",
     "subType": "white-peony",
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -175,15 +238,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Unwinding, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.133Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Gong Mei",
     "originalName": "贡眉 (Gòng Méi)",
     "type": "white",
     "subType": "gong-mei",
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -265,15 +384,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Smooth & Sustained, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Boosted 13 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Warming, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.134Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Shou Mei",
     "originalName": "寿眉 (Shòu Méi)",
     "type": "white",
     "subType": "shou-mei",
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -361,15 +536,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Social, Warming"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.134Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Moonlight White",
     "originalName": "月光白 (Yuè Guāng Bái)",
     "type": "white",
     "subType": "moonlight-white",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -451,8 +682,57 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 7",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 7 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Unwinding, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.135Z"
+    "rendererVersion": "2.0"
   }
 ]

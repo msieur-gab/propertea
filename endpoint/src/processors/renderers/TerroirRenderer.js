@@ -28,14 +28,23 @@ export class TerroirRenderer {
 
   /**
    * Render detailed terroir narrative
-   * @param {Object} geographyInference - Complete geography analysis with arrays and descriptions
-   * @param {Object} teaTypeInference - Tea type for context
-   * @param {Object} formData - Original request data with location info
-   * @param {Object} compoundInference - (optional) Compound profile
-   * @param {Object} flavorInference - (optional) Identified flavors
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.geography: Complete geography analysis with arrays and descriptions (required)
+   *   - inferences.teaType: Tea type for context (required)
+   *   - inferences.formData: Original request data with location info (required)
+   *   - inferences.compound: (optional) Compound profile
+   *   - inferences.flavor: (optional) Identified flavors
    * @returns {Object} - Rich terroir presentation
    */
-  render(geographyInference = {}, teaTypeInference = {}, formData = {}, compoundInference = null, flavorInference = null) {
+  render(inferences = {}) {
+    const {
+      geography: geographyInference = {},
+      teaType: teaTypeInference = {},
+      formData = {},
+      compound: compoundInference = null,
+      flavor: flavorInference = null
+    } = inferences;
+
     const trace = [];
 
     // Validate inputs

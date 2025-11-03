@@ -4,6 +4,13 @@
     "originalName": "铁观音 (Tiě Guān Yīn)",
     "type": "oolong",
     "subType": "tie-guan-yin",
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
     "recommendations": [
       {
         "activity": "Focus",
@@ -91,15 +98,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 12",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Social, Relaxation"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.118Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Da Hong Pao",
     "originalName": "大红袍 (Dà Hóng Páo)",
     "type": "oolong",
     "subType": "wuyi-oolong",
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
     "recommendations": [
       {
         "activity": "Focus",
@@ -187,15 +250,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 10",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 10 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Social, Relaxation"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.119Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Fenghuang Dancong",
     "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
     "type": "oolong",
     "subType": "fenghuang-dancong",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -277,15 +396,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 7",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 7 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Relaxation, Contemplative"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.120Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Dong Ding",
     "originalName": "冻顶 (Dòng Dǐng)",
     "type": "oolong",
     "subType": "dong-ding",
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
     "recommendations": [
       {
         "activity": "Focus",
@@ -373,15 +548,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 12",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Social, Relaxation"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.121Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Ali Shan Oolong",
     "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
     "type": "oolong",
     "subType": "high-mountain-oolong",
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
     "recommendations": [
       {
         "activity": "Relaxation",
@@ -463,8 +694,57 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Smooth & Sustained, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 14",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 14 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Boosted 13 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Contemplative, Comfort"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.122Z"
+    "rendererVersion": "2.0"
   }
 ]

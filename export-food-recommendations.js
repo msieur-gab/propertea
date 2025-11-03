@@ -47,7 +47,11 @@ async function processTeaForFood(tea) {
     ]);
 
     // Render food pairing recommendations with all three inferences
-    const foodResult = new FoodRenderer().render(flavorResult, compoundResult, teaTypeResult);
+    const foodResult = new FoodRenderer().render({
+      flavor: flavorResult,
+      compound: compoundResult,
+      teaType: teaTypeResult
+    });
 
     return {
       teaName: tea.name,

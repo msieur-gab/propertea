@@ -1,0 +1,302 @@
+[
+  {
+    "teaName": "Longjing",
+    "originalName": "龙井 (Lóng Jǐng)",
+    "type": "green",
+    "subType": "longjing",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 25 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 5\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 150 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5,
+          "reasoning": "Fresh green tea extracts within 25 seconds; multiple infusions reveal evolving complexity"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Western steep (2.5 minutes) allows gentle extraction of delicate green tea character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.756Z"
+  },
+  {
+    "teaName": "Biluochun",
+    "originalName": "碧螺春 (Bì Luó Chūn)",
+    "type": "green",
+    "subType": "biluochun",
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 25 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 5\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 150 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5,
+          "reasoning": "Fresh green tea extracts within 25 seconds; multiple infusions reveal evolving complexity"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Western steep (2.5 minutes) allows gentle extraction of delicate green tea character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.756Z"
+  },
+  {
+    "teaName": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+    "type": "green",
+    "subType": "huangshan-maofeng",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "floral"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 25 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 5\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 150 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5,
+          "reasoning": "Fresh green tea extracts within 25 seconds; multiple infusions reveal evolving complexity"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Western steep (2.5 minutes) allows gentle extraction of delicate green tea character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.756Z"
+  },
+  {
+    "teaName": "Xinyang Maojian",
+    "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+    "type": "green",
+    "subType": "xinyang-maojian",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "brisk"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 25 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 5\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 150 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5,
+          "reasoning": "Fresh green tea extracts within 25 seconds; multiple infusions reveal evolving complexity"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Western steep (2.5 minutes) allows gentle extraction of delicate green tea character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.757Z"
+  },
+  {
+    "teaName": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+    "type": "green",
+    "subType": "taiping-houkui",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "lingering"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 25 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 5\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 150 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 25,
+          "gramsPer100ml": 6,
+          "infusions": 5,
+          "reasoning": "Fresh green tea extracts within 25 seconds; multiple infusions reveal evolving complexity"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 150,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Western steep (2.5 minutes) allows gentle extraction of delicate green tea character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_GREEN"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.758Z"
+  }
+]

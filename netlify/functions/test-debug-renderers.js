@@ -71,7 +71,10 @@ async function debug() {
   console.log('📊 TimeRenderer Output:');
   console.log('─'.repeat(60));
 
-  const timeResult = new TimeRenderer().render(compoundAnalysis);
+  const timeResult = new TimeRenderer().render({
+    compound: compoundAnalysis,
+    teaType: teaTypeAnalysis
+  });
   console.log('Structure keys:', Object.keys(timeResult));
   console.log('Recommendations count:', timeResult.recommendations?.length || 0);
   if (timeResult.recommendations && timeResult.recommendations.length > 0) {
@@ -83,12 +86,11 @@ async function debug() {
   console.log('🌱 SeasonRenderer Output:');
   console.log('─'.repeat(60));
 
-  const seasonResult = new SeasonRenderer().render(
-    geographyAnalysis,
-    processingAnalysis,
-    teaTypeAnalysis,
-    flavorAnalysis
-  );
+  const seasonResult = new SeasonRenderer().render({
+    teaType: teaTypeAnalysis,
+    processing: processingAnalysis,
+    geography: geographyAnalysis
+  });
   console.log('Structure keys:', Object.keys(seasonResult));
   console.log('Recommendations count:', seasonResult.recommendations?.length || 0);
   if (seasonResult.recommendations && seasonResult.recommendations.length > 0) {
@@ -102,7 +104,12 @@ async function debug() {
   console.log('☕ BrewingRenderer Output:');
   console.log('─'.repeat(60));
 
-  const brewingResult = new BrewingRenderer().render(sampleTea);
+  const brewingResult = new BrewingRenderer().render({
+    formData: sampleTea,
+    processing: processingAnalysis,
+    geography: geographyAnalysis,
+    compound: compoundAnalysis
+  });
   console.log('Structure keys:', Object.keys(brewingResult));
   console.log('Has recommendations property:', 'recommendations' in brewingResult);
   console.log('Has brewingStyles property:', 'brewingStyles' in brewingResult);

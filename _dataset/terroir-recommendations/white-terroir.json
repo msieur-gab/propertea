@@ -1,0 +1,577 @@
+[
+  {
+    "teaName": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "subType": "white-silver-needle",
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
+    "narrative": "**Geographic Origin**\n\nWhite Tea grows in Fuding, Fujian, China at 800m elevation, with average temperatures of 18.6°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.6°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (177 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nWhite Tea grows in Fuding, Fujian, China at 800m elevation, with average temperatures of 18.6°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.6°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (177 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "800m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "78%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.6°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "177 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.33°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "White Tea",
+    "teaTypeId": "TEA_TYPE_WHITE",
+    "location": "Fuding, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for White Tea from Fuding, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔ Dān)",
+    "type": "white",
+    "subType": "white-peony",
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
+    "narrative": "**Geographic Origin**\n\nWhite Tea grows in Zhenghe, Fujian, China at 750m elevation, with average temperatures of 18.2°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (750m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (175 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.37°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nWhite Tea grows in Zhenghe, Fujian, China at 750m elevation, with average temperatures of 18.2°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (750m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (175 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.37°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "750m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "76%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "175 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.37°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "White Tea",
+    "teaTypeId": "TEA_TYPE_WHITE",
+    "location": "Zhenghe, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for White Tea from Zhenghe, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Gong Mei",
+    "originalName": "贡眉 (Gòng Méi)",
+    "type": "white",
+    "subType": "gong-mei",
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
+    "narrative": "**Geographic Origin**\n\nWhite Tea grows in Jianyang, Fujian, China at 600m elevation, with average temperatures of 19°C and humidity levels around 75%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (75%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (178 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nWhite Tea grows in Jianyang, Fujian, China at 600m elevation, with average temperatures of 19°C and humidity levels around 75%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (75%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (19°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (178 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "600m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "75%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "19°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "178 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.33°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "White Tea",
+    "teaTypeId": "TEA_TYPE_WHITE",
+    "location": "Jianyang, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for White Tea from Jianyang, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Shou Mei",
+    "originalName": "寿眉 (Shòu Méi)",
+    "type": "white",
+    "subType": "shou-mei",
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
+    "narrative": "**Geographic Origin**\n\nWhite Tea grows in Fuding, Fujian, China at 650m elevation, with average temperatures of 18.8°C and humidity levels around 77%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (650m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (77%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (176 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nWhite Tea grows in Fuding, Fujian, China at 650m elevation, with average temperatures of 18.8°C and humidity levels around 77%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (650m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (77%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (176 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.33°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nWhite Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "650m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "77%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "176 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.33°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "White Tea",
+    "teaTypeId": "TEA_TYPE_WHITE",
+    "location": "Fuding, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for White Tea from Fuding, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Moonlight White",
+    "originalName": "月光白 (Yuè Guāng Bái)",
+    "type": "white",
+    "subType": "moonlight-white",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
+    "narrative": "**Geographic Origin**\n\nWhite Tea grows in Yunnan, Yunnan, China at 1600m elevation, with average temperatures of 17.5°C and humidity levels around 72%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (72%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (17.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (185 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (23.7°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nWhite Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nWhite Tea grows in Yunnan, Yunnan, China at 1600m elevation, with average temperatures of 17.5°C and humidity levels around 72%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For White Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (72%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, White Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (17.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for White Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (185 MJ/m²/day)\n\nNeutral. For White Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (23.7°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where White Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nWhite Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1600m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "72%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "17.5°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "185 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "23.7°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "White Tea",
+    "teaTypeId": "TEA_TYPE_WHITE",
+    "location": "Yunnan, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for White Tea from Yunnan, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

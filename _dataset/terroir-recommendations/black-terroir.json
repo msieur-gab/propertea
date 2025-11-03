@@ -1,0 +1,578 @@
+[
+  {
+    "teaName": "Keemun",
+    "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
+    "type": "black",
+    "subType": "keemun",
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "floral",
+      "sweet",
+      "smoky"
+    ],
+    "narrative": "**Geographic Origin**\n\nBlack Tea grows in Qimen, Anhui, China at 300m elevation, with average temperatures of 17.5°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (300m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**\n\n**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (17.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (172 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (29.87°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nBlack Tea grows in Qimen, Anhui, China at 300m elevation, with average temperatures of 17.5°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (300m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**",
+      "**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (17.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (172 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (29.87°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "300m",
+        "classification": "Low",
+        "description": "Low elevation teas (300-600m) often have stronger flavors with moderate complexity",
+        "flavorInfluence": [
+          "strong flavors",
+          "moderate complexity"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "76%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "17.5°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "172 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "29.87°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Black Tea",
+    "teaTypeId": "TEA_TYPE_BLACK",
+    "location": "Qimen, Anhui, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Low",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Black Tea from Qimen, Anhui, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Dian Hong",
+    "originalName": "滇红 (Diān Hóng)",
+    "type": "black",
+    "subType": "dian-hong",
+    "flavorProfile": [
+      "malty",
+      "honey",
+      "sweet",
+      "chocolate",
+      "dried fruit"
+    ],
+    "narrative": "**Geographic Origin**\n\nBlack Tea grows in Fengqing, Yunnan, China at 1600m elevation, with average temperatures of 18.2°C and humidity levels around 72%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (72%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (188 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (24.58°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nBlack Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nBlack Tea grows in Fengqing, Yunnan, China at 1600m elevation, with average temperatures of 18.2°C and humidity levels around 72%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (72%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (188 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (24.58°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nBlack Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1600m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "72%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "188 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "24.58°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Black Tea",
+    "teaTypeId": "TEA_TYPE_BLACK",
+    "location": "Fengqing, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Black Tea from Fengqing, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "black",
+    "subType": "jin-jun-mei",
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "floral",
+      "fruity",
+      "caramel"
+    ],
+    "narrative": "**Geographic Origin**\n\nBlack Tea grows in Wuyi Mountains, Fujian, China at 800m elevation, with average temperatures of 18.8°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (176 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nBlack Tea grows in Wuyi Mountains, Fujian, China at 800m elevation, with average temperatures of 18.8°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (176 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "800m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "78%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "176 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.72°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Black Tea",
+    "teaTypeId": "TEA_TYPE_BLACK",
+    "location": "Wuyi Mountains, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Black Tea from Wuyi Mountains, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
+    "type": "black",
+    "subType": "lapsang-souchong",
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "dried fruit",
+      "tobacco"
+    ],
+    "narrative": "**Geographic Origin**\n\nBlack Tea grows in Wuyi Mountains, Fujian, China at 700m elevation, with average temperatures of 19.2°C and humidity levels around 79%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (700m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (79%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (174 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nBlack Tea grows in Wuyi Mountains, Fujian, China at 700m elevation, with average temperatures of 19.2°C and humidity levels around 79%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (700m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (79%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (19.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (174 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "700m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "79%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "19.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "174 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.72°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Black Tea",
+    "teaTypeId": "TEA_TYPE_BLACK",
+    "location": "Wuyi Mountains, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Black Tea from Wuyi Mountains, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Yingde Hong",
+    "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
+    "type": "black",
+    "subType": "yingde-hong",
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "robust"
+    ],
+    "narrative": "**Geographic Origin**\n\nBlack Tea grows in Yingde, Guangdong, China at 400m elevation, with average temperatures of 21.5°C and humidity levels around 81%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (400m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**\n\n**Humidity & Moisture** (81%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (21.5°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids\n\n**Sun Exposure** (182 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (24.18°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nBlack Tea grows in Yingde, Guangdong, China at 400m elevation, with average temperatures of 21.5°C and humidity levels around 81%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (400m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Black Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**",
+      "**Humidity & Moisture** (81%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Black Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (21.5°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Black Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids",
+      "**Sun Exposure** (182 MJ/m²/day)\n\nNeutral. For Black Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (24.18°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Black Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nBlack Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "400m",
+        "classification": "Low",
+        "description": "Low elevation teas (300-600m) often have stronger flavors with moderate complexity",
+        "flavorInfluence": [
+          "strong flavors",
+          "moderate complexity"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "81%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "21.5°C",
+        "classification": "Warm",
+        "description": "Warm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity",
+        "flavorInfluence": [
+          "vibrant flavors",
+          "fruity notes",
+          "bold character"
+        ],
+        "compoundEffect": [
+          "higher caffeine",
+          "potentially lower amino acids"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "182 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "24.18°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Black Tea",
+    "teaTypeId": "TEA_TYPE_BLACK",
+    "location": "Yingde, Guangdong, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Low",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Warm",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Black Tea from Yingde, Guangdong, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

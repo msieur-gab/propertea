@@ -51,12 +51,19 @@ export class SeasonRenderer {
 
   /**
    * Render seasonal recommendations from tea type, processing, and geography analysis
-   * @param {Object} teaTypeAnalysis - Analysis from tea type/subtype
-   * @param {Object} processingAnalysis - Analysis from processing methods
-   * @param {Object} geographyAnalysis - Analysis from geographic/altitude data (optional)
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.teaType: Analysis from tea type/subtype
+   *   - inferences.processing: Analysis from processing methods
+   *   - inferences.geography: Analysis from geographic/altitude data (optional)
    * @returns {Object} - Seasonal recommendations with altitude awareness
    */
-  render(teaTypeAnalysis = {}, processingAnalysis = {}, geographyAnalysis = {}) {
+  render(inferences = {}) {
+    const {
+      teaType: teaTypeAnalysis = {},
+      processing: processingAnalysis = {},
+      geography: geographyAnalysis = {}
+    } = inferences;
+
     const trace = [];
 
     // Initialize season scores

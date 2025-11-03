@@ -68,7 +68,84 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Grilled Meats",
+          "Dark Chocolate"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Floral",
@@ -85,9 +162,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 20, Categories: 3",
+        "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 20 unique foods with base score 50",
+        "value": "20"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Nutty & Toasty, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "25 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Grilled Meats, Dark Chocolate, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.705Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Da Hong Pao",
@@ -158,7 +290,84 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Roasted",
@@ -177,9 +386,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 26, Categories: 5",
+        "value": "Sample hints: FOOD_GRILLED_ROASTED_MEATS, FOOD_ROOT_VEGETABLES, FOOD_COMFORT_FOODS"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 26 unique foods with base score 50",
+        "value": "26"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 5 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted, Earthy, Fruity, Woody, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "30 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.707Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Fenghuang Dancong",
@@ -250,7 +514,84 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -266,9 +607,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 8, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 8 unique foods with base score 50",
+        "value": "8"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "15 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.710Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Dong Ding",
@@ -339,7 +735,84 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Roasted",
@@ -358,9 +831,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 22, Categories: 5",
+        "value": "Sample hints: FOOD_GRILLED_ROASTED_MEATS, FOOD_ROOT_VEGETABLES, FOOD_COMFORT_FOODS"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 22 unique foods with base score 50",
+        "value": "22"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 5 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted, Nutty & Toasty, Sweet, Floral, Earthy"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "27 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Dark Chocolate, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.713Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Ali Shan Oolong",
@@ -431,7 +959,84 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Root Vegetables",
+          "Grilled Meats",
+          "Dark Chocolate"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "vegetables",
+        "foods": [
+          "Root Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Dark Chocolate"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Floral",
@@ -448,8 +1053,63 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 19, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 19 unique foods with base score 50",
+        "value": "19"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Nutty & Toasty, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "24 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Root Vegetables, Grilled Meats, Dark Chocolate, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.716Z"
+    "rendererVersion": "2.0"
   }
 ]

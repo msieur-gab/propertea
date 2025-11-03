@@ -234,15 +234,19 @@ async function runRecommendationPipeline(formData, renderers, format) {
     };
   }
   if (renderers.includes('food')) {
-    const result = new FoodRenderer().render(allInferences.flavor);
+    const result = new FoodRenderer().render({
+      flavor: allInferences.flavor,
+      compound: allInferences.compound,
+      teaType: allInferences.teaType
+    });
     recommendations.food = result.recommendations || [];
   }
   if (renderers.includes('time')) {
     // Time recommendations: 85% compound profile + 15% tea type tradition
-    const result = new TimeRenderer().render(
-      allInferences.compound,
-      allInferences.teaType
-    );
+    const result = new TimeRenderer().render({
+      compound: allInferences.compound,
+      teaType: allInferences.teaType
+    });
     // Return full result with analysis and weighting information
     recommendations.time = {
       recommendations: result.recommendations || [],
@@ -258,10 +262,11 @@ async function runRecommendationPipeline(formData, renderers, format) {
   if (renderers.includes('season')) {
     // Simplified seasonal rendering: uses only tea type and processing method
     // Seasonal affinity comes from the tea's intrinsic nature, not geography or flavor
-    const result = new SeasonRenderer().render(
-      allInferences.teaType,
-      allInferences.processing
-    );
+    const result = new SeasonRenderer().render({
+      teaType: allInferences.teaType,
+      processing: allInferences.processing,
+      geography: allInferences.geography
+    });
     // Preserve full SeasonRenderer result including circularYear and monthlyScores for 12-month visualization
     recommendations.season = {
       recommendations: result.recommendations || [],
@@ -276,12 +281,12 @@ async function runRecommendationPipeline(formData, renderers, format) {
   }
   if (renderers.includes('brewing')) {
     // Brewing recommendations: Tea Type + Processing + Geography + Compound
-    const result = new BrewingRenderer().render(
-      formData,
-      allInferences.processing,
-      allInferences.geography,
-      allInferences.compound
-    );
+    const result = new BrewingRenderer().render({
+      formData: formData,
+      processing: allInferences.processing,
+      geography: allInferences.geography,
+      compound: allInferences.compound
+    });
     // Preserve full BrewingRenderer result with brewing styles, parameters, and reasoning
     recommendations.brewing = {
       brewingStyles: result.brewingStyles || [],
@@ -294,13 +299,13 @@ async function runRecommendationPipeline(formData, renderers, format) {
   }
   if (renderers.includes('terroir')) {
     // Terroir narrative: Geography + Tea Type + FormData (location) + optional Compound and Flavor context
-    const result = new TerroirRenderer().render(
-      allInferences.geography,
-      allInferences.teaType,
-      formData,
-      allInferences.compound,
-      allInferences.flavor
-    );
+    const result = new TerroirRenderer().render({
+      geography: allInferences.geography,
+      teaType: allInferences.teaType,
+      formData: formData,
+      compound: allInferences.compound,
+      flavor: allInferences.flavor
+    });
     // Preserve full TerroirRenderer result with narrative sections and influences
     recommendations.terroir = {
       narrative: result.narrative || '',

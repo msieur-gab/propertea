@@ -1,0 +1,302 @@
+[
+  {
+    "teaName": "Keemun",
+    "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
+    "type": "black",
+    "subType": "keemun",
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "floral",
+      "sweet",
+      "smoky"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4,
+          "reasoning": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.752Z"
+  },
+  {
+    "teaName": "Dian Hong",
+    "originalName": "滇红 (Diān Hóng)",
+    "type": "black",
+    "subType": "dian-hong",
+    "flavorProfile": [
+      "malty",
+      "honey",
+      "sweet",
+      "chocolate",
+      "dried fruit"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4,
+          "reasoning": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.752Z"
+  },
+  {
+    "teaName": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "black",
+    "subType": "jin-jun-mei",
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "floral",
+      "fruity",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4,
+          "reasoning": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.753Z"
+  },
+  {
+    "teaName": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
+    "type": "black",
+    "subType": "lapsang-souchong",
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "dried fruit",
+      "tobacco"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4,
+          "reasoning": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.753Z"
+  },
+  {
+    "teaName": "Yingde Hong",
+    "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
+    "type": "black",
+    "subType": "yingde-hong",
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "robust"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 12 seconds\n- Leaf Amount: 6g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 95°C (203°F)\n- Steep Time: 210 seconds\n- Leaf Amount: 4g per 100ml of water\n- Infusions: 1\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 12,
+          "gramsPer100ml": 6,
+          "infusions": 4,
+          "reasoning": "Robust black tea extracts fully within 12 seconds at high temperature across multiple brief infusions"
+        },
+        "western": {
+          "temperature": 95,
+          "steepTime": 210,
+          "gramsPer100ml": 4,
+          "infusions": 1,
+          "reasoning": "Full hot water with 3.5-minute steep standard for complete western black tea extraction"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_BLACK"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.753Z"
+  }
+]

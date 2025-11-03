@@ -1,0 +1,1167 @@
+[
+  {
+    "teaName": "Yiwu Sheng",
+    "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "sweet",
+      "herbal",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.55,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 64.525,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Pu'er Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.9
+          },
+          {
+            "hour": 1,
+            "score": 12.9
+          },
+          {
+            "hour": 2,
+            "score": 11.9
+          },
+          {
+            "hour": 3,
+            "score": 11.9
+          },
+          {
+            "hour": 4,
+            "score": 11.9
+          },
+          {
+            "hour": 5,
+            "score": 11.9
+          }
+        ],
+        "averageScore": 12.2,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.075
+          },
+          {
+            "hour": 7,
+            "score": 38.375
+          },
+          {
+            "hour": 6,
+            "score": 36.125
+          }
+        ],
+        "averageScore": 44.5,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 64.525
+          },
+          {
+            "hour": 11,
+            "score": 64.525
+          },
+          {
+            "hour": 9,
+            "score": 62.525000000000006
+          }
+        ],
+        "averageScore": 63.9,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.425
+          },
+          {
+            "hour": 13,
+            "score": 69.425
+          },
+          {
+            "hour": 14,
+            "score": 67.425
+          }
+        ],
+        "averageScore": 69.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.55
+          },
+          {
+            "hour": 16,
+            "score": 61.85
+          },
+          {
+            "hour": 17,
+            "score": 59.15
+          }
+        ],
+        "averageScore": 62.5,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.375
+          },
+          {
+            "hour": 19,
+            "score": 47.375
+          },
+          {
+            "hour": 20,
+            "score": 46.375
+          }
+        ],
+        "averageScore": 47.4,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 43.15
+          },
+          {
+            "hour": 22,
+            "score": 32.9
+          },
+          {
+            "hour": 23,
+            "score": 22.9
+          }
+        ],
+        "averageScore": 33,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.9,
+      12.9,
+      11.9,
+      11.9,
+      11.9,
+      11.9,
+      36.125,
+      38.375,
+      59.075,
+      62.525000000000006,
+      64.525,
+      64.525,
+      72.425,
+      69.425,
+      67.425,
+      66.55,
+      61.85,
+      59.15,
+      48.375,
+      47.375,
+      46.375,
+      43.15,
+      32.9,
+      22.9
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Pu'er Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.586Z"
+  },
+  {
+    "teaName": "Bulang Sheng",
+    "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "bitter",
+      "strong",
+      "herbal",
+      "smoky",
+      "medicinal"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.55,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 64.525,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Pu'er Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.9
+          },
+          {
+            "hour": 1,
+            "score": 12.9
+          },
+          {
+            "hour": 2,
+            "score": 11.9
+          },
+          {
+            "hour": 3,
+            "score": 11.9
+          },
+          {
+            "hour": 4,
+            "score": 11.9
+          },
+          {
+            "hour": 5,
+            "score": 11.9
+          }
+        ],
+        "averageScore": 12.2,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.075
+          },
+          {
+            "hour": 7,
+            "score": 38.375
+          },
+          {
+            "hour": 6,
+            "score": 36.125
+          }
+        ],
+        "averageScore": 44.5,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 64.525
+          },
+          {
+            "hour": 11,
+            "score": 64.525
+          },
+          {
+            "hour": 9,
+            "score": 62.525000000000006
+          }
+        ],
+        "averageScore": 63.9,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.425
+          },
+          {
+            "hour": 13,
+            "score": 69.425
+          },
+          {
+            "hour": 14,
+            "score": 67.425
+          }
+        ],
+        "averageScore": 69.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.55
+          },
+          {
+            "hour": 16,
+            "score": 61.85
+          },
+          {
+            "hour": 17,
+            "score": 59.15
+          }
+        ],
+        "averageScore": 62.5,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.375
+          },
+          {
+            "hour": 19,
+            "score": 47.375
+          },
+          {
+            "hour": 20,
+            "score": 46.375
+          }
+        ],
+        "averageScore": 47.4,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 43.15
+          },
+          {
+            "hour": 22,
+            "score": 32.9
+          },
+          {
+            "hour": 23,
+            "score": 22.9
+          }
+        ],
+        "averageScore": 33,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.9,
+      12.9,
+      11.9,
+      11.9,
+      11.9,
+      11.9,
+      36.125,
+      38.375,
+      59.075,
+      62.525000000000006,
+      64.525,
+      64.525,
+      72.425,
+      69.425,
+      67.425,
+      66.55,
+      61.85,
+      59.15,
+      48.375,
+      47.375,
+      46.375,
+      43.15,
+      32.9,
+      22.9
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Pu'er Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.586Z"
+  },
+  {
+    "teaName": "Banzhang Sheng",
+    "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "powerful",
+      "bitter",
+      "sweet aftertaste",
+      "herbal",
+      "complex"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 81.975,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (optimal for your high-stimulation profile)"
+      },
+      {
+        "hour": 13,
+        "score": 77.975,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (optimal for your high-stimulation profile)"
+      },
+      {
+        "hour": 10,
+        "score": 76.075,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (optimal for your high-stimulation profile)"
+      },
+      {
+        "hour": 11,
+        "score": 76.075,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (optimal for your high-stimulation profile)"
+      },
+      {
+        "hour": 14,
+        "score": 74.975,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (optimal for your high-stimulation profile)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 1
+          },
+          {
+            "hour": 1,
+            "score": 1
+          },
+          {
+            "hour": 2,
+            "score": 1
+          },
+          {
+            "hour": 3,
+            "score": 1
+          },
+          {
+            "hour": 4,
+            "score": 1
+          },
+          {
+            "hour": 5,
+            "score": 1
+          }
+        ],
+        "averageScore": 1,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 67.625
+          },
+          {
+            "hour": 7,
+            "score": 43.375
+          },
+          {
+            "hour": 6,
+            "score": 31.875
+          }
+        ],
+        "averageScore": 47.6,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 76.075
+          },
+          {
+            "hour": 11,
+            "score": 76.075
+          },
+          {
+            "hour": 9,
+            "score": 72.075
+          }
+        ],
+        "averageScore": 74.7,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 81.975
+          },
+          {
+            "hour": 13,
+            "score": 77.975
+          },
+          {
+            "hour": 14,
+            "score": 74.975
+          }
+        ],
+        "averageScore": 78.3,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 72.1
+          },
+          {
+            "hour": 16,
+            "score": 63.85
+          },
+          {
+            "hour": 17,
+            "score": 48.1
+          }
+        ],
+        "averageScore": 61.3,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 18.825
+          },
+          {
+            "hour": 19,
+            "score": 11.575
+          },
+          {
+            "hour": 20,
+            "score": 4.325
+          }
+        ],
+        "averageScore": 11.6,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 2.65
+          },
+          {
+            "hour": 22,
+            "score": 1.9
+          },
+          {
+            "hour": 23,
+            "score": null
+          }
+        ],
+        "averageScore": null,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      31.875,
+      43.375,
+      67.625,
+      72.075,
+      76.075,
+      76.075,
+      81.975,
+      77.975,
+      74.975,
+      72.1,
+      63.85,
+      48.1,
+      18.825,
+      11.575,
+      4.325,
+      2.65,
+      1.9,
+      50
+    ],
+    "analysis": {
+      "compoundProfile": "Focused & Energized",
+      "stimulationLevel": "High",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Pu'er Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.586Z"
+  },
+  {
+    "teaName": "Mengku Sheng",
+    "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fresh",
+      "fruity",
+      "smooth"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.55,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 64.525,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Pu'er Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.9
+          },
+          {
+            "hour": 1,
+            "score": 12.9
+          },
+          {
+            "hour": 2,
+            "score": 11.9
+          },
+          {
+            "hour": 3,
+            "score": 11.9
+          },
+          {
+            "hour": 4,
+            "score": 11.9
+          },
+          {
+            "hour": 5,
+            "score": 11.9
+          }
+        ],
+        "averageScore": 12.2,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.075
+          },
+          {
+            "hour": 7,
+            "score": 38.375
+          },
+          {
+            "hour": 6,
+            "score": 36.125
+          }
+        ],
+        "averageScore": 44.5,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 64.525
+          },
+          {
+            "hour": 11,
+            "score": 64.525
+          },
+          {
+            "hour": 9,
+            "score": 62.525000000000006
+          }
+        ],
+        "averageScore": 63.9,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.425
+          },
+          {
+            "hour": 13,
+            "score": 69.425
+          },
+          {
+            "hour": 14,
+            "score": 67.425
+          }
+        ],
+        "averageScore": 69.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.55
+          },
+          {
+            "hour": 16,
+            "score": 61.85
+          },
+          {
+            "hour": 17,
+            "score": 59.15
+          }
+        ],
+        "averageScore": 62.5,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.375
+          },
+          {
+            "hour": 19,
+            "score": 47.375
+          },
+          {
+            "hour": 20,
+            "score": 46.375
+          }
+        ],
+        "averageScore": 47.4,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 43.15
+          },
+          {
+            "hour": 22,
+            "score": 32.9
+          },
+          {
+            "hour": 23,
+            "score": 22.9
+          }
+        ],
+        "averageScore": 33,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.9,
+      12.9,
+      11.9,
+      11.9,
+      11.9,
+      11.9,
+      36.125,
+      38.375,
+      59.075,
+      62.525000000000006,
+      64.525,
+      64.525,
+      72.425,
+      69.425,
+      67.425,
+      66.55,
+      61.85,
+      59.15,
+      48.375,
+      47.375,
+      46.375,
+      43.15,
+      32.9,
+      22.9
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Pu'er Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.586Z"
+  },
+  {
+    "teaName": "Jingmai Sheng",
+    "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "orchid",
+      "honey",
+      "sweet",
+      "floral",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.425,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.55,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+      },
+      {
+        "hour": 16,
+        "score": 61.85,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 13.9
+          },
+          {
+            "hour": 1,
+            "score": 13.9
+          },
+          {
+            "hour": 2,
+            "score": 11.9
+          },
+          {
+            "hour": 3,
+            "score": 11.9
+          },
+          {
+            "hour": 4,
+            "score": 11.9
+          },
+          {
+            "hour": 5,
+            "score": 11.9
+          }
+        ],
+        "averageScore": 12.6,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 53.075
+          },
+          {
+            "hour": 6,
+            "score": 36.125
+          },
+          {
+            "hour": 7,
+            "score": 32.375
+          }
+        ],
+        "averageScore": 40.5,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 58.525000000000006
+          },
+          {
+            "hour": 11,
+            "score": 58.525000000000006
+          },
+          {
+            "hour": 9,
+            "score": 56.525000000000006
+          }
+        ],
+        "averageScore": 57.9,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.425
+          },
+          {
+            "hour": 13,
+            "score": 69.425
+          },
+          {
+            "hour": 14,
+            "score": 67.425
+          }
+        ],
+        "averageScore": 69.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.55
+          },
+          {
+            "hour": 16,
+            "score": 61.85
+          },
+          {
+            "hour": 17,
+            "score": 60.15
+          }
+        ],
+        "averageScore": 62.9,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 52.375
+          },
+          {
+            "hour": 19,
+            "score": 51.375
+          },
+          {
+            "hour": 18,
+            "score": 50.375
+          }
+        ],
+        "averageScore": 51.4,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 50.15
+          },
+          {
+            "hour": 22,
+            "score": 38.9
+          },
+          {
+            "hour": 23,
+            "score": 22.9
+          }
+        ],
+        "averageScore": 37.3,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      13.9,
+      13.9,
+      11.9,
+      11.9,
+      11.9,
+      11.9,
+      36.125,
+      32.375,
+      53.075,
+      56.525000000000006,
+      58.525000000000006,
+      58.525000000000006,
+      72.425,
+      69.425,
+      67.425,
+      66.55,
+      61.85,
+      60.15,
+      50.375,
+      51.375,
+      52.375,
+      50.15,
+      38.9,
+      22.9
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "High",
+      "teaTypeApplied": true,
+      "teaType": "Pu'er Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.587Z"
+  }
+]

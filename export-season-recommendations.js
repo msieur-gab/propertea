@@ -2,7 +2,7 @@
 
 /**
  * Export Season Recommendations for All Teas
- * Reads all tea JSON files from _dataset/ and generates season recommendations
+ * Reads all tea JSON files from _dataset/ and generates seasonal recommendations
  * Saves results to _dataset/season-recommendations/
  */
 
@@ -11,9 +11,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // Import the tea recommendation pipeline
+import { FlavorInferrer } from './endpoint/src/processors/inferrers/FlavorInferrer.js';
 import { TeaTypeInferrer } from './endpoint/src/processors/inferrers/TeaTypeInferrer.js';
-import { ProcessingInferrer } from './endpoint/src/processors/inferrers/ProcessingInferrer.js';
-import { GeographyInferrer } from './endpoint/src/processors/inferrers/GeographyInferrer.js';
 import { SeasonRenderer } from './endpoint/src/processors/renderers/SeasonRenderer.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -31,36 +30,33 @@ if (!fs.existsSync(outputDir)) {
  */
 async function processTeaForSeason(tea) {
   try {
-    // Run the three required inferrers
-    const [teaTypeResult, processingResult, geographyResult] = await Promise.all([
+    // Run required inferrers in parallel
+    const [flavorResult, teaTypeResult] = await Promise.all([
+      new FlavorInferrer().infer({
+        flavorProfiles: tea.flavorProfile || []
+      }),
       new TeaTypeInferrer().infer({
         type: tea.type,
         subType: tea.subType
-      }),
-      new ProcessingInferrer().infer({
-        processingMethods: tea.processingMethods || []
-      }),
-      new GeographyInferrer().infer({
-        geography: tea.geography || {}
       })
     ]);
 
-    // Render season recommendations using all three sources
-    const seasonResult = new SeasonRenderer().render(
-      teaTypeResult,
-      processingResult,
-      geographyResult
-    );
+    // Render season recommendations with both inferences
+    const seasonResult = new SeasonRenderer().render({
+      teaType: teaTypeResult,
+      processing: null,
+      geography: null
+    });
 
     return {
       teaName: tea.name,
       originalName: tea.originalName,
       type: tea.type,
       subType: tea.subType,
+      flavorProfile: tea.flavorProfile || [],
       recommendations: seasonResult.recommendations || [],
       circularYear: seasonResult.circularYear || [],
-      monthlyScores: seasonResult.monthlyScores || {},
-      seasonalRange: seasonResult.seasonalRange || null,
+      seasonalScores: seasonResult.seasonalScores || {},
       analysis: seasonResult.analysis || {},
       confidence: seasonResult.confidence || 0,
       rendererVersion: seasonResult.rendererVersion || '1.0',
@@ -76,11 +72,11 @@ async function processTeaForSeason(tea) {
  * Main execution
  */
 async function main() {
-  console.log('🌍 Exporting Season Recommendations for All Teas\n');
+  console.log('🍂 Exporting Season Recommendations for All Teas\n');
 
   // Find all JSON files in dataset directory
   const teaFiles = fs.readdirSync(datasetDir)
-    .filter(file => file.endsWith('.json') && !file.includes('activity') && !file.includes('season'))
+    .filter(file => file.endsWith('.json') && !file.includes('activity') && !file.includes('season') && !file.includes('food') && !file.includes('time'))
     .sort();
 
   console.log(`Found ${teaFiles.length} tea files to process:\n`);

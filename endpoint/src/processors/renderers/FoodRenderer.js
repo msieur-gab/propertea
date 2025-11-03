@@ -240,12 +240,19 @@ export class FoodRenderer {
 
   /**
    * Render food pairing recommendations from flavor inference
-   * @param {Object} flavorInference - Output from FlavorInferrer (primary)
-   * @param {Object} compoundInference - Output from CompoundInferrer (astringency context)
-   * @param {Object} teaTypeInference - Output from TeaTypeInferrer (tea-type templates)
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.flavor: Output from FlavorInferrer (primary)
+   *   - inferences.compound: Output from CompoundInferrer (astringency context, optional)
+   *   - inferences.teaType: Output from TeaTypeInferrer (tea-type templates, optional)
    * @returns {Object} - Food pairing recommendations with grouping
    */
-  render(flavorInference, compoundInference = {}, teaTypeInference = {}) {
+  render(inferences = {}) {
+    const {
+      flavor: flavorInference = {},
+      compound: compoundInference = {},
+      teaType: teaTypeInference = {}
+    } = inferences;
+
     const trace = [];
 
     // Extract flavor analysis data

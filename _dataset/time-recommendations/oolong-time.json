@@ -1,0 +1,1167 @@
+[
+  {
+    "teaName": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.775,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Oolong Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 65.2,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.675
+          },
+          {
+            "hour": 1,
+            "score": 12.675
+          },
+          {
+            "hour": 2,
+            "score": 11.675
+          },
+          {
+            "hour": 3,
+            "score": 11.675
+          },
+          {
+            "hour": 4,
+            "score": 11.675
+          },
+          {
+            "hour": 5,
+            "score": 11.675
+          }
+        ],
+        "averageScore": 12,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.525000000000006
+          },
+          {
+            "hour": 7,
+            "score": 38.825
+          },
+          {
+            "hour": 6,
+            "score": 36.575
+          }
+        ],
+        "averageScore": 45,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 65.2
+          },
+          {
+            "hour": 11,
+            "score": 65.2
+          },
+          {
+            "hour": 9,
+            "score": 63.2
+          }
+        ],
+        "averageScore": 64.5,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.875
+          },
+          {
+            "hour": 13,
+            "score": 69.875
+          },
+          {
+            "hour": 14,
+            "score": 67.875
+          }
+        ],
+        "averageScore": 70.2,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.775
+          },
+          {
+            "hour": 16,
+            "score": 62.075
+          },
+          {
+            "hour": 17,
+            "score": 59.375
+          }
+        ],
+        "averageScore": 62.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.15
+          },
+          {
+            "hour": 19,
+            "score": 47.15
+          },
+          {
+            "hour": 20,
+            "score": 46.15
+          }
+        ],
+        "averageScore": 47.1,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 42.25
+          },
+          {
+            "hour": 22,
+            "score": 32
+          },
+          {
+            "hour": 23,
+            "score": 22
+          }
+        ],
+        "averageScore": 32.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Oolong Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.579Z"
+  },
+  {
+    "teaName": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.775,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Oolong Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 65.2,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.675
+          },
+          {
+            "hour": 1,
+            "score": 12.675
+          },
+          {
+            "hour": 2,
+            "score": 11.675
+          },
+          {
+            "hour": 3,
+            "score": 11.675
+          },
+          {
+            "hour": 4,
+            "score": 11.675
+          },
+          {
+            "hour": 5,
+            "score": 11.675
+          }
+        ],
+        "averageScore": 12,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.525000000000006
+          },
+          {
+            "hour": 7,
+            "score": 38.825
+          },
+          {
+            "hour": 6,
+            "score": 36.575
+          }
+        ],
+        "averageScore": 45,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 65.2
+          },
+          {
+            "hour": 11,
+            "score": 65.2
+          },
+          {
+            "hour": 9,
+            "score": 63.2
+          }
+        ],
+        "averageScore": 64.5,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.875
+          },
+          {
+            "hour": 13,
+            "score": 69.875
+          },
+          {
+            "hour": 14,
+            "score": 67.875
+          }
+        ],
+        "averageScore": 70.2,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.775
+          },
+          {
+            "hour": 16,
+            "score": 62.075
+          },
+          {
+            "hour": 17,
+            "score": 59.375
+          }
+        ],
+        "averageScore": 62.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.15
+          },
+          {
+            "hour": 19,
+            "score": 47.15
+          },
+          {
+            "hour": 20,
+            "score": 46.15
+          }
+        ],
+        "averageScore": 47.1,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 42.25
+          },
+          {
+            "hour": 22,
+            "score": 32
+          },
+          {
+            "hour": 23,
+            "score": 22
+          }
+        ],
+        "averageScore": 32.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Oolong Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.580Z"
+  },
+  {
+    "teaName": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.775,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Oolong Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 65.2,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.675
+          },
+          {
+            "hour": 1,
+            "score": 12.675
+          },
+          {
+            "hour": 2,
+            "score": 11.675
+          },
+          {
+            "hour": 3,
+            "score": 11.675
+          },
+          {
+            "hour": 4,
+            "score": 11.675
+          },
+          {
+            "hour": 5,
+            "score": 11.675
+          }
+        ],
+        "averageScore": 12,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.525000000000006
+          },
+          {
+            "hour": 7,
+            "score": 38.825
+          },
+          {
+            "hour": 6,
+            "score": 36.575
+          }
+        ],
+        "averageScore": 45,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 65.2
+          },
+          {
+            "hour": 11,
+            "score": 65.2
+          },
+          {
+            "hour": 9,
+            "score": 63.2
+          }
+        ],
+        "averageScore": 64.5,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.875
+          },
+          {
+            "hour": 13,
+            "score": 69.875
+          },
+          {
+            "hour": 14,
+            "score": 67.875
+          }
+        ],
+        "averageScore": 70.2,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.775
+          },
+          {
+            "hour": 16,
+            "score": 62.075
+          },
+          {
+            "hour": 17,
+            "score": 59.375
+          }
+        ],
+        "averageScore": 62.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.15
+          },
+          {
+            "hour": 19,
+            "score": 47.15
+          },
+          {
+            "hour": 20,
+            "score": 46.15
+          }
+        ],
+        "averageScore": 47.1,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 42.25
+          },
+          {
+            "hour": 22,
+            "score": 32
+          },
+          {
+            "hour": 23,
+            "score": 22
+          }
+        ],
+        "averageScore": 32.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Oolong Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.580Z"
+  },
+  {
+    "teaName": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 72.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 69.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 67.875,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 66.775,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Oolong Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 65.2,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.675
+          },
+          {
+            "hour": 1,
+            "score": 12.675
+          },
+          {
+            "hour": 2,
+            "score": 11.675
+          },
+          {
+            "hour": 3,
+            "score": 11.675
+          },
+          {
+            "hour": 4,
+            "score": 11.675
+          },
+          {
+            "hour": 5,
+            "score": 11.675
+          }
+        ],
+        "averageScore": 12,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 59.525000000000006
+          },
+          {
+            "hour": 7,
+            "score": 38.825
+          },
+          {
+            "hour": 6,
+            "score": 36.575
+          }
+        ],
+        "averageScore": 45,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 65.2
+          },
+          {
+            "hour": 11,
+            "score": 65.2
+          },
+          {
+            "hour": 9,
+            "score": 63.2
+          }
+        ],
+        "averageScore": 64.5,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 72.875
+          },
+          {
+            "hour": 13,
+            "score": 69.875
+          },
+          {
+            "hour": 14,
+            "score": 67.875
+          }
+        ],
+        "averageScore": 70.2,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.775
+          },
+          {
+            "hour": 16,
+            "score": 62.075
+          },
+          {
+            "hour": 17,
+            "score": 59.375
+          }
+        ],
+        "averageScore": 62.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 48.15
+          },
+          {
+            "hour": 19,
+            "score": 47.15
+          },
+          {
+            "hour": 20,
+            "score": 46.15
+          }
+        ],
+        "averageScore": 47.1,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 42.25
+          },
+          {
+            "hour": 22,
+            "score": 32
+          },
+          {
+            "hour": 23,
+            "score": 22
+          }
+        ],
+        "averageScore": 32.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.675,
+      12.675,
+      11.675,
+      11.675,
+      11.675,
+      11.675,
+      36.575,
+      38.825,
+      59.525000000000006,
+      63.2,
+      65.2,
+      65.2,
+      72.875,
+      69.875,
+      67.875,
+      66.775,
+      62.075,
+      59.375,
+      48.15,
+      47.15,
+      46.15,
+      42.25,
+      32,
+      22
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Oolong Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.583Z"
+  },
+  {
+    "teaName": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 65.475,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 63.474999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 62.474999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 15,
+        "score": 61.375,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 16,
+        "score": 60.375,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 25.925
+          },
+          {
+            "hour": 1,
+            "score": 25.925
+          },
+          {
+            "hour": 2,
+            "score": 23.925
+          },
+          {
+            "hour": 3,
+            "score": 23.925
+          },
+          {
+            "hour": 4,
+            "score": 23.925
+          },
+          {
+            "hour": 5,
+            "score": 23.925
+          }
+        ],
+        "averageScore": 24.6,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 47.125
+          },
+          {
+            "hour": 6,
+            "score": 42.525000000000006
+          },
+          {
+            "hour": 7,
+            "score": 35.075
+          }
+        ],
+        "averageScore": 41.6,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 50.8
+          },
+          {
+            "hour": 11,
+            "score": 50.8
+          },
+          {
+            "hour": 9,
+            "score": 49.8
+          }
+        ],
+        "averageScore": 50.5,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 65.475
+          },
+          {
+            "hour": 13,
+            "score": 63.474999999999994
+          },
+          {
+            "hour": 14,
+            "score": 62.474999999999994
+          }
+        ],
+        "averageScore": 63.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 61.375
+          },
+          {
+            "hour": 16,
+            "score": 60.375
+          },
+          {
+            "hour": 17,
+            "score": 60.375
+          }
+        ],
+        "averageScore": 60.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 56.6
+          },
+          {
+            "hour": 19,
+            "score": 56.15
+          },
+          {
+            "hour": 18,
+            "score": 54.15
+          }
+        ],
+        "averageScore": 55.6,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 55.55
+          },
+          {
+            "hour": 22,
+            "score": 47
+          },
+          {
+            "hour": 23,
+            "score": 32
+          }
+        ],
+        "averageScore": 44.9,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      25.925,
+      25.925,
+      23.925,
+      23.925,
+      23.925,
+      23.925,
+      42.525000000000006,
+      35.075,
+      47.125,
+      49.8,
+      50.8,
+      50.8,
+      65.475,
+      63.474999999999994,
+      62.474999999999994,
+      61.375,
+      60.375,
+      60.375,
+      54.15,
+      56.15,
+      56.6,
+      55.55,
+      47,
+      32
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaTypeApplied": true,
+      "teaType": "Oolong Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.583Z"
+  }
+]

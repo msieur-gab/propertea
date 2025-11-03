@@ -1,0 +1,182 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "flavorProfile": [
+      "sweet",
+      "delicate",
+      "floral",
+      "honey",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 30 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 120 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.767Z"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "floral",
+      "smooth",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 30 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 120 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.767Z"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "smooth",
+      "floral",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 75°C (167°F)\n- Steep Time: 30 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n",
+        "score": 70
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 80°C (176°F)\n- Steep Time: 120 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n",
+        "score": 67
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "confidence": 0.7,
+    "rendererVersion": "3.0",
+    "generatedAt": "2025-11-03T09:14:49.767Z"
+  }
+]

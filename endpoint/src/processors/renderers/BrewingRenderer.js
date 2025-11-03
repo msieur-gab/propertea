@@ -25,14 +25,23 @@ export class BrewingRenderer {
 
   /**
    * Render brewing recommendations from tea data and inference results
-   * @param {Object} formData - Tea data { name, type, subType }
-   * @param {Object} processingInference - Output from ProcessingInferrer
-   * @param {Object} geographyInference - Output from GeographyInferrer
-   * @param {Object} compoundInference - Output from CompoundInferrer
-   * @param {string} brewingStyle - Preferred style (gongfu or western, default: gongfu)
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.formData: Tea data { name, type, subType } (required)
+   *   - inferences.processing: Output from ProcessingInferrer
+   *   - inferences.geography: Output from GeographyInferrer
+   *   - inferences.compound: Output from CompoundInferrer
+   *   - inferences.brewingStyle: Preferred style (gongfu or western, default: gongfu)
    * @returns {Object} - Brewing recommendations with parameters and reasoning
    */
-  render(formData = {}, processingInference = {}, geographyInference = {}, compoundInference = {}, brewingStyle = 'gongfu') {
+  render(inferences = {}) {
+    const {
+      formData = {},
+      processing: processingInference = {},
+      geography: geographyInference = {},
+      compound: compoundInference = {},
+      brewingStyle = 'gongfu'
+    } = inferences;
+
     const trace = [];
 
     // ========== VALIDATION ==========

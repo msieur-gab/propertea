@@ -1,0 +1,1167 @@
+[
+  {
+    "teaName": "Longjing",
+    "originalName": "龙井 (Lóng Jǐng)",
+    "type": "green",
+    "subType": "longjing",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 73.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 70.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 68.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      },
+      {
+        "hour": 11,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.225
+          },
+          {
+            "hour": 1,
+            "score": 12.225
+          },
+          {
+            "hour": 2,
+            "score": 11.225
+          },
+          {
+            "hour": 3,
+            "score": 11.225
+          },
+          {
+            "hour": 4,
+            "score": 11.225
+          },
+          {
+            "hour": 5,
+            "score": 11.225
+          }
+        ],
+        "averageScore": 11.6,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 60.650000000000006
+          },
+          {
+            "hour": 7,
+            "score": 39.95
+          },
+          {
+            "hour": 6,
+            "score": 37.7
+          }
+        ],
+        "averageScore": 46.1,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 67
+          },
+          {
+            "hour": 11,
+            "score": 67
+          },
+          {
+            "hour": 9,
+            "score": 65
+          }
+        ],
+        "averageScore": 66.3,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 73.775
+          },
+          {
+            "hour": 13,
+            "score": 70.775
+          },
+          {
+            "hour": 14,
+            "score": 68.775
+          }
+        ],
+        "averageScore": 71.1,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.325
+          },
+          {
+            "hour": 16,
+            "score": 61.625
+          },
+          {
+            "hour": 17,
+            "score": 58.925
+          }
+        ],
+        "averageScore": 62.3,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 45.675
+          },
+          {
+            "hour": 19,
+            "score": 44.675
+          },
+          {
+            "hour": 20,
+            "score": 43.675
+          }
+        ],
+        "averageScore": 44.7,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 40.45
+          },
+          {
+            "hour": 22,
+            "score": 30.2
+          },
+          {
+            "hour": 23,
+            "score": 20.2
+          }
+        ],
+        "averageScore": 30.3,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      37.7,
+      39.95,
+      60.650000000000006,
+      65,
+      67,
+      67,
+      73.775,
+      70.775,
+      68.775,
+      66.325,
+      61.625,
+      58.925,
+      45.675,
+      44.675,
+      43.675,
+      40.45,
+      30.2,
+      20.2
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Green Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.574Z"
+  },
+  {
+    "teaName": "Biluochun",
+    "originalName": "碧螺春 (Bì Luó Chūn)",
+    "type": "green",
+    "subType": "biluochun",
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 70.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 67.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 65.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 15,
+        "score": 62.925,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Green Tea tradition)"
+      },
+      {
+        "hour": 16,
+        "score": 59.925,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (Green Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 17.475
+          },
+          {
+            "hour": 1,
+            "score": 17.475
+          },
+          {
+            "hour": 2,
+            "score": 15.475
+          },
+          {
+            "hour": 3,
+            "score": 15.475
+          },
+          {
+            "hour": 4,
+            "score": 15.475
+          },
+          {
+            "hour": 5,
+            "score": 15.475
+          }
+        ],
+        "averageScore": 16.1,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 51.25
+          },
+          {
+            "hour": 6,
+            "score": 43.650000000000006
+          },
+          {
+            "hour": 7,
+            "score": 38.2
+          }
+        ],
+        "averageScore": 44.4,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 57.599999999999994
+          },
+          {
+            "hour": 11,
+            "score": 57.599999999999994
+          },
+          {
+            "hour": 9,
+            "score": 55.599999999999994
+          }
+        ],
+        "averageScore": 56.9,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 70.375
+          },
+          {
+            "hour": 13,
+            "score": 67.375
+          },
+          {
+            "hour": 14,
+            "score": 65.375
+          }
+        ],
+        "averageScore": 67.7,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 62.925
+          },
+          {
+            "hour": 16,
+            "score": 59.925
+          },
+          {
+            "hour": 17,
+            "score": 59.925
+          }
+        ],
+        "averageScore": 60.9,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 19,
+            "score": 48.675
+          },
+          {
+            "hour": 18,
+            "score": 47.675
+          },
+          {
+            "hour": 20,
+            "score": 47.125
+          }
+        ],
+        "averageScore": 47.8,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 45.75
+          },
+          {
+            "hour": 22,
+            "score": 36.2
+          },
+          {
+            "hour": 23,
+            "score": 20.2
+          }
+        ],
+        "averageScore": 34.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      17.475,
+      17.475,
+      15.475,
+      15.475,
+      15.475,
+      15.475,
+      43.650000000000006,
+      38.2,
+      51.25,
+      55.599999999999994,
+      57.599999999999994,
+      57.599999999999994,
+      70.375,
+      67.375,
+      65.375,
+      62.925,
+      59.925,
+      59.925,
+      47.675,
+      48.675,
+      47.125,
+      45.75,
+      36.2,
+      20.2
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "High",
+      "teaTypeApplied": true,
+      "teaType": "Green Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.574Z"
+  },
+  {
+    "teaName": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+    "type": "green",
+    "subType": "huangshan-maofeng",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "floral"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 73.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 70.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 68.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      },
+      {
+        "hour": 11,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.225
+          },
+          {
+            "hour": 1,
+            "score": 12.225
+          },
+          {
+            "hour": 2,
+            "score": 11.225
+          },
+          {
+            "hour": 3,
+            "score": 11.225
+          },
+          {
+            "hour": 4,
+            "score": 11.225
+          },
+          {
+            "hour": 5,
+            "score": 11.225
+          }
+        ],
+        "averageScore": 11.6,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 60.650000000000006
+          },
+          {
+            "hour": 7,
+            "score": 39.95
+          },
+          {
+            "hour": 6,
+            "score": 37.7
+          }
+        ],
+        "averageScore": 46.1,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 67
+          },
+          {
+            "hour": 11,
+            "score": 67
+          },
+          {
+            "hour": 9,
+            "score": 65
+          }
+        ],
+        "averageScore": 66.3,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 73.775
+          },
+          {
+            "hour": 13,
+            "score": 70.775
+          },
+          {
+            "hour": 14,
+            "score": 68.775
+          }
+        ],
+        "averageScore": 71.1,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.325
+          },
+          {
+            "hour": 16,
+            "score": 61.625
+          },
+          {
+            "hour": 17,
+            "score": 58.925
+          }
+        ],
+        "averageScore": 62.3,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 45.675
+          },
+          {
+            "hour": 19,
+            "score": 44.675
+          },
+          {
+            "hour": 20,
+            "score": 43.675
+          }
+        ],
+        "averageScore": 44.7,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 40.45
+          },
+          {
+            "hour": 22,
+            "score": 30.2
+          },
+          {
+            "hour": 23,
+            "score": 20.2
+          }
+        ],
+        "averageScore": 30.3,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      37.7,
+      39.95,
+      60.650000000000006,
+      65,
+      67,
+      67,
+      73.775,
+      70.775,
+      68.775,
+      66.325,
+      61.625,
+      58.925,
+      45.675,
+      44.675,
+      43.675,
+      40.45,
+      30.2,
+      20.2
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Green Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.575Z"
+  },
+  {
+    "teaName": "Xinyang Maojian",
+    "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+    "type": "green",
+    "subType": "xinyang-maojian",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "brisk"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 73.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 70.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 68.775,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Green Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      },
+      {
+        "hour": 11,
+        "score": 67,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Green Tea tradition)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 12.225
+          },
+          {
+            "hour": 1,
+            "score": 12.225
+          },
+          {
+            "hour": 2,
+            "score": 11.225
+          },
+          {
+            "hour": 3,
+            "score": 11.225
+          },
+          {
+            "hour": 4,
+            "score": 11.225
+          },
+          {
+            "hour": 5,
+            "score": 11.225
+          }
+        ],
+        "averageScore": 11.6,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 60.650000000000006
+          },
+          {
+            "hour": 7,
+            "score": 39.95
+          },
+          {
+            "hour": 6,
+            "score": 37.7
+          }
+        ],
+        "averageScore": 46.1,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 67
+          },
+          {
+            "hour": 11,
+            "score": 67
+          },
+          {
+            "hour": 9,
+            "score": 65
+          }
+        ],
+        "averageScore": 66.3,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 73.775
+          },
+          {
+            "hour": 13,
+            "score": 70.775
+          },
+          {
+            "hour": 14,
+            "score": 68.775
+          }
+        ],
+        "averageScore": 71.1,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 66.325
+          },
+          {
+            "hour": 16,
+            "score": 61.625
+          },
+          {
+            "hour": 17,
+            "score": 58.925
+          }
+        ],
+        "averageScore": 62.3,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 45.675
+          },
+          {
+            "hour": 19,
+            "score": 44.675
+          },
+          {
+            "hour": 20,
+            "score": 43.675
+          }
+        ],
+        "averageScore": 44.7,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 40.45
+          },
+          {
+            "hour": 22,
+            "score": 30.2
+          },
+          {
+            "hour": 23,
+            "score": 20.2
+          }
+        ],
+        "averageScore": 30.3,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      12.225,
+      12.225,
+      11.225,
+      11.225,
+      11.225,
+      11.225,
+      37.7,
+      39.95,
+      60.650000000000006,
+      65,
+      67,
+      67,
+      73.775,
+      70.775,
+      68.775,
+      66.325,
+      61.625,
+      58.925,
+      45.675,
+      44.675,
+      43.675,
+      40.45,
+      30.2,
+      20.2
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaTypeApplied": true,
+      "teaType": "Green Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.576Z"
+  },
+  {
+    "teaName": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+    "type": "green",
+    "subType": "taiping-houkui",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "lingering"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 66.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 64.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 63.375,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 15,
+        "score": 60.925,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 16,
+        "score": 59.925,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      }
+    ],
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 25.475
+          },
+          {
+            "hour": 1,
+            "score": 25.475
+          },
+          {
+            "hour": 2,
+            "score": 23.475
+          },
+          {
+            "hour": 3,
+            "score": 23.475
+          },
+          {
+            "hour": 4,
+            "score": 23.475
+          },
+          {
+            "hour": 5,
+            "score": 23.475
+          }
+        ],
+        "averageScore": 24.1,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 48.25
+          },
+          {
+            "hour": 6,
+            "score": 43.650000000000006
+          },
+          {
+            "hour": 7,
+            "score": 36.2
+          }
+        ],
+        "averageScore": 42.7,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 52.599999999999994
+          },
+          {
+            "hour": 11,
+            "score": 52.599999999999994
+          },
+          {
+            "hour": 9,
+            "score": 51.599999999999994
+          }
+        ],
+        "averageScore": 52.3,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 66.375
+          },
+          {
+            "hour": 13,
+            "score": 64.375
+          },
+          {
+            "hour": 14,
+            "score": 63.375
+          }
+        ],
+        "averageScore": 64.7,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 60.925
+          },
+          {
+            "hour": 16,
+            "score": 59.925
+          },
+          {
+            "hour": 17,
+            "score": 59.925
+          }
+        ],
+        "averageScore": 60.3,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 54.125
+          },
+          {
+            "hour": 19,
+            "score": 53.675
+          },
+          {
+            "hour": 18,
+            "score": 51.675
+          }
+        ],
+        "averageScore": 53.2,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 53.75
+          },
+          {
+            "hour": 22,
+            "score": 45.2
+          },
+          {
+            "hour": 23,
+            "score": 30.2
+          }
+        ],
+        "averageScore": 43.1,
+        "count": 3
+      }
+    },
+    "circadianCurve": [
+      25.475,
+      25.475,
+      23.475,
+      23.475,
+      23.475,
+      23.475,
+      43.650000000000006,
+      36.2,
+      48.25,
+      51.599999999999994,
+      52.599999999999994,
+      52.599999999999994,
+      66.375,
+      64.375,
+      63.375,
+      60.925,
+      59.925,
+      59.925,
+      51.675,
+      53.675,
+      54.125,
+      53.75,
+      45.2,
+      30.2
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaTypeApplied": true,
+      "teaType": "Green Tea",
+      "weighting": {
+        "compound": "85%",
+        "teaType": "15%",
+        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+      }
+    },
+    "confidence": 0.95,
+    "rendererVersion": "1.0",
+    "generatedAt": "2025-11-03T09:14:33.576Z"
+  }
+]

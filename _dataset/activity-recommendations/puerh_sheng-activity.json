@@ -4,6 +4,13 @@
     "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
     "type": "puerh",
     "subType": "puerh-sheng",
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "sweet",
+      "herbal",
+      "mineral"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -85,15 +92,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 12",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Focus, Refreshment"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.124Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Bulang Sheng",
     "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
     "type": "puerh",
     "subType": "puerh-sheng",
+    "flavorProfile": [
+      "bitter",
+      "strong",
+      "herbal",
+      "smoky",
+      "medicinal"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -175,15 +238,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 6",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 6 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Bold Experience, Creative"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.125Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Banzhang Sheng",
     "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
     "type": "puerh",
     "subType": "puerh-sheng",
+    "flavorProfile": [
+      "powerful",
+      "bitter",
+      "sweet aftertaste",
+      "herbal",
+      "complex"
+    ],
     "recommendations": [
       {
         "activity": "Focus",
@@ -259,15 +378,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Focused & Energized, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 0",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 0 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Focused & Energized",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: High",
+        "adjustment": "Boosted 8 activities by +7.00",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Focus, Refreshment, Cleansing"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.125Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Mengku Sheng",
     "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
     "type": "puerh",
     "subType": "puerh-sheng",
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fresh",
+      "fruity",
+      "smooth"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -355,15 +530,71 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Warming, Relaxation"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.126Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Jingmai Sheng",
     "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
     "type": "puerh",
     "subType": "puerh-sheng",
+    "flavorProfile": [
+      "orchid",
+      "honey",
+      "sweet",
+      "floral",
+      "delicate"
+    ],
     "recommendations": [
       {
         "activity": "Social",
@@ -451,8 +682,57 @@
         "importance": "Provides context, but individual character comes from flavor"
       }
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 4, Flavor hints: 9",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 9 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 4 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Social, Relaxation, Warming"
+      }
+    ],
     "confidence": 0.855,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T16:29:36.126Z"
+    "rendererVersion": "2.0"
   }
 ]

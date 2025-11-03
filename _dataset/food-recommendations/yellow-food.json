@@ -68,7 +68,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -84,9 +152,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 7, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 7 unique foods with base score 50",
+        "value": "7"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "12 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.779Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Mengding Huangya",
@@ -157,7 +280,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -174,9 +365,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Nutty & Toasty, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.781Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Huoshan Huangya",
@@ -247,7 +493,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Nutty & Toasty",
@@ -264,8 +578,63 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_BAKED_GOODS, FOOD_CHEESE, FOOD_ROASTED_VEGETABLES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Nutty & Toasty, Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.784Z"
+    "rendererVersion": "2.0"
   }
 ]

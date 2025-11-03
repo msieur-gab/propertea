@@ -68,7 +68,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -83,9 +151,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 7, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 7 unique foods with base score 50",
+        "value": "7"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "13 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Light Desserts, White Fish, Fresh Fruit, Rice Cakes, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.70, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.88"
+      }
+    ],
     "confidence": 0.8799999999999999,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.750Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "White Peony",
@@ -156,7 +279,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Floral",
@@ -172,9 +363,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 7, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 7 unique foods with base score 50",
+        "value": "7"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "13 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Light Desserts, White Fish, Fresh Fruit, Rice Cakes, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.758Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Gong Mei",
@@ -245,7 +491,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "Fresh Fruit",
+          "White Fish"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Woody",
@@ -261,9 +575,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 10, Categories: 2",
+        "value": "Sample hints: FOOD_SMOKED_FOODS, FOOD_GRILLED_MEATS, FOOD_CHEESE"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 10 unique foods with base score 50",
+        "value": "10"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Woody, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "16 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Light Desserts, Fresh Fruit, White Fish, Rice Cakes, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.765Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Shou Mei",
@@ -334,7 +703,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "Fresh Fruit",
+          "White Fish"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Woody",
@@ -350,9 +787,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 10, Categories: 2",
+        "value": "Sample hints: FOOD_SMOKED_FOODS, FOOD_GRILLED_MEATS, FOOD_CHEESE"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 10 unique foods with base score 50",
+        "value": "10"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Woody, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "16 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Light Desserts, Fresh Fruit, White Fish, Rice Cakes, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.770Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Moonlight White",
@@ -423,7 +915,75 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "Fresh Fruit",
+          "White Fish"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Rice Cakes"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -439,8 +999,63 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 8, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 8 unique foods with base score 50",
+        "value": "8"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_WHITE",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "15 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Light Desserts, Fresh Fruit, White Fish, Rice Cakes, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.774Z"
+    "rendererVersion": "2.0"
   }
 ]

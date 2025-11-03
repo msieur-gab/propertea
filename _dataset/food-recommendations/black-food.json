@@ -68,7 +68,70 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats",
+          "Dark Chocolate"
+        ],
+        "count": 4
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets",
+          "Dark Chocolate"
+        ],
+        "count": 2
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Floral",
@@ -85,9 +148,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet, Roasted"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Dark Chocolate, Aged Cheese"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.660Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Dian Hong",
@@ -158,7 +276,70 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 4
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets",
+          "Dark Chocolate"
+        ],
+        "count": 2
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet"
@@ -173,9 +354,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 11, Categories: 1",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 11 unique foods with base score 50",
+        "value": "11"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 1 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "15 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Dark Chocolate, Aged Cheese, Grilled Meats"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.674Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Jin Jun Mei",
@@ -246,7 +482,70 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 4
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets",
+          "Dark Chocolate"
+        ],
+        "count": 2
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet",
@@ -262,9 +561,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 15, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 15 unique foods with base score 50",
+        "value": "15"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "19 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Dark Chocolate, Aged Cheese, Grilled Meats"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.676Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Lapsang Souchong",
@@ -335,7 +689,70 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats",
+          "Dark Chocolate"
+        ],
+        "count": 4
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets",
+          "Dark Chocolate"
+        ],
+        "count": 2
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Roasted",
@@ -352,9 +769,64 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_SMOKED_FOODS, FOOD_BBQ, FOOD_STRONG_CHEESE"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted, Woody, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Dark Chocolate, Aged Cheese"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.680Z"
+    "rendererVersion": "2.0"
   },
   {
     "teaName": "Yingde Hong",
@@ -425,7 +897,70 @@
         "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
       }
     ],
-    "categories": {},
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Dark Chocolate",
+          "Grilled Meats"
+        ],
+        "count": 4
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets",
+          "Dark Chocolate"
+        ],
+        "count": 2
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      }
+    ],
     "analysis": {
       "flavorCategories": [
         "Sweet"
@@ -440,8 +975,63 @@
       "teaTypeSpecificBoosts": 5,
       "astringencyBoosts": 4
     },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 11, Categories: 1",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 11 unique foods with base score 50",
+        "value": "11"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 1 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_BLACK",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "15 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Dark Chocolate, Aged Cheese, Grilled Meats"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
     "confidence": 0.95,
-    "rendererVersion": "2.0",
-    "generatedAt": "2025-11-02T18:05:59.683Z"
+    "rendererVersion": "2.0"
   }
 ]

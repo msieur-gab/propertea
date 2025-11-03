@@ -80,11 +80,17 @@ export class TimeRenderer {
 
   /**
    * Render time recommendations from compound + tea type
-   * @param {Object} compoundInference - Output from CompoundInferrer
-   * @param {Object} teaTypeInference - Output from TeaTypeInferrer (optional)
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.compound: Output from CompoundInferrer
+   *   - inferences.teaType: Output from TeaTypeInferrer (optional)
    * @returns {Object} - Time recommendations organized by hour and period
    */
-  render(compoundInference, teaTypeInference = null) {
+  render(inferences = {}) {
+    const {
+      compound: compoundInference = {},
+      teaType: teaTypeInference = null
+    } = inferences;
+
     const trace = [];
 
     // Extract inference data
