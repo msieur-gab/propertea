@@ -14,86 +14,86 @@
     "recommendations": [
       {
         "hour": 12,
-        "score": 66.14999999999999,
+        "score": 66.2,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
       },
       {
         "hour": 13,
-        "score": 64.14999999999999,
+        "score": 63.4,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
       },
       {
         "hour": 14,
-        "score": 63.15,
+        "score": 60.8,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
       },
       {
         "hour": 15,
-        "score": 60.699999999999996,
+        "score": 57.400000000000006,
         "timeOfDay": "Afternoon (15-17)",
         "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
       },
       {
         "hour": 16,
-        "score": 59.699999999999996,
+        "score": 54.800000000000004,
         "timeOfDay": "Afternoon (15-17)",
         "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
       }
     ],
     "circadianCurve": [
-      25.7,
-      25.7,
-      23.7,
-      23.7,
-      23.7,
-      23.7,
-      43.425000000000004,
-      35.975,
-      48.025,
-      51.375,
-      52.375,
-      52.375,
-      66.14999999999999,
-      64.14999999999999,
-      63.15,
-      60.699999999999996,
-      59.699999999999996,
-      59.699999999999996,
-      51.9,
-      53.9,
-      54.35,
-      53.974999999999994,
-      45.425,
-      30.425
+      23.200000000000003,
+      23.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      53.5,
+      41.099999999999994,
+      46.099999999999994,
+      50.7,
+      53.300000000000004,
+      53.300000000000004,
+      66.2,
+      63.4,
+      60.8,
+      57.400000000000006,
+      54.800000000000004,
+      54,
+      42.4,
+      46,
+      49.8,
+      48.5,
+      37.699999999999996,
+      17.9
     ],
     "hourlyScores": {
-      "0": 25.7,
-      "1": 25.7,
-      "2": 23.7,
-      "3": 23.7,
-      "4": 23.7,
-      "5": 23.7,
-      "6": 43.425000000000004,
-      "7": 35.975,
-      "8": 48.025,
-      "9": 51.375,
-      "10": 52.375,
-      "11": 52.375,
-      "12": 66.14999999999999,
-      "13": 64.14999999999999,
-      "14": 63.15,
-      "15": 60.699999999999996,
-      "16": 59.699999999999996,
-      "17": 59.699999999999996,
-      "18": 51.9,
-      "19": 53.9,
-      "20": 54.35,
-      "21": 53.974999999999994,
-      "22": 45.425,
-      "23": 30.425
+      "0": 23.200000000000003,
+      "1": 23.200000000000003,
+      "2": 21.200000000000003,
+      "3": 21.200000000000003,
+      "4": 21.200000000000003,
+      "5": 21.200000000000003,
+      "6": 53.5,
+      "7": 41.099999999999994,
+      "8": 46.099999999999994,
+      "9": 50.7,
+      "10": 53.300000000000004,
+      "11": 53.300000000000004,
+      "12": 66.2,
+      "13": 63.4,
+      "14": 60.8,
+      "15": 57.400000000000006,
+      "16": 54.800000000000004,
+      "17": 54,
+      "18": 42.4,
+      "19": 46,
+      "20": 49.8,
+      "21": 48.5,
+      "22": 37.699999999999996,
+      "23": 17.9
     },
     "periodGrouping": {
       "night": {
@@ -101,49 +101,49 @@
         "hours": [
           {
             "hour": 0,
-            "score": 25.7
+            "score": 23.200000000000003
           },
           {
             "hour": 1,
-            "score": 25.7
+            "score": 23.200000000000003
           },
           {
             "hour": 2,
-            "score": 23.7
+            "score": 21.200000000000003
           },
           {
             "hour": 3,
-            "score": 23.7
+            "score": 21.200000000000003
           },
           {
             "hour": 4,
-            "score": 23.7
+            "score": 21.200000000000003
           },
           {
             "hour": 5,
-            "score": 23.7
+            "score": 21.200000000000003
           }
         ],
-        "averageScore": 24.4,
+        "averageScore": 21.9,
         "count": 6
       },
       "early_morning": {
         "period": "Early Morning (6-8)",
         "hours": [
           {
-            "hour": 8,
-            "score": 48.025
+            "hour": 6,
+            "score": 53.5
           },
           {
-            "hour": 6,
-            "score": 43.425000000000004
+            "hour": 8,
+            "score": 46.099999999999994
           },
           {
             "hour": 7,
-            "score": 35.975
+            "score": 41.099999999999994
           }
         ],
-        "averageScore": 42.5,
+        "averageScore": 46.9,
         "count": 3
       },
       "morning": {
@@ -151,18 +151,18 @@
         "hours": [
           {
             "hour": 10,
-            "score": 52.375
+            "score": 53.300000000000004
           },
           {
             "hour": 11,
-            "score": 52.375
+            "score": 53.300000000000004
           },
           {
             "hour": 9,
-            "score": 51.375
+            "score": 50.7
           }
         ],
-        "averageScore": 52,
+        "averageScore": 52.4,
         "count": 3
       },
       "midday": {
@@ -170,18 +170,18 @@
         "hours": [
           {
             "hour": 12,
-            "score": 66.14999999999999
+            "score": 66.2
           },
           {
             "hour": 13,
-            "score": 64.14999999999999
+            "score": 63.4
           },
           {
             "hour": 14,
-            "score": 63.15
+            "score": 60.8
           }
         ],
-        "averageScore": 64.5,
+        "averageScore": 63.5,
         "count": 3
       },
       "afternoon": {
@@ -189,18 +189,18 @@
         "hours": [
           {
             "hour": 15,
-            "score": 60.699999999999996
+            "score": 57.400000000000006
           },
           {
             "hour": 16,
-            "score": 59.699999999999996
+            "score": 54.800000000000004
           },
           {
             "hour": 17,
-            "score": 59.699999999999996
+            "score": 54
           }
         ],
-        "averageScore": 60,
+        "averageScore": 55.4,
         "count": 3
       },
       "evening": {
@@ -208,18 +208,18 @@
         "hours": [
           {
             "hour": 20,
-            "score": 54.35
+            "score": 49.8
           },
           {
             "hour": 19,
-            "score": 53.9
+            "score": 46
           },
           {
             "hour": 18,
-            "score": 51.9
+            "score": 42.4
           }
         ],
-        "averageScore": 53.4,
+        "averageScore": 46.1,
         "count": 3
       },
       "late_evening": {
@@ -227,18 +227,18 @@
         "hours": [
           {
             "hour": 21,
-            "score": 53.974999999999994
+            "score": 48.5
           },
           {
             "hour": 22,
-            "score": 45.425
+            "score": 37.699999999999996
           },
           {
             "hour": 23,
-            "score": 30.425
+            "score": 17.9
           }
         ],
-        "averageScore": 43.3,
+        "averageScore": 34.7,
         "count": 3
       }
     },
@@ -246,19 +246,24 @@
       "compoundProfile": "Smooth & Sustained",
       "stimulationLevel": "Low",
       "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 3.5,
+        "lTheanineLevel": 6,
+        "ratio": 1.7142857142857142
+      },
       "teaTypeApplied": true,
       "teaType": "Yellow Tea",
       "weighting": {
-        "compound": "85%",
-        "teaType": "15%",
-        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
       }
     },
     "trace": [
       {
         "step": "Data Reception",
-        "reason": "Received compound inference",
-        "adjustment": "Profile: Smooth & Sustained, Stimulation: Low, Relaxation: High",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 3.5, L-Theanine: 6 | Profile: Smooth & Sustained",
         "value": "Inference validated"
       },
       {
@@ -280,22 +285,22 @@
         "value": "Total adjustments: 144"
       },
       {
-        "step": "Compound Profile Scoring (85%)",
-        "reason": "Compound profile: Smooth & Sustained",
-        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
-        "value": "Total adjustments: 177"
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 1.71 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 172"
       },
       {
-        "step": "Tea Type Tradition Scoring (15%)",
+        "step": "Tea Type Tradition Scoring (20%)",
         "reason": "Tea type: Yellow Tea (cultural tradition)",
-        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
         "value": "Total adjustments: 203"
       },
       {
         "step": "Final Selection",
         "reason": "Selected top hours",
         "adjustment": "Selected 5 top hours",
-        "value": "12:00 (66), 13:00 (64), 14:00 (63), 15:00 (61), 16:00 (60)"
+        "value": "12:00 (66), 13:00 (63), 14:00 (61), 15:00 (57), 16:00 (55)"
       }
     ],
     "confidence": 0.95,
@@ -316,86 +321,86 @@
     "recommendations": [
       {
         "hour": 12,
-        "score": 70.14999999999999,
+        "score": 71,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       },
       {
         "hour": 13,
-        "score": 67.14999999999999,
+        "score": 66.39999999999999,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       },
       {
         "hour": 14,
-        "score": 65.14999999999999,
+        "score": 63.599999999999994,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       },
       {
         "hour": 15,
-        "score": 62.699999999999996,
+        "score": 59.400000000000006,
         "timeOfDay": "Afternoon (15-17)",
         "narrative": "Extended focus - sustained stimulation maintains work momentum (Yellow Tea tradition)"
       },
       {
-        "hour": 16,
-        "score": 59.699999999999996,
-        "timeOfDay": "Afternoon (15-17)",
-        "narrative": "Extended focus - sustained stimulation maintains work momentum (Yellow Tea tradition)"
+        "hour": 10,
+        "score": 58.300000000000004,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Yellow Tea tradition)"
       }
     ],
     "circadianCurve": [
-      17.7,
-      17.7,
-      15.7,
-      15.7,
-      15.7,
-      15.7,
-      43.425000000000004,
-      37.975,
-      51.025,
-      55.375,
-      57.375,
-      57.375,
-      70.14999999999999,
-      67.14999999999999,
-      65.14999999999999,
-      62.699999999999996,
-      59.699999999999996,
-      59.699999999999996,
-      47.9,
-      48.9,
-      47.35,
-      45.974999999999994,
-      36.425,
-      20.425
+      14.399999999999997,
+      14.399999999999997,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      53.5,
+      43.099999999999994,
+      49.099999999999994,
+      54.7,
+      58.300000000000004,
+      58.300000000000004,
+      71,
+      66.39999999999999,
+      63.599999999999994,
+      59.400000000000006,
+      54.800000000000004,
+      54,
+      37.599999999999994,
+      39.4,
+      41.199999999999996,
+      38.9,
+      27.099999999999998,
+      6.299999999999999
     ],
     "hourlyScores": {
-      "0": 17.7,
-      "1": 17.7,
-      "2": 15.7,
-      "3": 15.7,
-      "4": 15.7,
-      "5": 15.7,
-      "6": 43.425000000000004,
-      "7": 37.975,
-      "8": 51.025,
-      "9": 55.375,
-      "10": 57.375,
-      "11": 57.375,
-      "12": 70.14999999999999,
-      "13": 67.14999999999999,
-      "14": 65.14999999999999,
-      "15": 62.699999999999996,
-      "16": 59.699999999999996,
-      "17": 59.699999999999996,
-      "18": 47.9,
-      "19": 48.9,
-      "20": 47.35,
-      "21": 45.974999999999994,
-      "22": 36.425,
-      "23": 20.425
+      "0": 14.399999999999997,
+      "1": 14.399999999999997,
+      "2": 12.399999999999999,
+      "3": 12.399999999999999,
+      "4": 12.399999999999999,
+      "5": 12.399999999999999,
+      "6": 53.5,
+      "7": 43.099999999999994,
+      "8": 49.099999999999994,
+      "9": 54.7,
+      "10": 58.300000000000004,
+      "11": 58.300000000000004,
+      "12": 71,
+      "13": 66.39999999999999,
+      "14": 63.599999999999994,
+      "15": 59.400000000000006,
+      "16": 54.800000000000004,
+      "17": 54,
+      "18": 37.599999999999994,
+      "19": 39.4,
+      "20": 41.199999999999996,
+      "21": 38.9,
+      "22": 27.099999999999998,
+      "23": 6.299999999999999
     },
     "periodGrouping": {
       "night": {
@@ -403,49 +408,49 @@
         "hours": [
           {
             "hour": 0,
-            "score": 17.7
+            "score": 14.399999999999997
           },
           {
             "hour": 1,
-            "score": 17.7
+            "score": 14.399999999999997
           },
           {
             "hour": 2,
-            "score": 15.7
+            "score": 12.399999999999999
           },
           {
             "hour": 3,
-            "score": 15.7
+            "score": 12.399999999999999
           },
           {
             "hour": 4,
-            "score": 15.7
+            "score": 12.399999999999999
           },
           {
             "hour": 5,
-            "score": 15.7
+            "score": 12.399999999999999
           }
         ],
-        "averageScore": 16.4,
+        "averageScore": 13.1,
         "count": 6
       },
       "early_morning": {
         "period": "Early Morning (6-8)",
         "hours": [
           {
-            "hour": 8,
-            "score": 51.025
+            "hour": 6,
+            "score": 53.5
           },
           {
-            "hour": 6,
-            "score": 43.425000000000004
+            "hour": 8,
+            "score": 49.099999999999994
           },
           {
             "hour": 7,
-            "score": 37.975
+            "score": 43.099999999999994
           }
         ],
-        "averageScore": 44.1,
+        "averageScore": 48.6,
         "count": 3
       },
       "morning": {
@@ -453,18 +458,18 @@
         "hours": [
           {
             "hour": 10,
-            "score": 57.375
+            "score": 58.300000000000004
           },
           {
             "hour": 11,
-            "score": 57.375
+            "score": 58.300000000000004
           },
           {
             "hour": 9,
-            "score": 55.375
+            "score": 54.7
           }
         ],
-        "averageScore": 56.7,
+        "averageScore": 57.1,
         "count": 3
       },
       "midday": {
@@ -472,18 +477,18 @@
         "hours": [
           {
             "hour": 12,
-            "score": 70.14999999999999
+            "score": 71
           },
           {
             "hour": 13,
-            "score": 67.14999999999999
+            "score": 66.39999999999999
           },
           {
             "hour": 14,
-            "score": 65.14999999999999
+            "score": 63.599999999999994
           }
         ],
-        "averageScore": 67.5,
+        "averageScore": 67,
         "count": 3
       },
       "afternoon": {
@@ -491,37 +496,37 @@
         "hours": [
           {
             "hour": 15,
-            "score": 62.699999999999996
+            "score": 59.400000000000006
           },
           {
             "hour": 16,
-            "score": 59.699999999999996
+            "score": 54.800000000000004
           },
           {
             "hour": 17,
-            "score": 59.699999999999996
+            "score": 54
           }
         ],
-        "averageScore": 60.7,
+        "averageScore": 56.1,
         "count": 3
       },
       "evening": {
         "period": "Evening (18-20)",
         "hours": [
           {
+            "hour": 20,
+            "score": 41.199999999999996
+          },
+          {
             "hour": 19,
-            "score": 48.9
+            "score": 39.4
           },
           {
             "hour": 18,
-            "score": 47.9
-          },
-          {
-            "hour": 20,
-            "score": 47.35
+            "score": 37.599999999999994
           }
         ],
-        "averageScore": 48.1,
+        "averageScore": 39.4,
         "count": 3
       },
       "late_evening": {
@@ -529,18 +534,18 @@
         "hours": [
           {
             "hour": 21,
-            "score": 45.974999999999994
+            "score": 38.9
           },
           {
             "hour": 22,
-            "score": 36.425
+            "score": 27.099999999999998
           },
           {
             "hour": 23,
-            "score": 20.425
+            "score": 6.299999999999999
           }
         ],
-        "averageScore": 34.3,
+        "averageScore": 24.1,
         "count": 3
       }
     },
@@ -548,19 +553,24 @@
       "compoundProfile": "Smooth & Sustained",
       "stimulationLevel": "Moderate",
       "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 3.8,
+        "lTheanineLevel": 5.8,
+        "ratio": 1.5263157894736843
+      },
       "teaTypeApplied": true,
       "teaType": "Yellow Tea",
       "weighting": {
-        "compound": "85%",
-        "teaType": "15%",
-        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
       }
     },
     "trace": [
       {
         "step": "Data Reception",
-        "reason": "Received compound inference",
-        "adjustment": "Profile: Smooth & Sustained, Stimulation: Moderate, Relaxation: High",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 3.8, L-Theanine: 5.8 | Profile: Smooth & Sustained",
         "value": "Inference validated"
       },
       {
@@ -582,22 +592,22 @@
         "value": "Total adjustments: 144"
       },
       {
-        "step": "Compound Profile Scoring (85%)",
-        "reason": "Compound profile: Smooth & Sustained",
-        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
-        "value": "Total adjustments: 177"
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.6 total, 1.53 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 191"
       },
       {
-        "step": "Tea Type Tradition Scoring (15%)",
+        "step": "Tea Type Tradition Scoring (20%)",
         "reason": "Tea type: Yellow Tea (cultural tradition)",
-        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
         "value": "Total adjustments: 203"
       },
       {
         "step": "Final Selection",
         "reason": "Selected top hours",
         "adjustment": "Selected 5 top hours",
-        "value": "12:00 (70), 13:00 (67), 14:00 (65), 15:00 (63), 16:00 (60)"
+        "value": "12:00 (71), 13:00 (66), 14:00 (64), 15:00 (59), 10:00 (58)"
       }
     ],
     "confidence": 0.95,
@@ -618,86 +628,86 @@
     "recommendations": [
       {
         "hour": 12,
-        "score": 73.55,
+        "score": 71,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       },
       {
         "hour": 13,
-        "score": 70.55,
-        "timeOfDay": "Midday (12-14)",
-        "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
-      },
-      {
-        "hour": 14,
-        "score": 68.55,
+        "score": 67.2,
         "timeOfDay": "Midday (12-14)",
         "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       },
       {
         "hour": 10,
-        "score": 66.775,
+        "score": 64.3,
         "timeOfDay": "Morning (9-11)",
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Yellow Tea tradition)"
       },
       {
         "hour": 11,
-        "score": 66.775,
+        "score": 64.3,
         "timeOfDay": "Morning (9-11)",
         "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Yellow Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 63.599999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (Yellow Tea tradition)"
       }
     ],
     "circadianCurve": [
-      12.45,
-      12.45,
-      11.45,
-      11.45,
-      11.45,
-      11.45,
-      37.475,
-      39.725,
-      60.425000000000004,
-      64.775,
-      66.775,
-      66.775,
-      73.55,
-      70.55,
-      68.55,
-      66.10000000000001,
-      61.4,
-      58.699999999999996,
-      45.9,
-      44.9,
-      43.9,
-      40.675,
-      30.425,
-      20.425
+      13.399999999999999,
+      13.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      53.5,
+      49.9,
+      54.3,
+      60.7,
+      64.3,
+      64.3,
+      71,
+      67.2,
+      63.599999999999994,
+      59.400000000000006,
+      55.6,
+      53,
+      34.8,
+      34.599999999999994,
+      34.4,
+      30.299999999999997,
+      19.5,
+      4.699999999999999
     ],
     "hourlyScores": {
-      "0": 12.45,
-      "1": 12.45,
-      "2": 11.45,
-      "3": 11.45,
-      "4": 11.45,
-      "5": 11.45,
-      "6": 37.475,
-      "7": 39.725,
-      "8": 60.425000000000004,
-      "9": 64.775,
-      "10": 66.775,
-      "11": 66.775,
-      "12": 73.55,
-      "13": 70.55,
-      "14": 68.55,
-      "15": 66.10000000000001,
-      "16": 61.4,
-      "17": 58.699999999999996,
-      "18": 45.9,
-      "19": 44.9,
-      "20": 43.9,
-      "21": 40.675,
-      "22": 30.425,
-      "23": 20.425
+      "0": 13.399999999999999,
+      "1": 13.399999999999999,
+      "2": 12.399999999999999,
+      "3": 12.399999999999999,
+      "4": 12.399999999999999,
+      "5": 12.399999999999999,
+      "6": 53.5,
+      "7": 49.9,
+      "8": 54.3,
+      "9": 60.7,
+      "10": 64.3,
+      "11": 64.3,
+      "12": 71,
+      "13": 67.2,
+      "14": 63.599999999999994,
+      "15": 59.400000000000006,
+      "16": 55.6,
+      "17": 53,
+      "18": 34.8,
+      "19": 34.599999999999994,
+      "20": 34.4,
+      "21": 30.299999999999997,
+      "22": 19.5,
+      "23": 4.699999999999999
     },
     "periodGrouping": {
       "night": {
@@ -705,30 +715,30 @@
         "hours": [
           {
             "hour": 0,
-            "score": 12.45
+            "score": 13.399999999999999
           },
           {
             "hour": 1,
-            "score": 12.45
+            "score": 13.399999999999999
           },
           {
             "hour": 2,
-            "score": 11.45
+            "score": 12.399999999999999
           },
           {
             "hour": 3,
-            "score": 11.45
+            "score": 12.399999999999999
           },
           {
             "hour": 4,
-            "score": 11.45
+            "score": 12.399999999999999
           },
           {
             "hour": 5,
-            "score": 11.45
+            "score": 12.399999999999999
           }
         ],
-        "averageScore": 11.8,
+        "averageScore": 12.7,
         "count": 6
       },
       "early_morning": {
@@ -736,18 +746,18 @@
         "hours": [
           {
             "hour": 8,
-            "score": 60.425000000000004
-          },
-          {
-            "hour": 7,
-            "score": 39.725
+            "score": 54.3
           },
           {
             "hour": 6,
-            "score": 37.475
+            "score": 53.5
+          },
+          {
+            "hour": 7,
+            "score": 49.9
           }
         ],
-        "averageScore": 45.9,
+        "averageScore": 52.6,
         "count": 3
       },
       "morning": {
@@ -755,18 +765,18 @@
         "hours": [
           {
             "hour": 10,
-            "score": 66.775
+            "score": 64.3
           },
           {
             "hour": 11,
-            "score": 66.775
+            "score": 64.3
           },
           {
             "hour": 9,
-            "score": 64.775
+            "score": 60.7
           }
         ],
-        "averageScore": 66.1,
+        "averageScore": 63.1,
         "count": 3
       },
       "midday": {
@@ -774,18 +784,18 @@
         "hours": [
           {
             "hour": 12,
-            "score": 73.55
+            "score": 71
           },
           {
             "hour": 13,
-            "score": 70.55
+            "score": 67.2
           },
           {
             "hour": 14,
-            "score": 68.55
+            "score": 63.599999999999994
           }
         ],
-        "averageScore": 70.9,
+        "averageScore": 67.3,
         "count": 3
       },
       "afternoon": {
@@ -793,18 +803,18 @@
         "hours": [
           {
             "hour": 15,
-            "score": 66.10000000000001
+            "score": 59.400000000000006
           },
           {
             "hour": 16,
-            "score": 61.4
+            "score": 55.6
           },
           {
             "hour": 17,
-            "score": 58.699999999999996
+            "score": 53
           }
         ],
-        "averageScore": 62.1,
+        "averageScore": 56,
         "count": 3
       },
       "evening": {
@@ -812,18 +822,18 @@
         "hours": [
           {
             "hour": 18,
-            "score": 45.9
+            "score": 34.8
           },
           {
             "hour": 19,
-            "score": 44.9
+            "score": 34.599999999999994
           },
           {
             "hour": 20,
-            "score": 43.9
+            "score": 34.4
           }
         ],
-        "averageScore": 44.9,
+        "averageScore": 34.6,
         "count": 3
       },
       "late_evening": {
@@ -831,18 +841,18 @@
         "hours": [
           {
             "hour": 21,
-            "score": 40.675
+            "score": 30.299999999999997
           },
           {
             "hour": 22,
-            "score": 30.425
+            "score": 19.5
           },
           {
             "hour": 23,
-            "score": 20.425
+            "score": 4.699999999999999
           }
         ],
-        "averageScore": 30.5,
+        "averageScore": 18.2,
         "count": 3
       }
     },
@@ -850,19 +860,24 @@
       "compoundProfile": "Balanced & Focused",
       "stimulationLevel": "Moderate",
       "relaxationLevel": "Moderate",
+      "rawCompoundValues": {
+        "caffeineLevel": 4,
+        "lTheanineLevel": 5.5,
+        "ratio": 1.375
+      },
       "teaTypeApplied": true,
       "teaType": "Yellow Tea",
       "weighting": {
-        "compound": "85%",
-        "teaType": "15%",
-        "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
       }
     },
     "trace": [
       {
         "step": "Data Reception",
-        "reason": "Received compound inference",
-        "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 4, L-Theanine: 5.5 | Profile: Balanced & Focused",
         "value": "Inference validated"
       },
       {
@@ -884,22 +899,22 @@
         "value": "Total adjustments: 86"
       },
       {
-        "step": "Compound Profile Scoring (85%)",
-        "reason": "Compound profile: Balanced & Focused",
-        "adjustment": "Applied compound profile at 85% weight to all 24 hours",
-        "value": "Total adjustments: 258"
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 1.38 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 202"
       },
       {
-        "step": "Tea Type Tradition Scoring (15%)",
+        "step": "Tea Type Tradition Scoring (20%)",
         "reason": "Tea type: Yellow Tea (cultural tradition)",
-        "adjustment": "Applied tea type cultural preference at 15% weight",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
         "value": "Total adjustments: 203"
       },
       {
         "step": "Final Selection",
         "reason": "Selected top hours",
         "adjustment": "Selected 5 top hours",
-        "value": "12:00 (74), 13:00 (71), 14:00 (69), 10:00 (67), 11:00 (67)"
+        "value": "12:00 (71), 13:00 (67), 10:00 (64), 11:00 (64), 14:00 (64)"
       }
     ],
     "confidence": 0.95,
