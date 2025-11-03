@@ -1,0 +1,324 @@
+{
+  "tea": {
+    "name": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin"
+  },
+  "recommendations": {
+    "activity": {
+      "recommendations": [
+        {
+          "activity": "Focus",
+          "score": 80,
+          "description": "Directing mental attention with clarity toward meaningful tasks",
+          "timing": "Morning through early afternoon"
+        },
+        {
+          "activity": "Social",
+          "score": 80,
+          "description": "Sharing meaningful moments and connection with friends and loved ones",
+          "timing": "Afternoon or evening gatherings"
+        },
+        {
+          "activity": "Relaxation",
+          "score": 76,
+          "description": "A state of ease and peace where tension melts away",
+          "timing": "Afternoon or early evening, especially after work"
+        }
+      ],
+      "clusters": [
+        {
+          "theme": "Mindfulness & Relaxation",
+          "activities": [
+            "Relaxation"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Focus & Productivity",
+          "activities": [
+            "Focus"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Social Engagement",
+          "activities": [
+            "Social"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "food": {
+      "recommendations": [
+        {
+          "food": "Root Vegetables",
+          "score": 83,
+          "description": "A complementary food pairing",
+          "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+          "category": "vegetables"
+        },
+        {
+          "food": "Dark Chocolate",
+          "score": 75,
+          "description": "A complementary food pairing",
+          "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+          "category": "desserts"
+        },
+        {
+          "food": "Grilled Meats",
+          "score": 75,
+          "description": "A complementary food pairing",
+          "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+          "category": "proteins"
+        },
+        {
+          "food": "Aged Cheese",
+          "score": 75,
+          "description": "A complementary food pairing",
+          "narrative": "Richness and umami balance astringency, creating elegant contrast",
+          "category": "dairy_cheese"
+        },
+        {
+          "food": "Dim Sum",
+          "score": 75,
+          "description": "A complementary food pairing",
+          "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+          "category": "prepared_dishes"
+        }
+      ],
+      "cuisineGroupings": [
+        {
+          "cuisine": "International",
+          "foods": [
+            "Root Vegetables",
+            "Dark Chocolate",
+            "Grilled Meats"
+          ],
+          "count": 3
+        },
+        {
+          "cuisine": "European",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "Mediterranean",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "French",
+          "foods": [
+            "Aged Cheese"
+          ],
+          "count": 1
+        },
+        {
+          "cuisine": "Asian",
+          "foods": [
+            "Dim Sum"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "time": {
+      "recommendations": [
+        {
+          "hour": 12,
+          "score": 70,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 13,
+          "score": 66,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 14,
+          "score": 63,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 10,
+          "score": 62,
+          "timeOfDay": "Morning (9-11)",
+          "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+        },
+        {
+          "hour": 11,
+          "score": 62,
+          "timeOfDay": "Morning (9-11)",
+          "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+        }
+      ],
+      "circadianCurve": [
+        13.7,
+        13.7,
+        12.7,
+        12.7,
+        12.7,
+        12.7,
+        52.300000000000004,
+        48.7,
+        53.1,
+        58.6,
+        62.2,
+        62.2,
+        70.10000000000001,
+        66.30000000000001,
+        62.699999999999996,
+        60.300000000000004,
+        56.5,
+        53.9,
+        37,
+        36.8,
+        35.8,
+        31.6,
+        20.799999999999997,
+        6.799999999999999
+      ]
+    },
+    "season": {
+      "recommendations": [
+        {
+          "seasonId": "SEASON_AUTUMN",
+          "displayName": "Autumn",
+          "score": 66
+        },
+        {
+          "seasonId": "SEASON_ANYTIME",
+          "displayName": "Any Time",
+          "score": 62
+        },
+        {
+          "seasonId": "SEASON_SPRING",
+          "displayName": "Spring",
+          "score": 61
+        }
+      ],
+      "circularYear": [
+        {
+          "month": 1,
+          "displayName": "Early Spring",
+          "score": 50
+        },
+        {
+          "month": 2,
+          "displayName": "Spring",
+          "score": 61
+        },
+        {
+          "month": 3,
+          "displayName": "Late Spring",
+          "score": 56
+        },
+        {
+          "month": 4,
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        {
+          "month": 5,
+          "displayName": "Summer",
+          "score": 50
+        },
+        {
+          "month": 6,
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        {
+          "month": 7,
+          "displayName": "Early Autumn",
+          "score": 59
+        },
+        {
+          "month": 8,
+          "displayName": "Autumn",
+          "score": 66
+        },
+        {
+          "month": 9,
+          "displayName": "Late Autumn",
+          "score": 59
+        },
+        {
+          "month": 10,
+          "displayName": "Early Winter",
+          "score": 50
+        },
+        {
+          "month": 11,
+          "displayName": "Winter",
+          "score": 50
+        },
+        {
+          "month": 12,
+          "displayName": "Late Winter",
+          "score": 50
+        }
+      ],
+      "seasonalRange": {
+        "type": "scattered",
+        "seasons": [
+          "Autumn",
+          "Any Time",
+          "Spring"
+        ],
+        "description": "Multiple scattered seasons"
+      }
+    },
+    "brewing": {
+      "brewingStyles": [
+        {
+          "style": "gongfu",
+          "parameters": {
+            "temperature": 91.5,
+            "steepTime": 15.4,
+            "gramsPer100ml": 8,
+            "infusions": 7
+          },
+          "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 91.5°C (197°F)\n- Steep Time: 15.4 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n"
+        },
+        {
+          "style": "western",
+          "parameters": {
+            "temperature": 86.5,
+            "steepTime": 240.4,
+            "gramsPer100ml": 5,
+            "infusions": 2
+          },
+          "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 86.5°C (188°F)\n- Steep Time: 240.4 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n"
+        }
+      ]
+    },
+    "terroir": {
+      "narrative": "**Geographic Origin**\n\nOolong Tea grows in Anxi, Fujian, China at 800m elevation, with average temperatures of 19.5°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (15 MJ/m²/day)\n\nModerate sun exposure (15-20 MJ/m²/day) provides ideal conditions for balanced flavor and health in most tea gardens. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\nFlavor influences from sun exposure: **well-developed flavors, balanced complexity, good aromatics**\n\nSolar radiation effects on compounds: balanced L-theanine and caffeine, optimal compound profile\n\n**Climate Zone** (25.07°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Compound Development**\n\nThe terroir's geographic factors converge to create Oolong Tea's distinctive biochemical profile: **Balanced & Focused**. This is not random—each environmental factor measurably influences which compounds develop in the leaf.\n\nMechanisms: High humidity encourages L-theanine development This is terroir working at the molecular level.\n\n**Flavor Expression**\n\nOolong Tea's terroir manifests directly in the cup through distinctive flavors: **floral, orchid, creamy, sweet, mineral**. Each of these flavor notes—the aromatics, the body, the finish—is a sensory expression of Misty/misty-mountain character. What you taste is geography made tangible.\n\n**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+      "teaType": "Oolong Tea",
+      "location": "Anxi, Fujian, China",
+      "qualityIndicator": "Good Quality",
+      "characteristics": [
+        "Misty/misty-mountain character"
+      ],
+      "harvestSeason": "Spring/Autumn"
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-11-03T12:51:10.277Z",
+    "version": "2.0",
+    "format": "display"
+  }
+}

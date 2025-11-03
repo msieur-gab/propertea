@@ -10,10 +10,11 @@
  *
  * Parameters:
  * - renderers: array of renderer names to execute (default: all)
- *   values: "activity", "food", "time", "season", "brewing"
- * - format: output format (default: "production")
- *   "production": lean response with recommendations only
- *   "trace": includes analysis traces and reasoning for debugging
+ *   values: "activity", "food", "time", "season", "brewing", "terroir"
+ * - format: output format (default: "raw")
+ *   "raw": Complete renderer output with all analysis/trace/confidence
+ *   "display": UI-ready format, simplified for frontend consumption
+ *   "verbose": Full debugging format with complete inference traces
  */
 
 import { FlavorInferrer } from '../../endpoint/src/processors/inferrers/FlavorInferrer.js';
@@ -30,6 +31,7 @@ import { BrewingRenderer } from '../../endpoint/src/processors/renderers/Brewing
 import { TerroirRenderer } from '../../endpoint/src/processors/renderers/TerroirRenderer.js';
 
 import { rendererRegistry, getRequiredInferrers, getTraceInferrerNames, validateRenderers } from '../../endpoint/src/rendererRegistry.js';
+import { formatResponse } from '../../endpoint/src/formatters/responseFormatter.js';
 
 /**
  * Shared CORS headers for all responses (success and error)
@@ -91,7 +93,7 @@ export default async function handler(request) {
 
   // Extract optional parameters
   let renderers = formData.renderers || ['activity', 'food', 'time', 'season', 'brewing'];
-  const format = formData.format || 'production';
+  const format = formData.format || 'raw';
 
   // Normalize renderers to array: handle string input, deduplicate, lowercase
   if (typeof renderers === 'string') {
@@ -112,10 +114,15 @@ export default async function handler(request) {
   renderers = [...new Set(renderers.map(r => String(r).toLowerCase()))];
 
   // Validate format parameter
-  if (!['production', 'trace'].includes(format)) {
+  if (!['raw', 'display', 'verbose'].includes(format)) {
     return new Response(JSON.stringify({
       error: 'Invalid format parameter',
-      validValues: ['production', 'trace']
+      validValues: ['raw', 'display', 'verbose'],
+      descriptions: {
+        raw: 'Complete renderer output with all data (default)',
+        display: 'UI-ready format, simplified for frontend',
+        verbose: 'Full debugging format with inference traces'
+      }
     }), {
       status: 400,
       headers: corsHeaders
@@ -346,29 +353,6 @@ async function runRecommendationPipeline(formData, renderers, format) {
     }
   };
 
-  // Return production or trace format
-  if (format === 'trace') {
-    // Build analysis object with only the inferrers that were actually run
-    const analysisOutput = {};
-    const traceInferrers = getTraceInferrerNames(renderers);
-
-    traceInferrers.forEach(inferrerName => {
-      if (allInferences[inferrerName]) {
-        const inference = allInferences[inferrerName];
-        analysisOutput[inferrerName] = {
-          analysis: inference.analysis,
-          trace: inference.trace,
-          confidence: inference.confidence
-        };
-      }
-    });
-
-    return {
-      ...baseResponse,
-      analysis: analysisOutput
-    };
-  }
-
-  // Production format (lean, no traces)
-  return baseResponse;
+  // Apply format transformation
+  return formatResponse(baseResponse, allInferences, format, renderers);
 }
