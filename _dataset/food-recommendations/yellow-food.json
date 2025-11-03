@@ -1,0 +1,640 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "flavorProfile": [
+      "sweet",
+      "delicate",
+      "floral",
+      "honey",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements sweet and floral, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements sweet and floral, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (enhances sweet notes)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements sweet and floral, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "floral",
+        "honey"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 7,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 7, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 7 unique foods with base score 50",
+        "value": "7"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 3.5, L-Theanine: 6",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "12 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "floral",
+      "smooth",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements sweet and nutty, enhancing sweet notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements sweet and nutty, enhancing sweet notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes (enhances sweet notes)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements sweet and nutty, enhancing sweet notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Nutty & Toasty",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "sweet",
+        "nutty",
+        "floral"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Nutty & Toasty, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 3.8, L-Theanine: 5.8",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "smooth",
+      "floral",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "food": "Pastries",
+        "foodId": "FOOD_PASTRIES",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Pastries complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "breads_baked",
+        "flavorProfile": [],
+        "pairingTechnique": "The tea's complexity complements delicate pastry layers without overwhelming"
+      },
+      {
+        "food": "Light Desserts",
+        "foodId": "FOOD_LIGHT_DESSERTS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Desserts complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+      },
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "FOOD_HONEY_SWEETS",
+        "foodId": "FOOD_HONEY_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "FOOD_HONEY_SWEETS complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": null,
+        "category": "other",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "European",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "International",
+        "foods": [
+          "Light Desserts",
+          "White Fish",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "breads_baked",
+        "foods": [
+          "Pastries"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Light Desserts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      },
+      {
+        "category": "other",
+        "foods": [
+          "FOOD_HONEY_SWEETS"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Nutty & Toasty",
+        "Sweet",
+        "Floral"
+      ],
+      "dominantFlavors": [
+        "chestnut",
+        "sweet",
+        "floral"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_BAKED_GOODS, FOOD_CHEESE, FOOD_ROASTED_VEGETABLES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Nutty & Toasty, Sweet, Floral"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4, L-Theanine: 5.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Pastries, Light Desserts, White Fish, Fresh Fruit, FOOD_HONEY_SWEETS"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 5 food category groups",
+        "value": "Cuisines: European, Mediterranean, Asian, International"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  }
+]

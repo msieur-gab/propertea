@@ -1,0 +1,921 @@
+[
+  {
+    "teaName": "Yiwu Sheng",
+    "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "sweet",
+      "herbal",
+      "mineral"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements honey and floral, enhancing sweet notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements honey and floral, enhancing sweet notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements honey and floral, enhancing sweet notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements honey and floral, enhancing sweet notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements honey and floral, enhancing sweet notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Sweet",
+        "Floral",
+        "Earthy"
+      ],
+      "dominantFlavors": [
+        "honey",
+        "floral",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 12,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 12, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 12 unique foods with base score 50",
+        "value": "12"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Sweet, Floral, Earthy"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_PUERH",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.8, L-Theanine: 5.2",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "18 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Bulang Sheng",
+    "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "bitter",
+      "strong",
+      "herbal",
+      "smoky",
+      "medicinal"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements smoky, enhancing roasted notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements smoky, enhancing roasted notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements smoky, enhancing roasted notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances smoky notes)",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements smoky, enhancing roasted notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements smoky, enhancing roasted notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Roasted"
+      ],
+      "dominantFlavors": [
+        "smoky"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 6,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 6, Categories: 1",
+        "value": "Sample hints: FOOD_SMOKED_FOODS, FOOD_BBQ, FOOD_STRONG_CHEESE"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 6 unique foods with base score 50",
+        "value": "6"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 1 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Roasted"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_PUERH",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 5.5, L-Theanine: 4.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "12 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.50, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.68"
+      }
+    ],
+    "confidence": 0.6799999999999999,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Banzhang Sheng",
+    "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "powerful",
+      "bitter",
+      "sweet aftertaste",
+      "herbal",
+      "complex"
+    ],
+    "recommendations": [],
+    "cuisineGroupings": [],
+    "categoryGroupings": [],
+    "analysis": {
+      "flavorCategories": [],
+      "dominantFlavors": [],
+      "intensityEstimate": "N/A",
+      "hintCount": 0
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 0, Categories: 0",
+        "value": "Sample hints: "
+      },
+      {
+        "step": "Empty Data",
+        "reason": "No food pairing hints provided",
+        "adjustment": "Returning minimal recommendations",
+        "value": "No hints"
+      }
+    ],
+    "confidence": 0,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Mengku Sheng",
+    "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fresh",
+      "fruity",
+      "smooth"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements floral and sweet, enhancing floral notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements floral and sweet, enhancing floral notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements floral and sweet, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements floral and sweet, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements floral and sweet, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 7,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 7, Categories: 2",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 7 unique foods with base score 50",
+        "value": "7"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_PUERH",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.5, L-Theanine: 5.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "13 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.70, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.88"
+      }
+    ],
+    "confidence": 0.8799999999999999,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Jingmai Sheng",
+    "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "flavorProfile": [
+      "orchid",
+      "honey",
+      "sweet",
+      "floral",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "food": "Roasted Nuts",
+        "foodId": "FOOD_ROASTED_NUTS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Roasted Nuts complements orchid and honey, enhancing floral notes",
+        "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Caramel Sweets",
+        "foodId": "FOOD_CARAMEL_SWEETS",
+        "description": "A complementary food pairing",
+        "score": 83,
+        "rationale": "Caramel Sweets complements orchid and honey, enhancing floral notes",
+        "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+        "category": "desserts",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Grilled Meats",
+        "foodId": "FOOD_GRILLED_MEATS",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Grilled Meats complements orchid and honey, enhancing floral notes",
+        "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Aged Cheese",
+        "foodId": "FOOD_AGED_CHEESE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Aged Cheese complements orchid and honey, enhancing floral notes",
+        "narrative": "Richness and umami balance astringency, creating elegant contrast",
+        "category": "dairy_cheese",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Dim Sum",
+        "foodId": "FOOD_DIM_SUM",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Dim Sum complements orchid and honey, enhancing floral notes",
+        "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "Roasted Nuts",
+          "Caramel Sweets",
+          "Grilled Meats"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Aged Cheese",
+          "Dim Sum"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "French",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "fruits",
+        "foods": [
+          "Roasted Nuts"
+        ],
+        "count": 1
+      },
+      {
+        "category": "desserts",
+        "foods": [
+          "Caramel Sweets"
+        ],
+        "count": 1
+      },
+      {
+        "category": "proteins",
+        "foods": [
+          "Grilled Meats"
+        ],
+        "count": 1
+      },
+      {
+        "category": "dairy_cheese",
+        "foods": [
+          "Aged Cheese"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Dim Sum"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet"
+      ],
+      "dominantFlavors": [
+        "orchid",
+        "honey",
+        "sweet"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 11,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 11, Categories: 2",
+        "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 11 unique foods with base score 50",
+        "value": "11"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 2 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_PUERH",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.2, L-Theanine: 5.8",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "17 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Aged Cheese, Dim Sum"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 5 cuisine groups and 5 food category groups",
+        "value": "Cuisines: International, European, Mediterranean, French, Asian"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  }
+]

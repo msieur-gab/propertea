@@ -1,0 +1,875 @@
+{
+  "teaName": "Menghai Shou",
+  "teaType": "puerh",
+  "flavorProfile": [
+    "earthy",
+    "woody",
+    "sweet",
+    "leather",
+    "compost"
+  ],
+  "compoundProfile": {
+    "caffeine": 4.5,
+    "lTheanine": 4.5
+  },
+  "renderers": {
+    "food": {
+      "recommendations": [
+        {
+          "food": "Roasted Nuts",
+          "foodId": "FOOD_ROASTED_NUTS",
+          "description": "A complementary food pairing",
+          "score": 83,
+          "rationale": "Roasted Nuts complements woody and sweet, enhancing woody notes",
+          "narrative": "Nutty warmth complements the tea's roasted character (astringency balance)",
+          "category": "fruits",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Caramel Sweets",
+          "foodId": "FOOD_CARAMEL_SWEETS",
+          "description": "A complementary food pairing",
+          "score": 83,
+          "rationale": "Caramel Sweets complements woody and sweet, enhancing woody notes",
+          "narrative": "Rich caramel sweetness harmonizes with the tea's depth (astringency balance)",
+          "category": "desserts",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Grilled Meats",
+          "foodId": "FOOD_GRILLED_MEATS",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Grilled Meats complements woody and sweet, enhancing woody notes",
+          "narrative": "Smoky char and savory umami complement woody and roasted tea profiles (enhances woody notes)",
+          "category": "proteins",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Aged Cheese",
+          "foodId": "FOOD_AGED_CHEESE",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Aged Cheese complements woody and sweet, enhancing woody notes",
+          "narrative": "Richness and umami balance astringency, creating elegant contrast",
+          "category": "dairy_cheese",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Dim Sum",
+          "foodId": "FOOD_DIM_SUM",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Dim Sum complements woody and sweet, enhancing woody notes",
+          "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+          "category": "prepared_dishes",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        }
+      ],
+      "cuisineGroupings": [
+        {
+          "cuisine": "International",
+          "foods": [
+            "Roasted Nuts",
+            "Caramel Sweets",
+            "Grilled Meats"
+          ],
+          "count": 3
+        },
+        {
+          "cuisine": "European",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "Mediterranean",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "French",
+          "foods": [
+            "Aged Cheese"
+          ],
+          "count": 1
+        },
+        {
+          "cuisine": "Asian",
+          "foods": [
+            "Dim Sum"
+          ],
+          "count": 1
+        }
+      ],
+      "categoryGroupings": [
+        {
+          "category": "fruits",
+          "foods": [
+            "Roasted Nuts"
+          ],
+          "count": 1
+        },
+        {
+          "category": "desserts",
+          "foods": [
+            "Caramel Sweets"
+          ],
+          "count": 1
+        },
+        {
+          "category": "proteins",
+          "foods": [
+            "Grilled Meats"
+          ],
+          "count": 1
+        },
+        {
+          "category": "dairy_cheese",
+          "foods": [
+            "Aged Cheese"
+          ],
+          "count": 1
+        },
+        {
+          "category": "prepared_dishes",
+          "foods": [
+            "Dim Sum"
+          ],
+          "count": 1
+        }
+      ],
+      "analysis": {
+        "flavorCategories": [
+          "Woody",
+          "Sweet",
+          "Earthy"
+        ],
+        "dominantFlavors": [
+          "woody",
+          "sweet",
+          "leather"
+        ],
+        "intensityEstimate": "Pronounced",
+        "hintCount": 14,
+        "teaTypeSpecificBoosts": 5,
+        "astringencyBoosts": 4
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received flavor inference",
+          "adjustment": "Food hints: 14, Categories: 3",
+          "value": "Sample hints: FOOD_SMOKED_FOODS, FOOD_GRILLED_MEATS, FOOD_CHEESE"
+        },
+        {
+          "step": "Food Initialization",
+          "reason": "Extract unique foods from hints",
+          "adjustment": "Initialized 14 unique foods with base score 50",
+          "value": "14"
+        },
+        {
+          "step": "Category Matching",
+          "reason": "Matched 3 categories",
+          "adjustment": "Boosted 0 food pairings",
+          "value": "Woody, Sweet, Earthy"
+        },
+        {
+          "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+          "reason": "Tea type: TEA_TYPE_PUERH",
+          "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+          "value": "Tea-type specific pairings activated"
+        },
+        {
+          "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+          "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+          "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+          "value": "Astringency matching activated"
+        },
+        {
+          "step": "Intensity Adjustment",
+          "reason": "Profile intensity: Pronounced",
+          "adjustment": "Applied +10 bonus to all foods",
+          "value": "18 foods adjusted"
+        },
+        {
+          "step": "Ranking & Selection",
+          "reason": "Select top food pairings",
+          "adjustment": "Selected 5 top recommendations",
+          "value": "Roasted Nuts, Caramel Sweets, Grilled Meats, Aged Cheese, Dim Sum"
+        },
+        {
+          "step": "Grouping",
+          "reason": "Organize recommendations",
+          "adjustment": "Created 5 cuisine groups and 5 food category groups",
+          "value": "Cuisines: International, European, Mediterranean, French, Asian"
+        },
+        {
+          "step": "Confidence Calculation",
+          "reason": "Multi-source agreement scoring",
+          "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+          "value": "Final confidence: 0.95"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "2.0"
+    },
+    "time": {
+      "recommendations": [
+        {
+          "hour": 12,
+          "score": 72.425,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+        },
+        {
+          "hour": 13,
+          "score": 69.425,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+        },
+        {
+          "hour": 14,
+          "score": 67.425,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Pu'er Tea tradition)"
+        },
+        {
+          "hour": 15,
+          "score": 66.55,
+          "timeOfDay": "Afternoon (15-17)",
+          "narrative": "Extended focus - sustained stimulation maintains work momentum (Pu'er Tea tradition)"
+        },
+        {
+          "hour": 10,
+          "score": 64.525,
+          "timeOfDay": "Morning (9-11)",
+          "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Pu'er Tea tradition)"
+        }
+      ],
+      "circadianCurve": [
+        12.9,
+        12.9,
+        11.9,
+        11.9,
+        11.9,
+        11.9,
+        36.125,
+        38.375,
+        59.075,
+        62.525000000000006,
+        64.525,
+        64.525,
+        72.425,
+        69.425,
+        67.425,
+        66.55,
+        61.85,
+        59.15,
+        48.375,
+        47.375,
+        46.375,
+        43.15,
+        32.9,
+        22.9
+      ],
+      "hourlyScores": {
+        "0": 12.9,
+        "1": 12.9,
+        "2": 11.9,
+        "3": 11.9,
+        "4": 11.9,
+        "5": 11.9,
+        "6": 36.125,
+        "7": 38.375,
+        "8": 59.075,
+        "9": 62.525000000000006,
+        "10": 64.525,
+        "11": 64.525,
+        "12": 72.425,
+        "13": 69.425,
+        "14": 67.425,
+        "15": 66.55,
+        "16": 61.85,
+        "17": 59.15,
+        "18": 48.375,
+        "19": 47.375,
+        "20": 46.375,
+        "21": 43.15,
+        "22": 32.9,
+        "23": 22.9
+      },
+      "periodGrouping": {
+        "night": {
+          "period": "Night (0-5)",
+          "hours": [
+            {
+              "hour": 0,
+              "score": 12.9
+            },
+            {
+              "hour": 1,
+              "score": 12.9
+            },
+            {
+              "hour": 2,
+              "score": 11.9
+            },
+            {
+              "hour": 3,
+              "score": 11.9
+            },
+            {
+              "hour": 4,
+              "score": 11.9
+            },
+            {
+              "hour": 5,
+              "score": 11.9
+            }
+          ],
+          "averageScore": 12.2,
+          "count": 6
+        },
+        "early_morning": {
+          "period": "Early Morning (6-8)",
+          "hours": [
+            {
+              "hour": 8,
+              "score": 59.075
+            },
+            {
+              "hour": 7,
+              "score": 38.375
+            },
+            {
+              "hour": 6,
+              "score": 36.125
+            }
+          ],
+          "averageScore": 44.5,
+          "count": 3
+        },
+        "morning": {
+          "period": "Morning (9-11)",
+          "hours": [
+            {
+              "hour": 10,
+              "score": 64.525
+            },
+            {
+              "hour": 11,
+              "score": 64.525
+            },
+            {
+              "hour": 9,
+              "score": 62.525000000000006
+            }
+          ],
+          "averageScore": 63.9,
+          "count": 3
+        },
+        "midday": {
+          "period": "Midday (12-14)",
+          "hours": [
+            {
+              "hour": 12,
+              "score": 72.425
+            },
+            {
+              "hour": 13,
+              "score": 69.425
+            },
+            {
+              "hour": 14,
+              "score": 67.425
+            }
+          ],
+          "averageScore": 69.8,
+          "count": 3
+        },
+        "afternoon": {
+          "period": "Afternoon (15-17)",
+          "hours": [
+            {
+              "hour": 15,
+              "score": 66.55
+            },
+            {
+              "hour": 16,
+              "score": 61.85
+            },
+            {
+              "hour": 17,
+              "score": 59.15
+            }
+          ],
+          "averageScore": 62.5,
+          "count": 3
+        },
+        "evening": {
+          "period": "Evening (18-20)",
+          "hours": [
+            {
+              "hour": 18,
+              "score": 48.375
+            },
+            {
+              "hour": 19,
+              "score": 47.375
+            },
+            {
+              "hour": 20,
+              "score": 46.375
+            }
+          ],
+          "averageScore": 47.4,
+          "count": 3
+        },
+        "late_evening": {
+          "period": "Late Evening (21-23)",
+          "hours": [
+            {
+              "hour": 21,
+              "score": 43.15
+            },
+            {
+              "hour": 22,
+              "score": 32.9
+            },
+            {
+              "hour": 23,
+              "score": 22.9
+            }
+          ],
+          "averageScore": 33,
+          "count": 3
+        }
+      },
+      "analysis": {
+        "compoundProfile": "Balanced & Focused",
+        "stimulationLevel": "Moderate",
+        "relaxationLevel": "Moderate",
+        "teaTypeApplied": true,
+        "teaType": "Pu'er Tea",
+        "weighting": {
+          "compound": "85%",
+          "teaType": "15%",
+          "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+        }
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received compound inference",
+          "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+          "value": "Inference validated"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all 24 hours",
+          "adjustment": "Initialized with base score 50",
+          "value": "Ready for profile matching"
+        },
+        {
+          "step": "Stimulation Scoring",
+          "reason": "Stimulation level: Moderate",
+          "adjustment": "Applied stimulation profile to all 24 hours",
+          "value": "Total adjustments: 364"
+        },
+        {
+          "step": "Relaxation Scoring",
+          "reason": "Relaxation level: Moderate",
+          "adjustment": "Applied relaxation profile to all 24 hours",
+          "value": "Total adjustments: 86"
+        },
+        {
+          "step": "Compound Profile Scoring (85%)",
+          "reason": "Compound profile: Balanced & Focused",
+          "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+          "value": "Total adjustments: 258"
+        },
+        {
+          "step": "Tea Type Tradition Scoring (15%)",
+          "reason": "Tea type: Pu'er Tea (cultural tradition)",
+          "adjustment": "Applied tea type cultural preference at 15% weight",
+          "value": "Total adjustments: 171"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top hours",
+          "adjustment": "Selected 5 top hours",
+          "value": "12:00 (72), 13:00 (69), 14:00 (67), 15:00 (67), 10:00 (65)"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "1.0"
+    },
+    "season": {
+      "recommendations": [
+        {
+          "seasonId": "SEASON_WINTER",
+          "displayName": "Winter",
+          "score": 71
+        },
+        {
+          "seasonId": "SEASON_EARLY_WINTER",
+          "displayName": "Early Winter",
+          "score": 68
+        },
+        {
+          "seasonId": "SEASON_LATE_WINTER",
+          "displayName": "Late Winter",
+          "score": 68
+        },
+        {
+          "seasonId": "SEASON_LATE_AUTUMN",
+          "displayName": "Late Autumn",
+          "score": 65
+        }
+      ],
+      "circularYear": [
+        {
+          "month": 1,
+          "seasonId": "SEASON_EARLY_SPRING",
+          "displayName": "Early Spring",
+          "score": 59
+        },
+        {
+          "month": 2,
+          "seasonId": "SEASON_SPRING",
+          "displayName": "Spring",
+          "score": 50
+        },
+        {
+          "month": 3,
+          "seasonId": "SEASON_LATE_SPRING",
+          "displayName": "Late Spring",
+          "score": 50
+        },
+        {
+          "month": 4,
+          "seasonId": "SEASON_EARLY_SUMMER",
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        {
+          "month": 5,
+          "seasonId": "SEASON_SUMMER",
+          "displayName": "Summer",
+          "score": 50
+        },
+        {
+          "month": 6,
+          "seasonId": "SEASON_LATE_SUMMER",
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        {
+          "month": 7,
+          "seasonId": "SEASON_EARLY_AUTUMN",
+          "displayName": "Early Autumn",
+          "score": 50
+        },
+        {
+          "month": 8,
+          "seasonId": "SEASON_AUTUMN",
+          "displayName": "Autumn",
+          "score": 50
+        },
+        {
+          "month": 9,
+          "seasonId": "SEASON_LATE_AUTUMN",
+          "displayName": "Late Autumn",
+          "score": 65
+        },
+        {
+          "month": 10,
+          "seasonId": "SEASON_EARLY_WINTER",
+          "displayName": "Early Winter",
+          "score": 68
+        },
+        {
+          "month": 11,
+          "seasonId": "SEASON_WINTER",
+          "displayName": "Winter",
+          "score": 71
+        },
+        {
+          "month": 12,
+          "seasonId": "SEASON_LATE_WINTER",
+          "displayName": "Late Winter",
+          "score": 68
+        }
+      ],
+      "monthlyScores": {
+        "SEASON_EARLY_SPRING": 59,
+        "SEASON_SPRING": 50,
+        "SEASON_LATE_SPRING": 50,
+        "SEASON_EARLY_SUMMER": 50,
+        "SEASON_SUMMER": 50,
+        "SEASON_LATE_SUMMER": 50,
+        "SEASON_EARLY_AUTUMN": 50,
+        "SEASON_AUTUMN": 50,
+        "SEASON_LATE_AUTUMN": 65,
+        "SEASON_EARLY_WINTER": 68,
+        "SEASON_WINTER": 71,
+        "SEASON_LATE_WINTER": 68
+      },
+      "seasonalScores": {
+        "SEASON_WINTER": {
+          "displayName": "Winter",
+          "score": 71
+        },
+        "SEASON_EARLY_WINTER": {
+          "displayName": "Early Winter",
+          "score": 68
+        },
+        "SEASON_LATE_WINTER": {
+          "displayName": "Late Winter",
+          "score": 68
+        },
+        "SEASON_LATE_AUTUMN": {
+          "displayName": "Late Autumn",
+          "score": 65
+        },
+        "SEASON_EARLY_SPRING": {
+          "displayName": "Early Spring",
+          "score": 59
+        },
+        "SEASON_SPRING": {
+          "displayName": "Spring",
+          "score": 50
+        },
+        "SEASON_LATE_SPRING": {
+          "displayName": "Late Spring",
+          "score": 50
+        },
+        "SEASON_EARLY_SUMMER": {
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        "SEASON_SUMMER": {
+          "displayName": "Summer",
+          "score": 50
+        },
+        "SEASON_LATE_SUMMER": {
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        "SEASON_EARLY_AUTUMN": {
+          "displayName": "Early Autumn",
+          "score": 50
+        },
+        "SEASON_AUTUMN": {
+          "displayName": "Autumn",
+          "score": 50
+        },
+        "SEASON_ANYTIME": {
+          "displayName": "Any Time",
+          "score": 50
+        }
+      },
+      "seasonalRange": {
+        "type": "continuous",
+        "seasons": [
+          "Late Autumn",
+          "Early Winter",
+          "Winter",
+          "Late Winter"
+        ],
+        "description": "Late Autumn through Late Winter"
+      },
+      "analysis": {
+        "teaTypeApplied": true,
+        "processingApplied": true,
+        "method": "Tea type + Processing seasonal affinity"
+      },
+      "trace": [
+        {
+          "step": "Scoring Initialization",
+          "reason": "Initialize all 13 seasons with neutral base score",
+          "adjustment": "Initialized 13 seasons with base score 50",
+          "value": "Using tea type + processing for seasonal affinity"
+        },
+        {
+          "step": "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+          "reason": "Tea type: Pu'er Tea, Subtype: none",
+          "adjustment": "Applied 5 seasonal affinity boosts from tea type/subtype",
+          "value": "Tea type defines intrinsic seasonal suitability per cultural tradition"
+        },
+        {
+          "step": "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+          "reason": "Processing methods: none",
+          "adjustment": "Applied 0 seasonal affinity boosts from processing methods",
+          "value": "Processing thermal character refines seasonal recommendation"
+        },
+        {
+          "step": "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+          "reason": "No geographic data provided",
+          "adjustment": "Skipped altitude-based seasonal modulation",
+          "value": "Using Tier 1 and Tier 2 scoring only"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Filter seasons with score >= 60",
+          "adjustment": "Found 4 recommended seasons",
+          "value": "Winter (71), Early Winter (68), Late Winter (68), Late Autumn (65)"
+        }
+      ],
+      "confidence": 0.85,
+      "rendererVersion": "1.0"
+    },
+    "activity": {
+      "recommendations": [
+        {
+          "activity": "Digestive",
+          "score": 73.2,
+          "description": "Supporting healthy digestion and nutrient absorption",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "After meals, especially lunch and dinner",
+          "benefits": [
+            "Aids digestion and reduces bloating",
+            "Soothes the digestive tract",
+            "Improves nutrient absorption",
+            "Reduces post-meal discomfort"
+          ]
+        },
+        {
+          "activity": "Warming",
+          "score": 72.6,
+          "description": "Generating internal warmth and cozy comfort",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "Cold weather, late afternoon, or evening",
+          "benefits": [
+            "Improves circulation",
+            "Increases body warmth",
+            "Creates cozy atmosphere",
+            "Soothes and relaxes"
+          ]
+        },
+        {
+          "activity": "Contemplative",
+          "score": 69.4,
+          "description": "Deep, mindful reflection on thoughts, feelings, and life experiences",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "Morning or quiet evening moments",
+          "benefits": [
+            "Increases self-awareness",
+            "Promotes wisdom and insight",
+            "Deepens emotional understanding",
+            "Supports personal growth"
+          ]
+        }
+      ],
+      "clusters": [
+        {
+          "theme": "Mindfulness & Relaxation",
+          "activities": [
+            "Contemplative"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Wellness & Digestive",
+          "activities": [
+            "Digestive"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Comfort & Indulgence",
+          "activities": [
+            "Warming"
+          ],
+          "count": 1
+        }
+      ],
+      "analysis": {
+        "compoundProfile": "Balanced & Focused",
+        "stimulationLevel": "Moderate",
+        "relaxationLevel": "Moderate",
+        "teaType": "TEA_TYPE_PUERH"
+      },
+      "scoringSources": {
+        "flavor": {
+          "weight": 0.4,
+          "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+          "importance": "Drives real-world tea selection and mood-based pairing"
+        },
+        "compound": {
+          "weight": 0.35,
+          "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+          "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+        },
+        "teaType": {
+          "weight": 0.25,
+          "role": "BASELINE (25%) - Cultural/traditional activity associations",
+          "importance": "Provides context, but individual character comes from flavor"
+        }
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received multi-source inferences",
+          "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_PUERH, Flavor: undefined",
+          "value": "All inferences validated"
+        },
+        {
+          "step": "Hint Collection",
+          "reason": "Extracted activity hints from taxonomy sources",
+          "adjustment": "TeaType hints: 4, Flavor hints: 9",
+          "value": "Hints collected from cultural and sensory sources"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all activities",
+          "adjustment": "Initialized 26 activities with base score 50",
+          "value": "Ready for three-factor scoring"
+        },
+        {
+          "step": "Flavor Hints Scoring (40% - PRIMARY)",
+          "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+          "adjustment": "Boosted 9 activities by +8.00 base + multi-flavor multiplier",
+          "value": "Flavor-driven emotional associations applied"
+        },
+        {
+          "step": "Compound Scoring (35%)",
+          "reason": "Compound profile: Balanced & Focused",
+          "adjustment": "Boosted 11 activities by +7.00",
+          "value": "Biochemical score applied"
+        },
+        {
+          "step": "Stimulation Scoring (within 35%)",
+          "reason": "Stimulation level: Moderate",
+          "adjustment": "Boosted 8 activities by +3.50",
+          "value": "Stimulation multiplier applied"
+        },
+        {
+          "step": "Tea Type Hints Scoring (25%)",
+          "reason": "Cultural/traditional activity associations (baseline context)",
+          "adjustment": "Boosted 4 activities by +5.00",
+          "value": "Cultural tradition score applied"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top activities",
+          "adjustment": "Selected 3 activities",
+          "value": "Digestive, Warming, Contemplative"
+        }
+      ],
+      "confidence": 0.855,
+      "rendererVersion": "2.0"
+    }
+  }
+}

@@ -1,0 +1,590 @@
+[
+  {
+    "teaName": "Longjing",
+    "originalName": "龙井 (Lóng Jǐng)",
+    "type": "green",
+    "subType": "longjing",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "delicate"
+    ],
+    "narrative": "**Geographic Origin**\n\nGreen Tea grows in West Lake, Zhejiang, China at 200m elevation, with average temperatures of 17.2°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (200m)\n\nVery low elevation gardens (<300m) tend towards robust teas with bold flavors and higher astringency. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **bold flavors, higher astringency**\n\nCompound development at this elevation: potentially higher caffeine, faster growth cycle\n\n**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (17.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (168 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (30.25°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds\n\n**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nGreen Tea grows in West Lake, Zhejiang, China at 200m elevation, with average temperatures of 17.2°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (200m)\n\nVery low elevation gardens (<300m) tend towards robust teas with bold flavors and higher astringency. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **bold flavors, higher astringency**\n\nCompound development at this elevation: potentially higher caffeine, faster growth cycle",
+      "**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (17.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (168 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (30.25°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds",
+      "**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "200m",
+        "classification": "Very Low",
+        "description": "Very low elevation gardens (<300m) tend towards robust teas with bold flavors and higher astringency",
+        "flavorInfluence": [
+          "bold flavors",
+          "higher astringency"
+        ],
+        "compoundEffect": [
+          "potentially higher caffeine",
+          "faster growth cycle"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "78%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "17.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "168 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "30.25°",
+        "classification": "Temperate",
+        "description": "Temperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors",
+        "flavorInfluence": [
+          "delicate flavors",
+          "nuanced profiles",
+          "strong seasonal variation"
+        ],
+        "compoundEffect": [
+          "slower growth concentrates compounds"
+        ]
+      }
+    ],
+    "teaType": "Green Tea",
+    "teaTypeId": "TEA_TYPE_GREEN",
+    "location": "West Lake, Zhejiang, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Very Low",
+      "humidity": "High",
+      "latitude": "Temperate",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Green Tea from West Lake, Zhejiang, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Biluochun",
+    "originalName": "碧螺春 (Bì Luó Chūn)",
+    "type": "green",
+    "subType": "biluochun",
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "narrative": "**Geographic Origin**\n\nGreen Tea grows in Dongting Mountain, Jiangsu, China at 350m elevation, with average temperatures of 16.8°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (350m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**\n\n**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (16.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (166 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (31.15°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds\n\n**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nGreen Tea grows in Dongting Mountain, Jiangsu, China at 350m elevation, with average temperatures of 16.8°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (350m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**",
+      "**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (16.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (166 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (31.15°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds",
+      "**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "350m",
+        "classification": "Low",
+        "description": "Low elevation teas (300-600m) often have stronger flavors with moderate complexity",
+        "flavorInfluence": [
+          "strong flavors",
+          "moderate complexity"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "80%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "16.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "166 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "31.15°",
+        "classification": "Temperate",
+        "description": "Temperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors",
+        "flavorInfluence": [
+          "delicate flavors",
+          "nuanced profiles",
+          "strong seasonal variation"
+        ],
+        "compoundEffect": [
+          "slower growth concentrates compounds"
+        ]
+      }
+    ],
+    "teaType": "Green Tea",
+    "teaTypeId": "TEA_TYPE_GREEN",
+    "location": "Dongting Mountain, Jiangsu, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Low",
+      "humidity": "High",
+      "latitude": "Temperate",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Green Tea from Dongting Mountain, Jiangsu, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+    "type": "green",
+    "subType": "huangshan-maofeng",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "floral"
+    ],
+    "narrative": "**Geographic Origin**\n\nGreen Tea grows in Huangshan, Anhui, China at 800m elevation, with average temperatures of 15.8°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (15.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (172 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (30.12°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds\n\n**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nGreen Tea grows in Huangshan, Anhui, China at 800m elevation, with average temperatures of 15.8°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (15.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (172 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (30.12°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds",
+      "**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "800m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "76%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "15.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "172 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "30.12°",
+        "classification": "Temperate",
+        "description": "Temperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors",
+        "flavorInfluence": [
+          "delicate flavors",
+          "nuanced profiles",
+          "strong seasonal variation"
+        ],
+        "compoundEffect": [
+          "slower growth concentrates compounds"
+        ]
+      }
+    ],
+    "teaType": "Green Tea",
+    "teaTypeId": "TEA_TYPE_GREEN",
+    "location": "Huangshan, Anhui, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Temperate",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Green Tea from Huangshan, Anhui, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Xinyang Maojian",
+    "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+    "type": "green",
+    "subType": "xinyang-maojian",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "brisk"
+    ],
+    "narrative": "**Geographic Origin**\n\nGreen Tea grows in Xinyang, Henan, China at 500m elevation, with average temperatures of 16.5°C and humidity levels around 74%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (500m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**\n\n**Humidity & Moisture** (74%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (16.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (174 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (32.13°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds\n\n**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nGreen Tea grows in Xinyang, Henan, China at 500m elevation, with average temperatures of 16.5°C and humidity levels around 74%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (500m)\n\nLow elevation teas (300-600m) often have stronger flavors with moderate complexity. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **strong flavors, moderate complexity**",
+      "**Humidity & Moisture** (74%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (16.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (174 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (32.13°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds",
+      "**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "500m",
+        "classification": "Low",
+        "description": "Low elevation teas (300-600m) often have stronger flavors with moderate complexity",
+        "flavorInfluence": [
+          "strong flavors",
+          "moderate complexity"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "74%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "16.5°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "174 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "32.13°",
+        "classification": "Temperate",
+        "description": "Temperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors",
+        "flavorInfluence": [
+          "delicate flavors",
+          "nuanced profiles",
+          "strong seasonal variation"
+        ],
+        "compoundEffect": [
+          "slower growth concentrates compounds"
+        ]
+      }
+    ],
+    "teaType": "Green Tea",
+    "teaTypeId": "TEA_TYPE_GREEN",
+    "location": "Xinyang, Henan, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Low",
+      "humidity": "High",
+      "latitude": "Temperate",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Green Tea from Xinyang, Henan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+    "type": "green",
+    "subType": "taiping-houkui",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "lingering"
+    ],
+    "narrative": "**Geographic Origin**\n\nGreen Tea grows in Taiping, Anhui, China at 600m elevation, with average temperatures of 16.2°C and humidity levels around 77%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (77%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (16.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (170 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (30.3°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds\n\n**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nGreen Tea grows in Taiping, Anhui, China at 600m elevation, with average temperatures of 16.2°C and humidity levels around 77%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Green Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (77%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Green Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (16.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Green Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (170 MJ/m²/day)\n\nNeutral. For Green Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (30.3°)\n\nTemperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors. The temperate zone where Green Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **delicate flavors, nuanced profiles, strong seasonal variation**\n\nClimate zone effects: slower growth concentrates compounds",
+      "**Terroir Quality & Character**\n\nGreen Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "600m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "77%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "16.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "170 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "30.3°",
+        "classification": "Temperate",
+        "description": "Temperate zone (30-45°) teas have distinct seasons, leading to slower growth and often more delicate, nuanced flavors",
+        "flavorInfluence": [
+          "delicate flavors",
+          "nuanced profiles",
+          "strong seasonal variation"
+        ],
+        "compoundEffect": [
+          "slower growth concentrates compounds"
+        ]
+      }
+    ],
+    "teaType": "Green Tea",
+    "teaTypeId": "TEA_TYPE_GREEN",
+    "location": "Taiping, Anhui, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Temperate",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Green Tea from Taiping, Anhui, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "light-roast"
+    ],
+    "geography": {
+      "location": "Anxi",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 25.07,
+      "longitude": 118.18,
+      "altitude": 700,
+      "humidity": 78,
+      "temperature": 19.2,
+      "solarRadiation": 178
+    }
+  },
+  {
+    "name": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "rolled",
+      "heavy-roast"
+    ],
+    "geography": {
+      "location": "Wuyi Mountains",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.72,
+      "longitude": 117.67,
+      "altitude": 600,
+      "humidity": 80,
+      "temperature": 19.5,
+      "solarRadiation": 175
+    }
+  },
+  {
+    "name": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "caffeineLevel": 4.8,
+    "lTheanineLevel": 4.8,
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "strip-rolled",
+      "medium-roast"
+    ],
+    "geography": {
+      "location": "Fenghuang Mountain",
+      "province": "Guangdong",
+      "country": "China",
+      "latitude": 23.92,
+      "longitude": 116.63,
+      "altitude": 1100,
+      "humidity": 82,
+      "temperature": 20.1,
+      "solarRadiation": 182
+    }
+  },
+  {
+    "name": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "medium-roast"
+    ],
+    "geography": {
+      "location": "Lugu",
+      "province": "Nantou",
+      "country": "Taiwan",
+      "latitude": 23.75,
+      "longitude": 120.75,
+      "altitude": 800,
+      "humidity": 78,
+      "temperature": 19.8,
+      "solarRadiation": 180
+    }
+  },
+  {
+    "name": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 6.5,
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "minimal-roast"
+    ],
+    "geography": {
+      "location": "Alishan",
+      "province": "Chiayi",
+      "country": "Taiwan",
+      "latitude": 23.47,
+      "longitude": 120.8,
+      "altitude": 1500,
+      "humidity": 80,
+      "temperature": 14.8,
+      "solarRadiation": 180
+    }
+  }
+]

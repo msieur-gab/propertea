@@ -1,0 +1,861 @@
+{
+  "teaName": "Tie Guan Yin",
+  "teaType": "oolong",
+  "flavorProfile": [
+    "orchid",
+    "creamy",
+    "sweet",
+    "floral",
+    "buttery"
+  ],
+  "compoundProfile": {
+    "caffeine": 4,
+    "lTheanine": 5.5
+  },
+  "renderers": {
+    "food": {
+      "recommendations": [
+        {
+          "food": "Root Vegetables",
+          "foodId": "FOOD_ROOT_VEGETABLES",
+          "description": "A complementary food pairing",
+          "score": 83,
+          "rationale": "Root Vegetables complements orchid and creamy, enhancing floral notes",
+          "narrative": "Earthy mineral notes resonate with mineral-rich tea profiles (astringency balance)",
+          "category": "vegetables",
+          "flavorProfile": [],
+          "pairingTechnique": "Earthy tea components resonate with vegetable earthiness"
+        },
+        {
+          "food": "Grilled Meats",
+          "foodId": "FOOD_GRILLED_MEATS",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Grilled Meats complements orchid and creamy, enhancing floral notes",
+          "narrative": "Smoky char and savory umami complement woody and roasted tea profiles",
+          "category": "proteins",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Dark Chocolate",
+          "foodId": "FOOD_DARK_CHOCOLATE",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Dark Chocolate complements orchid and creamy, enhancing floral notes",
+          "narrative": "Cocoa bitterness mirrors catechin astringency, creating harmony",
+          "category": "desserts",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Aged Cheese",
+          "foodId": "FOOD_AGED_CHEESE",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Aged Cheese complements orchid and creamy, enhancing floral notes",
+          "narrative": "Richness and umami balance astringency, creating elegant contrast",
+          "category": "dairy_cheese",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        },
+        {
+          "food": "Dim Sum",
+          "foodId": "FOOD_DIM_SUM",
+          "description": "A complementary food pairing",
+          "score": 75,
+          "rationale": "Dim Sum complements orchid and creamy, enhancing floral notes",
+          "narrative": "Delicate flavors and textures complement the complexity of aged puerh (especially with aged puerh)",
+          "category": "prepared_dishes",
+          "flavorProfile": [],
+          "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+        }
+      ],
+      "cuisineGroupings": [
+        {
+          "cuisine": "International",
+          "foods": [
+            "Root Vegetables",
+            "Grilled Meats",
+            "Dark Chocolate"
+          ],
+          "count": 3
+        },
+        {
+          "cuisine": "European",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "Mediterranean",
+          "foods": [
+            "Aged Cheese",
+            "Dim Sum"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "French",
+          "foods": [
+            "Aged Cheese"
+          ],
+          "count": 1
+        },
+        {
+          "cuisine": "Asian",
+          "foods": [
+            "Dim Sum"
+          ],
+          "count": 1
+        }
+      ],
+      "categoryGroupings": [
+        {
+          "category": "vegetables",
+          "foods": [
+            "Root Vegetables"
+          ],
+          "count": 1
+        },
+        {
+          "category": "proteins",
+          "foods": [
+            "Grilled Meats"
+          ],
+          "count": 1
+        },
+        {
+          "category": "desserts",
+          "foods": [
+            "Dark Chocolate"
+          ],
+          "count": 1
+        },
+        {
+          "category": "dairy_cheese",
+          "foods": [
+            "Aged Cheese"
+          ],
+          "count": 1
+        },
+        {
+          "category": "prepared_dishes",
+          "foods": [
+            "Dim Sum"
+          ],
+          "count": 1
+        }
+      ],
+      "analysis": {
+        "flavorCategories": [
+          "Floral",
+          "Nutty & Toasty",
+          "Sweet"
+        ],
+        "dominantFlavors": [
+          "orchid",
+          "creamy",
+          "sweet"
+        ],
+        "intensityEstimate": "Pronounced",
+        "hintCount": 20,
+        "teaTypeSpecificBoosts": 5,
+        "astringencyBoosts": 4
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received flavor inference",
+          "adjustment": "Food hints: 20, Categories: 3",
+          "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+        },
+        {
+          "step": "Food Initialization",
+          "reason": "Extract unique foods from hints",
+          "adjustment": "Initialized 20 unique foods with base score 50",
+          "value": "20"
+        },
+        {
+          "step": "Category Matching",
+          "reason": "Matched 3 categories",
+          "adjustment": "Boosted 0 food pairings",
+          "value": "Floral, Nutty & Toasty, Sweet"
+        },
+        {
+          "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+          "reason": "Tea type: TEA_TYPE_OOLONG",
+          "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+          "value": "Tea-type specific pairings activated"
+        },
+        {
+          "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+          "reason": "Caffeine: Unknown, L-Theanine: Unknown",
+          "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+          "value": "Astringency matching activated"
+        },
+        {
+          "step": "Intensity Adjustment",
+          "reason": "Profile intensity: Pronounced",
+          "adjustment": "Applied +10 bonus to all foods",
+          "value": "25 foods adjusted"
+        },
+        {
+          "step": "Ranking & Selection",
+          "reason": "Select top food pairings",
+          "adjustment": "Selected 5 top recommendations",
+          "value": "Root Vegetables, Grilled Meats, Dark Chocolate, Aged Cheese, Dim Sum"
+        },
+        {
+          "step": "Grouping",
+          "reason": "Organize recommendations",
+          "adjustment": "Created 5 cuisine groups and 5 food category groups",
+          "value": "Cuisines: International, European, Mediterranean, French, Asian"
+        },
+        {
+          "step": "Confidence Calculation",
+          "reason": "Multi-source agreement scoring",
+          "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+          "value": "Final confidence: 0.95"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "2.0"
+    },
+    "time": {
+      "recommendations": [
+        {
+          "hour": 12,
+          "score": 72.875,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 13,
+          "score": 69.875,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 14,
+          "score": 67.875,
+          "timeOfDay": "Midday (12-14)",
+          "narrative": "Post-lunch support - stimulation counters afternoon dip (Oolong Tea tradition)"
+        },
+        {
+          "hour": 15,
+          "score": 66.775,
+          "timeOfDay": "Afternoon (15-17)",
+          "narrative": "Extended focus - sustained stimulation maintains work momentum (Oolong Tea tradition)"
+        },
+        {
+          "hour": 10,
+          "score": 65.2,
+          "timeOfDay": "Morning (9-11)",
+          "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (Oolong Tea tradition)"
+        }
+      ],
+      "circadianCurve": [
+        12.675,
+        12.675,
+        11.675,
+        11.675,
+        11.675,
+        11.675,
+        36.575,
+        38.825,
+        59.525000000000006,
+        63.2,
+        65.2,
+        65.2,
+        72.875,
+        69.875,
+        67.875,
+        66.775,
+        62.075,
+        59.375,
+        48.15,
+        47.15,
+        46.15,
+        42.25,
+        32,
+        22
+      ],
+      "hourlyScores": {
+        "0": 12.675,
+        "1": 12.675,
+        "2": 11.675,
+        "3": 11.675,
+        "4": 11.675,
+        "5": 11.675,
+        "6": 36.575,
+        "7": 38.825,
+        "8": 59.525000000000006,
+        "9": 63.2,
+        "10": 65.2,
+        "11": 65.2,
+        "12": 72.875,
+        "13": 69.875,
+        "14": 67.875,
+        "15": 66.775,
+        "16": 62.075,
+        "17": 59.375,
+        "18": 48.15,
+        "19": 47.15,
+        "20": 46.15,
+        "21": 42.25,
+        "22": 32,
+        "23": 22
+      },
+      "periodGrouping": {
+        "night": {
+          "period": "Night (0-5)",
+          "hours": [
+            {
+              "hour": 0,
+              "score": 12.675
+            },
+            {
+              "hour": 1,
+              "score": 12.675
+            },
+            {
+              "hour": 2,
+              "score": 11.675
+            },
+            {
+              "hour": 3,
+              "score": 11.675
+            },
+            {
+              "hour": 4,
+              "score": 11.675
+            },
+            {
+              "hour": 5,
+              "score": 11.675
+            }
+          ],
+          "averageScore": 12,
+          "count": 6
+        },
+        "early_morning": {
+          "period": "Early Morning (6-8)",
+          "hours": [
+            {
+              "hour": 8,
+              "score": 59.525000000000006
+            },
+            {
+              "hour": 7,
+              "score": 38.825
+            },
+            {
+              "hour": 6,
+              "score": 36.575
+            }
+          ],
+          "averageScore": 45,
+          "count": 3
+        },
+        "morning": {
+          "period": "Morning (9-11)",
+          "hours": [
+            {
+              "hour": 10,
+              "score": 65.2
+            },
+            {
+              "hour": 11,
+              "score": 65.2
+            },
+            {
+              "hour": 9,
+              "score": 63.2
+            }
+          ],
+          "averageScore": 64.5,
+          "count": 3
+        },
+        "midday": {
+          "period": "Midday (12-14)",
+          "hours": [
+            {
+              "hour": 12,
+              "score": 72.875
+            },
+            {
+              "hour": 13,
+              "score": 69.875
+            },
+            {
+              "hour": 14,
+              "score": 67.875
+            }
+          ],
+          "averageScore": 70.2,
+          "count": 3
+        },
+        "afternoon": {
+          "period": "Afternoon (15-17)",
+          "hours": [
+            {
+              "hour": 15,
+              "score": 66.775
+            },
+            {
+              "hour": 16,
+              "score": 62.075
+            },
+            {
+              "hour": 17,
+              "score": 59.375
+            }
+          ],
+          "averageScore": 62.7,
+          "count": 3
+        },
+        "evening": {
+          "period": "Evening (18-20)",
+          "hours": [
+            {
+              "hour": 18,
+              "score": 48.15
+            },
+            {
+              "hour": 19,
+              "score": 47.15
+            },
+            {
+              "hour": 20,
+              "score": 46.15
+            }
+          ],
+          "averageScore": 47.1,
+          "count": 3
+        },
+        "late_evening": {
+          "period": "Late Evening (21-23)",
+          "hours": [
+            {
+              "hour": 21,
+              "score": 42.25
+            },
+            {
+              "hour": 22,
+              "score": 32
+            },
+            {
+              "hour": 23,
+              "score": 22
+            }
+          ],
+          "averageScore": 32.1,
+          "count": 3
+        }
+      },
+      "analysis": {
+        "compoundProfile": "Balanced & Focused",
+        "stimulationLevel": "Moderate",
+        "relaxationLevel": "Moderate",
+        "teaTypeApplied": true,
+        "teaType": "Oolong Tea",
+        "weighting": {
+          "compound": "85%",
+          "teaType": "15%",
+          "note": "Compound profile (stimulation/relaxation) weighted 85%, tea type cultural tradition weighted 15%"
+        }
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received compound inference",
+          "adjustment": "Profile: Balanced & Focused, Stimulation: Moderate, Relaxation: Moderate",
+          "value": "Inference validated"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all 24 hours",
+          "adjustment": "Initialized with base score 50",
+          "value": "Ready for profile matching"
+        },
+        {
+          "step": "Stimulation Scoring",
+          "reason": "Stimulation level: Moderate",
+          "adjustment": "Applied stimulation profile to all 24 hours",
+          "value": "Total adjustments: 364"
+        },
+        {
+          "step": "Relaxation Scoring",
+          "reason": "Relaxation level: Moderate",
+          "adjustment": "Applied relaxation profile to all 24 hours",
+          "value": "Total adjustments: 86"
+        },
+        {
+          "step": "Compound Profile Scoring (85%)",
+          "reason": "Compound profile: Balanced & Focused",
+          "adjustment": "Applied compound profile at 85% weight to all 24 hours",
+          "value": "Total adjustments: 258"
+        },
+        {
+          "step": "Tea Type Tradition Scoring (15%)",
+          "reason": "Tea type: Oolong Tea (cultural tradition)",
+          "adjustment": "Applied tea type cultural preference at 15% weight",
+          "value": "Total adjustments: 149"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top hours",
+          "adjustment": "Selected 5 top hours",
+          "value": "12:00 (73), 13:00 (70), 14:00 (68), 15:00 (67), 10:00 (65)"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "1.0"
+    },
+    "season": {
+      "recommendations": [
+        {
+          "seasonId": "SEASON_AUTUMN",
+          "displayName": "Autumn",
+          "score": 60.8
+        }
+      ],
+      "circularYear": [
+        {
+          "month": 1,
+          "seasonId": "SEASON_EARLY_SPRING",
+          "displayName": "Early Spring",
+          "score": 50
+        },
+        {
+          "month": 2,
+          "seasonId": "SEASON_SPRING",
+          "displayName": "Spring",
+          "score": 57.2
+        },
+        {
+          "month": 3,
+          "seasonId": "SEASON_LATE_SPRING",
+          "displayName": "Late Spring",
+          "score": 56
+        },
+        {
+          "month": 4,
+          "seasonId": "SEASON_EARLY_SUMMER",
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        {
+          "month": 5,
+          "seasonId": "SEASON_SUMMER",
+          "displayName": "Summer",
+          "score": 50
+        },
+        {
+          "month": 6,
+          "seasonId": "SEASON_LATE_SUMMER",
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        {
+          "month": 7,
+          "seasonId": "SEASON_EARLY_AUTUMN",
+          "displayName": "Early Autumn",
+          "score": 59
+        },
+        {
+          "month": 8,
+          "seasonId": "SEASON_AUTUMN",
+          "displayName": "Autumn",
+          "score": 60.8
+        },
+        {
+          "month": 9,
+          "seasonId": "SEASON_LATE_AUTUMN",
+          "displayName": "Late Autumn",
+          "score": 59
+        },
+        {
+          "month": 10,
+          "seasonId": "SEASON_EARLY_WINTER",
+          "displayName": "Early Winter",
+          "score": 50
+        },
+        {
+          "month": 11,
+          "seasonId": "SEASON_WINTER",
+          "displayName": "Winter",
+          "score": 50
+        },
+        {
+          "month": 12,
+          "seasonId": "SEASON_LATE_WINTER",
+          "displayName": "Late Winter",
+          "score": 50
+        }
+      ],
+      "monthlyScores": {
+        "SEASON_EARLY_SPRING": 50,
+        "SEASON_SPRING": 57.2,
+        "SEASON_LATE_SPRING": 56,
+        "SEASON_EARLY_SUMMER": 50,
+        "SEASON_SUMMER": 50,
+        "SEASON_LATE_SUMMER": 50,
+        "SEASON_EARLY_AUTUMN": 59,
+        "SEASON_AUTUMN": 60.8,
+        "SEASON_LATE_AUTUMN": 59,
+        "SEASON_EARLY_WINTER": 50,
+        "SEASON_WINTER": 50,
+        "SEASON_LATE_WINTER": 50
+      },
+      "seasonalScores": {
+        "SEASON_AUTUMN": {
+          "displayName": "Autumn",
+          "score": 60.8
+        },
+        "SEASON_EARLY_AUTUMN": {
+          "displayName": "Early Autumn",
+          "score": 59
+        },
+        "SEASON_LATE_AUTUMN": {
+          "displayName": "Late Autumn",
+          "score": 59
+        },
+        "SEASON_SPRING": {
+          "displayName": "Spring",
+          "score": 57.2
+        },
+        "SEASON_LATE_SPRING": {
+          "displayName": "Late Spring",
+          "score": 56
+        },
+        "SEASON_ANYTIME": {
+          "displayName": "Any Time",
+          "score": 56
+        },
+        "SEASON_EARLY_SPRING": {
+          "displayName": "Early Spring",
+          "score": 50
+        },
+        "SEASON_EARLY_SUMMER": {
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        "SEASON_SUMMER": {
+          "displayName": "Summer",
+          "score": 50
+        },
+        "SEASON_LATE_SUMMER": {
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        "SEASON_EARLY_WINTER": {
+          "displayName": "Early Winter",
+          "score": 50
+        },
+        "SEASON_WINTER": {
+          "displayName": "Winter",
+          "score": 50
+        },
+        "SEASON_LATE_WINTER": {
+          "displayName": "Late Winter",
+          "score": 50
+        }
+      },
+      "seasonalRange": {
+        "type": "single",
+        "seasons": [
+          {
+            "seasonId": "SEASON_AUTUMN",
+            "displayName": "Autumn",
+            "score": 60.8
+          }
+        ],
+        "description": "Autumn"
+      },
+      "analysis": {
+        "teaTypeApplied": true,
+        "processingApplied": true,
+        "method": "Tea type + Processing seasonal affinity"
+      },
+      "trace": [
+        {
+          "step": "Scoring Initialization",
+          "reason": "Initialize all 13 seasons with neutral base score",
+          "adjustment": "Initialized 13 seasons with base score 50",
+          "value": "Using tea type + processing for seasonal affinity"
+        },
+        {
+          "step": "Tea Type Seasonal Affinity (TIER 1 - 60%)",
+          "reason": "Tea type: Oolong Tea, Subtype: none",
+          "adjustment": "Applied 6 seasonal affinity boosts from tea type/subtype",
+          "value": "Tea type defines intrinsic seasonal suitability per cultural tradition"
+        },
+        {
+          "step": "Processing Method Seasonal Affinity (TIER 2 - 40%)",
+          "reason": "Processing methods: none",
+          "adjustment": "Applied 0 seasonal affinity boosts from processing methods",
+          "value": "Processing thermal character refines seasonal recommendation"
+        },
+        {
+          "step": "Geographic Altitude Awareness (TIER 3 - ±15% Modifier)",
+          "reason": "No geographic data provided",
+          "adjustment": "Skipped altitude-based seasonal modulation",
+          "value": "Using Tier 1 and Tier 2 scoring only"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Filter seasons with score >= 60",
+          "adjustment": "Found 1 recommended seasons",
+          "value": "Autumn (61)"
+        }
+      ],
+      "confidence": 0.85,
+      "rendererVersion": "1.0"
+    },
+    "activity": {
+      "recommendations": [
+        {
+          "activity": "Focus",
+          "score": 79.9,
+          "description": "Directing mental attention with clarity toward meaningful tasks",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "Morning through early afternoon",
+          "benefits": [
+            "Enhances concentration and attention span",
+            "Improves work quality",
+            "Reduces mental fog",
+            "Boosts productivity"
+          ]
+        },
+        {
+          "activity": "Social",
+          "score": 79.6,
+          "description": "Sharing meaningful moments and connection with friends and loved ones",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "Afternoon or evening gatherings",
+          "benefits": [
+            "Strengthens relationships",
+            "Boosts mood and happiness",
+            "Promotes sense of belonging",
+            "Encourages conversation"
+          ]
+        },
+        {
+          "activity": "Relaxation",
+          "score": 75.8,
+          "description": "A state of ease and peace where tension melts away",
+          "rationale": "Matches your Balanced & Focused compound profile",
+          "timing": "Afternoon or early evening, especially after work",
+          "benefits": [
+            "Reduces stress and anxiety",
+            "Lowers blood pressure",
+            "Improves sleep quality",
+            "Enhances mental clarity"
+          ]
+        }
+      ],
+      "clusters": [
+        {
+          "theme": "Mindfulness & Relaxation",
+          "activities": [
+            "Relaxation"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Focus & Productivity",
+          "activities": [
+            "Focus"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "Social Engagement",
+          "activities": [
+            "Social"
+          ],
+          "count": 1
+        }
+      ],
+      "analysis": {
+        "compoundProfile": "Balanced & Focused",
+        "stimulationLevel": "Moderate",
+        "relaxationLevel": "Moderate",
+        "teaType": "TEA_TYPE_OOLONG"
+      },
+      "scoringSources": {
+        "flavor": {
+          "weight": 0.4,
+          "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+          "importance": "Drives real-world tea selection and mood-based pairing"
+        },
+        "compound": {
+          "weight": 0.35,
+          "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+          "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+        },
+        "teaType": {
+          "weight": 0.25,
+          "role": "BASELINE (25%) - Cultural/traditional activity associations",
+          "importance": "Provides context, but individual character comes from flavor"
+        }
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received multi-source inferences",
+          "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_OOLONG, Flavor: undefined",
+          "value": "All inferences validated"
+        },
+        {
+          "step": "Hint Collection",
+          "reason": "Extracted activity hints from taxonomy sources",
+          "adjustment": "TeaType hints: 4, Flavor hints: 12",
+          "value": "Hints collected from cultural and sensory sources"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all activities",
+          "adjustment": "Initialized 26 activities with base score 50",
+          "value": "Ready for three-factor scoring"
+        },
+        {
+          "step": "Flavor Hints Scoring (40% - PRIMARY)",
+          "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+          "adjustment": "Boosted 12 activities by +8.00 base + multi-flavor multiplier",
+          "value": "Flavor-driven emotional associations applied"
+        },
+        {
+          "step": "Compound Scoring (35%)",
+          "reason": "Compound profile: Balanced & Focused",
+          "adjustment": "Boosted 11 activities by +7.00",
+          "value": "Biochemical score applied"
+        },
+        {
+          "step": "Stimulation Scoring (within 35%)",
+          "reason": "Stimulation level: Moderate",
+          "adjustment": "Boosted 8 activities by +3.50",
+          "value": "Stimulation multiplier applied"
+        },
+        {
+          "step": "Tea Type Hints Scoring (25%)",
+          "reason": "Cultural/traditional activity associations (baseline context)",
+          "adjustment": "Boosted 4 activities by +5.00",
+          "value": "Cultural tradition score applied"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top activities",
+          "adjustment": "Selected 3 activities",
+          "value": "Focus, Social, Relaxation"
+        }
+      ],
+      "confidence": 0.855,
+      "rendererVersion": "2.0"
+    }
+  }
+}

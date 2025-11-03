@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,227 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea Details Recorder</title>
     <link rel="stylesheet" href="css/main.css">
-</head>
+    <link rel="stylesheet" href="css/analysis-display.css">
+    </head>
 <body>
-    <div class="container">
-        <h1>Tea Details Recorder</h1>
+    <div class="app-layout">
 
-        <form id="teaForm" novalidate> <!-- Added novalidate to handle validation via JS -->
-            <!-- Basic Information -->
-            <div class="form-section">
-                <h2>Basic Information</h2>
-                <div class="form-group">
-                    <label for="teaName">Tea Name:</label>
-                    <input type="text" id="teaName" name="teaName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="originalName">Original Name:</label>
-                    <input type="text" id="originalName" name="originalName" placeholder="Original language name (e.g. Chinese)">
-                </div>
-
-                <div class="form-group">
-                    <label for="teaType">Tea Type/Family:</label>
-                    <select id="teaType" name="teaType" required>
-                        <option value="" selected disabled>Select tea type...</option>
-                        <!-- Options populated by formUI.js -->
-                    </select>
-                </div>
+        <aside id="appSidebar" class="sidebar sidebar-collapsed"> <div class="sidebar-top-controls">
+                <button id="sidebarToggleBtn" class="sidebar-icon sidebar-toggle" aria-label="Toggle Sidebar">
+                    ☰
+                </button>
+                <button id="newTeaBtn" class="new-tea-button">
+                    <span class="icon">+</span>
+                    <span class="text">New Tea</span>
+                </button>
             </div>
 
-            <!-- Processing and Flavor -->
-            <div class="form-section">
-                <h2>Processing and Flavor</h2>
-                <div class="form-group">
-                    <label>Processing Methods:</label>
-                    <div id="processingMethods" class="chip-container">
-                        <!-- Processing methods chips added here by formUI.js -->
-                    </div>
-                    <div id="suggestedProcessingMethods" class="suggestions-container">
-                        <!-- Suggested processing methods appear here -->
-                    </div>
-                    <div class="custom-input-container">
-                        <input type="text" id="customProcessingMethod" placeholder="Type to add processing method..." autocomplete="off">
-                        <div id="processingMethodSuggestions" class="autocomplete-suggestions"></div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Flavor Profiles:</label>
-                    <div id="flavorProfiles" class="chip-container">
-                        <!-- Flavor profiles chips added here by formUI.js -->
-                    </div>
-                    <div id="suggestedFlavorProfiles" class="suggestions-container">
-                        <!-- Suggested flavor profiles appear here -->
-                    </div>
-                    <div class="custom-input-container">
-                        <input type="text" id="customFlavor" placeholder="Type to add flavor profile..." autocomplete="off">
-                        <div id="flavorSuggestions" class="autocomplete-suggestions"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Compound Levels -->
-            <div class="form-section">
-                <h2>Compound Levels (Scale 0-10)</h2>
-                <div class="form-group">
-                    <label for="caffeineLevel">Caffeine Level:</label>
-                    <input type="number" id="caffeineLevel" name="caffeineLevel" min="0" max="10" step="0.1" placeholder="e.g., 4.5">
-                </div>
-
-                <div class="form-group">
-                    <label for="lTheanineLevel">L-Theanine Level:</label>
-                    <input type="number" id="lTheanineLevel" name="lTheanineLevel" min="0" max="10" step="0.1" placeholder="e.g., 9.0">
-                </div>
-            </div>
-
-            <!-- Geography Section Wrapper -->
-            <div id="geographySection" class="form-section">
-                <h2>Geography</h2>
-                 <div id="geoError" class="error-message"></div> <!-- Error message area -->
-
-                <!-- Location Search Section -->
-                <div class="geo-form-group">
-                    <label for="locationInput">Search for Origin Location:</label>
-                    <div class="input-group" style="display: flex; gap: 10px;"> <!-- Use flex for inline button -->
-                        <input type="text" id="locationInput" placeholder="Enter city, region, or country..." style="flex-grow: 1;">
-                        <button type="button" id="searchButton">Search</button>
-                    </div>
-                    <div id="locationResults" class="autocomplete-suggestions" style="position: static; border-top: 1px solid #ddd; margin-top: -1px;">
-                        <!-- Location search results appear here -->
-                    </div>
-                </div>
-
-                <!-- Location Details & Weather Section (Initially Hidden) -->
-                <div id="locationDetails" style="display: none;">
-                    <h3 style="margin-top: 20px; font-size: 1.1rem; color: #555;">Origin Details</h3>
-                    <div class="form-group">
-                        <label for="originCountry">Country:</label>
-                        <input type="text" id="originCountry" name="originCountry" placeholder="Country" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="originProvince">Province/State:</label>
-                        <input type="text" id="originProvince" name="originProvince" placeholder="Province or state" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="originLocation">Specific Location:</label>
-                        <input type="text" id="originLocation" name="originLocation" placeholder="Specific location (region, mountain, area)" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="originAltitude">Altitude (meters):</label>
-                        <div class="input-container">
-                            <input type="number" id="originAltitude" name="originAltitude" placeholder="Enter altitude or auto-estimate">
-                            <span id="estimatedLabel" class="estimated-label" style="display: none;">Est.</span>
-                        </div>
-                         <div class="auto-estimate-container">
-                            <input type="checkbox" id="autoEstimateCheckbox" checked>
-                            <label for="autoEstimateCheckbox">Auto-estimate altitude if available</label>
-                        </div>
-                    </div>
-
-                    <div class="geo-form-group">
-                        <button type="button" id="fetchWeatherButton" disabled>Get Avg. Weather Data</button>
-                    </div>
-                </div>
-
-                 <!-- Weather Data Readouts (Initially Hidden) -->
-                 <div id="weatherData" style="display: none;">
-                     <h3 style="margin-top: 20px; font-size: 1.1rem; color: #555;">Average Climate Data</h3>
-                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+            <div id="sidebarFormContainer" class="sidebar-middle-content">
+                <form id="teaForm" novalidate>
+                     <h3 class="sidebar-section-title">Create New Tea Record</h3>
+                     <div class="form-section">
+                         <h2>Basic Information</h2>
                          <div class="form-group">
-                            <label for="originTemperature">Avg. Temperature:</label>
-                            <input type="text" id="originTemperature" name="originTemperature" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="originHumidity">Avg. Humidity:</label>
-                            <input type="text" id="originHumidity" name="originHumidity" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="originSolarRadiation">Avg. Solar Radiation:</label>
-                            <input type="text" id="originSolarRadiation" name="originSolarRadiation" readonly>
+                             <label for="teaName">Tea Name:</label>
+                             <input type="text" id="teaName" name="teaName" required>
+                         </div>
+                         <div class="form-group">
+                             <label for="originalName">Original Name:</label>
+                             <input type="text" id="originalName" name="originalName" placeholder="Original language name">
+                         </div>
+                         <div class="form-group">
+                             <label for="teaType">Tea Type/Family:</label>
+                             <select id="teaType" name="teaType" required>
+                                 <option value="" selected disabled>Select tea type...</option>
+                             </select>
+                             <small style="color: #666; margin-top: 4px; display: block;">Shows both Western and Chinese names</small>
+                         </div>
+                         <div class="form-group" id="subtypeGroup" style="display: none;">
+                             <label for="teaSubtype">Tea Subtype:</label>
+                             <select id="teaSubtype" name="teaSubtype">
+                                 <option value="" selected disabled>Select subtype...</option>
+                             </select>
+                             <small style="color: #666; margin-top: 4px; display: block;">E.g., Raw Puerh vs Ripe Puerh</small>
                          </div>
                      </div>
-                </div>
-
-                <!-- Hidden coordinate inputs -->
-                <input type="hidden" id="latitudeInput" name="latitudeInput">
-                <input type="hidden" id="longitudeInput" name="longitudeInput">
-            </div> <!-- End Geography Section -->
-
-
-            <!-- Submit Button -->
-            <div class="form-navigation">
-                <button type="submit" id="saveButton">Save Tea Record</button>
+                      <div class="form-section">
+                          <h2>Processing and Flavor</h2>
+                           <div class="form-group">
+                                <label>Processing Methods:</label>
+                                <div id="processingMethods" class="chip-container"></div>
+                                <div id="suggestedProcessingMethods" class="suggestions-container"></div>
+                                <div class="custom-input-container">
+                                    <input type="text" id="customProcessingMethod" placeholder="Type to add..." autocomplete="off">
+                                    <div id="processingMethodSuggestions" class="autocomplete-suggestions"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Flavor Profiles:</label>
+                                <div id="flavorProfiles" class="chip-container"></div>
+                                <div id="suggestedFlavorProfiles" class="suggestions-container"></div>
+                                <div class="custom-input-container">
+                                    <input type="text" id="customFlavor" placeholder="Type to add..." autocomplete="off">
+                                    <div id="flavorSuggestions" class="autocomplete-suggestions"></div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="form-section">
+                          <h2>Compound Levels (0-10)</h2>
+                           <div class="form-group">
+                                <label for="caffeineLevel">Caffeine:</label>
+                                <input type="number" id="caffeineLevel" name="caffeineLevel" min="0" max="10" step="0.1" placeholder="e.g., 4.5">
+                            </div>
+                            <div class="form-group">
+                                <label for="lTheanineLevel">L-Theanine:</label>
+                                <input type="number" id="lTheanineLevel" name="lTheanineLevel" min="0" max="10" step="0.1" placeholder="e.g., 9.0">
+                            </div>
+                     </div>
+                      <div id="geographySection" class="form-section">
+                          <h2>Geography</h2>
+                           <div id="geoError" class="error-message"></div>
+                            <div class="geo-form-group">
+                                <label for="locationInput">Search Origin:</label>
+                                <div class="input-group">
+                                    <input type="text" id="locationInput" placeholder="City, region, country..." style="flex-grow: 1;">
+                                    <button type="button" id="searchButton">Search</button>
+                                </div>
+                                <div id="locationResults" class="autocomplete-suggestions"></div>
+                            </div>
+                            <div id="locationDetails" style="display: none;">
+                                <h3 class="details-subtitle">Origin Details</h3>
+                                <div class="form-group">
+                                     <label for="originCountry">Country:</label>
+                                     <input type="text" id="originCountry" name="originCountry" readonly>
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="originProvince">Province/State:</label>
+                                     <input type="text" id="originProvince" name="originProvince" readonly>
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="originLocation">Specific Location:</label>
+                                     <input type="text" id="originLocation" name="originLocation" readonly>
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="originAltitude">Altitude (m):</label>
+                                     <div class="input-container">
+                                         <input type="number" id="originAltitude" name="originAltitude" placeholder="Enter or estimate">
+                                         <span id="estimatedLabel" class="estimated-label" style="display: none;">Est.</span>
+                                     </div>
+                                     <div class="auto-estimate-container">
+                                         <input type="checkbox" id="autoEstimateCheckbox" checked>
+                                         <label for="autoEstimateCheckbox">Auto-estimate</label>
+                                     </div>
+                                 </div>
+                                <div class="geo-form-group">
+                                    <button type="button" id="fetchWeatherButton" disabled>Get Avg. Weather</button>
+                                </div>
+                            </div>
+                             <div id="weatherData" style="display: none;">
+                                 <h3 class="details-subtitle">Avg. Climate</h3>
+                                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px;">
+                                      <div class="form-group">
+                                         <label for="originTemperature">Temp:</label>
+                                         <input type="text" id="originTemperature" name="originTemperature" readonly>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="originHumidity">Humidity:</label>
+                                         <input type="text" id="originHumidity" name="originHumidity" readonly>
+                                     </div>
+                                     <div class="form-group">
+                                          <label for="originSolarRadiation" title="Avg. Solar Radiation">Solar:</label>
+                                          <input type="text" id="originSolarRadiation" name="originSolarRadiation" readonly>
+                                      </div>
+                                  </div>
+                             </div>
+                             <input type="hidden" id="latitudeInput" name="latitudeInput">
+                             <input type="hidden" id="longitudeInput" name="longitudeInput">
+                     </div> <div class="form-navigation">
+                         <button type="submit" id="saveButton">Save Tea Record</button>
+                     </div>
+                </form>
             </div>
-        </form>
 
-        <!-- Saved Records Section -->
-        <div id="savedRecords">
-            <h2>Saved Tea Records</h2>
-            <ul id="recordsList">
-                <!-- Saved records will be listed here by recordListUI.js -->
-            </ul>
-        </div>
-    </div> <!-- End Container -->
-
-     <!-- Record Details Modal (Initially Hidden) -->
-    <div id="recordModalOverlay" class="record-modal-overlay">
-        <div class="record-modal-content">
-            <button class="close-modal" aria-label="Close modal">&times;</button>
-            <div class="record-details">
-                <h2 id="modalTeaName" style="margin-bottom: 5px;"></h2>
-                <!-- Original name inserted dynamically if present -->
-                <p class="tea-type-info" id="modalTeaType" style="margin-top: 0;"></p>
-
-                <div class="modal-section" id="modalOriginInfo">
-                    <h3>Origin Information</h3>
-                    <!-- Content populated by JS -->
-                </div>
-
-                <div class="modal-section" id="modalProcessingMethodsSection">
-                    <h3>Processing Methods</h3>
-                    <ul class="methods-list" id="modalProcessingMethods">
-                        <!-- Content populated by JS -->
-                    </ul>
-                </div>
-
-                <div class="modal-section" id="modalFlavorProfilesSection">
-                    <h3>Flavor Profiles</h3>
-                    <ul class="profiles-list" id="modalFlavorProfiles">
-                         <!-- Content populated by JS -->
-                    </ul>
-                </div>
-
-                 <div class="modal-section" id="modalCompoundLevels">
-                    <h3>Compound Levels</h3>
-                    <!-- Content populated by JS -->
-                </div>
-
-                <div class="date-section" id="modalDate">
-                     <!-- Content populated by JS -->
-                </div>
-
-                <button id="copyJsonButton" class="copy-json-button">Copy JSON</button>
+            <div id="sidebarListContainer" class="sidebar-bottom-content">
+                <div id="savedRecords">
+                     <h3 class="sidebar-section-title">Saved Teas</h3>
+                     <ul id="recordsList">
+                         </ul>
+                 </div>
             </div>
-        </div>
-    </div>
 
+        </aside>
 
-    <!-- Load Module Scripts -->
-    <script src="js/utils/formatters.js" type="module"></script>
+        <main id="mainContent" class="main-content">
+             <div class="container">
+                 <div id="welcomeMessage" style="text-align: center; padding: 40px; color: #777;">
+                     <h2>Welcome to the Tea Recorder</h2>
+                     <p>Use the sidebar menu on the left to add or view teas.</p>
+                 </div>
+             </div>
+              <div id="recordModalOverlay" class="record-modal-overlay">
+                 <div class="record-modal-content">
+                     <button class="close-modal" aria-label="Close modal">&times;</button>
+                     <div class="record-details">
+                         <h2 id="modalTeaName" style="margin-bottom: 5px;"></h2>
+                         <p class="tea-type-info" id="modalTeaType" style="margin-top: 0;"></p>
+                         <div class="modal-section" id="modalOriginInfo">
+                             <h3>Origin Information</h3>
+                         </div>
+                         <div class="modal-section" id="modalProcessingMethodsSection">
+                             <h3>Processing Methods</h3>
+                             <ul class="methods-list" id="modalProcessingMethods"></ul>
+                         </div>
+                         <div class="modal-section" id="modalFlavorProfilesSection">
+                             <h3>Flavor Profiles</h3>
+                             <ul class="profiles-list" id="modalFlavorProfiles"></ul>
+                         </div>
+                          <div class="modal-section" id="modalCompoundLevels">
+                             <h3>Compound Levels</h3>
+                         </div>
+                         <div class="date-section" id="modalDate"></div>
+                         <button id="copyJsonButton" class="copy-json-button">Copy JSON</button>
+                     </div>
+                 </div>
+            </div>
+             <div class="sidebar-overlay"></div>
+        </main>
+
+    </div><script src="js/utils/formatters.js" type="module"></script>
     <script src="js/utils/clipboard.js" type="module"></script>
+    <script src="js/utils/teaTypeData.js" type="module"></script>
     <script src="js/services/storageService.js" type="module"></script>
     <script src="js/services/geoService.js" type="module"></script>
+    <script src="js/services/apiService.js" type="module"></script>
     <script src="js/modules/teaData.js" type="module"></script>
     <script src="js/modules/recordHandler.js" type="module"></script>
     <script src="js/modules/autocomplete.js" type="module"></script>
     <script src="js/modules/formUI.js" type="module"></script>
     <script src="js/modules/recordListUI.js" type="module"></script>
     <script src="js/modules/geoUI.js" type="module"></script>
-    <!-- Main App Script -->
+    <script src="js/modules/sidebarUI.js" type="module"></script>
+    <script src="js/modules/analysisDisplay.js" type="module"></script>
     <script src="js/app.js" type="module"></script>
 </body>
 </html>

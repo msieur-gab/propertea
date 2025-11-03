@@ -1,0 +1,1476 @@
+{
+  "testMetadata": {
+    "testName": "Complete Inferrer/Renderer Pipeline Test",
+    "timestamp": "2025-11-01T23:59:53.671Z",
+    "teaName": "Ali Shan Oolong",
+    "testStatus": "SUCCESS"
+  },
+  "inputData": {
+    "tea": {
+      "name": "Ali Shan Oolong",
+      "type": "oolong",
+      "subType": "high-mountain-oolong",
+      "caffeineLevel": 3.5,
+      "lTheanineLevel": 6.5
+    },
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "minimal-roast"
+    ],
+    "geography": {
+      "altitude": 1500,
+      "humidity": 80,
+      "latitude": 23.47,
+      "longitude": 120.8,
+      "temperature": 14.8,
+      "solarRadiation": 180
+    }
+  },
+  "inferrers": {
+    "flavorInferrer": {
+      "inputs": {
+        "flavorProfiles": [
+          "floral",
+          "buttery",
+          "sweet",
+          "creamy",
+          "honeysuckle"
+        ]
+      },
+      "analysis": {
+        "identifiedFlavors": [
+          "floral",
+          "buttery",
+          "sweet",
+          "creamy",
+          "honeysuckle"
+        ],
+        "dominantFlavors": [
+          "floral",
+          "buttery",
+          "sweet"
+        ],
+        "dominantCategories": [
+          "Floral",
+          "Nutty & Toasty",
+          "Sweet"
+        ],
+        "intensityEstimate": "Pronounced",
+        "foodPairingHints": [
+          "FOOD_LIGHT_DESSERTS",
+          "FOOD_STEAMED_VEGETABLES",
+          "FOOD_WHITE_FISH",
+          "FOOD_RICE_DISHES",
+          "FOOD_BREAKFAST_FOODS",
+          "FOOD_ROASTED_NUTS",
+          "FOOD_COMFORT_FOOD",
+          "FOOD_BAKED_GOODS",
+          "FOOD_GRILLED_MEATS",
+          "FOOD_FRUITS",
+          "FOOD_PASTRIES",
+          "FOOD_YOGURT",
+          "FOOD_CHEESE",
+          "FOOD_ROASTED_VEGETABLES",
+          "FOOD_LIGHT_MEATS",
+          "FOOD_HARD_CHEESE",
+          "FOOD_FRUIT_SALADS",
+          "FOOD_LIGHT_CAKES",
+          "FOOD_SORBETS"
+        ],
+        "seasonalAffinityHints": [
+          "SEASON_SPRING",
+          "SEASON_SUMMER",
+          "SEASON_AUTUMN",
+          "SEASON_WINTER",
+          "SEASON_ANYTIME"
+        ],
+        "activityHints": [
+          "ACTIVITY_RELAXATION",
+          "ACTIVITY_SOCIAL",
+          "ACTIVITY_EVENING",
+          "ACTIVITY_UNWINDING",
+          "ACTIVITY_WARMING",
+          "ACTIVITY_COMFORT",
+          "ACTIVITY_ROUTINE",
+          "ACTIVITY_TREAT",
+          "ACTIVITY_FOCUS",
+          "ACTIVITY_UPLIFTING"
+        ]
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Raw flavor profile data received",
+          "adjustment": "Received 5 flavor notes",
+          "value": "floral, buttery, sweet, creamy, honeysuckle"
+        },
+        {
+          "step": "Flavor Normalization",
+          "reason": "Standardize flavor names for lookup",
+          "adjustment": "Normalized 5 flavors",
+          "value": "floral, buttery, sweet, creamy, honeysuckle"
+        },
+        {
+          "step": "Food Hint Aggregation",
+          "reason": "Flavor: 'floral'",
+          "adjustment": "Added 4 food hints",
+          "value": "FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH, FOOD_RICE_DISHES"
+        },
+        {
+          "step": "Seasonal Hint Aggregation",
+          "reason": "Flavor: 'floral'",
+          "adjustment": "Added 2 seasonal hints",
+          "value": "SEASON_SPRING, SEASON_SUMMER"
+        },
+        {
+          "step": "Activity Hint Aggregation",
+          "reason": "Flavor: 'floral'",
+          "adjustment": "Added 4 activity hints",
+          "value": "ACTIVITY_RELAXATION, ACTIVITY_SOCIAL, ACTIVITY_EVENING, ACTIVITY_UNWINDING"
+        },
+        {
+          "step": "Food Hint Aggregation",
+          "reason": "Flavor: 'buttery'",
+          "adjustment": "Added 5 food hints",
+          "value": "FOOD_BREAKFAST_FOODS, FOOD_ROASTED_NUTS, FOOD_COMFORT_FOOD, FOOD_BAKED_GOODS, FOOD_GRILLED_MEATS"
+        },
+        {
+          "step": "Seasonal Hint Aggregation",
+          "reason": "Flavor: 'buttery'",
+          "adjustment": "Added 2 seasonal hints",
+          "value": "SEASON_AUTUMN, SEASON_WINTER"
+        },
+        {
+          "step": "Activity Hint Aggregation",
+          "reason": "Flavor: 'buttery'",
+          "adjustment": "Added 3 activity hints",
+          "value": "ACTIVITY_WARMING, ACTIVITY_COMFORT, ACTIVITY_ROUTINE"
+        },
+        {
+          "step": "Food Hint Aggregation",
+          "reason": "Flavor: 'sweet'",
+          "adjustment": "Added 4 food hints",
+          "value": "FOOD_LIGHT_DESSERTS, FOOD_FRUITS, FOOD_PASTRIES, FOOD_YOGURT"
+        },
+        {
+          "step": "Seasonal Hint Aggregation",
+          "reason": "Flavor: 'sweet'",
+          "adjustment": "Added 1 seasonal hints",
+          "value": "SEASON_ANYTIME"
+        },
+        {
+          "step": "Activity Hint Aggregation",
+          "reason": "Flavor: 'sweet'",
+          "adjustment": "Added 4 activity hints",
+          "value": "ACTIVITY_COMFORT, ACTIVITY_RELAXATION, ACTIVITY_SOCIAL, ACTIVITY_TREAT"
+        },
+        {
+          "step": "Food Hint Aggregation",
+          "reason": "Flavor: 'creamy'",
+          "adjustment": "Added 6 food hints",
+          "value": "FOOD_BAKED_GOODS, FOOD_CHEESE, FOOD_ROASTED_VEGETABLES, FOOD_LIGHT_MEATS, FOOD_ROASTED_NUTS, FOOD_HARD_CHEESE"
+        },
+        {
+          "step": "Seasonal Hint Aggregation",
+          "reason": "Flavor: 'creamy'",
+          "adjustment": "Added 2 seasonal hints",
+          "value": "SEASON_AUTUMN, SEASON_WINTER"
+        },
+        {
+          "step": "Activity Hint Aggregation",
+          "reason": "Flavor: 'creamy'",
+          "adjustment": "Added 4 activity hints",
+          "value": "ACTIVITY_WARMING, ACTIVITY_COMFORT, ACTIVITY_RELAXATION, ACTIVITY_FOCUS"
+        },
+        {
+          "step": "Food Hint Aggregation",
+          "reason": "Flavor: 'honeysuckle'",
+          "adjustment": "Added 3 food hints",
+          "value": "FOOD_FRUIT_SALADS, FOOD_LIGHT_CAKES, FOOD_SORBETS"
+        },
+        {
+          "step": "Seasonal Hint Aggregation",
+          "reason": "Flavor: 'honeysuckle'",
+          "adjustment": "Added 2 seasonal hints",
+          "value": "SEASON_SPRING, SEASON_SUMMER"
+        },
+        {
+          "step": "Activity Hint Aggregation",
+          "reason": "Flavor: 'honeysuckle'",
+          "adjustment": "Added 3 activity hints",
+          "value": "ACTIVITY_UPLIFTING, ACTIVITY_RELAXATION, ACTIVITY_SOCIAL"
+        },
+        {
+          "step": "Flavor Lookup Summary",
+          "reason": "Search FlavorInfluences database",
+          "adjustment": "Found data for 5/5 flavors",
+          "value": "Identified: floral, buttery, sweet, creamy, honeysuckle"
+        },
+        {
+          "step": "Dominant Flavors Selection",
+          "reason": "Identify top 3-5 flavors",
+          "adjustment": "Selected 3 dominant flavors",
+          "value": "floral, buttery, sweet"
+        },
+        {
+          "step": "Category Determination",
+          "reason": "Identify flavor category groupings",
+          "adjustment": "Found 3 categories",
+          "value": "Floral, Nutty & Toasty, Sweet"
+        },
+        {
+          "step": "Intensity Estimation",
+          "reason": "Based on 5 flavor notes",
+          "adjustment": "Categorized as 'Pronounced'",
+          "value": "Pronounced"
+        },
+        {
+          "step": "Hints Aggregation",
+          "reason": "Combine all hints from identified flavors",
+          "adjustment": "Food: 19, Seasonal: 5, Activity: 10",
+          "value": "Sample food hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+        },
+        {
+          "step": "Description Generation",
+          "reason": "Summarize flavor analysis",
+          "adjustment": "Generated human-readable description",
+          "value": "This tea has a 'pronounced' flavor profile. Domina..."
+        }
+      ],
+      "confidence": 0.95,
+      "description": "This tea has a 'pronounced' flavor profile. Dominant notes include floral, buttery, sweet. Overall, the flavor falls into the Floral, Nutty & Toasty, Sweet categories. The complete profile encompasses 5 distinct flavor notes.",
+      "inferrerVersion": "1.0"
+    },
+    "compoundInferrer": {
+      "inputs": {
+        "caffeineLevel": 3.5,
+        "lTheanineLevel": 6.5
+      },
+      "analysis": {
+        "ratio": "1.86",
+        "ratioCategory": "Theanine Leaning (1.5 to <2.0)",
+        "stimulationLevel": "Low",
+        "relaxationLevel": "High",
+        "compoundProfile": "Smooth & Sustained"
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Raw form data received",
+          "adjustment": "caffeineLevel: 3.5, lTheanineLevel: 6.5",
+          "value": "Data validated"
+        },
+        {
+          "step": "Ratio Calculation",
+          "reason": "Determine L-theanine/Caffeine balance",
+          "adjustment": "Ratio = 6.5 / 3.5",
+          "value": "1.86"
+        },
+        {
+          "step": "Ratio Categorization",
+          "reason": "Ratio: 1.86",
+          "adjustment": "Categorized as 'Theanine Leaning (1.5 to <2.0)'",
+          "value": "Theanine Leaning (1.5 to <2.0)"
+        },
+        {
+          "step": "Stimulation Analysis",
+          "reason": "Caffeine: 3.5, L-Theanine: 6.5",
+          "adjustment": "Determined as 'Low'",
+          "value": "Low"
+        },
+        {
+          "step": "Relaxation Analysis",
+          "reason": "L-Theanine: 6.5",
+          "adjustment": "Determined as 'High'",
+          "value": "High"
+        },
+        {
+          "step": "Profile Synthesis",
+          "reason": "Stim: Low, Relax: High, Ratio: Theanine Leaning (1.5 to <2.0)",
+          "adjustment": "Determined as 'Smooth & Sustained'",
+          "value": "Smooth & Sustained"
+        }
+      ],
+      "confidence": 0.95,
+      "inferrerVersion": "1.0"
+    },
+    "teaTypeInferrer": {
+      "inputs": {
+        "type": "oolong",
+        "subType": "high-mountain-oolong"
+      },
+      "analysis": {
+        "teaType": "TEA_TYPE_OOLONG",
+        "teaSubType": null,
+        "displayName": "Oolong Tea",
+        "chemicalComposition": {
+          "caffeineRange": [
+            0,
+            0
+          ],
+          "caffeineAverage": 0,
+          "theanineRange": [
+            0,
+            0
+          ],
+          "theanineAverage": 0,
+          "ratio": null
+        },
+        "dominantFlavorCategories": [
+          "Floral",
+          "Fruity",
+          "Roasted",
+          "Woody",
+          "Mineral",
+          "Creamy"
+        ],
+        "activityHints": [
+          "ACTIVITY_SOCIAL",
+          "ACTIVITY_CONTEMPLATIVE",
+          "ACTIVITY_FOCUS",
+          "ACTIVITY_RELAXATION"
+        ],
+        "commonProcessing": [
+          "PROCESSING_WITHERED",
+          "PROCESSING_ROLLED",
+          "PROCESSING_PARTIAL_OXIDATION",
+          "PROCESSING_LIGHT_ROAST",
+          "PROCESSING_MEDIUM_ROAST",
+          "PROCESSING_HEAVY_ROAST"
+        ],
+        "seasonalTendency": "variable",
+        "timeOfDaySuitability": "Flexible",
+        "oxidationLevel": 50,
+        "qualityTier": "Standard"
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Raw tea type data received",
+          "adjustment": "Type: oolong, SubType: high-mountain-oolong",
+          "value": "Data validated"
+        },
+        {
+          "step": "Tea Type Lookup",
+          "reason": "Search for tea type: oolong",
+          "adjustment": "Found: Oolong Tea",
+          "value": "TEA_TYPE_OOLONG"
+        },
+        {
+          "step": "Tea SubType Lookup",
+          "reason": "Search for subtype: high-mountain-oolong",
+          "adjustment": "SubType not found, using type defaults",
+          "value": "Using type-level analysis"
+        },
+        {
+          "step": "Chemical Composition Analysis",
+          "reason": "Extract caffeine and L-theanine ranges",
+          "adjustment": "Caffeine: 0-0, L-Theanine: 0-0",
+          "value": "Avg Caffeine: 0.0, Avg L-Theanine: 0.0"
+        },
+        {
+          "step": "Dominant Flavor Extraction",
+          "reason": "Identify tea's natural flavor profiles",
+          "adjustment": "Found 6 dominant flavor categories",
+          "value": "Floral, Fruity, Roasted, Woody, Mineral, Creamy"
+        },
+        {
+          "step": "Activity Hints Extraction",
+          "reason": "Identify suitable activities for this tea type",
+          "adjustment": "Found 4 activity hints",
+          "value": "ACTIVITY_SOCIAL, ACTIVITY_CONTEMPLATIVE, ACTIVITY_FOCUS, ACTIVITY_RELAXATION"
+        },
+        {
+          "step": "Processing Methods Extraction",
+          "reason": "Identify common processing for this tea type",
+          "adjustment": "Found 6 processing methods",
+          "value": "PROCESSING_WITHERED, PROCESSING_ROLLED, PROCESSING_PARTIAL_OXIDATION, PROCESSING_LIGHT_ROAST, PROCESSING_MEDIUM_ROAST, PROCESSING_HEAVY_ROAST"
+        },
+        {
+          "step": "Seasonal Tendency Analysis",
+          "reason": "Identify optimal consumption seasons",
+          "adjustment": "Seasonal tendency: variable",
+          "value": "variable"
+        },
+        {
+          "step": "Time of Day Analysis",
+          "reason": "Identify best times to drink this tea",
+          "adjustment": "Time of day: Flexible",
+          "value": "Flexible"
+        },
+        {
+          "step": "Oxidation Level Estimation",
+          "reason": "Based on tea type: oolong",
+          "adjustment": "Estimated oxidation: 50%",
+          "value": 50
+        },
+        {
+          "step": "Description Generation",
+          "reason": "Summarize tea type analysis",
+          "adjustment": "Generated human-readable description",
+          "value": "Oolong Tea is a variable tea. It has low caffeine ..."
+        }
+      ],
+      "confidence": 0.85,
+      "description": "Oolong Tea is a variable tea. It has low caffeine content, suitable for evening enjoyment. The flavor profile features Floral, Fruity notes. Best enjoyed variable.",
+      "inferrerVersion": "1.0"
+    },
+    "geographyInferrer": {
+      "inputs": {
+        "altitude": 1500,
+        "humidity": 80,
+        "latitude": 23.47,
+        "temperature": 14.8,
+        "solarRadiation": 180
+      },
+      "analysis": {
+        "elevation": {
+          "value": 1500,
+          "classification": "High",
+          "effect": "Neutral"
+        },
+        "climate": {
+          "humidity": {
+            "value": 80,
+            "classification": "High",
+            "effect": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency"
+          },
+          "latitude": {
+            "value": 23.47,
+            "zone": "Subtropical (Lower)",
+            "climateType": "Unknown"
+          },
+          "temperature": {
+            "value": 14.8,
+            "classification": "Cool",
+            "characteristic": "Neutral"
+          },
+          "solarRadiation": {
+            "value": 180,
+            "classification": "Unknown",
+            "effect": "Neutral"
+          }
+        },
+        "qualityIndicator": "Premium/Exceptional",
+        "harvestSeasonPotential": "Autumn",
+        "terroir": [
+          "Mountain terroir",
+          "Misty/misty-mountain character",
+          "Cool-climate character"
+        ],
+        "season": {
+          "harvestSeason": "Autumn",
+          "seasonalFlavorProfile": "Deep, fruity character"
+        }
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Raw geographic data received",
+          "adjustment": "Altitude: 1500m, Humidity: 80%, Temperature: 14.8°C",
+          "value": "Latitude: 23.47°, Solar Radiation: 180 MJ/m²/day"
+        },
+        {
+          "step": "Elevation Classification",
+          "reason": "Based on altitude: 1500m",
+          "adjustment": "Classified as: High",
+          "value": "Effect: Neutral"
+        },
+        {
+          "step": "Humidity Classification",
+          "reason": "Based on humidity: 80%",
+          "adjustment": "Classified as: High",
+          "value": "Effect: High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency"
+        },
+        {
+          "step": "Latitude/Climate Zone Classification",
+          "reason": "Based on latitude: 23.47°",
+          "adjustment": "Classified as: Subtropical (Lower)",
+          "value": "Climate Type: Unknown"
+        },
+        {
+          "step": "Temperature Classification",
+          "reason": "Based on average temperature: 14.8°C",
+          "adjustment": "Classified as: Cool",
+          "value": "Characteristic: Neutral"
+        },
+        {
+          "step": "Solar Radiation Classification",
+          "reason": "Based on solar radiation: 180 MJ/m²/day",
+          "adjustment": "Classified as: Unknown",
+          "value": "Effect: Neutral"
+        },
+        {
+          "step": "Quality Assessment",
+          "reason": "Combine geographic factors to assess tea quality potential",
+          "adjustment": "Assessed as: Premium/Exceptional",
+          "value": "Based on elevation, humidity, temperature, and solar exposure"
+        },
+        {
+          "step": "Harvest Season Analysis",
+          "reason": "Determine optimal harvest timing",
+          "adjustment": "Potential season: Autumn",
+          "value": "Based on temperature and latitude"
+        },
+        {
+          "step": "Terroir Assessment",
+          "reason": "Combine environmental factors for terroir profile",
+          "adjustment": "Terroir characteristics: Mountain terroir, Misty/misty-mountain character, Cool-climate character",
+          "value": "Environmental distinctiveness indicators"
+        },
+        {
+          "step": "Description Generation",
+          "reason": "Summarize geographic analysis",
+          "adjustment": "Generated human-readable description",
+          "value": "This tea originates from a high in the subtropical..."
+        }
+      ],
+      "confidence": 0.95,
+      "description": "This tea originates from a high in the subtropical (lower) region. The cool climate contributes to premium/exceptional tea production. Harvest timing in autumn brings out characteristic flavor development. The geographic location significantly influences the tea's distinctive terroir expression.",
+      "inferrerVersion": "1.0"
+    },
+    "processingInferrer": {
+      "inputs": {
+        "processingMethods": [
+          "withered",
+          "partial-oxidation",
+          "ball-rolled",
+          "minimal-roast"
+        ]
+      },
+      "analysis": {
+        "identifiedMethods": [
+          {
+            "id": "PROCESSING_WITHERED",
+            "displayName": "Withered",
+            "category": "CATEGORY_OXIDATION"
+          },
+          {
+            "id": "PROCESSING_PARTIAL_OXIDATION",
+            "displayName": "Partial-Oxidation",
+            "category": "CATEGORY_OXIDATION"
+          },
+          {
+            "id": "PROCESSING_BALL_ROLLED",
+            "displayName": "Ball-Rolled",
+            "category": "CATEGORY_SHAPING_BRUISING"
+          },
+          {
+            "id": "PROCESSING_MINIMAL_ROAST",
+            "displayName": "Minimal-Roast",
+            "category": "CATEGORY_ROASTING"
+          }
+        ],
+        "notFound": [],
+        "dominantCategories": [
+          "Oxidation",
+          "Shaping & Bruising",
+          "Roasting"
+        ],
+        "thermalEffect": "Strongly Warming",
+        "flavorImpacts": [
+          "develops floral precursors",
+          "reduces grassy notes slightly",
+          "develops diverse floral/fruity/roasted notes",
+          "reduces vegetal notes",
+          "creates multi-infusion complexity"
+        ],
+        "mouthfeel": "Thick & Warming",
+        "energeticTendency": "Balanced",
+        "compoundEffect": "Warming & Comforting",
+        "roastLevel": "Light Roast",
+        "oxidationLevel": "Partially Oxidized",
+        "compoundModulation": {
+          "caffeineEffect": "Moderately Enhanced",
+          "theanineEffect": "Standard",
+          "overallProfile": "Warming & Comforting"
+        }
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Raw processing method data received",
+          "adjustment": "Received 4 processing methods",
+          "value": "withered, partial-oxidation, ball-rolled, minimal-roast"
+        },
+        {
+          "step": "Processing Method Lookup",
+          "reason": "Method: 'withered'",
+          "adjustment": "Found: Withered",
+          "value": "PROCESSING_WITHERED"
+        },
+        {
+          "step": "Processing Method Lookup",
+          "reason": "Method: 'partial-oxidation'",
+          "adjustment": "Found: Partial-Oxidation",
+          "value": "PROCESSING_PARTIAL_OXIDATION"
+        },
+        {
+          "step": "Processing Method Lookup",
+          "reason": "Method: 'ball-rolled'",
+          "adjustment": "Found: Ball-Rolled",
+          "value": "PROCESSING_BALL_ROLLED"
+        },
+        {
+          "step": "Processing Method Lookup",
+          "reason": "Method: 'minimal-roast'",
+          "adjustment": "Found: Minimal-Roast",
+          "value": "PROCESSING_MINIMAL_ROAST"
+        },
+        {
+          "step": "Method Lookup Summary",
+          "reason": "Search ProcessingTaxonomy database",
+          "adjustment": "Found 4/4 methods",
+          "value": "Identified: Withered, Partial-Oxidation, Ball-Rolled, Minimal-Roast"
+        },
+        {
+          "step": "Category Determination",
+          "reason": "Identify processing category groupings",
+          "adjustment": "Found 3 categories",
+          "value": "Oxidation, Shaping & Bruising, Roasting"
+        },
+        {
+          "step": "Thermal Effect Analysis",
+          "reason": "Combine thermal characteristics from all methods",
+          "adjustment": "Determined overall effect: Strongly Warming",
+          "value": "Based on oxidation stop, roasting, and fermentation methods"
+        },
+        {
+          "step": "Flavor Impact Aggregation",
+          "reason": "Combine flavor changes from processing",
+          "adjustment": "Identified 5 major flavor impacts",
+          "value": "develops floral precursors, reduces grassy notes slightly, develops diverse floral/fruity/roasted notes, reduces vegetal notes, creates multi-infusion complexity"
+        },
+        {
+          "step": "Mouthfeel Determination",
+          "reason": "Identify texture and body characteristics",
+          "adjustment": "Mouthfeel: Thick & Warming",
+          "value": "Based on oxidation, roasting, and bruising methods"
+        },
+        {
+          "step": "Energetic Tendency Analysis",
+          "reason": "Determine energizing or calming effect",
+          "adjustment": "Tendency: Balanced",
+          "value": "Based on oxidation and fermentation levels"
+        },
+        {
+          "step": "Compound Effect Determination",
+          "reason": "Estimate caffeine/theanine modulation",
+          "adjustment": "Compound effect: Warming & Comforting",
+          "value": "Based on processing methods"
+        },
+        {
+          "step": "Roast Level Analysis",
+          "reason": "Identify roasting intensity if applied",
+          "adjustment": "Roast level: Light Roast",
+          "value": "Based on roasting methods present"
+        },
+        {
+          "step": "Oxidation Assessment",
+          "reason": "Determine oxidation completeness",
+          "adjustment": "Oxidation impact: Partially Oxidized",
+          "value": "Based on oxidation and drying methods"
+        },
+        {
+          "step": "Description Generation",
+          "reason": "Summarize processing analysis",
+          "adjustment": "Generated human-readable description",
+          "value": "This tea undergoes 4 processing step(s). The proce..."
+        }
+      ],
+      "confidence": 0.95,
+      "description": "This tea undergoes 4 processing step(s). The processing creates a warming tea, ideal for cool weather. Processing enhances flavors including develops floral precursors and reduces grassy notes slightly. The result is thick & warming.",
+      "inferrerVersion": "1.0"
+    }
+  },
+  "renderers": {
+    "activityRenderer": {
+      "recommendations": [
+        {
+          "activity": "Relaxation",
+          "score": 75,
+          "description": "A recommended activity",
+          "rationale": "Matches your Smooth & Sustained compound profile",
+          "timing": "Flexible timing",
+          "benefits": []
+        },
+        {
+          "activity": "Unwinding",
+          "score": 75,
+          "description": "A recommended activity",
+          "rationale": "Matches your Smooth & Sustained compound profile",
+          "timing": "Flexible timing",
+          "benefits": []
+        },
+        {
+          "activity": "Calm",
+          "score": 75,
+          "description": "A recommended activity",
+          "rationale": "Matches your Smooth & Sustained compound profile",
+          "timing": "Flexible timing",
+          "benefits": []
+        }
+      ],
+      "clusters": [
+        {
+          "theme": "Mindfulness & Relaxation",
+          "activities": [
+            "Relaxation",
+            "Unwinding",
+            "Calm"
+          ],
+          "count": 3
+        }
+      ],
+      "analysis": {
+        "compoundProfile": "Smooth & Sustained",
+        "stimulationLevel": "Low",
+        "relaxationLevel": "High"
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received compound inference",
+          "adjustment": "Profile: Smooth & Sustained, Stimulation: Low, Relaxation: High",
+          "value": "Inference validated"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all activities",
+          "adjustment": "Initialized 26 activities with base score 50",
+          "value": "Ready for profile matching"
+        },
+        {
+          "step": "Profile Matching",
+          "reason": "Compound profile: Smooth & Sustained",
+          "adjustment": "Boosted 13 activities by +20",
+          "value": "Profile score applied"
+        },
+        {
+          "step": "Stimulation Scoring",
+          "reason": "Stimulation level: Low",
+          "adjustment": "Boosted 7 activities by +5",
+          "value": "Stimulation score applied"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top activities",
+          "adjustment": "Selected 3 activities",
+          "value": "Relaxation, Unwinding, Calm"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "1.0"
+    },
+    "foodRenderer": {
+      "recommendations": [
+        {
+          "food": "Light Desserts",
+          "foodId": "FOOD_LIGHT_DESSERTS",
+          "description": "A complementary food pairing",
+          "score": 60,
+          "rationale": "Light Desserts complements floral and buttery, enhancing floral notes",
+          "category": "desserts",
+          "flavorProfile": [],
+          "pairingTechnique": "Serve tea before dessert to cleanse palate, then enjoy together for subtle flavor harmony"
+        },
+        {
+          "food": "Steamed Vegetables",
+          "foodId": "FOOD_STEAMED_VEGETABLES",
+          "description": "A complementary food pairing",
+          "score": 60,
+          "rationale": "Steamed Vegetables complements floral and buttery, enhancing floral notes",
+          "category": "vegetables",
+          "flavorProfile": [],
+          "pairingTechnique": "Tea's warmth complements fresh, light vegetable preparations"
+        },
+        {
+          "food": "White Fish",
+          "foodId": "FOOD_WHITE_FISH",
+          "description": "A complementary food pairing",
+          "score": 60,
+          "rationale": "White Fish complements floral and buttery, enhancing floral notes",
+          "category": "proteins",
+          "flavorProfile": [],
+          "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+        },
+        {
+          "food": "Rice Dishes",
+          "foodId": "FOOD_RICE_DISHES",
+          "description": "A complementary food pairing",
+          "score": 60,
+          "rationale": "Rice Dishes complements floral and buttery, enhancing floral notes",
+          "category": "prepared_dishes",
+          "flavorProfile": [],
+          "pairingTechnique": "Tea cleanses palate between spoonfuls while complementing rice's subtle flavors"
+        },
+        {
+          "food": "Breakfast Foods",
+          "foodId": "FOOD_BREAKFAST_FOODS",
+          "description": "A complementary food pairing",
+          "score": 60,
+          "rationale": "Breakfast Foods complements floral and buttery, enhancing floral notes",
+          "category": "prepared_dishes",
+          "flavorProfile": [],
+          "pairingTechnique": "Morning tea ritual pairs harmoniously with breakfast preparation"
+        }
+      ],
+      "cuisineGroupings": [
+        {
+          "cuisine": "International",
+          "foods": [
+            "Light Desserts",
+            "Steamed Vegetables",
+            "White Fish"
+          ],
+          "count": 3
+        },
+        {
+          "cuisine": "Asian",
+          "foods": [
+            "Rice Dishes",
+            "Breakfast Foods"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "European",
+          "foods": [
+            "Rice Dishes",
+            "Breakfast Foods"
+          ],
+          "count": 2
+        },
+        {
+          "cuisine": "Mediterranean",
+          "foods": [
+            "Rice Dishes",
+            "Breakfast Foods"
+          ],
+          "count": 2
+        }
+      ],
+      "categoryGroupings": [
+        {
+          "category": "desserts",
+          "foods": [
+            "Light Desserts"
+          ],
+          "count": 1
+        },
+        {
+          "category": "vegetables",
+          "foods": [
+            "Steamed Vegetables"
+          ],
+          "count": 1
+        },
+        {
+          "category": "proteins",
+          "foods": [
+            "White Fish"
+          ],
+          "count": 1
+        },
+        {
+          "category": "prepared_dishes",
+          "foods": [
+            "Rice Dishes",
+            "Breakfast Foods"
+          ],
+          "count": 2
+        }
+      ],
+      "analysis": {
+        "flavorCategories": [
+          "Floral",
+          "Nutty & Toasty",
+          "Sweet"
+        ],
+        "dominantFlavors": [
+          "floral",
+          "buttery",
+          "sweet"
+        ],
+        "intensityEstimate": "Pronounced",
+        "hintCount": 19
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received flavor inference",
+          "adjustment": "Food hints: 19, Categories: 3",
+          "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+        },
+        {
+          "step": "Food Initialization",
+          "reason": "Extract unique foods from hints",
+          "adjustment": "Initialized 19 unique foods with base score 50",
+          "value": "19"
+        },
+        {
+          "step": "Category Matching",
+          "reason": "Matched 3 categories",
+          "adjustment": "Boosted 0 food pairings",
+          "value": "Floral, Nutty & Toasty, Sweet"
+        },
+        {
+          "step": "Intensity Adjustment",
+          "reason": "Profile intensity: Pronounced",
+          "adjustment": "Applied +10 bonus to all foods",
+          "value": "19 foods adjusted"
+        },
+        {
+          "step": "Ranking & Selection",
+          "reason": "Select top food pairings",
+          "adjustment": "Selected 5 top recommendations",
+          "value": "Light Desserts, Steamed Vegetables, White Fish, Rice Dishes, Breakfast Foods"
+        },
+        {
+          "step": "Grouping",
+          "reason": "Organize recommendations",
+          "adjustment": "Created 4 cuisine groups and 4 food category groups",
+          "value": "Cuisines: International, Asian, European, Mediterranean"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "1.0"
+    },
+    "timeRenderer": {
+      "recommendations": [
+        {
+          "hour": 12,
+          "score": 66,
+          "period": "Midday (12-14)"
+        },
+        {
+          "hour": 13,
+          "score": 64,
+          "period": "Midday (12-14)"
+        },
+        {
+          "hour": 14,
+          "score": 63,
+          "period": "Midday (12-14)"
+        },
+        {
+          "hour": 15,
+          "score": 61,
+          "period": "Afternoon (15-17)"
+        },
+        {
+          "hour": 16,
+          "score": 60,
+          "period": "Afternoon (15-17)"
+        }
+      ],
+      "hourlyScores": {
+        "0": 26,
+        "1": 26,
+        "2": 24,
+        "3": 24,
+        "4": 24,
+        "5": 24,
+        "6": 40,
+        "7": 30,
+        "8": 49,
+        "9": 51,
+        "10": 52,
+        "11": 52,
+        "12": 66,
+        "13": 64,
+        "14": 63,
+        "15": 61,
+        "16": 60,
+        "17": 60,
+        "18": 54,
+        "19": 56,
+        "20": 59,
+        "21": 53,
+        "22": 47,
+        "23": 32
+      },
+      "periodGrouping": {
+        "night": {
+          "period": "Night (0-5)",
+          "hours": [
+            {
+              "hour": 0,
+              "score": 26
+            },
+            {
+              "hour": 1,
+              "score": 26
+            },
+            {
+              "hour": 2,
+              "score": 24
+            },
+            {
+              "hour": 3,
+              "score": 24
+            },
+            {
+              "hour": 4,
+              "score": 24
+            },
+            {
+              "hour": 5,
+              "score": 24
+            }
+          ],
+          "averageScore": 24.7,
+          "count": 6
+        },
+        "early_morning": {
+          "period": "Early Morning (6-8)",
+          "hours": [
+            {
+              "hour": 8,
+              "score": 49
+            },
+            {
+              "hour": 6,
+              "score": 40
+            },
+            {
+              "hour": 7,
+              "score": 30
+            }
+          ],
+          "averageScore": 39.7,
+          "count": 3
+        },
+        "morning": {
+          "period": "Morning (9-11)",
+          "hours": [
+            {
+              "hour": 10,
+              "score": 52
+            },
+            {
+              "hour": 11,
+              "score": 52
+            },
+            {
+              "hour": 9,
+              "score": 51
+            }
+          ],
+          "averageScore": 51.7,
+          "count": 3
+        },
+        "midday": {
+          "period": "Midday (12-14)",
+          "hours": [
+            {
+              "hour": 12,
+              "score": 66
+            },
+            {
+              "hour": 13,
+              "score": 64
+            },
+            {
+              "hour": 14,
+              "score": 63
+            }
+          ],
+          "averageScore": 64.3,
+          "count": 3
+        },
+        "afternoon": {
+          "period": "Afternoon (15-17)",
+          "hours": [
+            {
+              "hour": 15,
+              "score": 61
+            },
+            {
+              "hour": 16,
+              "score": 60
+            },
+            {
+              "hour": 17,
+              "score": 60
+            }
+          ],
+          "averageScore": 60.3,
+          "count": 3
+        },
+        "evening": {
+          "period": "Evening (18-20)",
+          "hours": [
+            {
+              "hour": 20,
+              "score": 59
+            },
+            {
+              "hour": 19,
+              "score": 56
+            },
+            {
+              "hour": 18,
+              "score": 54
+            }
+          ],
+          "averageScore": 56.3,
+          "count": 3
+        },
+        "late_evening": {
+          "period": "Late Evening (21-23)",
+          "hours": [
+            {
+              "hour": 21,
+              "score": 53
+            },
+            {
+              "hour": 22,
+              "score": 47
+            },
+            {
+              "hour": 23,
+              "score": 32
+            }
+          ],
+          "averageScore": 44,
+          "count": 3
+        }
+      },
+      "analysis": {
+        "compoundProfile": "Smooth & Sustained",
+        "stimulationLevel": "Low",
+        "relaxationLevel": "High"
+      },
+      "trace": [
+        {
+          "step": "Data Reception",
+          "reason": "Received compound inference",
+          "adjustment": "Profile: Smooth & Sustained, Stimulation: Low, Relaxation: High",
+          "value": "Inference validated"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Set base scores for all 24 hours",
+          "adjustment": "Initialized with base score 50",
+          "value": "Ready for profile matching"
+        },
+        {
+          "step": "Stimulation Scoring",
+          "reason": "Stimulation level: Low",
+          "adjustment": "Applied stimulation profile to all 24 hours",
+          "value": "Total adjustments: 243"
+        },
+        {
+          "step": "Relaxation Scoring",
+          "reason": "Relaxation level: High",
+          "adjustment": "Applied relaxation profile to all 24 hours",
+          "value": "Total adjustments: 144"
+        },
+        {
+          "step": "Compound Profile Scoring",
+          "reason": "Compound profile: Smooth & Sustained",
+          "adjustment": "Applied compound profile to all 24 hours",
+          "value": "Total adjustments: 184"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Selected top hours",
+          "adjustment": "Selected 5 top hours",
+          "value": "12:00 (66), 13:00 (64), 14:00 (63), 15:00 (61), 16:00 (60)"
+        }
+      ],
+      "confidence": 0.95,
+      "rendererVersion": "1.0"
+    },
+    "seasonRenderer": {
+      "recommendations": [],
+      "seasonalScores": {
+        "SEASON_SPRING": {
+          "displayName": "Spring",
+          "score": 65
+        },
+        "SEASON_SUMMER": {
+          "displayName": "Summer",
+          "score": 65
+        },
+        "SEASON_AUTUMN": {
+          "displayName": "Autumn",
+          "score": 65
+        },
+        "SEASON_WINTER": {
+          "displayName": "Winter",
+          "score": 65
+        },
+        "SEASON_ANYTIME": {
+          "displayName": "Any Time",
+          "score": 65
+        },
+        "SEASON_EARLY_SPRING": {
+          "displayName": "Early Spring",
+          "score": 50
+        },
+        "SEASON_LATE_SPRING": {
+          "displayName": "Late Spring",
+          "score": 50
+        },
+        "SEASON_EARLY_SUMMER": {
+          "displayName": "Early Summer",
+          "score": 50
+        },
+        "SEASON_LATE_SUMMER": {
+          "displayName": "Late Summer",
+          "score": 50
+        },
+        "SEASON_EARLY_AUTUMN": {
+          "displayName": "Early Autumn",
+          "score": 50
+        },
+        "SEASON_LATE_AUTUMN": {
+          "displayName": "Late Autumn",
+          "score": 50
+        },
+        "SEASON_EARLY_WINTER": {
+          "displayName": "Early Winter",
+          "score": 50
+        },
+        "SEASON_LATE_WINTER": {
+          "displayName": "Late Winter",
+          "score": 50
+        }
+      },
+      "seasonalRange": null,
+      "analysis": {
+        "geographySeasonalHint": "Unknown",
+        "processingThermalEffect": "neutral",
+        "teaSeasonalTendency": "variable",
+        "flavorHintsCount": 5
+      },
+      "trace": [
+        {
+          "step": "Input Processing",
+          "reason": "Extract seasonal data from multiple analyses",
+          "adjustment": "Geography: Unknown, Processing: neutral, Type: variable",
+          "value": "Flavor categories: Floral, Nutty & Toasty, Sweet"
+        },
+        {
+          "step": "Scoring Initialization",
+          "reason": "Initialize all 13 seasons with base score",
+          "adjustment": "Initialized 13 seasons with base score 50",
+          "value": "Ready for matching"
+        },
+        {
+          "step": "Processing Matching",
+          "reason": "Processing thermal effect: neutral",
+          "adjustment": "Applied processing affinity to seasons",
+          "value": "Season scores updated"
+        },
+        {
+          "step": "Tea Type Matching",
+          "reason": "Tea type seasonal tendency: variable",
+          "adjustment": "Applied tea type seasonal affinities",
+          "value": "Season scores updated"
+        },
+        {
+          "step": "Flavor Matching",
+          "reason": "Applied 5 flavor seasonal hints",
+          "adjustment": "Boosted 5 season scores by +15",
+          "value": "Hint seasons: SEASON_SPRING, SEASON_SUMMER, SEASON_AUTUMN, SEASON_WINTER, SEASON_ANYTIME"
+        },
+        {
+          "step": "Final Selection",
+          "reason": "Filter seasons with score >= 70",
+          "adjustment": "Found 0 recommended seasons",
+          "value": ""
+        }
+      ],
+      "confidence": 0.85,
+      "rendererVersion": "1.0"
+    },
+    "brewingRenderer": {
+      "tea": {
+        "name": "Ali Shan Oolong",
+        "type": "oolong",
+        "subType": "high-mountain-oolong",
+        "description": "Oolong teas represent a diverse category with partial oxidation ranging from light (closer to green) to heavy (closer to black). This results in a wide spectrum of flavors and characteristics",
+        "characteristics": {
+          "caffeine": "N/A",
+          "theanine": "N/A",
+          "processingMethods": [
+            "PROCESSING_WITHERED",
+            "PROCESSING_PARTIAL_OXIDATION",
+            "PROCESSING_BALL_ROLLED",
+            "PROCESSING_MINIMAL_ROAST"
+          ]
+        }
+      },
+      "brewingStyles": [
+        {
+          "style": "gongfu",
+          "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions, creating a contemplative experience where each steep tells a new story of the leaf's character",
+          "description": "Traditional Chinese brewing with small vessel and multiple short infusions",
+          "parameters": {
+            "temperature": 90,
+            "steepTime": 3.5,
+            "amountPerGram": 0.08,
+            "infusions": 7
+          },
+          "guidance": [
+            "Water Temperature: 90°C (194°F)",
+            "Initial Steep Time: 3.5 seconds",
+            "Tea Amount: 0.08 grams per ml of water",
+            "Multiple Infusions: 7 infusions recommended",
+            "Infusion Method: Short steeps with full leaf rehydration between infusions"
+          ],
+          "vessels": {
+            "recommended": {
+              "id": "VESSEL_GAIWAN",
+              "name": "Gaiwan",
+              "description": "Gold standard for oolong - perfectly suited for multiple infusions and leaf observation"
+            },
+            "alternatives": [
+              {
+                "id": "VESSEL_CLAY_TEAPOT",
+                "name": "Yixing Clay Teapot",
+                "description": "Seasoned clay enhances oolong's complex flavors and retains heat beautifully"
+              },
+              {
+                "id": "VESSEL_GLASS_TEAPOT",
+                "name": "Glass Teapot",
+                "description": "Elegant way to watch oolong leaves dance through infusions"
+              }
+            ]
+          }
+        },
+        {
+          "style": "western",
+          "philosophy": "Simplicity & Accessibility - Single longer infusion captures the essential character of the tea in a straightforward, approachable manner suitable for everyday enjoyment",
+          "description": "European/American style with larger amount of water and longer steep time",
+          "parameters": {
+            "temperature": 85,
+            "steepTime": 5.5,
+            "amountPerGram": 0.05,
+            "infusions": 2
+          },
+          "guidance": [
+            "Water Temperature: 85°C (185°F)",
+            "Initial Steep Time: 5.5 seconds",
+            "Tea Amount: 0.05 grams per ml of water",
+            "Single Infusion: 2 typical for western style",
+            "Infusion Method: Longer steep time with strainer or infuser"
+          ],
+          "vessels": {
+            "recommended": {
+              "id": "VESSEL_GAIWAN",
+              "name": "Gaiwan",
+              "description": "Gold standard for oolong - perfectly suited for multiple infusions and leaf observation"
+            },
+            "alternatives": [
+              {
+                "id": "VESSEL_CLAY_TEAPOT",
+                "name": "Yixing Clay Teapot",
+                "description": "Seasoned clay enhances oolong's complex flavors and retains heat beautifully"
+              },
+              {
+                "id": "VESSEL_GLASS_TEAPOT",
+                "name": "Glass Teapot",
+                "description": "Elegant way to watch oolong leaves dance through infusions"
+              }
+            ]
+          }
+        }
+      ],
+      "recommendedStyle": {
+        "name": "gongfu",
+        "reason": "This style is ideal for appreciating the full complexity and evolution of this tea across multiple infusions. Each steep reveals new flavor dimensions and allows observation of leaf unfurling."
+      },
+      "vessels": {
+        "recommended": {
+          "id": "VESSEL_GAIWAN",
+          "name": "Gaiwan",
+          "description": "Gold standard for oolong - perfectly suited for multiple infusions and leaf observation"
+        },
+        "alternatives": [
+          {
+            "id": "VESSEL_CLAY_TEAPOT",
+            "name": "Yixing Clay Teapot",
+            "description": "Seasoned clay enhances oolong's complex flavors and retains heat beautifully"
+          },
+          {
+            "id": "VESSEL_GLASS_TEAPOT",
+            "name": "Glass Teapot",
+            "description": "Elegant way to watch oolong leaves dance through infusions"
+          }
+        ],
+        "allOptions": [
+          {
+            "id": "VESSEL_GAIWAN",
+            "name": "Gaiwan",
+            "description": "Gold standard for oolong - perfectly suited for multiple infusions and leaf observation"
+          },
+          {
+            "id": "VESSEL_CLAY_TEAPOT",
+            "name": "Yixing Clay Teapot",
+            "description": "Seasoned clay enhances oolong's complex flavors and retains heat beautifully"
+          },
+          {
+            "id": "VESSEL_GLASS_TEAPOT",
+            "name": "Glass Teapot",
+            "description": "Elegant way to watch oolong leaves dance through infusions"
+          }
+        ]
+      },
+      "trace": [
+        {
+          "step": "Input Reception",
+          "reason": "Received tea and brewing preference",
+          "adjustment": "Tea: Ali Shan Oolong, Type: oolong, Style: gongfu",
+          "value": "Data validated"
+        },
+        {
+          "step": "Base Parameters Loaded",
+          "reason": "Tea type: oolong",
+          "adjustment": "Temperature: 95°C, Steep: 3s",
+          "value": "Amount: 0.08g/ml, Infusions: 7"
+        },
+        {
+          "step": "Processing Analysis",
+          "reason": "Normalize processing methods",
+          "adjustment": "Found 4 processing methods",
+          "value": "PROCESSING_WITHERED, PROCESSING_PARTIAL_OXIDATION, PROCESSING_BALL_ROLLED, PROCESSING_MINIMAL_ROAST"
+        },
+        {
+          "step": "Parameter Adjustment",
+          "reason": "Apply processing adjustments to both styles",
+          "adjustment": "Gongfu: 90°C/3.5s | Western: 85°C/5.5s",
+          "value": "Both brewing styles calibrated"
+        },
+        {
+          "step": "Vessel & Style Selection",
+          "reason": "Determine optimal brewing vessels and philosophy",
+          "adjustment": "Gaiwan recommended for gongfu style",
+          "value": "Available vessels: Gaiwan, Yixing Clay Teapot, Glass Teapot"
+        }
+      ],
+      "confidence": 0.9,
+      "rendererVersion": "2.0"
+    }
+  },
+  "summary": {
+    "totalInferrers": 5,
+    "successfulInferrers": 5,
+    "totalRenderers": 5,
+    "successfulRenderers": 5,
+    "averageConfidence": "0.93",
+    "pipelineStatus": "FULLY OPERATIONAL"
+  }
+}

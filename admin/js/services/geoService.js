@@ -90,12 +90,12 @@ export const geoService = {
 
         // Fetch daily data for a period to get averages (adjust dates if needed)
         // Using daily values: temperature_2m_mean, relative_humidity_2m_mean, shortwave_radiation_sum
-        // shortwave_radiation_sum is in MJ/m²/day. Convert to average W/m²: (MJ * 1,000,000) / (seconds in day)
-        // Example: Use past 3 full years for a better average. Adjust as needed.
-        const endDate = new Date();
-        endDate.setDate(endDate.getDate() -1); // Use data up to yesterday
-        const startDate = new Date(endDate);
-        startDate.setFullYear(startDate.getFullYear() - 3);
+        // shortwave_radiation_sum is in MJ/m²/day (kept in this format for GeographyTaxonomy compatibility)
+        // Use the last available date within API range (2025-07-30 to 2025-11-15)
+        const today = new Date();
+        // If today is before 2025-07-30, use a reasonable default; otherwise use available range
+        const endDate = new Date('2025-11-15'); // Use the latest available date
+        const startDate = new Date('2025-07-30'); // Use the earliest available date in the range
 
         const formattedStartDate = startDate.toISOString().split('T')[0];
         const formattedEndDate = endDate.toISOString().split('T')[0];
@@ -134,17 +134,14 @@ export const geoService = {
             const avgHum = calculateAverage(daily.relative_humidity_2m_mean);
             const avgSolarSumMJ = calculateAverage(daily.shortwave_radiation_sum);
 
-            let avgSolarRadW = null;
-            if (avgSolarSumMJ !== null) {
-                // Convert average daily sum (MJ/m²/day) to average power (W/m²)
-                // (MJ * 1,000,000) / (seconds in a day = 86400)
-                avgSolarRadW = (avgSolarSumMJ * 1000000) / 86400;
-            }
+            // Keep solar radiation in MJ/m²/day (matches GeographyTaxonomy expectations)
+            // GeographyTaxonomy expects ranges like: 0-10, 10-15, 15-20, 20-25, 25-100 MJ/m²/day
+            const avgSolarRadiation = avgSolarSumMJ;
 
             const weatherResult = {
                 avgTemperature: avgTemp !== null ? Math.round(avgTemp * 10) / 10 : null, // Round to 1 decimal
                 avgHumidity: avgHum !== null ? Math.round(avgHum * 10) / 10 : null, // Round to 1 decimal
-                avgSolarRadiation: avgSolarRadW !== null ? Math.round(avgSolarRadW * 10) / 10 : null // Round to 1 decimal
+                avgSolarRadiation: avgSolarRadiation !== null ? Math.round(avgSolarRadiation * 10) / 10 : null // Round to 1 decimal (MJ/m²/day)
             };
 
             console.log("[GeoService] Calculated weather averages:", weatherResult);

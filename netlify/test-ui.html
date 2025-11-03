@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Recommendation API - Test UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .panel {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .panel-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .panel-content {
+            padding: 20px;
+        }
+
+        .tea-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .tea-item {
+            padding: 12px;
+            background: #f5f5f5;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .tea-item:hover {
+            background: #e8e8e8;
+            border-color: #667eea;
+            transform: translateX(4px);
+        }
+
+        .tea-item.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .tea-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tea-meta {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        select, button {
+            padding: 10px 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        select:hover, button:hover {
+            border-color: #667eea;
+            background: #f5f5f5;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .toggle {
+            position: relative;
+            width: 60px;
+            height: 32px;
+            background: #ddd;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle.active {
+            background: #667eea;
+        }
+
+        .toggle-switch {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 26px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle.active .toggle-switch {
+            transform: translateX(28px);
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .send-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .response-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .response-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .response-time {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .response-container {
+            background: #f5f5f5;
+            border-radius: 6px;
+            padding: 15px;
+            max-height: 600px;
+            overflow-y: auto;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .response-json {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .error {
+            color: #d32f2f;
+            background: #ffebee;
+            border-left: 4px solid #d32f2f;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .success {
+            color: #388e3c;
+            background: #e8f5e9;
+            border-left: 4px solid #388e3c;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .renderer-checkboxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ddd;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel: Tea Selection -->
+        <div class="panel">
+            <div class="panel-header">🍵 Select a Tea</div>
+            <div class="panel-content">
+                <div class="tea-list" id="teaList"></div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Controls & Response -->
+        <div class="panel">
+            <div class="panel-header">⚙️ API Controls & Response</div>
+            <div class="panel-content">
+                <!-- Controls -->
+                <div class="controls">
+                    <!-- Renderers Selection -->
+                    <div class="control-group">
+                        <div class="control-label">📊 Renderers</div>
+                        <div class="renderer-checkboxes">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-activity" value="activity" checked>
+                                <label for="renderer-activity">Activity</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-food" value="food" checked>
+                                <label for="renderer-food">Food</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-time" value="time" checked>
+                                <label for="renderer-time">Time</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-season" value="season" checked>
+                                <label for="renderer-season">Season</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-brewing" value="brewing" checked>
+                                <label for="renderer-brewing">Brewing</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="renderer-terroir" value="terroir" checked>
+                                <label for="renderer-terroir">Terroir</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Format Toggle -->
+                    <div class="control-group">
+                        <div class="control-label">📋 Format</div>
+                        <div class="toggle-group">
+                            <div class="toggle" id="formatToggle">
+                                <div class="toggle-switch"></div>
+                            </div>
+                            <span id="formatLabel">Production</span>
+                        </div>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button class="send-button" id="sendButton" disabled>Send Request</button>
+                </div>
+
+                <!-- Response Section -->
+                <div class="response-section">
+                    <div class="response-header">
+                        <strong>Response</strong>
+                        <span class="response-time" id="responseTime"></span>
+                    </div>
+                    <div class="response-container" id="responseContainer">
+                        <div style="color: #999; text-align: center; padding: 40px 0;">
+                            Select a tea and click "Send Request" to see the API response here
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         Tea Database (embedded)
+         const teaDatabase = [
+  {
+    "name": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "light-roast"
+    ],
+    "geography": {
+      "location": "Anxi",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 25.07,
+      "longitude": 118.18,
+      "altitude": 700,
+      "humidity": 78,
+      "temperature": 19.2,
+      "solarRadiation": 178
+    }
+  },
+  {
+    "name": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "rolled",
+      "heavy-roast"
+    ],
+    "geography": {
+      "location": "Wuyi Mountains",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.72,
+      "longitude": 117.67,
+      "altitude": 600,
+      "humidity": 80,
+      "temperature": 19.5,
+      "solarRadiation": 175
+    }
+  },
+  {
+    "name": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "caffeineLevel": 4.8,
+    "lTheanineLevel": 4.8,
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "strip-rolled",
+      "medium-roast"
+    ],
+    "geography": {
+      "location": "Fenghuang Mountain",
+      "province": "Guangdong",
+      "country": "China",
+      "latitude": 23.92,
+      "longitude": 116.63,
+      "altitude": 1100,
+      "humidity": 82,
+      "temperature": 20.1,
+      "solarRadiation": 182
+    }
+  },
+  {
+    "name": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "medium-roast"
+    ],
+    "geography": {
+      "location": "Lugu",
+      "province": "Nantou",
+      "country": "Taiwan",
+      "latitude": 23.75,
+      "longitude": 120.75,
+      "altitude": 800,
+      "humidity": 78,
+      "temperature": 19.8,
+      "solarRadiation": 180
+    }
+  },
+  {
+    "name": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "caffeineLevel": 3.5,
+    "lTheanineLevel": 6.5,
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "processingMethods": [
+      "withered",
+      "partial-oxidation",
+      "ball-rolled",
+      "minimal-roast"
+    ],
+    "geography": {
+      "location": "Alishan",
+      "province": "Chiayi",
+      "country": "Taiwan",
+      "latitude": 23.47,
+      "longitude": 120.8,
+      "altitude": 1500,
+      "humidity": 80,
+      "temperature": 14.8,
+      "solarRadiation": 180
+    }
+  }
+]
+;
+
+        // State
+        let selectedTea = null;
+        let currentFormat = 'production';
+
+        // DOM Elements
+        const teaList = document.getElementById('teaList');
+        const sendButton = document.getElementById('sendButton');
+        const formatToggle = document.getElementById('formatToggle');
+        const formatLabel = document.getElementById('formatLabel');
+        const responseContainer = document.getElementById('responseContainer');
+        const responseTime = document.getElementById('responseTime');
+
+        // Initialize UI
+        function initTeaList() {
+            teaList.innerHTML = teaDatabase.map((tea, index) => `
+                <div class="tea-item" data-index="${index}">
+                    <div class="tea-name">${tea.name}</div>
+                    <div class="tea-meta">${tea.originalName} • ${tea.type}</div>
+                </div>
+            `).join('');
+
+            teaList.addEventListener('click', (e) => {
+                const item = e.target.closest('.tea-item');
+                if (item) {
+                    selectTea(parseInt(item.dataset.index));
+                }
+            });
+        }
+
+        function selectTea(index) {
+            selectedTea = teaDatabase[index];
+
+            // Update UI
+            document.querySelectorAll('.tea-item').forEach((el, i) => {
+                el.classList.toggle('selected', i === index);
+            });
+
+            sendButton.disabled = false;
+        }
+
+        // Format Toggle
+        formatToggle.addEventListener('click', () => {
+            currentFormat = currentFormat === 'production' ? 'trace' : 'production';
+            formatToggle.classList.toggle('active');
+            formatLabel.textContent = currentFormat === 'production' ? 'Production' : 'Trace';
+        });
+
+        // Get Selected Renderers
+        function getSelectedRenderers() {
+            return Array.from(document.querySelectorAll('.renderer-checkboxes input[type="checkbox"]:checked'))
+                .map(el => el.value);
+        }
+
+        // Send Request
+        sendButton.addEventListener('click', async () => {
+            if (!selectedTea) return;
+
+            const renderers = getSelectedRenderers();
+            const payload = {
+                ...selectedTea,
+                format: currentFormat,
+                renderers
+            };
+
+            sendButton.disabled = true;
+            responseContainer.innerHTML = '<div class="loading"></div> Sending request...';
+            responseTime.textContent = '';
+
+            try {
+                const startTime = Date.now();
+                const response = await fetch('/.netlify/functions/tea-recommendation', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const elapsed = Date.now() - startTime;
+                responseTime.textContent = `${elapsed}ms`;
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+                displayResponse(data, elapsed);
+            } catch (error) {
+                responseContainer.innerHTML = `<div class="error">❌ Error: ${error.message}</div>`;
+            } finally {
+                sendButton.disabled = false;
+            }
+        });
+
+        // Format Response for Display
+        function displayResponse(data, elapsed) {
+            const formatted = JSON.stringify(data, null, 2);
+            responseContainer.innerHTML = `
+                <div class="success">✅ Success (${elapsed}ms)</div>
+                <div class="response-json">${escapeHtml(formatted)}</div>
+            `;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Initialize
+        initTeaList();
+    </script>
+</body>
+</html>

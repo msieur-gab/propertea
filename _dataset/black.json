@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Keemun",
+    "originalName": "祁门红茶 (Qí Mén Hóng Chá)",
+    "type": "black",
+    "subType": "keemun",
+    "caffeineLevel": 5,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "winey",
+      "fruity",
+      "floral",
+      "sweet",
+      "smoky"
+    ],
+    "processingMethods": [
+      "withered",
+      "rolled",
+      "full-oxidation",
+      "dried"
+    ],
+    "geography": {
+      "location": "Qimen",
+      "province": "Anhui",
+      "country": "China",
+      "latitude": 29.87,
+      "longitude": 117.72,
+      "altitude": 300,
+      "humidity": 76,
+      "temperature": 17.5,
+      "solarRadiation": 172
+    }
+  },
+  {
+    "name": "Dian Hong",
+    "originalName": "滇红 (Diān Hóng)",
+    "type": "black",
+    "subType": "dian-hong",
+    "caffeineLevel": 5.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "malty",
+      "honey",
+      "sweet",
+      "chocolate",
+      "dried fruit"
+    ],
+    "processingMethods": [
+      "withered",
+      "rolled",
+      "full-oxidation",
+      "dried"
+    ],
+    "geography": {
+      "location": "Fengqing",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 24.58,
+      "longitude": 99.92,
+      "altitude": 1600,
+      "humidity": 72,
+      "temperature": 18.2,
+      "solarRadiation": 188
+    }
+  },
+  {
+    "name": "Jin Jun Mei",
+    "originalName": "金骏眉 (Jīn Jùn Méi)",
+    "type": "black",
+    "subType": "jin-jun-mei",
+    "caffeineLevel": 4.8,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "honey",
+      "sweet",
+      "floral",
+      "fruity",
+      "caramel"
+    ],
+    "processingMethods": [
+      "withered",
+      "rolled",
+      "full-oxidation",
+      "dried"
+    ],
+    "geography": {
+      "location": "Wuyi Mountains",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.72,
+      "longitude": 117.67,
+      "altitude": 800,
+      "humidity": 78,
+      "temperature": 18.8,
+      "solarRadiation": 176
+    }
+  },
+  {
+    "name": "Lapsang Souchong",
+    "originalName": "正山小种 (Zhèng Shān Xiǎo Zhǒng)",
+    "type": "black",
+    "subType": "lapsang-souchong",
+    "caffeineLevel": 5.2,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "smoky",
+      "pine",
+      "sweet",
+      "dried fruit",
+      "tobacco"
+    ],
+    "processingMethods": [
+      "withered",
+      "rolled",
+      "full-oxidation",
+      "smoke-dried"
+    ],
+    "geography": {
+      "location": "Wuyi Mountains",
+      "province": "Fujian",
+      "country": "China",
+      "latitude": 27.72,
+      "longitude": 117.67,
+      "altitude": 700,
+      "humidity": 79,
+      "temperature": 19.2,
+      "solarRadiation": 174
+    }
+  },
+  {
+    "name": "Yingde Hong",
+    "originalName": "英德红茶 (Yīng Dé Hóng Chá)",
+    "type": "black",
+    "subType": "yingde-hong",
+    "caffeineLevel": 5.8,
+    "lTheanineLevel": 3.8,
+    "flavorProfile": [
+      "malty",
+      "sweet",
+      "honey",
+      "cocoa",
+      "robust"
+    ],
+    "processingMethods": [
+      "withered",
+      "rolled",
+      "full-oxidation",
+      "dried"
+    ],
+    "geography": {
+      "location": "Yingde",
+      "province": "Guangdong",
+      "country": "China",
+      "latitude": 24.18,
+      "longitude": 113.4,
+      "altitude": 400,
+      "humidity": 81,
+      "temperature": 21.5,
+      "solarRadiation": 182
+    }
+  }
+]

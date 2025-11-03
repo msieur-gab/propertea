@@ -1,0 +1,599 @@
+[
+  {
+    "teaName": "Menghai Shou",
+    "originalName": "勐海熟普洱 (Měng Hǎi Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "earthy",
+      "woody",
+      "sweet",
+      "leather",
+      "compost"
+    ],
+    "narrative": "**Geographic Origin**\n\nPu'er Tea grows in Menghai, Yunnan, China at 1300m elevation, with average temperatures of 21.2°C and humidity levels around 75%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1300m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (75%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (21.2°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids\n\n**Sun Exposure** (190 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (21.98°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**\n\n**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nPu'er Tea grows in Menghai, Yunnan, China at 1300m elevation, with average temperatures of 21.2°C and humidity levels around 75%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1300m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (75%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (21.2°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids",
+      "**Sun Exposure** (190 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (21.98°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**",
+      "**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1300m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "75%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "21.2°C",
+        "classification": "Warm",
+        "description": "Warm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity",
+        "flavorInfluence": [
+          "vibrant flavors",
+          "fruity notes",
+          "bold character"
+        ],
+        "compoundEffect": [
+          "higher caffeine",
+          "potentially lower amino acids"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "190 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "21.98°",
+        "classification": "Subtropical (Lower)",
+        "description": "Lower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles",
+        "flavorInfluence": [
+          "balanced profiles",
+          "good aromatic development"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Pu'er Tea",
+    "teaTypeId": "TEA_TYPE_PUERH",
+    "location": "Menghai, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Lower)",
+      "temperature": "Warm",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Pu'er Tea from Menghai, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Xiaguan Shou",
+    "originalName": "下关熟普洱 (Xià Guān Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "earthy",
+      "smoky",
+      "strong",
+      "medicinal",
+      "woody"
+    ],
+    "narrative": "**Geographic Origin**\n\nPu'er Tea grows in Xiaguan, Yunnan, China at 2000m elevation, with average temperatures of 15.8°C and humidity levels around 68%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (2000m)\n\nVery high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **exceptional complexity, delicate aromas, subtle sweetness, lingering finish**\n\nCompound development at this elevation: higher amino acids (L-theanine), concentrated flavor compounds\n\n**Humidity & Moisture** (68%)\n\nModerate humidity (55-70%) is often considered ideal for tea growth, balancing evaporation and nutrient uptake. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **balanced flavor development, optimal aromatic complexity**\n\nCompound effects of humidity: optimal enzyme activity\n\n**Temperature Range** (15.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (205 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (25.6°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nPu'er Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Mountain terroir.",
+    "sections": [
+      "**Geographic Origin**\n\nPu'er Tea grows in Xiaguan, Yunnan, China at 2000m elevation, with average temperatures of 15.8°C and humidity levels around 68%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (2000m)\n\nVery high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **exceptional complexity, delicate aromas, subtle sweetness, lingering finish**\n\nCompound development at this elevation: higher amino acids (L-theanine), concentrated flavor compounds",
+      "**Humidity & Moisture** (68%)\n\nModerate humidity (55-70%) is often considered ideal for tea growth, balancing evaporation and nutrient uptake. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **balanced flavor development, optimal aromatic complexity**\n\nCompound effects of humidity: optimal enzyme activity",
+      "**Temperature Range** (15.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (205 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (25.6°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nPu'er Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Mountain terroir."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "2000m",
+        "classification": "Very High",
+        "description": "Very high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness",
+        "flavorInfluence": [
+          "exceptional complexity",
+          "delicate aromas",
+          "subtle sweetness",
+          "lingering finish"
+        ],
+        "compoundEffect": [
+          "higher amino acids (L-theanine)",
+          "concentrated flavor compounds"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "68%",
+        "classification": "Moderate",
+        "description": "Moderate humidity (55-70%) is often considered ideal for tea growth, balancing evaporation and nutrient uptake",
+        "flavorInfluence": [
+          "balanced flavor development",
+          "optimal aromatic complexity"
+        ],
+        "compoundEffect": [
+          "optimal enzyme activity"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "15.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "205 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "25.6°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Pu'er Tea",
+    "teaTypeId": "TEA_TYPE_PUERH",
+    "location": "Xiaguan, Yunnan, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Mountain terroir"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Very High",
+      "humidity": "Moderate",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Pu'er Tea from Xiaguan, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Lincang Shou",
+    "originalName": "临沧熟普洱 (Lín Cāng Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "sweet",
+      "earthy",
+      "smooth",
+      "chocolate",
+      "dates"
+    ],
+    "narrative": "**Geographic Origin**\n\nPu'er Tea grows in Lincang, Yunnan, China at 1600m elevation, with average temperatures of 18.5°C and humidity levels around 73%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (73%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (18.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (195 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (23.88°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nPu'er Tea grows in Lincang, Yunnan, China at 1600m elevation, with average temperatures of 18.5°C and humidity levels around 73%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1600m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (73%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (18.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (195 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (23.88°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1600m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "73%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "18.5°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "195 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "23.88°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Pu'er Tea",
+    "teaTypeId": "TEA_TYPE_PUERH",
+    "location": "Lincang, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Pu'er Tea from Lincang, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Aged Shou Brick",
+    "originalName": "老熟砖 (Lǎo Shú Zhuān)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "smooth",
+      "sweet",
+      "earthy",
+      "dates",
+      "caramel"
+    ],
+    "narrative": "**Geographic Origin**\n\nPu'er Tea grows in Kunming, Yunnan, China at 1900m elevation, with average temperatures of 16.2°C and humidity levels around 70%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1900m)\n\nVery high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **exceptional complexity, delicate aromas, subtle sweetness, lingering finish**\n\nCompound development at this elevation: higher amino acids (L-theanine), concentrated flavor compounds\n\n**Humidity & Moisture** (70%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (16.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (198 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (25.04°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nPu'er Tea grows in Kunming, Yunnan, China at 1900m elevation, with average temperatures of 16.2°C and humidity levels around 70%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1900m)\n\nVery high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **exceptional complexity, delicate aromas, subtle sweetness, lingering finish**\n\nCompound development at this elevation: higher amino acids (L-theanine), concentrated flavor compounds",
+      "**Humidity & Moisture** (70%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (16.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (198 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (25.04°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1900m",
+        "classification": "Very High",
+        "description": "Very high elevation teas (>1800m) grow slowly, developing exceptional complexity, delicate aromas, and often higher sweetness",
+        "flavorInfluence": [
+          "exceptional complexity",
+          "delicate aromas",
+          "subtle sweetness",
+          "lingering finish"
+        ],
+        "compoundEffect": [
+          "higher amino acids (L-theanine)",
+          "concentrated flavor compounds"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "70%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "16.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "198 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "25.04°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Pu'er Tea",
+    "teaTypeId": "TEA_TYPE_PUERH",
+    "location": "Kunming, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Very High",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Pu'er Tea from Kunming, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Golden Buds Shou",
+    "originalName": "金芽熟普洱 (Jīn Yá Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "flavorProfile": [
+      "sweet",
+      "chocolate",
+      "smooth",
+      "caramel",
+      "dates"
+    ],
+    "narrative": "**Geographic Origin**\n\nPu'er Tea grows in Simao, Yunnan, China at 1300m elevation, with average temperatures of 20.5°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1300m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (20.5°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids\n\n**Sun Exposure** (188 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (22.77°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**\n\n**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nPu'er Tea grows in Simao, Yunnan, China at 1300m elevation, with average temperatures of 20.5°C and humidity levels around 76%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1300m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Pu'er Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (76%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Pu'er Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (20.5°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Pu'er Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids",
+      "**Sun Exposure** (188 MJ/m²/day)\n\nNeutral. For Pu'er Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (22.77°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Pu'er Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**",
+      "**Terroir Quality & Character**\n\nPu'er Tea grows in a **high-quality terroir** with two or more favorable environmental conditions contributing to its refined character and complexity. Key characteristics: Mountain terroir, Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1300m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "76%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "20.5°C",
+        "classification": "Warm",
+        "description": "Warm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity",
+        "flavorInfluence": [
+          "vibrant flavors",
+          "fruity notes",
+          "bold character"
+        ],
+        "compoundEffect": [
+          "higher caffeine",
+          "potentially lower amino acids"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "188 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "22.77°",
+        "classification": "Subtropical (Lower)",
+        "description": "Lower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles",
+        "flavorInfluence": [
+          "balanced profiles",
+          "good aromatic development"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Pu'er Tea",
+    "teaTypeId": "TEA_TYPE_PUERH",
+    "location": "Simao, Yunnan, China",
+    "qualityIndicator": "High Quality",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Lower)",
+      "temperature": "Warm",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Pu'er Tea from Simao, Yunnan, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

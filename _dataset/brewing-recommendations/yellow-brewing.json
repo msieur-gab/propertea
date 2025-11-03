@@ -1,0 +1,476 @@
+[
+  {
+    "teaName": "Junshan Yinzhen",
+    "originalName": "君山银针 (Jūn Shān Yín Zhēn)",
+    "type": "yellow",
+    "subType": "junshan-yinzhen",
+    "flavorProfile": [
+      "sweet",
+      "delicate",
+      "floral",
+      "honey",
+      "fresh"
+    ],
+    "tea": {
+      "name": "Junshan Yinzhen",
+      "type": "yellow",
+      "subType": "junshan-yinzhen",
+      "typeId": "TEA_TYPE_YELLOW"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 74,
+          "steepTime": 30.3,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 74°C (165°F)\n- Steep Time: 30.3 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 79,
+          "steepTime": 120.3,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 79°C (174°F)\n- Steep Time: 120.3 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (lowland)",
+            "description": "Sea level to 600m - standard brewing"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 74,
+          "steepTime": 30.3,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 74°C (165°F)\n- Steep Time: 30.3 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 91
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 79,
+          "steepTime": 120.3,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 79°C (174°F)\n- Steep Time: 120.3 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (lowland): Sea level to 600m - standard brewing\n",
+        "score": 86
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Oxidation (Kill-Green)",
+          "description": "Kill-green stops oxidation early"
+        },
+        {
+          "source": "Altitude (lowland)",
+          "description": "Sea level to 600m - standard brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Junshan Yinzhen, Type: TEA_TYPE_YELLOW, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "75°C, 30s",
+        "value": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 1 processing adjustments",
+        "value": "Oxidation (Kill-Green)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "300m → lowland",
+        "value": "Sea level to 600m - standard brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/30s → 74°C/30.3s | Western: 80°C/120s → 79°C/120.3s",
+        "value": "Total adjustments applied: 2"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
+  },
+  {
+    "teaName": "Mengding Huangya",
+    "originalName": "蒙顶黄芽 (Méng Dǐng Huáng Yá)",
+    "type": "yellow",
+    "subType": "mengding-huangya",
+    "flavorProfile": [
+      "sweet",
+      "nutty",
+      "floral",
+      "smooth",
+      "delicate"
+    ],
+    "tea": {
+      "name": "Mengding Huangya",
+      "type": "yellow",
+      "subType": "mengding-huangya",
+      "typeId": "TEA_TYPE_YELLOW"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 71,
+          "steepTime": 31.1,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 71°C (160°F)\n- Steep Time: 31.1 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 76,
+          "steepTime": 121.1,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 76°C (169°F)\n- Steep Time: 121.1 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 71,
+          "steepTime": 31.1,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 71°C (160°F)\n- Steep Time: 31.1 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 91
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 76,
+          "steepTime": 121.1,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 76°C (169°F)\n- Steep Time: 121.1 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n",
+        "score": 86
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Oxidation (Kill-Green)",
+          "description": "Kill-green stops oxidation early"
+        },
+        {
+          "source": "Altitude (high-altitude)",
+          "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+        }
+      ],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Mengding Huangya, Type: TEA_TYPE_YELLOW, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "75°C, 30s",
+        "value": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 1 processing adjustments",
+        "value": "Oxidation (Kill-Green)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "1200m → high-altitude",
+        "value": "1200-1800m - cooler water preserves high-altitude aromatics"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/30s → 71°C/31.1s | Western: 80°C/120s → 76°C/121.1s",
+        "value": "Total adjustments applied: 2"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
+  },
+  {
+    "teaName": "Huoshan Huangya",
+    "originalName": "霍山黄芽 (Huò Shān Huáng Yá)",
+    "type": "yellow",
+    "subType": "huoshan-huangya",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "smooth",
+      "floral",
+      "fresh"
+    ],
+    "tea": {
+      "name": "Huoshan Huangya",
+      "type": "yellow",
+      "subType": "huoshan-huangya",
+      "typeId": "TEA_TYPE_YELLOW"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 72,
+          "steepTime": 30.8,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 72°C (162°F)\n- Steep Time: 30.8 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 77,
+          "steepTime": 120.8,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 77°C (171°F)\n- Steep Time: 120.8 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Oxidation (Kill-Green)",
+            "description": "Kill-green stops oxidation early"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          }
+        ],
+        "confidence": 0.9099999999999999
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 72,
+          "steepTime": 30.8,
+          "gramsPer100ml": 5,
+          "infusions": 4
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 72°C (162°F)\n- Steep Time: 30.8 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 4\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 91
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 77,
+          "steepTime": 120.8,
+          "gramsPer100ml": 3,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 77°C (171°F)\n- Steep Time: 120.8 seconds\n- Leaf Amount: 3g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Oxidation (Kill-Green): Kill-green stops oxidation early\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n",
+        "score": 86
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 75,
+          "steepTime": 30,
+          "gramsPer100ml": 5,
+          "infusions": 4,
+          "reasoning": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+        },
+        "western": {
+          "temperature": 80,
+          "steepTime": 120,
+          "gramsPer100ml": 3,
+          "infusions": 2,
+          "reasoning": "Gentle handling at 2 minutes preserves yellow tea's subtle, complex character"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Oxidation (Kill-Green)",
+          "description": "Kill-green stops oxidation early"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        }
+      ],
+      "teaType": "TEA_TYPE_YELLOW"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Huoshan Huangya, Type: TEA_TYPE_YELLOW, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_YELLOW",
+        "adjustment": "75°C, 30s",
+        "value": "Yellow tea combines green-tea processing with gentle oxidation; 30 seconds captures delicate balance"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 1 processing adjustments",
+        "value": "Oxidation (Kill-Green)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "800m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 75°C/30s → 72°C/30.8s | Western: 80°C/120s → 77°C/120.8s",
+        "value": "Total adjustments applied: 2"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.9099999999999999,
+    "rendererVersion": "3.0"
+  }
+]

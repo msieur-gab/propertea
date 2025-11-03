@@ -285,7 +285,7 @@ export class GeoUI {
         };
         setVal(this.elements.temperatureInput, weatherData.avgTemperature, '°C');
         setVal(this.elements.humidityInput, weatherData.avgHumidity, '%');
-        setVal(this.elements.solarRadiationInput, weatherData.avgSolarRadiation, ' W/m²'); // Assuming W/m²
+        setVal(this.elements.solarRadiationInput, weatherData.avgSolarRadiation, ' MJ/m²/day'); // Solar radiation in MJ/m²/day
     }
 
     _clearWeatherFields() {
@@ -356,5 +356,28 @@ export class GeoUI {
         if (this.elements.autoEstimateCheckbox) this.elements.autoEstimateCheckbox.checked = true; // Reset to default checked state
 
         this._updateInitialUIState(); // Re-apply initial visibility and button states
+    }
+
+    // Public getter to return current geo data for API submission
+    get geoData() {
+        return {
+            country: this.elements.countryInput?.value || '',
+            province: this.elements.provinceInput?.value || '',
+            location: this.elements.locationDetailInput?.value || '',
+            latitude: this.elements.latitudeInput?.value ? parseFloat(this.elements.latitudeInput.value) : null,
+            longitude: this.elements.longitudeInput?.value ? parseFloat(this.elements.longitudeInput.value) : null,
+            altitude: this.elements.altitudeInput?.value ? parseFloat(this.elements.altitudeInput.value) : null,
+            temperature: this.elements.temperatureInput?.value ? this._parseWeatherValue(this.elements.temperatureInput.value) : null,
+            humidity: this.elements.humidityInput?.value ? this._parseWeatherValue(this.elements.humidityInput.value) : null,
+            solarRadiation: this.elements.solarRadiationInput?.value ? this._parseWeatherValue(this.elements.solarRadiationInput.value) : null
+        };
+    }
+
+    // Helper to parse weather values that might contain units
+    _parseWeatherValue(value) {
+        // Remove units: °C, %, W/m², MJ/m²/day, spaces, etc.
+        const numStr = value.replace(/[°C%\s W/m²Jday]/g, '').trim();
+        const parsed = parseFloat(numStr);
+        return !isNaN(parsed) ? parsed : null;
     }
 }

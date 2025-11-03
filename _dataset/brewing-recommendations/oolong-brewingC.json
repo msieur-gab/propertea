@@ -1,0 +1,875 @@
+[
+  {
+    "tea": {
+      "name": "Tie Guan Yin",
+      "type": "oolong",
+      "subType": "tie-guan-yin",
+      "typeId": "TEA_TYPE_OOLONG"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 96,
+          "steepTime": 15.2,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 96°C (205°F)\n- Steep Time: 15.2 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Light-Roast): Light roasting adds nutty warmth\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Light-Roast)",
+            "description": "Light roasting adds nutty warmth"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 91,
+          "steepTime": 240.2,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 91°C (196°F)\n- Steep Time: 240.2 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Light-Roast): Light roasting adds nutty warmth\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Light-Roast)",
+            "description": "Light roasting adds nutty warmth"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 96,
+          "steepTime": 15.2,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 96°C (205°F)\n- Steep Time: 15.2 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Light-Roast): Light roasting adds nutty warmth\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 95
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 91,
+          "steepTime": 240.2,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 91°C (196°F)\n- Steep Time: 240.2 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Light-Roast): Light roasting adds nutty warmth\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 90
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Ball-Rolled)",
+          "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+        },
+        {
+          "source": "Roast (Light-Roast)",
+          "description": "Light roasting adds nutty warmth"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        },
+        {
+          "source": "Astringency (low)",
+          "description": "Low astringency allows cooler, quicker brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Tie Guan Yin, Type: TEA_TYPE_OOLONG, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "95°C, 15s",
+        "value": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Ball-Rolled), Roast (Light-Roast)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "700m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Compound Analysis",
+        "reason": "Astringency from caffeine/L-theanine ratio",
+        "adjustment": "Caffeine: 4, L-Theanine: 5.5 → low",
+        "value": "Low astringency allows cooler, quicker brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/15s → 96°C/15.2s | Western: 90°C/240s → 91°C/240.2s",
+        "value": "Total adjustments applied: 4"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
+  },
+  {
+    "tea": {
+      "name": "Da Hong Pao",
+      "type": "oolong",
+      "subType": "wuyi-oolong",
+      "typeId": "TEA_TYPE_OOLONG"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 14.4,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 14.4 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Roast (Heavy-Roast): Heavy roasting smooths tannins and allows aggressive brewing\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Roast (Heavy-Roast)",
+            "description": "Heavy roasting smooths tannins and allows aggressive brewing"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 93.5,
+          "steepTime": 239.4,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 93.5°C (200°F)\n- Steep Time: 239.4 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Roast (Heavy-Roast): Heavy roasting smooths tannins and allows aggressive brewing\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Rolled)",
+            "description": "General rolling causes moderate leaf compaction"
+          },
+          {
+            "source": "Roast (Heavy-Roast)",
+            "description": "Heavy roasting smooths tannins and allows aggressive brewing"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 98.5,
+          "steepTime": 14.4,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98.5°C (209°F)\n- Steep Time: 14.4 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Roast (Heavy-Roast): Heavy roasting smooths tannins and allows aggressive brewing\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 95
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 93.5,
+          "steepTime": 239.4,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 93.5°C (200°F)\n- Steep Time: 239.4 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Rolled): General rolling causes moderate leaf compaction\n- Roast (Heavy-Roast): Heavy roasting smooths tannins and allows aggressive brewing\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 90
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Rolled)",
+          "description": "General rolling causes moderate leaf compaction"
+        },
+        {
+          "source": "Roast (Heavy-Roast)",
+          "description": "Heavy roasting smooths tannins and allows aggressive brewing"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        },
+        {
+          "source": "Astringency (low)",
+          "description": "Low astringency allows cooler, quicker brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Da Hong Pao, Type: TEA_TYPE_OOLONG, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "95°C, 15s",
+        "value": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Rolled), Roast (Heavy-Roast)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "600m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Compound Analysis",
+        "reason": "Astringency from caffeine/L-theanine ratio",
+        "adjustment": "Caffeine: 4.5, L-Theanine: 4.5 → low",
+        "value": "Low astringency allows cooler, quicker brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/15s → 98.5°C/14.4s | Western: 90°C/240s → 93.5°C/239.4s",
+        "value": "Total adjustments applied: 4"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
+  },
+  {
+    "tea": {
+      "name": "Fenghuang Dancong",
+      "type": "oolong",
+      "subType": "fenghuang-dancong",
+      "typeId": "TEA_TYPE_OOLONG"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 96,
+          "steepTime": 14.4,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 96°C (205°F)\n- Steep Time: 14.4 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Roast (Medium-Roast)",
+            "description": "Medium roasting develops caramel notes"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 91,
+          "steepTime": 239.4,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 91°C (196°F)\n- Steep Time: 239.4 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Roast (Medium-Roast)",
+            "description": "Medium roasting develops caramel notes"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 96,
+          "steepTime": 14.4,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 96°C (205°F)\n- Steep Time: 14.4 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 95
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 91,
+          "steepTime": 239.4,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 91°C (196°F)\n- Steep Time: 239.4 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 90
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Roast (Medium-Roast)",
+          "description": "Medium roasting develops caramel notes"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        },
+        {
+          "source": "Astringency (low)",
+          "description": "Low astringency allows cooler, quicker brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Fenghuang Dancong, Type: TEA_TYPE_OOLONG, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "95°C, 15s",
+        "value": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 1 processing adjustments",
+        "value": "Roast (Medium-Roast)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "1100m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Compound Analysis",
+        "reason": "Astringency from caffeine/L-theanine ratio",
+        "adjustment": "Caffeine: 4.8, L-Theanine: 4.8 → low",
+        "value": "Low astringency allows cooler, quicker brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/15s → 96°C/14.4s | Western: 90°C/240s → 91°C/239.4s",
+        "value": "Total adjustments applied: 3"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
+  },
+  {
+    "tea": {
+      "name": "Dong Ding",
+      "type": "oolong",
+      "subType": "dong-ding",
+      "typeId": "TEA_TYPE_OOLONG"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 98,
+          "steepTime": 14.9,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98°C (208°F)\n- Steep Time: 14.9 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Medium-Roast)",
+            "description": "Medium roasting develops caramel notes"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 93,
+          "steepTime": 239.9,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 93°C (199°F)\n- Steep Time: 239.9 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Medium-Roast)",
+            "description": "Medium roasting develops caramel notes"
+          },
+          {
+            "source": "Altitude (mid-altitude)",
+            "description": "600-1200m - slightly cooler to preserve delicate notes"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 98,
+          "steepTime": 14.9,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 98°C (208°F)\n- Steep Time: 14.9 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 95
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 93,
+          "steepTime": 239.9,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 93°C (199°F)\n- Steep Time: 239.9 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Medium-Roast): Medium roasting develops caramel notes\n- Altitude (mid-altitude): 600-1200m - slightly cooler to preserve delicate notes\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 90
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Ball-Rolled)",
+          "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+        },
+        {
+          "source": "Roast (Medium-Roast)",
+          "description": "Medium roasting develops caramel notes"
+        },
+        {
+          "source": "Altitude (mid-altitude)",
+          "description": "600-1200m - slightly cooler to preserve delicate notes"
+        },
+        {
+          "source": "Astringency (low)",
+          "description": "Low astringency allows cooler, quicker brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Dong Ding, Type: TEA_TYPE_OOLONG, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "95°C, 15s",
+        "value": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Ball-Rolled), Roast (Medium-Roast)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "800m → mid-altitude",
+        "value": "600-1200m - slightly cooler to preserve delicate notes"
+      },
+      {
+        "step": "Compound Analysis",
+        "reason": "Astringency from caffeine/L-theanine ratio",
+        "adjustment": "Caffeine: 4.2, L-Theanine: 5.2 → low",
+        "value": "Low astringency allows cooler, quicker brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/15s → 98°C/14.9s | Western: 90°C/240s → 93°C/239.9s",
+        "value": "Total adjustments applied: 4"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
+  },
+  {
+    "tea": {
+      "name": "Ali Shan Oolong",
+      "type": "oolong",
+      "subType": "high-mountain-oolong",
+      "typeId": "TEA_TYPE_OOLONG"
+    },
+    "brewingStyles": [
+      {
+        "style": "gongfu",
+        "philosophy": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions",
+        "parameters": {
+          "temperature": 94,
+          "steepTime": 15.7,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 94°C (201°F)\n- Steep Time: 15.7 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Minimal-Roast): Light roasting enhances aroma slightly\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Minimal-Roast)",
+            "description": "Light roasting enhances aroma slightly"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "style": "western",
+        "philosophy": "Simplicity & Accessibility - Single longer infusion captures essential tea character",
+        "parameters": {
+          "temperature": 89,
+          "steepTime": 240.7,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 89°C (192°F)\n- Steep Time: 240.7 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Minimal-Roast): Light roasting enhances aroma slightly\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "adjustmentsApplied": [
+          {
+            "source": "Leaf style (Ball-Rolled)",
+            "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+          },
+          {
+            "source": "Roast (Minimal-Roast)",
+            "description": "Light roasting enhances aroma slightly"
+          },
+          {
+            "source": "Altitude (high-altitude)",
+            "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+          },
+          {
+            "source": "Astringency (low)",
+            "description": "Low astringency allows cooler, quicker brewing"
+          }
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "recommendations": [
+      {
+        "style": "gongfu",
+        "parameters": {
+          "temperature": 94,
+          "steepTime": 15.7,
+          "gramsPer100ml": 8,
+          "infusions": 7
+        },
+        "narrative": "Meditation through Tea - Multiple short infusions reveal evolving flavor dimensions\n\n**Approach:** Use a small brewing vessel (gaiwan or small teapot) with high leaf-to-water ratio\n\n**Technique:** Brew multiple brief infusions (often 7-10), allowing leaves to fully rehydrate between steeps\n\n**Parameters:**\n- Water Temperature: 94°C (201°F)\n- Steep Time: 15.7 seconds\n- Leaf Amount: 8g per 100ml of water\n- Infusions: 7\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Minimal-Roast): Light roasting enhances aroma slightly\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 95
+      },
+      {
+        "style": "western",
+        "parameters": {
+          "temperature": 89,
+          "steepTime": 240.7,
+          "gramsPer100ml": 5,
+          "infusions": 2
+        },
+        "narrative": "Simplicity & Accessibility - Single longer infusion captures essential tea character\n\n**Approach:** Use a larger brewing vessel (teapot or cup with infuser) with standard leaf amount\n\n**Technique:** Brew one or two infusions with longer steeping time, aiming for full flavor extraction\n\n**Parameters:**\n- Water Temperature: 89°C (192°F)\n- Steep Time: 240.7 seconds\n- Leaf Amount: 5g per 100ml of water\n- Infusions: 2\n\n**Brewing Adjustments Applied:**\n- Leaf style (Ball-Rolled): Tightly rolled leaves need hotter water and slightly longer first steep to unfurl\n- Roast (Minimal-Roast): Light roasting enhances aroma slightly\n- Altitude (high-altitude): 1200-1800m - cooler water preserves high-altitude aromatics\n- Astringency (low): Low astringency allows cooler, quicker brewing\n",
+        "score": 90
+      }
+    ],
+    "analysis": {
+      "baseParameters": {
+        "gongfu": {
+          "temperature": 95,
+          "steepTime": 15,
+          "gramsPer100ml": 8,
+          "infusions": 7,
+          "reasoning": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+        },
+        "western": {
+          "temperature": 90,
+          "steepTime": 240,
+          "gramsPer100ml": 5,
+          "infusions": 2,
+          "reasoning": "Oolong's oxidized leaves need 4 minutes steep time to fully develop in western single-infusion style"
+        }
+      },
+      "adjustmentsApplied": [
+        {
+          "source": "Leaf style (Ball-Rolled)",
+          "description": "Tightly rolled leaves need hotter water and slightly longer first steep to unfurl"
+        },
+        {
+          "source": "Roast (Minimal-Roast)",
+          "description": "Light roasting enhances aroma slightly"
+        },
+        {
+          "source": "Altitude (high-altitude)",
+          "description": "1200-1800m - cooler water preserves high-altitude aromatics"
+        },
+        {
+          "source": "Astringency (low)",
+          "description": "Low astringency allows cooler, quicker brewing"
+        }
+      ],
+      "teaType": "TEA_TYPE_OOLONG"
+    },
+    "trace": [
+      {
+        "step": "Input Validation",
+        "reason": "Validate tea type and inferences",
+        "adjustment": "Tea: Ali Shan Oolong, Type: TEA_TYPE_OOLONG, Style: gongfu",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Base Parameters",
+        "reason": "Tea type: TEA_TYPE_OOLONG",
+        "adjustment": "95°C, 15s",
+        "value": "Hot water rapidly extracts complex oolong flavors; 15 seconds per infusion reveals evolving taste profile"
+      },
+      {
+        "step": "Processing Analysis",
+        "reason": "Extract brewing adjustments from processing inference",
+        "adjustment": "Found 2 processing adjustments",
+        "value": "Leaf style (Ball-Rolled), Roast (Minimal-Roast)"
+      },
+      {
+        "step": "Geography Analysis",
+        "reason": "Altitude affects brewing temperature",
+        "adjustment": "1500m → high-altitude",
+        "value": "1200-1800m - cooler water preserves high-altitude aromatics"
+      },
+      {
+        "step": "Compound Analysis",
+        "reason": "Astringency from caffeine/L-theanine ratio",
+        "adjustment": "Caffeine: 3.5, L-Theanine: 6.5 → low",
+        "value": "Low astringency allows cooler, quicker brewing"
+      },
+      {
+        "step": "Parameter Calculation",
+        "reason": "Apply all adjustments to base parameters for each style",
+        "adjustment": "Gongfu: 95°C/15s → 94°C/15.7s | Western: 90°C/240s → 89°C/240.7s",
+        "value": "Total adjustments applied: 4"
+      },
+      {
+        "step": "Style Narratives",
+        "reason": "Generate brewing philosophy and guidance",
+        "adjustment": "Created narratives for both gongfu and western styles",
+        "value": "Narratives include adjustment reasoning and technique"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "3.0"
+  }
+]

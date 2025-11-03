@@ -51,7 +51,8 @@ export class RecordListUI {
         if (!recordId) return;
 
         if (button.classList.contains('view-button')) {
-            this.viewRecord(recordId);
+            // Call the view callback instead of viewRecord
+            this.onViewCallback && this.onViewCallback(recordId);
         } else if (button.classList.contains('delete-button')) {
             // Confirmation is handled in the app logic before calling delete
              this.onDeleteCallback && this.onDeleteCallback(recordId);
@@ -59,6 +60,16 @@ export class RecordListUI {
     }
 
     // --- Public Methods ---
+
+    /**
+     * Sets the callback function to be executed when the view button is clicked.
+     * @param {Function} callback - The callback function (receives recordId).
+     */
+    onView(callback) {
+        if (typeof callback === 'function') {
+            this.onViewCallback = callback;
+        }
+    }
 
     /**
      * Sets the callback function to be executed when the delete button is clicked.

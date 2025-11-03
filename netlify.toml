@@ -1,0 +1,103 @@
+# Netlify Configuration for Tea Analysis API
+# https://docs.netlify.com/configure-builds/file-conventions/
+
+[build]
+# Build command (no build step needed for serverless functions)
+# Functions are deployed as-is
+command = "echo 'No build step needed - serverless functions deploy directly'"
+
+# Directory containing the functions
+functions = "netlify/functions"
+
+# Root directory for deployment
+base = "."
+
+[build.environment]
+# Set Node version
+NODE_VERSION = "18"
+
+# Enable ESM (ECMAScript modules)
+NODE_ENV = "production"
+
+[[redirects]]
+# Redirect / to health check
+from = "/"
+to = "/.netlify/functions/health"
+status = 200
+
+[[redirects]]
+# API routing - all /api/* paths go to corresponding functions
+from = "/api/analyze"
+to = "/.netlify/functions/analyze"
+status = 200
+
+[[redirects]]
+from = "/api/analyze/compounds"
+to = "/.netlify/functions/analyze-compounds"
+status = 200
+
+[[redirects]]
+from = "/api/analyze/flavor"
+to = "/.netlify/functions/analyze-flavor"
+status = 200
+
+[[redirects]]
+from = "/api/analyze/tea-type"
+to = "/.netlify/functions/analyze-tea-type"
+status = 200
+
+[[redirects]]
+from = "/api/analyze/processing"
+to = "/.netlify/functions/analyze-processing"
+status = 200
+
+[[redirects]]
+from = "/api/analyze/geography"
+to = "/.netlify/functions/analyze-geography"
+status = 200
+
+[[redirects]]
+from = "/api/info"
+to = "/.netlify/functions/api-info"
+status = 200
+
+[[redirects]]
+from = "/health"
+to = "/.netlify/functions/health"
+status = 200
+
+# Handle OPTIONS requests for CORS
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+force = false
+
+# Custom headers for CORS
+[[headers]]
+for = "/api/*"
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+Access-Control-Allow-Headers = "Content-Type, Authorization"
+Content-Type = "application/json"
+
+# Context: Development
+[context.develop]
+environment = "development"
+
+# Context: Production
+[context.production]
+environment = "production"
+
+# Context: Deploy preview
+[context.deploy-preview]
+environment = "preview"
+
+[dev]
+# Port for local development
+port = 8888
+# Serve the new admin panel
+publish = "new admin"
+# Command to run (not needed for functions-only setup)
+# framework = "#custom" is removed as it's not needed

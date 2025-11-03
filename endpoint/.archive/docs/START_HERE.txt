@@ -1,0 +1,199 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                   TEA RECOMMENDATION API - RESTART PACKAGE                    ║
+║                                                                              ║
+║  This folder contains core files from a FAILED 3-day optimization attempt.  ║
+║  Read this before using any of the code.                                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+IMMEDIATE ACTION ITEMS
+═══════════════════════════════════════════════════════════════════════════════
+
+1. READ FIRST:
+   → RESTART_GUIDE.md
+
+   This file contains:
+   - What went wrong (3-day failure analysis)
+   - What should have happened (correct methodology)
+   - Step-by-step guide for next attempt
+   - Red flags to watch for
+   - Success criteria
+
+2. UNDERSTAND THE FAILURE:
+   - Started with: 33.3% mood accuracy
+   - Tried to: Refactor architecture + optimize simultaneously
+   - Ended with: 18.8% accuracy (broken)
+   - Lesson: Don't do multiple things at once
+
+3. BEFORE MAKING ANY CHANGES:
+   - Restore baseline accuracy metrics (33%, 81%, 100%)
+   - Create git commit with baseline
+   - Change ONE MATCHER AT A TIME
+   - Test after each change
+   - Commit working code
+
+FOLDER STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+endpoint/
+├── README.md                           ← Overview of contents
+├── START_HERE.txt                      ← This file
+├── RESTART_GUIDE.md                    ← CRITICAL: Read first!
+├── SESSION_SUMMARY.md                  ← Previous session summary
+├── ACTIVITY_MATCHER_IMPROVEMENTS.md    ← Reference documentation
+├── FOODMATCHER_OPTIMIZATION.md         ← Reference documentation
+├── validation-dataset-17-tea.json      ← Test data (16 teas)
+└── src/services/
+    ├── CompoundService.js              ← Calculates caffeine/L-theanine
+    ├── EffectService.js                ← Calculates mood effects
+    └── matchers/
+        ├── ActivityMatcher.js          ← FOCUS: Improve to 50%+
+        ├── FoodMatcher.js              ← FOCUS: Improve accuracy
+        ├── TimeMatcher.js              ← REFERENCE: 81% working
+        ├── SeasonMatcher.js            ← REFERENCE: 100% working
+        └── brewingMatcher.js           ← REFERENCE: Working
+
+KEY FILES TO READ (IN ORDER)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. START_HERE.txt ← You are here
+2. README.md ← Quick overview
+3. RESTART_GUIDE.md ← CRITICAL: Lessons learned and methodology
+4. SESSION_SUMMARY.md ← Previous session details
+
+CURRENT METRICS (TO RESTORE)
+═══════════════════════════════════════════════════════════════════════════════
+
+After setup, verify these metrics exist:
+  ✓ Effect Calculator: 33.3% mood accuracy
+  ✓ Timing Matcher: 81.3% accuracy
+  ✓ Season Matcher: 100.0% accuracy
+  ✓ Activity Matcher: Functional
+  ✓ Food Matcher: Functional
+
+If any metric is different, don't proceed until you understand why.
+
+OPTIMIZATION PRIORITIES
+═══════════════════════════════════════════════════════════════════════════════
+
+Priority 1: ActivityMatcher
+  Current: 33% mood accuracy
+  Goal: 40-50%
+  Time: 6-10 hours
+  Strategy: Refine compound → activity scoring
+
+Priority 2: FoodMatcher
+  Current: Improvable
+  Goal: Better food pairing recommendations
+  Time: 6-10 hours
+  Strategy: Expand/refine food pairing logic
+
+Priority 3: Other Matchers
+  Status: Working well, don't change unless necessary
+  Time Matcher: 81% accurate
+  Season Matcher: 100% accurate
+  Brewing Matcher: Functional
+
+DO NOT
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ Change multiple matchers simultaneously
+❌ Work for more than 4 hours without testing
+❌ Continue optimizing if accuracy drops
+❌ Add new dependencies (like EffectService integration)
+❌ Refactor architecture while optimizing features
+❌ Make commits for 3 days without measuring
+
+DO
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Read RESTART_GUIDE.md completely
+✓ Establish baseline metrics first
+✓ Change ONE matcher at a time
+✓ Test after each change
+✓ Measure before and after
+✓ Commit working code regularly
+✓ Rollback immediately on regression
+✓ Stop if stuck for more than 30 minutes
+
+ESTIMATED TIME
+═══════════════════════════════════════════════════════════════════════════════
+
+Phase 1 (Baseline): 4-6 hours
+Phase 2 (ActivityMatcher): 6-10 hours
+Phase 3 (FoodMatcher): 6-10 hours
+Phase 4 (Testing): 4-6 hours
+─────────────────────────────
+Total: 20-32 hours (realistic estimate)
+
+QUICK START CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+[ ] 1. Read RESTART_GUIDE.md (1-2 hours)
+[ ] 2. Copy this folder to clean workspace
+[ ] 3. Set up git: git init && git add . && git commit -m "baseline"
+[ ] 4. Restore and verify baseline metrics (4-6 hours)
+[ ] 5. Identify which matcher to improve first
+[ ] 6. Make ONE SMALL CHANGE
+[ ] 7. Test and measure impact
+[ ] 8. Commit if improved, rollback if not
+[ ] 9. Repeat steps 6-8 for improvement iterations
+[ ] 10. Move to next matcher (repeat 6-9)
+
+IMPORTANT WARNINGS
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️  This code is from a FAILED optimization attempt
+⚠️  It may not be production-ready
+⚠️  Use as reference implementation only
+⚠️  Test thoroughly before using in production
+⚠️  Read RESTART_GUIDE.md before making ANY changes
+
+SUCCESS LOOKS LIKE
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ ActivityMatcher accuracy: 33% → 40-50%
+✓ FoodMatcher: Noticeable improvement in recommendations
+✓ TimeMatcher: Still 81%+ (no regression)
+✓ SeasonMatcher: Still 100% (no regression)
+✓ Regular commits with clear messages
+✓ Baseline preserved and understood
+
+IF YOU GET STUCK
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Check "Red Flags" section in RESTART_GUIDE.md
+2. Did accuracy drop? → ROLLBACK immediately
+3. Stuck for 30 minutes? → Stop and re-read guide
+4. Changed multiple files? → Reset to baseline
+5. Not sure what to do? → Ask for help (don't guess)
+
+NEXT IMPLEMENTER NOTES
+═══════════════════════════════════════════════════════════════════════════════
+
+If this is being handed to a team member:
+
+1. Ensure they read RESTART_GUIDE.md completely
+2. Have them explain why the previous attempt failed
+3. Have them confirm they'll follow "one at a time" approach
+4. Ensure they understand success metrics
+5. Set expectations: 20-32 hours realistic timeline
+6. Regular check-ins (not 3 days without status updates)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+NOW: Go read RESTART_GUIDE.md
+
+You'll find:
+- Complete failure analysis
+- Correct methodology
+- Phase-by-phase approach
+- What to do and avoid
+- Success criteria
+- Time estimates
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Questions? Check:
+  1. README.md ← Overview
+  2. RESTART_GUIDE.md ← Detailed guide
+  3. SESSION_SUMMARY.md ← Context

@@ -1,0 +1,1537 @@
+[
+  {
+    "teaName": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "subType": "white-silver-needle",
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 63.099999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 60.3,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 58.5,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 20,
+        "score": 57.800000000000004,
+        "timeOfDay": "Evening (18-20)",
+        "narrative": "Social hours - balanced profiles support relaxed connection (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 21,
+        "score": 57.6,
+        "timeOfDay": "Late Evening (21-23)",
+        "narrative": "Wind-down - minimal stimulation prepares for sleep (suitable for your low-stimulation preference)"
+      }
+    ],
+    "circadianCurve": [
+      26.4,
+      26.4,
+      24.4,
+      24.4,
+      24.4,
+      24.4,
+      51.199999999999996,
+      38,
+      47,
+      50.4,
+      52.199999999999996,
+      52.199999999999996,
+      63.099999999999994,
+      60.3,
+      58.5,
+      57.199999999999996,
+      55.4,
+      54.599999999999994,
+      48.800000000000004,
+      52.400000000000006,
+      57.800000000000004,
+      57.6,
+      46.800000000000004,
+      27
+    ],
+    "hourlyScores": {
+      "0": 26.4,
+      "1": 26.4,
+      "2": 24.4,
+      "3": 24.4,
+      "4": 24.4,
+      "5": 24.4,
+      "6": 51.199999999999996,
+      "7": 38,
+      "8": 47,
+      "9": 50.4,
+      "10": 52.199999999999996,
+      "11": 52.199999999999996,
+      "12": 63.099999999999994,
+      "13": 60.3,
+      "14": 58.5,
+      "15": 57.199999999999996,
+      "16": 55.4,
+      "17": 54.599999999999994,
+      "18": 48.800000000000004,
+      "19": 52.400000000000006,
+      "20": 57.800000000000004,
+      "21": 57.6,
+      "22": 46.800000000000004,
+      "23": 27
+    },
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 26.4
+          },
+          {
+            "hour": 1,
+            "score": 26.4
+          },
+          {
+            "hour": 2,
+            "score": 24.4
+          },
+          {
+            "hour": 3,
+            "score": 24.4
+          },
+          {
+            "hour": 4,
+            "score": 24.4
+          },
+          {
+            "hour": 5,
+            "score": 24.4
+          }
+        ],
+        "averageScore": 25.1,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 6,
+            "score": 51.199999999999996
+          },
+          {
+            "hour": 8,
+            "score": 47
+          },
+          {
+            "hour": 7,
+            "score": 38
+          }
+        ],
+        "averageScore": 45.4,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 52.199999999999996
+          },
+          {
+            "hour": 11,
+            "score": 52.199999999999996
+          },
+          {
+            "hour": 9,
+            "score": 50.4
+          }
+        ],
+        "averageScore": 51.6,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 63.099999999999994
+          },
+          {
+            "hour": 13,
+            "score": 60.3
+          },
+          {
+            "hour": 14,
+            "score": 58.5
+          }
+        ],
+        "averageScore": 60.6,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 57.199999999999996
+          },
+          {
+            "hour": 16,
+            "score": 55.4
+          },
+          {
+            "hour": 17,
+            "score": 54.599999999999994
+          }
+        ],
+        "averageScore": 55.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 57.800000000000004
+          },
+          {
+            "hour": 19,
+            "score": 52.400000000000006
+          },
+          {
+            "hour": 18,
+            "score": 48.800000000000004
+          }
+        ],
+        "averageScore": 53,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 57.6
+          },
+          {
+            "hour": 22,
+            "score": 46.800000000000004
+          },
+          {
+            "hour": 23,
+            "score": 27
+          }
+        ],
+        "averageScore": 43.8,
+        "count": 3
+      }
+    },
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 2.5,
+        "lTheanineLevel": 7,
+        "ratio": 2.8
+      },
+      "teaTypeApplied": true,
+      "teaType": "White Tea",
+      "weighting": {
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 2.5, L-Theanine: 7 | Profile: Calm & Clear",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 2.80 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 146"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (20%)",
+        "reason": "Tea type: White Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
+        "value": "Total adjustments: 158"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (63), 13:00 (60), 14:00 (59), 20:00 (58), 21:00 (58)"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔ Dān)",
+    "type": "white",
+    "subType": "white-peony",
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 63.9,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 61.099999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 59.3,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 15,
+        "score": 57.199999999999996,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 20,
+        "score": 55.400000000000006,
+        "timeOfDay": "Evening (18-20)",
+        "narrative": "Social hours - balanced profiles support relaxed connection (suitable for your low-stimulation preference)"
+      }
+    ],
+    "circadianCurve": [
+      24.799999999999997,
+      24.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      51.199999999999996,
+      38.8,
+      45.4,
+      48.8,
+      50.6,
+      50.6,
+      63.9,
+      61.099999999999994,
+      59.3,
+      57.199999999999996,
+      55.4,
+      54.599999999999994,
+      46.400000000000006,
+      50,
+      55.400000000000006,
+      54.4,
+      43.6,
+      23.8
+    ],
+    "hourlyScores": {
+      "0": 24.799999999999997,
+      "1": 24.799999999999997,
+      "2": 22.799999999999997,
+      "3": 22.799999999999997,
+      "4": 22.799999999999997,
+      "5": 22.799999999999997,
+      "6": 51.199999999999996,
+      "7": 38.8,
+      "8": 45.4,
+      "9": 48.8,
+      "10": 50.6,
+      "11": 50.6,
+      "12": 63.9,
+      "13": 61.099999999999994,
+      "14": 59.3,
+      "15": 57.199999999999996,
+      "16": 55.4,
+      "17": 54.599999999999994,
+      "18": 46.400000000000006,
+      "19": 50,
+      "20": 55.400000000000006,
+      "21": 54.4,
+      "22": 43.6,
+      "23": 23.8
+    },
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 24.799999999999997
+          },
+          {
+            "hour": 1,
+            "score": 24.799999999999997
+          },
+          {
+            "hour": 2,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 3,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 4,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 5,
+            "score": 22.799999999999997
+          }
+        ],
+        "averageScore": 23.5,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 6,
+            "score": 51.199999999999996
+          },
+          {
+            "hour": 8,
+            "score": 45.4
+          },
+          {
+            "hour": 7,
+            "score": 38.8
+          }
+        ],
+        "averageScore": 45.1,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 50.6
+          },
+          {
+            "hour": 11,
+            "score": 50.6
+          },
+          {
+            "hour": 9,
+            "score": 48.8
+          }
+        ],
+        "averageScore": 50,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 63.9
+          },
+          {
+            "hour": 13,
+            "score": 61.099999999999994
+          },
+          {
+            "hour": 14,
+            "score": 59.3
+          }
+        ],
+        "averageScore": 61.4,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 57.199999999999996
+          },
+          {
+            "hour": 16,
+            "score": 55.4
+          },
+          {
+            "hour": 17,
+            "score": 54.599999999999994
+          }
+        ],
+        "averageScore": 55.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 55.400000000000006
+          },
+          {
+            "hour": 19,
+            "score": 50
+          },
+          {
+            "hour": 18,
+            "score": 46.400000000000006
+          }
+        ],
+        "averageScore": 50.6,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 54.4
+          },
+          {
+            "hour": 22,
+            "score": 43.6
+          },
+          {
+            "hour": 23,
+            "score": 23.8
+          }
+        ],
+        "averageScore": 40.6,
+        "count": 3
+      }
+    },
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 3,
+        "lTheanineLevel": 6.5,
+        "ratio": 2.1666666666666665
+      },
+      "teaTypeApplied": true,
+      "teaType": "White Tea",
+      "weighting": {
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 3, L-Theanine: 6.5 | Profile: Calm & Clear",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 2.17 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 149"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (20%)",
+        "reason": "Tea type: White Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
+        "value": "Total adjustments: 158"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (64), 13:00 (61), 14:00 (59), 15:00 (57), 20:00 (55)"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Gong Mei",
+    "originalName": "贡眉 (Gòng Méi)",
+    "type": "white",
+    "subType": "gong-mei",
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 64.7,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 61.9,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 59.3,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 15,
+        "score": 58,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 16,
+        "score": 55.4,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      }
+    ],
+    "circadianCurve": [
+      23.200000000000003,
+      23.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      21.200000000000003,
+      52,
+      39.599999999999994,
+      44.599999999999994,
+      48,
+      50.6,
+      50.6,
+      64.7,
+      61.9,
+      59.3,
+      58,
+      55.4,
+      54.599999999999994,
+      44.800000000000004,
+      48.400000000000006,
+      52.2,
+      51.2,
+      40.4,
+      20.6
+    ],
+    "hourlyScores": {
+      "0": 23.200000000000003,
+      "1": 23.200000000000003,
+      "2": 21.200000000000003,
+      "3": 21.200000000000003,
+      "4": 21.200000000000003,
+      "5": 21.200000000000003,
+      "6": 52,
+      "7": 39.599999999999994,
+      "8": 44.599999999999994,
+      "9": 48,
+      "10": 50.6,
+      "11": 50.6,
+      "12": 64.7,
+      "13": 61.9,
+      "14": 59.3,
+      "15": 58,
+      "16": 55.4,
+      "17": 54.599999999999994,
+      "18": 44.800000000000004,
+      "19": 48.400000000000006,
+      "20": 52.2,
+      "21": 51.2,
+      "22": 40.4,
+      "23": 20.6
+    },
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 23.200000000000003
+          },
+          {
+            "hour": 1,
+            "score": 23.200000000000003
+          },
+          {
+            "hour": 2,
+            "score": 21.200000000000003
+          },
+          {
+            "hour": 3,
+            "score": 21.200000000000003
+          },
+          {
+            "hour": 4,
+            "score": 21.200000000000003
+          },
+          {
+            "hour": 5,
+            "score": 21.200000000000003
+          }
+        ],
+        "averageScore": 21.9,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 6,
+            "score": 52
+          },
+          {
+            "hour": 8,
+            "score": 44.599999999999994
+          },
+          {
+            "hour": 7,
+            "score": 39.599999999999994
+          }
+        ],
+        "averageScore": 45.4,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 50.6
+          },
+          {
+            "hour": 11,
+            "score": 50.6
+          },
+          {
+            "hour": 9,
+            "score": 48
+          }
+        ],
+        "averageScore": 49.7,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 64.7
+          },
+          {
+            "hour": 13,
+            "score": 61.9
+          },
+          {
+            "hour": 14,
+            "score": 59.3
+          }
+        ],
+        "averageScore": 62,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 58
+          },
+          {
+            "hour": 16,
+            "score": 55.4
+          },
+          {
+            "hour": 17,
+            "score": 54.599999999999994
+          }
+        ],
+        "averageScore": 56,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 52.2
+          },
+          {
+            "hour": 19,
+            "score": 48.400000000000006
+          },
+          {
+            "hour": 18,
+            "score": 44.800000000000004
+          }
+        ],
+        "averageScore": 48.5,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 51.2
+          },
+          {
+            "hour": 22,
+            "score": 40.4
+          },
+          {
+            "hour": 23,
+            "score": 20.6
+          }
+        ],
+        "averageScore": 37.4,
+        "count": 3
+      }
+    },
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 3.5,
+        "lTheanineLevel": 6,
+        "ratio": 1.7142857142857142
+      },
+      "teaTypeApplied": true,
+      "teaType": "White Tea",
+      "weighting": {
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 3.5, L-Theanine: 6 | Profile: Smooth & Sustained",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 1.71 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 172"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (20%)",
+        "reason": "Tea type: White Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
+        "value": "Total adjustments: 158"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (65), 13:00 (62), 14:00 (59), 15:00 (58), 16:00 (55)"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Shou Mei",
+    "originalName": "寿眉 (Shòu Méi)",
+    "type": "white",
+    "subType": "shou-mei",
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 69.5,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (White Tea tradition)"
+      },
+      {
+        "hour": 13,
+        "score": 65.7,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (White Tea tradition)"
+      },
+      {
+        "hour": 14,
+        "score": 62.099999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (White Tea tradition)"
+      },
+      {
+        "hour": 10,
+        "score": 61.6,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (White Tea tradition)"
+      },
+      {
+        "hour": 11,
+        "score": 61.6,
+        "timeOfDay": "Morning (9-11)",
+        "narrative": "Peak alertness - higher stimulation aligns with circadian energy peaks (White Tea tradition)"
+      }
+    ],
+    "circadianCurve": [
+      13.399999999999999,
+      13.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      12.399999999999999,
+      52,
+      48.4,
+      52.8,
+      58,
+      61.6,
+      61.6,
+      69.5,
+      65.7,
+      62.099999999999994,
+      60,
+      56.199999999999996,
+      53.599999999999994,
+      37.2,
+      37,
+      36.800000000000004,
+      33,
+      22.200000000000003,
+      7.399999999999999
+    ],
+    "hourlyScores": {
+      "0": 13.399999999999999,
+      "1": 13.399999999999999,
+      "2": 12.399999999999999,
+      "3": 12.399999999999999,
+      "4": 12.399999999999999,
+      "5": 12.399999999999999,
+      "6": 52,
+      "7": 48.4,
+      "8": 52.8,
+      "9": 58,
+      "10": 61.6,
+      "11": 61.6,
+      "12": 69.5,
+      "13": 65.7,
+      "14": 62.099999999999994,
+      "15": 60,
+      "16": 56.199999999999996,
+      "17": 53.599999999999994,
+      "18": 37.2,
+      "19": 37,
+      "20": 36.800000000000004,
+      "21": 33,
+      "22": 22.200000000000003,
+      "23": 7.399999999999999
+    },
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 13.399999999999999
+          },
+          {
+            "hour": 1,
+            "score": 13.399999999999999
+          },
+          {
+            "hour": 2,
+            "score": 12.399999999999999
+          },
+          {
+            "hour": 3,
+            "score": 12.399999999999999
+          },
+          {
+            "hour": 4,
+            "score": 12.399999999999999
+          },
+          {
+            "hour": 5,
+            "score": 12.399999999999999
+          }
+        ],
+        "averageScore": 12.7,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 8,
+            "score": 52.8
+          },
+          {
+            "hour": 6,
+            "score": 52
+          },
+          {
+            "hour": 7,
+            "score": 48.4
+          }
+        ],
+        "averageScore": 51.1,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 61.6
+          },
+          {
+            "hour": 11,
+            "score": 61.6
+          },
+          {
+            "hour": 9,
+            "score": 58
+          }
+        ],
+        "averageScore": 60.4,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 69.5
+          },
+          {
+            "hour": 13,
+            "score": 65.7
+          },
+          {
+            "hour": 14,
+            "score": 62.099999999999994
+          }
+        ],
+        "averageScore": 65.8,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 60
+          },
+          {
+            "hour": 16,
+            "score": 56.199999999999996
+          },
+          {
+            "hour": 17,
+            "score": 53.599999999999994
+          }
+        ],
+        "averageScore": 56.6,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 18,
+            "score": 37.2
+          },
+          {
+            "hour": 19,
+            "score": 37
+          },
+          {
+            "hour": 20,
+            "score": 36.800000000000004
+          }
+        ],
+        "averageScore": 37,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 33
+          },
+          {
+            "hour": 22,
+            "score": 22.200000000000003
+          },
+          {
+            "hour": 23,
+            "score": 7.399999999999999
+          }
+        ],
+        "averageScore": 20.9,
+        "count": 3
+      }
+    },
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "rawCompoundValues": {
+        "caffeineLevel": 4,
+        "lTheanineLevel": 5.5,
+        "ratio": 1.375
+      },
+      "teaTypeApplied": true,
+      "teaType": "White Tea",
+      "weighting": {
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 4, L-Theanine: 5.5 | Profile: Balanced & Focused",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 364"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: Moderate",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 86"
+      },
+      {
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.5 total, 1.38 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 202"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (20%)",
+        "reason": "Tea type: White Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
+        "value": "Total adjustments: 158"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (70), 13:00 (66), 14:00 (62), 10:00 (62), 11:00 (62)"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Moonlight White",
+    "originalName": "月光白 (Yuè Guāng Bái)",
+    "type": "white",
+    "subType": "moonlight-white",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "hour": 12,
+        "score": 63.9,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 13,
+        "score": 61.099999999999994,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 14,
+        "score": 59.3,
+        "timeOfDay": "Midday (12-14)",
+        "narrative": "Post-lunch support - stimulation counters afternoon dip (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 15,
+        "score": 57.199999999999996,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      },
+      {
+        "hour": 16,
+        "score": 55.4,
+        "timeOfDay": "Afternoon (15-17)",
+        "narrative": "Extended focus - sustained stimulation maintains work momentum (suitable for your low-stimulation preference)"
+      }
+    ],
+    "circadianCurve": [
+      24.799999999999997,
+      24.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      22.799999999999997,
+      51.199999999999996,
+      38.8,
+      44.599999999999994,
+      48.8,
+      50.6,
+      50.6,
+      63.9,
+      61.099999999999994,
+      59.3,
+      57.199999999999996,
+      55.4,
+      54.599999999999994,
+      46.400000000000006,
+      49.2,
+      53.800000000000004,
+      53.6,
+      42.800000000000004,
+      23
+    ],
+    "hourlyScores": {
+      "0": 24.799999999999997,
+      "1": 24.799999999999997,
+      "2": 22.799999999999997,
+      "3": 22.799999999999997,
+      "4": 22.799999999999997,
+      "5": 22.799999999999997,
+      "6": 51.199999999999996,
+      "7": 38.8,
+      "8": 44.599999999999994,
+      "9": 48.8,
+      "10": 50.6,
+      "11": 50.6,
+      "12": 63.9,
+      "13": 61.099999999999994,
+      "14": 59.3,
+      "15": 57.199999999999996,
+      "16": 55.4,
+      "17": 54.599999999999994,
+      "18": 46.400000000000006,
+      "19": 49.2,
+      "20": 53.800000000000004,
+      "21": 53.6,
+      "22": 42.800000000000004,
+      "23": 23
+    },
+    "periodGrouping": {
+      "night": {
+        "period": "Night (0-5)",
+        "hours": [
+          {
+            "hour": 0,
+            "score": 24.799999999999997
+          },
+          {
+            "hour": 1,
+            "score": 24.799999999999997
+          },
+          {
+            "hour": 2,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 3,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 4,
+            "score": 22.799999999999997
+          },
+          {
+            "hour": 5,
+            "score": 22.799999999999997
+          }
+        ],
+        "averageScore": 23.5,
+        "count": 6
+      },
+      "early_morning": {
+        "period": "Early Morning (6-8)",
+        "hours": [
+          {
+            "hour": 6,
+            "score": 51.199999999999996
+          },
+          {
+            "hour": 8,
+            "score": 44.599999999999994
+          },
+          {
+            "hour": 7,
+            "score": 38.8
+          }
+        ],
+        "averageScore": 44.9,
+        "count": 3
+      },
+      "morning": {
+        "period": "Morning (9-11)",
+        "hours": [
+          {
+            "hour": 10,
+            "score": 50.6
+          },
+          {
+            "hour": 11,
+            "score": 50.6
+          },
+          {
+            "hour": 9,
+            "score": 48.8
+          }
+        ],
+        "averageScore": 50,
+        "count": 3
+      },
+      "midday": {
+        "period": "Midday (12-14)",
+        "hours": [
+          {
+            "hour": 12,
+            "score": 63.9
+          },
+          {
+            "hour": 13,
+            "score": 61.099999999999994
+          },
+          {
+            "hour": 14,
+            "score": 59.3
+          }
+        ],
+        "averageScore": 61.4,
+        "count": 3
+      },
+      "afternoon": {
+        "period": "Afternoon (15-17)",
+        "hours": [
+          {
+            "hour": 15,
+            "score": 57.199999999999996
+          },
+          {
+            "hour": 16,
+            "score": 55.4
+          },
+          {
+            "hour": 17,
+            "score": 54.599999999999994
+          }
+        ],
+        "averageScore": 55.7,
+        "count": 3
+      },
+      "evening": {
+        "period": "Evening (18-20)",
+        "hours": [
+          {
+            "hour": 20,
+            "score": 53.800000000000004
+          },
+          {
+            "hour": 19,
+            "score": 49.2
+          },
+          {
+            "hour": 18,
+            "score": 46.400000000000006
+          }
+        ],
+        "averageScore": 49.8,
+        "count": 3
+      },
+      "late_evening": {
+        "period": "Late Evening (21-23)",
+        "hours": [
+          {
+            "hour": 21,
+            "score": 53.6
+          },
+          {
+            "hour": 22,
+            "score": 42.800000000000004
+          },
+          {
+            "hour": 23,
+            "score": 23
+          }
+        ],
+        "averageScore": 39.8,
+        "count": 3
+      }
+    },
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "rawCompoundValues": {
+        "caffeineLevel": 3,
+        "lTheanineLevel": 6,
+        "ratio": 2
+      },
+      "teaTypeApplied": true,
+      "teaType": "White Tea",
+      "weighting": {
+        "rawCompound": "80%",
+        "teaType": "20%",
+        "note": "Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received compound inference with raw values",
+        "adjustment": "Caffeine: 3, L-Theanine: 6 | Profile: Calm & Clear",
+        "value": "Inference validated"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all 24 hours",
+        "adjustment": "Initialized with base score 50",
+        "value": "Ready for profile matching"
+      },
+      {
+        "step": "Stimulation Scoring",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Applied stimulation profile to all 24 hours",
+        "value": "Total adjustments: 243"
+      },
+      {
+        "step": "Relaxation Scoring",
+        "reason": "Relaxation level: High",
+        "adjustment": "Applied relaxation profile to all 24 hours",
+        "value": "Total adjustments: 144"
+      },
+      {
+        "step": "Raw Compound Scoring (80%)",
+        "reason": "Raw caffeine/L-theanine ratio: 9.0 total, 2.00 ratio",
+        "adjustment": "Applied raw compound values at 80% weight to all 24 hours",
+        "value": "Total adjustments: 146"
+      },
+      {
+        "step": "Tea Type Tradition Scoring (20%)",
+        "reason": "Tea type: White Tea (cultural tradition)",
+        "adjustment": "Applied tea type cultural preference at 20% weight",
+        "value": "Total adjustments: 158"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top hours",
+        "adjustment": "Selected 5 top hours",
+        "value": "12:00 (64), 13:00 (61), 14:00 (59), 15:00 (57), 16:00 (55)"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

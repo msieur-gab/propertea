@@ -1,0 +1,534 @@
+/**
+ * TimeRenderer.js
+ *
+ * Purpose: Render time-of-day recommendations based on compound + tea type
+ * Input:
+ *   - compoundInference: { analysis: { caffeineLevel, lTheanineLevel, stimulationLevel, relaxationLevel, compoundProfile } }
+ *   - teaTypeInference: { analysis: { teaType, teaSubType } } (optional, for 20% refinement)
+ * Output: Hourly recommendations with optimal drinking times
+ *
+ * Weighting: 80% raw compound values (caffeine/l-theanine ratio) + 20% tea type cultural tradition
+ * Raw values provide fine-grained differentiation between teas with similar categorical profiles
+ */
+
+import { CompoundTaxonomy, TeaTypeTaxonomy } from '../../taxonomies/index.js';
+
+export class TimeRenderer {
+  constructor(config = {}) {
+    this.config = {
+      rangeThreshold: config.rangeThreshold || 70,
+      baseScore: config.baseScore || 50,
+      maxRecommendations: config.maxRecommendations || 5,
+      ...config
+    };
+
+    this.hours = Array.from({ length: 24 }, (_, i) => i); // [0, 1, ..., 23]
+
+    // Map stimulation/relaxation levels to numeric values
+    this.levelMap = {
+      "none": 0,
+      "very low": 1,
+      "low": 2,
+      "moderate": 3,
+      "medium": 3,
+      "medium-high": 4,
+      "high": 5,
+      "very high": 6,
+      "high (smooth)": 5,
+      "very high (smooth)": 6
+    };
+
+    // Time period names with narrative hints
+    this.timePeriods = {
+      night: {
+        name: 'Night (0-5)',
+        hours: [0, 1, 2, 3, 4, 5],
+        narrativeHint: 'Rest and recovery - seek calming, low-stimulation profiles'
+      },
+      early_morning: {
+        name: 'Early Morning (6-8)',
+        hours: [6, 7, 8],
+        narrativeHint: 'Gentle awakening - subtle stimulation supports gradual alertness'
+      },
+      morning: {
+        name: 'Morning (9-11)',
+        hours: [9, 10, 11],
+        narrativeHint: 'Peak alertness - higher stimulation aligns with circadian energy peaks'
+      },
+      midday: {
+        name: 'Midday (12-14)',
+        hours: [12, 13, 14],
+        narrativeHint: 'Post-lunch support - stimulation counters afternoon dip'
+      },
+      afternoon: {
+        name: 'Afternoon (15-17)',
+        hours: [15, 16, 17],
+        narrativeHint: 'Extended focus - sustained stimulation maintains work momentum'
+      },
+      evening: {
+        name: 'Evening (18-20)',
+        hours: [18, 19, 20],
+        narrativeHint: 'Social hours - balanced profiles support relaxed connection'
+      },
+      late_evening: {
+        name: 'Late Evening (21-23)',
+        hours: [21, 22, 23],
+        narrativeHint: 'Wind-down - minimal stimulation prepares for sleep'
+      }
+    };
+  }
+
+  /**
+   * Render time recommendations from compound + tea type
+   * @param {Object} inferences - Object containing inference results
+   *   - inferences.compound: Output from CompoundInferrer
+   *   - inferences.teaType: Output from TeaTypeInferrer (optional)
+   * @returns {Object} - Time recommendations organized by hour and period
+   */
+  render(inferences = {}) {
+    const {
+      compound: compoundInference = {},
+      teaType: teaTypeInference = null
+    } = inferences;
+
+    const trace = [];
+
+    // Extract inference data
+    if (!compoundInference?.analysis) {
+      return this._failedRender("No compound inference data provided", trace);
+    }
+
+    const analysis = compoundInference.analysis;
+    const {
+      stimulationLevel,
+      relaxationLevel,
+      compoundProfile,
+      caffeineLevel,
+      lTheanineLevel
+    } = analysis;
+
+    trace.push({
+      step: "Data Reception",
+      reason: "Received compound inference with raw values",
+      adjustment: `Caffeine: ${caffeineLevel}, L-Theanine: ${lTheanineLevel} | Profile: ${compoundProfile}`,
+      value: "Inference validated"
+    });
+
+    // Initialize hourly scores
+    const hourlyScores = new Map();
+    this.hours.forEach(hour => {
+      hourlyScores.set(hour, this.config.baseScore);
+    });
+
+    trace.push({
+      step: "Scoring Initialization",
+      reason: "Set base scores for all 24 hours",
+      adjustment: `Initialized with base score ${this.config.baseScore}`,
+      value: "Ready for profile matching"
+    });
+
+    // Apply stimulation level profile
+    const stimulationProfile = this._getStimulationProfile(stimulationLevel);
+    let stimulationAdjusted = 0;
+
+    this.hours.forEach(hour => {
+      const adjustment = stimulationProfile[hour];
+      const currentScore = hourlyScores.get(hour);
+      hourlyScores.set(hour, currentScore + adjustment);
+      stimulationAdjusted += Math.abs(adjustment);
+    });
+
+    trace.push({
+      step: "Stimulation Scoring",
+      reason: `Stimulation level: ${stimulationLevel}`,
+      adjustment: `Applied stimulation profile to all 24 hours`,
+      value: `Total adjustments: ${stimulationAdjusted.toFixed(0)}`
+    });
+
+    // Apply relaxation level profile
+    const relaxationProfile = this._getRelaxationProfile(relaxationLevel);
+    let relaxationAdjusted = 0;
+
+    this.hours.forEach(hour => {
+      const adjustment = relaxationProfile[hour];
+      const currentScore = hourlyScores.get(hour);
+      hourlyScores.set(hour, currentScore + adjustment);
+      relaxationAdjusted += Math.abs(adjustment);
+    });
+
+    trace.push({
+      step: "Relaxation Scoring",
+      reason: `Relaxation level: ${relaxationLevel}`,
+      adjustment: `Applied relaxation profile to all 24 hours`,
+      value: `Total adjustments: ${relaxationAdjusted.toFixed(0)}`
+    });
+
+    // ========== Apply Raw Compound Values (80% weight) ==========
+    // Use caffeine/l-theanine ratio to create fine-grained hourly adjustments
+    // This differentiates teas that might have the same categorical profile
+    const rawCompoundProfile = this._getRawCompoundProfile(caffeineLevel, lTheanineLevel);
+    let compoundAdjusted = 0;
+
+    this.hours.forEach(hour => {
+      const adjustment = rawCompoundProfile[hour];
+      const currentScore = hourlyScores.get(hour);
+      // Apply 80% of raw compound adjustment (the rest is for tea type)
+      hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.80)));
+      compoundAdjusted += Math.abs(adjustment);
+    });
+
+    trace.push({
+      step: "Raw Compound Scoring (80%)",
+      reason: `Raw caffeine/L-theanine ratio: ${(caffeineLevel + lTheanineLevel).toFixed(1)} total, ${(lTheanineLevel / (caffeineLevel || 1)).toFixed(2)} ratio`,
+      adjustment: `Applied raw compound values at 80% weight to all 24 hours`,
+      value: `Total adjustments: ${compoundAdjusted.toFixed(0)}`
+    });
+
+    // ========== Apply Tea Type Tradition (20% weight) ==========
+    let teaTypeAdjusted = 0;
+    let appliedTeaType = null;
+
+    if (teaTypeInference?.analysis) {
+      const teaTypeId = teaTypeInference.analysis.teaType;
+      const teaType = teaTypeId ? TeaTypeTaxonomy.getType(teaTypeId) : null;
+
+      if (teaType && teaType.baseTimeOfDayAffinities) {
+        appliedTeaType = teaType.displayName;
+
+        // Map time period affinities to hourly adjustments (centered on each period)
+        const affinities = teaType.baseTimeOfDayAffinities;
+        const timePeriodMaps = {
+          night: [0, 1, 2, 3, 4, 5],
+          earlyMorning: [6, 7, 8],
+          morning: [9, 10, 11],
+          midday: [12, 13, 14],
+          afternoon: [15, 16, 17],
+          evening: [18, 19, 20],
+          lateEvening: [21, 22, 23]
+        };
+
+        // Calculate adjustment factor: convert 0-100 affinity to -50 to +50 adjustment
+        Object.entries(timePeriodMaps).forEach(([period, hours]) => {
+          const affinity = affinities[period] || 50; // Default to neutral (50)
+          const adjustment = (affinity - 50) * 0.3; // Scale: -50 to +50 range * 0.3 intensity
+
+          hours.forEach(hour => {
+            const currentScore = hourlyScores.get(hour);
+            // Apply 20% of tea type adjustment
+            hourlyScores.set(hour, Math.max(1, currentScore + (adjustment * 0.20)));
+            teaTypeAdjusted += Math.abs(adjustment);
+          });
+        });
+      }
+    }
+
+    trace.push({
+      step: "Tea Type Tradition Scoring (20%)",
+      reason: appliedTeaType ? `Tea type: ${appliedTeaType} (cultural tradition)` : 'No tea type provided',
+      adjustment: `Applied tea type cultural preference at 20% weight`,
+      value: `Total adjustments: ${teaTypeAdjusted.toFixed(0)}`
+    });
+
+    // Get top recommendations
+    const sortedHours = Array.from(hourlyScores.entries())
+      .map(([hour, score]) => ({
+        hour,
+        score: Math.min(100, Math.max(0, score)),
+        timeOfDay: this._getTimePeriod(hour)
+      }))
+      .sort((a, b) => b.score - a.score);
+
+    const recommendations = sortedHours.slice(0, this.config.maxRecommendations).map(rec => ({
+      ...rec,
+      narrative: this._buildTimeNarrative(rec.timeOfDay, stimulationLevel, appliedTeaType)
+    }));
+
+    trace.push({
+      step: "Final Selection",
+      reason: "Selected top hours",
+      adjustment: `Selected ${recommendations.length} top hours`,
+      value: recommendations.map(r => `${r.hour}:00 (${r.score.toFixed(0)})`).join(", ")
+    });
+
+    // Group by time period
+    const periodGrouping = this._groupByPeriod(sortedHours);
+
+    // Build 24-hour circadian curve array for chart plotting
+    const circadianCurve = this.hours.map(hour => {
+      const score = hourlyScores.get(hour) || 50;
+      return Math.min(100, Math.max(0, score));
+    });
+
+    return {
+      // Top recommended hours
+      recommendations,
+
+      // 24-hour circadian curve array (index 0 = hour 0, index 23 = hour 23)
+      // Perfect for radar/polar charts showing suitability across all 24 hours
+      circadianCurve,
+
+      // All hourly scores as object (for reference/lookup)
+      hourlyScores: Object.fromEntries(hourlyScores),
+
+      // Grouped by time period
+      periodGrouping,
+
+      // Supporting data
+      analysis: {
+        compoundProfile,
+        stimulationLevel,
+        relaxationLevel,
+        rawCompoundValues: {
+          caffeineLevel,
+          lTheanineLevel,
+          ratio: lTheanineLevel / (caffeineLevel || 1)
+        },
+        teaTypeApplied: appliedTeaType ? true : false,
+        teaType: appliedTeaType,
+        weighting: {
+          rawCompound: '80%',
+          teaType: '20%',
+          note: 'Raw caffeine/l-theanine values weighted 80% for fine-grained differentiation, tea type cultural tradition weighted 20%'
+        }
+      },
+
+      // Metadata
+      trace,
+      confidence: compoundInference.confidence || 0.85,
+      rendererVersion: '1.0'
+    };
+  }
+
+  // ========== Helper Methods ==========
+
+  /**
+   * Get raw compound profile from caffeine/l-theanine levels
+   * Creates fine-grained hourly adjustments that differentiate teas with same categorical profile
+   *
+   * Logic:
+   * - Higher caffeine → boost morning/afternoon, penalty evening/night
+   * - Higher l-theanine → boost evening/night, penalty morning
+   * - Net effect creates unique circadian pattern for each tea
+   */
+  _getRawCompoundProfile(caffeineLevel, lTheanineLevel) {
+    const profile = new Array(24).fill(0);
+
+    if (caffeineLevel === 0 && lTheanineLevel === 0) {
+      return profile;
+    }
+
+    // Calculate intensity of effect based on total compound levels
+    const totalCompound = caffeineLevel + lTheanineLevel;
+    const ratio = lTheanineLevel / (caffeineLevel || 1);
+
+    // Caffeine boost: morning to afternoon (6-17), peak at 10:30
+    // Intensity scales with caffeine level
+    const caffeineBoost = caffeineLevel * 3;
+    for (let h = 6; h <= 17; h++) {
+      let factor = Math.max(0, 1.0 - Math.abs(h - 10.5) / 7);
+      profile[h] += caffeineBoost * factor;
+    }
+
+    // Caffeine penalty: evening and night (18-5)
+    // Stronger penalty in deep night, gradually reduces in early morning
+    const caffeinePenalty = caffeineLevel * 4;
+    for (let h = 18; h <= 23; h++) {
+      profile[h] -= caffeinePenalty * 0.8 * (1 + (h - 18) / 5);
+    }
+    for (let h = 0; h <= 5; h++) {
+      profile[h] -= caffeinePenalty * 0.9;
+    }
+
+    // L-Theanine boost: evening and night (17-23), peak at 21:00
+    // Intensity scales with l-theanine level
+    const theanineBoost = lTheanineLevel * 2.5;
+    for (let h = 17; h <= 23; h++) {
+      let factor = Math.max(0, 1 - Math.abs(h - 21) / 4);
+      profile[h] += theanineBoost * factor;
+    }
+
+    // L-Theanine slight evening boost (18-20)
+    for (let h = 18; h <= 20; h++) {
+      profile[h] += theanineBoost * 0.3;
+    }
+
+    // L-Theanine slight morning penalty (7-11)
+    // Reduces morning alertness for high-theanine teas
+    const theaninePenalty = lTheanineLevel * 1.5;
+    for (let h = 7; h <= 11; h++) {
+      profile[h] -= theaninePenalty * 0.5;
+    }
+
+    // Ratio-based refinement: fine-tune based on caffeine-to-theanine balance
+    // High ratio (more caffeine) → stronger morning/afternoon boost
+    // Low ratio (more theanine) → stronger evening/night boost
+    if (ratio > 1.0) {
+      // Caffeine-dominant: enhance morning peaks
+      for (let h = 8; h <= 11; h++) {
+        profile[h] += (ratio - 1.0) * 5;
+      }
+    } else if (ratio < 0.8) {
+      // Theanine-dominant: enhance evening/night
+      for (let h = 19; h <= 22; h++) {
+        profile[h] += (0.8 - ratio) * 5;
+      }
+    }
+
+    return profile.map(p => Math.round(p));
+  }
+
+  /**
+   * Build dynamic narrative for time recommendation using taxonomy hint
+   * Combines time period hint with stimulation context
+   */
+  _buildTimeNarrative(timeOfDayStr, stimulationLevel, appliedTeaType) {
+    if (!timeOfDayStr) return null;
+
+    // Find the time period object that matches the timeOfDay string
+    let periodObj = null;
+    for (const period of Object.values(this.timePeriods)) {
+      if (period.name === timeOfDayStr) {
+        periodObj = period;
+        break;
+      }
+    }
+
+    if (!periodObj || !periodObj.narrativeHint) {
+      return null;
+    }
+
+    const hint = periodObj.narrativeHint;
+
+    // Customize based on stimulation level
+    if (stimulationLevel.toLowerCase().includes('high')) {
+      return `${hint} (optimal for your high-stimulation profile)`;
+    }
+
+    if (stimulationLevel.toLowerCase().includes('low')) {
+      return `${hint} (suitable for your low-stimulation preference)`;
+    }
+
+    if (appliedTeaType) {
+      return `${hint} (${appliedTeaType} tradition)`;
+    }
+
+    return hint;
+  }
+
+  /**
+   * Get stimulation profile for all 24 hours
+   */
+  _getStimulationProfile(levelStr) {
+    const level = this.levelMap[levelStr.toLowerCase()] || 0;
+    const profile = new Array(24).fill(0);
+    const boost = level * 5;
+    const penalty = -level * 8;
+
+    // Morning/Midday Boost (7am to 4pm, peak at 10:30)
+    for (let h = 7; h <= 16; h++) {
+      let factor = Math.max(0, 1.0 - Math.abs(h - 10.5) / 6.5);
+      profile[h] = boost * factor;
+    }
+
+    // Evening/Night Penalty (6pm onwards, deep night 0-5am)
+    for (let h = 18; h <= 23; h++) {
+      profile[h] = penalty * 0.6 * (1 + (h - 18) / 5);
+    }
+    for (let h = 0; h <= 5; h++) {
+      profile[h] = penalty;
+    }
+
+    return profile.map(p => Math.round(p));
+  }
+
+  /**
+   * Get relaxation profile for all 24 hours
+   */
+  _getRelaxationProfile(levelStr) {
+    const level = this.levelMap[levelStr.toLowerCase()] || 0;
+    const profile = new Array(24).fill(0);
+    const boost = level * 3.5;
+    const penalty = -level * 3;
+
+    // Evening/Night Boost (5pm to midnight, peak at 9pm)
+    for (let h = 17; h <= 23; h++) {
+      let factor = Math.max(0, 1 - Math.abs(h - 21) / 4.5);
+      if (h === 23 || h === 0 || h === 1) factor *= 0.1;
+      profile[h] = boost * factor;
+    }
+    for (let h = 0; h <= 1; h++) {
+      profile[h] = boost * 0.1;
+    }
+
+    // Morning Penalty (7am to 11am)
+    for (let h = 7; h <= 11; h++) {
+      profile[h] = penalty;
+    }
+
+    return profile.map(p => Math.round(p));
+  }
+
+
+  /**
+   * Get time period name for an hour
+   */
+  _getTimePeriod(hour) {
+    for (const [key, period] of Object.entries(this.timePeriods)) {
+      if (period.hours.includes(hour)) {
+        return period.name;
+      }
+    }
+    return "Unknown";
+  }
+
+  /**
+   * Group hours by time period
+   */
+  _groupByPeriod(hourlyData) {
+    const grouped = {};
+
+    for (const [key, period] of Object.entries(this.timePeriods)) {
+      const hoursInPeriod = hourlyData.filter(h => period.hours.includes(h.hour));
+
+      if (hoursInPeriod.length > 0) {
+        const avgScore = hoursInPeriod.reduce((sum, h) => sum + h.score, 0) / hoursInPeriod.length;
+
+        grouped[key] = {
+          period: period.name,
+          hours: hoursInPeriod.map(h => ({
+            hour: h.hour,
+            score: h.score
+          })),
+          averageScore: parseFloat(avgScore.toFixed(1)),
+          count: hoursInPeriod.length
+        };
+      }
+    }
+
+    return grouped;
+  }
+
+  /**
+   * Return error render when inference fails
+   */
+  _failedRender(reason, trace) {
+    return {
+      recommendations: [],
+      hourlyScores: {},
+      periodGrouping: {},
+      analysis: {
+        compoundProfile: "Unknown",
+        stimulationLevel: "Unknown",
+        relaxationLevel: "Unknown"
+      },
+      trace: [{
+        step: "Error",
+        reason,
+        adjustment: "Unable to render recommendations",
+        value: "Failed"
+      }],
+      confidence: 0.0,
+      rendererVersion: '1.0'
+    };
+  }
+}

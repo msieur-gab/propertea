@@ -1,0 +1,580 @@
+[
+  {
+    "teaName": "Tie Guan Yin",
+    "originalName": "铁观音 (Tiě Guān Yīn)",
+    "type": "oolong",
+    "subType": "tie-guan-yin",
+    "flavorProfile": [
+      "orchid",
+      "creamy",
+      "sweet",
+      "floral",
+      "buttery"
+    ],
+    "narrative": "**Geographic Origin**\n\nOolong Tea grows in Anxi, Fujian, China at 700m elevation, with average temperatures of 19.2°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (700m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (178 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (25.07°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nOolong Tea grows in Anxi, Fujian, China at 700m elevation, with average temperatures of 19.2°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (700m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (19.2°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (178 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (25.07°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "700m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "78%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "19.2°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "178 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "25.07°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Oolong Tea",
+    "teaTypeId": "TEA_TYPE_OOLONG",
+    "location": "Anxi, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Oolong Tea from Anxi, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Da Hong Pao",
+    "originalName": "大红袍 (Dà Hóng Páo)",
+    "type": "oolong",
+    "subType": "wuyi-oolong",
+    "flavorProfile": [
+      "roasted",
+      "mineral",
+      "dark fruits",
+      "woody",
+      "caramel"
+    ],
+    "narrative": "**Geographic Origin**\n\nOolong Tea grows in Wuyi Mountains, Fujian, China at 600m elevation, with average temperatures of 19.5°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (175 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nOolong Tea grows in Wuyi Mountains, Fujian, China at 600m elevation, with average temperatures of 19.5°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (600m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (19.5°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (175 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (27.72°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "600m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "80%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "19.5°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "175 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "27.72°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Oolong Tea",
+    "teaTypeId": "TEA_TYPE_OOLONG",
+    "location": "Wuyi Mountains, Fujian, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Oolong Tea from Wuyi Mountains, Fujian, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Fenghuang Dancong",
+    "originalName": "凤凰单丛 (Fèng Huáng Dān Cóng)",
+    "type": "oolong",
+    "subType": "fenghuang-dancong",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "fruity",
+      "sweet",
+      "complex"
+    ],
+    "narrative": "**Geographic Origin**\n\nOolong Tea grows in Fenghuang Mountain, Guangdong, China at 1100m elevation, with average temperatures of 20.1°C and humidity levels around 82%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1100m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (82%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (20.1°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids\n\n**Sun Exposure** (182 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (23.92°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nOolong Tea grows in Fenghuang Mountain, Guangdong, China at 1100m elevation, with average temperatures of 20.1°C and humidity levels around 82%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1100m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (82%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (20.1°C average)\n\nWarm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **vibrant flavors, fruity notes, bold character**\n\nTemperature effects on tea compounds: higher caffeine, potentially lower amino acids",
+      "**Sun Exposure** (182 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (23.92°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1100m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "82%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "20.1°C",
+        "classification": "Warm",
+        "description": "Warm regions (20-25°C avg) support faster growth with vibrant, fruity flavors but potentially less complexity",
+        "flavorInfluence": [
+          "vibrant flavors",
+          "fruity notes",
+          "bold character"
+        ],
+        "compoundEffect": [
+          "higher caffeine",
+          "potentially lower amino acids"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "182 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "23.92°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Oolong Tea",
+    "teaTypeId": "TEA_TYPE_OOLONG",
+    "location": "Fenghuang Mountain, Guangdong, China",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Early Summer",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Warm",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Oolong Tea from Fenghuang Mountain, Guangdong, China",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Dong Ding",
+    "originalName": "冻顶 (Dòng Dǐng)",
+    "type": "oolong",
+    "subType": "dong-ding",
+    "flavorProfile": [
+      "roasted",
+      "creamy",
+      "sweet",
+      "floral",
+      "mineral"
+    ],
+    "narrative": "**Geographic Origin**\n\nOolong Tea grows in Lugu, Nantou, Taiwan at 800m elevation, with average temperatures of 19.8°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**\n\n**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (19.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile\n\n**Sun Exposure** (180 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (23.75°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**\n\n**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character.",
+    "sections": [
+      "**Geographic Origin**\n\nOolong Tea grows in Lugu, Nantou, Taiwan at 800m elevation, with average temperatures of 19.8°C and humidity levels around 78%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (800m)\n\nMedium elevation teas (600-1200m) typically balance complexity and strength. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **balanced complexity, developed flavors**",
+      "**Humidity & Moisture** (78%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (19.8°C average)\n\nMild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **balanced complex flavors, good aromatic development**\n\nTemperature effects on tea compounds: balanced L-theanine and caffeine, good overall compound profile",
+      "**Sun Exposure** (180 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (23.75°)\n\nUpper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity. The subtropical (upper) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **good complexity, distinct seasonal notes**",
+      "**Terroir Quality & Character**\n\nOolong Tea benefits from a **good terroir** where at least one significant environmental advantage—perhaps high elevation or optimal humidity—supports quality cultivation. Key characteristics: Misty/misty-mountain character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "800m",
+        "classification": "Medium",
+        "description": "Medium elevation teas (600-1200m) typically balance complexity and strength",
+        "flavorInfluence": [
+          "balanced complexity",
+          "developed flavors"
+        ],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Humidity",
+        "value": "78%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "19.8°C",
+        "classification": "Mild",
+        "description": "Mild regions (15-20°C avg) provide ideal conditions for most tea growth with good flavor development",
+        "flavorInfluence": [
+          "balanced complex flavors",
+          "good aromatic development"
+        ],
+        "compoundEffect": [
+          "balanced L-theanine and caffeine",
+          "good overall compound profile"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "180 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "23.75°",
+        "classification": "Subtropical (Upper)",
+        "description": "Upper subtropical zone (23.5-30°) teas experience more noticeable seasonal variations, contributing to complexity",
+        "flavorInfluence": [
+          "good complexity",
+          "distinct seasonal notes"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Oolong Tea",
+    "teaTypeId": "TEA_TYPE_OOLONG",
+    "location": "Lugu, Nantou, Taiwan",
+    "qualityIndicator": "Good Quality",
+    "characteristics": [
+      "Misty/misty-mountain character"
+    ],
+    "harvestSeason": "Spring/Autumn",
+    "analysis": {
+      "elevation": "Medium",
+      "humidity": "High",
+      "latitude": "Subtropical (Upper)",
+      "temperature": "Mild",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Oolong Tea from Lugu, Nantou, Taiwan",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  },
+  {
+    "teaName": "Ali Shan Oolong",
+    "originalName": "阿里山烏龍 (Ālǐshān Wūlóng)",
+    "type": "oolong",
+    "subType": "high-mountain-oolong",
+    "flavorProfile": [
+      "floral",
+      "buttery",
+      "sweet",
+      "creamy",
+      "honeysuckle"
+    ],
+    "narrative": "**Geographic Origin**\n\nOolong Tea grows in Alishan, Chiayi, Taiwan at 1500m elevation, with average temperatures of 14.8°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.\n\n**Elevation Impact**  (1500m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine\n\n**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids\n\n**Temperature Range** (14.8°C average)\n\nCool regions (10-15°C avg) encourage gradual growth with balanced complexity and sweetness. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **complex flavors, good sweetness, nuanced profiles**\n\nTemperature effects on tea compounds: high L-theanine, moderate caffeine\n\n**Sun Exposure** (180 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.\n\n**Climate Zone** (23.47°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**\n\n**Terroir Quality & Character**\n\nOolong Tea originates from a **premium terroir** where multiple environmental factors align perfectly. Exceptional elevation, optimal humidity, favorable temperature, and strong sun exposure combine to create outstanding tea quality. Key characteristics: Mountain terroir, Misty/misty-mountain character, Cool-climate character.",
+    "sections": [
+      "**Geographic Origin**\n\nOolong Tea grows in Alishan, Chiayi, Taiwan at 1500m elevation, with average temperatures of 14.8°C and humidity levels around 80%. This specific terroir—the combination of location, elevation, climate, and environmental conditions—fundamentally shapes the tea's character from leaf to cup.",
+      "**Elevation Impact**  (1500m)\n\nHigh elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth. For Oolong Tea, this elevation means the tea plants grow more slowly, allowing the leaves to develop complex flavors and higher concentrations of amino acids.\n\nFlavor influences from this elevation: **complex aromatics, brighter notes, enhanced sweetness**\n\nCompound development at this elevation: increases amino acids (L-theanine), potentially lower caffeine",
+      "**Humidity & Moisture** (80%)\n\nHigh humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency. In this humid microclimate, Oolong Tea develops with optimal enzyme activity, resulting in nuanced flavor development and balanced biochemistry.\n\nFlavor characteristics from this humidity: **enhanced floral notes, softer profiles, potentially vegetal**\n\nCompound effects of humidity: higher amino acids",
+      "**Temperature Range** (14.8°C average)\n\nCool regions (10-15°C avg) encourage gradual growth with balanced complexity and sweetness. Temperature is critical for Oolong Tea's development—it determines growth rate, compound synthesis, and the balance between caffeine and amino acids.\n\nFlavor influences from temperature: **complex flavors, good sweetness, nuanced profiles**\n\nTemperature effects on tea compounds: high L-theanine, moderate caffeine",
+      "**Sun Exposure** (180 MJ/m²/day)\n\nNeutral. For Oolong Tea, sunlight directly affects photosynthesis—more sun boosts caffeine production, while partially shaded conditions favor delicate aromatic development.",
+      "**Climate Zone** (23.47°)\n\nLower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles. The subtropical (lower) zone where Oolong Tea grows determines seasonal variation, day length, and overall growth patterns throughout the year.\n\nFlavor influences from this climate zone: **balanced profiles, good aromatic development**",
+      "**Terroir Quality & Character**\n\nOolong Tea originates from a **premium terroir** where multiple environmental factors align perfectly. Exceptional elevation, optimal humidity, favorable temperature, and strong sun exposure combine to create outstanding tea quality. Key characteristics: Mountain terroir, Misty/misty-mountain character, Cool-climate character."
+    ],
+    "geographicInfluences": [
+      {
+        "factor": "Elevation",
+        "value": "1500m",
+        "classification": "High",
+        "description": "High elevation teas (1200-1800m) are known for complex, bright flavors and refined characteristics due to slower growth",
+        "flavorInfluence": [
+          "complex aromatics",
+          "brighter notes",
+          "enhanced sweetness"
+        ],
+        "compoundEffect": [
+          "increases amino acids (L-theanine)",
+          "potentially lower caffeine"
+        ]
+      },
+      {
+        "factor": "Humidity",
+        "value": "80%",
+        "classification": "High",
+        "description": "High humidity (70-85%) encourages lush growth and can enhance floral notes but may reduce astringency",
+        "flavorInfluence": [
+          "enhanced floral notes",
+          "softer profiles",
+          "potentially vegetal"
+        ],
+        "compoundEffect": [
+          "higher amino acids"
+        ]
+      },
+      {
+        "factor": "Temperature",
+        "value": "14.8°C",
+        "classification": "Cool",
+        "description": "Cool regions (10-15°C avg) encourage gradual growth with balanced complexity and sweetness",
+        "flavorInfluence": [
+          "complex flavors",
+          "good sweetness",
+          "nuanced profiles"
+        ],
+        "compoundEffect": [
+          "high L-theanine",
+          "moderate caffeine"
+        ]
+      },
+      {
+        "factor": "Solar Radiation",
+        "value": "180 MJ/m²/day",
+        "classification": "Unknown",
+        "description": "Neutral",
+        "flavorInfluence": [],
+        "compoundEffect": []
+      },
+      {
+        "factor": "Latitude/Climate Zone",
+        "value": "23.47°",
+        "classification": "Subtropical (Lower)",
+        "description": "Lower subtropical zone (15-23.5°) teas benefit from warm seasons and distinct (though mild) winters, creating balanced profiles",
+        "flavorInfluence": [
+          "balanced profiles",
+          "good aromatic development"
+        ],
+        "compoundEffect": []
+      }
+    ],
+    "teaType": "Oolong Tea",
+    "teaTypeId": "TEA_TYPE_OOLONG",
+    "location": "Alishan, Chiayi, Taiwan",
+    "qualityIndicator": "Premium/Exceptional",
+    "characteristics": [
+      "Mountain terroir",
+      "Misty/misty-mountain character",
+      "Cool-climate character"
+    ],
+    "harvestSeason": "Autumn",
+    "analysis": {
+      "elevation": "High",
+      "humidity": "High",
+      "latitude": "Subtropical (Lower)",
+      "temperature": "Cool",
+      "solarRadiation": "Unknown"
+    },
+    "trace": [
+      {
+        "step": "Input Reception",
+        "reason": "Received geography, tea type, and location data",
+        "adjustment": "Building narrative for Oolong Tea from Alishan, Chiayi, Taiwan",
+        "value": "Inputs validated"
+      },
+      {
+        "step": "Narrative Construction",
+        "reason": "Built detailed terroir story with specific values and influences",
+        "adjustment": "Generated 7 narrative sections",
+        "value": "Terroir presentation complete"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "1.0"
+  }
+]

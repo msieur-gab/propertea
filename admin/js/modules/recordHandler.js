@@ -17,7 +17,7 @@ export const recordHandler = {
         const name = formData.get('teaName')?.trim() || '';
         const originalName = formData.get('originalName')?.trim() || '';
         const type = formData.get('teaType')?.trim() || '';
-        const subType = '';
+        const subType = formData.get('teaSubtype')?.trim() || '';
 
         const caffeineLevelStr = formData.get('caffeineLevel')?.trim();
         const lTheanineLevelStr = formData.get('lTheanineLevel')?.trim();
@@ -164,7 +164,7 @@ export const recordHandler = {
             altitude: record.geography?.altitude !== null ? `${record.geography.altitude} m` : 'N/A',
             temperature: record.geography?.temperature !== null ? `${record.geography.temperature} °C` : 'N/A',
             humidity: record.geography?.humidity !== null ? `${record.geography.humidity} %` : 'N/A',
-            solarRadiation: record.geography?.solarRadiation !== null ? `${record.geography.solarRadiation} W/m²` : 'N/A', // Assuming W/m² based on API
+            solarRadiation: record.geography?.solarRadiation !== null ? `${record.geography.solarRadiation} MJ/m²/day` : 'N/A', // Solar radiation in MJ/m²/day
             // Other levels
             caffeineLevel: record.caffeineLevel !== null ? record.caffeineLevel : 'N/A',
             lTheanineLevel: record.lTheanineLevel !== null ? record.lTheanineLevel : 'N/A',

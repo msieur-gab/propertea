@@ -75,6 +75,18 @@ All tea records are stored in the browser's **localStorage**. Clearing browser d
 - Relies on the [Open-Meteo Elevation API](https://open-meteo.com/en/docs/elevation-api) for altitude estimation.
 - Relies on the [Open-Meteo Forecast/Historical API](https://open-meteo.com/en/docs) for weather data.
 
+## API Integration
+
+The admin panel sends analysis requests through `js/services/apiService.js`. The service automatically targets Netlify Functions when hosted on Netlify, but you can override the base URL for custom deployments:
+
+- **Global override:** set `window.__PROPERTEA_API_BASE__ = '/api';` before loading `js/app.js`.
+- **HTML data attribute:** add `data-api-base="/api"` on the `<html>` tag.
+- **Manual instantiation:** create your own instance `new APIService('https://your-domain/api')`.
+
+All options ensure that the POST request is sent to `{base}/analyze`, allowing seamless use with the new Express server or any reverse proxy.
+
+For debugging the API you can append `?mode=explain` to the endpoint (or send `{ "options": { "explain": true } }` in the body) to receive extended reasoning traces. The UI continues to use the standard response mode by default.
+
 ## License
 
 MIT License

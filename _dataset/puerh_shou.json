@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Menghai Shou",
+    "originalName": "勐海熟普洱 (Měng Hǎi Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "earthy",
+      "woody",
+      "sweet",
+      "leather",
+      "compost"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "location": "Menghai",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 21.98,
+      "longitude": 100.45,
+      "altitude": 1300,
+      "humidity": 75,
+      "temperature": 21.2,
+      "solarRadiation": 190
+    }
+  },
+  {
+    "name": "Xiaguan Shou",
+    "originalName": "下关熟普洱 (Xià Guān Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "caffeineLevel": 4.8,
+    "lTheanineLevel": 4.2,
+    "flavorProfile": [
+      "earthy",
+      "smoky",
+      "strong",
+      "medicinal",
+      "woody"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "location": "Xiaguan",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 25.6,
+      "longitude": 100.25,
+      "altitude": 2000,
+      "humidity": 68,
+      "temperature": 15.8,
+      "solarRadiation": 205
+    }
+  },
+  {
+    "name": "Lincang Shou",
+    "originalName": "临沧熟普洱 (Lín Cāng Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 4.8,
+    "flavorProfile": [
+      "sweet",
+      "earthy",
+      "smooth",
+      "chocolate",
+      "dates"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "location": "Lincang",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 23.88,
+      "longitude": 100.08,
+      "altitude": 1600,
+      "humidity": 73,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    }
+  },
+  {
+    "name": "Aged Shou Brick",
+    "originalName": "老熟砖 (Lǎo Shú Zhuān)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "caffeineLevel": 4,
+    "lTheanineLevel": 5,
+    "flavorProfile": [
+      "smooth",
+      "sweet",
+      "earthy",
+      "dates",
+      "caramel"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "location": "Kunming",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 25.04,
+      "longitude": 102.72,
+      "altitude": 1900,
+      "humidity": 70,
+      "temperature": 16.2,
+      "solarRadiation": 198
+    }
+  },
+  {
+    "name": "Golden Buds Shou",
+    "originalName": "金芽熟普洱 (Jīn Yá Shú Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-shou",
+    "caffeineLevel": 3.8,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "sweet",
+      "chocolate",
+      "smooth",
+      "caramel",
+      "dates"
+    ],
+    "processingMethods": [
+      "withered",
+      "pile-fermented",
+      "compressed",
+      "aged"
+    ],
+    "geography": {
+      "location": "Simao",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 22.77,
+      "longitude": 100.97,
+      "altitude": 1300,
+      "humidity": 76,
+      "temperature": 20.5,
+      "solarRadiation": 188
+    }
+  }
+]

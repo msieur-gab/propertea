@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Yiwu Sheng",
+    "originalName": "易武生普洱 (Yì Wǔ Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "caffeineLevel": 4.8,
+    "lTheanineLevel": 5.2,
+    "flavorProfile": [
+      "honey",
+      "floral",
+      "sweet",
+      "herbal",
+      "mineral"
+    ],
+    "processingMethods": [
+      "withered",
+      "pan-fired",
+      "sun-dried",
+      "compressed"
+    ],
+    "geography": {
+      "location": "Yiwu",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 21.95,
+      "longitude": 101.45,
+      "altitude": 1400,
+      "humidity": 74,
+      "temperature": 19.8,
+      "solarRadiation": 192
+    }
+  },
+  {
+    "name": "Bulang Sheng",
+    "originalName": "布朗生普洱 (Bù Lǎng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "caffeineLevel": 5.5,
+    "lTheanineLevel": 4.5,
+    "flavorProfile": [
+      "bitter",
+      "strong",
+      "herbal",
+      "smoky",
+      "medicinal"
+    ],
+    "processingMethods": [
+      "withered",
+      "pan-fired",
+      "sun-dried",
+      "compressed"
+    ],
+    "geography": {
+      "location": "Bulang Mountains",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 21.9,
+      "longitude": 100.25,
+      "altitude": 1600,
+      "humidity": 73,
+      "temperature": 18.5,
+      "solarRadiation": 195
+    }
+  },
+  {
+    "name": "Banzhang Sheng",
+    "originalName": "班章生普洱 (Bān Zhāng Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "caffeineLevel": 6,
+    "lTheanineLevel": 4,
+    "flavorProfile": [
+      "powerful",
+      "bitter",
+      "sweet aftertaste",
+      "herbal",
+      "complex"
+    ],
+    "processingMethods": [
+      "withered",
+      "pan-fired",
+      "sun-dried",
+      "compressed"
+    ],
+    "geography": {
+      "location": "Banzhang",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 21.98,
+      "longitude": 100.38,
+      "altitude": 1700,
+      "humidity": 72,
+      "temperature": 17.8,
+      "solarRadiation": 198
+    }
+  },
+  {
+    "name": "Mengku Sheng",
+    "originalName": "勐库生普洱 (Měng Kù Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "caffeineLevel": 4.5,
+    "lTheanineLevel": 5.5,
+    "flavorProfile": [
+      "floral",
+      "sweet",
+      "fresh",
+      "fruity",
+      "smooth"
+    ],
+    "processingMethods": [
+      "withered",
+      "pan-fired",
+      "sun-dried",
+      "compressed"
+    ],
+    "geography": {
+      "location": "Mengku",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 23.58,
+      "longitude": 99.83,
+      "altitude": 1800,
+      "humidity": 71,
+      "temperature": 16.5,
+      "solarRadiation": 200
+    }
+  },
+  {
+    "name": "Jingmai Sheng",
+    "originalName": "景迈生普洱 (Jǐng Mài Shēng Pǔ'ěr)",
+    "type": "puerh",
+    "subType": "puerh-sheng",
+    "caffeineLevel": 4.2,
+    "lTheanineLevel": 5.8,
+    "flavorProfile": [
+      "orchid",
+      "honey",
+      "sweet",
+      "floral",
+      "delicate"
+    ],
+    "processingMethods": [
+      "withered",
+      "pan-fired",
+      "sun-dried",
+      "compressed"
+    ],
+    "geography": {
+      "location": "Jingmai Mountain",
+      "province": "Yunnan",
+      "country": "China",
+      "latitude": 22.18,
+      "longitude": 100.08,
+      "altitude": 1500,
+      "humidity": 75,
+      "temperature": 19.2,
+      "solarRadiation": 190
+    }
+  }
+]

@@ -1,0 +1,738 @@
+[
+  {
+    "teaName": "Silver Needle",
+    "originalName": "白毫银针 (Bái Háo Yín Zhēn)",
+    "type": "white",
+    "subType": "white-silver-needle",
+    "flavorProfile": [
+      "honey",
+      "melon",
+      "hay",
+      "delicate",
+      "cucumber"
+    ],
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 74.95,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 68.2,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 68.2,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort",
+          "Warming"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_WHITE"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 10",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 10 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Comfort, Warming"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "White Peony",
+    "originalName": "白牡丹 (Bái Mǔ Dān)",
+    "type": "white",
+    "subType": "white-peony",
+    "flavorProfile": [
+      "floral",
+      "honey",
+      "fruity",
+      "sweet",
+      "fresh"
+    ],
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 81.35,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Unwinding",
+        "score": 74.95,
+        "description": "Gently releasing tension and transitioning to a calmer state",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Late afternoon to evening",
+        "benefits": [
+          "Eases physical tension",
+          "Transitions mind from work mode",
+          "Promotes gradual relaxation",
+          "Encourages introspection"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 71.4,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation",
+          "Unwinding"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_WHITE"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Unwinding, Comfort"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Gong Mei",
+    "originalName": "贡眉 (Gòng Méi)",
+    "type": "white",
+    "subType": "gong-mei",
+    "flavorProfile": [
+      "woody",
+      "dried fruit",
+      "honey",
+      "earthy",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 81.35,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 74.6,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 71.4,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Smooth & Sustained compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort",
+          "Warming"
+        ],
+        "count": 2
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Smooth & Sustained",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_WHITE"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Smooth & Sustained, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Smooth & Sustained",
+        "adjustment": "Boosted 13 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Warming, Comfort"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Shou Mei",
+    "originalName": "寿眉 (Shòu Méi)",
+    "type": "white",
+    "subType": "shou-mei",
+    "flavorProfile": [
+      "dried fruit",
+      "wood",
+      "honey",
+      "herbal",
+      "sweet"
+    ],
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 72.6,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Social",
+        "score": 71.4,
+        "description": "Sharing meaningful moments and connection with friends and loved ones",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Afternoon or evening gatherings",
+        "benefits": [
+          "Strengthens relationships",
+          "Boosts mood and happiness",
+          "Promotes sense of belonging",
+          "Encourages conversation"
+        ]
+      },
+      {
+        "activity": "Warming",
+        "score": 67.6,
+        "description": "Generating internal warmth and cozy comfort",
+        "rationale": "Matches your Balanced & Focused compound profile",
+        "timing": "Cold weather, late afternoon, or evening",
+        "benefits": [
+          "Improves circulation",
+          "Increases body warmth",
+          "Creates cozy atmosphere",
+          "Soothes and relaxes"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Social Engagement",
+        "activities": [
+          "Social"
+        ],
+        "count": 1
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Warming"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Balanced & Focused",
+      "stimulationLevel": "Moderate",
+      "relaxationLevel": "Moderate",
+      "teaType": "TEA_TYPE_WHITE"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Balanced & Focused, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 8",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 8 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Balanced & Focused",
+        "adjustment": "Boosted 11 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Moderate",
+        "adjustment": "Boosted 8 activities by +3.50",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Social, Warming"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Moonlight White",
+    "originalName": "月光白 (Yuè Guāng Bái)",
+    "type": "white",
+    "subType": "moonlight-white",
+    "flavorProfile": [
+      "honey",
+      "orchid",
+      "sweet",
+      "fruity",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "activity": "Relaxation",
+        "score": 81.35,
+        "description": "A state of ease and peace where tension melts away",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Afternoon or early evening, especially after work",
+        "benefits": [
+          "Reduces stress and anxiety",
+          "Lowers blood pressure",
+          "Improves sleep quality",
+          "Enhances mental clarity"
+        ]
+      },
+      {
+        "activity": "Unwinding",
+        "score": 74.95,
+        "description": "Gently releasing tension and transitioning to a calmer state",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Late afternoon to evening",
+        "benefits": [
+          "Eases physical tension",
+          "Transitions mind from work mode",
+          "Promotes gradual relaxation",
+          "Encourages introspection"
+        ]
+      },
+      {
+        "activity": "Comfort",
+        "score": 71.4,
+        "description": "Wrapping yourself in warmth and emotional wellbeing",
+        "rationale": "Matches your Calm & Clear compound profile",
+        "timing": "Any time, especially during cold weather or difficult moments",
+        "benefits": [
+          "Soothes emotions",
+          "Provides emotional warmth",
+          "Creates sense of safety",
+          "Reduces feelings of isolation"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "theme": "Mindfulness & Relaxation",
+        "activities": [
+          "Relaxation",
+          "Unwinding"
+        ],
+        "count": 2
+      },
+      {
+        "theme": "Comfort & Indulgence",
+        "activities": [
+          "Comfort"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "compoundProfile": "Calm & Clear",
+      "stimulationLevel": "Low",
+      "relaxationLevel": "High",
+      "teaType": "TEA_TYPE_WHITE"
+    },
+    "scoringSources": {
+      "flavor": {
+        "weight": 0.4,
+        "role": "PRIMARY (40%) - Emotional & psychological associations (smoky→creative, floral→calm, etc.)",
+        "importance": "Drives real-world tea selection and mood-based pairing"
+      },
+      "compound": {
+        "weight": 0.35,
+        "role": "SECONDARY (35%) - Biochemical stimulation/relaxation (caffeine/theanine)",
+        "importance": "Tells us IF we want stimulation, flavor tells us HOW & WHEN"
+      },
+      "teaType": {
+        "weight": 0.25,
+        "role": "BASELINE (25%) - Cultural/traditional activity associations",
+        "importance": "Provides context, but individual character comes from flavor"
+      }
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received multi-source inferences",
+        "adjustment": "Compound: Calm & Clear, TeaType: TEA_TYPE_WHITE, Flavor: undefined",
+        "value": "All inferences validated"
+      },
+      {
+        "step": "Hint Collection",
+        "reason": "Extracted activity hints from taxonomy sources",
+        "adjustment": "TeaType hints: 3, Flavor hints: 7",
+        "value": "Hints collected from cultural and sensory sources"
+      },
+      {
+        "step": "Scoring Initialization",
+        "reason": "Set base scores for all activities",
+        "adjustment": "Initialized 26 activities with base score 50",
+        "value": "Ready for three-factor scoring"
+      },
+      {
+        "step": "Flavor Hints Scoring (40% - PRIMARY)",
+        "reason": "Sensory/emotional/thematic activity suggestions from flavor profile",
+        "adjustment": "Boosted 7 activities by +8.00 base + multi-flavor multiplier",
+        "value": "Flavor-driven emotional associations applied"
+      },
+      {
+        "step": "Compound Scoring (35%)",
+        "reason": "Compound profile: Calm & Clear",
+        "adjustment": "Boosted 15 activities by +7.00",
+        "value": "Biochemical score applied"
+      },
+      {
+        "step": "Stimulation Scoring (within 35%)",
+        "reason": "Stimulation level: Low",
+        "adjustment": "Boosted 7 activities by +1.75",
+        "value": "Stimulation multiplier applied"
+      },
+      {
+        "step": "Tea Type Hints Scoring (25%)",
+        "reason": "Cultural/traditional activity associations (baseline context)",
+        "adjustment": "Boosted 3 activities by +5.00",
+        "value": "Cultural tradition score applied"
+      },
+      {
+        "step": "Final Selection",
+        "reason": "Selected top activities",
+        "adjustment": "Selected 3 activities",
+        "value": "Relaxation, Unwinding, Comfort"
+      }
+    ],
+    "confidence": 0.855,
+    "rendererVersion": "2.0"
+  }
+]

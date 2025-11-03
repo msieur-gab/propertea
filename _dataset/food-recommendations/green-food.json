@@ -1,0 +1,1052 @@
+[
+  {
+    "teaName": "Longjing",
+    "originalName": "龙井 (Lóng Jǐng)",
+    "type": "green",
+    "subType": "longjing",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "delicate"
+    ],
+    "recommendations": [
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Sushi Rice",
+        "foodId": "FOOD_SUSHI_RICE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Sushi Rice complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Subtle vinegar and rice sweetness harmonize with green tea's freshness",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Light Vegetables",
+        "foodId": "FOOD_LIGHT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Vegetables complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Fresh, subtle vegetable notes align with delicate and floral tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "White Fish",
+          "Light Vegetables",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Light Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Nutty & Toasty",
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "chestnut",
+        "sweet",
+        "vegetal"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_BAKED_GOODS, FOOD_CHEESE, FOOD_ROASTED_VEGETABLES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Nutty & Toasty, Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_GREEN",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4, L-Theanine: 5.5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "19 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "White Fish, Sushi Rice, Light Vegetables, Fresh Fruit, Rice Cakes"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Biluochun",
+    "originalName": "碧螺春 (Bì Luó Chūn)",
+    "type": "green",
+    "subType": "biluochun",
+    "flavorProfile": [
+      "fruity",
+      "floral",
+      "sweet",
+      "fresh",
+      "vegetal"
+    ],
+    "recommendations": [
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements floral and sweet, enhancing floral notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Sushi Rice",
+        "foodId": "FOOD_SUSHI_RICE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Sushi Rice complements floral and sweet, enhancing floral notes",
+        "narrative": "Subtle vinegar and rice sweetness harmonize with green tea's freshness",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Light Vegetables",
+        "foodId": "FOOD_LIGHT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Vegetables complements floral and sweet, enhancing floral notes",
+        "narrative": "Fresh, subtle vegetable notes align with delicate and floral tea profiles (enhances floral notes)",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements floral and sweet, enhancing floral notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements floral and sweet, enhancing floral notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "White Fish",
+          "Light Vegetables",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Light Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "floral",
+        "sweet",
+        "vegetal"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 9,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 9, Categories: 3",
+        "value": "Sample hints: FOOD_LIGHT_DESSERTS, FOOD_STEAMED_VEGETABLES, FOOD_WHITE_FISH"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 9 unique foods with base score 50",
+        "value": "9"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_GREEN",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 3.8, L-Theanine: 5.8",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "16 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "White Fish, Sushi Rice, Light Vegetables, Fresh Fruit, Rice Cakes"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Huangshan Maofeng",
+    "originalName": "黄山毛峰 (Huáng Shān Máo Fēng)",
+    "type": "green",
+    "subType": "huangshan-maofeng",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "floral"
+    ],
+    "recommendations": [
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements orchid and sweet, enhancing floral notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Sushi Rice",
+        "foodId": "FOOD_SUSHI_RICE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Sushi Rice complements orchid and sweet, enhancing floral notes",
+        "narrative": "Subtle vinegar and rice sweetness harmonize with green tea's freshness",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Light Vegetables",
+        "foodId": "FOOD_LIGHT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Vegetables complements orchid and sweet, enhancing floral notes",
+        "narrative": "Fresh, subtle vegetable notes align with delicate and floral tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements orchid and sweet, enhancing floral notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements orchid and sweet, enhancing floral notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "White Fish",
+          "Light Vegetables",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Light Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "orchid",
+        "sweet",
+        "vegetal"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_GREEN",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.2, L-Theanine: 5.2",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "20 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "White Fish, Sushi Rice, Light Vegetables, Fresh Fruit, Rice Cakes"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.95, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Xinyang Maojian",
+    "originalName": "信阳毛尖 (Xìn Yáng Máo Jiān)",
+    "type": "green",
+    "subType": "xinyang-maojian",
+    "flavorProfile": [
+      "chestnut",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "brisk"
+    ],
+    "recommendations": [
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Sushi Rice",
+        "foodId": "FOOD_SUSHI_RICE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Sushi Rice complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Subtle vinegar and rice sweetness harmonize with green tea's freshness",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Light Vegetables",
+        "foodId": "FOOD_LIGHT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Vegetables complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Fresh, subtle vegetable notes align with delicate and floral tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements chestnut and sweet, enhancing nutty & toasty notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "White Fish",
+          "Light Vegetables",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Light Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Nutty & Toasty",
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "chestnut",
+        "sweet",
+        "vegetal"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 13,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 13, Categories: 3",
+        "value": "Sample hints: FOOD_BAKED_GOODS, FOOD_CHEESE, FOOD_ROASTED_VEGETABLES"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 13 unique foods with base score 50",
+        "value": "13"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Nutty & Toasty, Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_GREEN",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 4.5, L-Theanine: 5",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "19 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "White Fish, Sushi Rice, Light Vegetables, Fresh Fruit, Rice Cakes"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  },
+  {
+    "teaName": "Taiping Houkui",
+    "originalName": "太平猴魁 (Tài Píng Hóu Kuí)",
+    "type": "green",
+    "subType": "taiping-houkui",
+    "flavorProfile": [
+      "orchid",
+      "sweet",
+      "fresh",
+      "vegetal",
+      "lingering"
+    ],
+    "recommendations": [
+      {
+        "food": "White Fish",
+        "foodId": "FOOD_WHITE_FISH",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "White Fish complements orchid and sweet, enhancing floral notes",
+        "narrative": "Delicate fish flavors resonate with subtle tea notes",
+        "category": "proteins",
+        "flavorProfile": [],
+        "pairingTechnique": "Lighter, delicate tea pairs perfectly with mild fish - each enhances the other's subtlety"
+      },
+      {
+        "food": "Sushi Rice",
+        "foodId": "FOOD_SUSHI_RICE",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Sushi Rice complements orchid and sweet, enhancing floral notes",
+        "narrative": "Subtle vinegar and rice sweetness harmonize with green tea's freshness",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Light Vegetables",
+        "foodId": "FOOD_LIGHT_VEGETABLES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Light Vegetables complements orchid and sweet, enhancing floral notes",
+        "narrative": "Fresh, subtle vegetable notes align with delicate and floral tea profiles",
+        "category": "vegetables",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Fresh Fruit",
+        "foodId": "FOOD_FRESH_FRUIT",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Fresh Fruit complements orchid and sweet, enhancing floral notes",
+        "narrative": "Natural fruit sweetness brightens and elevates subtle tea notes",
+        "category": "fruits",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      },
+      {
+        "food": "Rice Cakes",
+        "foodId": "FOOD_RICE_CAKES",
+        "description": "A complementary food pairing",
+        "score": 75,
+        "rationale": "Rice Cakes complements orchid and sweet, enhancing floral notes",
+        "narrative": "Delicate rice texture pairs with lighter, vegetal tea profiles",
+        "category": "prepared_dishes",
+        "flavorProfile": [],
+        "pairingTechnique": "Enjoy tea alongside food for complementary flavor experience"
+      }
+    ],
+    "cuisineGroupings": [
+      {
+        "cuisine": "International",
+        "foods": [
+          "White Fish",
+          "Light Vegetables",
+          "Fresh Fruit"
+        ],
+        "count": 3
+      },
+      {
+        "cuisine": "Asian",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "European",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "cuisine": "Mediterranean",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      }
+    ],
+    "categoryGroupings": [
+      {
+        "category": "proteins",
+        "foods": [
+          "White Fish"
+        ],
+        "count": 1
+      },
+      {
+        "category": "prepared_dishes",
+        "foods": [
+          "Sushi Rice",
+          "Rice Cakes"
+        ],
+        "count": 2
+      },
+      {
+        "category": "vegetables",
+        "foods": [
+          "Light Vegetables"
+        ],
+        "count": 1
+      },
+      {
+        "category": "fruits",
+        "foods": [
+          "Fresh Fruit"
+        ],
+        "count": 1
+      }
+    ],
+    "analysis": {
+      "flavorCategories": [
+        "Floral",
+        "Sweet",
+        "Vegetal"
+      ],
+      "dominantFlavors": [
+        "orchid",
+        "sweet",
+        "vegetal"
+      ],
+      "intensityEstimate": "Pronounced",
+      "hintCount": 11,
+      "teaTypeSpecificBoosts": 5,
+      "astringencyBoosts": 4
+    },
+    "trace": [
+      {
+        "step": "Data Reception",
+        "reason": "Received flavor inference",
+        "adjustment": "Food hints: 11, Categories: 3",
+        "value": "Sample hints: FOOD_CREAMY_DESSERTS, FOOD_LIGHT_CAKES, FOOD_TROPICAL_FRUIT"
+      },
+      {
+        "step": "Food Initialization",
+        "reason": "Extract unique foods from hints",
+        "adjustment": "Initialized 11 unique foods with base score 50",
+        "value": "11"
+      },
+      {
+        "step": "Category Matching",
+        "reason": "Matched 3 categories",
+        "adjustment": "Boosted 0 food pairings",
+        "value": "Floral, Sweet, Vegetal"
+      },
+      {
+        "step": "Tea-Type Specific Pairings (Tier 1 - High Confidence)",
+        "reason": "Tea type: TEA_TYPE_GREEN",
+        "adjustment": "Applied +15 boost to 5 tea-type specific foods",
+        "value": "Tea-type specific pairings activated"
+      },
+      {
+        "step": "Astringency-Based Matching (Tier 2 - Biochemistry)",
+        "reason": "Caffeine: 3.5, L-Theanine: 6",
+        "adjustment": "Applied +8 boost to 4 astringency-appropriate foods",
+        "value": "Astringency matching activated"
+      },
+      {
+        "step": "Intensity Adjustment",
+        "reason": "Profile intensity: Pronounced",
+        "adjustment": "Applied +10 bonus to all foods",
+        "value": "18 foods adjusted"
+      },
+      {
+        "step": "Ranking & Selection",
+        "reason": "Select top food pairings",
+        "adjustment": "Selected 5 top recommendations",
+        "value": "White Fish, Sushi Rice, Light Vegetables, Fresh Fruit, Rice Cakes"
+      },
+      {
+        "step": "Grouping",
+        "reason": "Organize recommendations",
+        "adjustment": "Created 4 cuisine groups and 4 food category groups",
+        "value": "Cuisines: International, Asian, European, Mediterranean"
+      },
+      {
+        "step": "Confidence Calculation",
+        "reason": "Multi-source agreement scoring",
+        "adjustment": "Base: 0.85, Tea-type: +0.10, Astringency: +0.08",
+        "value": "Final confidence: 0.95"
+      }
+    ],
+    "confidence": 0.95,
+    "rendererVersion": "2.0"
+  }
+]
